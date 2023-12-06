@@ -1,435 +1,93 @@
 \begin{thebibliography}{10}
 
-\bibitem{HandbookDifferentialEquations2008}
-{\em Handbook of {{Differential Equations}} - {{Stationary Partial Differential
-  Equations}}}, vol.~6 of {\em Handbook of {{Differential Equations}}:
-  {{Stationary Partial Differential Equations}}}.
-\newblock {Elsevier}, 2008.
-
-\bibitem{brychkovIndefiniteIntegrals2008}
-{\em Indefinite {{Integrals}}}, zeroth~ed.
-\newblock {Chapman and Hall/CRC}, May 2008, pp.~121--130.
-
-\bibitem{liIntroductionFractionalCalculus2015}
-{\em Introduction to {{Fractional Calculus}}}, zeroth~ed.
-\newblock {Chapman and Hall/CRC}, May 2015, pp.~19--46.
-
 \bibitem{baoUniformErrorEstimates2012}
 {\sc Bao, W., and Cai, Y.}
-\newblock Uniform {{Error Estimates}} of {{Finite Difference Methods}} for the
-  {{Nonlinear Schr\"odinger Equation}} with {{Wave Operator}}.
-\newblock {\em SIAM J Numer Anal\/} (Mar. 2012).
-
-\bibitem{baoComparisonsSineGordonPerturbed2010}
-{\sc Bao, W., Dong, X., and Xin, J.}
-\newblock Comparisons between sine-{{Gordon}} and perturbed nonlinear
-  {{Schr\"odinger}} equations for modeling light bullets beyond critical
-  collapse.
-\newblock {\em Phys D: Nonlinear Phenom 239}, 13 (July 2010), 1120--1134.
+\newblock Uniform {{Error Estimates}} of {{Finite Difference Methods}} for the {{Nonlinear Schr{\"o}dinger Equation}} with {{Wave Operator}}.
+\newblock {\em Siam J Numer Anal\/} (Mar. 2012).
 
 \bibitem{brugnanoClassEnergyconservingHamiltonian2018}
 {\sc Brugnano, L., Zhang, C., and Li, D.}
-\newblock A class of energy-conserving {{Hamiltonian}} boundary value methods
-  for nonlinear {{Schr\"odinger}} equation with wave operator.
-\newblock {\em Commun Nonlinear Sci Numer Simul 60\/} (July 2018), 33--49.
-
-\bibitem{buddGeometricIntegrationUsing1999}
-{\sc Budd, C., Iserles, A., McLachlan, R.~I., Quispel, G. R.~W., and Robidoux,
-  N.}
-\newblock Geometric integration using discrete gradients.
-\newblock {\em Philosophical Transactions of the Royal Society of London.
-  Series A: Mathematical, Physical and Engineering Sciences 357}, 1754 (Apr.
-  1999), 1021--1045.
+\newblock A class of energy-conserving {{Hamiltonian}} boundary value methods for nonlinear {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Commun. Nonlinear Sci. Numer. Simul. 60\/} (July 2018), 33--49.
 
 \bibitem{caffarelliExtensionProblemRelated2007}
 {\sc Caffarelli, L., and Silvestre, L.}
 \newblock An {{Extension Problem Related}} to the {{Fractional Laplacian}}.
-\newblock {\em Comm Partial Differential Equations 32}, 8 (Aug. 2007),
-  1245--1260.
-
-\bibitem{caiPartitionedAveragedVector2018}
-{\sc Cai, W., Li, H., and Wang, Y.}
-\newblock Partitioned averaged vector field methods.
-\newblock {\em J Comput Phys 370\/} (Oct. 2018), 25--42.
-
-\bibitem{calvoNumericalSolutionIsospectral1997}
-{\sc Calvo, M., Iserles, A., and Zanna, A.}
-\newblock Numerical solution of isospectral flows.
-\newblock {\em Math Comp 66}, 220 (1997), 1461--1486.
-
-\bibitem{carrerasAnomalousDiffusionExit2001}
-{\sc Carreras, B.~A., Lynch, V.~E., and Zaslavsky, G.~M.}
-\newblock Anomalous diffusion and exit time distribution of particle tracers in
-  plasma turbulence model.
-\newblock {\em Phys Plasmas 8}, 12 (Dec. 2001), 5096--5103.
-
-\bibitem{chenEfficientNumericalScheme2019}
-{\sc Chen, C., and Yang, X.}
-\newblock Efficient numerical scheme for a dendritic solidification phase field
-  model with melt convection.
-\newblock {\em Journal of Computational Physics 388\/} (July 2019), 41--62.
-
-\bibitem{chenFourthOrderAccurate2014}
-{\sc Chen, M., and Deng, W.}
-\newblock Fourth order accurate scheme for the space fractional diffusion
-  equations.
-\newblock {\em SIAM J Numer Anal 52}, 3 (2014), 1418--1438.
-
-\bibitem{chengMultipleScalarAuxiliary2018}
-{\sc Cheng, Q., and Shen, J.}
-\newblock Multiple {{Scalar Auxiliary Variable}} ({{MSAV}}) {{Approach}} and
-  its {{Application}} to the {{Phase-Field Vesicle Membrane Model}}.
-\newblock {\em SIAM J Sci Comput 40}, 6 (Jan. 2018), A3982--A4006.
-
-\bibitem{chengHighlyEfficientAccurate2019}
-{\sc Cheng, Q., Shen, J., and Yang, X.}
-\newblock Highly {{Efficient}} and {{Accurate Numerical Schemes}} for the
-  {{Epitaxial Thin Film Growth Models}} by {{Using}} the {{SAV Approach}}.
-\newblock {\em J Sci Comput 78}, 3 (Mar. 2019), 1467--1487.
+\newblock {\em Comm. Partial Differential Equations 32}, 8 (Aug. 2007), 1245--1260.
 
 \bibitem{chengConvergenceEnergyconservingScheme2022}
 {\sc Cheng, X., Qin, H., and Zhang, J.}
-\newblock Convergence of an energy-conserving scheme for nonlinear space
-  fractional {{Schr\"odinger}} equations with wave operator.
-\newblock {\em J Comput Appl Math 400\/} (Jan. 2022), 113762.
+\newblock Convergence of an energy-conserving scheme for nonlinear space fractional {{Schr{\"o}dinger}} equations with wave operator.
+\newblock {\em J. Comput. Appl. Math. 400\/} (Jan. 2022), 113762.
 
 \bibitem{chengSeveralConservativeCompact2018}
 {\sc Cheng, X., and Wu, F.}
-\newblock Several conservative compact schemes for a class of nonlinear
-  {{Schr\"odinger}} equations with wave operator.
+\newblock Several conservative compact schemes for a class of nonlinear {{Schr{\"o}dinger}} equations with wave operator.
 \newblock {\em Bound Value Probl 2018}, 1 (Dec. 2018), 40.
 
 \bibitem{colinSemidiscretizationTimeNonlinear1998}
 {\sc Colin, T., and Fabrie, P.}
-\newblock Semidiscretization in time for nonlinear {{Schr\"odinger-waves}}
-  equations.
-\newblock {\em Discrete Contin Dynam Systems 4}, 4 (Tue Jun 30 20:00:00 EDT
-  1998), 671--690.
+\newblock Semidiscretization in time for nonlinear {{Schr{\"o}dinger-waves}} equations.
+\newblock {\em Discrete Cont Dyn-A 4}, 4 (Tue Jun 30 20:00:00 EDT 1998), 671--690.
 
-\bibitem{cooperStabilityRungeKuttaMethods1987}
-{\sc COOPER, G.~J.}
-\newblock Stability of {{Runge-Kutta Methods}} for {{Trajectory Problems}}.
-\newblock {\em IMA J Numer Anal 7}, 1 (Jan. 1987), 1--13.
-
-\bibitem{demengelFunctionalSpacesTheory2012}
-{\sc Demengel, F., and Demengel, G.}
-\newblock {\em Functional {{Spaces}} for the {{Theory}} of {{Elliptic Partial
-  Differential Equations}}}.
-\newblock Universitext. {Springer}, {London}, 2012.
-
-\bibitem{dengFiniteElementMethod2009}
-{\sc Deng, W.}
-\newblock Finite element method for the space and time fractional
-  {{Fokker}}\textendash{{Planck}} equation.
-\newblock {\em SIAM J Numer Anal 47}, 1 (2009), 204--226.
-
-\bibitem{dingHighorderAlgorithmsRiesz2015}
-{\sc Ding, H., Li, C., and Chen, Y.}
-\newblock High-order algorithms for {{Riesz}} derivative and their applications
-  ({{II}}).
-\newblock {\em J Comput Phys 293\/} (2015), 218--237.
-
-\bibitem{ervinNumericalApproximationTime2007}
-{\sc Ervin, V.~J., Heuer, N., and Roop, J.~P.}
-\newblock Numerical approximation of a time dependent, nonlinear,
-  {{Space}}-{{Fractional}} diffusion equation.
-\newblock {\em SIAM J Numer Anal 45}, 2 (2007), 572--591.
-
-\bibitem{fuExplicitStructurepreservingAlgorithm2020}
-{\sc Fu, Y., Cai, W., and Wang, Y.}
-\newblock An explicit structure-preserving algorithm for the nonlinear
-  fractional {{Hamiltonian}} wave equation.
-\newblock {\em Appl Math Lett 102\/} (Apr. 2020), 106123.
-
-\bibitem{fuStructurepreservingAlgorithmsTwodimensional2020}
-{\sc Fu, Y., Cai, W., and Wang, Y.}
-\newblock Structure-preserving algorithms for the two-dimensional fractional
-  {{Klein-Gordon-Schr\"odinger}} equation.
-\newblock {\em Appl Numer Math 156\/} (Oct. 2020), 77--93.
-
-\bibitem{gaoMeanExitTime2014}
-{\sc Gao, T., Duan, J., Li, X., and Song, R.}
-\newblock Mean exit time and escape probability for dynamical systems driven by
-  l\'evy noises.
-\newblock {\em SIAM J Sci Comput 36}, 3 (2014), A887--A906.
-
-\bibitem{gongArbitrarilyHighorderUnconditionally2019}
-{\sc Gong, Y., Zhao, J., and Wang, Q.}
-\newblock Arbitrarily {{High-order Unconditionally Energy Stable Schemes}} for
-  {{Gradient Flow Models Using}} the {{Scalar Auxiliary Variable Approach}},
-  July 2019.
-
-\bibitem{griffithsNumericalMethodsOrdinary2010}
-{\sc Griffiths, D.~F., and Higham, D.~J.}
-\newblock {\em Numerical {{Methods}} for {{Ordinary Differential Equations}}:
-  {{Initial Value Problems}}}.
-\newblock Springer {{Undergraduate Mathematics Series}}. {Springer London},
-  {London}, 2010.
-
-\bibitem{guoFractionalPartialDifferential2015}
-{\sc Guo, B., Pu, X., and Huang, F.}
-\newblock {\em {Fractional Partial Differential Equations and Their Numerical
-  Solutions}}.
-\newblock {WORLD SCIENTIFIC}, Apr. 2015.
-
-\bibitem{hilferFRACTIONALCALCULUSREGULAR2000}
-{\sc Hilfer, R.}
-\newblock {\em {{FRACTIONAL CALCULUS AND REGULAR VARIATION IN
-  THERMODYNAMICS}}}.
-\newblock {WORLD SCIENTIFIC}, Mar. 2000, pp.~429--463.
+\bibitem{hairerRungeKuttaMethods2015}
+{\sc Hairer, E., and Wanner, G.}
+\newblock Runge{\textendash}{{Kutta Methods}}, {{Explicit}}, {{Implicit}}.
+\newblock In {\em Encyclopedia of {{Applied}} and {{Computational Mathematics}}}, B.~Engquist, Ed. {Springer Berlin Heidelberg}, {Berlin, Heidelberg}, 2015, pp.~1282--1285.
 
 \bibitem{huEfficientEnergyPreserving2022}
 {\sc Hu, D., Cai, W., Gu, X.-M., and Wang, Y.}
-\newblock Efficient energy preserving {{Galerkin}}\textendash{{Legendre}}
-  spectral methods for fractional nonlinear {{Schr\"odinger}} equation with
-  wave operator.
-\newblock {\em Appl Numer Math 172\/} (Feb. 2022), 608--628.
-
-\bibitem{huangNumericalMethodsFractional2014}
-{\sc Huang, Y., and Oberman, A.}
-\newblock Numerical methods for the fractional laplacian: {{A}} finite
-  difference-quadrature approach.
-\newblock {\em SIAM J Numer Anal 52}, 6 (2014), 3056--3084.
+\newblock Efficient energy preserving {{Galerkin}}{\textendash}{{Legendre}} spectral methods for fractional nonlinear {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Appl. Numer. Math. 172\/} (Feb. 2022), 608--628.
 
 \bibitem{ketchesonRelaxationRungeKutta2019}
 {\sc Ketcheson, D.~I.}
-\newblock Relaxation {{Runge--Kutta Methods}}: {{Conservation}} and
-  {{Stability}} for {{Inner-Product Norms}}.
-\newblock {\em SIAM J. Numer. Anal. 57}, 6 (Jan. 2019), 2850--2870.
-
-\bibitem{laskinFractionalQuantumMechanics2000}
-{\sc Laskin, N.}
-\newblock Fractional quantum mechanics.
-\newblock {\em Phys Rev E 62}, 3 (Sept. 2000), 3135--3145.
-
-\bibitem{laskinFractionalSchrodingerEquation2002}
-{\sc Laskin, N.}
-\newblock Fractional {{Schrodinger}} equation.
-\newblock {\em Phys. Rev. E 66}, 5 (Nov. 2002), 056108.
+\newblock Relaxation {{Runge--Kutta Methods}}: {{Conservation}} and {{Stability}} for {{Inner-Product Norms}}.
+\newblock {\em Siam J Numer Anal 57}, 6 (Jan. 2019), 2850--2870.
 
 \bibitem{liFastEnergyConserving2018}
 {\sc Li, M., and Zhao, Y.-L.}
-\newblock A fast energy conserving finite element method for the nonlinear
-  fractional {{Schr\"odinger}} equation with wave operator.
-\newblock {\em Appl Math Comput 338\/} (Dec. 2018), 758--773.
-
-\bibitem{liFiniteDifferenceCalculus1995}
-{\sc Li, S., and {Vu-Quoc}, L.}
-\newblock Finite {{Difference Calculus Invariant Structure}} of a {{Class}} of
-  {{Algorithms}} for the {{Nonlinear Klein}}\textendash{{Gordon Equation}}.
-\newblock {\em SIAM J Numer Anal 32}, 6 (Dec. 1995), 1839--1875.
-
-\bibitem{liCompactFiniteDifference2012}
-{\sc Li, X., Zhang, L., and Wang, S.}
-\newblock A compact finite difference scheme for the nonlinear
-  {{Schr\"odinger}} equation with wave operator.
-\newblock {\em Appl Math Comput 219}, 6 (Nov. 2012), 3187--3197.
-
-\bibitem{liangRobustnessFractionalorderBoundary2007}
-{\sc Liang, J., Zhang, W., Chen, Y., and Podlubny, I.}
-\newblock Robustness of {{Fractional-order Boundary Control}} of {{Time
-  Fractional Wave Equations}} with {{Delayed Boundary Measurement Using}} the
-  {{Simple Predictor}}.
-\newblock In {\em Advances in {{Fractional Calculus}}}, J.~Sabatier, O.~P.
-  Agrawal, and J.~A.~T. Machado, Eds. {Springer Netherlands}, {Dordrecht},
-  2007, pp.~543--552.
-
-\bibitem{liuExponentialScalarAuxiliary2020}
-{\sc Liu, Z., and Li, X.}
-\newblock The {{Exponential Scalar Auxiliary Variable}} ({{E-SAV}})
-  {{Approach}} for {{Phase Field Models}} and {{Its Explicit Computing}}.
-\newblock {\em SIAM J Sci Comput 42}, 3 (Jan. 2020), B630--B655.
-
-\bibitem{machiharaNonrelativisticLimitEnergy2002}
-{\sc Machihara, S., Nakanishi, K., and Ozawa, T.}
-\newblock Nonrelativistic limit in the energy space for nonlinear
-  {{Klein-Gordon}} equations.
-\newblock {\em Math Ann 322}, 3 (Mar. 2002), 603--621.
-
-\bibitem{macias-diazExplicitDissipationpreservingMethod2018}
-{\sc {Mac{\'i}as-D{\'i}az}, J.~E.}
-\newblock An explicit dissipation-preserving method for {{Riesz}}
-  space-fractional nonlinear wave equations in multiple dimensions.
-\newblock {\em Commun Nonlinear Sci Numer Simul 59\/} (June 2018), 67--87.
-
-\bibitem{maginSolvingFractionalOrder2009}
-{\sc Magin, R., Feng, X., and Baleanu, D.}
-\newblock Solving the fractional order {{Bloch}} equation.
-\newblock {\em Concept Magn Reson A 34A}, 1 (Jan. 2009), 16--23.
-
-\bibitem{meerschaertFiniteDifferenceApproximations2004}
-{\sc Meerschaert, M.~M., and Tadjeran, C.}
-\newblock Finite difference approximations for fractional advection\textendash
-  dispersion flow equations.
-\newblock {\em J Comput Appl Math 172}, 1 (2004), 65--77.
-
-\bibitem{quispelNewClassEnergypreserving2008}
-{\sc Quispel, G. R.~W., and McLaren, D.~I.}
-\newblock A new class of energy-preserving numerical integration methods.
-\newblock {\em J Phys A: Math Theor 41}, 4 (Feb. 2008), 045206.
-
-\bibitem{ranConservativeDifferenceScheme2016}
-{\sc Ran, M., and Zhang, C.}
-\newblock A conservative difference scheme for solving the strongly coupled
-  nonlinear fractional {{Schr\"odinger}} equations.
-\newblock {\em Commun Nonlinear Sci Numer Simul 41\/} (Dec. 2016), 64--83.
+\newblock A fast energy conserving finite element method for the nonlinear fractional {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Appl. Math. Comput. 338\/} (Dec. 2018), 758--773.
 
 \bibitem{ranLinearlyImplicitConservative2016}
 {\sc Ran, M., and Zhang, C.}
-\newblock A linearly implicit conservative scheme for the fractional nonlinear
-  {{Schr\"odinger}} equation with wave operator.
-\newblock {\em Int J Comput Math 93}, 7 (July 2016), 1103--1118.
+\newblock A linearly implicit conservative scheme for the fractional nonlinear {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Int. J. Comput. Math. 93}, 7 (July 2016), 1103--1118.
+
+\bibitem{ranochaRelaxationRungeKutta2020}
+{\sc Ranocha, H., and Ketcheson, D.~I.}
+\newblock Relaxation {{Runge}}{\textendash}{{Kutta Methods}} for {{Hamiltonian Problems}}.
+\newblock {\em J Sci Comput 84}, 1 (July 2020), 17.
 
 \bibitem{ranochaGeneralRelaxationMethods2020}
 {\sc Ranocha, H., L{\'o}czi, L., and Ketcheson, D.~I.}
-\newblock General relaxation methods for initial-value problems with
-  application to multistep schemes.
+\newblock General relaxation methods for initial-value problems with application to multistep schemes.
 \newblock {\em Numer Math 146}, 4 (Dec. 2020), 875--906.
-
-\bibitem{ranochaRelaxationRungeKutta2020}
-{\sc Ranocha, H., Sayyari, M., Dalcin, L., Parsani, M., and Ketcheson, D.~I.}
-\newblock Relaxation {{Runge--Kutta Methods}}: {{Fully Discrete Explicit
-  Entropy-Stable Schemes}} for the {{Compressible Euler}} and {{Navier--Stokes
-  Equations}}.
-\newblock {\em SIAM J Sci Comput 42}, 2 (Jan. 2020), A612--A638.
-
-\bibitem{samkoFractionalIntegralsDerivatives1993}
-{\sc Samko, S.~G., Kilbas, A.~A., and Marichev, O.~I.}
-\newblock {\em Fractional Integrals and Derivatives}, vol.~1.
-\newblock {Gordon and breach science publishers, Yverdon Yverdon-les-Bains,
-  Switzerland}, 1993.
-
-\bibitem{shenScalarAuxiliaryVariable2018}
-{\sc Shen, J., Xu, J., and Yang, J.}
-\newblock The scalar auxiliary variable ({{SAV}}) approach for gradient flows.
-\newblock {\em J Comput Phys 353\/} (Jan. 2018), 407--416.
-
-\bibitem{sunRandomorderFractionalDifferential2011}
-{\sc Sun, H., Chen, Y., and Chen, W.}
-\newblock Random-order fractional differential equation models.
-\newblock {\em Signal Process 91}, 3 (Mar. 2011), 525--530.
-
-\bibitem{tsutsumiNonrelativisticApproximationNonlinear1984}
-{\sc Tsutsumi, M.}
-\newblock Nonrelativistic approximation of nonlinear {{Klein-Gordon}} equations
-  in two space dimensions.
-\newblock {\em Nonlinear Analysis: Theory, Methods \& Applications 8}, 6 (June
-  1984), 637--643.
-
-\bibitem{wangCrankNicolsonDifference2013}
-{\sc Wang, D., Xiao, A., and Yang, W.}
-\newblock Crank\textendash{{Nicolson}} difference scheme for the coupled
-  nonlinear {{Schr\"odinger}} equations with the {{Riesz}} space fractional
-  derivative.
-\newblock {\em J Comput Phys 242\/} (June 2013), 670--681.
-
-\bibitem{wangLinearlyImplicitConservative2014}
-{\sc Wang, D., Xiao, A., and Yang, W.}
-\newblock A linearly implicit conservative difference scheme for the space
-  fractional coupled nonlinear {{Schr\"odinger}} equations.
-\newblock {\em J Comput Phys 272\/} (Sept. 2014), 644--655.
 
 \bibitem{wangConservativeLinearizedDifference2015}
 {\sc Wang, P., and Huang, C.}
-\newblock A conservative linearized difference scheme for the nonlinear
-  fractional {{Schr\"odinger}} equation.
-\newblock {\em Numer Algorithms 69}, 3 (July 2015), 625--641.
+\newblock A conservative linearized difference scheme for the nonlinear fractional {{Schr{\"o}dinger}} equation.
+\newblock {\em Numer. Algorithms 69}, 3 (July 2015), 625--641.
 
-\bibitem{wangEnergyConservativeDifference2015}
-{\sc Wang, P., and Huang, C.}
-\newblock An energy conservative difference scheme for the nonlinear fractional
-  {{Schr\"odinger}} equations.
-\newblock {\em J Comput Phys 293\/} (July 2015), 238--251.
+\bibitem{yangEfficientLinearSchemes2017}
+{\sc Yang, X., and Ju, L.}
+\newblock Efficient linear schemes with unconditional energy stability for the phase field elastic bending energy model.
+\newblock {\em Comput. Methods Appl. Mech. Eng. 315\/} (Mar. 2017), 691--712.
 
-\bibitem{wangStructurepreservingNumericalMethods2018}
-{\sc Wang, P., and Huang, C.}
-\newblock Structure-preserving numerical methods for the fractional
-  {{Schr\"odinger}} equation.
-\newblock {\em Appl Numer Math 129\/} (July 2018), 137--158.
-
-\bibitem{wangAnalysisNewConservative2006}
-{\sc Wang, T.-c., and Zhang, L.-m.}
-\newblock Analysis of some new conservative schemes for nonlinear
-  {{Schr\"odinger}} equation with wave operator.
-\newblock {\em Appl Math Comput 182}, 2 (Nov. 2006), 1780--1794.
-
-\bibitem{wangSplitstepSpectralGalerkin2019}
-{\sc Wang, Y., Mei, L., Li, Q., and Bu, L.}
-\newblock Split-step spectral {{Galerkin}} method for the two-dimensional
-  nonlinear space-fractional {{Schr\"odinger}} equation.
-\newblock {\em Appl Numer Math 136\/} (Feb. 2019), 257--278.
-
-\bibitem{xinModelingLightBullets2000}
-{\sc Xin, J.}
-\newblock Modeling light bullets with the two-dimensional
-  sine\textendash{{Gordon}} equation.
-\newblock {\em Phys D: Nonlinear Phenom 135}, 3-4 (Jan. 2000), 345--368.
-
-\bibitem{xuDiscontinuousGalerkinMethod2014}
-{\sc Xu, Q., and Hesthaven, J.~S.}
-\newblock Discontinuous galerkin method for fractional convection-diffusion
-  equations.
-\newblock {\em SIAM J Numer Anal 52}, 1 (2014), 405--423.
-
-\bibitem{yangNumericalMethodsFractional2010}
-{\sc Yang, Q., Liu, F., and Turner, I.}
-\newblock Numerical methods for fractional partial differential equations with
-  {{Riesz}} space fractional derivatives.
-\newblock {\em Appl Math Model 34}, 1 (Jan. 2010), 200--218.
-
-\bibitem{yangConvergenceAnalysisInvariant2020d}
-{\sc Yang, X., and Zhang, G.-D.}
-\newblock Convergence {{Analysis}} for the {{Invariant Energy Quadratization}}
-  ({{IEQ}}) {{Schemes}} for {{Solving}} the {{Cahn}}\textendash{{Hilliard}} and
-  {{Allen}}\textendash{{Cahn Equations}} with {{General Nonlinear Potential}}.
-\newblock {\em J Sci Comput 82}, 3 (Feb. 2020), 55.
-
-\bibitem{zaslavskySelfsimilarTransportIncomplete1993}
-{\sc Zaslavsky, G.~M., Stevens, D., and Weitzner, H.}
-\newblock Self-similar transport in incomplete chaos.
-\newblock {\em Phys Rev E 48}, 3 (Sept. 1993), 1683--1694.
-
-\bibitem{zayernouriFractionalSpectralCollocation2014}
-{\sc Zayernouri, M., and Karniadakis, G.~E.}
-\newblock Fractional spectral collocation method.
-\newblock {\em SIAM Journal on Scientific Computing 36}, 1 (2014), A40--A62.
-
-\bibitem{zengCrankNicolsonADI2014}
-{\sc Zeng, F., Liu, F., Li, C., Burrage, K., Turner, I., and Anh, V.}
-\newblock A {{Crank}}\textendash{{Nicolson ADI}} spectral method for a
-  two-dimensional riesz space fractional nonlinear reaction-diffusion equation.
-\newblock {\em SIAM Journal on Numerical Analysis 52}, 6 (2014), 2599--2622.
+\bibitem{yangLinearUnconditionallyEnergy2017}
+{\sc Yang, X., and Ju, L.}
+\newblock Linear and unconditionally energy stable schemes for the binary fluid{\textendash}surfactant phase field model.
+\newblock {\em Comput Method Appl M 318\/} (May 2017), 1005--1029.
 
 \bibitem{zhangConservativeNumericalScheme2003}
 {\sc Zhang, L., and Chang, Q.}
-\newblock A conservative numerical scheme for a class of nonlinear
-  {{Schr\"odinger}} equation with wave operator.
-\newblock {\em Appl Math Comput 145}, 2 (Dec. 2003), 603--612.
+\newblock A conservative numerical scheme for a class of nonlinear {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Appl. Math. Comput. 145}, 2 (Dec. 2003), 603--612.
 
-\bibitem{zhangMassBalanceBased2005}
-{\sc Zhang, X., Crawford, J.~W., Deeks, L.~K., Stutter, M.~I., Bengough, A.~G.,
-  and Young, I.~M.}
-\newblock A mass balance based numerical method for the fractional
-  advection-dispersion equation: {{Theory}} and application: {{FRACTIONAL
-  ADVECTION-DISPERSION EQUATION}}.
-\newblock {\em Water Resources Res 41}, 7 (July 2005).
-
-\bibitem{zhangFourthOrderCompactDifference2014}
-{\sc Zhang, Y., Ding, H., and Luo, J.}
-\newblock Fourth-{{Order Compact Difference Schemes}} for the
-  {{Riemann-Liouville}} and {{Riesz Derivatives}}.
-\newblock {\em Abstract and Applied Analysis 2014\/} (2014), 1--4.
-
-\bibitem{zhaoExplicitFourthorderEnergypreserving2019}
-{\sc Zhao, J., Li, Y., and Xu, Y.}
-\newblock An explicit fourth-order energy-preserving scheme for {{Riesz}} space
-  fractional nonlinear wave equations.
-\newblock {\em Appl Math Comput 351\/} (June 2019), 124--138.
-
-\bibitem{zhaoNumericalApproximationsPhase2017}
-{\sc Zhao, J., Wang, Q., and Yang, X.}
-\newblock Numerical approximations for a phase field dendritic crystal growth
-  model based on the invariant energy quadratization approach.
-\newblock {\em Int J Numer Methods Eng 110}, 3 (2017), 279--300.
+\bibitem{zhangHighorderStructurepreservingDifference2023}
+{\sc Zhang, X., Ran, M., Liu, Y., and Zhang, L.}
+\newblock A high-order structure-preserving difference scheme for generalized fractional {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Math. Comput. Simulation 210\/} (Aug. 2023), 532--546.
 
 \end{thebibliography}
