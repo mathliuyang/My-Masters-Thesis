@@ -469,173 +469,173 @@ S_m^{\prime}(\gamma)=&\tau\left[\left(V_{\gamma}^{m},\sum\limits_{i=1}^{s}b_if_{
 	在实际计算中,IDT 方法的阶数可能会比我们预期的更高,甚至可以达到 RT 方法的阶数,这可以在例子 \ref{ex:1} 中观察到.
 \end{remark}
 
-\section{Numerical examples}\label{Section 6}
-为了支持和验证之前的理论结果,本节提供了一些数值例子. 在我们的计算中,采用了基于快速傅里叶变换（FFT）方法的快速求解器方法,可以减少内存需求和计算复杂度. 我们进行了几个实验来说明所提出的方法的有效性,并将它们与其他经典的SAV-RK方法进行比较. 首先,我们展示了SAV重构的RRKs和IDTs的数值收敛阶. 然后我们展示了所提出的方案的精度和守恒性质.
+% \section{数值算例}\label{Section 6}
+% 为了支持和验证之前的理论结果,本节提供了一些数值例子. 在我们的计算中,采用了基于快速傅里叶变换（FFT）方法的快速求解器方法,可以减少内存需求和计算复杂度. 我们进行了几个实验来说明所提出的方法的有效性,并将它们与其他经典的SAV-RK方法进行比较. 首先,我们展示了SAV重构的RRKs和IDTs的数值收敛阶. 然后我们展示了所提出的方案的精度和守恒性质.
 
-在数值测试中,将使用以下RK方法：
-\begin{enumerate}
-	\item $\operatorname{RK}(2,2)$ : 二级、二阶 Heun 方法 %of \cite{shuEfficientImplementationEssentially1988}.
-\begin{equation}
-	\begin{array}{c|cc}
-	0 & 0 & 0 \\
-	\frac{2}{3} & \frac{2}{3} & 0 \\
-	\hline & \frac{1}{4} & \frac{3}{4}
-	\end{array}
-	\end{equation}
+% 在数值测试中,将使用以下RK方法：
+% \begin{enumerate}
+% 	\item $\operatorname{RK}(2,2)$ : 二级、二阶 Heun 方法 %of \cite{shuEfficientImplementationEssentially1988}.
+% \begin{equation}
+% 	\begin{array}{c|cc}
+% 	0 & 0 & 0 \\
+% 	\frac{2}{3} & \frac{2}{3} & 0 \\
+% 	\hline & \frac{1}{4} & \frac{3}{4}
+% 	\end{array}
+% 	\end{equation}
 
-	\item $\mathrm{RK}(3,3)$ : 三级、三阶 Heun 方法 %of \cite{shuEfficientImplementationEssentially1988}.
+% 	\item $\mathrm{RK}(3,3)$ : 三级、三阶 Heun 方法 %of \cite{shuEfficientImplementationEssentially1988}.
 
-	\begin{equation}
-		\begin{array}{c|ccc}
-		0 & 0 & 0 & 0 \\
-		\frac{1}{3} & \frac{1}{3} & 0 & 0 \\
-		\frac{2}{3} & 0 & \frac{2}{3} & 0 \\
-		\hline & \frac{1}{4} & 0 & \frac{3}{4}
-		\end{array}
-		\end{equation}
+% 	\begin{equation}
+% 		\begin{array}{c|ccc}
+% 		0 & 0 & 0 & 0 \\
+% 		\frac{1}{3} & \frac{1}{3} & 0 & 0 \\
+% 		\frac{2}{3} & 0 & \frac{2}{3} & 0 \\
+% 		\hline & \frac{1}{4} & 0 & \frac{3}{4}
+% 		\end{array}
+% 		\end{equation}
 	
-    \item $\operatorname{RK}(4,4)$ : 四级、四阶 Gill 方法 %of \cite{shuEfficientImplementationEssentially1988}.
+%     \item $\operatorname{RK}(4,4)$ : 四级、四阶 Gill 方法 %of \cite{shuEfficientImplementationEssentially1988}.
 	
-	\begin{equation}
-		\begin{array}{c|cccc}
-		0 & 0 & 0 & 0 & 0 \\
-		\frac{1}{2} & \frac{1}{2} & 0 & 0 & 0 \\
-		\frac{1}{2} & \frac{\sqrt{2}-1}{2} & 1-\frac{\sqrt{2}}{2} & 0 & 0 \\
-		1 & 0 & -\frac{\sqrt{2}}{2} & 1+\frac{\sqrt{2}}{2} & 0 \\
-		\hline & \frac{1}{6} & \frac{2-\sqrt{2}}{6} & \frac{2+\sqrt{2}}{6} & \frac{1}{6}
-		\end{array}
-		\end{equation}
+% 	\begin{equation}
+% 		\begin{array}{c|cccc}
+% 		0 & 0 & 0 & 0 & 0 \\
+% 		\frac{1}{2} & \frac{1}{2} & 0 & 0 & 0 \\
+% 		\frac{1}{2} & \frac{\sqrt{2}-1}{2} & 1-\frac{\sqrt{2}}{2} & 0 & 0 \\
+% 		1 & 0 & -\frac{\sqrt{2}}{2} & 1+\frac{\sqrt{2}}{2} & 0 \\
+% 		\hline & \frac{1}{6} & \frac{2-\sqrt{2}}{6} & \frac{2+\sqrt{2}}{6} & \frac{1}{6}
+% 		\end{array}
+% 		\end{equation}
 	
-\end{enumerate}
+% \end{enumerate}
 
-此外,还将使用SAV方法\cite{chengConvergenceEnergyconservingScheme2022}和三层线性隐式差分格式\cite{wangConservativeLinearizedDifference2015}进行比较. 为了得到数值误差,我们使用以下误差函数
-\begin{align}\label{eq_103}
-Error(\tau)=\left\|U_{N}^{M}-U_{N}^{2 M}\right\|_{\infty},~Error(N)=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty},
-\end{align}
-其中
-$$\left\|U_{N}^{M}-U_{N}^{2 M}\right\|_{\infty}=\left\|U\left(\frac{T}{M}, \frac{L}{N}\right)-U\left(\frac{T}{2 M}, \frac{L}{N}\right)\right\|_{\infty},\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M}, \frac{L}{N}\right)-U\left(\frac{T}{M}, \frac{L}{2 N}\right)\right\|_{\infty},$$
-并且在两个连续的时间步长$\tau$和$\tau / 2$和两个连续的多项式次数$N$和$2 N$上,通过以下公式计算时间和空间的收敛阶
-\begin{equation}
-\text { order }= \left\{
-\begin{aligned}
-\log _{2}[Error(\tau) / Error(\tau / 2)], & \text { in time } \\
-\log _{2}[Error(N) / Error(2 N)], & \text { in space. }
-\end{aligned}\right.\label{eq_104}
-\end{equation}
+% 此外,还将使用SAV方法\cite{chengConvergenceEnergyconservingScheme2022}和三层线性隐式差分格式\cite{wangConservativeLinearizedDifference2015}进行比较. 为了得到数值误差,我们使用以下误差函数
+% \begin{align}\label{eq_103}
+% Error(\tau)=\left\|U_{N}^{M}-U_{N}^{2 M}\right\|_{\infty},~Error(N)=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty},
+% \end{align}
+% 其中
+% $$\left\|U_{N}^{M}-U_{N}^{2 M}\right\|_{\infty}=\left\|U\left(\frac{T}{M}, \frac{L}{N}\right)-U\left(\frac{T}{2 M}, \frac{L}{N}\right)\right\|_{\infty},\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M}, \frac{L}{N}\right)-U\left(\frac{T}{M}, \frac{L}{2 N}\right)\right\|_{\infty},$$
+% 并且在两个连续的时间步长$\tau$和$\tau / 2$和两个连续的多项式次数$N$和$2 N$上,通过以下公式计算时间和空间的收敛阶
+% \begin{equation}
+% \text { order }= \left\{
+% \begin{aligned}
+% \log _{2}[Error(\tau) / Error(\tau / 2)], & \text { in time } \\
+% \log _{2}[Error(N) / Error(2 N)], & \text { in space. }
+% \end{aligned}\right.\label{eq_104}
+% \end{equation}
 
-为了描述保守性能,能量的相对误差由以下公式计算
-\begin{equation}\label{eq_105}
-R E^{m}=\left|\left(E^{m}-E^{0}\right) / E^{0}\right|,
-\end{equation}
-其中$E^{m}$表示$t_m$时的离散能量.
+% 为了描述保守性能,能量的相对误差由以下公式计算
+% \begin{equation}\label{eq_105}
+% R E^{m}=\left|\left(E^{m}-E^{0}\right) / E^{0}\right|,
+% \end{equation}
+% 其中$E^{m}$表示$t_m$时的离散能量.
 
 
-\begin{example}\label{ex:1}
-    首先,我们将一维NFSWEs \eqref{eq:s1}表示为
-\begin{equation}\label{eq_108}
-u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0, \quad (x,t)\in  \Omega\times[0, T],
-\end{equation}
-当 $u(x, 0)=(1+\mathrm{i}) x e^{-10(1-x)^2}$ 和 $u_t(x, 0)=0$.
-\end{example}
+% \begin{example}\label{ex:1}
+%     首先,我们将一维NFSWEs \eqref{eq:s1}表示为
+% \begin{equation}\label{eq_108}
+% u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0, \quad (x,t)\in  \Omega\times[0, T],
+% \end{equation}
+% 当 $u(x, 0)=(1+\mathrm{i}) x e^{-10(1-x)^2}$ 和 $u_t(x, 0)=0$.
+% \end{example}
 
-不难验证,初始值函数$u(x, 0)$沿着$x$从$x=1$处指数衰减为零.这意味着初始值函数在有界区间$\Omega$之外可以忽略不计.考虑到机器精度的限制, 这里,我们取$\Omega=(-25,25)$.
+% 不难验证,初始值函数$u(x, 0)$沿着$x$从$x=1$处指数衰减为零.这意味着初始值函数在有界区间$\Omega$之外可以忽略不计.考虑到机器精度的限制, 这里,我们取$\Omega=(-25,25)$.
 
-不失一般性,这里我们取$\alpha=1.5$和$T=100$来验证我们的理论分析结果. 
-选择时间步长$\Delta t=0.1,0.05,0.025,0.0125,0.00625$,标准SAV-RK、SAV-RRK和SAV-IDT格式的相应误差和时间收敛率如表\ref{tab:6-1}所示. 
-我们可以看到,所有的SAV-RRK格式保持了与标准SAV-RK格式相同的收敛阶数,而SAV-IDT格式则表现出不同的行为. 
-SAV-IDT $(2,2)$和SAV-IDT $(4,4)$给出了比定理\ref{thm:5_4}中指示的期望速率更高的收敛阶数,而SAV-IDT $(3,3)$则给出了降低了一个阶数的收敛速率. 
-这种不同的行为可以归因于$\left|1-\gamma_n\right|$的收敛速率对于SAV-RRK(2, 2)和SAV-RRK(4, 4)提高了一个阶数,如图\ref{fig:1}所示. 
-同时,在步长重新缩放后,在大多数情况下,标准的SAV-RKs和SAV-RRKs给出了非常接近的数值误差.
-\begin{table}[H]\footnotesize
-	\centering
-	\caption{在$N=32, T = 100$时,SAV-RK、SAV-RRK和SAV-IDT的数值误差和收敛阶数(例 \ref{ex:1}).}
-	\begin{tabular}{lllllrlrlrlrlrl}
-	\toprule
-	\multicolumn{2}{l}{\multirow{2}[3]{*}{\textbf{RK(Stage,Order)}}} & \multicolumn{2}{l}{\multirow{2}[3]{*}{$\bm{\Delta t}$}} & \multicolumn{3}{c}{\textbf{SAV-RK}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK}} &       & \multicolumn{3}{c}{\textbf{SAV-IDT}} \\
-	\cmidrule{5-7}\cmidrule{9-11}\cmidrule{13-15}    \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \textbf{Error} &       & \textbf{order} &       & \textbf{Error} &       & \textbf{order} &       & \textbf{Error} &       & \textbf{order} \\
-	\multicolumn{2}{l}{\multirow{5}[0]{*}{\textbf{RK(2,2)}}} & \multicolumn{2}{l}{0.1} & 1.8552E-04 &       & -     &       & 1.9063E-04 &       & -     &       & 2.0325E-04 &       & - \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 4.6601E-05 &       & 1.9931  &       & 4.7240E-05 &       & 2.0126  &       & 5.0585E-05 &       & 2.0065  \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 1.1671E-05 &       & 1.9974  &       & 1.1750E-05 &       & 2.0074  &       & 1.2387E-05 &       & 2.0298  \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 2.9200E-06 &       & 1.9990  &       & 2.9294E-06 &       & 2.0040  &       & 2.9549E-06 &       & 2.0677  \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 7.3022E-07 &       & 1.9996  &       & 7.3130E-07 &       & 2.0021  &       & 6.6665E-07 &       & 2.1481  \\
-	\multicolumn{2}{l}{\multirow{5}[0]{*}{\textbf{RK(3,3)}}} & \multicolumn{2}{l}{0.1} & 7.6862E-06 &       & -     &       & 2.9857E-06 &       & -     &       & 1.7245E-04 &       & - \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 9.5269E-07 &       & 3.0122  &       & 3.9037E-07 &       & 2.9352  &       & 4.3389E-05 &       & 1.9907  \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 1.1866E-07 &       & 3.0052  &       & 5.0077E-08 &       & 2.9626  &       & 1.0873E-05 &       & 1.9966  \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 1.4809E-08 &       & 3.0023  &       & 6.3449E-09 &       & 2.9805  &       & 2.7208E-06 &       & 1.9986  \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 1.8497E-09 &       & 3.0011  &       & 7.9858E-10 &       & 2.9901  &       & 6.8049E-07 &       & 1.9994  \\
-	\multicolumn{2}{l}{\multirow{5}[1]{*}{\textbf{RK(4,4)}}} & \multicolumn{2}{l}{0.1} & 3.7701E-07 &       & -     &       & 3.8894E-07 &       & -     &       & 7.0733E-07 &       & - \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 2.3572E-08 &       & 3.9994  &       & 2.3939E-08 &       & 4.0221  &       & 4.4585E-08 &       & 3.9878  \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 1.4730E-09 &       & 4.0003  &       & 1.4843E-09 &       & 4.0115  &       & 2.8080E-09 &       & 3.9889  \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 9.2041E-11 &       & 4.0003  &       & 9.2397E-11 &       & 4.0058  &       & 1.7743E-10 &       & 3.9842  \\
-	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 5.7518E-12 &       & 4.0002  &       & 5.7630E-12 &       & 4.0029  &       & 1.1309E-11 &       & 3.9718  \\
-	\bottomrule
-	  \end{tabular}%
-	\label{tab:6-1}%
-  \end{table}%
+% 不失一般性,这里我们取$\alpha=1.5$和$T=100$来验证我们的理论分析结果. 
+% 选择时间步长$\Delta t=0.1,0.05,0.025,0.0125,0.00625$,标准SAV-RK、SAV-RRK和SAV-IDT格式的相应误差和时间收敛率如表\ref{tab:6-1}所示. 
+% 我们可以看到,所有的SAV-RRK格式保持了与标准SAV-RK格式相同的收敛阶数,而SAV-IDT格式则表现出不同的行为. 
+% SAV-IDT $(2,2)$和SAV-IDT $(4,4)$给出了比定理\ref{thm:5_4}中指示的期望速率更高的收敛阶数,而SAV-IDT $(3,3)$则给出了降低了一个阶数的收敛速率. 
+% 这种不同的行为可以归因于$\left|1-\gamma_n\right|$的收敛速率对于SAV-RRK(2, 2)和SAV-RRK(4, 4)提高了一个阶数,如图\ref{fig:1}所示. 
+% 同时,在步长重新缩放后,在大多数情况下,标准的SAV-RKs和SAV-RRKs给出了非常接近的数值误差.
+% \begin{table}[H]\footnotesize
+% 	\centering
+% 	\caption{在$N=32, T = 100$时,SAV-RK、SAV-RRK和SAV-IDT的数值误差和收敛阶数(例 \ref{ex:1}).}
+% 	\begin{tabular}{lllllrlrlrlrlrl}
+% 	\toprule
+% 	\multicolumn{2}{l}{\multirow{2}[3]{*}{\textbf{RK(Stage,Order)}}} & \multicolumn{2}{l}{\multirow{2}[3]{*}{$\bm{\Delta t}$}} & \multicolumn{3}{c}{\textbf{SAV-RK}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK}} &       & \multicolumn{3}{c}{\textbf{SAV-IDT}} \\
+% 	\cmidrule{5-7}\cmidrule{9-11}\cmidrule{13-15}    \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \textbf{Error} &       & \textbf{order} &       & \textbf{Error} &       & \textbf{order} &       & \textbf{Error} &       & \textbf{order} \\
+% 	\multicolumn{2}{l}{\multirow{5}[0]{*}{\textbf{RK(2,2)}}} & \multicolumn{2}{l}{0.1} & 1.8552E-04 &       & -     &       & 1.9063E-04 &       & -     &       & 2.0325E-04 &       & - \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 4.6601E-05 &       & 1.9931  &       & 4.7240E-05 &       & 2.0126  &       & 5.0585E-05 &       & 2.0065  \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 1.1671E-05 &       & 1.9974  &       & 1.1750E-05 &       & 2.0074  &       & 1.2387E-05 &       & 2.0298  \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 2.9200E-06 &       & 1.9990  &       & 2.9294E-06 &       & 2.0040  &       & 2.9549E-06 &       & 2.0677  \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 7.3022E-07 &       & 1.9996  &       & 7.3130E-07 &       & 2.0021  &       & 6.6665E-07 &       & 2.1481  \\
+% 	\multicolumn{2}{l}{\multirow{5}[0]{*}{\textbf{RK(3,3)}}} & \multicolumn{2}{l}{0.1} & 7.6862E-06 &       & -     &       & 2.9857E-06 &       & -     &       & 1.7245E-04 &       & - \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 9.5269E-07 &       & 3.0122  &       & 3.9037E-07 &       & 2.9352  &       & 4.3389E-05 &       & 1.9907  \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 1.1866E-07 &       & 3.0052  &       & 5.0077E-08 &       & 2.9626  &       & 1.0873E-05 &       & 1.9966  \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 1.4809E-08 &       & 3.0023  &       & 6.3449E-09 &       & 2.9805  &       & 2.7208E-06 &       & 1.9986  \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 1.8497E-09 &       & 3.0011  &       & 7.9858E-10 &       & 2.9901  &       & 6.8049E-07 &       & 1.9994  \\
+% 	\multicolumn{2}{l}{\multirow{5}[1]{*}{\textbf{RK(4,4)}}} & \multicolumn{2}{l}{0.1} & 3.7701E-07 &       & -     &       & 3.8894E-07 &       & -     &       & 7.0733E-07 &       & - \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 2.3572E-08 &       & 3.9994  &       & 2.3939E-08 &       & 4.0221  &       & 4.4585E-08 &       & 3.9878  \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 1.4730E-09 &       & 4.0003  &       & 1.4843E-09 &       & 4.0115  &       & 2.8080E-09 &       & 3.9889  \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 9.2041E-11 &       & 4.0003  &       & 9.2397E-11 &       & 4.0058  &       & 1.7743E-10 &       & 3.9842  \\
+% 	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 5.7518E-12 &       & 4.0002  &       & 5.7630E-12 &       & 4.0029  &       & 1.1309E-11 &       & 3.9718  \\
+% 	\bottomrule
+% 	  \end{tabular}%
+% 	\label{tab:6-1}%
+%   \end{table}%
   
-  接下来,我们对每一步中的松弛系数 $\gamma_n$ 进行了充分的研究.我们计算了在不同时间步长 $\tau$ 的模拟过程中 $\gamma_m$ 和 1 之间的最大距离,即 $\max _m\left|\gamma_m-1\right|$,并且也计算了 $\left|S_m(1)\right|$ 的最大值,即 $\max _m\left|S_m(1)\right|$.一些松弛（RT）方法的数值结果如图 \ref{fig:1} 所示.从图中可以看出,上述两个量的阶数与理论结果一致.这证实了引理 \ref{lem:5_1} 和定理 \ref{thm:5_1} 中的理论结果\begin{figure}[H]
-	\begin{center}
-	\subfigure[$\max _m\left|\gamma_m-1\right|$]{ \centering
-	\includegraphics[width=0.5\textwidth]{./figures/exp1_r.eps}
-	%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-	}\subfigure[$\max_m\left|S_m(1)\right|$]{ \centering
-	\includegraphics[width=0.5\textwidth]{./figures/exp1_s.eps}
-	%\centerline{($a$) Temporal accuracy with $N=128.$}
-	}\caption{松弛（RT）方法的 $\max _m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$ （例 \ref{ex:1}）} 
-	\label{fig:1}
-	\end{center}
-	\end{figure}
+%   接下来,我们对每一步中的松弛系数 $\gamma_n$ 进行了充分的研究.我们计算了在不同时间步长 $\tau$ 的模拟过程中 $\gamma_m$ 和 1 之间的最大距离,即 $\max _m\left|\gamma_m-1\right|$,并且也计算了 $\left|S_m(1)\right|$ 的最大值,即 $\max _m\left|S_m(1)\right|$.一些松弛（RT）方法的数值结果如图 \ref{fig:1} 所示.从图中可以看出,上述两个量的阶数与理论结果一致.这证实了引理 \ref{lem:5_1} 和定理 \ref{thm:5_1} 中的理论结果\begin{figure}[H]
+% 	\begin{center}
+% 	\subfigure[$\max _m\left|\gamma_m-1\right|$]{ \centering
+% 	\includegraphics[width=0.5\textwidth]{./figures/exp1_r.eps}
+% 	%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+% 	}\subfigure[$\max_m\left|S_m(1)\right|$]{ \centering
+% 	\includegraphics[width=0.5\textwidth]{./figures/exp1_s.eps}
+% 	%\centerline{($a$) Temporal accuracy with $N=128.$}
+% 	}\caption{松弛（RT）方法的 $\max _m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$ （例 \ref{ex:1}）} 
+% 	\label{fig:1}
+% 	\end{center}
+% 	\end{figure}
   
-    此外,我们采用 $RK(4,4)$ 方法,计算不同 $\alpha$ 下的 $L^{\infty}$-范数误差.图 \ref{fig:2} 显示了解的误差及其在 $L^{\infty}$-范数下的收敛阶数,结果证实了 SAV-IDT 方案和 SAV-RRK 方案在时间方向上都具有四阶收敛性.我们在图 \ref{fig:3} 中描绘了不同 $N$ 和 $\tau=0.01$ 的方案的空间误差,结果显示出所提出的方案的空间误差非常小,几乎可以忽略不计,而误差主要由时间离散化误差所主导.这证实了对于充分光滑的问题,傅里叶伪谱方法在空间上是任意阶的.
-    \begin{figure}[H]
-		\begin{center}
-		\subfigure[$N=32 $(IDT)]{ \centering
-		\includegraphics[width=0.5\textwidth]{./figures/exp1_RT_order_t.eps}
-		%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-		}\subfigure[$N=32 $(RT)]{ \centering
-		\includegraphics[width=0.5\textwidth]{./figures/exp1_IDT_order_t.eps}
-		%\centerline{($a$) Temporal accuracy with $N=128.$}
-		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶数. （例 \ref{ex:1}）} 
-		\label{fig:2}
-		\end{center}
-		\end{figure}
-	\begin{figure}[H]
-		\begin{center}
-		\subfigure[$\tau=0.01 $(IDT)]{ \centering
-		\includegraphics[width=0.5\textwidth]{./figures/exp1_RT_order_s.eps}
-		%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-		}\subfigure[$\tau=0.01 $(RT)]{ \centering
-		\includegraphics[width=0.5\textwidth]{./figures/exp1_IDT_order_s.eps}
-		%\centerline{($a$) Temporal accuracy with $N=128.$}
-		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶数. （例 \ref{ex:1}）} 
-		\label{fig:3}
-		\end{center}
-		\end{figure}
-		我们还进行了一次长时间模拟,直到 $T=1000$,并在图 \ref{fig:4} 中以不同的 $\alpha$ 绘制了 SAV-RRK(4,4) 方案的相对能量.结果表明,所提出的方案可以在离散场景中完全保持能量,并且其保持效果明显优于 SAV 方案和三级线性隐式差分方案.
-        \begin{figure}[H]
-		\begin{center}
-		\subfigure[$\alpha=1.3$]{ \centering
-		\includegraphics[width=0.5\textwidth]{./figures/exp1_energy3.eps}
-		%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-		}\subfigure[$\alpha=1.6$]{ \centering
-		\includegraphics[width=0.5\textwidth]{./figures/exp1_energy6.eps}
-		%\centerline{($a$) Temporal accuracy with $N=128.$}
-		}\\
-		\subfigure[$\alpha=1.9$]{ \centering
-		\includegraphics[width=0.5\textwidth]{./figures/exp1_energy9.eps}
-		%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-		}\subfigure[$\alpha=2$]{ \centering
-		\includegraphics[width=0.5\textwidth]{./figures/exp1_energy2.eps}
-		%\centerline{($a$) Temporal accuracy with $N=128.$}
-		}\caption{ 当 $N=32$,$\tau=0.01$ 时,不同 $\alpha$ 下能量的相对误差.(例 \ref{ex:1})} 
-		\label{fig:4}
-		\end{center}
-		\end{figure}
+%     此外,我们采用 $RK(4,4)$ 方法,计算不同 $\alpha$ 下的 $L^{\infty}$-范数误差.图 \ref{fig:2} 显示了解的误差及其在 $L^{\infty}$-范数下的收敛阶数,结果证实了 SAV-IDT 方案和 SAV-RRK 方案在时间方向上都具有四阶收敛性.我们在图 \ref{fig:3} 中描绘了不同 $N$ 和 $\tau=0.01$ 的方案的空间误差,结果显示出所提出的方案的空间误差非常小,几乎可以忽略不计,而误差主要由时间离散化误差所主导.这证实了对于充分光滑的问题,傅里叶伪谱方法在空间上是任意阶的.
+%     \begin{figure}[H]
+% 		\begin{center}
+% 		\subfigure[$N=32 $(IDT)]{ \centering
+% 		\includegraphics[width=0.5\textwidth]{./figures/exp1_RT_order_t.eps}
+% 		%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+% 		}\subfigure[$N=32 $(RT)]{ \centering
+% 		\includegraphics[width=0.5\textwidth]{./figures/exp1_IDT_order_t.eps}
+% 		%\centerline{($a$) Temporal accuracy with $N=128.$}
+% 		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶数. （例 \ref{ex:1}）} 
+% 		\label{fig:2}
+% 		\end{center}
+% 		\end{figure}
+% 	\begin{figure}[H]
+% 		\begin{center}
+% 		\subfigure[$\tau=0.01 $(IDT)]{ \centering
+% 		\includegraphics[width=0.5\textwidth]{./figures/exp1_RT_order_s.eps}
+% 		%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+% 		}\subfigure[$\tau=0.01 $(RT)]{ \centering
+% 		\includegraphics[width=0.5\textwidth]{./figures/exp1_IDT_order_s.eps}
+% 		%\centerline{($a$) Temporal accuracy with $N=128.$}
+% 		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶数. （例 \ref{ex:1}）} 
+% 		\label{fig:3}
+% 		\end{center}
+% 		\end{figure}
+% 		我们还进行了一次长时间模拟,直到 $T=1000$,并在图 \ref{fig:4} 中以不同的 $\alpha$ 绘制了 SAV-RRK(4,4) 方案的相对能量.结果表明,所提出的方案可以在离散场景中完全保持能量,并且其保持效果明显优于 SAV 方案和三级线性隐式差分方案.
+%         \begin{figure}[H]
+% 		\begin{center}
+% 		\subfigure[$\alpha=1.3$]{ \centering
+% 		\includegraphics[width=0.5\textwidth]{./figures/exp1_energy3.eps}
+% 		%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+% 		}\subfigure[$\alpha=1.6$]{ \centering
+% 		\includegraphics[width=0.5\textwidth]{./figures/exp1_energy6.eps}
+% 		%\centerline{($a$) Temporal accuracy with $N=128.$}
+% 		}\\
+% 		\subfigure[$\alpha=1.9$]{ \centering
+% 		\includegraphics[width=0.5\textwidth]{./figures/exp1_energy9.eps}
+% 		%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+% 		}\subfigure[$\alpha=2$]{ \centering
+% 		\includegraphics[width=0.5\textwidth]{./figures/exp1_energy2.eps}
+% 		%\centerline{($a$) Temporal accuracy with $N=128.$}
+% 		}\caption{ 当 $N=32$,$\tau=0.01$ 时,不同 $\alpha$ 下能量的相对误差.(例 \ref{ex:1})} 
+% 		\label{fig:4}
+% 		\end{center}
+% 		\end{figure}
 
-\begin{example}\label{ex:2}
-    现在我们考虑带有初值的二维 NFSWEs \eqref{eq:s1}：
-\begin{equation}
-u(x, y, 0)=\operatorname{sech}\left(x^2+y^2\right), u_t(x, y, 0)=\sin (x+y) \operatorname{sech}\left(-2\left(x^2+y^2\right)\right),(x, y, t) \in \Omega \times[0, T],
-\end{equation}
-其中 $\Omega=[-5,5] \times[-5,5]$.
-\end{example}
+% \begin{example}\label{ex:2}
+%     现在我们考虑带有初值的二维 NFSWEs \eqref{eq:s1}：
+% \begin{equation}
+% u(x, y, 0)=\operatorname{sech}\left(x^2+y^2\right), u_t(x, y, 0)=\sin (x+y) \operatorname{sech}\left(-2\left(x^2+y^2\right)\right),(x, y, t) \in \Omega \times[0, T],
+% \end{equation}
+% 其中 $\Omega=[-5,5] \times[-5,5]$.
+% \end{example}
