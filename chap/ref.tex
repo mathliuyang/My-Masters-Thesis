@@ -1,0 +1,34 @@
+
+%++++++++++++++++++++++参考文献+++++++++++++++++++++++++++++%
+
+%% 如果你有 bibdatabase 文件并希望 bibtex 生成 bibitems，请使用
+%%
+% plain,按字母的顺序排列,比较次序为作者、年度和标题.
+% unsrt,样式同plain,只是按照引用的先后排序.
+% alpha,用作者名首字母+年份后两位作标号,以字母顺序排序.
+% abbrv,类似plain,将月份全拼改为缩写,更显紧凑.
+% ieeetr,国际电气电子工程师协会期刊样式.
+% acm,美国计算机学会期刊样式.
+% siam,美国工业和应用数学学会期刊样式.
+% apalike,美国心理学学会期刊样式.
+% gbt7714-2005-author-year,（GB/T 7714－2005）按著者-出版年制
+% gbt7714-2005-numerical,（GB/T 7714－2005）按顺序编码制
+% gbt7714-author-year,（GB/T 7714）按著者-出版年制
+% gbt7714-numerical,（GB/T 7714）按顺序编码制
+
+% abbrv、acm、alpha、apalike、ieeetr、plain、unsrt、siam
+% 学术期刊: 序号 作者 文题 刊名 年 卷号(期号)起止页码
+\bibliographystyle{acm} 
+\bibliography{/Users/dasha/Zotero/BetterBibTeX/mylibrary.bib}
+
+%% 否则直接在 TeX 文件中使用下面的编码.
+
+% \begin{thebibliography}{10}\thispagestyle{fancy}
+%     \bibitem{刘冰2014MATLAB} 刘冰,郭海霞. MATLAB神经网络超级学习手册[M].人民邮电出版社:, 201405.478.
+%     \bibitem{周飞燕2017卷积神经网络研究综述} 周飞燕,金林鹏,董军.卷积神经网络研究综述[J].计算机学报,2017,40(06):1229-1251.
+%     \bibitem{panFourthorderDifferenceScheme2022} Pan K, Zeng J, He D, et al. A fourth-order difference scheme for the fractional nonlinear Schrödinger equation with wave operator[J]. Applicable Analysis, 2022, 101(8): 2886-2902.
+%     \bibitem{huEfficientEnergyPreserving2022} Hu D, Cai W, Gu X M, et al. Efficient energy preserving Galerkin–Legendre spectral methods for fractional nonlinear Schrödinger equation with wave operator[J]. Applied Numerical Mathematics, 2022, 172: 608-628.
+%     \bibitem{chengConvergenceEnergyconservingScheme2022} Cheng X, Qin H, Zhang J. Convergence of an energy-conserving scheme for nonlinear space fractional Schrödinger equations with wave operator[J]. Journal of Computational and Applied Mathematics, 2022, 400: 113762.
+
+
+%  \end{thebibliography}

@@ -1,0 +1,27 @@
+\chapter[预备知识]{预备知识}
+
+在介绍本文主要内容之前, 本章首先引进一些本文后续部分经常涉及的记号和引理.
+\section{常用记号}
+
+考虑时空方向的均匀网格剖分, $\tau$ 和 $h$ 分别代表时间和空间网格步长. $U_j^n$ 和 $u_j^n$ 分别 代表 $u(x, t)$ 在点 $\left(x_j, t_n\right)$ 处的精确解和数值解. 记
+\begin{equation}
+\delta_x u_j^n=\frac{u_{j+1}^n-u_j^n}{h}, \quad \delta_x^2 u_j^n=\frac{u_{j+1}^n-2 u_j^n+u_{j-1}^n}{h^2}, \quad \delta_x^4 u_j^n=\delta_x^2\left(\delta_x^2 u_j^n\right) .
+\end{equation}
+和
+\begin{equation}
+\begin{aligned}
+& u_j^{n+\frac{1}{2}}=\frac{u_j^{n+1}+u_i^n}{2}, \quad \hat{u}_j^n=\frac{u_j^{n+1}+u_j^{n-1}}{2}, \quad \tilde{u}_j^{n+\frac{1}{2}}=\frac{3 u_j^n-u_j^{n-1}}{2}, \\
+& \delta_t u_j^{n+\frac{1}{2}}=\frac{u_j^{n+1}-u_j^n}{\tau}, \quad \delta_{\hat{t}} u_j^n=\frac{u_j^{n+1}-u_j^{n-1}}{2 \tau}, \quad \delta_t^2 u_j^n=\frac{u_j^{n+1}-2 u_j^n+u_j^{n-1}}{\tau^2} .
+\end{aligned}
+\end{equation}
+针对周期边界条件, 定义 $U_h=\left\{u=\left(u_j\right)_{j \in \mathbb{Z}} \mid u_j \in \mathbb{C}, u_{j+J}=u_j, j \in \mathbb{Z}\right\}$ 是以 $L$ 为周 期的网格函数空间, 其中 $J h=L$. 对于任意的 $u, v \in U_h$, 定义内积及范数
+\begin{equation}
+(u, v)=h \sum_{j=1}^J u_j \bar{v}_j, \quad\|u\|=\sqrt{(u, u)}, \quad\|u\|_{\infty}=\max _{1 \leq j \leq J}\left|u_j\right| .
+\end{equation}
+类似地, 针对零边界条件, 定义 $V_h^0=\left\{v \mid v=\left\{v_j\right\} \in \Omega_h, v_0=v_M=0\right\}$ 是网格函数 空间, 其中 $M h=b-a$. 相应的离散内积和范数定义为
+\begin{equation}
+(u, v)=h \sum_{j=1}^{M-1} u_j \bar{v}_j, \quad\|u\|=\sqrt{(u, u)}, \quad\|u\|_{\infty}=\sup _{0 \leq j \leq M-1}\left|u_j\right| .
+\end{equation}
+值得说明是, 当研究问题限制于实数域时, 有 $\bar{v}_j=v_j$.
+\section{常用引理}
+如下几个引理将在后续算法的稳定性分析方面具有重要的作用.

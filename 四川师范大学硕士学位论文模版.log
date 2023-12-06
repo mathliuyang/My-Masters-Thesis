@@ -1,0 +1,1920 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  6 DEC 2023 20:54
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**四川师范大学硕士学位论文模版
+(./四川师范大学硕士学位论文模版.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexbook.cls (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
+File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-02-22 L3 programming layer (loader) 
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
+\g__graphics_track_int=\count181
+\l__pdf_internal_box=\box51
+\g__pdf_backend_object_int=\count182
+\g__pdf_backend_annotation_int=\count183
+\g__pdf_backend_link_int=\count184
+))
+Document Class: ctexbook 2022/07/14 v2.5.10 Chinese adapter for class book (CTEX)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexhook.sty
+Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexpatch.sty
+Package: ctexpatch 2022/07/14 v2.5.10 Patching commands (CTEX)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\l__ctex_tmp_int=\count185
+\l__ctex_tmp_box=\box52
+\l__ctex_tmp_dim=\dimen140
+\g__ctex_section_depth_int=\count186
+\g__ctex_font_size_int=\count187
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+File: ctexopts.cfg 2022/07/14 v2.5.10 Option configuration file (CTEX)
+)
+
+Class ctexbook Warning: Option `cs4size' is deprecated.
+(ctexbook)              Option `zihao=-4' is set.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count188
+\c@chapter=\count189
+\c@section=\count190
+\c@subsection=\count191
+\c@subsubsection=\count192
+\c@paragraph=\count193
+\c@subparagraph=\count194
+\c@figure=\count195
+\c@table=\count196
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen141
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+File: ctex-engine-xetex.def 2022/07/14 v2.5.10 XeLaTeX adapter (CTEX)
+ (/usr/local/texlive/2023/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2023-02-02 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen142
+\l__xtemplate_tmp_int=\count197
+\l__xtemplate_tmp_muskip=\muskip16
+\l__xtemplate_tmp_skip=\skip50
+)
+\l__xeCJK_tmp_int=\count198
+\l__xeCJK_tmp_box=\box53
+\l__xeCJK_tmp_dim=\dimen143
+\l__xeCJK_tmp_skip=\skip51
+\g__xeCJK_space_factor_int=\count199
+\l__xeCJK_begin_int=\count266
+\l__xeCJK_end_int=\count267
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip52
+\c__xeCJK_none_node=\count268
+\g__xeCJK_node_int=\count269
+\c__xeCJK_CJK_node_dim=\dimen144
+\c__xeCJK_CJK-space_node_dim=\dimen145
+\c__xeCJK_default_node_dim=\dimen146
+\c__xeCJK_CJK-widow_node_dim=\dimen147
+\c__xeCJK_normalspace_node_dim=\dimen148
+\c__xeCJK_default-space_node_skip=\skip53
+\l__xeCJK_ccglue_skip=\skip54
+\l__xeCJK_ecglue_skip=\skip55
+\l__xeCJK_punct_kern_skip=\skip56
+\l__xeCJK_indent_box=\box54
+\l__xeCJK_last_penalty_int=\count270
+\l__xeCJK_last_bound_dim=\dimen149
+\l__xeCJK_last_kern_dim=\dimen150
+\l__xeCJK_widow_penalty_int=\count271
+
+Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
+(xtemplate)             argument(s) on line 2396.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen151
+\l__xeCJK_mixed_punct_width_dim=\dimen152
+\l__xeCJK_middle_punct_width_dim=\dimen153
+\l__xeCJK_fixed_margin_width_dim=\dimen154
+\l__xeCJK_mixed_margin_width_dim=\dimen155
+\l__xeCJK_middle_margin_width_dim=\dimen156
+\l__xeCJK_bound_punct_width_dim=\dimen157
+\l__xeCJK_bound_margin_width_dim=\dimen158
+\l__xeCJK_margin_minimum_dim=\dimen159
+\l__xeCJK_kerning_total_width_dim=\dimen160
+\l__xeCJK_same_align_margin_dim=\dimen161
+\l__xeCJK_different_align_margin_dim=\dimen162
+\l__xeCJK_kerning_margin_width_dim=\dimen163
+\l__xeCJK_kerning_margin_minimum_dim=\dimen164
+\l__xeCJK_bound_dim=\dimen165
+\l__xeCJK_reverse_bound_dim=\dimen166
+\l__xeCJK_margin_dim=\dimen167
+\l__xeCJK_minimum_bound_dim=\dimen168
+\l__xeCJK_kerning_margin_dim=\dimen169
+\g__xeCJK_family_int=\count272
+\l__xeCJK_fam_int=\count273
+\g__xeCJK_fam_allocation_int=\count274
+\l__xeCJK_verb_case_int=\count275
+\l__xeCJK_verb_exspace_skip=\skip57
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count276
+\l__fontspec_language_int=\count277
+\l__fontspec_strnum_int=\count278
+\l__fontspec_tmp_int=\count279
+\l__fontspec_tmpa_int=\count280
+\l__fontspec_tmpb_int=\count281
+\l__fontspec_tmpc_int=\count282
+\l__fontspec_em_int=\count283
+\l__fontspec_emdef_int=\count284
+\l__fontspec_strong_int=\count285
+\l__fontspec_strongdef_int=\count286
+\l__fontspec_tmpa_dim=\dimen170
+\l__fontspec_tmpb_dim=\dimen171
+\l__fontspec_tmpc_dim=\dimen172
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2023/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
+))
+\ccwd=\dimen173
+\l__ctex_ccglue_skip=\skip58
+)
+\l__ctex_ziju_dim=\dimen174
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+Package: zhnumber 2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count287
+\l__zhnum_tmp_int=\count288
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+File: zhnumber-utf8.cfg 2022/07/14 v3.0 Chinese numerals with UTF8 encoding
+))
+\l__ctex_heading_skip=\skip59
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-book.def
+File: ctex-scheme-chinese-book.def 2022/07/14 v2.5.10 Chinese scheme for book (CTEX)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+File: ctex-name-utf8.cfg 2022/07/14 v2.5.10 Caption with encoding UTF-8 (CTEX)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctex-cs4size.clo
+File: ctex-cs4size.clo 2022/07/14 v2.5.10 cs4size option (CTEX)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-mac.def
+File: ctex-fontset-mac.def 2022/07/14 v2.5.10 macOS fonts definition (CTEX)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-macnew.def
+File: ctex-fontset-macnew.def 2022/07/14 v2.5.10 macOS fonts definition for El Capitan or later version (CTEX)
+
+
+Package fontspec Warning: Font "Songti SC Light" does not contain requested
+(fontspec)                Script "CJK".
+
+
+Package fontspec Info: Font family 'SongtiSCLight(0)' created for font 'Songti
+(fontspec)             SC Light' with options
+(fontspec)             [Script={CJK},BoldItalicFont={Kaiti SC
+(fontspec)             Bold},BoldFont={Songti SC Bold},ItalicFont={Kaiti SC}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Songti SC
+(fontspec)             Light/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Songti SC
+(fontspec)             Bold/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Kaiti
+(fontspec)             SC/OT:language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Kaiti SC
+(fontspec)             Bold/OT:language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctex.cfg
+File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
+) (./setup/SiCNUformat.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks16
+) (./setup/ccmap.sty
+
+LaTeX Warning: You have requested package `./setup/ccmap',
+               but the package provides `ccmap'.
+
+Package: ccmap 2006/11/18
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+
+Package ccmap Warning: not running PDFLaTeX - package not loaded.
+
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/floatrow/floatrow.sty
+Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen175
+\captionmargin=\dimen176
+\caption@leftmargin=\dimen177
+\caption@rightmargin=\dimen178
+\caption@width=\dimen179
+\caption@indent=\dimen180
+\caption@parindent=\dimen181
+\caption@hangindent=\dimen182
+Package caption Info: Standard document class detected.
+)
+\c@float@type=\count289
+\float@exts=\toks18
+\float@box=\box55
+\@floatcapt=\box56
+Package floatrow Info: Modified float package code loaded on input line 455.
+Package floatrow Info: Modified rotfloat package code loaded on input line 473.
+\FR@everyfloat=\toks19
+\flrow@foot=\insert252
+\FB@wd=\dimen183
+\FBo@wd=\dimen184
+\FBc@wd=\dimen185
+\FBo@ht=\skip60
+\FBc@ht=\skip61
+\FBf@ht=\skip62
+\FBo@max=\skip63
+\FBc@max=\skip64
+\FBf@max=\skip65
+\c@FBl@b=\count290
+\floatbox@depth=\count291
+\c@FRobj=\count292
+\c@FRsobj=\count293
+\Xhsize=\skip66
+\sXhsize=\skip67
+\Zhsize=\skip68
+\sZhsize=\skip69
+\flrow@rowbox=\box57
+\FR@Zunitlength=\dimen186
+\c@FBcnt=\count294
+\FPOScnt=\count295
+\LTleft=\skip70
+\LTright=\skip71
+\LTleft=\skip72
+\LTright=\skip73
+\flrow@types=\toks20
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip74
+\subfigcapskip=\skip75
+\subfigcaptopadj=\dimen187
+\subfigbottomskip=\skip76
+\subfigcapmargin=\dimen188
+\subfiglabelskip=\skip77
+\c@subfigure=\count296
+\c@lofdepth=\count297
+\c@subtable=\count298
+\c@lotdepth=\count299
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2023/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip78
+\subfig@bottom=\skip79
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip80
+\multirow@cntb=\count300
+\multirow@dima=\skip81
+\bigstrutjot=\dimen189
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen190
+\lightrulewidth=\dimen191
+\cmidrulewidth=\dimen192
+\belowrulesep=\dimen193
+\belowbottomsep=\dimen194
+\aboverulesep=\dimen195
+\abovetopsep=\dimen196
+\cmidrulesep=\dimen197
+\cmidrulekern=\dimen198
+\defaultaddspace=\dimen199
+\@cmidla=\count301
+\@cmidlb=\count302
+\@aboverulesep=\dimen256
+\@belowrulesep=\dimen257
+\@thisruleclass=\count303
+\@lastruleclass=\count304
+\@thisrulewidth=\dimen258
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count305
+)
+\@linkdim=\dimen259
+\Hy@linkcounter=\count306
+\Hy@pagecounter=\count307
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count308
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4060.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count309
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen260
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count310
+\Field@Width=\dimen261
+\Fld@charsize=\dimen262
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count311
+\c@Item=\count312
+\c@Hfootnote=\count313
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2023-02-07 v7.00v Hyperref driver for XeTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\pdfm@box=\box58
+\c@Hy@AnnotLevel=\count314
+\HyField@AnnotCount=\count315
+\Fld@listcount=\count316
+\c@bookmark@seq@number=\count317
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip82
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 36.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip83
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen263
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+LaTeX Info: Redefining \boldsymbol on input line 28.
+\pmbraise@=\dimen264
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count318
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count319
+\leftroot@=\count320
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count321
+\DOTSCASE@=\count322
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box59
+\strutbox@=\box60
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen265
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count323
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count324
+\dotsspace@=\muskip18
+\c@parentequation=\count325
+\dspbrk@lvl=\count326
+\tag@help=\toks22
+\row@=\count327
+\column@=\count328
+\maxfields@=\count329
+\andhelp@=\toks23
+\eqnshift@=\dimen266
+\alignsep@=\dimen267
+\tagshift@=\dimen268
+\tagwidth@=\dimen269
+\totwidth@=\dimen270
+\lineht@=\dimen271
+\@envbody=\toks24
+\multlinegap=\skip84
+\multlinetaggap=\skip85
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup7
+\symAMSb=\mathgroup8
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup9
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/ntheorem/ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\theorem@style=\toks26
+\theorem@@style=\toks27
+\theorembodyfont=\toks28
+\theoremnumbering=\toks29
+\theorempreskipamount=\skip86
+\theorempostskipamount=\skip87
+\theoremframepreskipamount=\skip88
+\theoremframepostskipamount=\skip89
+\theoreminframepreskipamount=\skip90
+\theoreminframepostskipamount=\skip91
+\theorem@preskip=\toks30
+\theorem@postskip=\toks31
+\theorem@framepreskip=\toks32
+\theorem@framepostskip=\toks33
+\theorem@inframepreskip=\toks34
+\theorem@inframepostskip=\toks35
+\theoremindent=\dimen272
+\theorem@indent=\dimen273
+\theoremrightindent=\dimen274
+\theorem@rightindent=\dimen275
+\theoremheaderfont=\toks36
+\theoremseparator=\toks37
+\theoremprework=\toks38
+\theorempostwork=\toks39
+\theoremsymbol=\toks40
+\qedsymbol=\toks41
+\theoremkeyword=\toks42
+\qedsymbol=\toks43
+\thm@topsep=\skip92
+\thm@topsepadd=\skip93
+Package ntheorem Info: Option `thmmarks' loaded on input line 1175.
+\c@endNonectr=\count330
+\c@currNonectr=\count331
+\mysavskip=\skip94
+Package ntheorem Info: option `amsmath' handling for `thmmarks' loaded on input line 1175.
+\thm@amstmpdepth=\dimen276
+\tagwidth=\dimen277
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/subeqnarray/subeqnarray.sty
+Package: subeqnarray 2004/04/15 v2.1c subeqnarray package
+\c@subequation=\count332
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen278
+\Gin@req@width=\dimen279
+)
+\c@r@tfl@t=\count333
+\rotFPtop=\skip95
+\rotFPbot=\skip96
+\rot@float@box=\box61
+\rot@mess@toks=\toks44
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip97
+\LTright=\skip98
+\LTpre=\skip99
+\LTpost=\skip100
+\LTchunksize=\count334
+\LTcapwidth=\dimen280
+\LT@head=\box62
+\LT@firsthead=\box63
+\LT@foot=\box64
+\LT@lastfoot=\box65
+\LT@gbox=\box66
+\LT@cols=\count335
+\LT@rows=\count336
+\c@LT@tables=\count337
+\c@LT@chunks=\count338
+\LT@p@ftn=\toks45
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tabls/tabls.sty
+\tablinesep=\dimen281
+\arraylinesep=\dimen282
+\extrarulesep=\dimen283
+\@arstdepth=\dimen284
+\@arstheight=\dimen285
+\@skip@bove=\dimen286
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen287
+\ar@mcellbox=\box67
+\extrarowheight=\dimen288
+\NC@list=\toks46
+\extratabsurround=\skip101
+\backup@length=\skip102
+
+
+LaTeX Warning: Command \@xhline  has changed.
+               Check if current package is valid.
+
+\ar@cellbox=\box68
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 149.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+\everycr=\toks47
+\minrowclearance=\skip103
+\rownum=\count339
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
+) (./setup/slashbox.sty
+slashbox style by K.Yasuoka, May 1993.
+\@slashboxa=\box69
+\@slashboxb=\box70
+\@slashboxc=\box71
+\@slashboxwd=\count340
+\@slashboxht=\count341
+\@slashsepl=\dimen289
+\@slashsepr=\dimen290
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip104
+\L@UnitsRaiseTextstyle=\skip105
+\L@UnitsRaiseScriptstyle=\skip106
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/units/units.sty
+Package: units 1998/08/04 v0.9b Typesetting units
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2023-02-18 v3.0 Permit use of UTF-8 characters in soul (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/soul/soul-ori.sty
+Package: soul-ori 2023-02-18 v3.0 letterspacing/underlining (mf)
+\SOUL@word=\toks48
+\SOUL@lasttoken=\toks49
+\SOUL@syllable=\toks50
+\SOUL@cmds=\toks51
+\SOUL@buffer=\toks52
+\SOUL@token=\toks53
+\SOUL@syllgoal=\dimen291
+\SOUL@syllwidth=\dimen292
+\SOUL@charkern=\dimen293
+\SOUL@hyphkern=\dimen294
+\SOUL@dimen=\dimen295
+\SOUL@dimeni=\dimen296
+\SOUL@minus=\count342
+\SOUL@comma=\count343
+\SOUL@apo=\count344
+\SOUL@grave=\count345
+\SOUL@spaceskip=\skip107
+\SOUL@ttwidth=\dimen297
+\SOUL@uldp=\dimen298
+\SOUL@ulht=\dimen299
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/altfont/altfont.sty
+Package: altfont 1996/07/02 v1.1 loading alternative fonts
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/altfont/altfont.cfg
+File: altfont.cfg 1996/07/02 v1.1 Local configuration for altfont.sty
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/a0poster/a0size.sty
+File: a0size.sty 2004/01/31 v1.22b a0poster class (GK, MW)
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 229.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 229.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 229.
+\big@size=\dimen300
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/marvosym/marvosym.sty
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count346
+\c@@ppsavesec=\count347
+\c@@ppsaveapp=\count348
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count349
+\Gm@cntv=\count350
+\c@Gm@tempcnt=\count351
+\Gm@bindingoffset=\dimen301
+\Gm@wd@mp=\dimen302
+\Gm@odd@mp=\dimen303
+\Gm@even@mp=\dimen304
+\Gm@layoutwidth=\dimen305
+\Gm@layoutheight=\dimen306
+\Gm@layouthoffset=\dimen307
+\Gm@layoutvoffset=\dimen308
+\Gm@dimlist=\toks54
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip108
+\f@nch@O@elh=\skip109
+\f@nch@O@erh=\skip110
+\f@nch@O@olh=\skip111
+\f@nch@O@orh=\skip112
+\f@nch@O@elf=\skip113
+\f@nch@O@erf=\skip114
+\f@nch@O@olf=\skip115
+\f@nch@O@orf=\skip116
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2021/07/05 v2.14 TOC entries
+\ttl@leftsep=\dimen309
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen310
+\epsfysize=\dimen311
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+\c@caption@flags=\count352
+\c@continuedfloat=\count353
+Package caption Info: float package is loaded.
+Package caption Info: floatrow package is loaded.
+Package caption Info: floatrow package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+Package caption Info: subfigure package is loaded.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/overpic/overpic.sty
+Package: overpic 2020/02/22 1.3 picture overlays (RN)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count354
+\d@lta=\count355
+\@delta=\dimen312
+\@@delta=\dimen313
+\@gridcnt=\count356
+\@joinkind=\count357
+\@dotgap=\dimen314
+\@ddotgap=\dimen315
+\@x@diff=\count358
+\@y@diff=\count359
+\x@diff=\dimen316
+\y@diff=\dimen317
+\@dotbox=\box72
+\num@segments=\count360
+\num@segmentsi=\count361
+\@datafile=\read2
+)
+\OVP@box=\box73
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/beebe/texnames.sty
+This is texnames.sty, Version 1.10 <02 March 1998>
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip117
+\bibsep=\skip118
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count362
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (./setup/info.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box74
+\UL@hyphenbox=\box75
+\UL@skip=\skip119
+\UL@hook=\toks55
+\UL@height=\dimen318
+\UL@pe=\count363
+\UL@pixel=\dimen319
+\ULC@box=\box76
+Package: ulem 2019/11/18
+\ULdepth=\dimen320
+)) (/usr/local/texlive/2023/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+Package: xeCJKfntef 2022/08/05 v3.9.1 xeCJK font effect
+\l__xeCJK_space_skip=\skip120
+\c__xeCJK_ulem-begin_node_dim=\dimen321
+\l__xeCJK_hidden_box=\box77
+\l__xeCJK_fntef_box=\box78
+\l__xeCJK_under_symbol_box=\box79
+\c__xeCJK_filll_skip=\skip121
+))
+LaTeX Font Info:    Trying to load font information for TU+ptm on input line 3.
+LaTeX Font Info:    No file TUptm.fd. on input line 3.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 3.
+
+(./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap1.aux) (./chap/chap2.aux) (./chap/chap3.aux) (./chap/chap4.aux
+
+LaTeX Warning: Label `Section 2' multiply defined.
+
+
+LaTeX Warning: Label `eq_31' multiply defined.
+
+
+LaTeX Warning: Label `eq_48' multiply defined.
+
+
+LaTeX Warning: Label `eq_47' multiply defined.
+
+
+LaTeX Warning: Label `eq_50' multiply defined.
+
+
+LaTeX Warning: Label `eq_51' multiply defined.
+
+
+LaTeX Warning: Label `eq_52' multiply defined.
+
+
+LaTeX Warning: Label `eq_53' multiply defined.
+
+
+LaTeX Warning: Label `eq_54' multiply defined.
+
+
+LaTeX Warning: Label `thm3' multiply defined.
+
+
+LaTeX Warning: Label `Section 3' multiply defined.
+
+
+LaTeX Warning: Label `Section 4' multiply defined.
+
+
+LaTeX Warning: Label `eq_103' multiply defined.
+
+
+LaTeX Warning: Label `eq_104' multiply defined.
+
+
+LaTeX Warning: Label `eq_105' multiply defined.
+
+
+LaTeX Warning: Label `ex:2' multiply defined.
+
+
+LaTeX Warning: Label `eq_108' multiply defined.
+
+
+LaTeX Warning: Label `fig:1' multiply defined.
+
+
+LaTeX Warning: Label `fig:2' multiply defined.
+
+
+LaTeX Warning: Label `fig:3' multiply defined.
+
+
+LaTeX Warning: Label `fig:4' multiply defined.
+
+) (./chap/chap5.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux
+
+Package natbib Warning: Citation `ref1' multiply defined.
+
+
+Package natbib Warning: Citation `ref2' multiply defined.
+
+))
+\openout1 = `四川师范大学硕士学位论文模版.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 3.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 3.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 3.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 3.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 3.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 3.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 3.
+LaTeX Font Info:    Redeclaring math accent \check on input line 3.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 3.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 3.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 3.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 3.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 3.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 3.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/ptm/m/n on input line 3.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 3.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/ptm/m/n on input line 3.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 3.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/ptm/m/it on input line 3.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/ptm/b/n on input line 3.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 3.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 3.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/ptm/m/n --> TU/ptm/b/n on input line 3.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/ptm/b/it on input line 3.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/phv/b/n on input line 3.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/pcr/b/n on input line 3.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: Fixing longtable code of `floatrow' package.
+Package caption Info: End \AtBeginDocument code.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/floatrow/fr-longtable.sty
+Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
+\flrow@LT@lasthead=\box80
+\flrow@LT@prelastfoot=\box81
+\c@FBLTpage=\count364
+)
+Package hyperref Info: Link coloring ON on input line 3.
+ (./四川师范大学硕士学位论文模版.out) (./四川师范大学硕士学位论文模版.out)
+\@outlinefile=\write3
+\openout3 = `四川师范大学硕士学位论文模版.out'.
+
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(85.35826pt, 688.5567pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=688.5567pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-647.01564pt
+* \headheight=654.41338pt
+* \headsep=5.69054pt
+* \topskip=12.0pt
+* \footskip=19.91692pt
+* \marginparwidth=98.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\openout2 = `chap/thm.aux'.
+
+(./chap/thm.tex
+\c@currthmctr=\count365
+\c@endthmctr=\count366
+\c@thm=\count367
+\c@currlemctr=\count368
+\c@endlemctr=\count369
+\c@currpropctr=\count370
+\c@endpropctr=\count371
+\c@currcorctr=\count372
+\c@endcorctr=\count373
+\c@currremarkctr=\count374
+\c@endremarkctr=\count375
+\c@currdefnctr=\count376
+\c@enddefnctr=\count377
+\c@defn=\count378
+\c@currconjctr=\count379
+\c@endconjctr=\count380
+\c@conj=\count381
+\c@currexamplectr=\count382
+\c@endexamplectr=\count383
+\c@example=\count384
+)
+\Mycode=\skip122
+\MyCT=\skip123
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 6.
+
+
+Package fontspec Warning: Font "Songti SC Light" does not contain requested
+(fontspec)                Script "CJK".
+
+
+Package fontspec Info: Could not resolve font "Songti SC Bold/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Songti SC Light/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'SongtiSCLight(1)' created for font 'Songti
+(fontspec)             SC Light' with options [Script={CJK},BoldFont={Songti
+(fontspec)             SC Bold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Songti SC
+(fontspec)             Light/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Songti SC
+(fontspec)             Bold/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Songti SC
+(fontspec)             Light/BI/OT:language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+File: setup/flage.eps Graphic file (type eps)
+<setup/flage.eps>
+
+Package fontspec Info: Could not resolve font "PingFang SC/I" (it probably
+(fontspec)             doesn't exist).
+
+LaTeX Font Info:    Trying to load font information for TU+phv on input line 6.
+LaTeX Font Info:    No file TUphv.fd. on input line 6.
+
+LaTeX Font Warning: Font shape `TU/phv/b/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 6.
+
+
+Package fontspec Info: Font family 'PingFangSC(0)' created for font 'PingFang
+(fontspec)             SC' with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"PingFang
+(fontspec)             SC/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"PingFang
+(fontspec)             SC/B/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"PingFang
+(fontspec)             SC/BI/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6 replaced by U+FFFD.
+File: setup/logo.eps Graphic file (type eps)
+<setup/logo.eps>
+
+Package fontspec Warning: Font "STFangsong" does not contain requested Script
+(fontspec)                "CJK".
+
+
+Package fontspec Info: Could not resolve font "STFangsong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "STFangsong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "STFangsong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'STFangsong(0)' created for font
+(fontspec)             'STFangsong' with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"STFangsong/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+LaTeX Font Warning: Font shape `TU/STFangsong(0)/b/n' undefined
+(Font)              using `TU/STFangsong(0)/m/n' instead on input line 6.
+
+[1
+
+
+
+
+
+] [2
+
+] [3] [4
+
+]
+
+Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
+(ctexbook)              \ctexset { chapter = { number={},nameformat={\zihao
+(ctexbook)              {-2}\songti },titleformat={\zihao {-2}\songti },
+(ctexbook)              beforeskip={2em},afterskip={1em} } } is set.
+
+\openout2 = `chap/abs.aux'.
+
+(./chap/abs.tex
+
+Package fontspec Warning: Font "Heiti SC Light" does not contain requested
+(fontspec)                Script "CJK".
+
+
+Package fontspec Info: Could not resolve font "Heiti SC Medium/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Heiti SC Light/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'HeitiSCLight(0)' created for font 'Heiti
+(fontspec)             SC Light' with options [Script={CJK},BoldFont={Heiti SC
+(fontspec)             Medium}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Heiti SC
+(fontspec)             Light/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Heiti SC
+(fontspec)             Medium/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Heiti SC
+(fontspec)             Light/BI/OT:language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Warning: Font "Kaiti SC" does not contain requested Script
+(fontspec)                "CJK".
+
+
+Package fontspec Info: Could not resolve font "Kaiti SC Bold/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Kaiti SC/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Kaiti SC/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'KaitiSC(0)' created for font 'Kaiti SC'
+(fontspec)             with options [Script={CJK},BoldFont={Kaiti SC Bold}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Kaiti
+(fontspec)             SC/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Kaiti SC
+(fontspec)             Bold/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+[1
+
+
+
+] [2
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]) [4] (./四川师范大学硕士学位论文模版.lof
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <6> on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 6.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [5
+
+
+
+])
+\tf@lof=\write4
+\openout4 = `四川师范大学硕士学位论文模版.lof'.
+
+ [6] (./四川师范大学硕士学位论文模版.toc [7
+
+])
+\tf@toc=\write5
+\openout5 = `四川师范大学硕士学位论文模版.toc'.
+
+ [8]
+
+Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
+(ctexbook)              \ctexset { chapter = { name={,},number={\arabic
+(ctexbook)              {chapter}}, format={\flushleft },nameformat={\zihao
+(ctexbook)              {3}\bf },aftername={~~},titleformat={\zihao {3}\bf },
+(ctexbook)              beforeskip={1em},afterskip={0.5em} } } is set.
+
+
+Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
+(ctexbook)              \ctexset { section = { name={,},number={\arabic
+(ctexbook)              {chapter}.\arabic {section}}, format={\flushleft
+(ctexbook)              },nameformat={\zihao {4}\bf
+(ctexbook)              },aftername={~~},titleformat={\zihao {4}\bf },
+(ctexbook)              beforeskip={0.5em},afterskip={0.5em} } } is set.
+
+
+Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
+(ctexbook)              \ctexset { subsection = { name={,},number={\arabic
+(ctexbook)              {chapter}.\arabic {section}.\arabic {subsection}},
+(ctexbook)              format={\flushleft },nameformat={\zihao {-4}\bf
+(ctexbook)              },aftername={~~},titleformat={\zihao {-4}\heiti },
+(ctexbook)              beforeskip={0em},afterskip={0em} } } is set.
+
+\openout2 = `chap/chap1.aux'.
+
+(./chap/chap1.tex
+1
+[1
+
+
+
+]
+
+Package natbib Warning: Citation `duAnalysisApproximationNonlocal2012' on page 2 undefined on input line 30.
+
+
+Package natbib Warning: Citation `duAnalysisApproximationNonlocal2012' on page 2 undefined on input line 31.
+
+[2] [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]) [5]
+\openout2 = `chap/chap2.aux'.
+
+ (./chap/chap2.tex [6
+
+
+
+
+]
+2
+) [7]
+\openout2 = `chap/chap3.aux'.
+
+ (./chap/chap3.tex [8
+
+
+
+
+]
+3
+[9]
+Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ​ (U+200B) in font [lmroman12-regular]:mapping=tex-text;!
+
+Overfull \hbox (4.3244pt too wide) detected at line 83
+[]
+ []
+
+[10]
+Package hyperref Info: bookmark level for unknown thm defaults to 0 on input line 120.
+ [11]
+Overfull \hbox (38.00995pt too wide) detected at line 163
+\OML/cmm/b/it/12 y \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ; \OML/cmm/b/it/12 y[] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ; \OML/cmm/b/it/12 f \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 f[]; f[]; f[]\OT1/cmr/m/n/12 )[] = (\OML/cmm/m/it/12 V; D[]U \OMS/cmsy/m/n/12 ^^@ []\OML/cmm/m/it/12 ^^TV \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 b\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 W; \OMS/cmsy/m/n/12 < []\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 :
+ []
+
+[12]
+Overfull \hbox (115.00304pt too wide) detected at line 263
+[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Overfull \hbox (109.94623pt too wide) detected at line 270
+[][]
+ []
+
+
+Overfull \hbox (93.74841pt too wide) detected at line 275
+\OML/cmm/m/it/12 ^^M[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[]\OML/cmm/m/it/12 :
+ []
+
+[14]
+Package hyperref Info: bookmark level for unknown lem defaults to 0 on input line 315.
+ [15]
+Overfull \hbox (146.18364pt too wide) detected at line 394
+[][]
+ []
+
+
+Overfull \hbox (139.4362pt too wide) detected at line 394
+[][]
+ []
+
+
+Underfull \vbox (badness 1400) has occurred while \output is active []
+
+ [16]
+Overfull \hbox (148.5637pt too wide) detected at line 394
+[][]
+ []
+
+
+Overfull \hbox (138.5637pt too wide) detected at line 394
+[][]
+ []
+
+
+Overfull \hbox (124.09395pt too wide) detected at line 394
+[][]
+ []
+
+
+Overfull \hbox (124.09395pt too wide) detected at line 394
+[][]
+ []
+
+[17]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 415.
+ [18] [19]
+Overfull \hbox (78.45923pt too wide) detected at line 516
+[][] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ; [][] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ;
+ []
+
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 533.
+[20]
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 551.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 551.
+
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 551.
+
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <7> on input line 551.
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <5> on input line 551.
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 551.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 551.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 551.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 551.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.53937> not available
+(Font)              size <10.95> substituted on input line 551.
+
+
+Overfull \hbox (11.91393pt too wide) in paragraph at lines 552--574
+ [][][][] 
+ []
+
+File: ./figures/exp1_r.eps Graphic file (type eps)
+<./figures/exp1_r.eps>
+File: ./figures/exp1_s.eps Graphic file (type eps)
+<./figures/exp1_s.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 581--584
+ [][][] 
+ []
+
+[21]
+File: ./figures/exp1_RT_order_t.eps Graphic file (type eps)
+<./figures/exp1_RT_order_t.eps>
+File: ./figures/exp1_IDT_order_t.eps Graphic file (type eps)
+<./figures/exp1_IDT_order_t.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 595--598
+ [][][] 
+ []
+
+File: ./figures/exp1_RT_order_s.eps Graphic file (type eps)
+<./figures/exp1_RT_order_s.eps>
+File: ./figures/exp1_IDT_order_s.eps Graphic file (type eps)
+<./figures/exp1_IDT_order_s.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 607--610
+ [][][] 
+ []
+
+[22]
+File: ./figures/exp1_energy3.eps Graphic file (type eps)
+<./figures/exp1_energy3.eps>
+File: ./figures/exp1_energy6.eps Graphic file (type eps)
+<./figures/exp1_energy6.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 620--623
+ [][][] 
+ []
+
+File: ./figures/exp1_energy9.eps Graphic file (type eps)
+<./figures/exp1_energy9.eps>
+File: ./figures/exp1_energy2.eps Graphic file (type eps)
+<./figures/exp1_energy2.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 627--630
+ [][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Overfull \hbox (2.05618pt too wide) detected at line 639
+\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [] [] \OML/cmm/m/it/12 ; u[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [](\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; t\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 
+ \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 ; T\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ;
+ []
+
+) [24]
+\openout2 = `chap/chap4.aux'.
+
+ (./chap/chap4.tex
+4
+[25
+
+
+
+
+] [26] [27]
+Overfull \hbox (4.3244pt too wide) detected at line 189
+[]
+ []
+
+[28]
+Overfull \hbox (18.17886pt too wide) detected at line 263
+[]
+ []
+
+[29]
+Underfull \hbox (badness 1917) in paragraph at lines 272--274
+\TU/SongtiSCLight(1)/m/n/12.045 所 提 出 的 全 离 散 格 式[]\TU/phv/b/n/12.045 -[]\TU/SongtiSCLight(1)/m/n/12.045 以 后 将 称 为 \TU/phv/b/n/12.045 FPAVF(\TU/SongtiSCLight(1)/m/n/12.045 傅 里 叶 伪 谱 \TU/phv/b/n/12.045 PAVF) \TU/SongtiSCLight(1)/m/n/12.045 格 式\TU/phv/b/n/12.045 .
+ []
+
+Missing character: There is no ～ (U+FF5E) in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ～ (U+FF5E) in font [lmroman12-regular]:mapping=tex-text;!
+[30] [31]
+Overfull \hbox (7.74419pt too wide) detected at line 338
+[]
+ []
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: $\bullet $ on input line 368.
+
+[32]
+Overfull \hbox (40.72757pt too wide) detected at line 394
+[]
+ []
+
+[33]
+Overfull \hbox (78.45923pt too wide) detected at line 417
+[][] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ; [][] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ;
+ []
+
+File: ./figure/exp2_s5.eps Graphic file (type eps)
+<./figure/exp2_s5.eps>
+File: ./figure/exp2_t5.eps Graphic file (type eps)
+<./figure/exp2_t5.eps>
+[34]
+File: ./figure/exp2_s2.eps Graphic file (type eps)
+<./figure/exp2_s2.eps>
+File: ./figure/exp2_t2.eps Graphic file (type eps)
+<./figure/exp2_t2.eps>
+File: ./figure/exp2_H3.eps Graphic file (type eps)
+<./figure/exp2_H3.eps>
+File: ./figure/exp2_H6.eps Graphic file (type eps)
+<./figure/exp2_H6.eps>
+File: ./figure/exp2_H9.eps Graphic file (type eps)
+<./figure/exp2_H9.eps>
+File: ./figure/exp2_H2.eps Graphic file (type eps)
+<./figure/exp2_H2.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+
+LaTeX Warning: Reference `Fig:4' on page 36 undefined on input line 498.
+
+File: ./figure/exp2_M3.eps Graphic file (type eps)
+<./figure/exp2_M3.eps>
+File: ./figure/exp2_M6.eps Graphic file (type eps)
+<./figure/exp2_M6.eps>
+File: ./figure/exp2_M9.eps Graphic file (type eps)
+<./figure/exp2_M9.eps>
+File: ./figure/exp2_M2.eps Graphic file (type eps)
+<./figure/exp2_M2.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+Overfull \hbox (73.17996pt too wide) in paragraph at lines 526--541
+ [][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Overfull \hbox (68.78938pt too wide) in paragraph at lines 547--562
+ [][][] 
+ []
+
+
+Overfull \hbox (68.78938pt too wide) in paragraph at lines 568--583
+ [][][] 
+ []
+
+
+Overfull \hbox (68.78938pt too wide) in paragraph at lines 589--604
+ [][][] 
+ []
+
+
+Underfull \vbox (badness 2837) has occurred while \output is active []
+
+ [38]
+File: ./figure/exp2_RM3.eps Graphic file (type eps)
+<./figure/exp2_RM3.eps>
+File: ./figure/exp2_RM6.eps Graphic file (type eps)
+<./figure/exp2_RM6.eps>
+File: ./figure/exp2_RM9.eps Graphic file (type eps)
+<./figure/exp2_RM9.eps>
+File: ./figure/exp2_RH3.eps Graphic file (type eps)
+<./figure/exp2_RH3.eps>
+File: ./figure/exp2_RH6.eps Graphic file (type eps)
+<./figure/exp2_RH6.eps>
+File: ./figure/exp2_RH9.eps Graphic file (type eps)
+<./figure/exp2_RH9.eps>
+ [39]
+File: ./figure/exp4_s5.eps Graphic file (type eps)
+<./figure/exp4_s5.eps>
+File: ./figure/exp4_t5.eps Graphic file (type eps)
+<./figure/exp4_t5.eps>
+File: ./figure/exp4_s2.eps Graphic file (type eps)
+<./figure/exp4_s2.eps>
+File: ./figure/exp4_t2.eps Graphic file (type eps)
+<./figure/exp4_t2.eps>
+ [40]
+File: ./figure/exp4_M3.eps Graphic file (type eps)
+<./figure/exp4_M3.eps>
+File: ./figure/exp4_M6.eps Graphic file (type eps)
+<./figure/exp4_M6.eps>
+File: ./figure/exp4_M9.eps Graphic file (type eps)
+<./figure/exp4_M9.eps>
+File: ./figure/exp4_M2.eps Graphic file (type eps)
+<./figure/exp4_M2.eps>
+File: ./figure/exp4_H3.eps Graphic file (type eps)
+<./figure/exp4_H3.eps>
+File: ./figure/exp4_H6.eps Graphic file (type eps)
+<./figure/exp4_H6.eps>
+File: ./figure/exp4_H9.eps Graphic file (type eps)
+<./figure/exp4_H9.eps>
+File: ./figure/exp4_H2.eps Graphic file (type eps)
+<./figure/exp4_H2.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+File: ./figure/exp4_RM3.eps Graphic file (type eps)
+<./figure/exp4_RM3.eps>
+File: ./figure/exp4_RM6.eps Graphic file (type eps)
+<./figure/exp4_RM6.eps>
+File: ./figure/exp4_RM9.eps Graphic file (type eps)
+<./figure/exp4_RM9.eps>
+File: ./figure/exp4_RH3.eps Graphic file (type eps)
+<./figure/exp4_RH3.eps>
+File: ./figure/exp4_RH6.eps Graphic file (type eps)
+<./figure/exp4_RH6.eps>
+File: ./figure/exp4_RH9.eps Graphic file (type eps)
+<./figure/exp4_RH9.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Overfull \hbox (42.44096pt too wide) in paragraph at lines 763--778
+ [][][] 
+ []
+
+
+Underfull \vbox (badness 2181) has occurred while \output is active []
+
+ [43]
+File: ./figure/exp4_contour3_p0.eps Graphic file (type eps)
+<./figure/exp4_contour3_p0.eps>
+File: ./figure/exp4_contour3_p1.eps Graphic file (type eps)
+<./figure/exp4_contour3_p1.eps>
+File: ./figure/exp4_contour3_p5.eps Graphic file (type eps)
+<./figure/exp4_contour3_p5.eps>
+File: ./figure/exp4_contour3_p10.eps Graphic file (type eps)
+<./figure/exp4_contour3_p10.eps>
+File: ./figure/exp4_contour3_p50.eps Graphic file (type eps)
+<./figure/exp4_contour3_p50.eps>
+File: ./figure/exp4_contour3_p100.eps Graphic file (type eps)
+<./figure/exp4_contour3_p100.eps>
+File: ./figure/exp4_contour6_p0.eps Graphic file (type eps)
+<./figure/exp4_contour6_p0.eps>
+File: ./figure/exp4_contour6_p1.eps Graphic file (type eps)
+<./figure/exp4_contour6_p1.eps>
+File: ./figure/exp4_contour6_p5.eps Graphic file (type eps)
+<./figure/exp4_contour6_p5.eps>
+File: ./figure/exp4_contour6_p10.eps Graphic file (type eps)
+<./figure/exp4_contour6_p10.eps>
+File: ./figure/exp4_contour6_p50.eps Graphic file (type eps)
+<./figure/exp4_contour6_p50.eps>
+File: ./figure/exp4_contour6_p100.eps Graphic file (type eps)
+<./figure/exp4_contour6_p100.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+File: ./figure/exp4_contour99_p0.eps Graphic file (type eps)
+<./figure/exp4_contour99_p0.eps>
+File: ./figure/exp4_contour99_p1.eps Graphic file (type eps)
+<./figure/exp4_contour99_p1.eps>
+File: ./figure/exp4_contour99_p5.eps Graphic file (type eps)
+<./figure/exp4_contour99_p5.eps>
+File: ./figure/exp4_contour99_p10.eps Graphic file (type eps)
+<./figure/exp4_contour99_p10.eps>
+File: ./figure/exp4_contour99_p50.eps Graphic file (type eps)
+<./figure/exp4_contour99_p50.eps>
+File: ./figure/exp4_contour99_p100.eps Graphic file (type eps)
+<./figure/exp4_contour99_p100.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+File: ./figure/exp4_contour2_p0.eps Graphic file (type eps)
+<./figure/exp4_contour2_p0.eps>
+File: ./figure/exp4_contour2_p1.eps Graphic file (type eps)
+<./figure/exp4_contour2_p1.eps>
+File: ./figure/exp4_contour2_p5.eps Graphic file (type eps)
+<./figure/exp4_contour2_p5.eps>
+File: ./figure/exp4_contour2_p10.eps Graphic file (type eps)
+<./figure/exp4_contour2_p10.eps>
+File: ./figure/exp4_contour2_p50.eps Graphic file (type eps)
+<./figure/exp4_contour2_p50.eps>
+File: ./figure/exp4_contour2_p100.eps Graphic file (type eps)
+<./figure/exp4_contour2_p100.eps>
+) [46]
+\openout2 = `chap/chap5.aux'.
+
+ (./chap/chap5.tex
+5
+[47
+
+
+
+
+]) [48]
+
+Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
+(ctexbook)              \ctexset { chapter = { number={},format={\center } } }
+(ctexbook)              is set.
+
+\openout2 = `chap/ref.aux'.
+
+(./chap/ref.tex (./四川师范大学硕士学位论文模版.bbl
+
+LaTeX Font Warning: Font shape `TU/ptm/m/sc' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 18.
+
+[49
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 115--119
+[]\TU/ptm/m/sc/10.53937 Demengel, F., and Demengel, G.  |   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Overfull \hbox (45.05232pt too wide) in paragraph at lines 170--174
+[]\TU/ptm/m/sc/10.53937 Guo, B., Pu, X., and Huang, F.  |   [].
+ []
+
+
+Overfull \hbox (22.13124pt too wide) in paragraph at lines 176--180
+[]\TU/ptm/m/sc/10.53937 Hilfer, R.  |   [].
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51])) [52]
+
+Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
+(ctexbook)              \ctexset { chapter = {
+(ctexbook)              name={,},number={},format={\center } } } is set.
+
+\openout2 = `chap/thanks.aux'.
+
+(./chap/thanks.tex) [53
+
+
+
+
+
+]
+
+Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
+(ctexbook)              \ctexset { chapter = { number={},format={\center } } }
+(ctexbook)              is set.
+
+\openout2 = `chap/ach.aux'.
+
+(./chap/ach.tex [54
+
+
+
+
+
+]) [55]
+\tf@thm=\write6
+\openout6 = `四川师范大学硕士学位论文模版.thm'.
+
+
+
+Package natbib Warning: There were undefined citations.
+
+
+Package natbib Warning: There were multiply defined citations.
+
+(./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap1.aux) (./chap/chap2.aux) (./chap/chap3.aux) (./chap/chap4.aux) (./chap/chap5.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+))
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.41063pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版.out' has not changed.
+(rerunfilecheck)             Checksum: F6247504BA704126FA9CCA3805ECAF1A;3835.
+ )
+(\end occurred inside a group at level 53)
+
+### semi simple group (level 53) entered at line 845 (\begingroup)
+### semi simple group (level 52) entered at line 477 (\begingroup)
+### semi simple group (level 51) entered at line 477 (\begingroup)
+### semi simple group (level 50) entered at line 256 (\begingroup)
+### semi simple group (level 49) entered at line 255 (\begingroup)
+### semi simple group (level 48) entered at line 511 (\begingroup)
+### semi simple group (level 47) entered at line 511 (\begingroup)
+### semi simple group (level 46) entered at line 427 (\begingroup)
+### semi simple group (level 45) entered at line 6 (\begingroup)
+### semi simple group (level 44) entered at line 5 (\begingroup)
+### semi simple group (level 43) entered at line 5 (\begingroup)
+### semi simple group (level 42) entered at line 94 (\begingroup)
+### semi simple group (level 41) entered at line 93 (\begingroup)
+### semi simple group (level 40) entered at line 91 (\begingroup)
+### semi simple group (level 39) entered at line 91 (\begingroup)
+### semi simple group (level 38) entered at line 86 (\begingroup)
+### semi simple group (level 37) entered at line 86 (\begingroup)
+### semi simple group (level 36) entered at line 85 (\begingroup)
+### semi simple group (level 35) entered at line 84 (\begingroup)
+### semi simple group (level 34) entered at line 84 (\begingroup)
+### semi simple group (level 33) entered at line 84 (\begingroup)
+### semi simple group (level 32) entered at line 84 (\begingroup)
+### semi simple group (level 31) entered at line 82 (\begingroup)
+### semi simple group (level 30) entered at line 82 (\begingroup)
+### semi simple group (level 29) entered at line 81 (\begingroup)
+### semi simple group (level 28) entered at line 71 (\begingroup)
+### semi simple group (level 27) entered at line 70 (\begingroup)
+### semi simple group (level 26) entered at line 69 (\begingroup)
+### semi simple group (level 25) entered at line 68 (\begingroup)
+### semi simple group (level 24) entered at line 67 (\begingroup)
+### semi simple group (level 23) entered at line 66 (\begingroup)
+### semi simple group (level 22) entered at line 65 (\begingroup)
+### semi simple group (level 21) entered at line 64 (\begingroup)
+### semi simple group (level 20) entered at line 64 (\begingroup)
+### semi simple group (level 19) entered at line 62 (\begingroup)
+### semi simple group (level 18) entered at line 35 (\begingroup)
+### semi simple group (level 17) entered at line 35 (\begingroup)
+### semi simple group (level 16) entered at line 31 (\begingroup)
+### semi simple group (level 15) entered at line 30 (\begingroup)
+### semi simple group (level 14) entered at line 30 (\begingroup)
+### semi simple group (level 13) entered at line 29 (\begingroup)
+### semi simple group (level 12) entered at line 29 (\begingroup)
+### semi simple group (level 11) entered at line 29 (\begingroup)
+### semi simple group (level 10) entered at line 29 (\begingroup)
+### semi simple group (level 9) entered at line 16 (\begingroup)
+### semi simple group (level 8) entered at line 15 (\begingroup)
+### semi simple group (level 7) entered at line 11 (\begingroup)
+### semi simple group (level 6) entered at line 10 (\begingroup)
+### semi simple group (level 5) entered at line 10 (\begingroup)
+### semi simple group (level 4) entered at line 10 (\begingroup)
+### semi simple group (level 3) entered at line 9 (\begingroup)
+### semi simple group (level 2) entered at line 5 (\begingroup)
+### semi simple group (level 1) entered at line 3 (\begingroup)
+### bottom level
+(\end occurred when \ifx on line 25 was incomplete) 
+Here is how much of TeX's memory you used:
+ 23718 strings out of 476683
+ 520699 string characters out of 5804047
+ 1880018 words of memory out of 5000000
+ 43316 multiletter control sequences out of 15000+600000
+ 532172 words of font info for 167 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 89i,20n,97p,1222b,3578s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on 四川师范大学硕士学位论文模版.pdf (67 pages).

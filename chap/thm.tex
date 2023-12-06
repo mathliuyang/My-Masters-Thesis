@@ -1,0 +1,25 @@
+%++++++++++++++++++++++定理环境+++++++++++++++++++++++++++++%
+\makeatletter %将文献引用作为上标出现,增加括号，
+\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa #2\fi}]}}
+\makeatother
+%使用ntheorem宏包时,下列命令定义定理环境,如有不同要求请自行修改
+\baselineskip=20pt % 指定行距为20pt
+\theoremstyle{plain}
+\theoremseparator{.}
+\theorembodyfont{\normalfont}
+\newtheorem{thm}{\hskip8mm 定理}[chapter]
+\newtheorem{lem}[thm]{\hskip8mm 引理}
+\newtheorem{prop}[thm]{\hskip8mm 命题}
+\newtheorem{cor}[thm]{\hskip8mm 推论}
+\newtheorem{remark}[thm]{\hskip8mm 备注}
+\newtheorem{defn}{\hskip8mm 定义}[chapter]
+\newtheorem{conj}{\hskip8mm 猜想}
+\newtheorem{example}{\hskip8mm 算例}[chapter]
+\theoremstyle{nonumberplain}
+% 证明末尾自动添加加空心框.
+\newenvironment{pf}{\textbf{证明.}}{\hfill $\square$\par}
+% 证明末尾自动添加加实心框.
+% \newenvironment{pf}{\textbf{证明.}}{\hfill $\blacksquare$\par}
+\theoremseparator{:}
+\theoremheaderfont{\heiti}
+\theorembodyfont{\normalfont}
