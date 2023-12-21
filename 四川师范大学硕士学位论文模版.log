@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  6 DEC 2023 23:45
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  21 DEC 2023 23:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -821,11 +821,7 @@ LaTeX Font Info:    No file TUptm.fd. on input line 3.
 LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
 (Font)              using `TU/lmr/m/n' instead on input line 3.
 
-(./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap3.aux
-
-LaTeX Warning: Label `eq:313a' multiply defined.
-
-) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux))
+(./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap4.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux))
 \openout1 = `四川师范大学硕士学位论文模版.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1234,378 +1230,340 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              },aftername={~~},titleformat={\zihao {-4}\heiti },
 (ctexbook)              beforeskip={0em},afterskip={0em} } } is set.
 
-\openout2 = `chap/chap3.aux'.
+\openout2 = `chap/chap4.aux'.
 
-(./chap/chap3.tex
+(./chap/chap4.tex
 1
+
+LaTeX Warning: Reference `eq:s1' on page 1 undefined on input line 5.
+
+
+LaTeX Warning: Reference `eq:s1' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Reference `eq:s1' on page 1 undefined on input line 21.
+
+
+LaTeX Warning: Reference `eq:s1' on page 1 undefined on input line 30.
+
+
+Package natbib Warning: Citation `wangStructurepreservingNumericalMethods2018' on page 1 undefined on input line 32.
+
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 32.
 [1
 
 
-] [2]
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
+]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 54.
+
+
+LaTeX Warning: Reference `eq:s1' on page 2 undefined on input line 72.
+
+[2]
+
+LaTeX Warning: Reference `eq:s1' on page 3 undefined on input line 122.
+
+
+LaTeX Warning: Reference `eq:s1' on page 3 undefined on input line 148.
+
 [3]
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-[4]
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 138.
-[5]
-Overfull \hbox (39.96715pt too wide) detected at line 186
-\OML/cmm/b/it/12 y \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ; \OML/cmm/b/it/12 y[] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ; \OML/cmm/b/it/12 f \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 f[]; f[]; f[]\OT1/cmr/m/n/12 )[] [] (\OML/cmm/m/it/12 V; D[]U \OMS/cmsy/m/n/12 ^^@ []\OML/cmm/m/it/12 ^^TV \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 b\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^A \OML/cmm/m/it/12 W; \OMS/cmsy/m/n/12 < []\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 :
+Overfull \hbox (4.3244pt too wide) detected at line 189
+[]
  []
 
-[6] [7]
-Overfull \hbox (55.08156pt too wide) detected at line 261
-\OML/cmm/m/it/12 ^^M[] \OT1/cmr/m/n/12 = []\OML/cmm/m/it/12 :
+[4]
+
+LaTeX Warning: Reference `eq:s1' on page 5 undefined on input line 255.
+
+
+Package natbib Warning: Citation `caiPartitionedAveragedVector2018' on page 5 undefined on input line 256.
+
+
+LaTeX Warning: Reference `eq:s1' on page 5 undefined on input line 256.
+
+
+LaTeX Warning: Reference `eq:s1' on page 5 undefined on input line 258.
+
+
+Overfull \hbox (18.17886pt too wide) detected at line 263
+[]
  []
+
+[5]
+Underfull \hbox (badness 1917) in paragraph at lines 272--274
+\TU/SongtiSCLight(1)/m/n/12.045 所 提 出 的 全 离 散 格 式[]\TU/phv/b/n/12.045 -[]\TU/SongtiSCLight(1)/m/n/12.045 以 后 将 称 为 \TU/phv/b/n/12.045 FPAVF(\TU/SongtiSCLight(1)/m/n/12.045 傅 里 叶 伪 谱 \TU/phv/b/n/12.045 PAVF) \TU/SongtiSCLight(1)/m/n/12.045 格 式\TU/phv/b/n/12.045 .
+ []
+
+Missing character: There is no ～ (U+FF5E) in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ～ (U+FF5E) in font [lmroman12-regular]:mapping=tex-text;!
+[6] [7]
+Overfull \hbox (7.74419pt too wide) detected at line 338
+[]
+ []
+
+
+LaTeX Warning: Reference `eq:s1' on page 8 undefined on input line 367.
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is: $\bullet $ on input line 368.
 
 [8]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 295.
+Overfull \hbox (40.72757pt too wide) detected at line 394
+[]
+ []
 
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 399.
+
+LaTeX Warning: Reference `eq:s1' on page 9 undefined on input line 404.
+
 [9]
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-
-Overfull \hbox (0.95297pt too wide) detected at line 353
-[]
+Overfull \hbox (78.45923pt too wide) detected at line 417
+[][] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ; [][] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ;
  []
 
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 433.
 
-Overfull \hbox (32.29488pt too wide) detected at line 357
-\OML/cmm/m/it/12 ^^M \OT1/cmr/m/n/12 =  [][]
- []
+LaTeX Warning: Reference `eq:s1' on page 10 undefined on input line 434.
 
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-[10]
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 380.
-[11]
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (22.59183pt too wide) detected at line 440
-[][]
- []
+LaTeX Warning: Reference `eq_8' on page 10 undefined on input line 448.
 
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (56.51753pt too wide) detected at line 452
-[]
- []
+LaTeX Warning: Reference `eq_9' on page 10 undefined on input line 448.
 
-[12] [13]
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no 。 (U+3002) in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ， (U+FF0C) in font [lmroman12-regular]:mapping=tex-text;!
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 519.
+File: ./figure/exp1_s1.5.eps Graphic file (type eps)
+<./figure/exp1_s1.5.eps>
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <5> on input line 458.
+File: ./figure/exp1_t1.5.eps Graphic file (type eps)
+<./figure/exp1_t1.5.eps>
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 538.
+(Font)              size <10.95> substituted on input line 461.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 538.
+(Font)              size <10.95> substituted on input line 461.
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 538.
+(Font)              size <10.95> substituted on input line 461.
 
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 538.
-LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 538.
+(Font)              <7> on input line 461.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 538.
+(Font)              size <10.95> substituted on input line 461.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 538.
+(Font)              size <10.95> substituted on input line 461.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 538.
+(Font)              size <10.95> substituted on input line 461.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 538.
+(Font)              size <10.95> substituted on input line 461.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 538.
+(Font)              size <10.95> substituted on input line 461.
 
+[10]
+File: ./figure/exp1_s2.eps Graphic file (type eps)
+<./figure/exp1_s2.eps>
+File: ./figure/exp1_t2.eps Graphic file (type eps)
+<./figure/exp1_t2.eps>
+File: ./figure/exp1_H1.3.eps Graphic file (type eps)
+<./figure/exp1_H1.3.eps>
+File: ./figure/exp1_H1.6.eps Graphic file (type eps)
+<./figure/exp1_H1.6.eps>
+File: ./figure/exp1_H1.9.eps Graphic file (type eps)
+<./figure/exp1_H1.9.eps>
+File: ./figure/exp1_H2.eps Graphic file (type eps)
+<./figure/exp1_H2.eps>
 
-Overfull \hbox (11.91393pt too wide) in paragraph at lines 539--562
- [][][][] 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+
+LaTeX Warning: Reference `Fig:4' on page 12 undefined on input line 498.
+
+File: ./figure/exp1_M1.3.eps Graphic file (type eps)
+<./figure/exp1_M1.3.eps>
+File: ./figure/exp1_M1.6.eps Graphic file (type eps)
+<./figure/exp1_M1.6.eps>
+File: ./figure/exp1_M1.9.eps Graphic file (type eps)
+<./figure/exp1_M1.9.eps>
+File: ./figure/exp1_M2.eps Graphic file (type eps)
+<./figure/exp1_M2.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Overfull \hbox (73.17996pt too wide) in paragraph at lines 526--541
+ [][][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Overfull \hbox (68.78938pt too wide) in paragraph at lines 547--562
+ [][][] 
+ []
+
+
+Overfull \hbox (68.78938pt too wide) in paragraph at lines 568--583
+ [][][] 
+ []
+
+
+Overfull \hbox (68.78938pt too wide) in paragraph at lines 589--604
+ [][][] 
+ []
+
+
+Underfull \vbox (badness 2837) has occurred while \output is active []
 
  [14]
-File: ./figures/exp1_r.eps Graphic file (type eps)
-<./figures/exp1_r.eps>
-File: ./figures/exp1_s.eps Graphic file (type eps)
-<./figures/exp1_s.eps>
+File: ./figure/exp1_RM1.3.eps Graphic file (type eps)
+<./figure/exp1_RM1.3.eps>
+File: ./figure/exp1_RM1.6.eps Graphic file (type eps)
+<./figure/exp1_RM1.6.eps>
+File: ./figure/exp1_RM1.9.eps Graphic file (type eps)
+<./figure/exp1_RM1.9.eps>
+File: ./figure/exp1_RH1.3.eps Graphic file (type eps)
+<./figure/exp1_RH1.3.eps>
+File: ./figure/exp1_RH1.6.eps Graphic file (type eps)
+<./figure/exp1_RH1.6.eps>
+File: ./figure/exp1_RH1.9.eps Graphic file (type eps)
+<./figure/exp1_RH1.9.eps>
 
-Overfull \hbox (15.70667pt too wide) in paragraph at lines 572--575
- [][][] 
- []
+
+LaTeX Warning: Reference `eq:s1' on page 15 undefined on input line 647.
 
 [15]
-File: ./figures/exp1_energy3.eps Graphic file (type eps)
-<./figures/exp1_energy3.eps>
-File: ./figures/exp1_energy6.eps Graphic file (type eps)
-<./figures/exp1_energy6.eps>
+File: ./figure/exp2_s1.5.eps Graphic file (type eps)
+<./figure/exp2_s1.5.eps>
+File: ./figure/exp2_t1.5.eps Graphic file (type eps)
+<./figure/exp2_t1.5.eps>
+File: ./figure/exp2_s2.eps Graphic file (type eps)
+<./figure/exp2_s2.eps>
+File: ./figure/exp2_t2.eps Graphic file (type eps)
+<./figure/exp2_t2.eps>
+ [16]
+File: ./figure/exp2_M1.3.eps Graphic file (type eps)
+<./figure/exp2_M1.3.eps>
+File: ./figure/exp2_M1.6.eps Graphic file (type eps)
+<./figure/exp2_M1.6.eps>
+File: ./figure/exp2_M1.9.eps Graphic file (type eps)
+<./figure/exp2_M1.9.eps>
+File: ./figure/exp2_M2.eps Graphic file (type eps)
+<./figure/exp2_M2.eps>
+File: ./figure/exp2_H1.3.eps Graphic file (type eps)
+<./figure/exp2_H1.3.eps>
+File: ./figure/exp2_H1.6.eps Graphic file (type eps)
+<./figure/exp2_H1.6.eps>
+File: ./figure/exp2_H1.9.eps Graphic file (type eps)
+<./figure/exp2_H1.9.eps>
+File: ./figure/exp2_H2.eps Graphic file (type eps)
+<./figure/exp2_H2.eps>
 
-Overfull \hbox (15.70667pt too wide) in paragraph at lines 587--590
- [][][] 
- []
-
-File: ./figures/exp1_energy9.eps Graphic file (type eps)
-<./figures/exp1_energy9.eps>
-File: ./figures/exp1_energy2.eps Graphic file (type eps)
-<./figures/exp1_energy2.eps>
-
-Overfull \hbox (15.70667pt too wide) in paragraph at lines 594--597
- [][][][] 
- []
-
-
-Overfull \hbox (2.05618pt too wide) detected at line 606
-\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [] [] \OML/cmm/m/it/12 ; u[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [](\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; t\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 
- \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 ; T\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ;
- []
-
-
-Overfull \hbox (11.91393pt too wide) in paragraph at lines 619--642
- [][][] 
- []
-
-[16]
-File: ./figures/exp2_r.eps Graphic file (type eps)
-<./figures/exp2_r.eps>
-File: ./figures/exp2_s.eps Graphic file (type eps)
-<./figures/exp2_s.eps>
-
-Overfull \hbox (15.70667pt too wide) in paragraph at lines 649--652
- [][][] 
- []
-
-File: ./figures/exp2_energy3.eps Graphic file (type eps)
-<./figures/exp2_energy3.eps>
-File: ./figures/exp2_energy6.eps Graphic file (type eps)
-<./figures/exp2_energy6.eps>
-
-Overfull \hbox (15.70667pt too wide) in paragraph at lines 662--665
- [][][] 
- []
-
-File: ./figures/exp2_energy9.eps Graphic file (type eps)
-<./figures/exp2_energy9.eps>
-File: ./figures/exp2_energy2.eps Graphic file (type eps)
-<./figures/exp2_energy2.eps>
-
-Overfull \hbox (15.70667pt too wide) in paragraph at lines 669--672
- [][][][] 
- []
-
-
-Underfull \vbox (badness 3803) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]
-Overfull \hbox (11.91393pt too wide) in paragraph at lines 695--718
- [][][] 
- []
+File: ./figure/exp2_RM1.3.eps Graphic file (type eps)
+<./figure/exp2_RM1.3.eps>
+File: ./figure/exp2_RM1.6.eps Graphic file (type eps)
+<./figure/exp2_RM1.6.eps>
+File: ./figure/exp2_RM1.9.eps Graphic file (type eps)
+<./figure/exp2_RM1.9.eps>
+File: ./figure/exp2_RH1.3.eps Graphic file (type eps)
+<./figure/exp2_RH1.3.eps>
+File: ./figure/exp2_RH1.6.eps Graphic file (type eps)
+<./figure/exp2_RH1.6.eps>
+File: ./figure/exp2_RH1.9.eps Graphic file (type eps)
+<./figure/exp2_RH1.9.eps>
 
-
-Underfull \vbox (badness 2538) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
-File: ./figures/exp3_energy3.eps Graphic file (type eps)
-<./figures/exp3_energy3.eps>
-File: ./figures/exp3_energy6.eps Graphic file (type eps)
-<./figures/exp3_energy6.eps>
-
-Overfull \hbox (15.70667pt too wide) in paragraph at lines 726--729
+Overfull \hbox (42.44096pt too wide) in paragraph at lines 763--778
  [][][] 
  []
 
-File: ./figures/exp3_energy9.eps Graphic file (type eps)
-<./figures/exp3_energy9.eps>
-File: ./figures/exp3_energy2.eps Graphic file (type eps)
-<./figures/exp3_energy2.eps>
 
-Overfull \hbox (15.70667pt too wide) in paragraph at lines 733--736
- [][][][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1629) has occurred while \output is active []
 
  [19]
-Overfull \hbox (27.85582pt too wide) detected at line 753
-\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = (1 + []) [] [] \OML/cmm/m/it/12 ;  [] []^^^\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [] [] \OML/cmm/m/it/12 ;  [] []@[]^^^\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [](\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 ;
- []
+
+Package natbib Warning: Citation `liCompactFiniteDifference2012' on page 20 undefined on input line 845.
 
 
-Overfull \hbox (11.91393pt too wide) in paragraph at lines 763--786
- [][][] 
- []
+Package natbib Warning: Citation `wangAnalysisNewConservative2006' on page 20 undefined on input line 845.
 
-[20]
-File: ./figures/exp4_energy3.eps Graphic file (type eps)
-<./figures/exp4_energy3.eps>
-File: ./figures/exp4_energy6.eps Graphic file (type eps)
-<./figures/exp4_energy6.eps>
-
-Overfull \hbox (15.70667pt too wide) in paragraph at lines 797--800
- [][][] 
- []
-
-File: ./figures/exp4_energy9.eps Graphic file (type eps)
-<./figures/exp4_energy9.eps>
-File: ./figures/exp4_energy2.eps Graphic file (type eps)
-<./figures/exp4_energy2.eps>
-
-Overfull \hbox (15.70667pt too wide) in paragraph at lines 804--807
- [][][][] 
- []
-
+File: ./figure/exp2_contour3_p0.eps Graphic file (type eps)
+<./figure/exp2_contour3_p0.eps>
+File: ./figure/exp2_contour3_p1.eps Graphic file (type eps)
+<./figure/exp2_contour3_p1.eps>
+File: ./figure/exp2_contour3_p5.eps Graphic file (type eps)
+<./figure/exp2_contour3_p5.eps>
+File: ./figure/exp2_contour3_p10.eps Graphic file (type eps)
+<./figure/exp2_contour3_p10.eps>
+File: ./figure/exp2_contour3_p50.eps Graphic file (type eps)
+<./figure/exp2_contour3_p50.eps>
+File: ./figure/exp2_contour3_p100.eps Graphic file (type eps)
+<./figure/exp2_contour3_p100.eps>
+File: ./figure/exp2_contour6_p0.eps Graphic file (type eps)
+<./figure/exp2_contour6_p0.eps>
+File: ./figure/exp2_contour6_p1.eps Graphic file (type eps)
+<./figure/exp2_contour6_p1.eps>
+File: ./figure/exp2_contour6_p5.eps Graphic file (type eps)
+<./figure/exp2_contour6_p5.eps>
+File: ./figure/exp2_contour6_p10.eps Graphic file (type eps)
+<./figure/exp2_contour6_p10.eps>
+File: ./figure/exp2_contour6_p50.eps Graphic file (type eps)
+<./figure/exp2_contour6_p50.eps>
+File: ./figure/exp2_contour6_p100.eps Graphic file (type eps)
+<./figure/exp2_contour6_p100.eps>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]) [22]
+ [20]
+File: ./figure/exp2_contour99_p0.eps Graphic file (type eps)
+<./figure/exp2_contour99_p0.eps>
+File: ./figure/exp2_contour99_p1.eps Graphic file (type eps)
+<./figure/exp2_contour99_p1.eps>
+File: ./figure/exp2_contour99_p5.eps Graphic file (type eps)
+<./figure/exp2_contour99_p5.eps>
+File: ./figure/exp2_contour99_p10.eps Graphic file (type eps)
+<./figure/exp2_contour99_p10.eps>
+File: ./figure/exp2_contour99_p50.eps Graphic file (type eps)
+<./figure/exp2_contour99_p50.eps>
+File: ./figure/exp2_contour99_p100.eps Graphic file (type eps)
+<./figure/exp2_contour99_p100.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+File: ./figure/exp2_contour2_p0.eps Graphic file (type eps)
+<./figure/exp2_contour2_p0.eps>
+File: ./figure/exp2_contour2_p1.eps Graphic file (type eps)
+<./figure/exp2_contour2_p1.eps>
+File: ./figure/exp2_contour2_p5.eps Graphic file (type eps)
+<./figure/exp2_contour2_p5.eps>
+File: ./figure/exp2_contour2_p10.eps Graphic file (type eps)
+<./figure/exp2_contour2_p10.eps>
+File: ./figure/exp2_contour2_p50.eps Graphic file (type eps)
+<./figure/exp2_contour2_p50.eps>
+File: ./figure/exp2_contour2_p100.eps Graphic file (type eps)
+<./figure/exp2_contour2_p100.eps>
+) [22]
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { chapter = { number={},format={\center } } }
-(ctexbook)              is set.
-
-\openout2 = `chap/ref.aux'.
-
-(./chap/ref.tex (./四川师范大学硕士学位论文模版.bbl
-
-LaTeX Font Warning: Font shape `TU/ptm/m/sc' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 4.
-
-[23
-
-
-
-
-])) [24]
-
-Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
-(ctexbook)              \ctexset { chapter = {
-(ctexbook)              name={,},number={},format={\center } } } is set.
-
-\openout2 = `chap/thanks.aux'.
-
-(./chap/thanks.tex) [25
-
-
-
-
-
-]
-
-Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
-(ctexbook)              \ctexset { chapter = { number={},format={\center } } }
-(ctexbook)              is set.
-
-\openout2 = `chap/ach.aux'.
-
-(./chap/ach.tex [26
-
-
-
-
-
-]) [27]
-\tf@thm=\write6
-\openout6 = `四川师范大学硕士学位论文模版.thm'.
-
- (./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap3.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux))
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.41063pt have occurred.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版.out' has not changed.
-(rerunfilecheck)             Checksum: B65FB8A6FFB2D79B8B5626D9B05F8F7C;1994.
- )
-(\end occurred inside a group at level 19)
-
-### semi simple group (level 19) entered at line 656 (\begingroup)
-### semi simple group (level 18) entered at line 580 (\begingroup)
-### semi simple group (level 17) entered at line 580 (\begingroup)
-### semi simple group (level 16) entered at line 404 (\begingroup)
-### semi simple group (level 15) entered at line 398 (\begingroup)
-### semi simple group (level 14) entered at line 195 (\begingroup)
-### semi simple group (level 13) entered at line 33 (\begingroup)
-### semi simple group (level 12) entered at line 33 (\begingroup)
-### semi simple group (level 11) entered at line 33 (\begingroup)
-### semi simple group (level 10) entered at line 33 (\begingroup)
-### semi simple group (level 9) entered at line 30 (\begingroup)
-### semi simple group (level 8) entered at line 30 (\begingroup)
-### semi simple group (level 7) entered at line 30 (\begingroup)
-### semi simple group (level 6) entered at line 29 (\begingroup)
-### semi simple group (level 5) entered at line 29 (\begingroup)
-### semi simple group (level 4) entered at line 26 (\begingroup)
-### semi simple group (level 3) entered at line 20 (\begingroup)
-### semi simple group (level 2) entered at line 20 (\begingroup)
-### semi simple group (level 1) entered at line 20 (\begingroup)
-### bottom level
-(\end occurred when \ifx on line 25 was incomplete) 
-Here is how much of TeX's memory you used:
- 23011 strings out of 476683
- 495647 string characters out of 5804047
- 1876018 words of memory out of 5000000
- 42686 multiletter control sequences out of 15000+600000
- 532188 words of font info for 169 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 89i,14n,97p,1222b,1850s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on 四川师范大学硕士学位论文模版.pdf (39 pages).
+(ctexbook)      

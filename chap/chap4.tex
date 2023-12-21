@@ -29,7 +29,7 @@ u = p+\mathrm{i}q, u_t = \varphi+ \mathrm{i}\psi,
 
 为了得到NFSWEs \eqref{eq:s1}的哈密顿公式,我们引入两个重要引理.
 
-\cite{wangStructurepreservingNumericalMethods2018}\begin{lem}\label{lem2}
+\cite{wangStructurepreservingNumericalMethods2018}\begin{lemma}\label{lem2}
 	% \cite{wangStructurepreservingNumericalMethods2018}
 对于函数$F[g]$,使用以下形式
 \begin{align}\label{eq_25}
@@ -39,19 +39,19 @@ F[g]=\int_{\Omega} f\left(g(\boldsymbol{x}),(-\Delta)^{\frac{\alpha}{4}} g(\bold
 \begin{align}\label{eq_26}
 \frac{\delta F}{\delta g}=\frac{\partial f}{\partial g}+(-\Delta)^{\frac{\alpha}{4}} \frac{\partial f}{\partial\left((-\Delta)^{\frac{\alpha}{4}} g\right)} .
 \end{align}
-\end{lem}
+\end{lemma}
 
-\begin{lem}\label{lem1}
+\begin{lemma}\label{lem1}
 %  \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 
  给定 $1<\alpha \leq 2$, 那么对于任何实周期函数 $p, q \in L^{2}(\Omega)$, 有
 \begin{align}\label{eq_22}
 \int_{\Omega}(-\Delta)^{\frac{\alpha}{2}} p q d \boldsymbol{x}=\int_{\Omega}(-\Delta)^{\frac{\alpha}{4}} p(-\Delta)^{\frac{\alpha}{4}} q d \boldsymbol{x}=\int_{\Omega} p(-\Delta)^{\frac{\alpha}{2}} q d \boldsymbol{x}.
 \end{align}
-\end{lem}
+\end{lemma}
 
 
 基于上述准备,我们可以证明以下结果.
-\begin{thm}	\label{thm2_1}
+\begin{theorem}	\label{thm2_1}
 令
 \begin{align}
 &\mathcal{G}=\kappa\int_{\Omega}(p^2+q^2) d \boldsymbol{x}+2\operatorname{Im}(\int_{\Omega}(\varphi+\mathrm{i}\psi)(p-\mathrm{i}q)d \boldsymbol{x}),\label{eq_34} \\
@@ -61,14 +61,14 @@ F[g]=\int_{\Omega} f\left(g(\boldsymbol{x}),(-\Delta)^{\frac{\alpha}{4}} g(\bold
 \begin{align}
 \frac{d}{d t} \mathcal{G}=0, \frac{d}{d t} \mathcal{H}=0.
 \end{align}
-\end{thm}
+\end{theorem}
 
-\begin{pf}
+\begin{proof}
 将 \eqref{eq_30} 和 \eqref{eq_31} 分别与 $\varphi$ 和 $\psi$ 做内积, 立即得到第一个守恒定律.
 注意引理到 \ref{lem1}, 并分别将 \eqref{eq_30}-\eqref{eq_33} 与$\varphi_{t}, \psi_{t}, p_{t},-q_{t}$ 做内积, 可以推导出第二守恒定律.证明完成.
-\end{pf}
+\end{proof}
 
-\begin{thm}\label{thm2}
+\begin{theorem}\label{thm2}
 NFSWEs \eqref{eq:s1} 可以重组为一个哈密顿系统
 \begin{equation}\label{eq_37}
 	\left(\begin{array}{l}
@@ -102,9 +102,9 @@ J=\left(\begin{array}{cccc}
 %\begin{equation}\label{eq_11221}
 %\mathcal{H}=\frac{1}{2}\int_{\Omega}\left((\varphi^2+\psi^2)+\left((-\Delta)^{\frac{\alpha}{4}} p\right)^{2}+\left((-\Delta)^{\frac{\alpha}{4}} q\right)^{2}+\frac{\beta}{2}(p^2+q^2)^{2}\right) d \boldsymbol{x}.
 %\end{equation}
-\end{thm}
+\end{theorem}
 
-\begin{pf}
+\begin{proof}
 注意到
 \begin{align}\label{eq_12071}
 (-\Delta)^{\frac{\alpha}{4}}((-\Delta)^{\frac{\alpha}{4}}  u(\boldsymbol{x},t))&=\mathcal{F}^{-1}\left[|\boldsymbol{\sigma}|^{\frac{\alpha}{2}} \mathcal{F}(\mathcal{F}^{-1}\left[|\boldsymbol{\sigma}|^{\frac{\alpha}{2}} \mathcal{F}(u(\boldsymbol{\sigma},t))\right])\right]\nonumber\\
@@ -141,7 +141,7 @@ J=\left(\begin{array}{cccc}
 \end{array}\right).
 \end{equation}
 证明完成.
-\end{pf}
+\end{proof}
 
 	
 \subsection{空间半离散系统}
@@ -227,14 +227,14 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 \end{align}
 
 然后有下面的定理
-\begin{thm}	\label{thm3}
+\begin{theorem}	\label{thm3}
 半离散系统\eqref{eq_56}-\eqref{eq_59}具有如下质量守恒定律和能量守恒定律
 \begin{align}
 \frac{d G(Y)}{d t}=0,~\frac{d H(Y)}{d t}=0.
 \end{align}
-\end{thm}
+\end{theorem}
 
-\begin{pf}
+\begin{proof}
 	根据\eqref{eq_63},可以推导出
 \begin{align}\label{eq_64}
 \frac{d G(Y)}{d t}=&~2 h_{x} h_{y}\left(\kappa P^{T}P_t+\kappa Q^{T}Q_t+\Psi^{T}_t P+\Psi^{T}P_{t}-\varPhi^{T}_t Q-\varPhi^{T}Q_{t}\right)\nonumber\\
@@ -247,7 +247,7 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 \frac{d H(Y)}{d t}=\nabla H(Y)^{T} f(Y)=\nabla H(Y)^{T} S \nabla H(Y)=0 .
 \end{equation}
 证明完成.
-\end{pf}
+\end{proof}
 
 \section{保结构的数值格式}\label{Section 3}
 \subsection{PAVF-P 格式}
@@ -294,7 +294,7 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 
 
 \subsection{离散守恒律}
-\begin{thm}\label{thm4}
+\begin{theorem}\label{thm4}
 	FPAVF-P格式\eqref{eq_98}-\eqref{eq_101}具有如下原始质量和能量守恒律
 \begin{align}\label{eq_11141}
 G^{m+1}=G^{m}, \quad H^{m+1}=H^{m}, \quad 0 \leq m \leq M-1,
@@ -308,9 +308,9 @@ G^{m}=\kappa\|P^{m}\|^2+\kappa\|Q^{m}\|^2+2 \left(\Psi^{m}\right)^T P^{m}-2 \lef
 H^{m}=&\frac{1}{2}[((\varPhi^{m})^{T}\varPhi^{m}+(\Psi^{m})^{T}\Psi^{m})-((P^{m})^{T} D^{\alpha} P^{m}+(Q^{m})^{T} D^{\alpha} Q^{m})\nonumber\\
 &+\frac{\beta}{2}((P^{m})^2+(Q^{m})^2)^{T}((P^{m})^2+(Q^{m})^2)].\label{eq_800}
 \end{align}
-\end{thm}
+\end{theorem}
 
-\begin{pf}
+\begin{proof}
 	将\eqref{eq_98}与$Q^{m+1}+Q^{m}$做内积计算得到
 \begin{align}
 &(Q^{m+1}+Q^{m})^{T}\delta_{t} \varPhi^{m}\nonumber\\
@@ -361,7 +361,7 @@ G^{m+1}=G^{m} .
 H^{m+1}=H^{m}.
 \end{align}
 证明完成.
-\end{pf}
+\end{proof}
 
 \subsection{其他数值格式}
 为了进行比较,我们还给出了下面两个 NFSWEs \eqref{eq:s1}的二阶AVF格式.
