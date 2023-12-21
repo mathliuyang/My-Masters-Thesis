@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  11 DEC 2023 14:41
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  21 DEC 2023 23:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -455,26 +455,26 @@ Overfull \hbox (2.22pt too wide) has occurred while \output is active
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 212.
+(hyperref)                removing `\<def>-command' on input line 210.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cnotenum' on input line 212.
+(hyperref)                removing `\cnotenum' on input line 210.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 212.
+(hyperref)                removing `\<def>-command' on input line 210.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@corref' on input line 212.
+(hyperref)                removing `\@corref' on input line 210.
 
 [1
 
 ] [2] [3] [4] [5] [6] [7] [8]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: $\bullet $ on input line 723.
+             The label is: $\bullet $ on input line 721.
 
 [9] [10]
 File: ./figure/exp1_s1.5.eps Graphic file (type eps)
@@ -504,22 +504,22 @@ File: ./figure/exp1_M1.9.eps Graphic file (type eps)
 File: ./figure/exp1_M2.eps Graphic file (type eps)
 <./figure/exp1_M2.eps>
  [13]
-Overfull \hbox (6.15015pt too wide) in paragraph at lines 883--898
+Overfull \hbox (6.15015pt too wide) in paragraph at lines 881--896
  [][][] 
  []
 
 
-Overfull \hbox (0.82808pt too wide) in paragraph at lines 904--919
+Overfull \hbox (0.82808pt too wide) in paragraph at lines 902--917
  [][][] 
  []
 
 [14]
-Overfull \hbox (0.82808pt too wide) in paragraph at lines 925--940
+Overfull \hbox (0.82808pt too wide) in paragraph at lines 923--938
  [][][] 
  []
 
 
-Overfull \hbox (0.82808pt too wide) in paragraph at lines 946--961
+Overfull \hbox (0.82808pt too wide) in paragraph at lines 944--959
  [][][] 
  []
 

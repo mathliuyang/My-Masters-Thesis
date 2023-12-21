@@ -5,15 +5,30 @@
 \newblock Uniform {{Error Estimates}} of {{Finite Difference Methods}} for the {{Nonlinear Schr{\"o}dinger Equation}} with {{Wave Operator}}.
 \newblock {\em Siam J Numer Anal\/} (Mar. 2012).
 
+\bibitem{baoComparisonsSineGordonPerturbed2010}
+{\sc Bao, W., Dong, X., and Xin, J.}
+\newblock Comparisons between sine-{{Gordon}} and perturbed nonlinear {{Schr{\"o}dinger}} equations for modeling light bullets beyond critical collapse.
+\newblock {\em Phys. D: Nonlinear Phenom. 239}, 13 (July 2010), 1120--1134.
+
 \bibitem{brugnanoClassEnergyconservingHamiltonian2018}
 {\sc Brugnano, L., Zhang, C., and Li, D.}
 \newblock A class of energy-conserving {{Hamiltonian}} boundary value methods for nonlinear {{Schr{\"o}dinger}} equation with wave operator.
 \newblock {\em Commun. Nonlinear Sci. Numer. Simul. 60\/} (July 2018), 33--49.
 
+\bibitem{buddGeometricIntegrationUsing1999}
+{\sc Budd, C., Iserles, A., McLachlan, R.~I., Quispel, G. R.~W., and Robidoux, N.}
+\newblock Geometric integration using discrete gradients.
+\newblock {\em Philos. Trans. R. Soc. Lond. Ser. Math. Phys. Eng. Sci. 357}, 1754 (Apr. 1999), 1021--1045.
+
 \bibitem{caffarelliExtensionProblemRelated2007}
 {\sc Caffarelli, L., and Silvestre, L.}
 \newblock An {{Extension Problem Related}} to the {{Fractional Laplacian}}.
 \newblock {\em Comm. Partial Differential Equations 32}, 8 (Aug. 2007), 1245--1260.
+
+\bibitem{caiPartitionedAveragedVector2018}
+{\sc Cai, W., Li, H., and Wang, Y.}
+\newblock Partitioned averaged vector field methods.
+\newblock {\em J Comput Phys 370\/} (Oct. 2018), 25--42.
 
 \bibitem{chengConvergenceEnergyconservingScheme2022}
 {\sc Cheng, X., Qin, H., and Zhang, J.}
@@ -30,6 +45,16 @@
 \newblock Semidiscretization in time for nonlinear {{Schr{\"o}dinger-waves}} equations.
 \newblock {\em Discrete Cont Dyn-A 4}, 4 (Tue Jun 30 20:00:00 EDT 1998), 671--690.
 
+\bibitem{demengelFunctionalSpacesTheory2012}
+{\sc Demengel, F., and Demengel, G.}
+\newblock {\em Functional {{Spaces}} for the {{Theory}} of {{Elliptic Partial Differential Equations}}}.
+\newblock Universitext. {Springer}, {London}, 2012.
+
+\bibitem{fuStructurepreservingAlgorithmsTwodimensional2020}
+{\sc Fu, Y., Cai, W., and Wang, Y.}
+\newblock Structure-preserving algorithms for the two-dimensional fractional {{Klein-Gordon-Schr{\"o}dinger}} equation.
+\newblock {\em Appl Numer Math 156\/} (Oct. 2020), 77--93.
+
 \bibitem{hairerRungeKuttaMethods2015}
 {\sc Hairer, E., and Wanner, G.}
 \newblock Runge{\textendash}{{Kutta Methods}}, {{Explicit}}, {{Implicit}}.
@@ -45,10 +70,45 @@
 \newblock Relaxation {{Runge--Kutta Methods}}: {{Conservation}} and {{Stability}} for {{Inner-Product Norms}}.
 \newblock {\em Siam J Numer Anal 57}, 6 (Jan. 2019), 2850--2870.
 
+\bibitem{laskinFractionalQuantumMechanics2000}
+{\sc Laskin, N.}
+\newblock Fractional quantum mechanics.
+\newblock {\em Phys Rev E 62}, 3 (Sept. 2000), 3135--3145.
+
+\bibitem{laskinFractionalSchrodingerEquation2002}
+{\sc Laskin, N.}
+\newblock Fractional {{Schrodinger}} equation.
+\newblock {\em Phys Rev E 66}, 5 (Nov. 2002), 056108.
+
 \bibitem{liFastEnergyConserving2018}
 {\sc Li, M., and Zhao, Y.-L.}
 \newblock A fast energy conserving finite element method for the nonlinear fractional {{Schr{\"o}dinger}} equation with wave operator.
 \newblock {\em Appl. Math. Comput. 338\/} (Dec. 2018), 758--773.
+
+\bibitem{liFiniteDifferenceCalculus1995}
+{\sc Li, S., and {Vu-Quoc}, L.}
+\newblock Finite {{Difference Calculus Invariant Structure}} of a {{Class}} of {{Algorithms}} for the {{Nonlinear Klein}}{\textendash}{{Gordon Equation}}.
+\newblock {\em Siam J Numer Anal 32}, 6 (Dec. 1995), 1839--1875.
+
+\bibitem{liCompactFiniteDifference2012}
+{\sc Li, X., Zhang, L., and Wang, S.}
+\newblock A compact finite difference scheme for the nonlinear {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Appl. Math. Comput. 219}, 6 (Nov. 2012), 3187--3197.
+
+\bibitem{machiharaNonrelativisticLimitEnergy2002}
+{\sc Machihara, S., Nakanishi, K., and Ozawa, T.}
+\newblock Nonrelativistic limit in the energy space for nonlinear {{Klein-Gordon}} equations.
+\newblock {\em Math Ann 322}, 3 (Mar. 2002), 603--621.
+
+\bibitem{quispelNewClassEnergypreserving2008}
+{\sc Quispel, G. R.~W., and McLaren, D.~I.}
+\newblock A new class of energy-preserving numerical integration methods.
+\newblock {\em J. Phys. A: Math. Theor. 41}, 4 (Feb. 2008), 045206.
+
+\bibitem{ranConservativeDifferenceScheme2016}
+{\sc Ran, M., and Zhang, C.}
+\newblock A conservative difference scheme for solving the strongly coupled nonlinear fractional {{Schr{\"o}dinger}} equations.
+\newblock {\em Commun. Nonlinear Sci. Numer. Simul. 41\/} (Dec. 2016), 64--83.
 
 \bibitem{ranLinearlyImplicitConservative2016}
 {\sc Ran, M., and Zhang, C.}
@@ -65,10 +125,55 @@
 \newblock General relaxation methods for initial-value problems with application to multistep schemes.
 \newblock {\em Numer Math 146}, 4 (Dec. 2020), 875--906.
 
+\bibitem{tsutsumiNonrelativisticApproximationNonlinear1984}
+{\sc Tsutsumi, M.}
+\newblock Nonrelativistic approximation of nonlinear {{Klein-Gordon}} equations in two space dimensions.
+\newblock {\em Nonlinear Analysis: Theory, Methods \& Applications 8}, 6 (June 1984), 637--643.
+
+\bibitem{wangCrankNicolsonDifference2013}
+{\sc Wang, D., Xiao, A., and Yang, W.}
+\newblock Crank{\textendash}{{Nicolson}} difference scheme for the coupled nonlinear {{Schr{\"o}dinger}} equations with the {{Riesz}} space fractional derivative.
+\newblock {\em J. Comput. Phys. 242\/} (June 2013), 670--681.
+
+\bibitem{wangLinearlyImplicitConservative2014}
+{\sc Wang, D., Xiao, A., and Yang, W.}
+\newblock A linearly implicit conservative difference scheme for the space fractional coupled nonlinear {{Schr{\"o}dinger}} equations.
+\newblock {\em J. Comput. Phys. 272\/} (Sept. 2014), 644--655.
+
 \bibitem{wangConservativeLinearizedDifference2015}
 {\sc Wang, P., and Huang, C.}
 \newblock A conservative linearized difference scheme for the nonlinear fractional {{Schr{\"o}dinger}} equation.
 \newblock {\em Numer. Algorithms 69}, 3 (July 2015), 625--641.
+
+\bibitem{wangEnergyConservativeDifference2015}
+{\sc Wang, P., and Huang, C.}
+\newblock An energy conservative difference scheme for the nonlinear fractional {{Schr{\"o}dinger}} equations.
+\newblock {\em J. Comput. Phys. 293\/} (July 2015), 238--251.
+
+\bibitem{wangStructurepreservingNumericalMethods2018}
+{\sc Wang, P., and Huang, C.}
+\newblock Structure-preserving numerical methods for the fractional {{Schr{\"o}dinger}} equation.
+\newblock {\em Appl Numer Math 129\/} (July 2018), 137--158.
+
+\bibitem{wangAnalysisNewConservative2006}
+{\sc Wang, T.-c., and Zhang, L.-m.}
+\newblock Analysis of some new conservative schemes for nonlinear {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Appl. Math. Comput. 182}, 2 (Nov. 2006), 1780--1794.
+
+\bibitem{wangSplitstepSpectralGalerkin2019}
+{\sc Wang, Y., Mei, L., Li, Q., and Bu, L.}
+\newblock Split-step spectral {{Galerkin}} method for the two-dimensional nonlinear space-fractional {{Schr{\"o}dinger}} equation.
+\newblock {\em Appl Numer Math 136\/} (Feb. 2019), 257--278.
+
+\bibitem{xinModelingLightBullets2000}
+{\sc Xin, J.}
+\newblock Modeling light bullets with the two-dimensional sine{\textendash}{{Gordon}} equation.
+\newblock {\em Phys. D: Nonlinear Phenom. 135}, 3-4 (Jan. 2000), 345--368.
+
+\bibitem{yangNumericalMethodsFractional2010}
+{\sc Yang, Q., Liu, F., and Turner, I.}
+\newblock Numerical methods for fractional partial differential equations with {{Riesz}} space fractional derivatives.
+\newblock {\em Appl Math Model 34}, 1 (Jan. 2010), 200--218.
 
 \bibitem{yangEfficientLinearSchemes2017}
 {\sc Yang, X., and Ju, L.}

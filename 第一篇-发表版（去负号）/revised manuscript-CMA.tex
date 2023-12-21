@@ -146,8 +146,6 @@ Fourier pseudo-spectral method
 %% main text
 
 \section{Introduction}\label{Section 1}
-%Due to the memory and genetnic property of fractional operators, fractional differential equations  \cite{liuNovelTechniquesParameter2011} are more suitable to describe or simulate a variety of scientific and engineering problems with memory and hereditary properties than integer order differential equations, thus they are frequently implemented in many scientific fields, such as physics, hydrology and finance  \cite{zaslavskyChaosFractionalKinetics2002} .
-
 In this paper, we consider the following nonlinear fractional Schr{\"o}dinger wave equations (NFSWEs)
 \begin{align}\label{eq_1}
 u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i} \kappa u_{t}+\beta|u|^{2} u=0, \quad \boldsymbol{x} \in \Omega, t \in(0, T]
@@ -157,23 +155,9 @@ with the initial conditions
 u(\boldsymbol{x}, 0)=u_{0}(\boldsymbol{x}), \quad u_{t}(\boldsymbol{x}, 0)=u_{1}(\boldsymbol{x}),
 \end{align}
 and the boundary conditions with periods of $2L$,
-%\begin{align}\label{eq_3}
-%u(\boldsymbol{x}+2\boldsymbol{L}, t)=u(\boldsymbol{x}, t), \quad t \in[0, T]
-%\end{align}
-where $\mathrm{i}=\sqrt{-1}, 1<\alpha \leq 2, \boldsymbol{x}\in \Omega \subset \mathbb{R}^d ( d=1,2), \kappa$ and $\beta>0$ are both real constants, $u(\boldsymbol{x}, t)$ is unknown complex valued function, $u_{0}(\boldsymbol{x})$ and $u_{1}(\boldsymbol{x})$ are known smooth functions. %, $|\cdot|$ denotes the modulus of complex number.
-%and $2\boldsymbol{L}$ is the period. For $1 \mathrm{D}$ case, we set $\Omega=\left[-L_1, L_1\right]$ with periodic boundary conditions, and denote $\boldsymbol{x}=x, \boldsymbol{L}=L_1$.
-%For $2 \mathrm{D}$ case, we write
-%$\Omega$ is  a bounded domain in $\mathcal{R}^2$.
-%, and denote $\boldsymbol{x}=(x, y), \boldsymbol{L}=\left(L_1, L_2\right)$.
+where $\mathrm{i}=\sqrt{-1}, 1<\alpha \leq 2, \boldsymbol{x}\in \Omega \subset \mathbb{R}^d ( d=1,2), \kappa$ and $\beta>0$ are both real constants, $u(\boldsymbol{x}, t)$ is unknown complex valued function, $u_{0}(\boldsymbol{x})$ and $u_{1}(\boldsymbol{x})$ are known smooth functions. 
+
 The fractional Laplacian can be given by the Fourier transform as
-%%\begin{align}\label{eq_4}
-%%-(-\Delta)^{\frac{\alpha}{2}} u(\boldsymbol{x},t)=-\mathcal{F}^{-1}\left[|\boldsymbol{\sigma}|^{\alpha} \mathcal{F}(u(\boldsymbol{\sigma},t))\right],
-%%\end{align}
-%%where $|\boldsymbol{\sigma}|^{\alpha}$ is a symbol, $\mathcal{F}$ is the Fourier transform and $\mathcal{F}^{-1}$ denotes its inverse,
-%%$\boldsymbol{\sigma}=(\sigma_1,\sigma_2)$, see  \cite{caffarelliExtensionProblemRelated2007}.
-% \begin{align}\label{eq_4}
-% -(-\Delta)^{\frac{\alpha}{2}} u(\boldsymbol{x},t)=-\mathcal{F}^{-1}\left[|\boldsymbol{\xi}|^{\alpha} \mathcal{F}(u(\boldsymbol{\xi},t))\right],
-% \end{align}
 
 \begin{align}\label{eq_4}
 	(-\Delta)^{\frac{\alpha}{2}} u(\boldsymbol{x},t)=\mathcal{F}^{-1}\left[|\boldsymbol{\xi}|^{\alpha} \mathcal{F}(u(\boldsymbol{\xi},t))\right],
@@ -266,7 +250,6 @@ In Section \ref{Section 3}, we obtain a class of fully-discrete conservative sch
 \section{Hamiltonian Structure and Space Semi-discrete System}\label{Section 2}
 \subsection{Hamiltonian Structure of NFSWEs}
 It is well-known that Hamiltonian structure is crucial in constructing structure-preserving algorithms for some problems.
-%The Hamiltonian structure is important to analyse the conservative systems and further to construct numerical schemes for them.
 However, to our knowledge, no researchers have considered the Hamiltonian structure of NFSWEs \eqref{eq_1}-\eqref{eq_3}.
 Based on this, here we first reconstruct the Hamiltonian structure of such problem with periodic boundary conditions.
 
@@ -401,12 +384,6 @@ Noticing that Lemma \ref{lem1}, and taking the inner products of \eqref{eq_30}-\
 		\delta \mathcal{H} / \delta p \\
 		\delta \mathcal{H} / \delta q
 		\end{array}\right),
-%\quad J=\left(\begin{array}{cccc}
-%		0 & \kappa & -1 & 0 \\
-%		-\kappa & 0 & 0 & -1 \\
-%		1 & 0 & 0 & 0 \\
-%		0 & 1 & 0 & 0
-%		\end{array}\right),
 \end{equation}
 where the Hamilton operator
 \begin{equation}\label{eq_37b}
@@ -418,9 +395,6 @@ J=\left(\begin{array}{cccc}
 		\end{array}\right),
 \end{equation}
 and the energy functional $\mathcal{H}$ is defined in \eqref{eq_35}.
-%\begin{equation}\label{eq_11221}
-%\mathcal{H}=\frac{1}{2}\int_{\Omega}\left((\varphi^2+\psi^2)+\left((-\Delta)^{\frac{\alpha}{4}} p\right)^{2}+\left((-\Delta)^{\frac{\alpha}{4}} q\right)^{2}+\frac{\beta}{2}(p^2+q^2)^{2}\right) d \boldsymbol{x}.
-%\end{equation}
 \end{theorem}
 
 \begin{proof}
@@ -469,10 +443,8 @@ This proof is completed.
 
 \subsection{Space Semi-discrete System}
 Noticing that the periodic boundary conditions, we choose the Fourier pseudo-spectral method for space discretization of NFSWEs \eqref{eq_1}-\eqref{eq_3}.
-%We develop a numerical method to solve the initial-periodic boundary value problem \eqref{eq_1}-\eqref{eq_3} in a finite domain $\Omega \times(0, T)$.
 
 Without loss of generality, we set $d=2$.
-%First, we introduce some notations.
 For positive integer $M$ and even positive integers $N_{x}$ and $N_{y}$, denote $\tau={T}/{M}, h_{x}={2 L}/{N_{x}}, h_{y}={2 L}/{N_{y}}$. Define $\Omega_{h}^{\tau}=\Omega_{h} \times \Omega_{\tau}$, where $\Omega_{h}=\left\{\left(x_{i}, y_{j}\right) \mid i=0,1, \cdots, N_{x}\!-\!1;\right.\\ \left.j=0,1, \cdots, N_{y}\!-\!1\right\}$ and $\Omega_{\tau}=\left\{t_{m} \mid t_{m}=m \tau, 0 \leq m \leq M\right\}$, with $t_{m}=m \tau, x_{i}\!=\!-L+i h_{x}$ and $y_{j}\!=\!-L+j h_{y}$.
 
 For any grid functions $u$ and $v$ defined on $\Omega_h$,
@@ -487,9 +459,6 @@ For brevity, we introduce following operators
 where
 \begin{align}\label{eq_47}
 &U^m=\left(u_{0,0}^m, \cdots, u_{N_{x}-1,0}^m, u_{0,1}^m, \cdots, u_{N_{x}-1,1}^m, \cdots, u_{0, N_{y}-1}^m, \cdots, u_{N_{x}-1, N_{y}-1}^m\right)^{T}. %\nonumber\\
-%&Q=\left(q_{0,0}, \cdots, q_{N_{x}-1,0}, q_{0,1}, \cdots, q_{N_{x}-1,1}, \cdots, q_{0, N_{y}-1}, \cdots, q_{N_{x}-1, N_{y}-1}\right)^{T} \nonumber\\
-%&\varPhi=\left(m_{0,0}, \cdots, m_{N_{x}-1,0}, m_{0,1}, \cdots, m_{N_{x}-1,1}, \cdots, m_{0, N_{y}-1}, \cdots, m_{N_{x}-1, N_{y}-1}\right)^{T}\nonumber\\
-%&\Psi=\left(n_{0,0}, \cdots, n_{N_{x}-1,0}, n_{0,1}, \cdots, n_{N_{x}-1,1}, \cdots, n_{0, N_{y}-1}, \cdots, n_{N_{x}-1, N_{y}-1}\right)^{T}.
 \end{align}
 
 Let $\left(x_{i}, y_{j}\right) \in \Omega_{h}$ be the Fourier collocation points. Denote $u_{N}(x, y)$ is the
@@ -506,16 +475,12 @@ As a result, the fractional Laplacian $(-\Delta)^{\frac{\alpha}{2}} u(x, y)$ can
 \begin{align}\label{eq_52}
 (-\Delta)^{\frac{\alpha}{2}} u_{N}\left(x, y\right)=\sum\limits_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum\limits_{k_{2}=-N_{y} / 2}^{N_{y} / 2}\left|\left(k_{1} \mu\right)^{2}+\left(k_{2} \mu\right)^{2}\right|^{\frac{\alpha}{2}} \tilde{u}_{k_{1}, k_{2}} e^{\mathrm{i}\mu\left( k_{1} (x+L)+k_{2}(y+L)\right)},
 \end{align}
-% where $\sum\limits_{\mathbf{k}=-\mathbf{N} / 2}^{\mathbf{N} / 2}=\sum\limits_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum\limits_{k_{2}=-N_{y} / 2}^{N_{y} / 2}, \mathbf{k} \cdot(\boldsymbol{x}+\mathbf{L})=k_{1}(x+L)+k_{2}(y+L)$.
-%We denote $u_{i, j}=u\left(x_{i}, y_{j}\right), \mu^{2} \cdot \mathbf{k}^{2}=\mu^{2}\left(k_{1}^{2}+k_{2}^{2}\right)$ and
 Inserting \eqref{eq_51} into \eqref{eq_52}, and considering the resulting equation at the point $(x_i,y_j)$ gives that
 \begin{align}
 &(-\Delta)^{\frac{\alpha}{2}} u_{N}\left(x_{i}, y_{j}\right)\nonumber\\
-%=&-\sum\limits_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum\limits_{k_{2}=-N_{y} / 2}^{N_{y} / 2}\left|\mu^{2} \cdot \mathbf{k}^{2}\right|^{\frac{\alpha}{2}}\left(\frac{1}{N_{x} %c_{k_{1}}} \frac{1}{N_{y} c_{k_{2}}} \sum\limits_{l_{1}=0}^{N_{x}-1} \sum\limits_{l_{2}=0}^{N_{y}-1}u_{l_{1}, l_{2}} e^{-\mathrm{i}\mu\left( %k_{1}(x_{l_1}+L)+k_{2}(y_{l_2}+L)\right)}\right) e^{\mathrm{i} \mu\left(k_{1}\left(x_{i}+L\right)+k_{2}\left(y_{j}+L\right)\right)}\nonumber\\
 =&\sum\limits_{l_{1}=0}^{N_{x}-1} \sum\limits_{l_{2}=0}^{N_{y}-1}u(x_{l_{1}}, y_{l_{2}})\left(\sum\limits_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum\limits_{k_{2}=-N_{y} / 2}^{N_{y} / 2} \frac{1}{N_{x} c_{k_{1}}} \frac{1}{N_{y} c_{k_{2}}}\left|\mu^{2} \cdot \mathbf{k}^{2}\right|^{\frac{\alpha}{2}} e^{\mathrm{i} \mu\left(k_{1}\left(x_{i}-x_{l_{1}}\right)+k_{2}\left(y_{j}-y_{l_{2}}\right)\right)}\right)\nonumber\\
 =&\left(D^{\alpha}U\right)_{i+j N_{x}},\label{eq_53}
 \end{align}
-% where $\mu^{2} \cdot \mathbf{k}^{2}=\mu^{2}\left(k_{1}^{2}+k_{2}^{2}\right), \boldsymbol{x_l}+\mathbf{L}=\left(x_{l_{1}}+L\right)+\left(y_{l_{2}}+L\right)$,
 where $\mu^{2} \cdot \mathbf{k}^{2}=\mu^{2}\left(k_{1}^{2}+k_{2}^{2}\right)$, $D^{\alpha}$ is spectral symmetric differential matrix with the elements
 \begin{align}\label{eq_54}
 \left(D^{\alpha}\right)_{i+j N_{x}, l_{1}+l_{2} N_{x}}=\textcolor[rgb]{1.00,0.00,0.00}{\sum\limits_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum\limits_{k_{2}=-N_{y} / 2}^{N_{y} / 2}}\frac{1}{N_{x} c_{k_{1}}} \frac{1}{N_{y} c_{k_{2}}}\left|\mu^{2} \cdot \mathbf{k}^{2}\right|^{\frac{\alpha}{2}} e^{\mathrm{i}\mu\left(k_{1}\left(x_{i}-x_{l_{1}}\right)+k_{2}\left(y_{j}-y_{l_{2}}\right)\right)}.
@@ -606,7 +571,6 @@ This proof is completed.
 \section{Structure-preserving Numerical Methods}\label{Section 3}
 \subsection{PAVF-P Scheme}
 
-%Around the differential models with Hamiltonian structure, researchers have proposed many structure-preserving algorithms in recent years.
 For NFSWEs \eqref{eq_1}-\eqref{eq_3}, there are many structure-preserving methods, but most of these methods only preserve modified energy or mass, see \cite{liFastEnergyConserving2018,huEfficientEnergyPreserving2022}. This inspired us to construct numerical methods that not only preserve the original energy, but also preserve original mass. Based on the Hamiltonian system \eqref{eq_60} established above, here we apply the partitioned averaged vector field (PAVF) method developed in  \cite{caiPartitionedAveragedVector2018} to construct structure-preserving methods for NFSWEs \eqref{eq_1}-\eqref{eq_3} because the PAVF method preserve not only traditional energy, but possibly other conservation properties.
 
 Considering the Hamiltonian system \eqref{eq_60}, and applying the PAVF method, we can obtain the fully-discrete scheme for solving NFSWEs \eqref{eq_1}-\eqref{eq_3} as follows
@@ -792,8 +756,6 @@ u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0, \quad (x,t)\in  \Omega
 \end{equation}
 with $u(x, 0)=(1+\mathrm{i}) x e^{-10(1-x)^2}$ and $u_t(x, 0)=0$.
 \end{example}
-
-%When $\alpha=2$, Eq.\eqref{eq_108} simplifies into the classical nonlinear Schr{\"o}dinger wave equation.
 
 Based on the conservation laws in discrete sense given in \eqref{eq_11141}, one has $G^n\equiv G^0$ and $H^n\equiv H^0$, and $G^0, H^0$ only depend on the given initial value functions $u(x,0)$ and $u_t(x, 0)$.
 It is not difficult to verify that the initial value function $u(x, 0)$ exponentially decays to zero along $x$ away from $x=1$. It means that
@@ -1334,12 +1296,14 @@ Finally, we depict the evolution of waves over time $t$ for $\alpha=1.3,1.6,1.99
 	\end{figure}
 
 
-	\section{Conclusions and remarks}\label{Section 5}
-	In this paper, we reformulate the two-dimensional fractional nonlinear Schr{\"o}dinger wave equations as a canonical Hamiltonian system. By combining the partitioned averaged vector field plus method and Fourier pseudo-spectral method, we construct a conservative numerical scheme based on the resulting Hamiltonian system. Theoretical analysis and numerical findings reveal that the proposed method can preserve the original energy and mass effectively.
+	\section{结论和备注}\label{Section 5}
+
+在本文中，我们重新表述了二维分数非线性薛定谔波动方程为一个规范哈密顿系统。通过将分块平均矢量场加方法与傅立叶伪谱方法结合，我们基于得到的哈密顿系统构建了一个保守的数值方案。理论分析和数值结果表明，所提出的方法能够有效地保持原始能量和质量。
+
+\section*{致谢}
+
+本工作得到了四川省科技计划（No. 2022JDTD0019）的支持，以及四川师范大学劳伦数学中心和系统可信性自动验证国家地方联合工程实验室（资助号：ZD20220105）的支持。
 	
-	\section*{Acknowledgements}
-	This work is supported by the Sichuan Science and Technology Program (No. 2022JDTD0019) and the Laurent Mathematics Center of Sichuan Normal University and National-Local Joint Engineering Laboratory of System Credibility Automatic Verification (Grant No. ZD20220105).
-		
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
 %% \appendix
