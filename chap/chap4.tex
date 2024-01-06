@@ -1,82 +1,14 @@
 \chapter[二维分数阶非线性Schr{\"o}dinger波方程的哈密顿结构和保结构算法]{二维分数阶非线性Schr{\"o}dinger波方程的哈密顿结构和保结构算法}
 
-\section*{摘要}
-
-本文的重点是构建在二维情境下保结构的分数非线性Schr{\"o}dinger波方程的数值方法。
-首先，通过使用分数Laplacian的泛函变分原理，我们建立了所研究问题的哈密顿结构。
-随后，通过将分割平均矢量场加法方法和傅立叶拟谱方法应用于得到的哈密顿系统，提出了一个完全离散的数值方案。
-所得到的完全离散方案在离散意义上被证明具有能量保持和质量保持的性质。
-为了比较，还列举了更多的数值方法。最后，通过几个数值实验来支持我们的理论结果。
-
-\section{引言}\label{Section_PAVF: 1}
-
-在本文中，我们考虑以下非线性分数Schr{\"o}dinger波方程（NFSWEs）：
-
-\begin{align}\label{eq_PAVF:1}
-u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i} \kappa u_{t}+\beta|u|^{2} u=0, \quad \boldsymbol{x} \in \Omega, t \in(0, T]
-\end{align}
-其中初始条件为：
-
-\begin{align}\label{eq_PAVF:3}
-u(\boldsymbol{x}, 0)=u_{0}(\boldsymbol{x}), \quad u_{t}(\boldsymbol{x}, 0)=u_{1}(\boldsymbol{x}),
-\end{align}
-
-边界条件为周期性边界条件，周期为$2L$。
-这里，$\mathrm{i}=\sqrt{-1}$，$1<\alpha \leq 2$，$\boldsymbol{x}\in \Omega \subset \mathbb{R}^d ( d=1,2)$，$\kappa$ 和 $\beta>0$ 都是实常数，$u(\boldsymbol{x}, t)$ 是未知的复值函数，$u_{0}(\boldsymbol{x})$ 和 $u_{1}(\boldsymbol{x})$ 是已知的光滑函数。
-分数Laplacian可以通过傅立叶变换表示为：
-
-\begin{align}\label{eq_PAVF:4}
-	(-\Delta)^{\frac{\alpha}{2}} u(\boldsymbol{x},t)=\mathcal{F}^{-1}\left[|\boldsymbol{\xi}|^{\alpha} \mathcal{F}(u(\boldsymbol{\xi},t))\right],
-	\end{align}
-其中 $\mathcal{F}$ 是傅立叶变换，$\mathcal{F}^{-1}$ 表示其逆变换，参见 \cite{caffarelliExtensionProblemRelated2007}。
-特别地，在一维情况下，分数Laplacian算子等价于Riesz分数导数 \cite{yangNumericalMethodsFractional2010,demengelFunctionalSpacesTheory2012}。当 $\alpha=2$ 时，它将退化为经典的Laplacian算子，对应的整数阶问题已经有相对充分的研究，例如见 \cite{zhangConservativeNumericalScheme2003,baoUniformErrorEstimates2012,chengSeveralConservativeCompact2018,brugnanoClassEnergyconservingHamiltonian2018}。
-
-所研究的问题源自多种物理应用，例如Klein-Gordon方程的非相对论极限 \cite{tsutsumiNonrelativisticApproximationNonlinear1984,machiharaNonrelativisticLimitEnergy2002}，等离子体中Langmuir波包络的近似 \cite{colinSemidiscretizationTimeNonlinear1998}，以及用于光子弹的正弦-戈登方程的调制平面脉冲近似 \cite{baoComparisonsSineGordonPerturbed2010,xinModelingLightBullets2000}。它可以被看作是整数阶Schr{\"o}dinger方程的推广，并可以通过将Feynman路径积分推广到L$\acute{e}$vy路径积分来导出，参见 \cite{laskinFractionalQuantumMechanics2000,laskinFractionalSchrodingerEquation2002}。
-
-与许多基于物理场景的微分模型一样，所研究的问题 \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 在周期边界条件下具有以下质量和能量守恒定律：
-
-\begin{align}\label{eq_PAVF:7}
-G(t)=G(0), \quad E(t)=E(0), \quad 0 \leq t \leq T,
-\end{align}
-其中质量
-
-\begin{align}\label{eq_PAVF:8}
-G(t)=\kappa\|u(\cdot, t)\|^{2}+2\operatorname{Im}\left(u_{t}, u\right),
-\end{align}
-以及能量
-
-\begin{align}\label{eq_PAVF:9}
-E(t)=\frac{1}{2}\left(\left\|u_{t}(\cdot, t)\right\|^{2}+\left\|(-\Delta)^{\frac{\alpha}{4}} u(\cdot, t)\right\|^{2}+\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4}\right).
-\end{align}
-这可以通过将 \eqref{eq_PAVF:1} 分别与 $u$ 和 $u_{t}$ 进行内积，并注意到
-
-\begin{align} \label{eq_PAVF:11223}
- 	\int_{\Omega}(-\Delta)^{\frac{\alpha}{2}} u(\boldsymbol{x}, t) \bar{u}(\boldsymbol{x}, t) d \boldsymbol{x}=\int_{\Omega}(-\Delta)^{\frac{\alpha}{4}} u(\boldsymbol{x}, t)(-\Delta)^{\frac{\alpha}{4}} \bar{u}(\boldsymbol{x}, t) d \boldsymbol{x}.
- \end{align}
-
- 鉴于此，我们希望建立一种能保持这些物理不变量的数值方法。这是因为在某些领域，保持原微分方程的某些不变性已经成为评估数值模拟成功的标准，参见 \cite{liFiniteDifferenceCalculus1995}。同时，康峰曾说过：“数值方案设计的基本思想是尽可能地保持原问题的性质。” 实际上，在过去的10年里，许多研究人员都关注了这个主题。例如，王和肖 \cite{wangCrankNicolsonDifference2013} 首次提出了一种Crank-Nicolson差分方案，用于保持耦合非线性分数Schr{\"o}dinger方程的离散质量，然后在 \cite{wangLinearlyImplicitConservative2014} 中，他们进一步提出了一种线性隐式方案，该方案保持了修改后的离散质量和能量。冉和张 \cite{ranConservativeDifferenceScheme2016} 提出了一个隐式差分方案和一个线性差分方案，分别保持了强耦合非线性分数Schr{\"o}dinger方程的原始和修改后的质量和能量。王和黄 \cite{wangEnergyConservativeDifference2015,wangConservativeLinearizedDifference2015} 导出了单一立方分数Schr{\"o}dinger方程的能量和质量保守的Crank-Nicolson差分方案和线性差分方案。王等人 \cite{wangSplitstepSpectralGalerkin2019} 提出了一个二维非线性空间分数Schr{\"o}dinger方程的分裂步谱Galerkin方法，仅保持了离散质量。关于模型问题 \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3}，冉和张 \cite{ranLinearlyImplicitConservative2016} 首次开发了一种保持修改后的离散质量和能量的三级线性隐式差分方案。李和赵 \cite{liFastEnergyConserving2018} 通过将Crank-Nicolson方法与Galerkin有限元方法相结合，考虑了一种保守策略，并设计了一个带有合适循环预处理器的快速Krylov子空间求解器以节省计算成本。程和秦 \cite{chengConvergenceEnergyconservingScheme2022} 基于标量辅助变量（SAV）方法开发了一种线性隐式保守数值方案，仅保持了修改后的能量，而不是质量。胡等人 \cite{huEfficientEnergyPreserving2022} 提出了三种能量保持的谱Galerkin方法，分别在时间上应用Crank-Nicolson、SAV和指数-SAV（ESAV）方法。张和冉 \cite{zhangHighorderStructurepreservingDifference2023} 提出并分析了基于三角-SAV（T-SAV）方法的高阶能量保持差分方案。
-
-然而，现有的工作几乎专注于一维情况，而这些提出的方法只保持能量，甚至是修改后的能量。这促使我们开发更有效的方法，可以保持解决多维问题时的原始能量和质量。注意到平均矢量场（AVF）方法可以保持Hamilton系统的能量 \cite{buddGeometricIntegrationUsing1999,quispelNewClassEnergypreserving2008}。此外，最近提出的分割平均矢量场（PAVF）方法不仅可以保持传统能量，还可以保持更多的保守性质，并且已被用于构造Hamilton常微分方程的保守数值方案，参见 \cite{caiPartitionedAveragedVector2018}。这些研究基础使我们有可能实现我们的目标，而对所研究问题 \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 的Hamilton结构的推导是构建保结构方法的成功关键。
-
-据我们所知，目前很少有关注分数微分方程的Hamilton结构的研究。最近，王和黄 \cite{wangStructurepreservingNumericalMethods2018} 提出了带有分数Laplacian的泛函的变分导数，并将一维分数非线性Schr{\"o}dinger方程重新表述为一个Hamilton系统。傅和蔡 \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数Klein-Gordon-Schr{\"o}dinger方程的Hamilton形式，并随后发展了保守数值方案。
-
-基于此，我们首先推导了具有周期边界条件的二维分数非线性Schr{\"o}dinger波方程 \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 的Hamilton形式，然后通过将分割平均矢量场加法（PAVF-P）方法和傅立叶拟谱方法相结合，成功构建了保守数值方案。
-
-本文的其余部分组织如下。
-
-在第 \ref{Section_PAVF: 2} 节，我们首先研究了带有周期边界条件的二维分数非线性Schr{\"o}dinger波方程 \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 的Hamilton结构，然后通过使用傅立叶拟谱方法在空间中逼近得到的Hamilton系统，推导出一个半离散的保守系统。
-
-在第 \ref{Section_PAVF: 3} 节，通过使用PAVF-P方法对前述空间半离散系统进行离散化，我们得到了一类完全离散的保守数值方案，并证明了离散守恒定律。在第 \ref{Section_PAVF: 4} 节，我们提供了一维和二维数值示例，以演示理论结果。第 \ref{Section_PAVF: 5} 节总结了一些结论。
-
 \section{NFSWEs的Hamilton结构和空间半离散系统}\label{Section_PAVF: 2}
 \subsection{NFSWEs的Hamilton结构}
-众所周知，Hamilton结构对于构建某些问题的保结构算法至关重要。然而，据我们所知，没有研究人员考虑过带有周期边界条件的NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 的Hamilton结构。基于此，我们首先重构了带有周期边界条件的此问题的Hamilton结构。
+众所周知，Hamilton结构对于构建某些问题的保结构算法至关重要。然而，据我们所知，没有研究人员考虑过带有周期边界条件的NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 的Hamilton结构。基于此，我们首先重构了带有周期边界条件的此问题的Hamilton结构。
 
 设
 \begin{align}
 u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 \end{align}
-其中$p, q,\varphi,\psi$均为实值函数。那么，NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 可以重写为
+其中$p, q,\varphi,\psi$均为实值函数。那么，NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 可以重写为
 \begin{align}\label{eq_PAVF:28}
 \varphi_{t}+\mathrm{i}\psi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}p+\mathrm{i}\left( -\Delta \right) ^{\frac{\alpha }{2}}q+\mathrm{i}\kappa \varphi-\kappa \psi+\beta \left( p^{2}+q^{2}\right) \left( p+\mathrm{i} q\right) =0.
 \end{align}
@@ -85,7 +17,7 @@ u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 &\varphi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}p-\kappa \psi+\beta \left( p^{2}+q^{2}\right)p=0,\nonumber\\
 &\psi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}q+\kappa \varphi+\beta \left( p^{2}+q^{2}\right)q=0.\label{eq_PAVF:29}
 \end{align}
-即，NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 可以重写为一个等效的耦合系统
+即，NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 可以重写为一个等效的耦合系统
 \begin{align}
 &\varphi_{t}=-\left( -\Delta \right) ^{\frac{\alpha }{2}}p+\kappa \psi-\beta \left( p^{2}+q^{2}\right)p\label{eq_PAVF:30},\\
 &\psi_{t}=-\left( -\Delta \right) ^{\frac{\alpha }{2}}q-\kappa \varphi-\beta \left( p^{2}+q^{2}\right)q\label{eq_PAVF:31},\\
@@ -94,7 +26,7 @@ u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 \end{align}
 其中$p, q,\varphi,\psi$满足周期边界条件。
 
-为了得到NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 的Hamilton形式，我们引入了两个重要的引理。
+为了得到NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 的Hamilton形式，我们引入了两个重要的引理。
 
 \begin{lemma}\label{lem_PAVF:2}
 %  \cite{wangStructurepreservingNumericalMethods2018} 
@@ -136,7 +68,7 @@ F[g]=\int_{\Omega} f\left(g(\boldsymbol{x}),(-\Delta)^{\frac{\alpha}{4}} g(\bold
 \end{proof}
 
 \begin{theorem}\label{thm_PAVF:2}
-	NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} can be reorganized into a Hamiltonian system
+	NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 可以被重构为以下Hamilton系统：
 \begin{equation}\label{eq_PAVF:37}
 	\left(\begin{array}{l}
 		\varphi_{t} \\
@@ -177,7 +109,7 @@ J=\left(\begin{array}{cccc}
 \frac{\delta \mathcal{H}}{\delta \varphi} &=\varphi,\label{eq_PAVF:38c}\\
 \frac{\delta \mathcal{H}}{\delta \psi} &=\psi.\label{eq_PAVF:38}
 \end{align}
-结合 NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 的等效形式 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33}，可得到
+结合 NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 的等效形式 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33}，可得到
 \begin{equation}\label{eq_PAVF:39}
 \left(\begin{array}{l}
 		\varphi_{t} \\
@@ -203,53 +135,12 @@ J=\left(\begin{array}{cccc}
 
 \subsection{空间半离散系统}
 
-鉴于周期性边界条件，我们选择Fourier拟谱法对NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3}进行空间离散化。
-
-为了简化问题，我们设置$d=2$。
-对于正整数$M$和偶正整数$N_{x}$以及$N_{y}$，记$\tau={T}/{M}$，$h_{x}={2 L}/{N_{x}}$，$h_{y}={2 L}/{N_{y}}$。定义$\Omega_{h}^{\tau}=\Omega_{h} \times \Omega_{\tau}$，其中$\Omega_{h}=\left\{\left(x_{i}, y_{j}\right) \mid i=0,1, \cdots, N_{x}\!-\!1;\right.$\\$\left.j=0,1, \cdots, N_{y}\!-\!1\right\}$，$\Omega_{\tau}=\left\{t_{m} \mid t_{m}=m \tau, 0 \leq m \leq M\right\}$，具有$t_{m}=m \tau$，$x_{i}\!=\!-L+i h_{x}$和$y_{j}\!=\!-L+j h_{y}$。
-
-对于定义在$\Omega_h$上的任意格点函数$u$和$v$，
-我们定义离散内积和相关的离散范数如下
-\begin{align}\label{eq_PAVF:48}
-(u, v)=h_{x} h_{y} \sum_{i=0}^{N_{x}-1} \sum_{j=0}^{N_{y}-1} u_{i, j} v_{i, j}, \quad\|u\|=(u, u)^{\frac{1}{2}}, \quad\|u\|_{\infty}=\sup _{\left(x_{i}, y_{j}\right) \in \Omega_{h}}\left|u_{i, j}\right|.
-\end{align}
-为了简便，我们引入以下运算符
-\begin{align}\label{eq_PAVF:49}
-\delta_{t} U^{m}=\frac{U^{m+1}-U^{m}}{\tau}, \quad U^{m+\frac{1}{2}}=\frac{U^{m+1}+U^{m}}{2},
-\end{align}
-其中
-\begin{align}\label{eq_PAVF:47}
-&U^m=\left(u_{0,0}^m, \cdots, u_{N_{x}-1,0}^m, u_{0,1}^m, \cdots, u_{N_{x}-1,1}^m, \cdots, u_{0, N_{y}-1}^m, \cdots, u_{N_{x}-1, N_{y}-1}^m\right)^{T}. %\nonumber\\
-\end{align}
-
-设$\left(x_{i}, y_{j}\right) \in \Omega_{h}$为Fourier谱插值点。记$u_{N}(x, y)$为$u(x, y)$的插值多项式函数，我们有
-\begin{align}\label{eq_PAVF:50}
-u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} / 2} \tilde{u}_{k_{1}, k_{2}} e^{\mathrm{i}\mu\left( k_{1} (x+L)+k_{2}(y+L)\right)},
-\end{align}
-其中$\mu={\pi}/{L}$，系数为
-\begin{align}\label{eq_PAVF:51}
-\tilde{u}_{k_{1}, k_{2}}=\frac{1}{N_{x} c_{k_{1}}} \frac{1}{N_{y} c_{k_{2}}} \sum_{l_1=0}^{N_{x}-1} \sum_{l_2=0}^{N_{y}-1} u(x_{l_1}, y_{l_2}) e^{-\mathrm{i}\mu\left( k_{1}(x_{l_1}+L)+k_{2}(y_{l_2}+L)\right)},
-\end{align}
-其中$c_{k_{1}}=1$对于$\left|k_{1}\right|<N_{x} / 2$，$c_{k_{2}}=1$对于$\left|k_{2}\right|<N_{y} / 2$，$c_{k_{1}}=2$对于$k_{1}=\pm N_{x} / 2$，$c_{k_{2}}=2$对于$k_{2}=\pm N_{y} / 2$。
-因此，分数阶Laplacian $(-\Delta)^{\frac{\alpha}{2}} u(x, y)$可以通过以下逼近
-\begin{align}\label{eq_PAVF:52}
-(-\Delta)^{\frac{\alpha}{2}} u_{N}\left(x, y\right)=\sum\limits_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum\limits_{k_{2}=-N_{y} / 2}^{N_{y} / 2}\left|\left(k_{1} \mu\right)^{2}+\left(k_{2} \mu\right)^{2}\right|^{\frac{\alpha}{2}} \tilde{u}_{k_{1}, k_{2}} e^{\mathrm{i}\mu\left( k_{1} (x+L)+k_{2}(y+L)\right)},
-\end{align}
-将\eqref{eq_PAVF:51}代入\eqref{eq_PAVF:52}，并考虑在点$(x_i,y_j)$处的结果，得到
-\begin{align}
-&(-\Delta)^{\frac{\alpha}{2}} u_{N}\left(x_{i}, y_{j}\right)\nonumber\\
-=&\sum\limits_{l_{1}=0}^{N_{x}-1} \sum\limits_{l_{2}=0}^{N_{y}-1}u(x_{l_{1}}, y_{l_{2}})\left(\sum\limits_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum\limits_{k_{2}=-N_{y} / 2}^{N_{y} / 2} \frac{1}{N_{x} c_{k_{1}}} \frac{1}{N_{y} c_{k_{2}}}\left|\mu^{2} \cdot \mathbf{k}^{2}\right|^{\frac{\alpha}{2}} e^{\mathrm{i} \mu\left(k_{1}\left(x_{i}-x_{l_{1}}\right)+k_{2}\left(y_{j}-y_{l_{2}}\right)\right)}\right)\nonumber\\
-=&\left(D^{\alpha}U\right)_{i+j N_{x}},\label{eq_PAVF:53}
-\end{align}
-其中$\mu^{2} \cdot \mathbf{k}^{2}=\mu^{2}\left(k_{1}^{2}+k_{2}^{2}\right)$，$D^{\alpha}$是具有以下元素的谱对称微分矩阵
-\begin{align}\label{eq_PAVF:54}
-\left(D^{\alpha}\right)_{i+j N_{x}, l_{1}+l_{2} N_{x}}=\textcolor[rgb]{1.00,0.00,0.00}{\sum\limits_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum\limits_{k_{2}=-N_{y} / 2}^{N_{y} / 2}}\frac{1}{N_{x} c_{k_{1}}} \frac{1}{N_{y} c_{k_{2}}}\left|\mu^{2} \cdot \mathbf{k}^{2}\right|^{\frac{\alpha}{2}} e^{\mathrm{i}\mu\left(k_{1}\left(x_{i}-x_{l_{1}}\right)+k_{2}\left(y_{j}-y_{l_{2}}\right)\right)}.
-\end{align}
+鉴于周期性边界条件，我们选择Fourier拟谱法对NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2}进行空间离散化。
 
 将Fourier拟谱法应用于空间以近似先前的等效系统 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33}，得到如下的空间半离散系统：
 \begin{align}
-&\varPhi_{t}=\textcolor[rgb]{1.00,0.00,0.00}{-D^{\alpha}P}+\kappa \Psi-\beta \left( P^{2}+Q^{2}\right)\cdot P,\label{eq_PAVF:56}\\
-&\Psi_{t}=\textcolor[rgb]{1.00,0.00,0.00}{-D^{\alpha}Q}-\kappa \varPhi-\beta \left( P^{2}+Q^{2}\right)\cdot Q,\label{eq_PAVF:57}\\
+&\varPhi_{t}=D^{\alpha}P+\kappa \Psi-\beta \left( P^{2}+Q^{2}\right)\cdot P,\label{eq_PAVF:56}\\
+&\Psi_{t}=D^{\alpha}Q-\kappa \varPhi-\beta \left( P^{2}+Q^{2}\right)\cdot Q,\label{eq_PAVF:57}\\
 &P_t=\varPhi,\label{eq_PAVF:58}\\
 &Q_t=\Psi,\label{eq_PAVF:59}
 \end{align}
@@ -265,7 +156,7 @@ Y=\left(\varPhi^{T}, \Psi^{T}, P^{T}, Q^{T}\right),
 \end{align}
 其中哈密顿能量由以下方式定义
 \begin{align}\label{eq_PAVF:61}
-	H(Y)=\frac{1}{2}\left((\varPhi^{T}\varPhi+\Psi^{T}\Psi)\textcolor[rgb]{1.00,0.00,0.00}{+P^{T} D^{\alpha} P+Q^{T} D^{\alpha} Q}+\frac{\beta}{2}(P^2+Q^2)^{T}(P^2+Q^2)\right),
+	H(Y)=\frac{1}{2}\left((\varPhi^{T}\varPhi+\Psi^{T}\Psi){-P^{T} D^{\alpha} P-Q^{T} D^{\alpha} Q}+\frac{\beta}{2}(P^2+Q^2)^{T}(P^2+Q^2)\right),
 \end{align}
 而$S$是具有以下形式的反对称矩阵
 \begin{align}\label{eq_PAVF:62}
@@ -295,8 +186,8 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 	根据 \eqref{eq_PAVF:63}，我们可以推导出：
 	\begin{align}\label{eq_PAVF:64}
 		\frac{d G(Y)}{d t}=&~2 h_{x} h_{y}\left(\kappa P^{T}P_t+\kappa Q^{T}Q_t+\Psi^{T}_t P+\Psi^{T}P_{t}-\varPhi^{T}_t Q-\varPhi^{T}Q_{t}\right)\nonumber\\
-		=&~2 h_{x} h_{y}\left(\kappa P^{T}\varPhi+\kappa Q^{T}\Psi \textcolor[rgb]{1.00,0.00,0.00}{- P^{T}D^{\alpha}Q}-\kappa P^{T}\varPhi-\beta P^{T}\left( P^{2}+Q^{2}\right)\cdot Q\right.\nonumber\\
-		&~\left.+\Psi^{T}\varPhi\textcolor[rgb]{1.00,0.00,0.00}{+Q^{T}D^{\alpha}P}-\kappa Q^{T}\Psi+\beta Q^{T}\left( P^{2}+Q^{2}\right)\cdot P-\varPhi^{T}\Psi\right)\nonumber\\
+		=&~2 h_{x} h_{y}\left(\kappa P^{T}\varPhi+\kappa Q^{T}\Psi {+ P^{T}D^{\alpha}Q}-\kappa P^{T}\varPhi-\beta P^{T}\left( P^{2}+Q^{2}\right)\cdot Q\right.\nonumber\\
+		&~\left.+\Psi^{T}\varPhi{-Q^{T}D^{\alpha}P}-\kappa Q^{T}\Psi+\beta Q^{T}\left( P^{2}+Q^{2}\right)\cdot P-\varPhi^{T}\Psi\right)\nonumber\\
 		=&~0.
 		\end{align}
 		基于矩阵 $S$ 的反对称性质，结合 \eqref{eq_PAVF:60}，我们有
@@ -307,12 +198,12 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 		\end{proof}
 
 
-	\section{保结构数值方法}\label{Section_PAVF: 3}
-	\subsection{PAVF-P 格式}
+\section{保结构数值方法}\label{Section_PAVF: 3}
+\subsection{PAVF-P 格式}
 
-对于NFSWEs\eqref{eq_PAVF:1}-\eqref{eq_PAVF:3}，存在许多结构保持的方法，但其中大多数只保持修改后的能量或质量，详见\cite{liFastEnergyConserving2018,huEfficientEnergyPreserving2022}。这启发我们构建数值方法，不仅保持原始能量，还保持原始质量。基于上文建立的Hamilton系统\eqref{eq_PAVF:60}，我们在这里应用\cite{caiPartitionedAveragedVector2018}中开发的分区平均矢量场（PAVF）方法，为NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 构建结构保持的数值方法，因为PAVF方法不仅保持传统能量，还可能保持其他守恒性质。
+对于NFSWEs\eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2}，存在许多结构保持的方法，但其中大多数只保持修改后的能量或质量，详见\cite{liFastEnergyConserving2018,huEfficientEnergyPreserving2022}。这启发我们构建数值方法，不仅保持原始能量，还保持原始质量。基于上文建立的Hamilton系统\eqref{eq_PAVF:60}，我们在这里应用\cite{caiPartitionedAveragedVector2018}中开发的分区平均矢量场（PAVF）方法，为NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 构建结构保持的数值方法，因为PAVF方法不仅保持传统能量，还可能保持其他守恒性质。
 
-考虑Hamilton系统\eqref{eq_PAVF:60}，并应用PAVF方法，我们可以得到求解NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 的完全离散方案，如下所示：
+考虑Hamilton系统\eqref{eq_PAVF:60}，并应用PAVF方法，我们可以得到求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 的完全离散方案，如下所示：
 \begin{align}
 &\delta_{t} \varPhi^{m}=\int_{0}^{1}\kappa H_{\Psi}\left(\varPhi^{m+1}, \varepsilon \Psi^{m+1}+(1-\varepsilon) \Psi^{m}, P^{m}, Q^{m}\right)-H_{P}\left(\varPhi^{m+1}, \Psi^{m+1}, \varepsilon P^{m+1}+(1-\varepsilon) P^{m}, Q^{m}\right)d \varepsilon,\label{eq_PAVF:70}\\
 &\delta_{t} \Psi^{m}=-\int_{0}^{1}\kappa H_{\varPhi}\left(\varepsilon \varPhi^{m+1}+(1-\varepsilon) \varPhi^{m}, \Psi^{m}, P^{m}, Q^{m}\right)-H_{Q}\left(\varPhi^{m+1}, \Psi^{m+1}, P^{m+1}, \varepsilon Q^{m+1}+(1-\varepsilon) Q^{m}\right)d\varepsilon,\label{eq_PAVF:71}\\
@@ -321,9 +212,9 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 \end{align}
 上述数值方案可以进一步整合为：
 \begin{align}
-\delta_{t} \varPhi^{m}=&~\kappa \Psi^{m+\frac{1}{2}}\textcolor[rgb]{1.00,0.00,0.00}{-D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (P^{m+1})^3+ (P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right.\nonumber\\
+\delta_{t} \varPhi^{m}=&~\kappa \Psi^{m+\frac{1}{2}}{+D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (P^{m+1})^3+ (P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right.\nonumber\\
 	&+\left. (P^{m})^{3}+2 P^{m+1}\cdot (Q^{m})^{2}+2 P^{m}\cdot (Q^{m})^{2}\right),\label{eq_PAVF:74}\\
-\delta_{t} \Psi^{m}=&-\kappa \varPhi^{m+\frac{1}{2}}\textcolor[rgb]{1.00,0.00,0.00}{-D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (Q^{m+1})^3+ (Q^{m})^{2}\cdot Q^{m+1}+(Q^{m+1})^{2}\cdot Q^{m}\right.\nonumber\\
+\delta_{t} \Psi^{m}=&-\kappa \varPhi^{m+\frac{1}{2}}{+D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (Q^{m+1})^3+ (Q^{m})^{2}\cdot Q^{m+1}+(Q^{m+1})^{2}\cdot Q^{m}\right.\nonumber\\
 	&+\left. (Q^{m})^{3}+2 Q^{m+1}\cdot (P^{m+1})^{2}+2 Q^{m}\cdot (P^{m+1})^{2}\right),\label{eq_PAVF:75}\\
 \delta_{t} P^{m}=&~\varPhi^{m+\frac{1}{2}},\label{eq_PAVF:76}\\
 \delta_{t} Q^{m}=&~\Psi^{m+\frac{1}{2}}.\label{eq_PAVF:77}
@@ -332,9 +223,9 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 
 FPAVF方案\eqref{eq_PAVF:74}-\eqref{eq_PAVF:77}的伴随可以表示为
 \begin{align}
-\delta_{t} \varPhi^{m}=&~\kappa \Psi^{m+\frac{1}{2}}\textcolor[rgb]{1.00,0.00,0.00}{-D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (P^{m+1})^3+ (P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right.\nonumber\\
+\delta_{t} \varPhi^{m}=&~\kappa \Psi^{m+\frac{1}{2}}{+D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (P^{m+1})^3+ (P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right.\nonumber\\
 	&\left.+ (P^{m})^{3}+2 P^{m+1}\cdot (Q^{m+1})^{2}+2 P^{m}\cdot (Q^{m+1})^{2}\right),\label{eq_PAVF:86}\\
-\delta_{t} \Psi^{m}=&-\kappa \varPhi^{m+\frac{1}{2}}\textcolor[rgb]{1.00,0.00,0.00}{-D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (Q^{m+1})^3+ (Q^{m})^{2}\cdot Q^{m+1}+ (Q^{m+1})^{2}\cdot Q^{m}\right.\nonumber\\
+\delta_{t} \Psi^{m}=&-\kappa \varPhi^{m+\frac{1}{2}}{+D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (Q^{m+1})^3+ (Q^{m})^{2}\cdot Q^{m+1}+ (Q^{m+1})^{2}\cdot Q^{m}\right.\nonumber\\
 	&\left.+ (Q^{m})^{3}+2 Q^{m+1}\cdot (P^{m})^{2}+2 Q^{m}\cdot (P^{m})^{2}\right),\label{eq_PAVF:87}\\
 \delta_{t} P^{m}=&~\varPhi^{m+\frac{1}{2}},\label{eq_PAVF:88}\\
 \delta_{t} Q^{m}=&~\Psi^{m+\frac{1}{2}}.\label{eq_PAVF:89}
@@ -342,9 +233,9 @@ FPAVF方案\eqref{eq_PAVF:74}-\eqref{eq_PAVF:77}的伴随可以表示为
 
 将FPAVF方案\eqref{eq_PAVF:74}-\eqref{eq_PAVF:77}与其伴随FPAVF方案\eqref{eq_PAVF:86}-\eqref{eq_PAVF:89}相结合，得到FPAVF-P（Fourier 拟谱 PAVF-P）方案，具体如下：
 \begin{align}
-\delta_{t} \varPhi^{m}=&~\kappa \Psi^{m+\frac{1}{2}}\textcolor[rgb]{1.00,0.00,0.00}{-D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((P^{m+1})^3+(P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right.\nonumber\\
+\delta_{t} \varPhi^{m}=&~\kappa \Psi^{m+\frac{1}{2}}{+D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((P^{m+1})^3+(P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right.\nonumber\\
 	&\left.+(P^{m})^{3}+P^{m+1}\cdot (Q^{m})^{2}+P^{m}\cdot (Q^{m})^{2}+P^{m+1}\cdot (Q^{m+1})^{2}+P^{m}\cdot (Q^{m+1})^{2}\right),\label{eq_PAVF:98}\\
-\delta_{t} \Psi^{m}=&-\kappa \varPhi^{m+\frac{1}{2}}\textcolor[rgb]{1.00,0.00,0.00}{-D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((Q^{m+1})^3+(Q^{m})^{2}\cdot Q^{m+1}+(Q^{m+1})^{2}\cdot Q^{m}\right.\nonumber\\
+\delta_{t} \Psi^{m}=&-\kappa \varPhi^{m+\frac{1}{2}}{+D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((Q^{m+1})^3+(Q^{m})^{2}\cdot Q^{m+1}+(Q^{m+1})^{2}\cdot Q^{m}\right.\nonumber\\
 	&\left.+(Q^{m})^{3}+Q^{m+1}\cdot (P^{m+1})^{2}+Q^{m}\cdot (P^{m+1})^{2}+Q^{m+1}\cdot (P^{m})^{2}+Q^{m}\cdot (P^{m})^{2}\right),\label{eq_PAVF:99}\\
 \delta_{t} P^{m}=&~\varPhi^{m+\frac{1}{2}},\label{eq_PAVF:100}\\
 \delta_{t} Q^{m}=&~\Psi^{m+\frac{1}{2}}.\label{eq_PAVF:101}
@@ -362,7 +253,7 @@ G^{m}=\kappa\|P^{m}\|^2+\kappa\|Q^{m}\|^2+2 \left(\Psi^{m}\right)^T P^{m}-2 \lef
 \end{align}
 离散能量的表达式为
 \begin{align}
-H^{m}=&\frac{1}{2}[((\varPhi^{m})^{T}\varPhi^{m}+(\Psi^{m})^{T}\Psi^{m})\textcolor[rgb]{1.00,0.00,0.00}{+(P^{m})^{T} D^{\alpha} P^{m}+(Q^{m})^{T} D^{\alpha} Q^{m}}\nonumber\\
+H^{m}=&\frac{1}{2}[((\varPhi^{m})^{T}\varPhi^{m}+(\Psi^{m})^{T}\Psi^{m}){-(P^{m})^{T} D^{\alpha} P^{m}-(Q^{m})^{T} D^{\alpha} Q^{m}}\nonumber\\
 &+\frac{\beta}{2}((P^{m})^2+(Q^{m})^2)^{T}((P^{m})^2+(Q^{m})^2)].\label{eq_PAVF:800}
 \end{align}
 \end{theorem}
@@ -371,14 +262,14 @@ H^{m}=&\frac{1}{2}[((\varPhi^{m})^{T}\varPhi^{m}+(\Psi^{m})^{T}\Psi^{m})\textcol
 将\eqref{eq_PAVF:98}与$Q^{m+1}+Q^{m}$进行内积，得到
 \begin{align}
 &(Q^{m+1}+Q^{m})^{T}\delta_{t} \varPhi^{m}\nonumber\\
-=&~(Q^{m+1}+Q^{m})^{T}\kappa \Psi^{m+\frac{1}{2}}\textcolor[rgb]{1.00,0.00,0.00}{-(Q^{m+1}+Q^{m})^{T}D^{\alpha} P^{m+\frac{1}{2}}}\nonumber\\
+=&~(Q^{m+1}+Q^{m})^{T}\kappa \Psi^{m+\frac{1}{2}}{+(Q^{m+1}+Q^{m})^{T}D^{\alpha} P^{m+\frac{1}{2}}}\nonumber\\
 &-(Q^{m+1}+Q^{m})^{T}\frac{\beta}{4}\left((P^{m+1})^3+(P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right.\nonumber\\
 &\left.+(P^{m})^{3}+P^{m+1}\cdot (Q^{m})^{2}+P^{m}\cdot (Q^{m})^{2}+P^{m+1}\cdot (Q^{m+1})^{2}+P^{m}\cdot (Q^{m+1})^{2}\right).\label{eq_PAVF:11143}
 \end{align}
 同样，将\eqref{eq_PAVF:99}与$P^{m+1}+P^{m}$进行内积，得到
 \begin{align}
 &(P^{m+1}+P^{m})^{T}\delta_{t} \Psi^{m}\nonumber\\
-=&-(P^{m+1}+P^{m})^{T}\kappa \varPhi^{m+\frac{1}{2}}\textcolor[rgb]{1.00,0.00,0.00}{-(P^{m+1}+P^{m})^{T}D^{\alpha} Q^{m+\frac{1}{2}}}\nonumber\\
+=&-(P^{m+1}+P^{m})^{T}\kappa \varPhi^{m+\frac{1}{2}}{+(P^{m+1}+P^{m})^{T}D^{\alpha} Q^{m+\frac{1}{2}}}\nonumber\\
 &-(P^{m+1}+P^{m})^{T}\frac{\beta}{4}\left((Q^{m+1})^3+(Q^{m})^{2}\cdot Q^{m+1}+(Q^{m+1})^{2}\cdot Q^{m}\right.\nonumber\\
 &\left.+(Q^{m})^{3}+Q^{m+1}\cdot (P^{m+1})^{2}+Q^{m}\cdot (P^{m+1})^{2}+Q^{m+1}\cdot (P^{m})^{2}+Q^{m}\cdot (P^{m})^{2}\right)\label{eq_PAVF:11144}
 \end{align}
@@ -421,14 +312,14 @@ H^{m+1}=H^{m}.
 \end{proof}
 
 \subsection{其他数值方法}
-为了比较，我们还给出了用于求解NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 的以下两个二阶AVF方案。
+为了比较，我们还给出了用于求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 的以下两个二阶AVF方案。
 \begin{enumerate}[$\bullet$]
 \item FAVF（Fourier拟谱AVF）方案
 \begin{align}
-\delta_{t} \varPhi =&~\textcolor[rgb]{1.00,0.00,0.00}{-D^{\alpha} P^{m+\frac{1}{2}}}+\kappa \Psi^{m+\frac{1}{2}}-\frac{\beta}{12}\left(3 (P^{m+1})^3-5 (P^{m+1})^2\cdot P^{m}\right.\nonumber\\
+\delta_{t} \varPhi =&~{D^{\alpha} P^{m+\frac{1}{2}}}+\kappa \Psi^{m+\frac{1}{2}}-\frac{\beta}{12}\left(3 (P^{m+1})^3-5 (P^{m+1})^2\cdot P^{m}\right.\nonumber\\
 		&-5 (P^{m})^2\cdot P^{m+1}+19 (P^{m})^3-6 Q^{m+1}\cdot Q^{m}\cdot P^{m}+2 Q^{m+1}\cdot Q^{m}\cdot P^{m+1} \nonumber\\
 		&+\left. 3 (Q^{m+1})^2\cdot P^{m+1}+(Q^{m})^2\cdot P^{m+1}-7 (Q^{m+1})^2\cdot P^{m}+19 (Q^{m} )^2\cdot P^{m}\right),\label{eq_PAVF:66}\\
-\delta_{t} \Psi =&~\textcolor[rgb]{1.00,0.00,0.00}{-D^{\alpha} Q^{m+\frac{1}{2}}}-\kappa \varPhi^{m+\frac{1}{2}}-\frac{\beta}{12}\left(3 (Q^{m+1})^3-5 (Q^{m+1})^2\cdot Q^{m}\right.\nonumber\\
+\delta_{t} \Psi =&~{D^{\alpha} Q^{m+\frac{1}{2}}}-\kappa \varPhi^{m+\frac{1}{2}}-\frac{\beta}{12}\left(3 (Q^{m+1})^3-5 (Q^{m+1})^2\cdot Q^{m}\right.\nonumber\\
 		&-5 (Q^{m})^2\cdot Q^{m+1}+19 (Q^{m})^3-6 P^{m+1}\cdot P^{m}\cdot Q^{m}+2 P^{m+1}\cdot P^{m}\cdot Q^{m+1} \nonumber\\
 		&+\left. 3 (P^{m+1})^2\cdot Q^{m+1}+(P^{m})^2\cdot Q^{m+1}-7 (P^{m+1})^2\cdot Q^{m}+19 (P^{m} )^2\cdot Q^{m}\right),\label{eq_PAVF:67}\\
 \delta_{t} P=&~\varPhi^{m+\frac{1}{2}},\label{eq_PAVF:68}\\
@@ -436,15 +327,15 @@ H^{m+1}=H^{m}.
 \end{align}
 \item FPAVF-C（Fourier拟谱PAVF组合）方案
 \begin{align}
-&\frac{1}{\tau}\left(\varPhi^{*}-\varPhi^{m}\right)=\frac{1}{2}\kappa(\Psi^{*}+\Psi^{m})\textcolor[rgb]{1.00,0.00,0.00}{-\frac{1}{2}D^{\alpha} (P^{*}+P^{m})}-\frac{\beta}{4}\left( (P^{*})^3+ (P^{m})^{2}\cdot P^{*}+(P^{*})^{2}\cdot P^{m}\right.\nonumber\\
+&\frac{1}{\tau}\left(\varPhi^{*}-\varPhi^{m}\right)=\frac{1}{2}\kappa(\Psi^{*}+\Psi^{m}){+\frac{1}{2}D^{\alpha} (P^{*}+P^{m})}-\frac{\beta}{4}\left( (P^{*})^3+ (P^{m})^{2}\cdot P^{*}+(P^{*})^{2}\cdot P^{m}\right.\nonumber\\
 		&~~~~~~~~~~~~~~~~~~~~\left.+ (P^{m})^{3}+2 P^{*}\cdot (Q^{m})^{2}+2 P^{m}\cdot (Q^{m})^{2}\right),\label{eq_PAVF:90}\\
-&\frac{1}{\tau}\left(\Psi^{*}-\Psi^{m}\right)=-\frac{1}{2}\kappa (\varPhi^{*}+\varPhi^{m})\textcolor[rgb]{1.00,0.00,0.00}{-\frac{1}{2}D^{\alpha} (Q^{*}+Q^{m})}-\frac{\beta}{4}\left( (Q^{*})^3+ (Q^{m})^{2}\cdot Q^{*}+ (Q^{*})^{2}\cdot Q^{m}\right.\nonumber\\
+&\frac{1}{\tau}\left(\Psi^{*}-\Psi^{m}\right)=-\frac{1}{2}\kappa (\varPhi^{*}+\varPhi^{m}){+\frac{1}{2}D^{\alpha} (Q^{*}+Q^{m})}-\frac{\beta}{4}\left( (Q^{*})^3+ (Q^{m})^{2}\cdot Q^{*}+ (Q^{*})^{2}\cdot Q^{m}\right.\nonumber\\
 		&~~~~~~~~~~~~~~~~~~~~~\left.+ (Q^{m})^{3}+2 Q^{*}\cdot (P^{*})^{2}+2 Q^{m}\cdot (P^{*})^{2}\right),\label{eq_PAVF:91}\\
 &\frac{1}{\tau}\left(P^{*}-P^{m}\right)=\frac{1}{2}(\varPhi^{*}+\varPhi^{m}),\label{eq_PAVF:92}\\
 &\frac{1}{\tau}\left(Q^{*}-Q^{m}\right)=\frac{1}{2}(\Psi^{*}+\Psi^{m}),\label{eq_PAVF:93}\\
-&\frac{1}{\tau}\left(\varPhi^{m+1}-\varPhi^{*}\right)=\frac{1}{2}\kappa (\Psi^{m+1}+\Psi^{*})\textcolor[rgb]{1.00,0.00,0.00}{-\frac{1}{2}D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((P^{m+1})^3+(P^{*})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{*}\right.\nonumber\\
+&\frac{1}{\tau}\left(\varPhi^{m+1}-\varPhi^{*}\right)=\frac{1}{2}\kappa (\Psi^{m+1}+\Psi^{*}){+\frac{1}{2}D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((P^{m+1})^3+(P^{*})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{*}\right.\nonumber\\
 		&~~~~~~~~~~~~~~~~~~~~~~~\left.+ (P^{*})^{3}+2 P^{m+1}\cdot (Q^{m+1})^{2}+2 P^{*}\cdot (Q^{m+1})^{2}\right),\label{eq_PAVF:94}\\
-&\frac{1}{\tau}\left(\Psi^{m+1}-\Psi^{*}\right)=-\frac{1}{2}\kappa (\varPhi^{m+1}+\varPhi^{*})\textcolor[rgb]{1.00,0.00,0.00}{-\frac{1}{2}D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((Q^{m+1})^3+(Q^{*})^{2}\cdot Q^{m+1}+(Q^{m+1})^{2}\cdot Q^{*}\right.\nonumber\\
+&\frac{1}{\tau}\left(\Psi^{m+1}-\Psi^{*}\right)=-\frac{1}{2}\kappa (\varPhi^{m+1}+\varPhi^{*}){+\frac{1}{2}D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((Q^{m+1})^3+(Q^{*})^{2}\cdot Q^{m+1}+(Q^{m+1})^{2}\cdot Q^{*}\right.\nonumber\\
 		&~~~~~~~~~~~~~~~~~~~~~~~~\left.+ (Q^{*})^{3}+2 Q^{m+1}\cdot (P^{*})^{2}+2 Q^{*}\cdot (P^{*})^{2}\right),\label{eq_PAVF:95}\\
 &\frac{1}{\tau}\left(P^{m+1}-P^{*}\right)=\frac{1}{2}(\varPhi^{m+1}+\varPhi^{*}),\label{eq_PAVF:96}\\
 &\frac{1}{\tau}\left(Q^{m+1}-Q^{*}\right)=\frac{1}{2}(\Psi^{m+1}+\Psi^{*}),\label{eq_PAVF:97}
@@ -457,7 +348,7 @@ H^{m+1}=H^{m}.
 \end{remark}
 
 \begin{remark}\label{rk_PAVF:2}
-值得强调的是，用于求解NFSWEs \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3} 的其他现有方法仅保持修改后的能量和/或修改后的质量。例如，SAV方法 
+值得强调的是，用于求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 的其他现有方法仅保持修改后的能量和/或修改后的质量。例如，SAV方法 
 % \cite{chengConvergenceEnergyconservingScheme2022}
 仅保持修改后的能量，三级线性隐式差分方案
 % \cite{ranLinearlyImplicitConservative2016}
@@ -491,7 +382,7 @@ R H^{n}=\left|\left(H^{n}-H^{0}\right) / H^{0}\right|, \quad R G^{n}=\left|\left
 其中$H^{n}, G^{n}$分别表示$t_n$时刻的离散能量和质量。
 
 \begin{example}\label{exp_PAVF:2}
-	首先，我们考虑一维非线性分数阶波动方程 \eqref{eq_PAVF:1}-\eqref{eq_PAVF:3}，具体形式为
+	首先，我们考虑一维非线性分数阶波动方程 \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2}，具体形式为
 	\begin{equation}\label{eq_PAVF:108}
 	u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0, \quad (x,t)\in  \Omega\times[0, T],
 	\end{equation}
@@ -966,11 +857,11 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &FPAVF-P\\
 			\end{center}
 			\end{figure}
 
-			\section{结论}\label{Section_PAVF: 5}
+\section{结论}\label{Section_PAVF: 5}
 
-			在本文中，我们重新表述了二维分数非线性薛定谔波动方程为一个规范哈密顿系统。通过将分块平均矢量场加方法与傅立叶拟谱方法结合，我们基于得到的哈密顿系统构建了一个保守的数值方案。理论分析和数值结果表明，所提出的方法能够有效地保持原始能量和质量。
-			
-			\section*{致谢}
-			
-			本工作得到了四川省科技计划（No. 2022JDTD0019）的支持，以及四川师范大学劳伦数学中心和系统可信性自动验证国家地方联合工程实验室（资助号：ZD20220105）的支持。
-				
+在本文中，我们重新表述了二维分数非线性薛定谔波动方程为一个规范哈密顿系统。通过将分块平均矢量场加方法与傅立叶拟谱方法结合，我们基于得到的哈密顿系统构建了一个保守的数值方案。理论分析和数值结果表明，所提出的方法能够有效地保持原始能量和质量。
+
+% \section*{致谢}
+
+% 本工作得到了四川省科技计划（No. 2022JDTD0019）的支持，以及四川师范大学劳伦数学中心和系统可信性自动验证国家地方联合工程实验室（资助号：ZD20220105）的支持。
+	

@@ -4,16 +4,9 @@
 
 由于分数阶微积分的物理及几何解释存在挑战，因此该领域在很长一段时间内停留在纯数学理论层面。但近几十年来，随着多个学科领域的研究发现，分数阶微分方程的保记忆性可优美地描述复杂问题，其描述精度超过整数阶微分方程。目前，分数阶微分方程已成功地应用于物理学、化学、生物学、水文学、混沌理论、复杂粘弹性材料、系统控制、信号处理、经济学等领域的问题，详见\cite{liIntroductionFractionalCalculus2015,HandbookDifferentialEquations2008,brychkovIndefiniteIntegrals2008,zhangMassBalanceBased2005,carrerasAnomalousDiffusionExit2001,hilferFRACTIONALCALCULUSREGULAR2000,liangRobustnessFractionalorderBoundary2007,maginSolvingFractionalOrder2009,zaslavskySelfsimilarTransportIncomplete1993,sunRandomorderFractionalDifferential2011}。
 
-分数阶微分方程的解析解通常包含一些特殊函数，如 Mittag-Leffler 函数、F Fox 函数和Wright 函数等，这些函数由无穷级数定义，因此数值计算相当困难。对于某些非线性微分方程，解析解更是难以获得。因此，构造数值方法以求解分数阶微分方程具有重要的理论意义和实用价值。然而，到目前为止，关于分数阶微分方程的数值计算仍存在大量挑战性难题，例如长时间历程的计算和大空间区域的计算等。同时，研究算法大部分集中于有限差分方法和有限元法。因此，如何快速、准确地数值求解分数阶微分方程并进一步完善数值方法仍是一个紧迫而重要的研究课题。
-
-空间分数阶非线性 Schr{\"o}dinger 波方程是分数阶微分方程中比较重要的一类方程, 它是经典 Schr{\"o}dinger 方程的一个推广,可以通过将费曼路径积分扩展到列维路径积分来推导 \cite{laskinFractionalQuantumMechanics2000,laskinFractionalSchrodingerEquation2002}. 
-近些年来, 空间分数阶非线性 Schr{\"o}dinger 波方程在很多物理问题中得以应用, 例如, Klein-Gordon 方程的非相对论极限 \cite{tsutsumiNonrelativisticApproximationNonlinear1984,machiharaNonrelativisticLimitEnergy2002}、等离子体中的 Langmuir 波包近似 \cite{colinSemidiscretizationTimeNonlinear1998} 以及光弹 sine-Gordon 方程的调制平面脉冲近似\cite{baoComparisonsSineGordonPerturbed2010,xinModelingLightBullets2000}等. 
-与经典整数阶 Schr{\"o}dinger 方程的不同之处在于, 空间分数阶非线性 Schr{\"o}dinger 波方程引入了波算子并替换整数次幂的 Laplacian 算子为全局的拟微分算子, 也称之为分数阶 Laplacian 算子. 通过其在傅里叶空间中的乘子定义为 \cite{caffarelliExtensionProblemRelated2007}
-\begin{equation}
-    -(-\Delta)^{\frac{\alpha}{2}} u(x)=-\mathcal{F}^{-1}\left(|\xi|^\alpha \hat{u}(\xi)\right), \quad 1<\alpha \leq 2,
-    \end{equation}
-其中 $\hat{u}(\xi)=\mathcal{F}(u)=\int_{-\infty}^{\infty} u(x) e^{-\mathrm{i} \xi x} d x$ 为傅里叶变换. 当 $\alpha=2$ 时, 分数阶 Laplacian 算子退化为经典的 Laplacian 算子. 更加详细的介绍在专著 \cite{zhangConservativeNumericalScheme2003,baoUniformErrorEstimates2012,chengSeveralConservativeCompact2018,brugnanoClassEnergyconservingHamiltonian2018} 中已经给出.
-在对非线性空间分数阶 Schr{\"o}dinger 方程进行数值求解时, 如何有效逼近 分数阶 Laplacian 算子是最为关键的一步. 在过去的几十年, 众多数学家针对 一问题进行了深入的研究, 其中, 最为有效的途径是利用分数阶 Laplacian 与 Riesz 导数在齐次 Dirichlet 边界条件下的等价性关系 \cite{yangNumericalMethodsFractional2010,demengelFunctionalSpacesTheory2012}, 即
+分数阶微分方程的解析解通常包含一些特殊函数，如 Mittag-Leffler 函数、F Fox 函数和Wright 函数等，这些函数由无穷级数定义，因此数值计算相当困难。对于某些非线性微分方程，解析解更是难以获得。因此，构造数值方法以求解分数阶微分方程具有重要的理论意义和实用价值。然而，到目前为止，关于分数阶微分方程的数值计算仍存在大量挑战性难题，例如长时间历程的计算和大空间区域的计算等。同时，研究算法大部分集中于有限差分方法和有限元法。
+因此，如何快速、准确地数值求解分数阶微分方程并进一步完善数值方法仍是一个紧迫而重要的研究课题。
+在对空间分数阶方程进行数值求解时, 如何有效逼近分数阶 Laplacian 算子是最为关键的一步. 在过去的几十年, 众多数学家针对一问题进行了深入的研究, 其中, 最为有效的途径是利用分数阶 Laplacian 与 Riesz 导数在齐次 Dirichlet 边界条件下的等价性关系 \cite{yangNumericalMethodsFractional2010,demengelFunctionalSpacesTheory2012}, 即
 \begin{equation}
 -(-\Delta)^{\alpha / 2} u(x)=\frac{\partial^\alpha}{\partial|x|^\alpha} u(x):=-\frac{1}{2 \cos \frac{\alpha \pi}{2}}\left(-\infty D_x^\alpha u(x)+{ }_x D_{+\infty}^\alpha u(x)\right),
 \end{equation}
@@ -42,72 +35,82 @@ u=\sum_{k \in \mathbb{Z}} \hat{u}_k e^{\mathrm{i} \mu k x}, \quad \hat{u}_k=\fra
 \end{equation}
 这里, $\mu=2 \pi / L, \mathbb{T}=\mathbb{R} / L \mathbb{Z}$ 表示长度为 $L$ 的一维环面.
 
-本文主要考虑周期边界的空间分数阶非线性 Schr{\"o}dinger 波方程(NFSWEs)
-\begin{equation}
-    \left\{\begin{array}{l}
-        u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i} \kappa u_{t}+\beta|u|^{2} u=0, \quad(\boldsymbol{x}, t) \in \mathbb{R}^d\times(0, T], \\
-        u(\boldsymbol{x}, 0)=u_{0}(\boldsymbol{x}), \quad u_{t}(\boldsymbol{x}, 0)=u_{1}(\boldsymbol{x}), \quad \boldsymbol{x} \in \mathbb{R}^d,
-    \end{array}\right.\label{eq:s1}
-    \end{equation}
-其中 $\mathrm{i}=\sqrt{-1}$, $(-\Delta)^{\alpha / 2}$ 是分数阶 Laplacian 算子, $1<\alpha \leq 2,d=(1,2,3), \kappa$ 和 $\beta>0$ 均为实常数, 
-$u(\boldsymbol{x}, t)$ 是未知复值函数, $u_{0}(\boldsymbol{x})$ 和 $u_{1}(\boldsymbol{x})$ 是已知的光滑波函数. 
-当 $\alpha=2$ 时,方程 \eqref{eq:s1} 退化为经典的非线性Schr{\"o}dinger 波方程. 与许多其他基于物理场景的微分模型一样,所研究的具有周期性边界条件的初边值问题 \eqref{eq:s1}  具有如下质量守恒律
-\begin{align}\label{eq_8}
-    G(t)=\kappa\|u(\cdot, t)\|^{2}+2\operatorname{Im}\left(u_{t}, u\right)=G(0),
+
+本文主要考虑周期边界的空间分数阶非线性 Schr{\"o}dinger 波方程(NFSWEs)的初边值问题
+
+\begin{align}
+&  u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i} \kappa u_{t}+\beta|u|^{2} u=0, \quad \boldsymbol{x} \in \Omega, \quad  t \in(0, T],\label{eq_SAVRRK:1}\\
+& u(\boldsymbol{x}, 0)=u_{0}(\boldsymbol{x}), \quad u_{t}(\boldsymbol{x}, 0)=u_{1}(\boldsymbol{x}),\quad \boldsymbol{x} \in \Omega, \label{eq_SAVRRK:2}\\
+& u(\boldsymbol{x}+\boldsymbol{L}, t)=u(\boldsymbol{x}, t), \quad t \in[0, T],\label{eq_SAVRRK:3}
+\end{align}
+其中，$\mathrm{i}=\sqrt{-1}$，$1<\alpha \leq 2$，$\kappa, \beta(>0)$为两个实常数，$u(\boldsymbol{x}, t)$是未知的复值函数，$u_{0}(\boldsymbol{x})$ 和 $u_{1}(\boldsymbol{x})$ 为已知的光滑函数，$\boldsymbol{x}\in\Omega\!\subset\!
+R^d~(d\!=\!1,2)$，$\boldsymbol{L}$ 是周期。分数拉普拉斯算子可以通过傅里叶变换表示为：
+\begin{align}\label{eq_SAVRRK:4}
+(-\Delta)^{\frac{\alpha}{2}} u(\boldsymbol{x},t)=\mathcal{F}^{-1}\left[|\boldsymbol{\xi}|^{\alpha} \mathcal{F}(u(\boldsymbol{\xi},t))\right],
+\end{align}
+其中，$\mathcal{F}$ 和 $\mathcal{F}^{-1}$ 分别表示傅里叶变换及其逆变换，详见 \cite{caffarelliExtensionProblemRelated2007}。NFSWEs \eqref{eq_SAVRRK:1} 可以被看作是经典Schr{\"o}dinger波方程的推广，
+后者在等离子体中的Langmuir波包络近似等物理应用中具有广泛应用 \cite{colinSemidiscretizationTimeNonlinear1998}，并且已经得到深入研究，例如见 \cite{zhangConservativeNumericalScheme2003,baoUniformErrorEstimates2012,chengSeveralConservativeCompact2018,brugnanoClassEnergyconservingHamiltonian2018}。
+
+% 所研究的问题源自多种物理应用，例如Klein-Gordon方程的非相对论极限 \cite{tsutsumiNonrelativisticApproximationNonlinear1984,machiharaNonrelativisticLimitEnergy2002}，等离子体中Langmuir波包络的近似 \cite{colinSemidiscretizationTimeNonlinear1998}，以及用于光子弹的正弦-戈登方程的调制平面脉冲近似 \cite{baoComparisonsSineGordonPerturbed2010,xinModelingLightBullets2000}。它可以被看作是整数阶Schr{\"o}dinger方程的推广，并可以通过将Feynman路径积分推广到L$\acute{e}$vy路径积分来导出，参见 \cite{laskinFractionalQuantumMechanics2000,laskinFractionalSchrodingerEquation2002}。
+
+与许多其他基于物理场景的微分模型一样,所研究的具有周期性边界条件的初边值问题 \eqref{eq_SAVRRK:1}  具有如下质量守恒律，详见 \cite{baoUniformErrorEstimates2012,ranLinearlyImplicitConservative2016}
+\begin{align}\label{eq_PAVF:_8}
+    G(t)=\kappa\|u(\cdot, t)\|^{2}+2\operatorname{Im}\left(u_{t}, u\right)=G(0), \quad 0 \leq t \leq T,
     \end{align}
-和能量守恒律
-\begin{align}\label{eq_9}
-    E(t)=\frac{1}{2}\left(\left\|u_{t}(\cdot, t)\right\|^{2}+\left\|(-\Delta)^{\frac{\alpha}{4}} u(\cdot, t)\right\|^{2}+\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4}\right)=E(0).
-    \end{align}
+    \begin{align}\label{eq_SAVRRK:9}
+        E(t)=\left\|u_{t}(\cdot, t)\right\|^{2}+\left\|(-\Delta)^{\frac{\alpha}{4}} u(\cdot, t)\right\|^{2}+\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4}=E(0), \quad 0 \leq t \leq T,
+        \end{align}
+
 鉴于此,我们希望构建保留这些物理不变量的数值方法.这是因为保留原始微分方程的某些不变性质的能力已成为某些领域中评估数值模拟成功与否的标准 \cite{liFiniteDifferenceCalculus1995}.此外,冯康说：“数值方案设计背后的一个基本思想是,它们可以尽可能地保留原始问题的性质”.
 事实上,根据上述对于分数阶 Laplacian 算子的逼近, 在过去的 10 年里,许多学者都在关注这个话题. 
 例如, Wang 和 Xiao \cite{wangCrankNicolsonDifference2013} 首先提出了一种 Crank-Nicolson 差分格式,该格式为耦合非线性分数阶 Schr{\"o}dinger 方程保留了离散质量,然后在 \cite{wangLinearlyImplicitConservative2014} 中,他们进一步提出了一种线性隐式格式,该格式保留了修改后的离散质量和能量. 
 Ran 和 Zhang \cite{ranConservativeDifferenceScheme2016} 提出了一种隐式差分格式和线性差分格式,分别为强耦合非线性分数阶 Schr{\"o}dinger 方程保留原始和修正的质量和能量. 
 Wang 和 Huang \cite{wangEnergyConservativeDifference2015,wangConservativeLinearizedDifference2015} 推导出单三次分数阶 Schr{\"o}dinger 方程的能量和质量守恒 Crank-Nicolson 差分格式和线性差分格式.
 Wang 等 \cite{wangSplitstepSpectralGalerkin2019} 提出了一种用于二维非线性空间分数阶 Schr{\"o}dinger 方程的分步谱 Galerkin 方法,该方法仅保留离散质量.
-针对模型问题\eqref{eq:s1},Ran 和 Zhang \cite{ranLinearlyImplicitConservative2016} 首先开发了一种三级线性隐式差分格式,它很好地保留了修改后的离散质量和能量. 
+针对模型问题\eqref{eq_SAVRRK:1},Ran 和 Zhang \cite{ranLinearlyImplicitConservative2016} 首先开发了一种三级线性隐式差分格式,它很好地保留了修改后的离散质量和能量. 
 Li 和 Zhao \cite{liFastEnergyConserving2018} 考虑将 Crank-Nicolson 方法与 Galerkin 有限元方法相结合的守恒策略,并设计了具有合适循环预调节器的快速 Krylov 子空间求解器以节省计算成本. 
 Cheng 和 Qin \cite{chengConvergenceEnergyconservingScheme2022} 开发了一种基于 SAV 方法的线性隐式守恒数值方案,该方案仅保留修改后的能量,而不保留质量.
 Hu等 \cite{huEfficientEnergyPreserving2022} 分别在时间上应用 Crank-Nicolson、SAV 和 ESAV 方法,提出了三种能量守恒的谱 Galerkin 方法.
+Zhang和Ran \cite{zhangHighorderStructurepreservingDifference2023} 提出并分析了基于三角SAV（T-SAV）方法的更高阶能量守恒差分格式。
 
 \section{研究内容}
-尽管对于空间分数阶非线性 Schr{\"o}dinger 波方程数值算法的研究已有不少工作, 但大部分算法主要集中于一维问题的研究, 且大多数保结构数值格式都是完全隐式的,为了求解它们,必须在每个时间步上使用迭代来求解代数系统,这带来了大量的计算量.
-尽管有学者构造出了该方程的线性隐式守恒格式,虽然将线性隐式格式与全隐式格式的计算效率进行比较,发现线性隐式格式可以降低计算复杂度.
-然而,在长时间数值模拟中,这仍然是一个计算量大的过程.显式格式在实际计算中非常高效,但很少能做到保结构.此外,目前提出这些算法只能保修正后的能量和（或）质量守恒.
-因此,为二维 NFSWEs 开发高效的显式保结构方案以及能够同时保持原始能量和质量的方案是很有趣的.
 
+尽管对于空间分数阶非线性 Schr{\"o}dinger 波方程数值算法的研究已有不少工作, 但大多数方法仅关注一维情况, 在时间方向的精度没有高于二阶，并且/或者是完全隐式的。
+此外,目前提出这些算法只能保修正后的能量和（或）质量守恒.
+这意味着仍然存在许多开放问题，对于未来的研究，特别是在高维情况下，需要高效、准确、显式的数值方法，以及能够同时保持原始能量和质量的数值方法.
 基于以上研究的空白, 本篇论文主要从以下两个方面给出了数值求解空间分数阶非线性 Schr{\"o}dinger 波方程的研究成果.
 
-一方面,最近,学者们构造了一些显式差分保能格式来求解非线性双曲方程\cite{macias-diazExplicitDissipationpreservingMethod2018,zhaoExplicitFourthorderEnergypreserving2019,fuExplicitStructurepreservingAlgorithm2020}.然而,这些格式不能保留其他类型微分方程的守恒定律.
-Ketcheson \cite{ketchesonRelaxationRungeKutta2019}提出了松弛龙格-库塔(RRK)方法,该方法保证了关于任何内积范数的守恒性或稳定性.该方法具有显式性,且在时间步长重标时仍能保持原RK方法的准确性和稳定性.随后,RRK技术被扩展到一般凸量\cite{ranochaRelaxationRungeKutta2020}.因此,任何凸泛函的守恒、耗散或其他解属性都可以通过在龙格-库塔更新的每一步添加一个松弛参数来实现.
-遗憾的是,作者没有考虑非二次不变情况下的显式守恒格式的构造.近年来,除了已提出的二次不变显式RK格式理论外,还有两种可用于二次能量守恒/稳定格式的能量二次化方法得到了广泛的研究.一种是不变能量二次化方法,该方法首先由Yang等人提出,以保留梯度流修正能量的演化.IEQ方法背后的基本思想是通过变量变换将能量转换为新变量的二次形式.这个新的等效系统在新变量方面仍然保留了类似的能量定律.在离散化中,这种重新表述的优点是所有非线性项都可以半显式地处理,这反过来又导致一个线性系统.从那时起,这种IEQ方法也被应用于许多其他问题.
-另一种二次化技术称为标量辅助变量(SAV)方法.SAV方法将辅助变量定义为位移势能积分的平方根,它可以被视为对IEQ的改进,并克服了IEQ的几个缺点,例如它削弱了非线性自由能势约束下有界的假设.从那时起,IEQ方法和SAV方法都被广泛应用于梯度流模型,以开发无条件能量稳定方案.例如,具有熔体对流\cite{chenEfficientNumericalScheme2019}的树状凝固相场模型,具有一般非线性势的梯度流动方程\cite{yangConvergenceAnalysisInvariant2020d},外延薄膜生长模型\cite{chengHighlyEfficientAccurate2019},使用SAV \cite{gongArbitrarilyHighorderUnconditionally2019}的任意高阶无条件能量稳定格式.
+一方面,为了得到高阶显式保结构数值格式，注意到在具有高阶精度的各种数值方法中，显式Runge-Kutta（RK）方法是很好的选择，因为它们属于单步方法，具有高阶精度和易于实现的特点。
+然而，标准RK方法并不一定保持系统的期望物理特性。
+为了解决这个问题，Ketcheson \cite{ketchesonRelaxationRungeKutta2019} 提出了松弛Runge-Kutta（RRK）方法，该方法保证相对于任何内积范数的守恒或稳定性。
+随后，RRK技术在\cite{ranochaRelaxationRungeKutta2020}中扩展到一般的凸量上。因此，通过在每一步中添加一个乘以Runge-Kutta更新的松弛参数，可以强制执行相对于任何凸泛函的守恒、耗散或其他属性。
+这些优势的代价是必须求解一个非线性代数系统来确定松弛参数。然而，对于非二次不变量的情况，作者们并未考虑构建显式的守恒方案。
+幸运的是，不变能量二次化（IEQ）方法 \cite{yangLinearUnconditionallyEnergy2017, yangEfficientLinearSchemes2017} 和SAV方法 \cite{chengConvergenceEnergyconservingScheme2022} 可以通过变量变换将非二次能量转化为新变量的二次形式，而由此产生的新等效系统仍然保留了关于新变量的类似能量定律。
+IEQ方法和SAV方法已被广泛应用于梯度流模型.例如,具有熔体对流\cite{chenEfficientNumericalScheme2019}的树状凝固相场模型,具有一般非线性势的梯度流动方程\cite{yangConvergenceAnalysisInvariant2020d},外延薄膜生长模型\cite{chengHighlyEfficientAccurate2019},使用SAV \cite{gongArbitrarilyHighorderUnconditionally2019}的任意高阶无条件能量稳定格式.
 有关IEQ和SAV的更多细节、扩展和改进,我们建议感兴趣的读者参考\cite{zhaoNumericalApproximationsPhase2017,shenScalarAuxiliaryVariable2018,liuExponentialScalarAuxiliary2020,chengMultipleScalarAuxiliary2018}.
-由于结构保持方法大大优于其他方法,并且能量二次化方法可以很容易地推广到开发高阶高效的能量保持方案,本工作的目标是通过将\cite{ketchesonRelaxationRungeKutta2019}中提出的松弛理论扩展到\cite{chengConvergenceEnergyconservingScheme2022}中提出的能量二次化公式,为 NFSEWs 开发显式的不变保持方案.
-在该方法中，我们首先使用能量二次化方法将原始的守恒律方程转化为一个新的方程，该方程在新的变量下具有能量二次不变性。然后，我们利用松弛理论中的松弛龙格-库塔方法来求解这个新的方程，并保持其能量二次不变性。具体来说，我们在龙格-库塔更新的每一步中添加一个松弛参数，以保证该方法对于任何内积范数都具有能量守恒性或稳定性。
-在数值实验中，我们采用了一些标准的守恒律方程作为测试模型，并将所提出的显式守恒龙格-库塔格式与其他一些经典的方法进行比较，包括一些经过改进的能量守恒格式和经典的龙格-库塔方法。结果表明，所提出的方法具有更好的性能，可以更准确地保持能量二次不变性，并且具有更高的数值稳定性。
-总之，本文提出了一种新的方法来求解非线性双曲型守恒律方程，并保持其能量二次不变性。该方法具有显式性和高效性，可以广泛应用于各种守恒律问题的求解中。
+受到这些发展的启发，本文旨在通过结合SAV方法和显式RRK方法，为一维和二维NFSWEs开发数值方法。提出的方法具有以下优势：
+\begin{itemize}
+	\item 显式方案;
+	\item 在时间方向具有任意高阶的精度;
+	\item 不变量 \eqref{eq_SAVRRK:9}守恒。
+\end{itemize}
 
-另一方面, 注意到平均矢量场 (AVF) 方法可以准确地保存哈密顿系统的能量 \cite{buddGeometricIntegrationUsing1999,quispelNewClassEnergypreserving2008}.此外,最近提出的分区平均矢量场（PAVF）方法可以保留除常规能量之外的更多守恒性质,并已被用于构造哈密顿常微分方程的守恒格式\cite{caiPartitionedAveragedVector2018}.
-这些研究基础使我们有可能实现我们的目标,而研究问题 \eqref{eq:s1} 的哈密顿结构的推导是结构保持方法构建成功的关键.
-据我们所知,很少有工作关注分数阶微分方程的哈密顿结构.最近,Wang 和 Huang \cite{wangStructurepreservingNumericalMethods2018} 提出了分数阶 Laplacian 泛函的变分导数并将一维分数阶非线性 Schr{\"o}dinger 方程重新表述为哈密顿系统. 
-Fu 和 Cai \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数阶 Klein-Gordon-Schr{\"o}dinger 方程的哈密顿公式,并随后开发了守恒方案.
-基于此,本文推导了具有周期性边界条件的二维 NFSWEs \eqref{eq:s1} 的哈密顿公式,并通过结合分区平均向量场加 (PAVF-P) 方法和傅里叶伪谱法成功构造了能够同时保原始能量和质量的守恒格式.这对于数值模拟具有周期性边界条件的二维 NFSWEs \eqref{eq:s1} 是非常有用的。
+
+另一方面, 为了开发可以同时守恒原始能量和质量的格式。
+注意到平均向量场（AVF）方法可以保持Hamilton系统的能量 \cite{buddGeometricIntegrationUsing1999,quispelNewClassEnergypreserving2008}。此外，最近提出的分区平均向量场（PAVF）方法不仅可以保持传统能量，还可以保持更多的守恒性质，并且已被用于构造Hamilton常微分方程的守恒数值方案，参见 \cite{caiPartitionedAveragedVector2018}。这些研究基础使我们有可能实现我们的目标，而对所研究问题 \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的Hamilton结构的推导是构建保结构方法的成功关键。
+据我们所知，目前很少有关注分数微分方程的Hamilton结构的研究。最近，王和黄 \cite{wangStructurepreservingNumericalMethods2018} 提出了带有分数Laplacian的泛函的变分导数，并将一维分数非线性Schr{\"o}dinger方程重新表述为一个Hamilton系统。傅和蔡 \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数Klein-Gordon-Schr{\"o}dinger方程的Hamilton形式，并随后发展了守恒数值方案。
+基于此，我们首先推导了具有周期边界条件的二维分数非线性Schr{\"o}dinger波方程 \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的Hamilton形式，然后通过将分区平均向量场加法（PAVF-P）方法和傅立叶拟谱方法相结合，成功构建了守恒数值方案。
 
 \section{论文安排}
 本文结构安排如下：
 
-第二章主要有三节. 第一节, 介绍了分数阶微积分的定义, 主要是分数阶积分、Caputo 分数阶导数和广义 Caputo 分数阶导数定义. 第二节, 主要介绍了 Fourier 变换和 Laplace 变换及其性质. 
+第2章主要有3节. 第一节, 介绍了分数阶微积分的定义, 主要是分数阶积分、Caputo 分数阶导数和广义 Caputo 分数阶导数定义. 第二节, 主要介绍了 Fourier 变换和 Laplace 变换及其性质. 
 第三节, 主要介绍了 Mittag-Leffler 函数和广义 Mittag-Leffler 函数, 以 及它们的 Laplace 变换.
 
-第三章主要分四节. 在第一节中，介绍了 NFSWE 的 SAV 方法，我们通过该方法将非线性系统转换为等效的重构。
-第二节通过将傅立叶伪谱方法应用于等效系统，得到半离散保守系统。
-在第三节中，我们提出了用于重新制定的半离散系统的显式标量辅助变量松弛 Runge-Kutta (SAV-RRK) 完全离散方案，通过该方案，SAV-RRK 方案保持与标准 SAV-RK 相同的收敛速度。
-我们进一步估计了我们引入的松弛系数，从而获得第四节中松弛方法的准确性。
-最后给出了数值示例，以证明所提出方案的准确性和守恒特性。
+第3章主要分6节. 在第 \ref{Section_SAVRRK: 2} 节中，我们通过引入一个标量辅助变量，将NFSWEs \eqref{eq_SAVRRK:1} 重新表述为一个等效系统。第 \ref{Section_SAVRRK: 3} 节通过对结果的重新表述应用傅立叶拟谱逼近，得到一个半离散的守恒系统。在第 \ref{Section_SAVRRK: 4} 节，我们通过在时间上应用松弛Runge-Kutta方法，提出了对重新表述的半离散系统的显式全离散方案，而所提出的标量辅助变量松弛Runge-Kutta（SAV-RRK）方案与标准标量辅助变量Runge-Kutta (SAV-RK) 方法具有相同的收敛阶。在第 \ref{Section_SAVRRK: 5} 节中，我们进一步估计引入的松弛系数，然后得到松弛方法的精度。第 \ref{Section_SAVRRK: 6} 节呈现了数值例子，以展示所提出方案的精度和守恒特性。在第 \ref{Section_SAVRRK: 7} 节中，我们进行简要总结。
 
-第四章主要分三节. 第一节，首先研究了具有周期性边界条件的二维 NFSWEs \eqref{eq:s1} 的哈密顿结构，然后我们通过使用傅里叶伪谱方法近似得到的哈密顿量推导了半离散保守系统空间系统。
-在第二节中，我们利用PAVF-P方法对先前的空间半离散系统进行离散，得到一类全离散保守格式，并证明了离散守恒律。
-在第三节中给出了一维和二维的数值例子来证明理论结果.
 
-在第五章中.我们总结研究成果，列出一些进一步的研究成果并对今后的研究做一些展望。
+第4章主要分4节. 在第 \ref{Section_PAVF: 2} 节，我们首先研究了带有周期边界条件的二维分数非线性Schr{\"o}dinger波方程 \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 的Hamilton结构，然后通过使用傅立叶拟谱方法在空间中逼近得到的Hamilton系统，推导出一个半离散的保守系统。
+在第 \ref{Section_PAVF: 3} 节，通过使用PAVF-P方法对前述空间半离散系统进行离散化，我们得到了一类完全离散的保守数值方案，并证明了离散守恒定律。在第 \ref{Section_PAVF: 4} 节，我们提供了一维和二维数值示例，以演示理论结果。第 \ref{Section_PAVF: 5} 节总结了一些结论。
+
+在第5章中.我们总结研究成果，列出一些进一步的研究成果并对今后的研究做一些展望。
