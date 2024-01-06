@@ -1,27 +1,177 @@
 \chapter[预备知识]{预备知识}
 
-在介绍本文主要内容之前, 本章首先引进一些本文后续部分经常涉及的记号和引理.
-\section{常用记号}
+在介绍本文主要内容之前, 本章首先介绍了分数阶微积分以及Fourier 谱方法, 
+然后引进一些本文后续部分经常涉及的记号和引理.
 
-考虑时空方向的均匀网格剖分, $\tau$ 和 $h$ 分别代表时间和空间网格步长. $U_j^n$ 和 $u_j^n$ 分别 代表 $u(x, t)$ 在点 $\left(x_j, t_n\right)$ 处的精确解和数值解. 记
+
+\section{分数阶微积分理论}
+分数阶微积分理论是研究任意阶微分和积分的理论,它是整数阶微积分理论的拓展.该理论起源于17世纪末,经过三个世纪的不懈努力,包括Riemann-Liouville、Grüwald-Letnikov、Caputo和Riesz在内的多种分数阶微积分理论被形成,并在专著\cite{samkoFractionalIntegralsDerivatives1993}中得到详细介绍.
+由于分数阶微积分的物理及几何解释存在挑战,因此该领域在很长一段时间内停留在纯数学理论层面.但近几十年来,随着多个学科领域的研究发现,分数阶微分方程的保记忆性可优美地描述复杂问题,其描述精度超过整数阶微分方程.目前,分数阶微分方程已成功地应用于物理学、化学、生物学、水文学、混沌理论、复杂粘弹性材料、系统控制、信号处理、经济学等领域的问题,详见\cite{liIntroductionFractionalCalculus2015,HandbookDifferentialEquations2008,brychkovIndefiniteIntegrals2008,zhangMassBalanceBased2005,carrerasAnomalousDiffusionExit2001,hilferFRACTIONALCALCULUSREGULAR2000,liangRobustnessFractionalorderBoundary2007,maginSolvingFractionalOrder2009,zaslavskySelfsimilarTransportIncomplete1993,sunRandomorderFractionalDifferential2011}.
+本章主要介绍非线性分数阶薛定谔波动方程（NFSWEs）方程的研究意义、研究背景和发展现状, 以及本文的实际研究内容.
+
+分数阶微分方程的解析解通常包含一些特殊函数,如 Mittag-Leffler 函数、Fox 函数和 Wright 函数等,这些函数由无穷级数定义,因此数值计算相当困难.对于某些非线性微分方程,解析解更是难以获得.因此,构造数值方法以求解分数阶微分方程具有重要的理论意义和实用价值.然而,到目前为止,关于分数阶微分方程的数值计算仍存在大量挑战性难题,例如长时间历程的计算和大空间区域的计算等.同时,研究算法大部分集中于有限差分方法和有限元法.
+因此,如何快速、准确地数值求解分数阶微分方程并进一步完善数值方法仍是一个紧迫而重要的研究课题.
+
+其中,在对空间分数阶方程进行数值求解时, 如何有效逼近分数阶 拉普拉斯 算子是最为关键的一步. 
+在过去的几十年, 众多数学家针对一问题进行了深入的研究, 其中, 最为有效的途径是利用分数阶 拉普拉斯 算子与 Riesz 导数在齐次 Dirichlet 边界条件下的等价性关系 \cite{yangNumericalMethodsFractional2010,demengelFunctionalSpacesTheory2012}, 即
 \begin{equation}
-\delta_x u_j^n=\frac{u_{j+1}^n-u_j^n}{h}, \quad \delta_x^2 u_j^n=\frac{u_{j+1}^n-2 u_j^n+u_{j-1}^n}{h^2}, \quad \delta_x^4 u_j^n=\delta_x^2\left(\delta_x^2 u_j^n\right) .
+-(-\Delta)^{\alpha / 2} u(x)=\frac{\partial^\alpha}{\partial|x|^\alpha} u(x):=-\frac{1}{2 \cos \frac{\alpha \pi}{2}}\left({ }_{-\infty }D_x^\alpha u(x)+{ }_x D_{+\infty}^\alpha u(x)\right),
 \end{equation}
-和
+其中 ${ }_{-\infty} D_x^\alpha u(x)$ 为左 Riemann-Liouville 分数阶导数
+\begin{equation}
+{ }_{-\infty} D_x^\alpha u(x)=\frac{1}{\Gamma(2-\alpha)} \frac{d^2}{d x^2} \int_{-\infty}^x \frac{u(\xi)}{(x-\xi)^{\alpha-1}} d \xi,
+\end{equation}
+${ }_x D_{+\infty}^\alpha u(x)$ 为右 Riemann-Liouville 分数阶导数
+\begin{equation}
+{ }_x D_{+\infty}^\alpha u(x)=\frac{1}{\Gamma(2-\alpha)} \frac{d^2}{d x^2} \int^{-\infty}_x \frac{u(\xi)}{(\xi-x)^{\alpha-1}} d \xi .
+\end{equation}
+注意到, Riesz 分数阶导数可看作左右 Riemann-Liouville 分数阶导数的线性组合.
+基于上述等价关系, 对于分数阶 拉普拉斯 或 Riemann-Liouville 分数阶导数的数值逼近已存在很多数值方法, 如有限元方法 \cite{dengFiniteElementMethod2009,ervinNumericalApproximationTime2007}, 间断 Galerkin 方法 \cite{xuDiscontinuousGalerkinMethod2014}, 谱方法 \cite{zayernouriFractionalSpectralCollocation2014,zengCrankNicolsonADI2014}, 有限差分方法 \cite{chenFourthOrderAccurate2014,meerschaertFiniteDifferenceApproximations2004} 等. 
+此外, 对于 Riesz 导数的 一个直接离散方法是分数阶中心差分方法, 该方法由 \cite{duAnalysisApproximationNonlocal2012} 首次提出, 随后, 基于带权平均思想, 更高阶 Riesz 导数逼近被提出 \cite{dingHighorderAlgorithmsRiesz2015,zhangFourthOrderCompactDifference2014}.
+同时, 分数阶 拉普拉斯 算子有下列奇异积分形式的等价性 \cite{duAnalysisApproximationNonlocal2012}
+\begin{equation}
+(-\Delta)^{\alpha / 2} u(x)=C_\alpha \int_{-\infty}^{+\infty} \frac{u(x)-u(y)}{|x-y|^{1+\alpha}} d y
+\end{equation}
+其中常数 $C_\alpha=\frac{\alpha 2^{\alpha-1} \Gamma\left(\frac{\alpha+1}{2}\right)}{\pi^{1 / 2} \Gamma\left(\frac{-\alpha}{2}\right)}$. 基于上述等价性, 许多学者也给出了很多数值方法\cite{gaoMeanExitTime2014,huangNumericalMethodsFractional2014}. 在周期边界下, 分数阶 拉普拉斯 算子定义为 \cite{guoFractionalPartialDifferential2015}
+\begin{equation}
+(-\Delta)^{\alpha / 2} u(x)=\sum_{k \in \mathbb{Z}}|\mu k|^\alpha \hat{u}_k e^{\mathrm{i} \mu k x}
+\end{equation}
+其中, $x \in \mathbb{T}, \hat{u}_k$ 表示傅里叶系数, 即
+\begin{equation}
+u=\sum_{k \in \mathbb{Z}} \hat{u}_k e^{\mathrm{i} \mu k x}, \quad \hat{u}_k=\frac{1}{L} \int_{\mathbb{T}} u(x) e^{-\mathrm{i} \mu k x} d x
+\end{equation}
+这里, $\mu=2 \pi / L, \mathbb{T}=\mathbb{R} / L \mathbb{Z}$ 表示长度为 $L$ 的一维环面.
+
+
+\section{傅立叶谱方法}
+
+对于在 $(-\infty, \infty)$ 有定义且绝对可积、并在任一有限区间上满足狄利克莱条件的函数 $u(x)$,傅里叶变换（Fourier transform）及其逆变换（inverse Fourier transform）定义为：
+\begin{equation}
+    \hat{u}(k) = \int_{-\infty}^{\infty} u(x) \mathrm{e}^{-\mathrm{i} k x} \mathrm{~d} x \label{eq:3-1}
+\end{equation}
+
+\begin{equation}
+    u(x) = \frac{1}{2 \pi} \int_{-\infty}^{\infty} \hat{u}(k) \mathrm{e}^{\mathrm{i} k x} \mathrm{~d} k \label{eq:3-2}
+\end{equation}
+
+上述定义式给出了一个傅里叶变换对（Fourier transform pair）,本专栏中将它们记为 $\hat{u}(k) = F[u(x)]$ 和 $u(x) = F^{-1}[\hat{u}(k)]$.实际上,傅里叶变换对的定义并不是唯一的,两个定义式中的系数可以随意修改,只要它们的积为 $1 / 2 \pi$ 即可.此外,定义式中的 $\mathrm{e}^{-\mathrm{i} k x}$ 和 $\mathrm{e}^{\mathrm{i} k x}$（称为积分变换的核）也可以互换.容易知道,$u(x)$ 先后经过傅里叶变换及其逆变换仍将得到它本身,即：$u(x) = F^{-1}\{F[u(x)]\}$.
+
+通常来讲,若不对“傅里叶变换”加任何限定,那么它指的就是连续傅里叶变换,也就是针对定义在无限区间内的连续函数 $u(x)$ 的傅里叶变换,这是在理想条件下的数学定义.在实际应用中,尤其是计算机的信号采样、信号处理当中,信号是离散的、有限的,离散傅里叶变换（discrete Fourier transform）就是针对这一情况提出的.在 \texttt{Matlab} 中,对于序列 $u_1, \ldots, u_j, \ldots, u_N$ 的离散傅里叶变换及逆变换定义为：
+\begin{equation}
+    \hat{u}_k = \sum_{j=1}^N u_j \mathrm{e}^{\frac{-2 \pi(j-1)(k-1) \mathrm{i}}{N}}, \quad k=1, \ldots, N \label{eq:3-4}
+\end{equation}
+
+\begin{equation}
+    u_j = \frac{1}{N} \sum_{k=1}^N \hat{u}_k \mathrm{e}^{\frac{2 \pi(j-1)(k-1) \mathrm{i}}{N}}, \quad j=1, \ldots, N \label{eq:3-5}
+\end{equation}
+
+同样,上述定义中的归一化系数也可以有其他选择,但它们的乘积必须为 $1 / N$.如果将序列 $u_1, \ldots, u_j, \ldots, u_N$ 看作等间隔空间（时间）点上的信号幅度值,那么经过离散傅里叶变换得到的序列 $\hat{u}_1, \ldots, \hat{u}_k, \ldots, \hat{u}_N$ 就是其相应的频谱信息.通过定义式 \eqref{eq:3-4} 和 \eqref{eq:3-5} 容易得到 $\hat{u}_k = \hat{u}_{k+N}$ 和 $u_j = u_{j+N}$,这就是说,离散傅里叶变换已经隐含了周期性边界条件.
+
+对于 $F\left[u^{\prime}(x)\right]$, 由傅里叶变换的定义和分部积分法, 得到:
+\begin{equation}
+    F\left[u^{\prime}(x)\right] = \int_{-\infty}^{\infty} u^{\prime}(x) \mathrm{e}^{-\mathrm{i} k x} \mathrm{~d} x = \left.u(x) \mathrm{e}^{-\mathrm{i} k x}\right|_{-\infty}^{\infty} - \int_{-\infty}^{\infty} u(x)(-\mathrm{i} k) \mathrm{e}^{-\mathrm{i} k x} \mathrm{~d} x \label{eq:3-7}
+\end{equation}
+
+当 $\mid x\mid  \rightarrow \infty$ 时, $u(x) \rightarrow 0$, 则:
+\begin{equation}
+    F\left[u^{\prime}(x)\right] = \mathrm{i} k \int_{-\infty}^{\infty} u(x) \mathrm{e}^{-\mathrm{i} k x} \mathrm{~d} x = \mathrm{i} k F[u(x)] \label{eq:3-8}
+\end{equation}
+
+类似地, 可以得到:
+\begin{equation}
+    F\left[u^{(n)}(x)\right] = (\mathrm{i} k)^n F[u(x)] \label{eq:3-9}
+\end{equation}
+
+其中 $u^{(n)}(x)$ 代表 $u(x)$ 的 $n$ 阶导数.上式的意义在于：函数的求导运算在傅里叶变换的作用下, 可转化为相对简单的代数运算, 即: $u^{(n)}(x) = F^{-1}\left\{(\mathrm{i} k)^n F[u(x)]\right\}$.正是基于此原理, 傅里叶谱方法 (Fourier spectral method) 利用傅里叶变换将偏微分方程中空域（space domain）或时域（time domain）上的求导运算简化为频域（spectral domain）上的代数运算, 求解后再通过傅里叶逆变换得到空域或时域上的结果.在代码层面上, \texttt{Matlab} 提供的快速傅里叶变换函数 \texttt{fft}、逆变换函数 \texttt{ifft} 以及强大的矩阵运算能力也为简洁、优雅地实现傅里叶谱方法奠定了基础.
+
+% \section{标量辅助变量方法}
+
+\section{分区平均向量场方法}
+
+本文旨在基于PAVF方法构建非线性分数薛定谔方程的保守格式.因此,在本小节中,我们简要介绍这些方法.
+
+考虑以下哈密顿系统
+\begin{equation}
+\frac{d w}{d t}=f(w)=S_{k} \nabla H(w), \quad w(0)=w_{0},
+\label{eq_40}\end{equation}
+其中$w \in \mathbb{R}^{k}$,$S_{k}$是一个$k \times k$的反对称矩阵,$k$是偶数,哈密顿量$H(w)$被假定具有足够的可微性.所谓的二阶AVF方法对于系统(\ref{eq_40})定义为
 \begin{equation}
 \begin{aligned}
-& u_j^{n+\frac{1}{2}}=\frac{u_j^{n+1}+u_i^n}{2}, \quad \hat{u}_j^n=\frac{u_j^{n+1}+u_j^{n-1}}{2}, \quad \tilde{u}_j^{n+\frac{1}{2}}=\frac{3 u_j^n-u_j^{n-1}}{2}, \\
-& \delta_t u_j^{n+\frac{1}{2}}=\frac{u_j^{n+1}-u_j^n}{\tau}, \quad \delta_{\hat{t}} u_j^n=\frac{u_j^{n+1}-u_j^{n-1}}{2 \tau}, \quad \delta_t^2 u_j^n=\frac{u_j^{n+1}-2 u_j^n+u_j^{n-1}}{\tau^2} .
+\frac{w^{m+1}-w^{m}}{\tau} &=\int_{0}^{1} f\left(\varepsilon w^{m+1}+(1-\varepsilon) w^{m}\right) d \varepsilon \\
+&=S_{k} \int_{0}^{1} \nabla H\left(\varepsilon w^{m+1}+(1-\varepsilon) w^{m}\right) d \varepsilon
 \end{aligned}
-\end{equation}
-针对周期边界条件, 定义 $U_h=\left\{u=\left(u_j\right)_{j \in \mathbb{Z}} \mid u_j \in \mathbb{C}, u_{j+J}=u_j, j \in \mathbb{Z}\right\}$ 是以 $L$ 为周 期的网格函数空间, 其中 $J h=L$. 对于任意的 $u, v \in U_h$, 定义内积及范数
+\label{eq_41}\end{equation}
+其中$\tau$是时间步长.
+令$k=2d$,$w=\left(w_{1}, w_{2}, \cdots, w_{d} ; w_{d+1}, w_{d+2}, \cdots, w_{k}\right)^{T}=(y, z)^{T}$,则原始问题(\ref{eq_40})的等价系统如下
 \begin{equation}
-(u, v)=h \sum_{j=1}^J u_j \bar{v}_j, \quad\|u\|=\sqrt{(u, u)}, \quad\|u\|_{\infty}=\max _{1 \leq j \leq J}\left|u_j\right| .
-\end{equation}
-类似地, 针对零边界条件, 定义 $V_h^0=\left\{v \mid v=\left\{v_j\right\} \in \Omega_h, v_0=v_M=0\right\}$ 是网格函数 空间, 其中 $M h=b-a$. 相应的离散内积和范数定义为
+\left(\begin{array}{l}
+\dot{y} \\
+\dot{z}
+\end{array}\right)=S_{2 d}\left(\begin{array}{c}
+H_{y}(y, z) \\
+H_{z}(y, z)
+\end{array}\right), y, z \in \mathbb{R}^{d},
+\label{eq_42}\end{equation}
+其中$S_{2 d}$是一个辛矩阵,而且哈密顿量$H(y, z)$在任何连续流上仍然保持不变.
+
+AVF方法得到的数值方案只能保原始哈密顿量守恒.为了能保额外的不变量守恒,我们为哈密顿系统(\ref{eq_42})开发了PAVF方法,即
 \begin{equation}
-(u, v)=h \sum_{j=1}^{M-1} u_j \bar{v}_j, \quad\|u\|=\sqrt{(u, u)}, \quad\|u\|_{\infty}=\sup _{0 \leq j \leq M-1}\left|u_j\right| .
-\end{equation}
-值得说明是, 当研究问题限制于实数域时, 有 $\bar{v}_j=v_j$.
-\section{常用引理}
-如下几个引理将在后续算法的稳定性分析方面具有重要的作用.
+\frac{1}{\tau}\left(\begin{array}{c}
+y^{m+1}-y^{n} \\
+z^{m+1}-z^{n}
+\end{array}\right)=S_{2 d}\left(\begin{array}{c}
+\int_{0}^{1} H_{y}\left(\varepsilon y^{m+1}+(1-\varepsilon) y^{m}, z^{m}\right) d \varepsilon \\
+\int_{0}^{1} H_{z}\left(y^{m+1}, \varepsilon z^{m+1}+(1-\varepsilon) z^{m}\right) d \varepsilon
+\end{array}\right) .
+\label{eq_43}\end{equation}
+可以轻松证明PAVF方法完全保持系统(\ref{eq_40})的哈密顿量.
+
+\textbf{备注2.1.} PAVF方法的关键策略是将叉积项中的变量分组并在每个步骤中仅应用AVF方法于一组,这导致了比传统AVF方法通常需要更少计算工作的简化方案.特别是,相应的方案至少可以对整个方程系统的一部分进行线性隐式,从而大大减少了迭代规模甚至完全避免非线性迭代.
+
+我们注意到PAVF方法(\ref{eq_43})仅具有一阶精度\cite{caiPartitionedAveragedVector2018}.为了提高精度并保持哈密顿量,我们将PAVF方法与其伴随方法相结合,然后得到PAVF组合（PAVF-C）方法和PAVF plus（PAVF-P）方法.
+设上述PAVF方法(\ref{eq_43})为$\Phi_{\tau}$,其伴随方法$\Phi_{\tau}^{*}$定义如下
+\begin{equation}
+\frac{1}{\tau}\left(\begin{array}{c}
+y^{m+1}-y^{m} \\
+z^{m+1}-z^{m}
+\end{array}\right)=S_{2 d}\left(\begin{array}{c}
+\int_{0}^{1} H_{y}\left(\varepsilon y^{m+1}+(1-\varepsilon) y^{m}, z^{m+1}\right) d \varepsilon \\
+\int_{0}^{1} H_{z}\left(y^{m}, \varepsilon z^{m+1}+(1-\varepsilon) z^{m}\right) d \varepsilon
+\end{array}\right)
+\label{eq_44}\end{equation}
+然后,PAVF组合（PAVF-C）方法定义为
+\begin{equation}
+\Upsilon_{\tau}:=\Phi_{\frac{\tau}{2}}^{*} \circ \Phi_{\frac{\tau}{2}},
+\label{eq_45}\end{equation}
+而PAVF 加（PAVF-P）方法定义为
+\begin{equation}
+\hat{\Upsilon}_{\tau}:=\frac{1}{2}\left(\Phi_{\frac{\tau}{2}}^{*}+\Phi_{\frac{\tau}{2}}\right)
+\label{eq_46}\end{equation}
+
+% \textbf{备注2.2.} 由于PAVF方法的巨大优势,即使通过其组合,PAVF-C方法的成本仍然远远低于直接AVF方法.虽然PAVF-P方法的计算效率与AVF方法相当,但它可能具有AVF方法无法保持的额外保守量.
+
+
+% \section{常用记号}
+
+% 考虑时空方向的均匀网格剖分, $\tau$ 和 $h$ 分别代表时间和空间网格步长. $U_j^n$ 和 $u_j^n$ 分别 代表 $u(x, t)$ 在点 $\left(x_j, t_n\right)$ 处的精确解和数值解. 记
+% \begin{equation}
+% \delta_x u_j^n=\frac{u_{j+1}^n-u_j^n}{h}, \quad \delta_x^2 u_j^n=\frac{u_{j+1}^n-2 u_j^n+u_{j-1}^n}{h^2}, \quad \delta_x^4 u_j^n=\delta_x^2\left(\delta_x^2 u_j^n\right) .
+% \end{equation}
+% 和
+% \begin{equation}
+% \begin{aligned}
+% & u_j^{n+\frac{1}{2}}=\frac{u_j^{n+1}+u_i^n}{2}, \quad \hat{u}_j^n=\frac{u_j^{n+1}+u_j^{n-1}}{2}, \quad \tilde{u}_j^{n+\frac{1}{2}}=\frac{3 u_j^n-u_j^{n-1}}{2}, \\
+% & \delta_t u_j^{n+\frac{1}{2}}=\frac{u_j^{n+1}-u_j^n}{\tau}, \quad \delta_{\hat{t}} u_j^n=\frac{u_j^{n+1}-u_j^{n-1}}{2 \tau}, \quad \delta_t^2 u_j^n=\frac{u_j^{n+1}-2 u_j^n+u_j^{n-1}}{\tau^2} .
+% \end{aligned}
+% \end{equation}
+% 针对周期边界条件, 定义 $U_h=\left\{u=\left(u_j\right)_{j \in \mathbb{Z}} \mid u_j \in \mathbb{C}, u_{j+J}=u_j, j \in \mathbb{Z}\right\}$ 是以 $L$ 为周 期的网格函数空间, 其中 $J h=L$. 对于任意的 $u, v \in U_h$, 定义内积及范数
+% \begin{equation}
+% (u, v)=h \sum_{j=1}^J u_j \bar{v}_j, \quad\|u\|=\sqrt{(u, u)}, \quad\|u\|_{\infty}=\max _{1 \leq j \leq J}\left|u_j\right| .
+% \end{equation}
+% 类似地, 针对零边界条件, 定义 $V_h^0=\left\{v \mid v=\left\{v_j\right\} \in \Omega_h, v_0=v_M=0\right\}$ 是网格函数 空间, 其中 $M h=b-a$. 相应的离散内积和范数定义为
+% \begin{equation}
+% (u, v)=h \sum_{j=1}^{M-1} u_j \bar{v}_j, \quad\|u\|=\sqrt{(u, u)}, \quad\|u\|_{\infty}=\sup _{0 \leq j \leq M-1}\left|u_j\right| .
+% \end{equation}
+% 值得说明是, 当研究问题限制于实数域时, 有 $\bar{v}_j=v_j$.
+% \section{常用引理}
+% 如下几个引理将在后续算法的稳定性分析方面具有重要的作用.

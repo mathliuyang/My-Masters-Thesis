@@ -17,6 +17,11 @@
 \newblock Uniform {{Error Estimates}} of {{Finite Difference Methods}} for the {{Nonlinear Schr{\"o}dinger Equation}} with {{Wave Operator}}.
 \newblock {\em Siam J Numer Anal\/} (Mar. 2012).
 
+\bibitem{baoComparisonsSineGordonPerturbed2010}
+{\sc Bao, W., Dong, X., and Xin, J.}
+\newblock Comparisons between sine-{{Gordon}} and perturbed nonlinear {{Schr{\"o}dinger}} equations for modeling light bullets beyond critical collapse.
+\newblock {\em Phys. D: Nonlinear Phenom. 239}, 13 (July 2010), 1120--1134.
+
 \bibitem{brugnanoClassEnergyconservingHamiltonian2018}
 {\sc Brugnano, L., Zhang, C., and Li, D.}
 \newblock A class of energy-conserving {{Hamiltonian}} boundary value methods for nonlinear {{Schr{\"o}dinger}} equation with wave operator.
@@ -112,6 +117,11 @@
 \newblock Mean exit time and escape probability for dynamical systems driven by l{\'e}vy noises.
 \newblock {\em Siam J Sci Comput 36}, 3 (2014), A887--A906.
 
+\bibitem{gongConservativeFourierPseudospectral2017}
+{\sc Gong, Y., Wang, Q., Wang, Y., and Cai, J.}
+\newblock A conservative {{Fourier}} pseudo-spectral method for the nonlinear {{Schr{\"o}dinger}} equation.
+\newblock {\em J. Comput. Phys. 328\/} (Jan. 2017), 354--370.
+
 \bibitem{gongArbitrarilyHighorderUnconditionally2019}
 {\sc Gong, Y., Zhao, J., and Wang, Q.}
 \newblock Arbitrarily {{High-order Unconditionally Energy Stable Schemes}} for {{Gradient Flow Models Using}} the {{Scalar Auxiliary Variable Approach}}, July 2019.
@@ -120,6 +130,11 @@
 {\sc Guo, B., Pu, X., and Huang, F.}
 \newblock {\em {Fractional Partial Differential Equations and Their Numerical Solutions}}.
 \newblock {WORLD SCIENTIFIC}, Apr. 2015.
+
+\bibitem{guoEnergyConservingLocal2015}
+{\sc Guo, L., and Xu, Y.}
+\newblock Energy {{Conserving Local Discontinuous Galerkin Methods}} for the {{Nonlinear Schr{\"o}dinger Equation}} with {{Wave Operator}}.
+\newblock {\em J. Sci. Comput. 65}, 2 (Nov. 2015), 622--647.
 
 \bibitem{hairerRungeKuttaMethods2015}
 {\sc Hairer, E., and Wanner, G.}
@@ -140,6 +155,11 @@
 {\sc Huang, Y., and Oberman, A.}
 \newblock Numerical methods for the fractional laplacian: {{A}} finite difference-quadrature approach.
 \newblock {\em Siam J Numer Anal 52}, 6 (2014), 3056--3084.
+
+\bibitem{karakashianSpacetimeFiniteElement1998}
+{\sc Karakashian, O., and Makridakis, C.}
+\newblock A space-time finite element method for the nonlinear {{Schr{\"o}dinger}} equation: The discontinuous {{Galerkin}} method.
+\newblock {\em Math. Comp. 67}, 222 (1998), 479--499.
 
 \bibitem{ketchesonRelaxationRungeKutta2019}
 {\sc Ketcheson, D.~I.}
@@ -170,6 +190,11 @@
 {\sc Liu, Z., and Li, X.}
 \newblock The {{Exponential Scalar Auxiliary Variable}} ({{E-SAV}}) {{Approach}} for {{Phase Field Models}} and {{Its Explicit Computing}}.
 \newblock {\em Siam J Sci Comput 42}, 3 (Jan. 2020), B630--B655.
+
+\bibitem{machiharaNonrelativisticLimitEnergy2002}
+{\sc Machihara, S., Nakanishi, K., and Ozawa, T.}
+\newblock Nonrelativistic limit in the energy space for nonlinear {{Klein-Gordon}} equations.
+\newblock {\em Math Ann 322}, 3 (Mar. 2002), 603--621.
 
 \bibitem{maginSolvingFractionalOrder2009}
 {\sc Magin, R., Feng, X., and Baleanu, D.}
@@ -221,6 +246,11 @@
 \newblock Random-order fractional differential equation models.
 \newblock {\em Signal Process 91}, 3 (Mar. 2011), 525--530.
 
+\bibitem{tsutsumiNonrelativisticApproximationNonlinear1984}
+{\sc Tsutsumi, M.}
+\newblock Nonrelativistic approximation of nonlinear {{Klein-Gordon}} equations in two space dimensions.
+\newblock {\em Nonlinear Analysis: Theory, Methods \& Applications 8}, 6 (June 1984), 637--643.
+
 \bibitem{wangCrankNicolsonDifference2013}
 {\sc Wang, D., Xiao, A., and Yang, W.}
 \newblock Crank{\textendash}{{Nicolson}} difference scheme for the coupled nonlinear {{Schr{\"o}dinger}} equations with the {{Riesz}} space fractional derivative.
@@ -246,6 +276,11 @@
 \newblock Structure-preserving numerical methods for the fractional {{Schr{\"o}dinger}} equation.
 \newblock {\em Appl Numer Math 129\/} (July 2018), 137--158.
 
+\bibitem{wangDiscretetimeOrthogonalSpline2011}
+{\sc Wang, S., Zhang, L., and Fan, R.}
+\newblock Discrete-time orthogonal spline collocation methods for the nonlinear {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em J. Comput. Appl. Math. 235}, 8 (Feb. 2011), 1993--2005.
+
 \bibitem{wangAnalysisNewConservative2006}
 {\sc Wang, T.-c., and Zhang, L.-m.}
 \newblock Analysis of some new conservative schemes for nonlinear {{Schr{\"o}dinger}} equation with wave operator.
@@ -255,6 +290,11 @@
 {\sc Wang, Y., Mei, L., Li, Q., and Bu, L.}
 \newblock Split-step spectral {{Galerkin}} method for the two-dimensional nonlinear space-fractional {{Schr{\"o}dinger}} equation.
 \newblock {\em Appl Numer Math 136\/} (Feb. 2019), 257--278.
+
+\bibitem{xinModelingLightBullets2000}
+{\sc Xin, J.}
+\newblock Modeling light bullets with the two-dimensional sine{\textendash}{{Gordon}} equation.
+\newblock {\em Phys. D: Nonlinear Phenom. 135}, 3-4 (Jan. 2000), 345--368.
 
 \bibitem{xuDiscontinuousGalerkinMethod2014}
 {\sc Xu, Q., and Hesthaven, J.~S.}
@@ -276,6 +316,11 @@
 \newblock Linear and unconditionally energy stable schemes for the binary fluid{\textendash}surfactant phase field model.
 \newblock {\em Comput Method Appl M 318\/} (May 2017), 1005--1029.
 
+\bibitem{yangConvergenceAnalysisInvariant2020}
+{\sc Yang, X., and Zhang, G.-D.}
+\newblock Convergence {{Analysis}} for the {{Invariant Energy Quadratization}} ({{IEQ}}) {{Schemes}} for {{Solving}} the {{Cahn}}{\textendash}{{Hilliard}} and {{Allen}}{\textendash}{{Cahn Equations}} with {{General Nonlinear Potential}}.
+\newblock {\em J. Sci. Comput. 82}, 3 (Feb. 2020), 55.
+
 \bibitem{zaslavskySelfsimilarTransportIncomplete1993}
 {\sc Zaslavsky, G.~M., Stevens, D., and Weitzner, H.}
 \newblock Self-similar transport in incomplete chaos.
@@ -295,6 +340,11 @@
 {\sc Zhang, L., and Chang, Q.}
 \newblock A conservative numerical scheme for a class of nonlinear {{Schr{\"o}dinger}} equation with wave operator.
 \newblock {\em Appl. Math. Comput. 145}, 2 (Dec. 2003), 603--612.
+
+\bibitem{zhangConservativeLocalDiscontinuous2017}
+{\sc Zhang, R., Yu, X., Li, M., and Li, X.}
+\newblock A conservative local discontinuous {{Galerkin}} method for the solution of nonlinear {{Schr{\"o}dinger}} equation in two dimensions.
+\newblock {\em Science China Mathematics 60}, 12 (Dec. 2017), 2515--2530.
 
 \bibitem{zhangMassBalanceBased2005}
 {\sc Zhang, X., Crawford, J.~W., Deeks, L.~K., Stutter, M.~I., Bengough, A.~G., and Young, I.~M.}

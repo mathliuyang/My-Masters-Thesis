@@ -4,6 +4,7 @@ The top-level auxiliary file: 四川师范大学硕士学位论文模版.aux
 A level-1 auxiliary file: chap/thm.aux
 A level-1 auxiliary file: chap/abs.aux
 A level-1 auxiliary file: chap/chap1.aux
+A level-1 auxiliary file: chap/chap2.aux
 A level-1 auxiliary file: chap/chap3.aux
 A level-1 auxiliary file: chap/chap4.aux
 A level-1 auxiliary file: chap/chap5.aux
@@ -12,52 +13,51 @@ The style file: acm.bst
 A level-1 auxiliary file: chap/thanks.aux
 A level-1 auxiliary file: chap/ach.aux
 Database file #1: /Users/turingscat/Zotero/better-bibtex/mylibrary.bib
-Warning--I didn't find a database entry for "yangConvergenceAnalysisInvariant2020d"
 Warning--to sort, need author, editor, or key in liIntroductionFractionalCalculus2015
 Warning--to sort, need author, editor, or key in HandbookDifferentialEquations2008
 Warning--to sort, need author, editor, or key in brychkovIndefiniteIntegrals2008
 Warning--empty author and editor in HandbookDifferentialEquations2008
 Warning--empty author and editor in brychkovIndefiniteIntegrals2008
 Warning--empty author and editor in liIntroductionFractionalCalculus2015
-You've used 64 entries,
+You've used 74 entries,
             2253 wiz_defined-function locations,
-            970 strings with 19296 characters,
-and the built_in function-call counts, 22077 in all, are:
-= -- 2214
-> -- 960
+            1039 strings with 21844 characters,
+and the built_in function-call counts, 25486 in all, are:
+= -- 2559
+> -- 1105
 < -- 0
-+ -- 412
-- -- 332
-* -- 1974
-:= -- 3540
-add.period$ -- 191
-call.type$ -- 64
-change.case$ -- 351
++ -- 475
+- -- 382
+* -- 2300
+:= -- 4090
+add.period$ -- 221
+call.type$ -- 74
+change.case$ -- 406
 chr.to.int$ -- 0
-cite$ -- 70
-duplicate$ -- 659
-empty$ -- 1771
-format.name$ -- 332
-if$ -- 4518
+cite$ -- 80
+duplicate$ -- 749
+empty$ -- 2042
+format.name$ -- 382
+if$ -- 5201
 int.to.chr$ -- 0
-int.to.str$ -- 64
-missing$ -- 67
-newline$ -- 319
-num.names$ -- 126
-pop$ -- 283
+int.to.str$ -- 74
+missing$ -- 77
+newline$ -- 369
+num.names$ -- 146
+pop$ -- 318
 preamble$ -- 1
-purify$ -- 292
+purify$ -- 337
 quote$ -- 0
-skip$ -- 393
+skip$ -- 443
 stack$ -- 0
-substring$ -- 1782
-swap$ -- 166
+substring$ -- 2084
+swap$ -- 186
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 242
+type$ -- 282
 warning$ -- 6
-while$ -- 235
-width$ -- 66
-write$ -- 647
-(There were 7 warnings)
+while$ -- 274
+width$ -- 76
+write$ -- 747
+(There were 6 warnings)
