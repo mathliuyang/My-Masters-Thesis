@@ -88,7 +88,6 @@ linkcolor=black
 \usepackage{appendix}     %在latex文件中加入附录的依赖
 \usepackage{times}        %提供Time New Roman字体
 
-
 \usepackage[a4paper,left=25mm,right=25mm,top=30mm,bottom=25mm,headheight=23cm,headsep=2mm,footskip=7mm]{geometry}
 %设置行间距，这是粗略设定，大体与20pt无差距
 % \linespread{1.38}\selectfont%1.38 1.25
@@ -208,10 +207,11 @@ linkcolor=black
 %BibTeX参考文献支持宏包
 \usepackage{texnames}   %用于显示BibTeX
 \usepackage[numbers,sort&compress]{natbib}
-%下面的命令\citep将参考文献以上标形式出现
-\let\oldcitep\citep
-\newcommand{\citen}[2][]{\textsuperscript{\oldcitep{#2}#1}}
-\renewcommand{\citep}{\citen}
+% %下面的命令\citep将参考文献以上标形式出现
+% \let\oldcitep\citep
+% \newcommand{\citen}[2][]{\textsuperscript{\oldcitep{#2}#1}}
+% \renewcommand{\citep}{\citen}
+% \usepackage[superscript,nomove]{cite} %上标引用
 
 %调整条目间距离
 \bibsep=0pt

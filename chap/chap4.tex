@@ -1,15 +1,15 @@
 \chapter[NFSWEs的同时保原始能量和质量守恒的方法]{NFSWEs的同时保原始能量和质量守恒的方法}
-据我们所知, 目前针对 NFSWEs 缺乏能够同时保持原始能量和质量的数值方法.
+据所知, 目前针对 NFSWEs 缺乏能够同时保持原始能量和质量的数值方法.
 
 注意到平均向量场（AVF）方法可以保持哈密顿系统的能量 \cite{buddGeometricIntegrationUsing1999,quispelNewClassEnergypreserving2008}.此外,最近提出的分区平均向量场（PAVF）方法不仅可以保持传统能量,还可以保持更多的守恒性质,并且已被用于构造哈密顿常微分方程的守恒数值方案,参见 \cite{caiPartitionedAveragedVector2018}.
-这些研究基础使我们有可能实现我们的目标,而对 NFSWEs 的哈密顿结构的推导是构建保结构方法的成功关键.
+这些研究基础使有可能实现的目标,而对 NFSWEs 的哈密顿结构的推导是构建保结构方法的成功关键.
 
-据我们所知,目前很少有关注分数微分方程的哈密顿结构的研究.最近,王和黄 \cite{wangStructurepreservingNumericalMethods2018} 提出了带有分数阶拉普拉斯的泛函的变分导数,并将一维分数非线性薛定谔方程重新表述为一个哈密顿系统.傅和蔡 \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数Klein-Gordon-Schr{\"o}dinger方程的哈密顿形式,并随后发展了守恒数值方案.
-基于此,我们首先推导了具有周期边界条件的二维 NFSWEs 的哈密顿形式,然后通过分区平均向量场加法（PAVF-P）方法,成功构建了能够同时守恒原始能量和质量的数值格式.
+据所知,目前很少有关注分数微分方程的哈密顿结构的研究.最近,王和黄 \cite{wangStructurepreservingNumericalMethods2018} 提出了带有分数阶拉普拉斯的泛函的变分导数,并将一维分数非线性薛定谔方程重新表述为一个哈密顿系统.傅和蔡 \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数Klein-Gordon-Schr{\"o}dinger方程的哈密顿形式,并随后发展了守恒数值方案.
+基于此,首先推导了具有周期边界条件的二维 NFSWEs 的哈密顿形式,然后通过分区平均向量场加法（PAVF-P）方法,成功构建了能够同时守恒原始能量和质量的数值格式.
 
 \section{NFSWEs的哈密顿格式构建}\label{Section_PAVF: 2_1}
 % \subsection{NFSWEs的哈密顿结构}
-众所周知,哈密顿结构对于构建某些问题的保结构算法至关重要.然而,据我们所知,没有研究人员考虑过带有周期边界条件的NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的哈密顿结构.基于此,我们首先重构了带有周期边界条件的此问题的哈密顿结构.
+众所周知,哈密顿结构对于构建某些问题的保结构算法至关重要.然而,据所知,没有研究人员考虑过带有周期边界条件的NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的哈密顿结构.基于此,首先重构了带有周期边界条件的此问题的哈密顿结构.
 
 设
 \begin{align}
@@ -33,17 +33,17 @@ u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 \end{align}
 其中$p, q,\varphi,\psi$满足周期边界条件.
 
-为了得到NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的哈密顿形式,我们引入了两个重要的引理.
+为了得到NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的哈密顿形式,引入了两个重要的引理.
 \begin{lemma}\label{lem_PAVF:1}
-	%  \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 
-	 给定 $1<\alpha \leq 2$,那么对于任何实值周期函数 $p, q \in L^{2}(\Omega)$,我们有
+	\cite{fuStructurepreservingAlgorithmsTwodimensional2020} 
+	 给定 $1<\alpha \leq 2$,那么对于任何实值周期函数 $p, q \in L^{2}(\Omega)$,有
 	\begin{align}\label{eq_PAVF:22}
 	\int_{\Omega}(-\Delta)^{\frac{\alpha}{2}} p q d \boldsymbol{x}=\int_{\Omega}(-\Delta)^{\frac{\alpha}{4}} p(-\Delta)^{\frac{\alpha}{4}} q d \boldsymbol{x}=\int_{\Omega} p(-\Delta)^{\frac{\alpha}{2}} q d \boldsymbol{x}.
 	\end{align}
 	\end{lemma}
 
 \begin{proof}
-	根据 Plancherel 定理,我们有
+	根据 Plancherel 定理,有
 \begin{equation}
 \begin{aligned}
 \int_{\Omega}(-\Delta)^{\frac{\alpha}{2}} p q d \boldsymbol{x} &=(2 L)^{2} \sum_{l_{1} \in \mathbb{Z}} \sum_{l_{2} \in \mathbb{Z}}\left|v_{l_{1}}^{2}+v_{l_{2}}^{2}\right|^{\frac{\alpha}{2}} \hat{p}_{l_{1}, l_{2}} \hat{q}_{l_{1}, l_{2}} \\
@@ -51,7 +51,7 @@ u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 &=(2 L)^{2} \sum_{l_{1} \in \mathbb{Z}} \sum_{l_{2} \in \mathbb{Z}} \hat{p}_{l_{1}, l_{2}}\left|v_{l_{1}}^{2}+v_{l_{2}}^{2}\right|^{\frac{\alpha}{2}} \hat{q}_{l_{1}, l_{2}} .
 \end{aligned}
 \label{eq_23}\end{equation}
-然后,我们可以得到
+然后,可以得到
 \begin{equation}
 \int_{\Omega}(-\Delta)^{\frac{\alpha}{2}} p q d \boldsymbol{x}=\int_{\Omega}(-\Delta)^{\frac{\alpha}{4}} p(-\Delta)^{\frac{\alpha}{4}} q d x=\int_{\Omega} p(-\Delta)^{\frac{\alpha}{2}} q d \boldsymbol{x}
 \label{eq_24}\end{equation}
@@ -59,7 +59,7 @@ u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 
 
 \begin{lemma}\label{lem_PAVF:2}
-	%  \cite{wangStructurepreservingNumericalMethods2018} 
+	\cite{wangStructurepreservingNumericalMethods2018} 
 	 对于形如
 	\begin{align}\label{eq_PAVF:25}
 	F[g]=\int_{\Omega} f\left(g(\boldsymbol{x}),(-\Delta)^{\frac{\alpha}{4}} g(\boldsymbol{x})\right) d \boldsymbol{x},
@@ -71,7 +71,7 @@ u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 	\end{lemma}
 
 \begin{proof}
-	令 $\phi(\boldsymbol{x})$ 为带有周期边界条件的任意函数.根据分数 拉普拉斯 是线性算子以及变分导数的定义,我们有
+	令 $\phi(\boldsymbol{x})$ 为带有周期边界条件的任意函数.根据分数 拉普拉斯 是线性算子以及变分导数的定义,有
 \begin{equation}
 \begin{aligned}
 \int_{\Omega} \frac{\delta F}{\delta g} \phi(\boldsymbol{x}) d \boldsymbol{x} &=\left[\frac{d}{d \mu} \int_{\Omega} f\left(g+\mu \phi,(-\Delta)^{\frac{\alpha}{4}} g+\mu(-\Delta)^{\frac{\alpha}{4}} \phi\right) d \boldsymbol{x}\right]_{\mu=0} \\
@@ -84,7 +84,7 @@ u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 其中使用了 \eqref{eq_PAVF:22}.基于 $\phi(\boldsymbol{x})$ 的任意性,通过变分法基本引理,可以得到 \eqref{eq_PAVF:26}.
 \end{proof}
 
-基于上述准备,我们可以证明以下结果.
+基于上述准备,可以证明以下结果.
 
 \begin{theorem}	\label{thm_PAVF:2_1}
 设
@@ -168,11 +168,11 @@ J=\left(\begin{array}{cccc}
 \end{equation}
 证毕.
 \end{proof}
-\section{傅立叶拟谱离散格式}\label{Section_PAVF: 2_2}
+\section{傅里叶拟谱离散格式}\label{Section_PAVF: 2_2}
 % \subsection{空间半离散系统}
 
-鉴于周期性边界条件,我们选择Fourier拟谱法对NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3}进行空间离散化.
-将Fourier拟谱法应用于空间以近似先前的等效系统 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33},得到如下的空间半离散系统：
+鉴于周期性边界条件,选择傅里叶拟谱法对NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3}进行空间离散化.
+将傅里叶拟谱法应用于空间以近似先前的等效系统 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33},得到如下的空间半离散系统：
 \begin{align}
 &\varPhi_{t}=D^{\alpha}P+\kappa \Psi-\beta \left( P^{2}+Q^{2}\right)\cdot P,\label{eq_PAVF:56}\\
 &\Psi_{t}=D^{\alpha}Q-\kappa \varPhi-\beta \left( P^{2}+Q^{2}\right)\cdot Q,\label{eq_PAVF:57}\\
@@ -203,12 +203,12 @@ I & 0 & 0 & 0 \\
 \end{array}\right).
 \end{align}
 
-此外,我们定义质量
+此外,定义质量
 \begin{align}\label{eq_PAVF:63}
 G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 \end{align}
 
-接下来我们有以下定理.
+接下来有以下定理.
 
 \begin{theorem}	\label{thm_PAVF:3}
 	半离散系统 \eqref{eq_PAVF:56}-\eqref{eq_PAVF:59} 具有质量和能量守恒定律：
@@ -218,14 +218,14 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 \end{theorem}
 
 \begin{proof}
-	根据 \eqref{eq_PAVF:63},我们可以推导出：
+	根据 \eqref{eq_PAVF:63},可以推导出：
 	\begin{align}\label{eq_PAVF:64}
 		\frac{d G(Y)}{d t}=&~2 h_{x} h_{y}\left(\kappa P^{T}P_t+\kappa Q^{T}Q_t+\Psi^{T}_t P+\Psi^{T}P_{t}-\varPhi^{T}_t Q-\varPhi^{T}Q_{t}\right)\nonumber\\
 		=&~2 h_{x} h_{y}\left(\kappa P^{T}\varPhi+\kappa Q^{T}\Psi {+ P^{T}D^{\alpha}Q}-\kappa P^{T}\varPhi-\beta P^{T}\left( P^{2}+Q^{2}\right)\cdot Q\right.\nonumber\\
 		&~\left.+\Psi^{T}\varPhi{-Q^{T}D^{\alpha}P}-\kappa Q^{T}\Psi+\beta Q^{T}\left( P^{2}+Q^{2}\right)\cdot P-\varPhi^{T}\Psi\right)\nonumber\\
 		=&~0.
 		\end{align}
-		基于矩阵 $S$ 的反对称性质,结合 \eqref{eq_PAVF:60},我们有
+		基于矩阵 $S$ 的反对称性质,结合 \eqref{eq_PAVF:60},有
 		\begin{equation}\label{eq_PAVF:65}
 		\frac{d H(Y)}{d t}=\nabla H(Y)^{T} f(Y)=\nabla H(Y)^{T} S \nabla H(Y)=0 .
 		\end{equation}
@@ -236,9 +236,9 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 \section{PAVF-P 保结构格式}\label{Section_PAVF: 3}
 \subsection{PAVF-P 格式}
 
-对于NFSWEs\eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3},存在许多结构保持的方法,但其中大多数只保持修改后的能量或质量,详见\cite{liFastEnergyConserving2018,huEfficientEnergyPreserving2022}.这启发我们构建数值方法,不仅保持原始能量,还保持原始质量.基于上文建立的哈密顿系统\eqref{eq_PAVF:60},我们在这里应用\cite{caiPartitionedAveragedVector2018}中开发的分区平均向量场（PAVF）方法,为NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 构建结构保持的数值方法,因为PAVF方法不仅保持传统能量,还可能保持其他守恒性质.
+对于NFSWEs\eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3},存在许多结构保持的方法,但其中大多数只保持修改后的能量或质量,详见\cite{liFastEnergyConserving2018,huEfficientEnergyPreserving2022}.这启发构建数值方法,不仅保持原始能量,还保持原始质量.基于上文建立的哈密顿系统\eqref{eq_PAVF:60},在这里应用\cite{caiPartitionedAveragedVector2018}中开发的分区平均向量场（PAVF）方法,为NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 构建结构保持的数值方法,因为PAVF方法不仅保持传统能量,还可能保持其他守恒性质.
 
-考虑哈密顿系统\eqref{eq_PAVF:60},并应用PAVF方法,我们可以得到求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的全离散格式,如下所示：
+考虑哈密顿系统\eqref{eq_PAVF:60},并应用PAVF方法,可以得到求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的全离散格式,如下所示：
 \begin{align}
 &\delta_{t} \varPhi^{m}=\int_{0}^{1}\kappa H_{\Psi}\left(\varPhi^{m+1}, \varepsilon \Psi^{m+1}+(1-\varepsilon) \Psi^{m}, P^{m}, Q^{m}\right)-H_{P}\left(\varPhi^{m+1}, \Psi^{m+1}, \varepsilon P^{m+1}+(1-\varepsilon) P^{m}, Q^{m}\right)d \varepsilon,\label{eq_PAVF:70}\\
 &\delta_{t} \Psi^{m}=-\int_{0}^{1}\kappa H_{\varPhi}\left(\varepsilon \varPhi^{m+1}+(1-\varepsilon) \varPhi^{m}, \Psi^{m}, P^{m}, Q^{m}\right)-H_{Q}\left(\varPhi^{m+1}, \Psi^{m+1}, P^{m+1}, \varepsilon Q^{m+1}+(1-\varepsilon) Q^{m}\right)d\varepsilon,\label{eq_PAVF:71}\\
@@ -347,7 +347,7 @@ H^{m+1}=H^{m}.
 \end{proof}
 
 \subsection{其他数值方法}
-为了比较,我们还给出了用于求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的以下两个二阶AVF格式.
+为了比较,还给出了用于求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的以下两个二阶AVF格式.
 \begin{enumerate}[$\bullet$]
 \item FAVF（Fourier拟谱AVF）格式
 \begin{align}
@@ -384,18 +384,18 @@ H^{m+1}=H^{m}.
 
 \begin{remark}\label{rk_PAVF:2}
 值得强调的是,用于求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的其他现有方法仅保持修改后的能量和/或修改后的质量.例如,SAV方法 
-% \cite{chengConvergenceEnergyconservingScheme2022}
+\cite{chengConvergenceEnergyconservingScheme2022}
 仅保持修改后的能量,三级线性隐式差分格式
-% \cite{ranLinearlyImplicitConservative2016}
+\cite{ranLinearlyImplicitConservative2016}
 保持修改后的能量和质量.然而,所提出的FPAVF-P格式\eqref{eq_PAVF:98}-\eqref{eq_PAVF:101}在离散意义上同时保持原始质量和能量.这是其主要贡献之一.
 此外,FPAVF-P格式\eqref{eq_PAVF:98}-\eqref{eq_PAVF:101}在时间上具有二阶精度,在空间上具有谱精度.
 \end{remark}
 
 \section{数值实例}\label{Section_PAVF: 4}
 为了支持和验证前述理论结果,本节提供了一些数值实例.
-在我们的计算中,采用了基于快速傅立叶变换（FFT）方法的快速求解器方法,可以降低内存需求和计算复杂性.
+在的计算中,采用了基于快速傅里叶变换（FFT）方法的快速求解器方法,可以降低内存需求和计算复杂性.
 
-为了获得数值误差,我们利用以下误差函数
+为了获得数值误差,利用以下误差函数
 \begin{align}\label{eq_PAVF:103}
 E(\tau)=\left\|U_{N}^{M}-U_{N}^{2 M}\right\|_{\infty},~E(N)=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty},
 \end{align}
@@ -417,18 +417,18 @@ R H^{n}=\left|\left(H^{n}-H^{0}\right) / H^{0}\right|, \quad R G^{n}=\left|\left
 其中$H^{n}, G^{n}$分别表示$t_n$时刻的离散能量和质量.
 
 \begin{example}\label{exp_PAVF:2}
-	首先,我们考虑一维非线性分数阶波动方程 \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3},具体形式为
+	首先,考虑一维非线性分数阶波动方程 \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3},具体形式为
 	\begin{equation}\label{eq_PAVF:108}
 	u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0, \quad (x,t)\in  \Omega\times[0, T],
 	\end{equation}
 	其中 $u(x, 0)=(1+\mathrm{i}) x e^{-10(1-x)^2}$ 以及 $u_t(x, 0)=0$.
 \end{example}
-	基于离散情形中给定的守恒律 \eqref{eq_PAVF:11141},我们有 $G^n\equiv G^0$ 和 $H^n\equiv H^0$,并且 $G^0, H^0$ 仅依赖于给定的初值函数 $u(x,0)$ 和 $u_t(x, 0)$.
+	基于离散情形中给定的守恒律 \eqref{eq_PAVF:11141},有 $G^n\equiv G^0$ 和 $H^n\equiv H^0$,并且 $G^0, H^0$ 仅依赖于给定的初值函数 $u(x,0)$ 和 $u_t(x, 0)$.
 	很容易验证初始值函数 $u(x, 0)$ 沿着 $x$ 轴迅速衰减为零,远离 $x=1$.这意味着在有界区间 $\Omega$ 外,初始值函数可以被忽略. %考虑到机器精度的限制,
-	在这里,我们取 $\Omega=(-25,25)$.
-	基于离散情形定义的守恒律 \eqref{eq_PAVF:7},利用高斯数值积分,我们立即得到任意 $\alpha$ 下的原始质量 $G(0)=0.812482096009503$,以及 $\alpha=2$ 时的原始能量 $E(0)=4.56197648980619$.
+	在这里,取 $\Omega=(-25,25)$.
+	基于离散情形定义的守恒律 \eqref{eq_PAVF:7},利用高斯数值积分,立即得到任意 $\alpha$ 下的原始质量 $G(0)=0.812482096009503$,以及 $\alpha=2$ 时的原始能量 $E(0)=4.56197648980619$.
 	
-	我们首先计算上述四种格式（FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式）相对于 $\alpha=1.5$ 和 $\alpha=2.0$ 的 $T=1$ 时的收敛阶数,见图 \ref{fig_PAVF:1}-\ref{fig_PAVF:2}.
+	首先计算上述四种格式（FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式）相对于 $\alpha=1.5$ 和 $\alpha=2.0$ 的 $T=1$ 时的收敛阶数,见图 \ref{fig_PAVF:1}-\ref{fig_PAVF:2}.
 	很容易发现这四种格式在空间上均具有谱精度,而 FPAVF 格式在时间上表现出一阶精度,而其他格式则表现出二阶精度.
 	
 
@@ -461,7 +461,7 @@ R H^{n}=\left|\left(H^{n}-H^{0}\right) / H^{0}\right|, \quad R G^{n}=\left|\left
 		\end{center}
 		\end{figure}
 
-现在我们关注现有方法的守恒性能.图 \ref{fig_PAVF:3} 显示了在不同 $\alpha$ 值下,通过 $N=512$ 和 $\tau=0.01$ 计算的不同时间段内的离散能量演化情况.可以观察到,特别是在 $\alpha=2$ 的结果中,FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式计算得到的离散能量均一致收敛到原始能量,而 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022} 和三层线性隐式差分格式 \cite{ranLinearlyImplicitConservative2016} 的性能较差.这一现象与后者仅保留修改后的能量而不是原始能量是一致的.
+现在关注现有方法的守恒性能.图 \ref{fig_PAVF:3} 显示了在不同 $\alpha$ 值下,通过 $N=512$ 和 $\tau=0.01$ 计算的不同时间段内的离散能量演化情况.可以观察到,特别是在 $\alpha=2$ 的结果中,FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式计算得到的离散能量均一致收敛到原始能量,而 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022} 和三层线性隐式差分格式 \cite{ranLinearlyImplicitConservative2016} 的性能较差.这一现象与后者仅保留修改后的能量而不是原始能量是一致的.
 
 \begin{figure}[H]
 	\begin{center}
@@ -511,7 +511,7 @@ R H^{n}=\left|\left(H^{n}-H^{0}\right) / H^{0}\right|, \quad R G^{n}=\left|\left
 	\end{center}
 	\end{figure}
 
-	更准确地说,表 \ref{tab_PAVF:1} 到表 \ref{tab_PAVF:4} 显示了不同 $\alpha$ 值下不同时间 $t=t_n$ 时的离散能量 $H^n$ 和离散质量 $G^n$ 的值,这些值是通过取 $N=512$ 和 $\tau=0.01$ 获得的.从表 \ref{tab_PAVF:1} 可以看出,提出的四种格式均保留了原始能量,而 SAV 格式和线性隐式差分格式仅保留了修改后的能量.类似地,从表 \ref{tab_PAVF:2} 到表 \ref{tab_PAVF:4},我们观察到 FPAVF-P 格式均匀收敛到原始质量,其他方法性能较差,而三层线性隐式差分格式仅保留了修改后的质量.
+	更准确地说,表 \ref{tab_PAVF:1} 到表 \ref{tab_PAVF:4} 显示了不同 $\alpha$ 值下不同时间 $t=t_n$ 时的离散能量 $H^n$ 和离散质量 $G^n$ 的值,这些值是通过取 $N=512$ 和 $\tau=0.01$ 获得的.从表 \ref{tab_PAVF:1} 可以看出,提出的四种格式均保留了原始能量,而 SAV 格式和线性隐式差分格式仅保留了修改后的能量.类似地,从表 \ref{tab_PAVF:2} 到表 \ref{tab_PAVF:4},观察到 FPAVF-P 格式均匀收敛到原始质量,其他方法性能较差,而三层线性隐式差分格式仅保留了修改后的质量.
 
 	
 \begin{table}[H]\small
@@ -602,7 +602,7 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &Linear-Implicit   &FPAVF-P\\
 	  \end{tabular}\label{tab_PAVF:4}%
   \end{table}%
 
-  由于对于 $\alpha\neq 2$,原始能量的计算不太容易,我们从相对误差的角度验证了离散守恒定律,见图 \ref{fig_PAVF:5} 到图 \ref{fig_PAVF:6}.同样,这些图表显示 FPAVF-P 格式在保持原始质量方面具有最佳性能.随着 $\alpha$ 的增加,它在保持原始能量方面的性能将更好.这些观察结果与我们之前的理论结果一致.
+  由于对于 $\alpha\neq 2$,原始能量的计算不太容易,从相对误差的角度验证了离散守恒定律,见图 \ref{fig_PAVF:5} 到图 \ref{fig_PAVF:6}.同样,这些图表显示 FPAVF-P 格式在保持原始质量方面具有最佳性能.随着 $\alpha$ 的增加,它在保持原始能量方面的性能将更好.这些观察结果与之前的理论结果一致.
 
   \begin{figure}[H]
 	\begin{center}
@@ -639,13 +639,13 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &Linear-Implicit   &FPAVF-P\\
 	\end{center}
 	\end{figure}
 	\begin{example}\label{exp_PAVF:4}
-		现在我们考虑带有初始值的二维非线性分数薛定谔波动方程 \eqref{eq_1}-\eqref{eq_3}：
+		现在考虑带有初始值的二维非线性分数薛定谔波动方程 \eqref{eq_1}-\eqref{eq_3}：
 		\begin{equation}\label{eq_PAVF_110}
 		u(x,y, 0)=\mbox{sech}\left(x^2+y^2\right), u_t(x,y, 0)=\sin (x+y) \mbox{sech}\left(-2(x^2+y^2)\right), (x,y,t)\in  \Omega\times[0, T],
 		\end{equation}
 		其中 $\Omega=[-5,5] \times[-5,5]$.
 		\end{example}
-	类似于一维情况,我们首先计算 FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式在 $\alpha=1.5$ 和 $\alpha=2.0$ 时 $T=1$ 的收敛阶.误差变化如图 \ref{fig_PAVF:7} 到图 \ref{fig_PAVF:8} 所示.我们可以清晰地观察到这四种格式在空间上都具有谱精度,而 FPAVF 格式在时间上表现出一阶精度,其他格式在时间上表现出二阶精度.
+	类似于一维情况,首先计算 FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式在 $\alpha=1.5$ 和 $\alpha=2.0$ 时 $T=1$ 的收敛阶.误差变化如图 \ref{fig_PAVF:7} 到图 \ref{fig_PAVF:8} 所示.可以清晰地观察到这四种格式在空间上都具有谱精度,而 FPAVF 格式在时间上表现出一阶精度,其他格式在时间上表现出二阶精度.
 
 	
 \begin{figure}[H]
@@ -678,9 +678,9 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &Linear-Implicit   &FPAVF-P\\
 	\end{center}
 	\end{figure}
 
-	为了比较与现有方法的结构保持能力,我们首先计算了原始质量和能量.注意到原始质量 $G(t)$ 与 $\alpha$ 无关,通过使用高斯数值积分,我们得到了任何 $\alpha$ 下的原始质量 $G(0)=3.14159265323701$.类似地,我们可以得到 $\alpha=2$ 时的原始能量 $E(0)=3.22697078976648$.
+	为了比较与现有方法的结构保持能力,首先计算了原始质量和能量.注意到原始质量 $G(t)$ 与 $\alpha$ 无关,通过使用高斯数值积分,得到了任何 $\alpha$ 下的原始质量 $G(0)=3.14159265323701$.类似地,可以得到 $\alpha=2$ 时的原始能量 $E(0)=3.22697078976648$.
 
-与一维问题不同,二维情况下没有三级线性隐式格式,因此我们只比较了本文提出的 SAV 方法、FPAVF-P、FAVF 和 FPAVF-C 格式的性能.图 \ref{fig_PAVF:9} 到图 \ref{fig_PAVF:10} 展示了在不同 $\alpha$ 下通过 $N=64$ 和 $\tau=0.01$ 计算的离散质量和离散能量的演变.图 \ref{fig_PAVF:11} 到图 \ref{fig_PAVF:12} 展示了随时间变化的离散质量和能量的相对误差的变化.我们可以观察到,FPAVF-P 格式在原始质量上收敛得很好,其他三种方法性能较差,尤其是 FAVF 格式和 FPAVF 格式（FPAVF 格式的结果这里没有显示因为它更糟糕）.而本文提出的三种格式都能很好地保持原始能量不变,而 SAV 方法只能保持一个修正的能量.这些现象再次确认了我们理论结果的正确性.
+与一维问题不同,二维情况下没有三级线性隐式格式,因此只比较了本文提出的 SAV 方法、FPAVF-P、FAVF 和 FPAVF-C 格式的性能.图 \ref{fig_PAVF:9} 到图 \ref{fig_PAVF:10} 展示了在不同 $\alpha$ 下通过 $N=64$ 和 $\tau=0.01$ 计算的离散质量和离散能量的演变.图 \ref{fig_PAVF:11} 到图 \ref{fig_PAVF:12} 展示了随时间变化的离散质量和能量的相对误差的变化.可以观察到,FPAVF-P 格式在原始质量上收敛得很好,其他三种方法性能较差,尤其是 FAVF 格式和 FPAVF 格式（FPAVF 格式的结果这里没有显示因为它更糟糕）.而本文提出的三种格式都能很好地保持原始能量不变,而 SAV 方法只能保持一个修正的能量.这些现象再次确认了理论结果的正确性.
 
 
 \begin{figure}[H]
@@ -765,7 +765,7 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &Linear-Implicit   &FPAVF-P\\
 \end{center}
 \end{figure}
 
-更详细的比较结果见表 \ref{tab_PAVF:4-1} 到表 \ref{tab_PAVF:4-4},通过观察这些数据,我们可以得出相同的结论.
+更详细的比较结果见表 \ref{tab_PAVF:4-1} 到表 \ref{tab_PAVF:4-4},通过观察这些数据,可以得出相同的结论.
 
 
 \begin{table}[H]\small
@@ -856,7 +856,7 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &FPAVF-P\\
 	  \end{tabular}\label{tab_PAVF:4-4}%
   \end{table}%
 
-  最后,我们分别在图 \ref{fig_PAVF:13}-\ref{fig_PAVF:16} 中展示了 $\alpha=1.3,1.6,1.99,2$ 时波的演化过程,这是通过取 $N=128$ 和 $\tau=0.01$ 得到的.我们可以观察到,阶数 $\alpha$ 将显著影响波的形状,当 $\alpha$ 变大时,波的形状变化更快.具体来说,当 $\alpha \rightarrow 2$ 时,数值解收敛到经典的非线性薛定谔波动方程,参见 \cite{zhangConservativeNumericalScheme2003,liCompactFiniteDifference2012,wangAnalysisNewConservative2006}.
+  最后,分别在图 \ref{fig_PAVF:13}-\ref{fig_PAVF:16} 中展示了 $\alpha=1.3,1.6,1.99,2$ 时波的演化过程,这是通过取 $N=128$ 和 $\tau=0.01$ 得到的.可以观察到,阶数 $\alpha$ 将显著影响波的形状,当 $\alpha$ 变大时,波的形状变化更快.具体来说,当 $\alpha \rightarrow 2$ 时,数值解收敛到经典的非线性薛定谔波动方程,参见 \cite{zhangConservativeNumericalScheme2003,liCompactFiniteDifference2012,wangAnalysisNewConservative2006}.
 
   \begin{figure}[H]
 	\begin{center}
@@ -949,7 +949,7 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &FPAVF-P\\
 
 \section{小结}\label{Section_PAVF: 5}
 
-在本文中,我们重新表述了二维分数非线性薛定谔波动方程为一个规范哈密顿系统.通过将分块平均向量场加方法与傅立叶拟谱方法结合,我们基于得到的哈密顿系统构建了一个保守的数值格式.理论分析和数值结果表明,所提出的方法能够有效地保持原始能量和质量.
+在本文中,重新表述了二维分数非线性薛定谔波动方程为一个规范哈密顿系统.通过将分块平均向量场加方法与傅里叶拟谱方法结合,基于得到的哈密顿系统构建了一个守恒的数值格式.理论分析和数值结果表明,所提出的方法能够有效地保持原始能量和质量.
 
 % \section*{致谢}
 

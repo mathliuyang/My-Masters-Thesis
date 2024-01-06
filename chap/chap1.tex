@@ -53,14 +53,14 @@ Zhang和Ran \cite{zhangHighorderStructurepreservingDifference2023} 提出并分�
 这些优势的代价是必须求解一个非线性代数系统来确定松弛参数.然而,对于非二次不变量的情况,作者们并未考虑构建显式的守恒方案.
 幸运的是,不变能量二次化（IEQ）方法 \cite{yangLinearUnconditionallyEnergy2017, yangEfficientLinearSchemes2017} 和SAV方法 \cite{chengConvergenceEnergyconservingScheme2022} 可以通过变量变换将非二次能量转化为新变量的二次形式,而由此产生的新等效系统仍然保留了关于新变量的类似能量定律.
 IEQ方法和SAV方法已被广泛应用于梯度流模型.例如,具有熔体对流\cite{chenEfficientNumericalScheme2019}的树状凝固相场模型,具有一般非线性势的梯度流动方程\cite{yangConvergenceAnalysisInvariant2020},外延薄膜生长模型\cite{chengHighlyEfficientAccurate2019},使用SAV \cite{gongArbitrarilyHighorderUnconditionally2019}的任意高阶无条件能量稳定格式.
-有关IEQ和SAV的更多细节、扩展和改进,我们建议感兴趣的读者参考\cite{zhaoNumericalApproximationsPhase2017,shenScalarAuxiliaryVariable2018,liuExponentialScalarAuxiliary2020,chengMultipleScalarAuxiliary2018}.
+有关IEQ和SAV的更多细节、扩展和改进,建议感兴趣的读者参考\cite{zhaoNumericalApproximationsPhase2017,shenScalarAuxiliaryVariable2018,liuExponentialScalarAuxiliary2020,chengMultipleScalarAuxiliary2018}.
 受到这些发展的启发,本文通过结合SAV方法和显式RRK方法,为一维和二维NFSWEs开发了一种任意高阶的显式保结构数值格式.
 
 另一方面,
 注意到平均向量场（AVF）方法可以保持哈密顿系统的能量 \cite{buddGeometricIntegrationUsing1999,quispelNewClassEnergypreserving2008}.此外,最近提出的分区平均向量场（PAVF）方法不仅可以保持传统能量,还可以保持更多的守恒性质,并且已被用于构造哈密顿常微分方程的守恒数值方案,参见 \cite{caiPartitionedAveragedVector2018}.
-这些研究基础使我们有可能实现我们的目标,而对 NFSWEs 的哈密顿结构的推导是构建保结构方法的成功关键.
-据我们所知,目前很少有关注分数微分方程的哈密顿结构的研究.最近,王和黄 \cite{wangStructurepreservingNumericalMethods2018} 提出了带有分数拉普拉斯的泛函的变分导数,并将一维分数非线性薛定谔方程重新表述为一个哈密顿系统.傅和蔡 \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数Klein-Gordon-Schr{\"o}dinger方程的哈密顿形式,并随后发展了守恒数值方案.
-基于此,我们首先推导了具有周期边界条件的二维 NFSWEs 的哈密顿形式,然后通过分区平均向量场加法（PAVF-P）方法,成功构建了能够同时守恒原始能量和质量的数值格式.
+这些研究基础使有可能实现的目标,而对 NFSWEs 的哈密顿结构的推导是构建保结构方法的成功关键.
+据所知,目前很少有关注分数微分方程的哈密顿结构的研究.最近,王和黄 \cite{wangStructurepreservingNumericalMethods2018} 提出了带有分数拉普拉斯的泛函的变分导数,并将一维分数非线性薛定谔方程重新表述为一个哈密顿系统.傅和蔡 \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数Klein-Gordon-Schr{\"o}dinger方程的哈密顿形式,并随后发展了守恒数值方案.
+基于此,首先推导了具有周期边界条件的二维 NFSWEs 的哈密顿形式,然后通过分区平均向量场加法（PAVF-P）方法,成功构建了能够同时守恒原始能量和质量的数值格式.
 
 谱方法是非局部方法,这与分数阶薛定谔方程中的分数阶拉普拉斯算子的非局部性质相契合.傅里叶基函数是周期边界条件下的拉普拉斯算子的特征函数,且快速傅里叶变换 (FFT) 的使用使编程更加简便,可以大大减少计算量,提高计算效率.
 因此,本文空间离散均选用傅里叶拟谱方法.
@@ -68,13 +68,13 @@ IEQ方法和SAV方法已被广泛应用于梯度流模型.例如,具有熔体对
 \section{论文安排}
 本文结构安排如下：
 
-第2章主要有3节. 首先介绍了分数阶微积分以及Fourier 谱方法, 
+第2章主要有3节. 首先介绍了分数阶微积分以及傅里叶 谱方法, 
 然后引进一些本文后续部分经常涉及的记号和引理.
 
-第3章主要分6节. 在第 \ref{Section_SAVRRK: 2} 节中,我们通过引入一个标量辅助变量,将NFSWEs \eqref{eq_SAVRRK:1} 重新表述为一个等效系统.第 \ref{Section_SAVRRK: 3} 节通过对结果的重新表述应用傅立叶拟谱逼近,得到一个半离散的守恒系统.在第 \ref{Section_SAVRRK: 4} 节,我们通过在时间上应用松弛Runge-Kutta方法,提出了对重新表述的半离散系统的显式全离散方案,而所提出的标量辅助变量松弛Runge-Kutta（SAV-RRK）方案与标准标量辅助变量Runge-Kutta (SAV-RK) 方法具有相同的收敛阶.在第 \ref{Section_SAVRRK: 5} 节中,我们进一步估计引入的松弛系数,然后得到松弛方法的精度.第 \ref{Section_SAVRRK: 6} 节呈现了数值例子,以展示所提出方案的精度和守恒特性.在第 \ref{Section_SAVRRK: 7} 节中,我们进行简要总结.
+第3章主要分6节. 在第 \ref{Section_SAVRRK: 2} 节中,通过引入一个标量辅助变量,将NFSWEs \eqref{eq_SAVRRK:1} 重新表述为一个等效系统.第 \ref{Section_SAVRRK: 3} 节通过对结果的重新表述应用傅立叶拟谱逼近,得到一个半离散的守恒系统.在第 \ref{Section_SAVRRK: 4} 节,通过在时间上应用松弛Runge-Kutta方法,提出了对重新表述的半离散系统的显式全离散方案,而所提出的标量辅助变量松弛Runge-Kutta（SAV-RRK）方案与标准标量辅助变量Runge-Kutta (SAV-RK) 方法具有相同的收敛阶.在第 \ref{Section_SAVRRK: 5} 节中,进一步估计引入的松弛系数,然后得到松弛方法的精度.第 \ref{Section_SAVRRK: 6} 节呈现了数值例子,以展示所提出方案的精度和守恒特性.在第 \ref{Section_SAVRRK: 7} 节中,进行简要总结.
 
 
-第4章主要分4节. 在第 \ref{Section_PAVF: 2_1} 节,我们首先研究了带有周期边界条件的二维分数非线性薛定谔波方程 \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 的哈密顿结构, 接着在 \ref{Section_PAVF: 2_2} 节中通过使用傅立叶拟谱方法在空间中逼近得到的哈密顿系统,推导出一个半离散的保守系统.
-在第 \ref{Section_PAVF: 3} 节,通过使用PAVF-P方法对前述空间半离散系统进行离散化,我们得到了一类完全离散的保守数值方案,并证明了离散守恒定律.在第 \ref{Section_PAVF: 4} 节,我们提供了一维和二维数值示例,以演示理论结果.第 \ref{Section_PAVF: 5} 节总结了一些结论.
+第4章主要分4节. 在第 \ref{Section_PAVF: 2_1} 节,首先研究了带有周期边界条件的二维分数非线性薛定谔波方程 \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:2} 的哈密顿结构, 接着在 \ref{Section_PAVF: 2_2} 节中通过使用傅立叶拟谱方法在空间中逼近得到的哈密顿系统,推导出一个半离散的保守系统.
+在第 \ref{Section_PAVF: 3} 节,通过使用PAVF-P方法对前述空间半离散系统进行离散化,得到了一类完全离散的保守数值方案,并证明了离散守恒定律.在第 \ref{Section_PAVF: 4} 节,提供了一维和二维数值示例,以演示理论结果.第 \ref{Section_PAVF: 5} 节总结了一些结论.
 
-在第5章中.我们总结研究成果,列出一些进一步的研究成果并对今后的研究做一些展望.
+在第5章中.总结研究成果,列出一些进一步的研究成果并对今后的研究做一些展望.

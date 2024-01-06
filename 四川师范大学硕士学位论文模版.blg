@@ -13,51 +13,52 @@ The style file: acm.bst
 A level-1 auxiliary file: chap/thanks.aux
 A level-1 auxiliary file: chap/ach.aux
 Database file #1: /Users/turingscat/Zotero/better-bibtex/mylibrary.bib
+Warning--I didn't find a database entry for "brugnanoClassEnergyconserving哈密顿ian2018"
 Warning--to sort, need author, editor, or key in liIntroductionFractionalCalculus2015
 Warning--to sort, need author, editor, or key in HandbookDifferentialEquations2008
 Warning--to sort, need author, editor, or key in brychkovIndefiniteIntegrals2008
 Warning--empty author and editor in HandbookDifferentialEquations2008
 Warning--empty author and editor in brychkovIndefiniteIntegrals2008
 Warning--empty author and editor in liIntroductionFractionalCalculus2015
-You've used 74 entries,
+You've used 77 entries,
             2253 wiz_defined-function locations,
-            1039 strings with 21844 characters,
-and the built_in function-call counts, 25486 in all, are:
-= -- 2559
-> -- 1105
+            1062 strings with 22711 characters,
+and the built_in function-call counts, 26499 in all, are:
+= -- 2658
+> -- 1156
 < -- 0
-+ -- 475
-- -- 382
-* -- 2300
-:= -- 4090
-add.period$ -- 221
-call.type$ -- 74
-change.case$ -- 406
++ -- 496
+- -- 400
+* -- 2399
+:= -- 4258
+add.period$ -- 230
+call.type$ -- 77
+change.case$ -- 424
 chr.to.int$ -- 0
-cite$ -- 80
-duplicate$ -- 749
-empty$ -- 2042
-format.name$ -- 382
-if$ -- 5201
+cite$ -- 83
+duplicate$ -- 776
+empty$ -- 2118
+format.name$ -- 400
+if$ -- 5402
 int.to.chr$ -- 0
-int.to.str$ -- 74
-missing$ -- 77
-newline$ -- 369
-num.names$ -- 146
-pop$ -- 318
+int.to.str$ -- 77
+missing$ -- 80
+newline$ -- 384
+num.names$ -- 152
+pop$ -- 330
 preamble$ -- 1
-purify$ -- 337
+purify$ -- 352
 quote$ -- 0
-skip$ -- 443
+skip$ -- 458
 stack$ -- 0
-substring$ -- 2084
-swap$ -- 186
+substring$ -- 2155
+swap$ -- 192
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 282
+type$ -- 294
 warning$ -- 6
-while$ -- 274
-width$ -- 76
-write$ -- 747
-(There were 6 warnings)
+while$ -- 285
+width$ -- 79
+write$ -- 777
+(There were 7 warnings)

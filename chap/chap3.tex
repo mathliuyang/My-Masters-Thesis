@@ -1,7 +1,7 @@
 \chapter[NFSWEs 的任意高阶显式能量守恒方法]{NFSWEs 的任意高阶显式能量守恒方法
 }
 
-本文主要考虑周期边界的空间分数阶非线性 薛定谔 波方程(NFSWEs)的初边值问题
+本文主要考虑周期边界的空间分数阶非线性薛定谔 波方程(NFSWEs)的初边值问题
 
 \begin{align}
 &  u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i} \kappa u_{t}+\beta|u|^{2} u=0, \quad \boldsymbol{x} \in \Omega, \quad  t \in(0, T],\label{eq_SAVRRK:1}\\
@@ -9,12 +9,12 @@
 & u(\boldsymbol{x}+\boldsymbol{L}, t)=u(\boldsymbol{x}, t), \quad t \in[0, T],\label{eq_SAVRRK:3}
 \end{align}
 其中,$\mathrm{i}=\sqrt{-1}$,$1<\alpha \leq 2$,$\kappa, \beta(>0)$为两个实常数,$u(\boldsymbol{x}, t)$是未知的复值函数,$u_{0}(\boldsymbol{x})$ 和 $u_{1}(\boldsymbol{x})$ 为已知的光滑函数,$\boldsymbol{x}\in\Omega\!\subset\!
-R^d~(d\!=\!1,2)$,$\boldsymbol{L}$ 是周期.分数拉普拉斯算子可以通过傅里叶变换表示为：
+R^d~(d\!=\!1,2)$,$\boldsymbol{L}$ 是周期.分数阶拉普拉斯算子可以通过傅里叶变换表示为：
 \begin{align}\label{eq_SAVRRK:4}
 (-\Delta)^{\frac{\alpha}{2}} u(\boldsymbol{x},t)=\mathcal{F}^{-1}\left[|\boldsymbol{\xi}|^{\alpha} \mathcal{F}(u(\boldsymbol{\xi},t))\right],
 \end{align}
-其中,$\mathcal{F}$ 和 $\mathcal{F}^{-1}$ 分别表示傅里叶变换及其逆变换,详见 \cite{caffarelliExtensionProblemRelated2007}.NFSWEs \eqref{eq_SAVRRK:1} 可以被看作是经典薛定谔波方程的推广,
-后者在等离子体中的Langmuir波包络近似等物理应用中具有广泛应用 \cite{colinSemidiscretizationTimeNonlinear1998},并且已经得到深入研究,例如见 \cite{zhangConservativeNumericalScheme2003,baoUniformErrorEstimates2012,chengSeveralConservativeCompact2018,brugnanoClassEnergyconserving哈密顿ian2018}.
+其中,$\mathcal{F}$ 和 $\mathcal{F}^{-1}$ 分别表示傅里叶变换及其逆变换 \cite{caffarelliExtensionProblemRelated2007}.NFSWEs \eqref{eq_SAVRRK:1} 可以被看作是经典薛定谔波方程的推广,
+后者在等离子体中的Langmuir波包络近似等物理应用中具有广泛应用 \cite{colinSemidiscretizationTimeNonlinear1998},并且已经得到深入研究\cite{zhangConservativeNumericalScheme2003,baoUniformErrorEstimates2012,chengSeveralConservativeCompact2018,brugnanoClassEnergyconservingHamiltonian2018}.
 
 % 所研究的问题源自多种物理应用,例如Klein-Gordon方程的非相对论极限 \cite{tsutsumiNonrelativisticApproximationNonlinear1984,machiharaNonrelativisticLimitEnergy2002},等离子体中Langmuir波包络的近似 \cite{colinSemidiscretizationTimeNonlinear1998},以及用于光子弹的正弦-戈登方程的调制平面脉冲近似 \cite{baoComparisonsSineGordonPerturbed2010,xinModelingLightBullets2000}.它可以被看作是整数阶薛定谔方程的推广,并可以通过将Feynman路径积分推广到L$\acute{e}$vy路径积分来导出,参见 \cite{laskinFractionalQuantumMechanics2000,laskinFractional薛定谔Equation2002}.
 
@@ -38,7 +38,7 @@ R^d~(d\!=\!1,2)$,$\boldsymbol{L}$ 是周期.分数拉普拉斯算子可以通过
 	\end{align}
 
 \begin{proof}
-	将方程 \eqref{eq_SAVRRK:1} 与 $u$ 求内积,并在得到的公式中取虚部,得到
+	将方程 \eqref{eq_SAVRRK:1} 与 $u$ 求内积,并取虚部,有
 \begin{equation}
 \operatorname{Im}\left(u_{t t}, u\right)+\operatorname{Im}\left((-\Delta)^{\alpha / 2} u, u\right)+\operatorname{Im}\left(\mathrm{i} \kappa u_{t}, u\right)+\operatorname{Im}\left(\beta|u|^{2} u, u\right)=0 .
 \label{eq_11}\end{equation}
@@ -51,7 +51,7 @@ R^d~(d\!=\!1,2)$,$\boldsymbol{L}$ 是周期.分数拉普拉斯算子可以通过
 \kappa \frac{\mathrm{d}}{\mathrm{d} t}\|u(\cdot, t)\|_{L^{2}}^{2}+2 \frac{\mathrm{d}}{\mathrm{d} t} \operatorname{Im}\left(u_{t}, u\right)=0,
 \label{eq_13}\end{equation}
 其中使用了 $\operatorname{Im}\left((-\Delta)^{\alpha / 2} u, u\right)=0$,
-% 详见 \cite{guoExistenceGlobalSmooth2008} 第3.1引理的证明.
+详见 \cite{guoExistenceGlobalSmooth2008} 第3.1引理的证明.
 
 类似地,将方程 \eqref{eq_SAVRRK:1} 与 $u_{t}$ 求内积,并取实部,得到
 \begin{equation}
@@ -61,42 +61,49 @@ R^d~(d\!=\!1,2)$,$\boldsymbol{L}$ 是周期.分数拉普拉斯算子可以通过
 \begin{equation}
 \operatorname{Re}\left(u_{t t}, u_{t}\right)=\frac{1}{2} \frac{\mathrm{d}}{\mathrm{d} t}\left\|u_{t}(\cdot, t)\right\|_{L^{2}}^{2}, \operatorname{Re}\left(|u|^{2} u, u_{t}\right)=\frac{1}{4} \frac{\mathrm{d}}{\mathrm{d} t}\|u(\cdot, t)\|_{L^{4}}^{4} .
 \label{eq_15}\end{equation}
-此外,我们有
+此外,有
 \begin{equation}
 \operatorname{Re}\left((-\Delta)^{\alpha / 2} u, u_{t}\right)=\frac{1}{2} \frac{\mathrm{d}}{\mathrm{d} t}\left\|(-\Delta)^{\alpha / 4} u(\cdot, t)\right\|_{L^{2}}^{2},
 \label{eq_16}\end{equation}
-% 参见 \cite{guoExistenceGlobalSmooth2008} 第3.2引理的证明.
+参见 \cite{guoExistenceGlobalSmooth2008} 第3.2引理的证明.
 将方程 \eqref{eq_15} 和 \eqref{eq_16} 代入方程 \eqref{eq_14} 得到
 \begin{equation}
 \frac{\mathrm{d}}{\mathrm{d} t}\left\|u_{t}(\cdot, t)\right\|_{L^{2}}^{2}+\frac{\mathrm{d}}{\mathrm{d} t}\left\|(-\Delta)^{\alpha / 4} u(\cdot, t)\right\|_{L^{2}}^{2}+\frac{1}{2} \beta \frac{\mathrm{d}}{\mathrm{d} t}\|u(\cdot, t)\|_{L^{4}}^{4}=0 .
 \label{eq_17}\end{equation}
 其与方程 \eqref{eq_13} 分别意味着质量守恒 \eqref{eq_PAVF:_8}和能量守恒 \eqref{eq_SAVRRK:9}.
 \end{proof}
-如前所述，尽管对于NFSWEs的保结构数值算法的研究已有不少工作, 但大多数方法仅关注一维情况, 在时间方向的精度没有高于二阶,并且/或者是完全隐式的.
+据所知,尽管对于NFSWEs的保结构数值算法的研究已有不少工作, 但大多数方法仅关注一维情况, 在时间方向的精度没有高于二阶,并且（或者）是完全隐式的.
 这意味着仍然存在许多开放问题,对于未来的研究,特别是在高维情况下,需要高效、准确、显式的保结构数值方法.
 
 注意到在具有高阶精度的各种数值方法中,显式Runge-Kutta（RK）方法是很好的选择,因为它们属于单步方法,具有高阶精度和易于实现的特点.
-然而,标准RK方法并不一定保持系统的期望物理特性.
-为了解决这个问题,Ketcheson \cite{ketchesonRelaxationRungeKutta2019} 提出了松弛Runge-Kutta（RRK）方法,该方法保证相对于任何内积范数的守恒或稳定性.
-随后,RRK技术在\cite{ranochaRelaxationRungeKutta2020}中扩展到一般的凸量上.因此,通过在每一步中添加一个乘以Runge-Kutta更新的松弛参数,可以强制执行相对于任何凸泛函的守恒、耗散或其他属性.
-这些优势的代价是必须求解一个非线性代数系统来确定松弛参数.然而,对于非二次不变量的情况,作者们并未考虑构建显式的守恒方案.
-幸运的是,不变能量二次化（IEQ）方法 \cite{yangLinearUnconditionallyEnergy2017, yangEfficientLinearSchemes2017} 和SAV方法 \cite{chengConvergenceEnergyconservingScheme2022} 可以通过变量变换将非二次能量转化为新变量的二次形式,而由此产生的新等效系统仍然保留了关于新变量的类似能量定律.
-IEQ方法和SAV方法已被广泛应用于梯度流模型.例如,具有熔体对流\cite{chenEfficientNumericalScheme2019}的树状凝固相场模型,具有一般非线性势的梯度流动方程\cite{yangConvergenceAnalysisInvariant2020},外延薄膜生长模型\cite{chengHighlyEfficientAccurate2019},使用SAV \cite{gongArbitrarilyHighorderUnconditionally2019}的任意高阶无条件能量稳定格式.
-有关IEQ和SAV的更多细节、扩展和改进,我们建议感兴趣的读者参考\cite{zhaoNumericalApproximationsPhase2017,shenScalarAuxiliaryVariable2018,liuExponentialScalarAuxiliary2020,chengMultipleScalarAuxiliary2018}.
+然而,标准RK方法并不一定能保持系统原有的物理特性.
+为了解决这个问题,Ketcheson \cite{ketchesonRelaxationRungeKutta2019} 提出了松弛Runge-Kutta（RRK）方法,该方法能够保证任何内积范数的守恒或稳定性.
+随后,RRK技术\cite{ranochaRelaxationRungeKutta2020}扩展到一般的凸量上.它们都是通过在Runge-Kutta更新的每一步中添加一个松弛因子,可以强制满足任何凸泛函的守恒、耗散或其他属性.
+这些优势的代价是必须求解一个非线性代数系统来确定松弛因子.然而,对于非二次不变量的情况,作者们并未考虑构建显式的守恒方案.
+幸运的是,不变能量二次化（IEQ）方法 \cite{yangLinearUnconditionallyEnergy2017, yangEfficientLinearSchemes2017} 和SAV方法 \cite{chengConvergenceEnergyconservingScheme2022} 可以通过变量变换将非二次能量转化为新变量的二次形式,而由此产生的新等效系统仍然保留了关于新变量的类似能量守恒定律.
+IEQ方法和SAV方法已被广泛应用于梯度流模型.例如,具有熔体对流\cite{chenEfficientNumericalScheme2019}的树状凝固相场模型,具有一般非线性势的梯度流动方程\cite{yangConvergenceAnalysisInvariant2020},外延薄膜生长模型\cite{chengHighlyEfficientAccurate2019},使用SAV 的任意高阶无条件能量稳定格式\cite{gongArbitrarilyHighorderUnconditionally2019}.
+有关IEQ和SAV的更多细节、扩展和改进,建议感兴趣的读者参考\cite{zhaoNumericalApproximationsPhase2017,shenScalarAuxiliaryVariable2018,liuExponentialScalarAuxiliary2020,chengMultipleScalarAuxiliary2018}.
 受到这些发展的启发,本章通过结合SAV方法和显式RRK方法,为一维和二维NFSWEs开发了一种任意高阶的显式保结构数值格式.
 
 \section{NFSWEs的SAV格式构建}\label{Section_SAVRRK: 2}
 
-众所周知,所有的RK方法都保持任意线性不变量,而只有辛RK方法保持任意二次不变量.然而,没有RK方法可以保持高于二次的任意多项式不变量或非多项式非线性不变量.为了克服这一限制并利用松弛RK方法保持二次不变量的特性,我们采用了新开发的SAV方法将高次能量函数重写为二次函数.它能将NFSWEs \eqref{eq_SAVRRK:1} 以二次能量函数的等效形式重新表述.
+众所周知,所有的RK方法都可以保持任意线性不变量守恒,而只有辛RK方法能够保持任意二次不变量守恒.
+然而,没有RK方法可以保持高于二次的任意多项式不变量或非多项式非线性不变量.
+为了克服这一限制并利用松弛RK方法保持二次不变量的特性,
+首先采用了新开发的SAV方法将NFSWEs的高次能量泛函重写为二次形式.
+它能将NFSWEs \eqref{eq_SAVRRK:1} 以二次能量泛函的等效形式重新表述.
 
-为了保持能量的正性,我们通过在 $\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4}$ 中添加一个正常数 $C_0$ 来修改 \eqref{eq_SAVRRK:9} 中的能量.这种修改对于 \eqref{eq_SAVRRK:9} 中系统的能量不变性没有实质性影响.因此,我们将继续使用 $E(t)$ 表示修改后的能量,即
+为了保证能量的正性,通过在 $\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4}$ 中添加一个正常数 $C_0$ 来修改 \eqref{eq_SAVRRK:9} 中的能量.
+这种修改对于 \eqref{eq_SAVRRK:9} 中系统的能量不变性没有实质性影响.
+因此,将继续使用 $E(t)$ 表示修改后的能量,即
 \begin{align}\label{eq_SAVRRK:9_1}
 	E(t)\overset{\text{def}}{=}\left\|u_{t}(\cdot, t)\right\|^{2}+\left\|(-\Delta)^{\frac{\alpha}{4}} u(\cdot, t)\right\|^{2}+\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4} + C_0.
 \end{align}
-在此基础上,我们考虑一个新的标量变量
+在此基础上,考虑引入一个标量辅助变量
 \begin{equation}
-	w(t)\overset{\text{def}}{=}\sqrt{H(t)+C_0} \text { with } H(t)\overset{\text{def}}{=}\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4} .
+	w(t)\overset{\text{def}}{=}\sqrt{H(t)+C_0},
 \end{equation}
+这里$H(t)\overset{\text{def}}{=}\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4} .$
 直接计算得到
 \begin{align}
 	w_t & =\frac{1}{2 \sqrt{H(t)+C_0}} \frac{d H(t)}{d t} \nonumber\\
@@ -110,7 +117,6 @@ IEQ方法和SAV方法已被广泛应用于梯度流模型.例如,具有熔体对
 b(u)\overset{\text{def}}{=}\beta g(|u|^2) u / \sqrt{H(t)+C_0},
 \end{align}
 $\Re$ 表示实部,$(\cdot, \cdot)$ 表示 $\Omega$ 上的 $L^2$ 内积.
-
 因此,NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 可以等效地重新表述为
 \begin{align}
 & u_t=v, \label{eq_SAVRRK:2-2}\\
@@ -122,17 +128,21 @@ $\Re$ 表示实部,$(\cdot, \cdot)$ 表示 $\Omega$ 上的 $L^2$ 内积.
 	u(\boldsymbol{x}, 0)=u_{0}(\boldsymbol{x}), \quad v(\boldsymbol{x}, 0)=u_{1}(\boldsymbol{x}), \quad w(0)=\sqrt{\frac{\beta}{2}\|u_{0}\|_{L^{4}}^{4} +C_0}.
 \end{align}
 
-将系统 \eqref{eq_SAVRRK:2-2}-\eqref{eq_SAVRRK:2-3} 分别与 $v_t$ 和 $u_t$ 做内积,将 \eqref{eq_SAVRRK:2-4} 乘以 $w(t)$,将得到的方程相加,并最终在时间区间 $[0, t]$ 上进行实部积分,可以立即得到修改后的能量守恒定律
+将系统 \eqref{eq_SAVRRK:2-2}-\eqref{eq_SAVRRK:2-3} 分别与 $v_t$ 和 $u_t$ 做内积, \eqref{eq_SAVRRK:2-4} 乘以 $w(t)$, 然后将得到的方程相加,并最终在时间区间 $[0, t]$ 上进行实部积分,
+可以立即得到重构后的修正能量守恒定律
 \begin{equation}
 E(t)=\|v(\cdot, t)\|^2+\left\|(-\Delta)^{\frac{\alpha}{4}} u(\cdot, t)\right\|^{2}+w^2(t)=E(0),
 \end{equation}
 这与NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的原始能量守恒定律 \eqref{eq_SAVRRK:9} 本质上是一致的.
 
-\section{傅立叶拟谱离散格式}\label{Section_SAVRRK: 3}
-不失一般性,我们假设空间维度为2（即$d=2$）.傅里叶拟谱法是解决偏微分方程的一种成熟技术,能够提供准确高效的近似.该方法涉及在谱域中逼近解,其中使用快速傅里叶变换计算导数.因此,我们利用傅里叶拟谱法对等效系统 \eqref{eq_SAVRRK:2-2} 到 \eqref{eq_SAVRRK:31} 进行空间离散化.
+\section{傅里叶拟谱离散格式}\label{Section_SAVRRK: 3}
+不失一般性,假设空间维度为2（即$d=2$）.傅里叶拟谱法是解决偏微分方程的一种成熟技术, 它是非局部方法,
+这与分数阶薛定谔方程中的分数阶拉普拉斯算子的非局部性质相契合.
+傅里叶基函数是周期边界条件下的拉普拉斯算子的特征函数,且快速傅里叶变换 (FFT) 的使用使编程更加简便,可以大大减少计算量,提高计算效率.
+因此,本文利用傅里叶拟谱法对等效系统 \eqref{eq_SAVRRK:2-2} 到 \eqref{eq_SAVRRK:31} 进行空间离散化.
+
 
 对于正整数$M$和偶数正整数$N_{x}$、$N_{y}$,定义$\tau={T}/{M}$,$h_{x}={L}/{N_{x}}$,$h_{y}={L}/{N_{y}}$.令$\Omega_{h}=\left\{(x_{i}, y_{j}) \mid 0 \leq i \leq N_x-1;0 \leq j \leq N_y-1\right\}$,$\Omega_{\tau}=\left\{t_{m} \mid 0 \leq m \leq M\right\}$,$\Omega_{h}^{\tau}=\Omega_{h} \times \Omega_{\tau}$,其中$t_{m}=m \tau$,$x_{i}=i h_{x}$,$y_{j}=j h_{y}$.
-
 在任意时刻$t_m$,向量形式为
 \begin{align}\label{eq_SAVRRK:47}
 &U^m=\left(u_{0,0}^m, \cdots, u_{N_{x}-1,0}^m, u_{0,1}^m, \cdots, u_{N_{x}-1,1}^m, \cdots, u_{0, N_{y}-1}^m, \cdots, u_{N_{x}-1, N_{y}-1}^m\right)^{T},\\
@@ -140,7 +150,7 @@ E(t)=\|v(\cdot, t)\|^2+\left\|(-\Delta)^{\frac{\alpha}{4}} u(\cdot, t)\right\|^{
 &W^m=w^m.
 \end{align}
 
-对于定义在$\Omega_{h}$上的任意网格函数$u$和$v$,我们定义离散内积和相关的离散范数如下
+对于定义在$\Omega_{h}$上的任意网格函数$u$和$v$,定义离散内积和相关的离散范数如下
 \begin{align}\label{eq_SAVRRK:48}
 (u, v)=h_{x} h_{y} \sum_{i=0}^{N_{x}-1} \sum_{j=0}^{N_{y}-1} u_{i, j} \bar{v}_{i, j},\quad\|u\|=(u, u)^{\frac{1}{2}},\quad\|u\|_{\infty}=\sup _{\left(x_{i}, y_{j}\right) \in \Omega_{h}}\left|u_{i, j}\right|.
 \end{align}
@@ -149,7 +159,7 @@ E(t)=\|v(\cdot, t)\|^2+\left\|(-\Delta)^{\frac{\alpha}{4}} u(\cdot, t)\right\|^{
 \begin{align}\label{eq_SAVRRK:50}
 u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} / 2} \tilde{u}_{k_{1}, k_{2}} e^{\mathrm{i}\mu\left( k_{1} (x+L)+k_{2}(y+L)\right)},
 \end{align}
-其中$\mu={\pi}/{L}$,系数
+这里$\mu={\pi}/{L}$, 系数
 \begin{align}\label{eq_SAVRRK:51}
 \tilde{u}_{k_{1}, k_{2}}=\frac{1}{N_{x} c_{k_{1}}} \frac{1}{N_{y} c_{k_{2}}} \sum_{l_1=0}^{N_{x}-1} \sum_{l_2=0}^{N_{y}-1} u(x_{l_1}, y_{l_2}) e^{-\mathrm{i}\mu\left( k_{1}(x_{l_1}+L)+k_{2}(y_{l_2}+L)\right)},
 \end{align}
@@ -170,7 +180,7 @@ u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} /
 \left(D^{\alpha}\right)_{i+j N_{x}, l_{1}+l_{2} N_{x}}=-\sum\limits_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum\limits_{k_{2}=-N_{y} / 2}^{N_{y} / 2}\frac{1}{N_{x} c_{k_{1}}} \frac{1}{N_{y} c_{k_{2}}}\left|\mu^{2} \cdot \mathbf{k}^{2}\right|^{\frac{\alpha}{2}} e^{\mathrm{i}\mu\left(k_{1}\left(x_{i}-x_{l_{1}}\right)+k_{2}\left(y_{j}-y_{l_{2}}\right)\right)}.
 \end{align}
 
-综上所述,将傅里叶拟谱法应用于之前的等效系统 \eqref{eq_SAVRRK:2-2} 到 \eqref{eq_SAVRRK:2-4},在空间上得到半离散系统如下：
+综上所述,将傅里叶拟谱法应用于之前的等效系统 \eqref{eq_SAVRRK:2-2} - \eqref{eq_SAVRRK:2-4},得到空间半离散系统如下：
 \begin{align}
 & U_t=V, \label{eq_SAVRRK:3-9}\\
 & V_t=D^{\alpha} U-\mathrm{i}\kappa V- b(U) \cdot W, \label{eq_SAVRRK:3-10}\\
@@ -178,7 +188,7 @@ u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} /
 \end{align}
 其中初始条件为$U^0, V^0, W^0$,这里的$\cdot$表示向量之间的点乘.
 
-对于半离散系统 \eqref{eq_SAVRRK:3-9} 到 \eqref{eq_SAVRRK:3-11},我们有以下定理.
+对于空间半离散系统 \eqref{eq_SAVRRK:3-9} 到 \eqref{eq_SAVRRK:3-11},有以下定理.
 
 \begin{theorem}	\label{thm3}
 空间半离散系统 \eqref{eq_SAVRRK:3-9}-\eqref{eq_SAVRRK:3-11} 具有半离散二次能量守恒律
@@ -192,13 +202,14 @@ E(U,V,W)\overset{\text{def}}{=}\|V\|^2 + \|D^\frac{\alpha}{2} U\|^2+\left(W\righ
 \end{theorem}
 
 \begin{proof}
-	对 \eqref{eq_SAVRRK:3-9} 和 \eqref{eq_SAVRRK:3-10} 分别取内积,分别用 $V_t$ 和 $U_t$ 相乘,同时将 \eqref{eq_SAVRRK:3-11} 乘以 $W$,我们得到以下方程：
+	将 \eqref{eq_SAVRRK:3-9} 和 \eqref{eq_SAVRRK:3-10} 分别与 $V_t$ 和 $U_t$ 做内积, 
+	同时将 \eqref{eq_SAVRRK:3-11} 乘以 $W$,得到以下方程：
 \begin{align}
 &\left(V_t, U_t\right)=\left(V_t, V\right), \label{eq_SAVRRK:313a}\\
 &\left(V_t, U_t\right)=\left(D^{\alpha} U, U_t\right)-\mathrm{i} \kappa\left(V, U_t\right)-W\left(b(U), U_t\right), \label{eq_SAVRRK:313b}\\
 &W W_t=W\Re\left(b(U), U_t\right).\label{eq_SAVRRK:313c}
 \end{align}
-将方程 \eqref{eq_SAVRRK:313a}-\eqref{eq_SAVRRK:313c} 相加,我们得到
+将方程 \eqref{eq_SAVRRK:313a}-\eqref{eq_SAVRRK:313c} 相加,得到
 \begin{equation}
 \left(V_t, V\right) + W W_t= \left(D^{\alpha} U, U_t\right)-\mathrm{i} \kappa\left(V, U_t\right)-W\left(b(U), U_t\right) + W\Re\left(b(U), U_t\right).
 \end{equation}
@@ -206,7 +217,7 @@ E(U,V,W)\overset{\text{def}}{=}\|V\|^2 + \|D^\frac{\alpha}{2} U\|^2+\left(W\righ
 \begin{align}
 \Re\left(V_t, V\right) + \Re\left(W W_t\right)&= \Re\left(D^{\alpha} U, U_t\right)-\Re\left(\mathrm{i} \kappa\left(V, U_t\right)\right)-W\Re\left(b(U), U_t\right) + W\Re\left(b(U). U_t\right).
 \end{align}
-因此,我们知道
+因此,
 \begin{align}
 \Re\left(V_t, V\right) + \Re\left(W W_t\right)&= \Re\left(D^{\alpha} U, U_t\right).\label{eq_SAVRRK:319}
 \end{align}
@@ -222,12 +233,16 @@ E(U,V,W)\overset{\text{def}}{=}\|V\|^2 + \|D^\frac{\alpha}{2} U\|^2+\left(W\righ
 \end{proof}
 
 \section{显式 SAV-RRK 保结构格式}\label{Section_SAVRRK: 4}
-本节旨在介绍基于SAV方法的NFSWE的不变守恒显式RRK方法.我们首先回顾RRK方法并讨论它们的保结构性质.
+本节旨在介绍基于SAV方法的NFSWE的不变量守恒显式RRK方法.
+首先回顾RRK方法并讨论它们的保结构性质.
 
 % \subsection{显式SAV-RRK方案}
-为简洁起见,我们引入以下符号：
+为简洁起见,引入以下符号：
 \begin{equation}
-\bm{y}=\left(U,V,W\right)^T,\bm{y}_0=\left(U^0,V^0,W^0\right)^T , \bm{f}=(f^1,f^2,f^3)^T\overset{\text{def}}{=}(V,D^{\alpha} U-\mathrm{i}\kappa V-b(U)\cdot W,\Re\left(b(U), U_t\right))^T.
+	\begin{aligned}
+		\bm{y}&=\left(U,V,W\right)^T,\quad\bm{y}_0=\left(U^0,V^0,W^0\right)^T , \\
+		\bm{f}&=(f^1,f^2,f^3)^T\overset{\text{def}}{=}(V,D^{\alpha} U-\mathrm{i}\kappa V-b(U)\cdot W,\Re\left(b(U), U_t\right))^T.
+	\end{aligned}
 \end{equation}
 然后,基于SAV方法的半离散系统\eqref{eq_SAVRRK:3-9}-\eqref{eq_SAVRRK:3-11}可以重写为：
 \begin{equation}
@@ -236,7 +251,6 @@ E(U,V,W)\overset{\text{def}}{=}\|V\|^2 + \|D^\frac{\alpha}{2} U\|^2+\left(W\righ
 \bm{y}(0)=\bm{y}_0.
 \end{array}\right.\label{eq_SAVRRK:3-121}
 \end{equation}
-
 设$\bm{y}^m$是$\bm{y}\left(t_m\right)$的近似.对于应用于\eqref{eq_SAVRRK:3-121}的$s$阶显式RK方法\cite{hairerRungeKuttaMethods2015},其形式为：
 \begin{equation}
 \left\{\begin{array}{l}
@@ -251,7 +265,7 @@ A & =\left(a_{i j}\right)_{s \times s}, \quad a_{i j}=0 \quad \text {对于} \qu
 b & =\left(b_1, \cdots, b_s\right)^T,
 \end{aligned}
 \end{equation}
-$s$阶显式SAV-RK方法可以用Butcher表表示为：
+于是$s$阶显式SAV-RK方法可以用Butcher表表示为：
 \begin{equation}
 \begin{array}{c|c}
 c & A \\
@@ -261,7 +275,9 @@ c & A \\
 \end{equation}
 其中横坐标向量$c=(c_1,c_2,\dots,c_s)$满足$c_i=\sum\limits_{j=1}^s a_{i j}$,$i=1, \ldots, s$.
 
-然而,众所周知,只有特定的隐式RK方法可能是辛的或代数上稳定的,而没有辛的或代数上稳定的显式RK方法.这导致了显式SAV-RK方法无法保持原始问题\eqref{eq_SAVRRK:3-121}的基本守恒特性.因此,我们引入显式SAV-RRK方法.具体而言,考虑在区间$\left[\hat{t}_m, \hat{t}_{m+1}\right], m \geq 0$上的单步操作,设$\bm{y}_\gamma^m=\left(U^{m}_{\gamma},V^{m}_{\gamma},W^{m}_{\gamma}\right)^T$是$\bm{y}\left(\hat{t}_m\right)$的数值逼近,那么对于\eqref{eq_SAVRRK:3-121},$s$阶显式SAV-RRK方法定义为：
+然而,众所周知,只有特定的隐式RK方法可能是辛的或代数上稳定的,而没有辛的或代数上稳定的显式RK方法.
+这导致了显式SAV-RK方法无法保持原始问题\eqref{eq_SAVRRK:3-121}的能量守恒特性.
+因此,引入显式SAV-RRK方法.具体而言,考虑在区间$\left[\hat{t}_m, \hat{t}_{m+1}\right], m \geq 0$上的单步操作,设$\bm{y}_\gamma^m=\left(U^{m}_{\gamma},V^{m}_{\gamma},W^{m}_{\gamma}\right)^T$是$\bm{y}\left(\hat{t}_m\right)$的数值逼近,那么对于\eqref{eq_SAVRRK:3-121},$s$阶显式SAV-RRK方法定义为：
 \begin{equation}
 \left\{\begin{array}{l}
 \bm{Y}_{m i}=\bm{y}_\gamma^m+\tau \sum\limits_{j=1}^{i-1} a_{i j} \bm{f}_{m j}, \quad i=1, \ldots, s, \\
@@ -276,7 +292,7 @@ c & A \\
 & \tilde{b}^T
 \end{array}
 \end{equation}
-其中$\tilde{b}=\gamma_m b$,$\gamma_m\neq 0$满足：
+其中$\tilde{b}=\gamma_m b$,$\gamma_m\neq 0$, 并且满足：
 \begin{equation}
 \left\{\begin{array}{ll}
 E_{\gamma}^{m+1}=E_{\gamma}^{m}, & \text{若} \quad  \sum\limits_{i=1}^s b_i \bm{f}_{m i} \neq 0,\\
@@ -288,7 +304,8 @@ E_{\gamma}^{m+1}=E_{\gamma}^{m}, & \text{若} \quad  \sum\limits_{i=1}^s b_i \bm
 E_{\gamma}^{m}  =\|V_{\gamma}^{m}\|^2+\|D^\frac{\alpha}{2} U_{\gamma}^{m}\|^2+\big(W_{\gamma}^{m}\big)^2.
 \end{align}
 
-显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的一个显著优势在于可以明确计算参数$\gamma_m$.实际上,从\eqref{eq_SAVRRK:4-6}中可知,当$\sum\limits_{i=1}^s b_i \bm{f}_{m i}=0$时,$\gamma_m=1$.当$\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$时,通过直接计算,可以得到：
+显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的一个显著优势在于可以精确计算参数$\gamma_m$.
+实际上,从\eqref{eq_SAVRRK:4-6}中可知,当$\sum\limits_{i=1}^s b_i \bm{f}_{m i}=0$时,$\gamma_m=1$.当$\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$时,通过直接计算,可以得到：
 \begin{align}
 E_{\gamma}^{m+1}  = & \|V_{\gamma}^{m}\|^2+\|D^\frac{\alpha}{2} U_{\gamma}^{m}\|^2+\big(W_{\gamma}^{m}\big)^2 \nonumber\\
 & + \big(V_{\gamma}^{m},\gamma_m\tau\sum\limits_{i=1}^{s}b_if_{mi}^2\big)+\big(\gamma_m\tau\sum\limits_{i=1}^{s}b_if_{mi}^2,V_{\gamma}^{m}\big)\nonumber\\
@@ -301,14 +318,15 @@ E_{\gamma}^{m+1}  = & \|V_{\gamma}^{m}\|^2+\|D^\frac{\alpha}{2} U_{\gamma}^{m}\|
 &+2W_{\gamma}^{m}\sum\limits_{i=1}^{s}b_if_{mi}^3\big] +\gamma_m^2\tau^2\big[\big\|\sum\limits_{i=1}^{s}b_if_{mi}^2\big\|^2+ \big\|D^\frac{\alpha}{2}\big(\sum\limits_{i=1}^{s}b_if_{mi}^1\big)\big\|^2+\big(\sum\limits_{i=1}^{s}b_if_{mi}^3\big)^2\big]=0,
 \end{align*}
 这是关于$\gamma_m$的二次代数方程.注意到$\gamma_m\neq 0$,因此可得：
-\begin{equation}\label{eq_SAVRRK:r1}
-\gamma_m = \frac{\big(V_{\gamma}^{m},\sum\limits_{i=1}^{s}b_if_{mi}^2\big)+\big(\sum\limits_{i=1}^{s}b_if_{mi}^2,V_{\gamma}^{m}\big)-\big(U_{\gamma}^{m},D^{\alpha}\big(\sum\limits_{i=1}^{s}b_if_{mi}^1\big)\big)-\big(\sum\limits_{i=1}^{s}b_if_{mi}^1, D^{\alpha} U_{\gamma}^{m}\big)+2W_{\gamma}^{m}\sum\limits_{i=1}^{s}b_if_{mi}^3}{-\tau\big[\big\|\sum\limits_{i=1}^{s}b_if_{mi}^2\big\|^2+ \big\|D^\frac{\alpha}{2}\big(\sum\limits_{i=1}^{s}b_if_{mi}^1\big)\big\|^2+\big(\sum\limits_{i=1}^{s}b_if_{mi}^3\big)^2\big]} .
+\begin{equation}\label{eq_SAVRRK:r1}\small
+\gamma_m \!=\! \frac{\big(\!V_{\gamma}^{m},\sum\limits_{i=1}^{s}b_if_{mi}^2\!\big)\!+\!\big(\!\sum\limits_{i=1}^{s}b_if_{mi}^2,V_{\gamma}^{m}\!\big)\!-\!\big(\!U_{\gamma}^{m},D^{\alpha}\big(\sum\limits_{i=1}^{s}b_if_{mi}^1\big)\!\big)\!-\!\big(\!\sum\limits_{i=1}^{s}b_if_{mi}^1, D^{\alpha} U_{\gamma}^{m}\!\big)\!+\!2W_{\gamma}^{m}\sum\limits_{i=1}^{s}b_if_{mi}^3}{-\tau\big[\big\|\sum\limits_{i=1}^{s}b_if_{mi}^2\big\|^2+\big\|D^\frac{\alpha}{2}\big(\sum\limits_{i=1}^{s}b_if_{mi}^1\big)\big\|^2+\big(\sum\limits_{i=1}^{s}b_if_{mi}^3\big)^2\big]} .
 \end{equation}
-这意味着当$\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$时,$\gamma_m$的值也可以通过\eqref{eq_SAVRRK:r1}明确确定.
+这意味着当$\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$时,$\gamma_m$的值也可以通过式\eqref{eq_SAVRRK:r1}精确计算.
 
-实际上,定义在\eqref{eq_SAVRRK:4-6}中的$\gamma_m$的值在$\tau\rightarrow 0$时接近于$1$,这将在第\ref{Section_SAVRRK: 5-1}节中进一步讨论.因此,显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}是良定义的.此外,可以证明所提出的方法保持以下定理中描述的能量不变性.
+实际上,定义在\eqref{eq_SAVRRK:4-6}中的$\gamma_m$的值在$\tau\rightarrow 0$时接近于$1$,这将在第\ref{Section_SAVRRK: 5-1}节中进一步讨论.
+因此,显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}是良定的.此外,可以证明所提出的方法保持以下定理中描述的能量守恒律.
 \begin{theorem}
-假设显式SAV-RK方法\eqref{eq_SAVRRK:4-31}的阶数至少为二,则显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的解满足
+假设显式SAV-RK方法\eqref{eq_SAVRRK:4-31}的阶数至少为2,则显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的解满足
 \begin{equation}
 E_{\gamma}^{m+1}=E_{\gamma}^{m}, \label{eq_SAVRRK:4-10}
 \end{equation}
@@ -316,16 +334,18 @@ E_{\gamma}^{m+1}=E_{\gamma}^{m}, \label{eq_SAVRRK:4-10}
 \end{theorem}
 
 \begin{proof}
-当$\sum\limits_{i=1}^s b_i \bm{f}_{m i}=0$时,根据\eqref{eq_SAVRRK:4-3}中的第二个方程可知,$\bm{y}_\gamma^{m+1}\equiv\bm{y}_\gamma^m$,它自动满足\eqref{eq_SAVRRK:4-10}.对于$\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$的情况,我们还可以从条件\eqref{eq_SAVRRK:4-6}中得到\eqref{eq_SAVRRK:4-10}.证毕.
+当$\sum\limits_{i=1}^s b_i \bm{f}_{m i}=0$时,根据\eqref{eq_SAVRRK:4-3}中的第二个方程可知, $\bm{y}_\gamma^{m+1}\equiv\bm{y}_\gamma^m$,它自动满足式\eqref{eq_SAVRRK:4-10}.
+对于$\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$的情况,还可以从条件\eqref{eq_SAVRRK:4-6}中得到式\eqref{eq_SAVRRK:4-10}.证毕.
 \end{proof}
 
 \section{显式SAV-RRK方法的精度}\label{Section_SAVRRK: 5}
-在本节中,我们将讨论显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的精度.为此,我们首先估计松弛系数$\gamma_m$,它在接下来的分析中起着关键作用.
-由于松弛系数$\gamma_m$往往会在步长之间变化,因此可以通过类似的方式在不同步骤上进行估计.因此,这里我们只考虑在区间$\left[\hat{t}_m, \hat{t}_{m+1}\right]$内的单个步骤.
+在本节中,将讨论显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的精度.为此,首先估计松弛因子$\gamma_m$,它在接下来的分析中起着关键作用.
+由于松弛因子$\gamma_m$往往在不同时间层会发生变化,因此可以通过类似的方式在不同步骤上进行估计.
+因此,这里只考虑在区间$\left[\hat{t}_m, \hat{t}_{m+1}\right]$内的单个步骤.
 
-\subsection{松弛系数的估计}\label{Section_SAVRRK: 5-1}
+\subsection{松弛因子的估计}\label{Section_SAVRRK: 5-1}
 
-我们将仅关注$\sum\limits_{i=1}^s b_i \bm{f}_{m i} \neq 0$的情况,因为相反的情况很简单.
+本文将仅关注$\sum\limits_{i=1}^s b_i \bm{f}_{m i} \neq 0$的情况,因为相反的情况很简单.
 令
 \begin{equation}
 \begin{aligned}\label{eq_SAVRRK:sm}
@@ -333,9 +353,9 @@ S_m(\gamma)=&\big\|V_\gamma^m+\gamma \tau \sum\limits_{i=1}^s b_i \bm{f}_{m i}^2
 &+\big(W_\gamma^m+\gamma \tau \sum\limits_{i=1}^s b_i \bm{f}_{m i}^3\big)^2-\|V_\gamma^{m}\|^2 - \|D^\frac{\alpha}{2} U_\gamma^{m}\|^2-\big(W_\gamma^{m}\big)^2,
 \end{aligned}
 \end{equation}
-则\eqref{eq_SAVRRK:4-6}中定义的$\gamma_m$的值恰好是函数$S_m(\gamma)$的非零根.
+则式\eqref{eq_SAVRRK:4-6}中定义的$\gamma_m$的值恰好是函数$S_m(\gamma)$的非零根.
 
-此外,我们对$S_m(\gamma)$有以下结果.
+此外,对$S_m(\gamma)$有以下结果.
 \begin{lemma}\label{lem_SAVRRK:5_1}
 假设显式SAV-RK方法\eqref{eq_SAVRRK:4-31}的阶数为$p$,则有
 \begin{equation}
@@ -344,25 +364,26 @@ S_m(1)=\mathcal{O}(\tau^{p+1}).
 \end{lemma}
 
 \begin{proof}
-类似于%\cite{liImplicitexplicitRelaxationRungeKutta2022}
-中引理3.1的证明,我们考虑初值问题
+类似于\cite{liImplicitexplicitRelaxationRungeKutta2022}中引理3.1的证明,
+考虑初值问题
 \begin{equation}
 \left\{\begin{array}{l}
 \tilde{\bm{y}}^{\prime}=\bm{f}(\tilde{\bm{y}}), \quad t \geq \hat{t}_m, \\
 \tilde{\bm{y}}\left(\hat{t}_m\right)=\bm{y}_\gamma^m,
 \end{array}\right.
 \end{equation}
-其中$\bm{y}_\gamma^m$是显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的解.通过使用显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}进行单步计算,我们得到数值解$\bm{y}_\gamma^{m+1}$.根据\eqref{eq_SAVRRK:sm},我们有
+其中$\bm{y}_\gamma^m$是显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的解.
+通过使用显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}进行单步计算,得到数值解$\bm{y}_\gamma^{m+1}$.根据式\eqref{eq_SAVRRK:sm},有
 \begin{equation}
 \begin{aligned}
-S_m(\gamma) =& \|V_\gamma^{m+1}\|^2 + \|D^\frac{\alpha}{2} U_\gamma^{m+1}\|^2+\big(W_\gamma^{m+1}\big)^2-\|V_\gamma^{m}\|^2 - \|D^\frac{\alpha}{2} U_\gamma^{m}\|^2-\big(W_\gamma^{m}\big)^2\\
-=& \|V_\gamma^{m+1}\|^2 + \|D^\frac{\alpha}{2} U_\gamma^{m+1}\|^2+\big(W_\gamma^{m+1}\big)^2-\|\tilde{V}(\hat{t}_{m})\|^2 - \|D^\frac{\alpha}{2} \tilde{U}(\hat{t}_{m})\|^2-\big(\tilde{W}(\hat{t}_{m})\big)^2.
+S_m(\gamma) \!=& \|V_\gamma^{m+1}\|^2 \!+\! \|D^\frac{\alpha}{2} U_\gamma^{m+1}\|^2\!+\!\big(W_\gamma^{m+1}\big)^2\!-\!\|V_\gamma^{m}\|^2 \!-\! \|D^\frac{\alpha}{2} U_\gamma^{m}\|^2\!-\!\big(W_\gamma^{m}\big)^2\\
+\!=& \|V_\gamma^{m+1}\|^2 \!+\! \|D^\frac{\alpha}{2} U_\gamma^{m+1}\|^2\!+\!\big(W_\gamma^{m+1}\big)^2\!-\!\|\tilde{V}(\hat{t}_{m})\|^2 \!-\! \|D^\frac{\alpha}{2} \tilde{U}(\hat{t}_{m})\|^2\!-\!\big(\tilde{W}(\hat{t}_{m})\big)^2.
 \end{aligned}
 \end{equation}
 
-从$\bm{y}_\gamma^m$开始,显式SAV-RK方法\eqref{eq_SAVRRK:4-31}生成阶数为$p$的数值解$\tilde{\bm{y}}^{m+1}$,对于
-
-足够小的$\tau$,有$\tilde{\bm{y}}^{m+1}=\tilde{\bm{y}}\left(\hat{t}_m+\tau\right)+\mathcal{O}\left(\tau^{p+1}\right)$.关键观察到的是,当$\gamma=1$时,由\eqref{eq_SAVRRK:4-3}定义的显式SAV-RRK方法将简化为由\eqref{eq_SAVRRK:4-31}描述的显式SAV-RK方法.也就是说,$\bm{y}_\gamma^{m +1}=\tilde{\bm{y}}^{m +1}$.因此,我们可以得到
+从$\bm{y}_\gamma^m$开始,对于足够小的$\tau$, 显式SAV-RK方法\eqref{eq_SAVRRK:4-31}生成阶数为$p$的数值解$\tilde{\bm{y}}^{m+1}$,
+有$\tilde{\bm{y}}^{m+1}=\tilde{\bm{y}}\left(\hat{t}_m+\tau\right)+\mathcal{O}\left(\tau^{p+1}\right)$.
+值得注意的是,当$\gamma=1$时,由式\eqref{eq_SAVRRK:4-3}定义的显式SAV-RRK方法将简化为由式\eqref{eq_SAVRRK:4-31}描述的显式SAV-RK方法.也就是说,$\bm{y}_\gamma^{m +1}=\tilde{\bm{y}}^{m +1}$.因此,可以得到
 \begin{align}
 S_m(1) = &\|\tilde{V}^{m+1}\|^2 + \|D^\frac{\alpha}{2} \tilde{U}^{m+1}\|^2+\big(\tilde{W}^{m+1}\big)^2-\|\tilde{V}(\hat{t}_{m})\|^2 - \|D^\frac{\alpha}{2} \tilde{U}(\hat{t}_{m})\|^2-\big(\tilde{W}(\hat{t}_{m})\big)^2 \nonumber\\
 = &\|\tilde{V}^{m+1}\|^2 -\|\tilde{V}(\hat{t}_{m}+\tau)\|^2 +\|\tilde{V}(\hat{t}_{m}+\tau)\|^2-\|\tilde{V}(\hat{t}_{m})\|^2\nonumber\\
@@ -373,10 +394,10 @@ S_m(1) = &\|\tilde{V}^{m+1}\|^2 + \|D^\frac{\alpha}{2} \tilde{U}^{m+1}\|^2+\big(
 通过将\eqref{eq_SAVRRK:54}和\eqref{eq_SAVRRK:319}结合起来,证毕.
 \end{proof}
 
-根据引理 \ref{lem_SAVRRK:5_1},我们可以得到关于松弛系数 $\gamma_m$ 的以下估计.
+根据引理 \ref{lem_SAVRRK:5_1},可以得到关于松弛因子 $\gamma_m$ 的以下估计.
 
 \begin{theorem}\label{thm_SAVRRK:5_1}
-假设显式 SAV-RK 方法 \eqref{eq_SAVRRK:4-31} 的阶数为 $p~(p \geq 2)$,那么在式 \eqref{eq_SAVRRK:4-6} 中定义的松弛系数 $\gamma_m$ 满足
+假设显式 SAV-RK 方法 \eqref{eq_SAVRRK:4-31} 的阶数为 $p~(p \geq 2)$,那么在式 \eqref{eq_SAVRRK:4-6} 中定义的松弛因子 $\gamma_m$ 满足
 \begin{equation}\label{eq_SAVRRK:5_3}
 \gamma_m=1+\mathcal{O}(\tau^{p-1}).
 \end{equation}
@@ -385,28 +406,28 @@ S_m(1) = &\|\tilde{V}^{m+1}\|^2 + \|D^\frac{\alpha}{2} \tilde{U}^{m+1}\|^2+\big(
 \begin{proof}
 % 当 $\sum\limits_{i=1}^s b_i \bm{f}_{m i}=0$ 时,根据式 \eqref{eq_SAVRRK:4-6},有 $\gamma_m=1$,这显然满足 \eqref{eq_SAVRRK:5_3}.
 % 当 $\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$ 时,根据 \eqref{eq_SAVRRK:sm} 中 $S_m(\gamma)$ 的定义,由 \eqref{eq_SAVRRK:49} 可得
-我们根据 $\sum\limits_{i=1}^s b_i \bm{f}_{m i}$ 的值考虑两种情况.
+根据 $\sum\limits_{i=1}^s b_i \bm{f}_{m i}$ 的值考虑两种情况.
 
 情况 1：根据式 \eqref{eq_SAVRRK:4-6} 中 $\gamma_m$ 的定义,当 $\sum\limits_{i=1}^s b_i \bm{f}_{m i} = 0$ 时,有 $\gamma_m = 1$,这显然满足 \eqref{eq_SAVRRK:5_3}.
 
-情况 2：当 $\sum\limits_{i=1}^s b_i \bm{f}_{m i} \neq 0$ 时,由 \eqref{eq_SAVRRK:49} 可得
+情况 2：当 $\sum\limits_{i=1}^s b_i \bm{f}_{m i} \neq 0$ 时,由式 \eqref{eq_SAVRRK:49} 可得
 \begin{align}\label{eq_SAVRRK:5_4a}
 	S_m(\gamma)=&~E_{\gamma}^{m+1}-E_{\gamma}^{m}\nonumber\\
 	=&~\gamma\tau\Big[(V_{\gamma}^{m},\sum\limits_{i=1}^{s}b_if_{mi}^2)+(\sum\limits_{i=1}^{s}b_if_{mi}^2,V_{\gamma}^{m})-(U_{\gamma}^{m},D^{\alpha} (\sum\limits_{i=1}^{s}b_if_{mi}^1))-(\sum\limits_{i=1}^{s}b_if_{mi}^1, D^{\alpha} U_{\gamma}^{m})\nonumber\\
 	&+2W_{\gamma}^{m}\sum\limits_{i=1}^{s}b_if_{mi}^3\Big]+\gamma^2\tau^2\Big[\|\sum\limits_{i=1}^{s}b_if_{mi}^2\|^2+ \|D^\frac{\alpha}{2}(\sum\limits_{i=1}^{s}b_if_{mi}^1)\|^2+(\sum\limits_{i=1}^{s}b_if_{mi}^3)^2\Big].
 \end{align}
 注意到 $S_m(\gamma)$ 是 $\gamma$ 的二次函数,它有非零根
-\begin{equation}\label{eq_SAVRRK:5_4a3}
+\begin{equation}\label{eq_SAVRRK:5_4a3}\small
 	\gamma=\!\frac{\tau\Big[(V_{\gamma}^{m},\sum\limits_{i=1}^{s}b_if_{mi}^2)\!+\!(\sum\limits_{i=1}^{s}b_if_{mi}^2,V_{\gamma}^{m})\!-\!(U_{\gamma}^{m},D^{\alpha} (\sum\limits_{i=1}^{s}b_if_{mi}^1))\!-\!(\sum\limits_{i=1}^{s}b_if_{mi}^1, D^{\alpha} U_{\gamma}^{m})\!+\!2W_{\gamma}^{m}\sum\limits_{i=1}^{s}b_if_{mi}^3\Big]}{-\tau^2\Big[\|\sum\limits_{i=1}^{s}b_if_{mi}^2\|^2\!+\! \|D^\frac{\alpha}{2}(\sum\limits_{i=1}^{s}b_if_{mi}^1)\|^2\!+\!(\sum\limits_{i=1}^{s}b_if_{mi}^3)^2\Big]}.
 \end{equation}
-根据引理 \ref{lem_SAVRRK:5_1},我们有
+根据引理 \ref{lem_SAVRRK:5_1},有
 \begin{align}\label{eq_SAVRRK:5_4a2}
 	S_m(1)=&\tau\Big[(V_{\gamma}^{m},\sum\limits_{i=1}^{s}b_if_{mi}^2)+(\sum\limits_{i=1}^{s}b_if_{mi}^2,V_{\gamma}^{m})-(U_{\gamma}^{m},D^{\alpha} (\sum\limits_{i=1}^{s}b_if_{mi}^1))-(\sum\limits_{i=1}^{s}b_if_{mi}^1, D^{\alpha} U_{\gamma}^{m})\nonumber\\
 	&+2W_{\gamma}^{m}\sum\limits_{i=1}^{s}b_if_{mi}^3\Big]+\tau^2\Big[\|\sum\limits_{i=1}^{s}b_if_{mi}^2\|^2+ \|D^\frac{\alpha}{2}(\sum\limits_{i=1}^{s}b_if_{mi}^1)\|^2+(\sum\limits_{i=1}^{s}b_if_{mi}^3)^2\Big],
 \end{align}
 这是 $\mathcal{O}(\tau^{p+1})$ 的阶数.
 定义 $\tilde{\bm{f}}_m=\bm{f}\left(\bm{y}\left(\tilde{t}_m\right)\right)$,那么当 $\tau\rightarrow 0$ 时,有 $\bm{f}_{m i}=\tilde{\bm{f}}_m+\mathcal{O}(\tau)$.
-因此,我们有
+因此,有
 \begin{align}\label{eq_SAVRRK:5_4a4}
 	&\tau^2\Big[\|\sum\limits_{i=1}^{s}b_if_{mi}^2\|^2+ \|D^\frac{\alpha}{2}(\sum\limits_{i=1}^{s}b_if_{mi}^1)\|^2+(\sum\limits_{i=1}^{s}b_if_{mi}^3)^2\Big]\nonumber\\
 	=&\tau^2\Big[\|\sum\limits_{i=1}^{s}b_i\tilde{f}_{mi}^2\|^2+ \|D^\frac{\alpha}{2}(\sum\limits_{i=1}^{s}b_i\tilde{f}_{mi}^1)\|^2+(\sum\limits_{i=1}^{s}b_i\tilde{f}_{mi}^3)^2\Big]+\mathcal{O}(\tau^3)\nonumber\\
@@ -422,14 +443,14 @@ S_m(1) = &\|\tilde{V}^{m+1}\|^2 + \|D^\frac{\alpha}{2} \tilde{U}^{m+1}\|^2+\big(
 \end{proof}
 
 \begin{remark}\label{rk_SAVRRK:5_1}
-定理 \ref{thm_SAVRRK:5_1} 表明,当 $\tau\rightarrow 0$ 时,松弛系数 $\gamma_m$ 接近于 $1$,
-这意味着松弛方法可以被视为标准方法的小扰动.
+定理 \ref{thm_SAVRRK:5_1} 表明,当 $\tau\rightarrow 0$ 时,松弛因子 $\gamma_m$ 接近于 $1$,
+这意味着松弛RK方法可以被视为标准RK方法的小扰动.
 \end{remark}
 
 \subsection{显式SAV-RRK方法的截断误差}
-现在我们进一步研究显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的准确性,基于定理\ref{thm_SAVRRK:5_1}给出的弛豫系数$\gamma_m$的估计.
+基于定理\ref{thm_SAVRRK:5_1}给出的松弛因子$\gamma_m$的估计, 本小节进一步研究显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的准确性.
 
-在分析方法的准确性之前,我们将显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}重新表示为
+在分析方法的准确性之前,将显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}重新表示为
 \begin{equation}
 \left\{\begin{array}{l}
 \bm{Y}_{m i}=\bm{y}_\gamma^m+\tau \sum\limits_{j=1}^{i-1} a_{i j} \bm{f}_{m j}, \quad i=1, \ldots, s, \\
@@ -439,13 +460,14 @@ S_m(1) = &\|\tilde{V}^{m+1}\|^2 + \|D^\frac{\alpha}{2} \tilde{U}^{m+1}\|^2+\big(
 \end{equation}
 前两个方程本质上构成标准的显式SAV-RK方法.
 
-与\cite{ketchesonRelaxationRungeKutta2019}中的讨论类似,数值解$\bm{y}_\gamma^{m+1}$在$\hat{t}_{m+1}$处可以用两种方式解释,即增量方向技术（IDT）和弛豫技术（RT）.
+数值解$\bm{y}_\gamma^{m+1}$在$\hat{t}_{m+1}$处可以用两种方式解释\cite{ketchesonRelaxationRungeKutta2019},即增量方向技术（IDT）和松弛技术（RT）.
 \begin{itemize}
 \item[1.] IDT的角度：$\bm{y}_\gamma^{m+1}$被视为对$\bm{y}\left(\hat{t}_m+\tau\right)$的近似,其中对于$m \geq 0$,$\hat{t}_m=t_m$.
 \item[2.] RT的角度：$\bm{y}_\gamma^{m+1}$被视为对$\bm{y}\left(\hat{t}_m+\gamma_m \tau\right)$的近似,当$m>0$时,$\hat{t}_m$可能不等于$t_m$.
 \end{itemize}
 
-重要的是要注意,数值解$\bm{y}_\gamma^{m+1}$的不同解释可能导致不同的收敛结果.根据\cite{ranochaGeneralRelaxationMethods2020}中引理2.7的证明思路,我们得到了以下结果.
+值得注意的是, 对数值解$\bm{y}_\gamma^{m+1}$的不同解释可能导致不同的收敛结果.
+参考\cite{ranochaGeneralRelaxationMethods2020}中引理2.7的证明思路,得到了以下结果.
 
 \begin{theorem}\label{thm_SAVRRK:5_4}
 假设显式SAV-RK方法\eqref{eq_SAVRRK:4-31}的阶数为$p~(p \geq 2)$.那么以下结论成立：
@@ -458,13 +480,13 @@ S_m(1) = &\|\tilde{V}^{m+1}\|^2 + \|D^\frac{\alpha}{2} \tilde{U}^{m+1}\|^2+\big(
 
 \begin{proof}
 设$\hat{t}_{m i}=\hat{t}_m+c_i\tau, i=1, \ldots, s$,
-则从\eqref{eq_SAVRRK:4-321}中的第二个方程可以得到
+则从式\eqref{eq_SAVRRK:4-321}中的第二个方程可以得到
 \begin{equation}\label{eq_SAVRRK:4-321b}
 \bm{y}\left(\hat{t}_m+\tau\right)=\bm{y}\left(\hat{t}_m\right)+\tau \sum_{i=1}^s b_i \bm{f}\left(\bm{y}\left(\hat{t}_{m i}\right)\right)+\mathcal{O}\left(\tau^{p+1}\right).
 \end{equation}
 %\textcolor[rgb]{0.00,0.07,1.00}{这是从显式SAV-RK方法\eqref{eq_SAVRRK:4-31}的精度推导出来的.}
 
-现在我们估计\eqref{eq_SAVRRK:4-321}中第三个方程的截断误差.
+现在估计式\eqref{eq_SAVRRK:4-321}中第三个方程的截断误差.
 定义
 $$\phi_m(\bm{y}(t))\overset{\text{def}}{=}\bm{y}\left(\hat{t}_m\right)+\tau \sum\limits_{i=1}^s b_i \bm{f}\left(\bm{y}\left(\hat{t}_{m i}\right)\right),$$
 以及
@@ -475,43 +497,41 @@ $$\phi_m(\bm{y}(t))\overset{\text{def}}{=}\bm{y}\left(\hat{t}_m\right)+\tau \sum
 %one can obtain that
 \begin{equation}
 \begin{aligned}
-T_{m+1}= & \bm{y}\left(\hat{t}_{m+1}\right)-\phi_m(\bm{y}(t))-\left(\gamma_m-1\right)\left(\phi_m(\bm{y}(t))-\bm{y}\left(\hat{t}_m\right)\right) \\
-= & \bm{y}\left(\hat{t}_{m+1}\right)-\left(\bm{y}\left(\hat{t}_m+\tau\right)-\mathcal{O}(\tau^{p+1})\right)-\left(\gamma_m-1\right)\left(\bm{y}\left(\hat{t}_m+\tau\right)-\mathcal{O}(\tau^{p+1})-\bm{y}\left(\hat{t}_m\right)\right) \\
-= & \bm{y}\left(\hat{t}_{m+1}\right)-\bm{y}\left(\hat{t}_m+\tau\right)-\left(\gamma_m-1\right)\left(\bm{y}\left(\hat{t}_m+\tau\right)-\bm{y}\left(\hat{t}_m\right)\right)+\mathcal{O}(\tau^{p+1})+\mathcal{O}((\gamma_m-1) \tau^{p+1}) \\
-= & \bm{y}\left(\hat{t}_{m+1}\right)-\bm{y}\left(\hat{t}_m+\tau\right)-\left(\gamma_m-1\right) \bm{y}^{\prime}\left(\hat{t}_m+\tau\right) \tau+\mathcal{O}((\gamma_m-1) \tau^2)+\mathcal{O}(\tau^{p+1}) \\
-= & \bm{y}\left(\hat{t}_{m+1}\right)-\bm{y}\left(\hat{t}_m+\tau\right)-\left(\gamma_m-1\right) \bm{y}^{\prime}\left(\hat{t}_m+\tau\right) \tau+\mathcal{O}(\tau^{p+1}).
+T_{m+1}= & \bm{y}\left(\hat{t}_{m+1}\right)\!-\!\phi_m(\bm{y}(t))\!-\!\left(\gamma_m-1\right)\left(\phi_m(\bm{y}(t))\!-\!\bm{y}\left(\hat{t}_m\right)\right) \\
+= & \bm{y}\left(\hat{t}_{m+1}\right)\!-\!\left(\bm{y}\left(\hat{t}_m\!+\!\tau\right)\!-\!\mathcal{O}(\tau^{p+1})\right)\!-\!\left(\gamma_m-1\right)\left(\bm{y}\left(\hat{t}_m+\tau\right)\!-\!\mathcal{O}(\tau^{p+1})\!-\!\bm{y}\left(\hat{t}_m\right)\right) \\
+= & \bm{y}\left(\hat{t}_{m+1}\right)\!-\!\bm{y}\left(\hat{t}_m\!+\!\tau\right)\!-\!\left(\gamma_m-1\right)\left(\bm{y}\left(\hat{t}_m+\tau\right)\!-\!\bm{y}\left(\hat{t}_m\right)\right)\!+\!\mathcal{O}(\tau^{p+1})\!+\!\mathcal{O}((\gamma_m-1) \tau^{p+1}) \\
+= & \bm{y}\left(\hat{t}_{m+1}\right)\!-\!\bm{y}\left(\hat{t}_m\!+\!\tau\right)\!-\!\left(\gamma_m-1\right) \bm{y}^{\prime}\left(\hat{t}_m+\tau\right) \tau\!+\!\mathcal{O}((\gamma_m-1) \tau^2)\!+\!\mathcal{O}(\tau^{p+1}) \\
+= & \bm{y}\left(\hat{t}_{m+1}\right)\!-\!\bm{y}\left(\hat{t}_m\!+\!\tau\right)\!-\!\left(\gamma_m-1\right) \bm{y}^{\prime}\left(\hat{t}_m+\tau\right) \tau\!+\!\mathcal{O}(\tau^{p+1}).
 \end{aligned}
 \end{equation}
 
 对于IDT,$\bm{y}_\gamma^{m+1}$被视为在$\hat{t}_m+\tau$处的近似,因此$\hat{t}_{m+1}=\hat{t}_m+\tau$,这意味着
-$T_{m+1}=-\left(\gamma_m-1\right) \bm{y}^{\prime}\left(\hat{t}_m+\tau\right) \tau+\mathcal{O}\left(\tau^{p+1}\right)=\mathcal{O}\left(\tau^p\right)$.
+$$T_{m+1}=-\left(\gamma_m-1\right) \bm{y}^{\prime}\left(\hat{t}_m+\tau\right) \tau+\mathcal{O}\left(\tau^{p+1}\right)=\mathcal{O}\left(\tau^p\right).$$
 也就是说,该方法\eqref{eq_SAVRRK:4-3}的阶数为$p-1$.
 
 对于RT,由于$\bm{y}_\gamma^{m+1}$被视为在$\hat{t}_m+\gamma_m \tau$处的近似.再次使用上述估计中的Taylor展开,有
 \begin{align}
 T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau\right)\!-\!\bm{y}\left(\hat{t}_m\!+\!\tau\right)\!-\!\left(\gamma_m\!-\!1\right) y^{\prime}\left(\hat{t}_m\!+\!\tau\right) \tau\!+\!\mathcal{O}(\tau^{p+1}) \nonumber\\
-\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\right)\!+\!\left(\gamma_m\!-\!1\right) \bm{y}^{\prime}\left(\hat{t}_m\!+\!\tau\right) \tau\!+\!\mathcal{O}(\left(\gamma_m\!-\!1\right)^2 \tau^2)\!-\!\bm{y}\left(\hat{t}_m\!+\!\tau\right)\!-\!\left(\gamma_m\!-\!1\right) \bm{y}^{\prime}\left(\hat{t}_m
-\!+\!\tau\right) \tau\!+\!\mathcal{O}(\tau^{p+1}) \nonumber\\
+\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\right)\!+\!\left(\gamma_m\!-\!1\right) \bm{y}^{\prime}\left(\hat{t}_m\!+\!\tau\right) \tau\!+\!\mathcal{O}(\left(\gamma_m\!-\!1\right)^2 \tau^2)\!\nonumber\\
+&-\!\bm{y}\left(\hat{t}_m\!+\!\tau\right)\!-\!\left(\gamma_m\!-\!1\right) \bm{y}^{\prime}\left(\hat{t}_m\!+\!\tau\right) \tau\!+\!\mathcal{O}(\tau^{p+1}) \nonumber\\
 \!= & \mathcal{O}(\tau^{p+1}).
 \end{align}
-
-
 这意味着该方法\eqref{eq_SAVRRK:4-3}的阶数为$p$.
 \end{proof}
 
 \begin{remark}\label{rk_SAVRRK:5_5}
-在计算中,IDT方法的阶数可能高于我们的期望,甚至可以达到RT方法的阶数,这可以在例子\ref{exp_SAVRRK:1}中观察到.
+在计算中,IDT方法的阶数可能高于的期望,甚至可以达到RT方法的阶数,这可以在例\ref{exp_SAVRRK:1}中观察到.
 \end{remark}
 	
 \begin{remark}\label{rk_SAVRRK:5_6}
-本文提出的方法可以轻松应用于其他类似的分数阶方程,例如非线性分数阶波动方程和分数阶Klein-Gordon-Schr{\"o}dinger方程.
+本章提出的方法可以轻松应用于其他类似的分数阶方程,例如非线性分数阶波动方程和分数阶Klein-Gordon-Schr{\"o}dinger方程等.
 \end{remark}
 
 \section{数值实例}\label{Section_SAVRRK: 6}
 
-在这一节中,我们进行了几个数值实验,以展示显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的精度和守恒性质.同时,我们进行了一些与其他经典显式SAV-RK方法的比较.
+在这一节中,进行了几个数值实验,以展示显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的精度和守恒性质.同时,与标准显式SAV-RK方法已有方法进行了比较.
 
-值得注意的是,我们在计算中使用了以下显式RK方法,没有失一般性地列举如下：
+不失一般性的,在计算中使用了以下的显式RK方法：
 \begin{enumerate}
 \item $\operatorname{RK}(2,2)$：两步,二阶Heun方法 %\cite{shuEfficientImplementationEssentially1988}.
 \begin{equation}
@@ -546,10 +566,11 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \end{equation}
 \end{enumerate}
 
-值得注意的是,本文的主要关注点是时间精度.因此,空间中呈现的谱精度现象没有显示出来.另外,鉴于我们数值实例中能量的固有正性,我们在计算中简单地设置常数$C_0=0$.
-% 值得注意的是,我们已经验证了空间方向上的谱精度,只是没有明确展示空间精度.
+值得一提的是,本文的主要关注点是时间方向精度.因此,并没有明确展示空间方向精度.
+另外,鉴于数值实例中能量的固有正性,在计算中简单地设置常数$C_0=0$.
+% 值得注意的是,已经验证了空间方向上的谱精度,只是没有明确展示空间精度.
 
-时间方向上的误差和收敛阶数通过以下方式计算：
+时间方向上的误差和收敛阶通过以下方式计算：
 \begin{equation}
 	\text{Error}(\tau) = \|U_{N}^{M} - U_{N}^{2 M}\|_{\infty},~\text{order} = \log_{2}\left[\frac{\text{Error}(\tau)}{\text{Error}(\tau / 2)}\right].\label{eq_SAVRRK:104}
 \end{equation}
@@ -561,8 +582,8 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 其中$E_{\gamma}^{m}$表示时刻$t_m$处的离散能量.
 
 \begin{example}\label{exp_SAVRRK:1}
-	% \cite{ranLinearlyImplicitConservative2016} 
-	首先,我们考虑一维NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3},形式如下：
+	\cite{ranLinearlyImplicitConservative2016} 
+	首先,考虑一维NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3},形式如下：
 	\begin{equation}\label{eq_SAVRRK:108}
 		u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0, \quad (x,t)\in  (-25, 25)\times[0, T],
 	\end{equation}
@@ -571,13 +592,15 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		
 	
 		
-	没有失一般性,这里我们设置 $\alpha=1.5$ 和 $T=1$,以确认显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的精度.
-	标准SAV-RK、SAV-RRK(RT)和SAV-RRK(IDT)方法在时间上的误差和收敛阶数列在表 \ref{tab_SAVRRK:6-1} 中.
-	我们可以看到,所有的SAV-RRK(RT)方法在收敛阶数上与标准SAV-RK方法保持一致,而SAV-RRK(IDT)方法表现不同.
-	SAV-RRK(IDT)(2,2) 和 SAV-RRK(IDT)(4,4) 给出了比预期阶数更高的收敛阶数,正如在定理\ref{thm_SAVRRK:5_4}中所示.而 SAV-RRK(IDT)(3,3) 给出了比预期阶数低一个的收敛阶数.这种不同的行为可能归因于 $\max\limits _m\left|\gamma_m-1\right|$ 的收敛阶数对于 SAV-RRK(RT)(2, 2) 和 SAV-RRK(RT)(4, 4) 改善了一个阶数,如图 \ref{fig_SAVRRK:1} 所示.
+	不失一般性,这里设置 $\alpha=1.5$ 和 $T=1$,以确认显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的精度.
+	表 \ref{tab_SAVRRK:6-1} 展示了标准SAV-RK、SAV-RRK(RT)和SAV-RRK(IDT)方法在时间上的误差和收敛阶.
+	可以看到,所有的SAV-RRK(RT)方法在收敛阶与标准SAV-RK方法保持一致,而SAV-RRK(IDT)方法表现不同.
+	SAV-RRK(IDT)(2,2) 和 SAV-RRK(IDT)(4,4) 给出了比在定理\ref{thm_SAVRRK:5_4}中预期阶数更高的收敛阶.
+	而 SAV-RRK(IDT)(3,3) 给出了比预期阶数低一个的收敛阶.这种不同的行为可能归因于 $\max\limits _m\left|\gamma_m-1\right|$ 
+	的收敛阶对于 SAV-RRK(RT)(2, 2) 和 SAV-RRK(RT)(4, 4) 提高了一个阶,如图 \ref{fig_SAVRRK:1} 所示.
 
 
-\begin{table}[H]\footnotesize
+\begin{table}[H]\scriptsize
 \centering
 \caption{当 $N=32$,$T = 1$ 时,例 \ref{exp_SAVRRK:1} 在时间方向的误差和收敛阶}
 \begin{tabular}{lllllrlrlrlrlrl}
@@ -604,26 +627,26 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \end{tabular}%
 \label{tab_SAVRRK:6-1}%
 \end{table}%
-此外,我们对每一步的松弛系数 $\gamma_m$ 进行了调查.
-我们计算了 $\max\limits _m\left|\gamma_m-1\right|$ 和 $\max\limits _m\left|S_m(1)\right|$,并使用不同的时间步长 $\tau$.
+此外,对每一步的松弛因子 $\gamma_m$ 进行了调查.
+计算了 $\max\limits _m\left|\gamma_m-1\right|$ 和 $\max\limits _m\left|S_m(1)\right|$,并使用不同的时间步长 $\tau$.
 一些松弛方法的数值结果显示在图 \ref{fig_SAVRRK:1} 中,从中可以看出上述两个量的阶数与理论结果一致.这证实了引理\ref{lem_SAVRRK:5_1}和定理\ref{thm_SAVRRK:5_1}中的理论结果.值得注意的是,当改变 $\alpha$ 的值时,可以得到一些类似的结果,尽管这些现象在这里没有显示出来.
 
 \begin{figure}[H]
 	\begin{center}
-	\subfigure[$\max\limits_m\left|\gamma_m-1\right|$]{ \centering
+	\subfigure[$\max_m\left|\gamma_m-1\right|$]{ \centering
 	\includegraphics[width=0.5\textwidth]{./figures/exp1_r.eps}
 	%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-	}\subfigure[$\max\limits_m\left|S_m(1)\right|$]{ \centering
+	}\subfigure[$\max_m\left|S_m(1)\right|$]{ \centering
 	\includegraphics[width=0.5\textwidth]{./figures/exp1_s.eps}
 	%\centerline{($a$) Temporal accuracy with $N=128.$}
 	}
-	% \caption{$\max\limits_m\left|\gamma_m-1\right|$ and $\max\limits_m\left|S_m(1)\right|$ for some relaxation methods in Example \ref{exp_SAVRRK:1}.}
-	\caption{例 \ref{exp_SAVRRK:1}中一些松弛格式（RT）所对应的$\max\limits_m\left|\gamma_m-1\right|$ 和 $\max\limits_m\left|S_m(1)\right|$.}
+	% \caption{$\max_m\left|\gamma_m-1\right|$ and $\max_m\left|S_m(1)\right|$ for some relaxation methods in Example \ref{exp_SAVRRK:1}.}
+	\caption{例 \ref{exp_SAVRRK:1}中一些松弛格式（RT）所对应的$\max_m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$.}
 	\label{fig_SAVRRK:1}
 	\end{center}
 	\end{figure}
-	我们还进行了一个长时间的模拟,直到 $T=1000$,并使用不同的 $\alpha$ 绘制了 SAV-RRK(4,4) 方法的相对能量图,如图 \ref{fig_SAVRRK:4} 所示.
-	这表明所提出的方案可以在离散级别上完全保持能量,并且其保持性能明显优于 SAV 方法\cite{chengConvergenceEnergyconservingScheme2022} 和三级线性隐式差分法\cite{wangConservativeLinearizedDifference2015}.		
+	还进行了一个长时间的模拟,直到 $T=1000$,并使用不同的 $\alpha$ 绘制了 SAV-RRK(4,4) 方法的相对能量图,如图 \ref{fig_SAVRRK:4} 所示.
+	这表明所提出的方案可以在离散级别上完全保持能量守恒,并且其保持性能明显优于 SAV 方法\cite{chengConvergenceEnergyconservingScheme2022} 和三级线性隐式差分法\cite{wangConservativeLinearizedDifference2015}.		
 
 	\begin{figure}[H]
 		\begin{center}
@@ -648,7 +671,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		\end{figure}
 
 	\begin{example}\label{exp_SAVRRK:2}
-		现在我们考虑具有以下初值的 2D NFSWEs \eqref{eq_SAVRRK:1}：
+		现在考虑具有以下初值的 2D NFSWEs \eqref{eq_SAVRRK:1}：
 		\begin{equation*}
 		u(x, y, 0)=\operatorname{sech}\left(x^2+y^2\right), u_t(x, y, 0)=\sin (x+y) \operatorname{sech}\left(-2\left(x^2+y^2\right)\right),(x, y, t) \in \Omega \times[0, T],
 		\end{equation*}
@@ -658,10 +681,10 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 			
 		为了重新确认理论结果在 2D 情况下的适用性,
 		考虑与例 \ref{exp_SAVRRK:1} 中相同的参数.也就是,$\alpha=1.5$ 和 $T=1$.
-		表 \ref{tab_SAVRRK:6-2} 和图 \ref{fig_SAVRRK:2-1} 分别展示了时间上的收敛阶和弛豫系数 $\gamma$.
-		我们可以观察到,与 1D 情况唯一的不同之处是,在 2D 情况下,SAV-RRK(IDT) 方法未能达到预期的更高阶.
+		表 \ref{tab_SAVRRK:6-2} 和图 \ref{fig_SAVRRK:2-1} 分别展示了时间上的收敛阶和松弛因子 $\gamma$.
+		可以观察到,与 1D 情况唯一的不同之处是,在 2D 情况下,SAV-RRK(IDT) 方法未能达到预期的更高阶.
 
-\begin{table}[H]\footnotesize
+\begin{table}[H]\scriptsize
 \centering
 \caption{当 $N=4, T = 1$ 时,例 \ref{exp_SAVRRK:2} 在时间方向的误差和收敛阶}
 % \caption{Numerical errors and convergence order in time for Example \ref{exp_SAVRRK:2} when $N=4, T = 1$.}
@@ -692,7 +715,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 	
 \begin{figure}[H]
 \begin{center}
-\subfigure[$\max _m\left|\gamma_m-1\right|$]{ \centering
+\subfigure[$\max_m\left|\gamma_m-1\right|$]{ \centering
 \includegraphics[width=0.5\textwidth]{./figures/exp2_r.eps}
 %\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
 }\subfigure[$\max_m\left|S_m(1)\right|$]{ \centering
@@ -700,11 +723,13 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 %\centerline{($a$) Temporal accuracy with $N=128.$}
 }
 % \caption{$\max _m\left|\gamma_m-1\right|$ and $\max_m\left|S_m(1)\right|$ for some relaxation (RT) methods in Example \ref{exp_SAVRRK:2}.}
-\caption{例 \ref{exp_SAVRRK:2}中一些松弛格式（RT）所对应的$\max\limits_m\left|\gamma_m-1\right|$ 和 $\max\limits_m\left|S_m(1)\right|$.}
+\caption{例 \ref{exp_SAVRRK:2}中一些松弛格式（RT）所对应的$\max_m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$.}
 \label{fig_SAVRRK:2-1}
 \end{center}
 \end{figure}
-为了展示所提方法在保持能量方面的有效性,我们进行了长时间模拟,直到 $T=100$,并在图 \ref{fig_SAVRRK:2-4} 中使用不同 $\alpha$ 的 SAV-RRK(4,4) 方法绘制了相对能量误差.结果显示,所提出的方法可以在离散级别上精确地保持能量,且其能量守恒性能显著优于文献 \cite{chengConvergenceEnergyconservingScheme2022} 中的 SAV 方法.
+为了展示所提方法在保持能量守恒方面的有效性,进行了长时间模拟,直到 $T=100$,
+并在图 \ref{fig_SAVRRK:2-4} 中绘制了使用 SAV-RRK(4,4) 方法关于不同 $\alpha$ 相对能量误差.
+结果显示, 所提出的方法可以在离散层面上精确地保持能量守恒,且其能量守恒性能显著优于中 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022}.
 \begin{figure}[H]
 	\begin{center}
 	\subfigure[$\alpha=1.3$]{ \centering
@@ -728,8 +753,8 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 	\end{figure}
 	
 	\begin{example}\label{exp_SAVRRK:3}
-		% \cite{wangUnconditionalEnergyDissipation2021} 
-		接下来,我们考虑二维非线性分数阶波动方程
+		\cite{wangUnconditionalEnergyDissipation2021} 
+		接下来,考虑二维非线性分数阶波动方程
 		\begin{equation}
 		\begin{cases}
 		& u_{t t}+(-\Delta)^{\frac{\alpha}{2}} u+F^{\prime}(u)=0,(x, y, t) \in \Omega \times(0, T],\\
@@ -739,10 +764,10 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		其中 $\Omega=(-10,10) \times(-10,10)$.
 		\end{example}
 		
-		取势能 $F(u)=u^2\left(\frac{1}{4} u^2-\frac{1}{2}\right)$.在 $T=1$ 时,$\alpha=1.5$ 的时间收敛阶数如表 \ref{tab_SAVRRK:6-3} 所示.
+		取势能 $F(u)=u^2\left(\frac{1}{4} u^2-\frac{1}{2}\right)$.在 $T=1$ 时,$\alpha=1.5$ 的时间收敛阶如表 \ref{tab_SAVRRK:6-3} 所示.
 		此外,图 \ref{fig_SAVRRK:3-4} 展示了长时间模拟 ($T=100$) 的离散能量演化,这些数据是通过应用 SAV-RRK(4,4) 方法计算的.结果表明,所提方法对非线性分数阶波动方程也是有效的.
 		
-\begin{table}[H]\footnotesize
+\begin{table}[H]\scriptsize
 \centering
 % \caption{Numerical errors and convergence order in time for Example \ref{exp_SAVRRK:3} when $N=4, T = 1$.}
 \caption{当 $N=4, T = 1$ 时,例 \ref{exp_SAVRRK:3} 在时间方向的误差和收敛阶}
@@ -795,8 +820,8 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \end{figure}
 
 \begin{example}\label{exp_SAVRRK:4}
-% \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 
-最后,我们考虑二维分数阶Klein-Gordon-Schr{\"o}dinger方程
+\cite{fuStructurepreservingAlgorithmsTwodimensional2020} 
+最后,考虑二维分数阶Klein-Gordon-Schr{\"o}dinger方程
 \begin{equation}
 \begin{cases}
 \mathrm{i} \partial_t u-\frac{1}{2}(-\Delta)^{\frac{\alpha}{2}} u+u \phi=0,(x, y, t) \in \Omega \times(0, T],\\
@@ -805,15 +830,18 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \end{equation}
 其中初始条件为
 \begin{equation}
-u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=\operatorname{sech}\left(|\boldsymbol{x}|^2\right),~~ \partial_t \phi(x, y, 0)=\sin (x+y) \operatorname{sech}\left(-2|\boldsymbol{x}|^2\right),
+	\begin{aligned}
+		u(x, y, 0)&=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=\operatorname{sech}\left(|\boldsymbol{x}|^2\right),\\
+		\partial_t \phi(x, y, 0)&=\sin (x+y) \operatorname{sech}\left(-2|\boldsymbol{x}|^2\right),
+	\end{aligned}
 \end{equation}
 其中 $\Omega=[-10,10] \times[-10,10]$.
 \end{example}
 
-与前面的例子类似,表 \ref{tab_SAVRRK:6-4} 列出了 $\alpha=\beta=1.5$ 时的一些数值误差和时间收敛阶数.
+与前面的例子类似,表 \ref{tab_SAVRRK:6-4} 列出了 $\alpha=\beta=1.5$ 时的一些数值误差和时间收敛阶.
 
 
-\begin{table}[H]\footnotesize
+\begin{table}[H]\scriptsize
 \centering
 % \caption{Numerical errors and convergence order in time for Example \ref{exp_SAVRRK:4} when $N=4, T = 1$.}
 \caption{当 $N=4, T = 1$ 时,例 \ref{exp_SAVRRK:4} 在时间方向的误差和收敛阶}
@@ -843,8 +871,8 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 \end{table}%
 
 此外,长时间模拟（直至 $T=100$）中使用不同 $\alpha$ 和 $\beta$ 的相对能量如图 \ref{fig_SAVRRK:3-5} 所示.
-% 图像展示的现象表明,所提出的方案可以在分数阶Klein-Gordon-Schr{\"o}dinger方程的离散水平上准确保持能量.
-图中所示的现象表明,所提出的方法可以在分数阶Klein-Gordon-Schr{\"o}dinger方程的离散水平上准确保持能量.
+% 图像展示的现象表明,所提出的方案可以在分数阶Klein-Gordon-Schr{\"o}dinger方程的离散水平上准确保持能量守恒.
+图中所示的现象表明,所提出的方法可以在分数阶Klein-Gordon-Schr{\"o}dinger方程的离散层面上准确保持能量守恒.
 
 \begin{figure}[H]
 \begin{center}
@@ -869,9 +897,9 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 \end{figure}
 
 \section{小结}\label{Section_SAVRRK: 7}
-在本文中,我们提出了一种开发二维分数非线性薛定谔波动方程高阶显式能量守恒数值方法的新途径.该方法基于最近引入的标量辅助变量方法和弛豫龙格-库塔方法.理论分析和数值结果支持了所提方案的守恒性质.
-更多的数值结果表明,所提方法对于其他类似的分数保守问题也是有效的,例如非线性分数波动方程和分数Klein-Gordon-Schr{\"o}dinger方程等.
-% {\color{purple}{值得注意的是,即使在其他相关文献中提到的偶数阶IDT方法可能表现出更高阶的现象在我们的二维计算示例中并没有观察到.这一发现是新颖的,但仍然是一个待解的问题.}}
+在本章中,提出了一种开发二维分数非线性薛定谔波动方程高阶显式能量守恒数值方法的新途径.该方法基于最近引入的标量辅助变量方法和松弛龙格-库塔方法.理论分析和数值结果支持了所提方案的守恒性质.
+更多的数值结果表明,所提方法对于其他类似的分数守恒问题也是有效的,例如非线性分数波动方程和分数Klein-Gordon-Schr{\"o}dinger方程等.
+% {\color{purple}{值得注意的是,即使在其他相关文献中提到的偶数阶IDT方法可能表现出更高阶的现象在的二维计算示例中并没有观察到.这一发现是新颖的,但仍然是一个待解的问题.}}
 
 % \section*{致谢}
 % % 本工作得到四川省科技计划的支持（项目编号2020YJ0110、2022JDTD0019）,中国国家自然科学基金（项目编号11801389）以及四川师范大学Laurent数学中心和国家-地方联合工程实验室系统可信性自动验证（项目编号ZD20220105）的支持.
@@ -882,13 +910,13 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 	
 
 % \section{NFSWE的SAV重构}\label{Section_SAVRRK: 2}
-% 在本节中,我们回顾了开发高效节能方案来解决 NFSWE 的主要挑战在于非线性项的离散化.
-% 正如我们所知,所有 RK 方法都保留任意线性不变量 \cite{griffithsNumericalMethodsOrdinary2010},辛 RK 方法保留任意二次不变量\cite{cooperStabilityRungeKuttaMethods1987}.
+% 在本节中,回顾了开发高效节能方案来解决 NFSWE 的主要挑战在于非线性项的离散化.
+% 正如所知,所有 RK 方法都保留任意线性不变量 \cite{griffithsNumericalMethodsOrdinary2010},辛 RK 方法保留任意二次不变量\cite{cooperStabilityRungeKuttaMethods1987}.
 % 然而,没有 RK 方法可以保留任意多项式不变量的次数高于两个或非多项式非线性不变量 \cite{calvoNumericalSolutionIsospectral1997}.
-% 在本节中,为了利用松弛 RK 方法的二次不变性保持特性,我们将采用新开发的标量辅助变量方法将高次能量重写为二次能量,
+% 在本节中,为了利用松弛 RK 方法的二次不变性保持特性,将采用新开发的标量辅助变量方法将高次能量重写为二次能量,
 % 然后将 NFSWE 重新表述为允许二次能量函数的等效形式.
 
-% 在介绍该方案之前,我们引入一个标量辅助变量 (SAV),即让
+% 在介绍该方案之前,引入一个标量辅助变量 (SAV),即让
 % \begin{equation}
 % 	w(t)=\sqrt{H(t)+C_0} \text { with } H(t)=\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4} .
 % \end{equation}
@@ -922,9 +950,9 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % \section{保结构空间离散化}\label{Section_SAVRRK: 3}
 
 % % \subsection{Space Semi-discrete System}
-% 注意到周期性边界条件,我们选择傅立叶拟谱方法对 NFSWEs \eqref{eq_SAVRRK:2-2}-\eqref{eq_SAVRRK:31} 进行空间离散化.%We develop a numerical method to solve the initial-periodic boundary value problem \eqref{eq_SAVRRK:s1} in a finite domain $\Omega \times(0, T)$.
+% 注意到周期性边界条件,选择傅里叶拟谱方法对 NFSWEs \eqref{eq_SAVRRK:2-2}-\eqref{eq_SAVRRK:31} 进行空间离散化.%We develop a numerical method to solve the initial-periodic boundary value problem \eqref{eq_SAVRRK:s1} in a finite domain $\Omega \times(0, T)$.
 
-% 不失一般性,我们设置$d=2$.
+% 不失一般性,设置$d=2$.
 % %First, we introduce some notations.
 % 对于正整数$M$甚至正整数$N_{x}$和$N_{y}$,表示$\tau={T}/{M},h_{x}={2 L}/{N_{ x}}, h_{y}={2 L}/{N_{y}}$.定义 $\Omega_{h}^{\tau}=\Omega_{h} \times \Omega_{\tau}$,其中 $\Omega_{h}=\left\{\left(x_{i}, y_{ j}\right) \mid i=0,1, \cdots, N_{x}\!-\!1;\right.\\ \left.j=0,1, \cdots, N_{y}\! -\!1\right\}$ 和 $\Omega_{\tau}=\left\{t_{m} \mid t_{m}=m \tau, 0 \leq m \leq M\right\}$,其中 $t_{m}=m \tau, x_{i}\!=\!-L i h_{x}$ 和 $y_{j}\!=\!-L j h_{y}$.
 % 然后给出任何时间级别的相应向量形式
@@ -940,7 +968,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % \end{align}
 
 % 令 $\left(x_{i}, y_{j}\right) \in \Omega_{h}$ 为傅里叶配置点.表示 $u_{N}(x, y)$ 是
-% $u(x, y)$ 的插值多项​​式函数,那么我们有
+% $u(x, y)$ 的插值多项​​式函数,那么有
 % \begin{align}\label{eq_SAVRRK:50}
 % u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} / 2} \tilde{u}_{k_{1}, k_{2}} e^{\mathrm{i}\mu\left( k_{1} (x+L)+k_{2}(y+L)\right)},
 % \end{align}
@@ -949,7 +977,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % \tilde{u}_{k_{1}, k_{2}}=\frac{1}{N_{x} c_{k_{1}}} \frac{1}{N_{y} c_{k_{2}}} \sum_{l_1=0}^{N_{x}-1} \sum_{l_2=0}^{N_{y}-1} u(x_{l_1}, y_{l_2}) e^{-\mathrm{i}\mu\left( k_{1}(x_{l_1}+L)+k_{2}(y_{l_2}+L)\right)},
 % \end{align}
 % 其中 $c_{k_{1}}=1$ 对于 $\left|k_{1}\right|<N_{x} / 2, c_{k_{2}}=1$ 对于 $\left|k_{2 }\right|<N_{y} / 2, c_{k_{1}}=2$ 对于 $k_{1}=\pm N_{x} / 2$, $c_{k_{2}}=2$对于$ k_{2}=\pm N_{y} / 2$.
-% 因此,分数拉普拉斯算子 $-(-\Delta)^{\frac{\alpha}{2}} u(x, y)$ 可以近似为
+% 因此,分数阶拉普拉斯算子 $-(-\Delta)^{\frac{\alpha}{2}} u(x, y)$ 可以近似为
 % \begin{align}\label{eq_SAVRRK:52}
 % -(-\Delta)^{\frac{\alpha}{2}} u_{N}\left(x, y\right)=-\sum\limits_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum\limits_{k_{2}=-N_{y} / 2}^{N_{y} / 2}\left|\left(k_{1} \mu\right)^{2}+\left(k_{2} \mu\right)^{2}\right|^{\frac{\alpha}{2}} \tilde{u}_{k_{1}, k_{2}} e^{\mathrm{i}\mu\left( k_{1} (x+L)+k_{2}(y+L)\right)},
 % \end{align}
@@ -997,7 +1025,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 	& W_t=\Re\left(b(U), U_t\right) .\label{eq_SAVRRK:3-11}
 % 	\end{align}
 
-% 	具有初始条件 $U^0, V^0, W^0$,其中 $\cdot$ 表示向量之间的点乘.那么我们有下面的定理.
+% 	具有初始条件 $U^0, V^0, W^0$,其中 $\cdot$ 表示向量之间的点乘.那么有下面的定理.
 %     \begin{thm}	\label{thm3}
 %         半离散系统\eqref{eq_SAVRRK:3-9}–\eqref{eq_SAVRRK:3-11}承认半离散全局二次能量守恒定律
 %         % 	\begin{equation}
@@ -1036,9 +1064,9 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 这意味着方程\eqref{eq_SAVRRK:313}
 % \end{pf}
 % \section{守恒SAV-RRK格式}\label{Section_SAVRRK: 4}
-% 为了加速计算,因此,我们采用SAV方法为NFSWEs提出了不变量保持的显式Runge-Kutta方案.本节开始,我们回顾RRK方法并讨论它们的结构保持特性.
+% 为了加速计算,因此,采用SAV方法为NFSWEs提出了不变量保持的显式Runge-Kutta方案.本节开始,回顾RRK方法并讨论它们的结构保持特性.
 % \subsection{Explicit SAV-RRK schemes}
-% 为简洁起见,我们引入以下符号：
+% 为简洁起见,引入以下符号：
 % \begin{equation}
 % 	\bm{y}=\left(U,V,W\right)^T,\bm{y}_0=\left(U^0,V^0,W^0\right)^T , \bm{f}=(f^1,f^2,f^3)^T=(V,D^{\alpha} U-\mathrm{i}\kappa V-b(U)\cdot W,\Re\left(b(U), U_t\right))^T.
 % \end{equation}
@@ -1113,7 +1141,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 
 % 需要指出的是,对数值解 $\bm{y}_\gamma^{m+1}$ 的不同理解将导致不同的收敛结果.
 
-% 当且仅当 $\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$ 时,$\gamma_m$ 的值也可以被明确地表达.经过简单的计算,我们可以得到：
+% 当且仅当 $\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$ 时,$\gamma_m$ 的值也可以被明确地表达.经过简单的计算,可以得到：
 
 % % \begin{equation}
 % % 	\begin{aligned}
@@ -1157,7 +1185,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 由于$\bm{y}_\gamma^{m+1}$可以被视为对$\bm{y}\left(\hat{t}_m+\gamma_m \tau\right)$的逼近,因此在每一步中确保$\gamma_m>0$非常重要.事实上,\eqref{eq_SAVRRK:4-6}中定义的$\gamma_m$对于小的步长$\tau$接近于$1$,这将在第\ref{Section_SAVRRK: 5-1}节进一步讨论.因此,松弛方法是良好定义的.
 
 % % \subsection{Structure-preserving properties of the RRK methods}
-% 在公式 \eqref{eq_SAVRRK:4-3} 中引入松弛系数 $\gamma_m$ 的目的是为了保证数值解的能量守恒.实验证明,SAV-RRK 方法对于守恒问题 \eqref{eq_SAVRRK:2-2}-\eqref{eq_SAVRRK:2-4} 是守恒的.
+% 在公式 \eqref{eq_SAVRRK:4-3} 中引入松弛因子 $\gamma_m$ 的目的是为了保证数值解的能量守恒.实验证明,SAV-RRK 方法对于守恒问题 \eqref{eq_SAVRRK:2-2}-\eqref{eq_SAVRRK:2-4} 是守恒的.
 % \begin{thm}
 % 	假设 SAV-RK 方法 \eqref{eq_SAVRRK:4-31} 至少为二阶方法;则对于足够小的步长 $\tau$,SAV-RRK 方法具有守恒性质
 %     \begin{equation}
@@ -1171,15 +1199,15 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 
 %     当 $\sum_{i=1}^s b_i \bm{f}_{m i}\neq 0$ 时,根据条件 \eqref{eq_SAVRRK:4-6},性质 \eqref{eq_SAVRRK:4-10} 仍然成立.
 
-% 由于 SAV-RK 方法的阶数至少为二,我们可以得出结论,在足够小的步长 $\tau$ 下,$\gamma_m>0$,这将在第 \ref{Section_SAVRRK: 5-1} 节中得到证明.
+% 由于 SAV-RK 方法的阶数至少为二,可以得出结论,在足够小的步长 $\tau$ 下,$\gamma_m>0$,这将在第 \ref{Section_SAVRRK: 5-1} 节中得到证明.
 % \end{pf}
 
 % \section{SAV-RRK 方法的精度}\label{Section_SAVRRK: 5}
-% 本节中,我们将讨论 SAV-RRK 方法的精度.首先,我们估计松弛系数 $\gamma_m$,该系数在后续的分析中起着关键作用.然后,我们推导 SAV-RRK 方法的精度.
+% 本节中,将讨论 SAV-RRK 方法的精度.首先,估计松弛因子 $\gamma_m$,该系数在后续的分析中起着关键作用.然后,推导 SAV-RRK 方法的精度.
 
-% \subsection{松弛系数的估计}\label{Section_SAVRRK: 5-1}
+% \subsection{松弛因子的估计}\label{Section_SAVRRK: 5-1}
 
-% 虽然松弛系数 $\gamma_m$ 往往会随着步数而变化,但是它在不同步数间可以通过类似的方式进行估计.在这里,我们只考虑区间 $\left[\hat{t}m, \hat{t}{m+1}\right]$ 内的单个步长.在此期间,$\sum_{i=1}^s b_i \bm{f}{m i}=0$ 的情况较为简单,因此我们将重点放在 $\sum{i=1}^s b_i \bm{f}_{m i} \neq 0$ 的情况下.
+% 虽然松弛因子 $\gamma_m$ 往往会随着步数而变化,但是它在不同步数间可以通过类似的方式进行估计.在这里,只考虑区间 $\left[\hat{t}m, \hat{t}{m+1}\right]$ 内的单个步长.在此期间,$\sum_{i=1}^s b_i \bm{f}{m i}=0$ 的情况较为简单,因此将重点放在 $\sum{i=1}^s b_i \bm{f}_{m i} \neq 0$ 的情况下.
 
 % 设
 % % \begin{equation}
@@ -1191,7 +1219,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 	&+\left(W_\gamma^m+\gamma \tau \sum\limits_{i=1}^s b_i \bm{f}_{m i}^3\right)^2-\|V_\gamma^{m}\|^2 - \|D^\frac{\alpha}{2} U_\gamma^{m}\|^2-\left(W_\gamma^{m}\right)^2,
 % 	\end{aligned}
 % 	\end{equation}
-%     则,由 \eqref{eq_SAVRRK:4-6} 定义的 $\gamma_m$ 的值恰为函数 $S_m(\gamma)$ 的非零根.对于 $S_m(\gamma)$,我们有引理 \ref{lem_SAVRRK:5_1} 和引理 \ref{lem_SAVRRK:5_2}.
+%     则,由 \eqref{eq_SAVRRK:4-6} 定义的 $\gamma_m$ 的值恰为函数 $S_m(\gamma)$ 的非零根.对于 $S_m(\gamma)$,有引理 \ref{lem_SAVRRK:5_1} 和引理 \ref{lem_SAVRRK:5_2}.
 
 % \begin{lem}\label{lem_SAVRRK:5_1}
 % 	假设 SAV-RK 方法 \eqref{eq_SAVRRK:4-31} 的阶数为 $p$,则对于足够小的 $\tau$,有以下结果成立：
@@ -1207,7 +1235,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % \tilde{\bm{y}}\left(\hat{t}_m\right)=\bm{y}_\gamma^m,
 % \end{array}\right.
 % \end{equation}
-% 其中,$\bm{y}\gamma^m$与式\eqref{eq_SAVRRK:4-3}中的相同.通过使用式\eqref{eq_SAVRRK:4-31}中$p$阶的SAV-RK方法进行一步计算,我们可以得到内部阶段$\tilde{Y}{m i}, i=1, \ldots, s$以及数值解$\tilde{\bm{y}}^{m+1}$,其满足当$\tau$足够小时,$\tilde{\bm{y}}^{m+1}=\tilde{\bm{y}}\left(\hat{t}m+\tau\right)+\mathcal{O}\left(\tau^{p+1}\right)$.利用$\bm{y}\gamma^m$,带$\gamma_m=1$的SAV-RRK方法\eqref{eq_SAVRRK:4-3}生成内部阶段$Y_{m i}, i=1, \ldots, s$和数值解$\bm{y}\gamma^{m+1}$.显然,$Y{m i}=\tilde{Y}{m i}, i=1, \ldots, s$,$\bm{y}\gamma^{m+1}=\tilde{\bm{y}}^{m+1}$.因此,令$\tilde{\bm{f}}{m i}:=\bm{f}\left(\tilde{Y}{m i}\right)$,我们有：
+% 其中,$\bm{y}\gamma^m$与式\eqref{eq_SAVRRK:4-3}中的相同.通过使用式\eqref{eq_SAVRRK:4-31}中$p$阶的SAV-RK方法进行一步计算,可以得到内部阶段$\tilde{Y}{m i}, i=1, \ldots, s$以及数值解$\tilde{\bm{y}}^{m+1}$,其满足当$\tau$足够小时,$\tilde{\bm{y}}^{m+1}=\tilde{\bm{y}}\left(\hat{t}m+\tau\right)+\mathcal{O}\left(\tau^{p+1}\right)$.利用$\bm{y}\gamma^m$,带$\gamma_m=1$的SAV-RRK方法\eqref{eq_SAVRRK:4-3}生成内部阶段$Y_{m i}, i=1, \ldots, s$和数值解$\bm{y}\gamma^{m+1}$.显然,$Y{m i}=\tilde{Y}{m i}, i=1, \ldots, s$,$\bm{y}\gamma^{m+1}=\tilde{\bm{y}}^{m+1}$.因此,令$\tilde{\bm{f}}{m i}:=\bm{f}\left(\tilde{Y}{m i}\right)$,有：
 % \begin{equation}
 % \begin{aligned}
 % S_n(1) = &\|V_\gamma^{m+1}\|^2 + \|D^\frac{\alpha}{2} U_\gamma^{m+1}\|^2+\left(W_\gamma^{m+1}\right)^2-\|V_\gamma^{m}\|^2 - \|D^\frac{\alpha}{2} U_\gamma^{m}\|^2-\left(W_\gamma^{m}\right)^2 \\
@@ -1243,7 +1271,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % &+2\gamma\tau^2\left[\left\|\sum\limits_{i=1}^{s}b_if_{mi}^2\right\|^2+ \left\|D^\frac{\alpha}{2}\left(\sum\limits_{i=1}^{s}b_if_{mi}^1\right)\right\|^2+\left(\sum\limits_{i=1}^{s}b_if_{mi}^3\right)^2\right].
 % \end{aligned}
 % \end{equation}
-% 因此,我们有：
+% 因此,有：
 % \begin{equation}
 % 	\begin{aligned}
 % 	S_m^{\prime}(0)=&\tau\left[\left(V_{\gamma}^{m},\sum\limits_{i=1}^{s}b_if_{mi}^2\right)+\left(\sum\limits_{i=1}^{s}b_if_{mi}^2,V_{\gamma}^{m}\right)-\left(U_{\gamma}^{m},D^{\alpha} \left(\sum\limits_{i=1}^{s}b_if_{mi}^1\right)\right)-\left(\sum\limits_{i=1}^{s}b_if_{mi}^1, D^{\alpha} U_{\gamma}^{m}\right)+2W_{\gamma}^{m}\sum\limits_{i=1}^{s}b_if_{mi}^3\right]
@@ -1256,7 +1284,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 	&+2\tau^2\left[\left\|\sum\limits_{i=1}^{s}b_if_{mi}^2\right\|^2+ \left\|D^\frac{\alpha}{2}\left(\sum\limits_{i=1}^{s}b_if_{mi}^1\right)\right\|^2+\left(\sum\limits_{i=1}^{s}b_if_{mi}^3\right)^2\right].
 % 	\end{aligned}
 % 	\end{equation}
-% 	存在$\tilde{t}_m \in$ $\left[\hat{t}_m, \hat{t}_m+\tau\right]$,使得$\bm{f}\left(\bm{y}\left(\tilde{t}_m\right)\right) \neq 0$.使用简写符号$\tilde{\bm{f}}_m=\bm{f}\left(\bm{y}\left(\tilde{t}m\right)\right))$并进行Taylor展开,我们有$\bm{f}{m i}=\tilde{\bm{f}}_m+\mathcal{O}(\tau)$,当$\tau$足够小时成立.因此,有：
+% 	存在$\tilde{t}_m \in$ $\left[\hat{t}_m, \hat{t}_m+\tau\right]$,使得$\bm{f}\left(\bm{y}\left(\tilde{t}_m\right)\right) \neq 0$.使用简写符号$\tilde{\bm{f}}_m=\bm{f}\left(\bm{y}\left(\tilde{t}m\right)\right))$并进行Taylor展开,有$\bm{f}{m i}=\tilde{\bm{f}}_m+\mathcal{O}(\tau)$,当$\tau$足够小时成立.因此,有：
 %     \begin{equation}
 % 	\begin{aligned}
 % 	S_m^{\prime}(0)=&\tau\left[\left(V_{\gamma}^{m},\sum\limits_{i=1}^{s}b_i\tilde{f}_m^2\right)+\left(\sum\limits_{i=1}^{s}b_i\tilde{f}_m^2,V_{\gamma}^{m}\right)-\left(U_{\gamma}^{m},D^{\alpha} \left(\sum\limits_{i=1}^{s}b_i\tilde{f}_m^1\right)\right)-\left(\sum\limits_{i=1}^{s}b_i\tilde{f}_m^1, D^{\alpha} U_{\gamma}^{m}\right)+2W_{\gamma}^{m}\sum\limits_{i=1}^{s}b_i\tilde{f}_m^3\right]\\
@@ -1274,7 +1302,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 	\end{equation}
 % \end{pf} }
 
-% 结合引理\ref{lem_SAVRRK:5_1}和引理\ref{lem_SAVRRK:5_2},我们可以得到定义在\eqref{eq_SAVRRK:4-3}中的松弛系数$\gamma_m$的估计,详见定理\ref{thm_SAVRRK:5_1}.
+% 结合引理\ref{lem_SAVRRK:5_1}和引理\ref{lem_SAVRRK:5_2},可以得到定义在\eqref{eq_SAVRRK:4-3}中的松弛因子$\gamma_m$的估计,详见定理\ref{thm_SAVRRK:5_1}.
 
 % \begin{thm}\label{thm_SAVRRK:5_1}
 % 	Suppose the order of SAV-RK method \eqref{eq_SAVRRK:4-31} is $p(p \geq 2)$; then, for sufficiently small $\tau$, the relaxation coefficient $\gamma_m$ defined in \eqref{eq_SAVRRK:4-6} satisfies
@@ -1283,7 +1311,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % \end{equation}
 % \end{thm} 
 % \begin{pf}
-% 	在$\sum_{i=1}^s b_i \bm{f}{m i}=0$的情况下,我们有$\gamma_m=1$,它自动满足\eqref{eq_SAVRRK:5_3}.在$\sum{i=1}^s b_i \bm{f}_{m i}\neq 0$的情况下,注意到$S_m(\gamma)$是$\gamma$的二次函数,并利用以下事实：
+% 	在$\sum_{i=1}^s b_i \bm{f}{m i}=0$的情况下,有$\gamma_m=1$,它自动满足\eqref{eq_SAVRRK:5_3}.在$\sum{i=1}^s b_i \bm{f}_{m i}\neq 0$的情况下,注意到$S_m(\gamma)$是$\gamma$的二次函数,并利用以下事实：
 %     \begin{equation}
 % \begin{aligned}
 % & S_m(0)=0, \quad S_m(1)=\mathcal{O}\left(\tau^{p+1}\right), \\
@@ -1291,13 +1319,13 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % &
 % \end{aligned}
 % \end{equation}
-% 我们可以推导出$S_m(\gamma)$的一个根$\gamma=1+\mathcal{O}\left(\tau^{p-1}\right)$.因此,定义在\eqref{eq_SAVRRK:4-6}中的松弛系数$\gamma_m$满足\eqref{eq_SAVRRK:5_3},从而完成了证明.
+% 可以推导出$S_m(\gamma)$的一个根$\gamma=1+\mathcal{O}\left(\tau^{p-1}\right)$.因此,定义在\eqref{eq_SAVRRK:4-6}中的松弛因子$\gamma_m$满足\eqref{eq_SAVRRK:5_3},从而完成了证明.
 % \end{pf}
 % \begin{remark}\label{rk_SAVRRK:5_1}
-% 	定理\ref{thm_SAVRRK:5_1}中的结果表明,对于足够小的$\tau$,松弛系数$\gamma_m$接近于$1$,这意味着松弛方法可以被视为标准方法的小扰动.
+% 	定理\ref{thm_SAVRRK:5_1}中的结果表明,对于足够小的$\tau$,松弛因子$\gamma_m$接近于$1$,这意味着松弛方法可以被视为标准方法的小扰动.
 % \end{remark}
 % \subsection{SAV-RRK方法的截断误差}
-% 现在我们进一步研究使用松弛系数$\gamma_m$的估计来研究SAV-RRK方法的精度.在证明方法的精度之前,我们将方案\eqref{eq_SAVRRK:4-3}重写为
+% 现在进一步研究使用松弛因子$\gamma_m$的估计来研究SAV-RRK方法的精度.在证明方法的精度之前,将方案\eqref{eq_SAVRRK:4-3}重写为
 % \begin{equation}
 % 	\left\{\begin{array}{l}
 % 		\bm{Y}_{m i}=\bm{y}_\gamma^m+\tau \sum\limits_{j=1}^i a_{i j} \bm{f}_{m j}, \quad i=1, \ldots, s, \\
@@ -1305,7 +1333,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 		\bm{y}_\gamma^{m+1}=\bm{y}^{m+1}+\left(\gamma_m-1\right)\left(\bm{y}^{m+1}-\bm{y}_\gamma^m\right) .
 % 	\end{array}\right.\label{eq_SAVRRK:4-321}
 % 	\end{equation}
-%     我们遵循 \cite{ranochaGeneralRelaxationMethods2020} 中引理 $2.7$ 证明的思路,得到以下结果.
+%     遵循 \cite{ranochaGeneralRelaxationMethods2020} 中引理 $2.7$ 证明的思路,得到以下结果.
 
 % \begin{thm}\label{thm_SAVRRK:5_4}
 % 假设 SAV-RK 方法 \eqref{eq_SAVRRK:4-31} 的阶数为 $p (p \geq 2)$,则以下陈述成立：
@@ -1318,7 +1346,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 %     \begin{equation}
 % \bm{y}\left(\hat{t}_m+\tau\right)\bm{y}\left(\hat{t}_m\right)+\tau \sum_{i=1}^s b_i \bm{f}\left(\bm{y}\left(\hat{t}_{m i}\right)\right)+\mathcal{O}\left(\tau^{p+1}\right),
 % \end{equation}
-% 这些公式是从 SAV-RK 方法 \eqref{eq_SAVRRK:4-31} 的精度导出的.然后,我们估计 \eqref{eq_SAVRRK:4-321} 中第三个式子的截断误差.将精确解代入该式子,并记 $\phi_m(\bm{y}(t)):=\bm{y}\left(\hat{t}m\right)+\tau \sum{i=1}^s b_i \bm{f}\left(\bm{y}\left(\hat{t}_{m i}\right)\right)$,得到：
+% 这些公式是从 SAV-RK 方法 \eqref{eq_SAVRRK:4-31} 的精度导出的.然后,估计 \eqref{eq_SAVRRK:4-321} 中第三个式子的截断误差.将精确解代入该式子,并记 $\phi_m(\bm{y}(t)):=\bm{y}\left(\hat{t}m\right)+\tau \sum{i=1}^s b_i \bm{f}\left(\bm{y}\left(\hat{t}_{m i}\right)\right)$,得到：
 % \begin{equation}
 % 	\bm{y}\left(\hat{t}_{m+1}\right)=\phi_m(\bm{y}(t))+\left(\gamma_m-1\right)\left(\phi_m(\bm{y}(t))-\bm{y}\left(\hat{t}_m\right)\right)+d_{m+1} .
 % \end{equation}
@@ -1347,11 +1375,11 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 由此可以得知该方法的阶数为 $p$.
 % \end{pf}
 % \begin{remark}\label{rk_SAVRRK:5_5}
-% 	在实际计算中,IDT 方法的阶数可能会比我们预期的更高,甚至可以达到 RT 方法的阶数,这可以在例子 \ref{exp_SAVRRK:1} 中观察到.
+% 	在实际计算中,IDT 方法的阶数可能会比预期的更高,甚至可以达到 RT 方法的阶数,这可以在例子 \ref{exp_SAVRRK:1} 中观察到.
 % \end{remark}
 
 % \section{数值算例}\label{Section_SAVRRK: 6}
-% 为了支持和验证之前的理论结果,本节提供了一些数值例子. 在我们的计算中,采用了基于快速傅里叶变换（FFT）方法的快速求解器方法,可以减少内存需求和计算复杂度. 我们进行了几个实验来说明所提出的方法的有效性,并将它们与其他经典的SAV-RK方法进行比较. 首先,我们展示了SAV重构的RRKs和IDTs的数值收敛阶. 然后我们展示了所提出的方案的精度和守恒性质.
+% 为了支持和验证之前的理论结果,本节提供了一些数值例子. 在的计算中,采用了基于快速傅里叶变换（FFT）方法的快速求解器方法,可以减少内存需求和计算复杂度. 进行了几个实验来说明所提出的方法的有效性,并将它们与其他经典的SAV-RK方法进行比较. 首先,展示了SAV重构的RRKs和IDTs的数值收敛阶. 然后展示了所提出的方案的精度和守恒性质.
 
 % 在数值测试中,将使用以下RK方法：
 % \begin{enumerate}
@@ -1389,7 +1417,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 	
 % \end{enumerate}
 
-% 此外,还将使用SAV方法\cite{chengConvergenceEnergyconservingScheme2022}和三层线性隐式差分格式\cite{wangConservativeLinearizedDifference2015}进行比较. 为了得到数值误差,我们使用以下误差函数
+% 此外,还将使用SAV方法\cite{chengConvergenceEnergyconservingScheme2022}和三层线性隐式差分格式\cite{wangConservativeLinearizedDifference2015}进行比较. 为了得到数值误差,使用以下误差函数
 % \begin{align}\label{eq_SAVRRK:103}
 % Error(\tau)=\left\|U_{N}^{M}-U_{N}^{2 M}\right\|_{\infty},~Error(N)=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty},
 % \end{align}
@@ -1412,24 +1440,24 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 
 
 % \begin{example}\label{exp_SAVRRK:1}
-%     首先,我们将一维NFSWEs \eqref{eq_SAVRRK:s1}表示为
+%     首先,将一维NFSWEs \eqref{eq_SAVRRK:s1}表示为
 % \begin{equation}\label{eq_SAVRRK:108}
 % u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0, \quad (x,t)\in  \Omega\times[0, T],
 % \end{equation}
 % 当 $u(x, 0)=(1+\mathrm{i}) x e^{-10(1-x)^2}$ 和 $u_t(x, 0)=0$.
 % \end{example}
 
-% 不难验证,初始值函数$u(x, 0)$沿着$x$从$x=1$处指数衰减为零.这意味着初始值函数在有界区间$\Omega$之外可以忽略不计.考虑到机器精度的限制, 这里,我们取$\Omega=(-25,25)$.
+% 不难验证,初始值函数$u(x, 0)$沿着$x$从$x=1$处指数衰减为零.这意味着初始值函数在有界区间$\Omega$之外可以忽略不计.考虑到机器精度的限制, 这里,取$\Omega=(-25,25)$.
 
-% 不失一般性,这里我们取$\alpha=1.5$和$T=100$来验证我们的理论分析结果. 
+% 不失一般性,这里取$\alpha=1.5$和$T=100$来验证的理论分析结果. 
 % 选择时间步长$\Delta t=0.1,0.05,0.025,0.0125,0.00625$,标准SAV-RK、SAV-RRK和SAV-IDT格式的相应误差和时间收敛率如表\ref{tab_SAVRRK:6-1}所示. 
-% 我们可以看到,所有的SAV-RRK格式保持了与标准SAV-RK格式相同的收敛阶数,而SAV-IDT格式则表现出不同的行为. 
-% SAV-IDT $(2,2)$和SAV-IDT $(4,4)$给出了比定理\ref{thm_SAVRRK:5_4}中指示的期望速率更高的收敛阶数,而SAV-IDT $(3,3)$则给出了降低了一个阶数的收敛速率. 
+% 可以看到,所有的SAV-RRK格式保持了与标准SAV-RK格式相同的收敛阶,而SAV-IDT格式则表现出不同的行为. 
+% SAV-IDT $(2,2)$和SAV-IDT $(4,4)$给出了比定理\ref{thm_SAVRRK:5_4}中指示的期望速率更高的收敛阶,而SAV-IDT $(3,3)$则给出了降低了一个阶数的收敛速率. 
 % 这种不同的行为可以归因于$\left|1-\gamma_n\right|$的收敛速率对于SAV-RRK(2, 2)和SAV-RRK(4, 4)提高了一个阶数,如图\ref{fig_SAVRRK:1}所示. 
 % 同时,在步长重新缩放后,在大多数情况下,标准的SAV-RKs和SAV-RRKs给出了非常接近的数值误差.
 % \begin{table}[H]\footnotesize
 % 	\centering
-% 	\caption{在$N=32, T = 100$时,SAV-RK、SAV-RRK和SAV-IDT的数值误差和收敛阶数(例 \ref{exp_SAVRRK:1}).}
+% 	\caption{在$N=32, T = 100$时,SAV-RK、SAV-RRK和SAV-IDT的数值误差和收敛阶(例 \ref{exp_SAVRRK:1}).}
 % 	\begin{tabular}{lllllrlrlrlrlrl}
 % 	\toprule
 % 	\multicolumn{2}{l}{\multirow{2}[3]{*}{\textbf{RK(Stage,Order)}}} & \multicolumn{2}{l}{\multirow{2}[3]{*}{$\bm{\Delta t}$}} & \multicolumn{3}{c}{\textbf{SAV-RK}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK}} &       & \multicolumn{3}{c}{\textbf{SAV-IDT}} \\
@@ -1454,7 +1482,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 	\label{tab_SAVRRK:6-1}%
 %   \end{table}%
   
-%   接下来,我们对每一步中的松弛系数 $\gamma_n$ 进行了充分的研究.我们计算了在不同时间步长 $\tau$ 的模拟过程中 $\gamma_m$ 和 1 之间的最大距离,即 $\max _m\left|\gamma_m-1\right|$,并且也计算了 $\left|S_m(1)\right|$ 的最大值,即 $\max _m\left|S_m(1)\right|$.一些松弛（RT）方法的数值结果如图 \ref{fig_SAVRRK:1} 所示.从图中可以看出,上述两个量的阶数与理论结果一致.这证实了引理 \ref{lem_SAVRRK:5_1} 和定理 \ref{thm_SAVRRK:5_1} 中的理论结果\begin{figure}[H]
+%   接下来,对每一步中的松弛因子 $\gamma_n$ 进行了充分的研究.计算了在不同时间步长 $\tau$ 的模拟过程中 $\gamma_m$ 和 1 之间的最大距离,即 $\max _m\left|\gamma_m-1\right|$,并且也计算了 $\left|S_m(1)\right|$ 的最大值,即 $\max _m\left|S_m(1)\right|$.一些松弛（RT）方法的数值结果如图 \ref{fig_SAVRRK:1} 所示.从图中可以看出,上述两个量的阶数与理论结果一致.这证实了引理 \ref{lem_SAVRRK:5_1} 和定理 \ref{thm_SAVRRK:5_1} 中的理论结果\begin{figure}[H]
 % 	\begin{center}
 % 	\subfigure[$\max _m\left|\gamma_m-1\right|$]{ \centering
 % 	\includegraphics[width=0.5\textwidth]{./figures/exp1_r.eps}
@@ -1467,7 +1495,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 	\end{center}
 % 	\end{figure}
   
-%     此外,我们采用 $RK(4,4)$ 方法,计算不同 $\alpha$ 下的 $L^{\infty}$-范数误差.图 \ref{fig_SAVRRK:2} 显示了解的误差及其在 $L^{\infty}$-范数下的收敛阶数,结果证实了 SAV-IDT 方案和 SAV-RRK 方案在时间方向上都具有四阶收敛性.我们在图 \ref{fig_SAVRRK:3} 中描绘了不同 $N$ 和 $\tau=0.01$ 的方案的空间误差,结果显示出所提出的方案的空间误差非常小,几乎可以忽略不计,而误差主要由时间离散化误差所主导.这证实了对于充分光滑的问题,傅里叶拟谱方法在空间上是任意阶的.
+%     此外,采用 $RK(4,4)$ 方法,计算不同 $\alpha$ 下的 $L^{\infty}$-范数误差.图 \ref{fig_SAVRRK:2} 显示了解的误差及其在 $L^{\infty}$-范数下的收敛阶,结果证实了 SAV-IDT 方案和 SAV-RRK 方案在时间方向上都具有四阶收敛性.在图 \ref{fig_SAVRRK:3} 中描绘了不同 $N$ 和 $\tau=0.01$ 的方案的空间误差,结果显示出所提出的方案的空间误差非常小,几乎可以忽略不计,而误差主要由时间离散化误差所主导.这证实了对于充分光滑的问题,傅里叶拟谱方法在空间上是任意阶的.
 %     \begin{figure}[H]
 % 		\begin{center}
 % 		\subfigure[$N=32 $(IDT)]{ \centering
@@ -1476,7 +1504,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 		}\subfigure[$N=32 $(RT)]{ \centering
 % 		\includegraphics[width=0.5\textwidth]{./figures/exp1_IDT_order_t.eps}
 % 		%\centerline{($a$) Temporal accuracy with $N=128.$}
-% 		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶数. （例 \ref{exp_SAVRRK:1}）} 
+% 		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶. （例 \ref{exp_SAVRRK:1}）} 
 % 		\label{fig_SAVRRK:2}
 % 		\end{center}
 % 		\end{figure}
@@ -1488,11 +1516,11 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 		}\subfigure[$\tau=0.01 $(RT)]{ \centering
 % 		\includegraphics[width=0.5\textwidth]{./figures/exp1_IDT_order_s.eps}
 % 		%\centerline{($a$) Temporal accuracy with $N=128.$}
-% 		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶数. （例 \ref{exp_SAVRRK:1}）} 
+% 		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶. （例 \ref{exp_SAVRRK:1}）} 
 % 		\label{fig_SAVRRK:3}
 % 		\end{center}
 % 		\end{figure}
-% 		我们还进行了一次长时间模拟,直到 $T=1000$,并在图 \ref{fig_SAVRRK:4} 中以不同的 $\alpha$ 绘制了 SAV-RRK(4,4) 方案的相对能量.结果表明,所提出的方案可以在离散场景中完全保持能量,并且其保持效果明显优于 SAV 方案和三级线性隐式差分方案.
+% 		还进行了一次长时间模拟,直到 $T=1000$,并在图 \ref{fig_SAVRRK:4} 中以不同的 $\alpha$ 绘制了 SAV-RRK(4,4) 方案的相对能量.结果表明,所提出的方案可以在离散场景中完全保持能量守恒,并且其保持效果明显优于 SAV 方案和三级线性隐式差分方案.
 %         \begin{figure}[H]
 % 		\begin{center}
 % 		\subfigure[$\alpha=1.3$]{ \centering
@@ -1514,7 +1542,7 @@ u(x, y, 0)=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=
 % 		\end{figure}
 
 % \begin{example}\label{exp_SAVRRK:2}
-%     现在我们考虑带有初值的二维 NFSWEs \eqref{eq_SAVRRK:s1}：
+%     现在考虑带有初值的二维 NFSWEs \eqref{eq_SAVRRK:s1}：
 % \begin{equation}
 % u(x, y, 0)=\operatorname{sech}\left(x^2+y^2\right), u_t(x, y, 0)=\sin (x+y) \operatorname{sech}\left(-2\left(x^2+y^2\right)\right),(x, y, t) \in \Omega \times[0, T],
 % \end{equation}

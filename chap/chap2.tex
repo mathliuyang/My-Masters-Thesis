@@ -43,7 +43,7 @@ u=\sum_{k \in \mathbb{Z}} \hat{u}_k e^{\mathrm{i} \mu k x}, \quad \hat{u}_k=\fra
 这里, $\mu=2 \pi / L, \mathbb{T}=\mathbb{R} / L \mathbb{Z}$ 表示长度为 $L$ 的一维环面.
 
 
-\section{傅立叶谱方法}
+\section{傅里叶谱方法}
 
 对于在 $(-\infty, \infty)$ 有定义且绝对可积、并在任一有限区间上满足狄利克莱条件的函数 $u(x)$,傅里叶变换（Fourier transform）及其逆变换（inverse Fourier transform）定义为：
 \begin{equation}
@@ -88,7 +88,7 @@ u=\sum_{k \in \mathbb{Z}} \hat{u}_k e^{\mathrm{i} \mu k x}, \quad \hat{u}_k=\fra
 
 \section{分区平均向量场方法}
 
-本文旨在基于PAVF方法构建非线性分数薛定谔方程的保守格式.因此,在本小节中,我们简要介绍这些方法.
+本文旨在基于PAVF方法构建非线性分数薛定谔方程的保守格式.因此,在本小节中,简要介绍这些方法.
 
 考虑以下哈密顿系统
 \begin{equation}
@@ -114,7 +114,7 @@ H_{z}(y, z)
 \label{eq_42}\end{equation}
 其中$S_{2 d}$是一个辛矩阵,而且哈密顿量$H(y, z)$在任何连续流上仍然保持不变.
 
-AVF方法得到的数值方案只能保原始哈密顿量守恒.为了能保额外的不变量守恒,我们为哈密顿系统(\ref{eq_42})开发了PAVF方法,即
+AVF方法得到的数值方案只能保原始哈密顿量守恒.为了能保额外的不变量守恒,为哈密顿系统(\ref{eq_42})开发了PAVF方法,即
 \begin{equation}
 \frac{1}{\tau}\left(\begin{array}{c}
 y^{m+1}-y^{n} \\
@@ -128,7 +128,7 @@ z^{m+1}-z^{n}
 
 \textbf{备注2.1.} PAVF方法的关键策略是将叉积项中的变量分组并在每个步骤中仅应用AVF方法于一组,这导致了比传统AVF方法通常需要更少计算工作的简化方案.特别是,相应的方案至少可以对整个方程系统的一部分进行线性隐式,从而大大减少了迭代规模甚至完全避免非线性迭代.
 
-我们注意到PAVF方法(\ref{eq_43})仅具有一阶精度\cite{caiPartitionedAveragedVector2018}.为了提高精度并保持哈密顿量,我们将PAVF方法与其伴随方法相结合,然后得到PAVF组合（PAVF-C）方法和PAVF plus（PAVF-P）方法.
+注意到PAVF方法(\ref{eq_43})仅具有一阶精度\cite{caiPartitionedAveragedVector2018}.为了提高精度并保持哈密顿量,将PAVF方法与其伴随方法相结合,然后得到PAVF组合（PAVF-C）方法和PAVF plus（PAVF-P）方法.
 设上述PAVF方法(\ref{eq_43})为$\Phi_{\tau}$,其伴随方法$\Phi_{\tau}^{*}$定义如下
 \begin{equation}
 \frac{1}{\tau}\left(\begin{array}{c}

@@ -1,7 +1,9 @@
 %++++++++++++++++++++++定理环境+++++++++++++++++++++++++++++%
-\makeatletter %将文献引用作为上标出现,增加括号，
-\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa #2\fi}]}}
-\makeatother
+%下面的命令\citep将参考文献以上标形式出现
+\let\oldcitep\cite
+\newcommand{\citen}[2][]{\textsuperscript{\oldcitep{#2}#1}}
+\renewcommand{\cite}{\citen}
+
 %使用ntheorem宏包时,下列命令定义定理环境,如有不同要求请自行修改
 \baselineskip=20pt % 指定行距为20pt
 \theoremstyle{plain}
