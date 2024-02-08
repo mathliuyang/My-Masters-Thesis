@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  7 JAN 2024 02:04
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  8 FEB 2024 10:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1261,11 +1261,11 @@ Package natbib Warning: Citation `brugnanoClassEnergyconserving哈密顿ian2018'
 Package fontspec Warning: Font "STFangsong" does not contain requested Script
 (fontspec)                "CJK".
 
-LaTeX Font Info:    Trying to load font information for TU+pcr on input line 59.
-LaTeX Font Info:    No file TUpcr.fd. on input line 59.
+LaTeX Font Info:    Trying to load font information for TU+pcr on input line 56.
+LaTeX Font Info:    No file TUpcr.fd. on input line 56.
 
 LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 59.
+(Font)              using `TU/lmr/m/n' instead on input line 56.
 
 [6] [7]) [8]
 \openout2 = `chap/chap3.aux'.
@@ -1585,43 +1585,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 4
-[31] [32] [33] [34]
-Overfull \hbox (78.17795pt too wide) detected at line 247
-[]
- []
-
-[35]
-Underfull \hbox (badness 1168) in paragraph at lines 269--270
-[]\TU/SongtiSCLight(1)/m/n/12.045 将 \TU/pcr/m/n/12.045 FPAVF \TU/SongtiSCLight(1)/m/n/12.045 格 式[]\TU/pcr/m/n/12.045 -[]\TU/SongtiSCLight(1)/m/n/12.045 与 其 伴 随 \TU/pcr/m/n/12.045 FPAVF \TU/SongtiSCLight(1)/m/n/12.045 格 式[]\TU/pcr/m/n/12.045 -[]\TU/SongtiSCLight(1)/m/n/12.045 相 结 合\TU/pcr/m/n/12.045 , \TU/SongtiSCLight(1)/m/n/12.045 得 到
- []
-
-[36]
-Overfull \hbox (7.74419pt too wide) detected at line 321
-[]
- []
-
-[37]
+[31] [32] [33] [34] [35] [36] [37]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: $\bullet $ on input line 351.
+             The label is: $\bullet $ on input line 358.
 
-
-Overfull \hbox (35.39432pt too wide) detected at line 377
-[]
- []
-
-[38]
-Overfull \hbox (78.45923pt too wide) detected at line 403
-[][] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ; [][] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 ;
- []
-
-[39]
-
-LaTeX Warning: Reference `eq_PAVF:7' on page 40 undefined on input line 429.
-
-
-LaTeX Warning: Reference `fig_PAVF:2' on page 40 undefined on input line 431.
-
+[38] [39]
 File: ./figure/exp1_s1.5.eps Graphic file (type eps)
 <./figure/exp1_s1.5.eps>
 File: ./figure/exp1_t1.5.eps Graphic file (type eps)
@@ -1630,7 +1599,7 @@ File: ./figure/exp1_s2.eps Graphic file (type eps)
 <./figure/exp1_s2.eps>
 File: ./figure/exp1_t2.eps Graphic file (type eps)
 <./figure/exp1_t2.eps>
-[40]
+ [40]
 File: ./figure/exp1_H1.3.eps Graphic file (type eps)
 <./figure/exp1_H1.3.eps>
 File: ./figure/exp1_H1.6.eps Graphic file (type eps)
@@ -1655,38 +1624,32 @@ File: ./figure/exp1_M2.eps Graphic file (type eps)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42]
-Overfull \hbox (73.17996pt too wide) in paragraph at lines 522--537
+Overfull \hbox (20.36841pt too wide) in paragraph at lines 547--562
  [][][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (15.07144pt too wide) in paragraph at lines 569--584
+ [][][] 
+ []
 
- [43]
-Overfull \hbox (68.78938pt too wide) in paragraph at lines 544--559
+[43]
+Overfull \hbox (15.07144pt too wide) in paragraph at lines 591--606
  [][][] 
  []
 
 
-Overfull \hbox (68.78938pt too wide) in paragraph at lines 566--581
+Overfull \hbox (15.07144pt too wide) in paragraph at lines 613--628
  [][][] 
  []
 
-
-Overfull \hbox (68.78938pt too wide) in paragraph at lines 588--603
- [][][] 
- []
-
-
-Underfull \vbox (badness 2837) has occurred while \output is active []
-
- [44]
 File: ./figure/exp1_RM1.3.eps Graphic file (type eps)
 <./figure/exp1_RM1.3.eps>
 File: ./figure/exp1_RM1.6.eps Graphic file (type eps)
 <./figure/exp1_RM1.6.eps>
 File: ./figure/exp1_RM1.9.eps Graphic file (type eps)
 <./figure/exp1_RM1.9.eps>
+[44]
 File: ./figure/exp1_RH1.3.eps Graphic file (type eps)
 <./figure/exp1_RH1.3.eps>
 File: ./figure/exp1_RH1.6.eps Graphic file (type eps)
@@ -1695,21 +1658,23 @@ File: ./figure/exp1_RH1.9.eps Graphic file (type eps)
 <./figure/exp1_RH1.9.eps>
 
 
-LaTeX Warning: Reference `eq_1' on page 45 undefined on input line 642.
+LaTeX Warning: Reference `eq_1' on page 45 undefined on input line 668.
 
 
-LaTeX Warning: Reference `eq_3' on page 45 undefined on input line 642.
+LaTeX Warning: Reference `eq_3' on page 45 undefined on input line 668.
 
-[45]
 File: ./figure/exp2_s1.5.eps Graphic file (type eps)
 <./figure/exp2_s1.5.eps>
 File: ./figure/exp2_t1.5.eps Graphic file (type eps)
 <./figure/exp2_t1.5.eps>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
 File: ./figure/exp2_s2.eps Graphic file (type eps)
 <./figure/exp2_s2.eps>
 File: ./figure/exp2_t2.eps Graphic file (type eps)
 <./figure/exp2_t2.eps>
- [46]
 File: ./figure/exp2_M1.3.eps Graphic file (type eps)
 <./figure/exp2_M1.3.eps>
 File: ./figure/exp2_M1.6.eps Graphic file (type eps)
@@ -1718,6 +1683,10 @@ File: ./figure/exp2_M1.9.eps Graphic file (type eps)
 <./figure/exp2_M1.9.eps>
 File: ./figure/exp2_M2.eps Graphic file (type eps)
 <./figure/exp2_M2.eps>
+
+Underfull \vbox (badness 1242) has occurred while \output is active []
+
+ [46]
 File: ./figure/exp2_H1.3.eps Graphic file (type eps)
 <./figure/exp2_H1.3.eps>
 File: ./figure/exp2_H1.6.eps Graphic file (type eps)
@@ -1726,16 +1695,16 @@ File: ./figure/exp2_H1.9.eps Graphic file (type eps)
 <./figure/exp2_H1.9.eps>
 File: ./figure/exp2_H2.eps Graphic file (type eps)
 <./figure/exp2_H2.eps>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [47]
 File: ./figure/exp2_RM1.3.eps Graphic file (type eps)
 <./figure/exp2_RM1.3.eps>
 File: ./figure/exp2_RM1.6.eps Graphic file (type eps)
 <./figure/exp2_RM1.6.eps>
 File: ./figure/exp2_RM1.9.eps Graphic file (type eps)
 <./figure/exp2_RM1.9.eps>
+
+Underfull \vbox (badness 8000) has occurred while \output is active []
+
+ [47]
 File: ./figure/exp2_RH1.3.eps Graphic file (type eps)
 <./figure/exp2_RH1.3.eps>
 File: ./figure/exp2_RH1.6.eps Graphic file (type eps)
@@ -1746,14 +1715,6 @@ File: ./figure/exp2_RH1.9.eps Graphic file (type eps)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48]
-Overfull \hbox (42.44096pt too wide) in paragraph at lines 775--790
- [][][] 
- []
-
-
-Underfull \vbox (badness 1629) has occurred while \output is active []
-
- [49]
 File: ./figure/exp2_contour3_p0.eps Graphic file (type eps)
 <./figure/exp2_contour3_p0.eps>
 File: ./figure/exp2_contour3_p1.eps Graphic file (type eps)
@@ -1766,10 +1727,7 @@ File: ./figure/exp2_contour3_p50.eps Graphic file (type eps)
 <./figure/exp2_contour3_p50.eps>
 File: ./figure/exp2_contour3_p100.eps Graphic file (type eps)
 <./figure/exp2_contour3_p100.eps>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [50]
+ [49]
 File: ./figure/exp2_contour6_p0.eps Graphic file (type eps)
 <./figure/exp2_contour6_p0.eps>
 File: ./figure/exp2_contour6_p1.eps Graphic file (type eps)
@@ -1797,7 +1755,7 @@ File: ./figure/exp2_contour99_p100.eps Graphic file (type eps)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]
+ [50]
 File: ./figure/exp2_contour2_p0.eps Graphic file (type eps)
 <./figure/exp2_contour2_p0.eps>
 File: ./figure/exp2_contour2_p1.eps Graphic file (type eps)
@@ -1810,20 +1768,20 @@ File: ./figure/exp2_contour2_p50.eps Graphic file (type eps)
 <./figure/exp2_contour2_p50.eps>
 File: ./figure/exp2_contour2_p100.eps Graphic file (type eps)
 <./figure/exp2_contour2_p100.eps>
-
+)
 Underfull \vbox (badness 1325) has occurred while \output is active []
 
- [52]) [53]
+ [51] [52]
 \openout2 = `chap/chap5.aux'.
 
- (./chap/chap5.tex [54
-
-
-
-
-]
+ (./chap/chap5.tex
 5
-) [55] [56]
+) [53
+
+
+
+
+] [54]
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { chapter = { number={},format={\center } } }
@@ -1836,7 +1794,7 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 LaTeX Font Warning: Font shape `TU/ptm/m/sc' undefined
 (Font)              using `TU/ptm/m/n' instead on input line 16.
 
-[57
+[55
 
 
 
@@ -1859,13 +1817,13 @@ Overfull \hbox (22.13124pt too wide) in paragraph at lines 150--153
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]
+ [56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
+ [57]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60])) [61] [62
+ [58])) [59] [60
 
 
 
@@ -1877,7 +1835,7 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 \openout2 = `chap/thanks.aux'.
 
-(./chap/thanks.tex) [63
+(./chap/thanks.tex) [61
 
 
 ]
@@ -1888,13 +1846,13 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 \openout2 = `chap/ach.aux'.
 
-(./chap/ach.tex [64
+(./chap/ach.tex [62
 
 
 
 
 
-]) [65]
+]) [63]
 \tf@thm=\write6
 \openout6 = `四川师范大学硕士学位论文模版.thm'.
 
@@ -1917,16 +1875,16 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版.out' has not changed.
-(rerunfilecheck)             Checksum: 3E524F2D55150A8733FFC0CE0D5F71D0;3859.
+(rerunfilecheck)             Checksum: 77DD7E2DF5A2E36479933EF16F0C80BB;3843.
  )
 (\end occurred when \ifx on line 25 was incomplete) 
 Here is how much of TeX's memory you used:
- 23860 strings out of 476683
- 521737 string characters out of 5804047
+ 23823 strings out of 476683
+ 519146 string characters out of 5804047
  1881018 words of memory out of 5000000
- 43438 multiletter control sequences out of 15000+600000
+ 43401 multiletter control sequences out of 15000+600000
  533909 words of font info for 183 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,15n,97p,1222b,807s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 四川师范大学硕士学位论文模版.pdf (77 pages).
+Output written on 四川师范大学硕士学位论文模版.pdf (75 pages).

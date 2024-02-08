@@ -26,11 +26,11 @@
 \contentsline {subsection}{\numberline {4.3.1}PAVF-P 格式}{35}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}离散守恒律}{37}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}其他数值方法}{38}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}数值实例}{39}{section.4.4}%
-\contentsline {section}{\numberline {4.5}小结}{53}{section.4.5}%
-\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与后续工作}{55}{chapter.5}%
-\contentsline {section}{\numberline {5.1}论文总结}{55}{section.5.1}%
-\contentsline {chapter}{参考文献}{57}{chapter*.39}%
-\contentsline {chapter}{致谢}{63}{chapter*.40}%
-\contentsline {chapter}{在校期间的科研成果}{65}{chapter*.42}%
+\contentsline {section}{\numberline {4.4}数值算例}{39}{section.4.4}%
+\contentsline {section}{\numberline {4.5}小结}{52}{section.4.5}%
+\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{53}{chapter.5}%
+\contentsline {section}{\numberline {5.1}论文总结}{53}{section.5.1}%
+\contentsline {chapter}{参考文献}{55}{chapter*.39}%
+\contentsline {chapter}{致谢}{61}{chapter*.40}%
+\contentsline {chapter}{在校期间的科研成果}{63}{chapter*.42}%
 \contentsfinish 

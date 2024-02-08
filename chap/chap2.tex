@@ -1,9 +1,6 @@
 \chapter[预备知识]{预备知识}
 
-在介绍本文主要内容之前, 本章首先介绍了分数阶微积分以及Fourier 谱方法, 
-然后引进一些本文后续部分经常涉及的记号和引理.
-
-
+在引入本文主要内容之前,本章首先介绍了分数阶微积分、傅里叶谱方法以及分区平均向量场方法.
 \section{分数阶微积分理论}
 分数阶微积分理论是研究任意阶微分和积分的理论,它是整数阶微积分理论的拓展.该理论起源于17世纪末,经过三个世纪的不懈努力,包括Riemann-Liouville、Grüwald-Letnikov、Caputo和Riesz在内的多种分数阶微积分理论被形成,并在专著\cite{samkoFractionalIntegralsDerivatives1993}中得到详细介绍.
 由于分数阶微积分的物理及几何解释存在挑战,因此该领域在很长一段时间内停留在纯数学理论层面.但近几十年来,随着多个学科领域的研究发现,分数阶微分方程的保记忆性可优美地描述复杂问题,其描述精度超过整数阶微分方程.目前,分数阶微分方程已成功地应用于物理学、化学、生物学、水文学、混沌理论、复杂粘弹性材料、系统控制、信号处理、经济学等领域的问题,详见\cite{liIntroductionFractionalCalculus2015,HandbookDifferentialEquations2008,brychkovIndefiniteIntegrals2008,zhangMassBalanceBased2005,carrerasAnomalousDiffusionExit2001,hilferFRACTIONALCALCULUSREGULAR2000,liangRobustnessFractionalorderBoundary2007,maginSolvingFractionalOrder2009,zaslavskySelfsimilarTransportIncomplete1993,sunRandomorderFractionalDifferential2011}.
@@ -81,20 +78,20 @@ u=\sum_{k \in \mathbb{Z}} \hat{u}_k e^{\mathrm{i} \mu k x}, \quad \hat{u}_k=\fra
 \begin{equation}
     F\left[u^{(n)}(x)\right] = (\mathrm{i} k)^n F[u(x)] \label{eq:3-9}
 \end{equation}
-
 其中 $u^{(n)}(x)$ 代表 $u(x)$ 的 $n$ 阶导数.上式的意义在于：函数的求导运算在傅里叶变换的作用下, 可转化为相对简单的代数运算, 即: $u^{(n)}(x) = F^{-1}\left\{(\mathrm{i} k)^n F[u(x)]\right\}$.正是基于此原理, 傅里叶谱方法 (Fourier spectral method) 利用傅里叶变换将偏微分方程中空域（space domain）或时域（time domain）上的求导运算简化为频域（spectral domain）上的代数运算, 求解后再通过傅里叶逆变换得到空域或时域上的结果.在代码层面上, \texttt{Matlab} 提供的快速傅里叶变换函数 \texttt{fft}、逆变换函数 \texttt{ifft} 以及强大的矩阵运算能力也为简洁、优雅地实现傅里叶谱方法奠定了基础.
 
 % \section{标量辅助变量方法}
 
 \section{分区平均向量场方法}
 
-本文旨在基于PAVF方法构建非线性分数薛定谔方程的保守格式.因此,在本小节中,简要介绍这些方法.
+% 本文旨在基于PAVF方法构建非线性分数薛定谔方程的守恒格式.因此,在本小节中,简要介绍这些方法.
 
 考虑以下哈密顿系统
 \begin{equation}
 \frac{d w}{d t}=f(w)=S_{k} \nabla H(w), \quad w(0)=w_{0},
 \label{eq_40}\end{equation}
-其中$w \in \mathbb{R}^{k}$,$S_{k}$是一个$k \times k$的反对称矩阵,$k$是偶数,哈密顿量$H(w)$被假定具有足够的可微性.所谓的二阶AVF方法对于系统(\ref{eq_40})定义为
+其中$w \in \mathbb{R}^{k}$,$S_{k}$是一个$k \times k$的反对称矩阵,$k$是偶数,哈密顿量$H(w)$被假定具有足够的可微性.
+二阶AVF方法对于系统(\ref{eq_40})定义为
 \begin{equation}
 \begin{aligned}
 \frac{w^{m+1}-w^{m}}{\tau} &=\int_{0}^{1} f\left(\varepsilon w^{m+1}+(1-\varepsilon) w^{m}\right) d \varepsilon \\
@@ -114,7 +111,7 @@ H_{z}(y, z)
 \label{eq_42}\end{equation}
 其中$S_{2 d}$是一个辛矩阵,而且哈密顿量$H(y, z)$在任何连续流上仍然保持不变.
 
-AVF方法得到的数值方案只能保原始哈密顿量守恒.为了能保额外的不变量守恒,为哈密顿系统(\ref{eq_42})开发了PAVF方法,即
+AVF方法得到的数值格式只能保原始哈密顿量守恒.为了能保额外的不变量守恒,为哈密顿系统(\ref{eq_42})开发了PAVF方法,即
 \begin{equation}
 \frac{1}{\tau}\left(\begin{array}{c}
 y^{m+1}-y^{n} \\
@@ -124,11 +121,9 @@ z^{m+1}-z^{n}
 \int_{0}^{1} H_{z}\left(y^{m+1}, \varepsilon z^{m+1}+(1-\varepsilon) z^{m}\right) d \varepsilon
 \end{array}\right) .
 \label{eq_43}\end{equation}
-可以轻松证明PAVF方法完全保持系统(\ref{eq_40})的哈密顿量.
+容易证明PAVF方法能够在保持系统(\ref{eq_40})的哈密顿量守恒的同时,额外保持某些系统的其他不变量守恒.
 
-\textbf{备注2.1.} PAVF方法的关键策略是将叉积项中的变量分组并在每个步骤中仅应用AVF方法于一组,这导致了比传统AVF方法通常需要更少计算工作的简化方案.特别是,相应的方案至少可以对整个方程系统的一部分进行线性隐式,从而大大减少了迭代规模甚至完全避免非线性迭代.
-
-注意到PAVF方法(\ref{eq_43})仅具有一阶精度\cite{caiPartitionedAveragedVector2018}.为了提高精度并保持哈密顿量,将PAVF方法与其伴随方法相结合,然后得到PAVF组合（PAVF-C）方法和PAVF plus（PAVF-P）方法.
+注意到PAVF方法(\ref{eq_43})仅具有一阶精度\cite{caiPartitionedAveragedVector2018}.为了提高精度并继续保持哈密顿量守恒,将PAVF方法与其伴随方法相结合,得到PAVF组合（PAVF-C）方法和PAVF 加（PAVF-P）方法.
 设上述PAVF方法(\ref{eq_43})为$\Phi_{\tau}$,其伴随方法$\Phi_{\tau}^{*}$定义如下
 \begin{equation}
 \frac{1}{\tau}\left(\begin{array}{c}
@@ -147,8 +142,9 @@ z^{m+1}-z^{m}
 \begin{equation}
 \hat{\Upsilon}_{\tau}:=\frac{1}{2}\left(\Phi_{\frac{\tau}{2}}^{*}+\Phi_{\frac{\tau}{2}}\right)
 \label{eq_46}\end{equation}
+可以验证,PAVF-C以及PAVF-P方法均能保持原始哈密顿量守恒,并且具有二阶精度\cite{caiPartitionedAveragedVector2018}.
 
-% \textbf{备注2.2.} 由于PAVF方法的巨大优势,即使通过其组合,PAVF-C方法的成本仍然远远低于直接AVF方法.虽然PAVF-P方法的计算效率与AVF方法相当,但它可能具有AVF方法无法保持的额外保守量.
+% \textbf{备注2.2.} 由于PAVF方法的巨大优势,即使通过其组合,PAVF-C方法的成本仍然远远低于直接AVF方法.虽然PAVF-P方法的计算效率与AVF方法相当,但它可能具有AVF方法无法保持的额外守恒量.
 
 
 % \section{常用记号}
