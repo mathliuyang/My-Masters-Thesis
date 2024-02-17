@@ -531,9 +531,9 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 
 在这一节中,进行了几个数值实验,以展示显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的精度和守恒性质.同时,与标准显式SAV-RK方法已有方法进行了比较.
 
-不失一般性的,在计算中使用了以下的显式RK方法：
+不失一般性的,在计算中使用了以下的显式RK方法\cite{shuEfficientImplementationEssentially1988}：
 \begin{enumerate}
-\item $\operatorname{RK}(2,2)$：两步,二阶Heun方法 %\cite{shuEfficientImplementationEssentially1988}.
+\item $\operatorname{RK}(2,2)$：两级二阶Heun方法%\cite{shuEfficientImplementationEssentially1988}.
 \begin{equation}
 \begin{array}{c|cc}
 0 & 0 & 0 \\
@@ -542,7 +542,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \end{array}
 \end{equation}
 	
-\item $\mathrm{RK}(3,3)$：三步,三阶Heun方法 %\cite{shuEfficientImplementationEssentially1988}.
+\item $\mathrm{RK}(3,3)$：三级三阶Heun方法%\cite{shuEfficientImplementationEssentially1988}.
 	
 \begin{equation}
 \begin{array}{c|ccc}
@@ -553,7 +553,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \end{array}
 \end{equation}
 		
-\item $\operatorname{RK}(4,4)$：四步,四阶Gill方法 %\cite{shuEfficientImplementationEssentially1988}.
+\item $\operatorname{RK}(4,4)$：四级四阶Gill方法%\cite{shuEfficientImplementationEssentially1988}.
 		
 \begin{equation}
 \begin{array}{c|cccc}

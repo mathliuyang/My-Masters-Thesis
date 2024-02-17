@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  8 FEB 2024 10:36
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  17 FEB 2024 18:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -426,9 +426,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip82
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 36.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/bm.sty
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
 \symboldletters=\mathgroup5
@@ -916,7 +914,7 @@ Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 \flrow@LT@prelastfoot=\box81
 \c@FBLTpage=\count364
 )
-Package hyperref Info: Link coloring ON on input line 3.
+Package hyperref Info: Link coloring OFF on input line 3.
  (./四川师范大学硕士学位论文模版.out) (./四川师范大学硕士学位论文模版.out)
 \@outlinefile=\write3
 \openout3 = `四川师范大学硕士学位论文模版.out'.
@@ -1656,13 +1654,6 @@ File: ./figure/exp1_RH1.6.eps Graphic file (type eps)
 <./figure/exp1_RH1.6.eps>
 File: ./figure/exp1_RH1.9.eps Graphic file (type eps)
 <./figure/exp1_RH1.9.eps>
-
-
-LaTeX Warning: Reference `eq_1' on page 45 undefined on input line 668.
-
-
-LaTeX Warning: Reference `eq_3' on page 45 undefined on input line 668.
-
 File: ./figure/exp2_s1.5.eps Graphic file (type eps)
 <./figure/exp2_s1.5.eps>
 File: ./figure/exp2_t1.5.eps Graphic file (type eps)
@@ -1781,7 +1772,7 @@ Underfull \vbox (badness 1325) has occurred while \output is active []
 
 
 
-] [54]
+]
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { chapter = { number={},format={\center } } }
@@ -1789,45 +1780,54 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 \openout2 = `chap/ref.aux'.
 
-(./chap/ref.tex (./四川师范大学硕士学位论文模版.bbl
-
-LaTeX Font Warning: Font shape `TU/ptm/m/sc' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 16.
-
-[55
+(./chap/ref.tex (./四川师范大学硕士学位论文模版.bbl [54
 
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
-[]\TU/ptm/m/sc/10.53937 Demengel, F., and Demengel, G.  |   []   |   []   |   []   |   []   |   []   |   []
+Underfull \hbox (badness 1590) in paragraph at lines 71--75
+[]\TU/ptm/b/n/10.53937 CAI W, LI H, WANG Y. 2018.  Partitioned averaged vector field methods[J/OL].
  []
 
 
-Overfull \hbox (45.05232pt too wide) in paragraph at lines 135--138
-[]\TU/ptm/m/sc/10.53937 Guo, B., Pu, X., and Huang, F.  |   [].
+Underfull \hbox (badness 1565) in paragraph at lines 71--75
+\TU/ptm/b/n/10.53937 J Comput Phys, 370: 25-42[2022-07-20].  []$[][][][][] [] [] [] [][][][][][][][][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][] [] [][][] []
  []
 
-
-Overfull \hbox (22.13124pt too wide) in paragraph at lines 150--153
-[]\TU/ptm/m/sc/10.53937 Hilfer, R.  |   [].
- []
-
-
+[55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [56]
+Underfull \hbox (badness 1163) in paragraph at lines 191--197
+[]\TU/ptm/b/n/10.53937 HAIRER E, WANNER G. 2015.  Runge–Kutta Methods, Explicit, Implicit[M/OL]//
+ []
+
+
+Underfull \hbox (badness 2229) in paragraph at lines 199--203
+[]\TU/ptm/b/n/10.53937 HILFER R. 2000.  FRACTIONAL CALCULUS AND REGULAR VARIATION IN
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 217--221
+[]\TU/ptm/b/n/10.53937 KARAKASHIAN O, MAKRIDAKIS C. 1998.  A space-time finite element method
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 217--221
+\TU/ptm/b/n/10.53937 for the nonlinear Schrödinger equation: The discontinuous Galerkin method[J/OL].
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58])) [59] [60
+ [58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-]
+ [59])) [60]
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { chapter = {
@@ -1836,6 +1836,9 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 \openout2 = `chap/thanks.aux'.
 
 (./chap/thanks.tex) [61
+
+
+
 
 
 ]
@@ -1851,40 +1854,3 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 
 
-
-]) [63]
-\tf@thm=\write6
-\openout6 = `四川师范大学硕士学位论文模版.thm'.
-
-
-
-Package natbib Warning: There were undefined citations.
-
-(./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap1.aux) (./chap/chap2.aux) (./chap/chap3.aux) (./chap/chap4.aux) (./chap/chap5.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux))
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 4.5pt have occurred.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版.out' has not changed.
-(rerunfilecheck)             Checksum: 77DD7E2DF5A2E36479933EF16F0C80BB;3843.
- )
-(\end occurred when \ifx on line 25 was incomplete) 
-Here is how much of TeX's memory you used:
- 23823 strings out of 476683
- 519146 string characters out of 5804047
- 1881018 words of memory out of 5000000
- 43401 multiletter control sequences out of 15000+600000
- 533909 words of font info for 183 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 89i,15n,97p,1222b,807s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on 四川师范大学硕士学位论文模版.pdf (75 pages).
