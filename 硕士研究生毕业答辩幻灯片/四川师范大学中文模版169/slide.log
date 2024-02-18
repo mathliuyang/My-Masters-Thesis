@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  18 FEB 2024 10:58
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  18 FEB 2024 11:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1631,66 +1631,4 @@ File: ./figure/exp4_energy6.eps Graphic file (type eps)
 <./figure/exp4_energy6.eps>
 File: ./figure/exp4_energy9.eps Graphic file (type eps)
 <./figure/exp4_energy9.eps>
-File: ./figure/exp4_energy2.eps Graphic file (type eps)
-<./figure/exp4_energy2.eps>
-
-Overfull \vbox (45.68875pt too high) detected at line 991
- []
-
-[42
-
-] (./slide.toc) [43
-
-] [44
-
-] [45
-
-] [46
-
-] (./slide.toc) [47
-
-] [48
-
-] [49
-
-
-]
-LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 35.82726pt on input line 1150.
-
-
-LaTeX Font Warning: Font shape `T1/calligra/b/n' undefined
-(Font)              using `T1/calligra/m/n' instead on input line 1150.
-
-[50
-
-]
-\tf@nav=\write6
-\openout6 = `slide.nav'.
-
-\tf@toc=\write7
-\openout7 = `slide.toc'.
-
-\tf@snm=\write8
-\openout8 = `slide.snm'.
-
- (./slide.aux)
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: 1F1463234B9CEF715BBA7A9E724B1BA6;511.
- ) 
-Here is how much of TeX's memory you used:
- 31973 strings out of 476683
- 715691 string characters out of 5804047
- 1874018 words of memory out of 5000000
- 51472 multiletter control sequences out of 15000+600000
- 652697 words of font info for 166 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 128i,13n,122p,441b,962s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on slide.pdf (50 pages).
+File: ./figure/exp4_energy2.ep
