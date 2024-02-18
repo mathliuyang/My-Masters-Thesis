@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{课题背景}{3}{0}{1}
+\beamer@sectionintoc {2}{研究现状}{7}{0}{2}
+\beamer@sectionintoc {3}{研究内容}{18}{0}{3}
+\beamer@sectionintoc {4}{Numerical examples}{24}{0}{4}
+\beamer@sectionintoc {5}{总结展望}{43}{0}{5}
+\beamer@sectionintoc {6}{参考文献}{47}{0}{6}

@@ -1854,3 +1854,37 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 
 
+
+]) [63]
+\tf@thm=\write6
+\openout6 = `四川师范大学硕士学位论文模版.thm'.
+
+
+
+Package natbib Warning: There were undefined citations.
+
+(./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap1.aux) (./chap/chap2.aux) (./chap/chap3.aux) (./chap/chap4.aux) (./chap/chap5.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux))
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 4.5pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版.out' has not changed.
+(rerunfilecheck)             Checksum: B958A74A5DA53E97356F4FC6558C52D4;3930.
+ )
+(\end occurred when \ifx on line 25 was incomplete) 
+Here is how much of TeX's memory you used:
+ 23815 strings out of 476683
+ 518604 string characters out of 5804047
+ 1880018 words of memory out of 5000000
+ 43393 multiletter control sequences out of 15000+600000
+ 533909 words of font info for 183 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 89i,15n,97p,1222b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on 四川师范大学硕士学位论文模版.pdf (75 pages).
