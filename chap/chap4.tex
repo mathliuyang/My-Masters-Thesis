@@ -1,19 +1,19 @@
 \chapter[NFSWEs的同时保原始能量和质量守恒的方法]{NFSWEs的同时保原始能量和质量守恒的方法}
-据我们所知, 目前针对 NFSWEs 提出的方法只能保证修正后的能量和（或）质量守恒.
-缺乏能够同时保持原始能量和原始质量的数值方法.
-注意到平均向量场（AVF）方法可以保持哈密顿系统的原始能量守恒 \cite{buddGeometricIntegrationUsing1999,quispelNewClassEnergypreserving2008}.
-此外,最近提出的分区平均向量场（PAVF）方法不仅可以保持能量守恒,还可以保持更多的守恒性质,并且已被用于构造哈密顿常微分方程的守恒数值方案,
-参见 \cite{caiPartitionedAveragedVector2018}.
-而对 NFSWEs 的哈密顿结构的推导是构建构建 PAVF 保结构方法的前提.
-% 据我们所知,目前很少有关注分数微分方程的哈密顿结构的研究.
-最近,王和黄 \cite{wangStructurepreservingNumericalMethods2018} 提出了带有分数阶拉普拉斯的泛函的变分导数,并将一维分数非线性薛定谔方程重新表述为一个哈密顿系统.
-傅和蔡 \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数Klein-Gordon-Schr{\"o}dinger方程的哈密顿形式,并随后构建了其保结构数值方案.
-基于此,本章首先推导了具有周期边界条件的二维 NFSWEs 的哈密顿形式,然后通过分区平均向量场加法（PAVF-P）方法,成功构建了能够同时守恒原始能量和质量的数值格式.
-最后提出了更多相关数值格式并给出了数值实验验证.
+% 据我们所知, 目前针对 NFSWEs 提出的方法只能保证修正后的能量和（或）质量守恒.
+% 缺乏能够同时保持原始能量和原始质量的数值方法.
+% 注意到平均向量场（AVF）方法可以保持哈密顿系统的原始能量守恒 \cite{buddGeometricIntegrationUsing1999,quispelNewClassEnergypreserving2008}.
+% 此外,最近提出的分区平均向量场（PAVF）方法不仅可以保持能量守恒,还可以保持更多的守恒性质,并且已被用于构造哈密顿常微分方程的守恒数值方案,
+% 参见 \cite{caiPartitionedAveragedVector2018}.
+% 而对 NFSWEs 的哈密顿结构的推导是构建构建 PAVF 保结构方法的前提.
+% % 据我们所知,目前很少有关注分数微分方程的哈密顿结构的研究.
+% 最近,王和黄 \cite{wangStructurepreservingNumericalMethods2018} 提出了带有分数阶拉普拉斯的泛函的变分导数,并将一维分数非线性薛定谔方程重新表述为一个哈密顿系统.
+% 傅和蔡 \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数Klein-Gordon-Schr{\"o}dinger方程的哈密顿形式,并随后构建了其保结构数值方案.
+% 基于此,本章首先推导了具有周期边界条件的二维 NFSWEs 的哈密顿形式,然后通过分区平均向量场加法（PAVF-P）方法,成功构建了能够同时守恒原始能量和质量的数值格式.
+% 最后提出了更多相关数值格式并给出了数值实验验证.
 
 \section{NFSWEs的哈密顿格式构建}\label{Section_PAVF: 2_1}
 % \subsection{NFSWEs的哈密顿结构}
-众所周知,哈密顿结构对于构建某些问题的保结构算法至关重要.然而,目前没有研究人员考虑过带有周期边界条件的NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的哈密顿结构.
+哈密顿结构对于构建PAVF格式至关重要.然而,目前没有研究人员考虑过带有周期边界条件的NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的哈密顿结构.
 基于此, 本小节推导了 NFSWEs 的哈密顿结构.
 
 设
@@ -24,7 +24,7 @@ u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 \begin{align}\label{eq_PAVF:28}
 \varphi_{t}+\mathrm{i}\psi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}p+\mathrm{i}\left( -\Delta \right) ^{\frac{\alpha }{2}}q+\mathrm{i}\kappa \varphi-\kappa \psi+\beta \left( p^{2}+q^{2}\right) \left( p+\mathrm{i} q\right) =0.
 \end{align}
-从上述方程中分离实部和虚部,得到
+分离实部和虚部,得到
 \begin{align}
 &\varphi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}p-\kappa \psi+\beta \left( p^{2}+q^{2}\right)p=0,\nonumber\\
 &\psi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}q+\kappa \varphi+\beta \left( p^{2}+q^{2}\right)q=0.\label{eq_PAVF:29}
@@ -56,7 +56,7 @@ u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 &=(2 L)^{2} \sum_{l_{1} \in \mathbb{Z}} \sum_{l_{2} \in \mathbb{Z}} \hat{p}_{l_{1}, l_{2}}\left|v_{l_{1}}^{2}+v_{l_{2}}^{2}\right|^{\frac{\alpha}{2}} \hat{q}_{l_{1}, l_{2}} .
 \end{aligned}
 \label{eq_23}\end{equation}
-然后,可以得到
+于是
 \begin{equation}
 \int_{\Omega}(-\Delta)^{\frac{\alpha}{2}} p q d \boldsymbol{x}=\int_{\Omega}(-\Delta)^{\frac{\alpha}{4}} p(-\Delta)^{\frac{\alpha}{4}} q d x=\int_{\Omega} p(-\Delta)^{\frac{\alpha}{2}} q d \boldsymbol{x}
 \label{eq_24}\end{equation}
@@ -69,14 +69,14 @@ u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 	\begin{align}\label{eq_PAVF:25}
 	F[g]=\int_{\Omega} f\left(g(\boldsymbol{x}),(-\Delta)^{\frac{\alpha}{4}} g(\boldsymbol{x})\right) d \boldsymbol{x},
 	\end{align}
-	的泛函 $F[g]$,其中 $f$ 是 $\Omega$ 上的光滑函数,其变分导数如下
+	的泛函 $F[g]$, $f$ 是 $\Omega$ 上的光滑函数,其变分导数如下
 	\begin{align}\label{eq_PAVF:26}
 	\frac{\delta F}{\delta g}=\frac{\partial f}{\partial g}+(-\Delta)^{\frac{\alpha}{4}} \frac{\partial f}{\partial\left((-\Delta)^{\frac{\alpha}{4}} g\right)} .
 	\end{align}
 	\end{lemma}
 
 \begin{proof}
-	令 $\phi(\boldsymbol{x})$ 为带有周期边界条件的任意函数.根据分数阶拉普拉斯是线性算子以及变分导数的定义,有
+	令 $\phi(\boldsymbol{x})$ 为带有周期边界条件的任意函数.由于分数阶拉普拉斯是线性算子，根据变分导数的定义,有
 \begin{equation}
 \begin{aligned}
 \int_{\Omega} \frac{\delta F}{\delta g} \phi(\boldsymbol{x}) d \boldsymbol{x} &=\left[\frac{d}{d \mu} \int_{\Omega} f\left(g+\mu \phi,(-\Delta)^{\frac{\alpha}{4}} g+\mu(-\Delta)^{\frac{\alpha}{4}} \phi\right) d \boldsymbol{x}\right]_{\mu=0} \\
@@ -131,7 +131,7 @@ J=\left(\begin{array}{cccc}
 		0 & 1 & 0 & 0
 		\end{array}\right),
 \end{equation}
-而能量泛函 $\mathcal{H}$ 定义如 \eqref{eq_PAVF:35}.
+能量泛函 $\mathcal{H}$ 定义如 \eqref{eq_PAVF:35}.
 \end{theorem}
 
 \begin{proof}
@@ -175,8 +175,8 @@ J=\left(\begin{array}{cccc}
 \section{傅里叶拟谱离散格式}\label{Section_PAVF: 2_2}
 % \subsection{空间半离散系统}
 
-鉴于周期性边界条件,选择傅里叶拟谱法对NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3}进行空间离散化.
-将傅里叶拟谱法应用于空间以近似先前的等效系统 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33},得到如下的空间半离散系统：
+鉴于周期性边界条件,选择傅里叶拟谱法离散等效系统 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33},
+得到如下的空间半离散系统：
 \begin{align}
 &\varPhi_{t}=D^{\alpha}P+\kappa \Psi-\beta \left( P^{2}+Q^{2}\right)\cdot P,\label{eq_PAVF:56}\\
 &\Psi_{t}=D^{\alpha}Q-\kappa \varPhi-\beta \left( P^{2}+Q^{2}\right)\cdot Q,\label{eq_PAVF:57}\\
@@ -189,11 +189,11 @@ J=\left(\begin{array}{cccc}
 \begin{align}\label{eq_PAVF:60a}
 Y=\left(\varPhi^{T}, \Psi^{T}, P^{T}, Q^{T}\right),
 \end{align}
-则上述半离散系统可以用正则哈密顿形式重新表示为
+则上述半离散系统可重新表示哈密顿形式
 \begin{align}\label{eq_PAVF:60}
 \frac{d Y}{d t}=f(Y)=S \nabla H(Y),
 \end{align}
-哈密顿能量定义以下
+哈密顿能量定义如下
 \begin{align}\label{eq_PAVF:61}
 	H(Y)=\frac{1}{2}\left((\varPhi^{T}\varPhi+\Psi^{T}\Psi){-P^{T} D^{\alpha} P-Q^{T} D^{\alpha} Q}+\frac{\beta}{2}(P^2+Q^2)^{T}(P^2+Q^2)\right),
 \end{align}
@@ -210,7 +210,7 @@ I & 0 & 0 & 0 \\
 \begin{align}\label{eq_PAVF:63}
 G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q.
 \end{align}
-接下来有以下定理.
+% 接下来有以下定理.
 
 \begin{theorem}	\label{thm_PAVF:3}
 	半离散系统 \eqref{eq_PAVF:56}-\eqref{eq_PAVF:59} 具有质量和能量守恒定律：

@@ -73,23 +73,23 @@ R^d~(d\!=\!1,2)$,$\boldsymbol{L}$ 是周期.分数阶拉普拉斯算子可以通
 \label{eq_17}\end{equation}
 其与方程 \eqref{eq_13} 分别意味着质量守恒 \eqref{eq_PAVF:_8}和能量守恒 \eqref{eq_SAVRRK:9}.
 \end{proof}
-% 据所知,尽管对于NFSWEs的保结构数值算法的研究已有不少工作, 但大多数方法仅关注一维情况, 在时间方向的精度没有高于二阶,并且（或者）是完全隐式的.
+% 据所知,尽管对于NFSWEs的保结构数值算法的研究已有不少工作, 但大多数方法仅关注一维情况, 在时间方向的精度没有高于二阶,并且(或者)是完全隐式的.
 % 这意味着仍然存在许多开放问题,对于未来的研究,特别是在高维情况下,需要高效、准确、显式的保结构数值方法.
 
-% 注意到在具有高阶精度的各种数值方法中,显式Runge-Kutta（RK）方法是很好的选择,因为它们属于单步方法,具有高阶精度和易于实现的特点.
+% 注意到在具有高阶精度的各种数值方法中,显式Runge-Kutta(RK)方法是很好的选择,因为它们属于单步方法,具有高阶精度和易于实现的特点.
 % 然而,标准RK方法并不一定能保持系统原有的物理特性.
-% 为了解决这个问题,Ketcheson \cite{ketchesonRelaxationRungeKutta2019} 提出了松弛Runge-Kutta（RRK）方法,该方法能够保证任何内积范数的守恒或稳定性.
+% 为了解决这个问题,Ketcheson \cite{ketchesonRelaxationRungeKutta2019} 提出了松弛Runge-Kutta(RRK)方法,该方法能够保证任何内积范数的守恒或稳定性.
 % 随后,RRK技术\cite{ranochaRelaxationRungeKutta2020}扩展到一般的凸量上.它们都是通过在Runge-Kutta更新的每一步中添加一个松弛因子,可以强制满足任何凸泛函的守恒、耗散或其他属性.
 % 这些优势的代价是必须求解一个非线性代数系统来确定松弛因子.然而,对于非二次不变量的情况,作者们并未考虑构建显式的守恒方案.
-% 幸运的是,不变能量二次化（IEQ）方法 \cite{yangLinearUnconditionallyEnergy2017, yangEfficientLinearSchemes2017} 和SAV方法 \cite{chengConvergenceEnergyconservingScheme2022} 可以通过变量变换将非二次能量转化为新变量的二次形式,而由此产生的新等效系统仍然保留了关于新变量的类似能量守恒定律.
+% 幸运的是,不变能量二次化(IEQ)方法 \cite{yangLinearUnconditionallyEnergy2017, yangEfficientLinearSchemes2017} 和SAV方法 \cite{chengConvergenceEnergyconservingScheme2022} 可以通过变量变换将非二次能量转化为新变量的二次形式,而由此产生的新等效系统仍然保留了关于新变量的类似能量守恒定律.
 % IEQ方法和SAV方法已被广泛应用于梯度流模型.例如,具有熔体对流\cite{chenEfficientNumericalScheme2019}的树状凝固相场模型,具有一般非线性势的梯度流动方程\cite{yangConvergenceAnalysisInvariant2020},外延薄膜生长模型\cite{chengHighlyEfficientAccurate2019},使用SAV 的任意高阶无条件能量稳定格式\cite{gongArbitrarilyHighorderUnconditionally2019}.
 % 有关IEQ和SAV的更多细节、扩展和改进,建议感兴趣的读者参考\cite{zhaoNumericalApproximationsPhase2017,shenScalarAuxiliaryVariable2018,liuExponentialScalarAuxiliary2020,chengMultipleScalarAuxiliary2018}.
 % 受到这些发展的启发,本章通过结合SAV方法和显式RRK方法,为一维和二维NFSWEs开发了一种任意高阶的显式保结构数值格式.
 
 \section{NFSWEs的SAV格式构建}\label{Section_SAVRRK: 2}
 
-众所周知，所有的RK方法都可以保持任意线性不变量守恒，只有辛RK方法能够保持任意二次不变量守恒。
-然而，并不存在标准RK方法可以保持高于二次的不变量或非多项式不变量守恒。
+众所周知,所有的RK方法都可以保持任意线性不变量守恒,只有辛RK方法能够保持任意二次不变量守恒.
+然而,并不存在标准RK方法可以保持高于二次的不变量或非多项式不变量守恒.
 为了克服这一限制并利用松弛RK方法保持二次不变量的特性,采用新开发的SAV方法将NFSWEs \eqref{eq_SAVRRK:1} 以二次能量泛函的等效形式重新表述.
 
 为了保证能量的正性,在 $\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4}$ 中添加一个正常数 $C_0$ 来修改 \eqref{eq_SAVRRK:9} 中的能量.
@@ -140,7 +140,7 @@ E(t)=\|v(\cdot, t)\|^2+\left\|(-\Delta)^{\frac{\alpha}{4}} u(\cdot, t)\right\|^{
 傅里叶基函数是周期边界条件下的拉普拉斯算子的特征函数,且快速傅里叶变换 (FFT) 的使用使编程更加简便,可以大大减少计算量,提高计算效率.
 因此,本文利用傅里叶拟谱法对等效系统 \eqref{eq_SAVRRK:2-2} 到 \eqref{eq_SAVRRK:31} 进行空间离散化.
 
-不失一般性,设空间维度为2（即$d=2$）. 对于正整数$M$和正偶数$N_{x}$、$N_{y}$,定义$\tau={T}/{M}$,$h_{x}={L}/{N_{x}}$,$h_{y}={L}/{N_{y}}$.令$\Omega_{h}=\left\{(x_{i}, y_{j}) \mid 0 \leq i \leq N_x-1;0 \leq j \leq N_y-1\right\}$,$\Omega_{\tau}=\left\{t_{m} \mid 0 \leq m \leq M\right\}$,$\Omega_{h}^{\tau}=\Omega_{h} \times \Omega_{\tau}$,其中$t_{m}=m \tau$,$x_{i}=i h_{x}$,$y_{j}=j h_{y}$.
+不失一般性,设空间维度为2(即$d=2$). 对于正整数$M$和正偶数$N_{x}$、$N_{y}$,定义$\tau={T}/{M}$,$h_{x}={L}/{N_{x}}$,$h_{y}={L}/{N_{y}}$.令$\Omega_{h}=\left\{(x_{i}, y_{j}) \mid 0 \leq i \leq N_x-1;0 \leq j \leq N_y-1\right\}$,$\Omega_{\tau}=\left\{t_{m} \mid 0 \leq m \leq M\right\}$,$\Omega_{h}^{\tau}=\Omega_{h} \times \Omega_{\tau}$,其中$t_{m}=m \tau$,$x_{i}=i h_{x}$,$y_{j}=j h_{y}$.
 在任意时间层$t_m$, 定义向量形式为
 \begin{align}\label{eq_SAVRRK:47}
 &U^m=\left(u_{0,0}^m, \cdots, u_{N_{x}-1,0}^m, u_{0,1}^m, \cdots, u_{N_{x}-1,1}^m, \cdots, u_{0, N_{y}-1}^m, \cdots, u_{N_{x}-1, N_{y}-1}^m\right)^{T},\\
@@ -460,7 +460,7 @@ S_m(1) = &\|\tilde{V}^{m+1}\|^2 + \|D^\frac{\alpha}{2} \tilde{U}^{m+1}\|^2+\big(
 \end{equation}
 前两个方程本质上构成标准的显式SAV-RK方法.
 
-数值解$\bm{y}_\gamma^{m+1}$在$\hat{t}_{m+1}$处可以用两种方式解释\cite{ketchesonRelaxationRungeKutta2019},即增量方向技术（IDT）和松弛技术（RT）.
+数值解$\bm{y}_\gamma^{m+1}$在$\hat{t}_{m+1}$处可以用两种方式解释\cite{ketchesonRelaxationRungeKutta2019},即增量方向技术(IDT)和松弛技术(RT).
 \begin{itemize}
 \item[1.] IDT的角度：$\bm{y}_\gamma^{m+1}$被视为对$\bm{y}\left(\hat{t}_m+\tau\right)$的近似,当$m \geq 0$,$\hat{t}_m=t_m$.
 \item[2.] RT的角度：$\bm{y}_\gamma^{m+1}$被视为对$\bm{y}\left(\hat{t}_m+\gamma_m \tau\right)$的近似,当$m>0$时,$\hat{t}_m$可能不等于$t_m$.
@@ -583,7 +583,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 
 \begin{example}\label{exp_SAVRRK:1}
 	\cite{ranLinearlyImplicitConservative2016} 
-	首先,考虑一维NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3},形式如下：
+	考虑一维NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3},形式如下：
 	\begin{equation}\label{eq_SAVRRK:108}
 		u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0, \quad (x,t)\in  (-25, 25)\times[0, T],
 	\end{equation}
@@ -592,11 +592,11 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		
 	
 		
-	不失一般性,这里设置 $\alpha=1.5$ 和 $T=1$,以确认显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的精度.
-	表 \ref{tab_SAVRRK:6-1} 展示了标准SAV-RK、SAV-RRK(RT)和SAV-RRK(IDT)方法在时间上的误差和收敛阶.
+	不失一般性,设 $\alpha=1.5$ 、 $T=1$. %,以确认显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的精度.
+	表 \ref{tab_SAVRRK:6-1} 展示了标准SAV-RK、SAV-RRK(RT)和SAV-RRK(IDT)方法在时间方向上的误差和收敛阶.
 	可以看到,所有的SAV-RRK(RT)方法在收敛阶与标准SAV-RK方法保持一致,而SAV-RRK(IDT)方法表现不同.
-	SAV-RRK(IDT)(2,2) 和 SAV-RRK(IDT)(4,4) 给出了比在定理\ref{thm_SAVRRK:5_4}中预期阶数更高的收敛阶.
-	而 SAV-RRK(IDT)(3,3) 给出了比预期阶数低一个的收敛阶.这种不同的行为可能归因于 $\max\limits _m\left|\gamma_m-1\right|$ 
+	SAV-RRK(IDT)(2,2) 和 SAV-RRK(IDT)(4,4) 展示出了比在定理\ref{thm_SAVRRK:5_4}中预期阶数更高的收敛阶.
+	而 SAV-RRK(IDT)(3,3) 并没有出现升阶现象.这种不同的行为可能归因于 $\max\limits _m\left|\gamma_m-1\right|$ 
 	的收敛阶对于 SAV-RRK(RT)(2, 2) 和 SAV-RRK(RT)(4, 4) 提高了一个阶,如图 \ref{fig_SAVRRK:1} 所示.
 
 
@@ -627,9 +627,10 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \end{tabular}%
 \label{tab_SAVRRK:6-1}%
 \end{table}%
-此外,对每一步的松弛因子 $\gamma_m$ 进行了调查.
-计算了 $\max\limits _m\left|\gamma_m-1\right|$ 和 $\max\limits _m\left|S_m(1)\right|$,并使用不同的时间步长 $\tau$.
-一些松弛方法的数值结果显示在图 \ref{fig_SAVRRK:1} 中,从中可以看出上述两个量的阶数与理论结果一致.这证实了引理\ref{lem_SAVRRK:5_1}和定理\ref{thm_SAVRRK:5_1}中的理论结果.值得注意的是,当改变 $\alpha$ 的值时,可以得到一些类似的结果,尽管这些现象在这里没有显示出来.
+此外,对每一步的松弛因子 $\gamma_m$ 进行研究
+在图 \ref{fig_SAVRRK:1} 中展示了在不同的时间步长 $\tau$下的 $\max\limits _m\left|\gamma_m-1\right|$ 和 $\max\limits _m\left|S_m(1)\right|$.
+从中可以看出上述两个量的阶数与理论结果一致.这证实了引理\ref{lem_SAVRRK:5_1}和定理\ref{thm_SAVRRK:5_1}中的理论结果.
+值得一提的是,当取不同的 $\alpha$ 的值时,可以得到类似的结果.%,尽管这些现象在这里没有显示出来.
 
 \begin{figure}[H]
 	\begin{center}
@@ -641,12 +642,12 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 	%\centerline{($a$) Temporal accuracy with $N=128.$}
 	}
 	% \caption{$\max_m\left|\gamma_m-1\right|$ and $\max_m\left|S_m(1)\right|$ for some relaxation methods in Example \ref{exp_SAVRRK:1}.}
-	\caption{例 \ref{exp_SAVRRK:1}中一些松弛格式（RT）所对应的$\max_m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$.}
+	\caption{例 \ref{exp_SAVRRK:1}中一些松弛格式(RT)所对应的$\max_m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$.}
 	\label{fig_SAVRRK:1}
 	\end{center}
 	\end{figure}
-	还进行了一个长时间的模拟,直到 $T=1000$,并使用不同的 $\alpha$ 绘制了 SAV-RRK(4,4) 方法的相对能量图,如图 \ref{fig_SAVRRK:4} 所示.
-	这表明所提出的方案可以在离散级别上完全保持能量守恒,并且其保持性能明显优于 SAV 方法\cite{chengConvergenceEnergyconservingScheme2022} 和三级线性隐式差分法\cite{wangConservativeLinearizedDifference2015}.		
+	使用SAV-RRK(4,4) 方法的相对能量在长时间($T=1000$)的模拟中针对不同$\alpha$取值的演化如图 \ref{fig_SAVRRK:4} 所示.
+	这表明所提出的方案捕捉到了原始问题的保结构现象,并且其守恒性能明显优于 SAV 方法\cite{chengConvergenceEnergyconservingScheme2022} 和三级线性隐式差分法\cite{wangConservativeLinearizedDifference2015}.	
 
 	\begin{figure}[H]
 		\begin{center}
@@ -671,18 +672,16 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		\end{figure}
 
 	\begin{example}\label{exp_SAVRRK:2}
-		现在考虑具有以下初值的 2D NFSWEs \eqref{eq_SAVRRK:1}：
+		考虑具有以下初值的 2维 NFSWEs \eqref{eq_SAVRRK:1}：
 		\begin{equation*}
 		u(x, y, 0)=\operatorname{sech}\left(x^2+y^2\right), u_t(x, y, 0)=\sin (x+y) \operatorname{sech}\left(-2\left(x^2+y^2\right)\right),(x, y, t) \in \Omega \times[0, T],
 		\end{equation*}
 		其中 $\Omega=[-5,5] \times[-5,5]$.
 		\end{example}
 			
-			
-		为了重新确认理论结果在 2D 情况下的适用性,
-		考虑与例 \ref{exp_SAVRRK:1} 中相同的参数.也就是,$\alpha=1.5$ 和 $T=1$.
-		表 \ref{tab_SAVRRK:6-2} 和图 \ref{fig_SAVRRK:2-1} 分别展示了时间上的收敛阶和松弛因子 $\gamma$.
-		可以观察到,与 1D 情况唯一的不同之处是,在 2D 情况下,SAV-RRK(IDT) 方法未能达到预期的更高阶.
+		% 为了再次确认理论结果在2维情况下的适用性,使用例 \ref{exp_SAVRRK:1} 中相同的参数($\alpha=1.5$ 和 $T=1$).
+		设$\alpha=1.5$ 和 $T=1$,表 \ref{tab_SAVRRK:6-2} 和图 \ref{fig_SAVRRK:2-1} 分别展示了时间方向上的收敛阶以及松弛因子 $\gamma$ 相关的理论验证.
+		可以观察到,与 1维 算例\ref{exp_SAVRRK:1}不同, 在 2维 情况下,SAV-RRK(IDT) 方法未出现任何升阶现象.
 
 \begin{table}[H]\scriptsize
 \centering
@@ -723,13 +722,13 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 %\centerline{($a$) Temporal accuracy with $N=128.$}
 }
 % \caption{$\max _m\left|\gamma_m-1\right|$ and $\max_m\left|S_m(1)\right|$ for some relaxation (RT) methods in Example \ref{exp_SAVRRK:2}.}
-\caption{例 \ref{exp_SAVRRK:2}中一些松弛格式（RT）所对应的$\max_m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$.}
+\caption{例 \ref{exp_SAVRRK:2}中一些松弛格式(RT)所对应的$\max_m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$.}
 \label{fig_SAVRRK:2-1}
 \end{center}
 \end{figure}
-为了展示所提方法在保持能量守恒方面的有效性,进行了长时间模拟,直到 $T=100$,
-并在图 \ref{fig_SAVRRK:2-4} 中绘制了使用 SAV-RRK(4,4) 方法关于不同 $\alpha$ 相对能量误差.
-结果显示, 所提出的方法可以在离散层面上精确地保持能量守恒,且其能量守恒性能显著优于中 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022}.
+% 为了展示所提方法在保持能量守恒方面的有效性,进行了长时间模拟,直到 $T=100$,
+并在图 \ref{fig_SAVRRK:2-4} 中绘制了使用 SAV-RRK(4,4) 方法进行长时间模拟($T=100$关于不同 $\alpha$ 的相对能量误差.
+结果显示, 所提出的方法可以在离散层面上精确地保持能量守恒,且其能量守恒性能显著优于 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022}.
 \begin{figure}[H]
 	\begin{center}
 	\subfigure[$\alpha=1.3$]{ \centering
@@ -754,7 +753,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 	
 	\begin{example}\label{exp_SAVRRK:3}
 		\cite{wangUnconditionalEnergyDissipation2021} 
-		接下来,考虑二维非线性分数阶波动方程
+		考虑二维非线性分数阶波动方程
 		\begin{equation}
 		\begin{cases}
 		& u_{t t}+(-\Delta)^{\frac{\alpha}{2}} u+F^{\prime}(u)=0,(x, y, t) \in \Omega \times(0, T],\\
@@ -764,7 +763,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		其中 $\Omega=(-10,10) \times(-10,10)$.
 		\end{example}
 		
-		取势能 $F(u)=u^2\left(\frac{1}{4} u^2-\frac{1}{2}\right)$.在 $T=1$ 时,$\alpha=1.5$ 的时间收敛阶如表 \ref{tab_SAVRRK:6-3} 所示.
+		取势能 $F(u)=u^2\left(\frac{1}{4} u^2-\frac{1}{2}\right)$.在 $T=1$ 时,$\alpha=1.5$ 的时间方向收敛阶如表 \ref{tab_SAVRRK:6-3} 所示.
 		此外,图 \ref{fig_SAVRRK:3-4} 展示了长时间模拟 ($T=100$) 的离散能量演化,这些数据是通过应用 SAV-RRK(4,4) 方法计算的.结果表明,所提方法对非线性分数阶波动方程也是有效的.
 		
 \begin{table}[H]\scriptsize
@@ -821,14 +820,14 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 
 \begin{example}\label{exp_SAVRRK:4}
 \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 
-最后,考虑二维分数阶Klein-Gordon-Schr{\"o}dinger方程
+考虑二维分数阶Klein-Gordon-Schr{\"o}dinger方程
 \begin{equation}
 \begin{cases}
 \mathrm{i} \partial_t u-\frac{1}{2}(-\Delta)^{\frac{\alpha}{2}} u+u \phi=0,(x, y, t) \in \Omega \times(0, T],\\
 \partial_{t t} \phi+(-\Delta)^{\frac{\beta}{2}} \phi+\phi-|u|^2=0, (x, y, t) \in \Omega \times(0, T],
 \end{cases}
 \end{equation}
-其中初始条件为
+初始条件为
 \begin{equation}
 	\begin{aligned}
 		u(x, y, 0)&=(1+\mathrm{i}) \exp \left(-|\boldsymbol{x}|^2\right),~~\phi(x, y, 0)=\operatorname{sech}\left(|\boldsymbol{x}|^2\right),\\
@@ -838,7 +837,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 其中 $\Omega=[-10,10] \times[-10,10]$.
 \end{example}
 
-与前面的例子类似,表 \ref{tab_SAVRRK:6-4} 列出了 $\alpha=\beta=1.5$ 时的一些数值误差和时间收敛阶.
+与前面的例子类似,表 \ref{tab_SAVRRK:6-4} 列出了 $\alpha=\beta=1.5$ 时的一些数值误差和时间方向收敛阶.
 
 
 \begin{table}[H]\scriptsize
@@ -870,9 +869,9 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \label{tab_SAVRRK:6-4}%
 \end{table}%
 
-此外,长时间模拟（直至 $T=100$）中使用不同 $\alpha$ 和 $\beta$ 的相对能量如图 \ref{fig_SAVRRK:3-5} 所示.
+此外,长时间模拟(直至 $T=100$)中使用不同 $\alpha$ 和 $\beta$ 的相对能量如图 \ref{fig_SAVRRK:3-5} 所示.
 % 图像展示的现象表明,所提出的方案可以在分数阶Klein-Gordon-Schr{\"o}dinger方程的离散水平上准确保持能量守恒.
-图中所示的现象表明,所提出的方法可以在分数阶Klein-Gordon-Schr{\"o}dinger方程的离散层面上准确保持能量守恒.
+% 图中所示的现象表明,所提出的方法可以在分数阶Klein-Gordon-Schr{\"o}dinger方程的离散层面上准确保持能量守恒.
 
 \begin{figure}[H]
 \begin{center}
@@ -897,13 +896,22 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \end{figure}
 
 \section{小结}\label{Section_SAVRRK: 7}
-在本章中,提出了一种开发二维分数非线性薛定谔波动方程高阶显式能量守恒数值方法的新途径.该方法基于最近引入的标量辅助变量方法和松弛龙格-库塔方法.理论分析和数值结果支持了所提方案的守恒性质.
-更多的数值结果表明,所提方法对于其他类似的分数守恒问题也是有效的,例如非线性分数波动方程和分数Klein-Gordon-Schr{\"o}dinger方程等.
+% 本章首先针对具有周期性边界条件的二维非线性分数阶薛定谔波方程,通过标量辅助变量方法将其转化为一个等效系统,其能量被重新表述为三个二次项和的形式.
+% 随后在时空方向上分别采用显式松弛龙格库塔方法和傅里叶拟谱方法对等效系统进行离散.构造出一个在时间方向可达任意高阶的显式保结构数值格式.
+% 最后通过数值实验验证了该格式在长时间仿真中的数值稳定性, 且很容易推广到分数Klein-Gordon-Schr{\"o}dinger方程等类似方程.
+本章首先考虑了具有周期性边界条件的二维非线性分数阶薛定谔波方程,并通过标量辅助变量方法将其转化为一个等效系统,其中能量被重新表述为三个二次项的和.
+随后,结合显式松弛龙格库塔方法成功构造了一个在时间方向可达任意高阶的显式保结构数值格式.
+最后,通过一系列数值实验验证了该格式在长时间仿真中的数值稳定性,并证明了所提方法对于其他类似的守恒问题也是有效的,
+如分数Klein-Gordon-Schr{\"o}dinger方程等.
+
+% 本章提出了一种开发二维分数非线性薛定谔波动方程高阶显式能量守恒数值方法的新途径.该方法基于最近引入的标量辅助变量方法和松弛龙格-库塔方法.理论分析和数值结果支持了所提方案的守恒性质.
+% 更多的数值结果表明,所提方法对于其他类似的分数守恒问题也是有效的,例如非线性分数波动方程和分数Klein-Gordon-Schr{\"o}dinger方程等.
+
 % {\color{purple}{值得注意的是,即使在其他相关文献中提到的偶数阶IDT方法可能表现出更高阶的现象在的二维计算示例中并没有观察到.这一发现是新颖的,但仍然是一个待解的问题.}}
 
 % \section*{致谢}
-% % 本工作得到四川省科技计划的支持（项目编号2020YJ0110、2022JDTD0019）,中国国家自然科学基金（项目编号11801389）以及四川师范大学Laurent数学中心和国家-地方联合工程实验室系统可信性自动验证（项目编号ZD20220105）的支持.
-% 本工作得到四川省科技计划的支持（项目编号2022JDTD0019）以及四川师范大学Laurent数学中心和国家-地方联合工程实验室系统可信性自动验证（项目编号ZD20220105）的支持.	
+% % 本工作得到四川省科技计划的支持(项目编号2020YJ0110、2022JDTD0019),中国国家自然科学基金(项目编号11801389)以及四川师范大学Laurent数学中心和国家-地方联合工程实验室系统可信性自动验证(项目编号ZD20220105)的支持.
+% 本工作得到四川省科技计划的支持(项目编号2022JDTD0019)以及四川师范大学Laurent数学中心和国家-地方联合工程实验室系统可信性自动验证(项目编号ZD20220105)的支持.	
 % %% 附录部分是通过 \appendix 命令开始的;
 % %% 然后附录部分就和普通章节一样处理
 % % \appendix
@@ -1379,7 +1387,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 % \end{remark}
 
 % \section{数值算例}\label{Section_SAVRRK: 6}
-% 为了支持和验证之前的理论结果,本节提供了一些数值例子. 在的计算中,采用了基于快速傅里叶变换（FFT）方法的快速求解器方法,可以减少内存需求和计算复杂度. 进行了几个实验来说明所提出的方法的有效性,并将它们与其他经典的SAV-RK方法进行比较. 首先,展示了SAV重构的RRKs和IDTs的数值收敛阶. 然后展示了所提出的方案的精度和守恒性质.
+% 为了支持和验证之前的理论结果,本节提供了一些数值例子. 在的计算中,采用了基于快速傅里叶变换(FFT)方法的快速求解器方法,可以减少内存需求和计算复杂度. 进行了几个实验来说明所提出的方法的有效性,并将它们与其他经典的SAV-RK方法进行比较. 首先,展示了SAV重构的RRKs和IDTs的数值收敛阶. 然后展示了所提出的方案的精度和守恒性质.
 
 % 在数值测试中,将使用以下RK方法：
 % \begin{enumerate}
@@ -1482,7 +1490,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 % 	\label{tab_SAVRRK:6-1}%
 %   \end{table}%
   
-%   接下来,对每一步中的松弛因子 $\gamma_n$ 进行了充分的研究.计算了在不同时间步长 $\tau$ 的模拟过程中 $\gamma_m$ 和 1 之间的最大距离,即 $\max _m\left|\gamma_m-1\right|$,并且也计算了 $\left|S_m(1)\right|$ 的最大值,即 $\max _m\left|S_m(1)\right|$.一些松弛（RT）方法的数值结果如图 \ref{fig_SAVRRK:1} 所示.从图中可以看出,上述两个量的阶数与理论结果一致.这证实了引理 \ref{lem_SAVRRK:5_1} 和定理 \ref{thm_SAVRRK:5_1} 中的理论结果\begin{figure}[H]
+%   接下来,对每一步中的松弛因子 $\gamma_n$ 进行了充分的研究.计算了在不同时间步长 $\tau$ 的模拟过程中 $\gamma_m$ 和 1 之间的最大距离,即 $\max _m\left|\gamma_m-1\right|$,并且也计算了 $\left|S_m(1)\right|$ 的最大值,即 $\max _m\left|S_m(1)\right|$.一些松弛(RT)方法的数值结果如图 \ref{fig_SAVRRK:1} 所示.从图中可以看出,上述两个量的阶数与理论结果一致.这证实了引理 \ref{lem_SAVRRK:5_1} 和定理 \ref{thm_SAVRRK:5_1} 中的理论结果\begin{figure}[H]
 % 	\begin{center}
 % 	\subfigure[$\max _m\left|\gamma_m-1\right|$]{ \centering
 % 	\includegraphics[width=0.5\textwidth]{./figures/exp1_r.eps}
@@ -1490,7 +1498,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 % 	}\subfigure[$\max_m\left|S_m(1)\right|$]{ \centering
 % 	\includegraphics[width=0.5\textwidth]{./figures/exp1_s.eps}
 % 	%\centerline{($a$) Temporal accuracy with $N=128.$}
-% 	}\caption{松弛（RT）方法的 $\max _m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$ （例 \ref{exp_SAVRRK:1}）} 
+% 	}\caption{松弛(RT)方法的 $\max _m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$ (例 \ref{exp_SAVRRK:1})} 
 % 	\label{fig_SAVRRK:1}
 % 	\end{center}
 % 	\end{figure}
@@ -1504,7 +1512,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 % 		}\subfigure[$N=32 $(RT)]{ \centering
 % 		\includegraphics[width=0.5\textwidth]{./figures/exp1_IDT_order_t.eps}
 % 		%\centerline{($a$) Temporal accuracy with $N=128.$}
-% 		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶. （例 \ref{exp_SAVRRK:1}）} 
+% 		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶. (例 \ref{exp_SAVRRK:1})} 
 % 		\label{fig_SAVRRK:2}
 % 		\end{center}
 % 		\end{figure}
@@ -1516,7 +1524,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 % 		}\subfigure[$\tau=0.01 $(RT)]{ \centering
 % 		\includegraphics[width=0.5\textwidth]{./figures/exp1_IDT_order_s.eps}
 % 		%\centerline{($a$) Temporal accuracy with $N=128.$}
-% 		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶. （例 \ref{exp_SAVRRK:1}）} 
+% 		}\caption{不同 $\alpha$ 下 IDT 和 RT 的收敛阶. (例 \ref{exp_SAVRRK:1})} 
 % 		\label{fig_SAVRRK:3}
 % 		\end{center}
 % 		\end{figure}
