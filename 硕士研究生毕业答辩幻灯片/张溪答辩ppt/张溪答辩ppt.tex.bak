@@ -1,0 +1,718 @@
+\documentclass[blue]{beamer}
+\usepackage{CJK}
+\usetheme{Madrid}%Warsaw
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{bm}
+\usepackage{xmpmulti}
+\usepackage{colortbl,dcolumn,amsmath,everb}
+\usepackage{xcolor}
+\usepackage{mathrsfs}  % 不同于\mathcal or \mathfrak 之类的英文花体字体
+\newcommand\dif{\mathrm{d}}
+%\usepackage{url}
+%\xspacskip=0  \spaceskip=<glue>
+
+
+%\include{background}
+\begin{document}
+\begin{CJK*}{GBK}{kai}
+%%------------------------------------------
+\title[\tiny{一类广义Bretherton方程和分数阶薛定谔波方程的保结构差分方法}]
+{~一类广义Bretherton方程和分数阶薛定谔波方程的保结构差分方法}
+\author[张溪]{报告人: 张溪
+%\newline
+%{\small Homepage: http://cn.linkedin.com/pub/顾先明（goo-hsien-ming）/62/aaa/345/}
+\newline
+\newline
+{导师: 冉茂华~~副教授}
+\newline
+\newline
+\small 研究方向: 偏微分方程数值解}
+\institute[川师大]{四川师范大学, 数学科学学院}
+\date{scriptsize{2019年3月8日}}
+
+\date{\scriptsize{\today} }%{{\the\year}年{\the\month}月{\the\day}日}
+\pgfdeclareimage[height=1.8cm]{logo}{fig/logo}
+\logo{\pgfuseimage{logo}}
+
+\frame{\titlepage}
+%%------------------------------------------
+\begin{frame}\frametitle{主要内容}
+  \large
+  \begin{itemize}
+    \item {一. 指数标量辅助变量方法}
+    \item {二. 一类广义Bretherton方程}
+    \item {三. 分数阶薛定谔波方程}
+    \item {四. 总结与展望}
+    \item {五. 盲审后修改情况说明}
+  \end{itemize}
+\end{frame}
+%==============================================================
+\begin{frame}
+  \large
+  \begin{itemize}
+    \item {一. 指数标量辅助变量方法}
+  \end{itemize}
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{指数标量辅助变量方法}\small
+\quad\quad 非线性波方程凭借广泛的实用价值和重要的理论意义, 在非线性偏微分方程中占据着重要地位. 这类方程很多都有一个或多个物理不变量, 因此构造在离散情形下拥有类似特性的保结构数值方法具有重要的研究价值.
+
+\quad\quad 在过去的十年中, 研究者提出了许多保结构方法, 如平均向量场方法、哈密顿边值方法、龙格-库塔（Runge-Kutta）方法. 最近, 能量不变二次化(IEQ)方法和标量辅助变量（SAV）方法被提出并广泛应用于梯度流或具有哈密顿结构的微分模型中. 这两种方法都是通过引进一个与空间无关的变量将能量转化为二次形式. 这种重构的优点是所有的非线性项都可以半显式地处理, 从而得到一个线性系统. SAV方法可以看作是对IEQ方法的改进, 并克服了IEQ方法的一些缺点. 最重要的是, 基于SAV 的等价系统仅仅是通过求解线性问题来计算各时间层的常系数方程, 具有更高的计算效率. 基于传统的SAV方法所提出的指数标量辅助变量（E-SAV）方法, 继承了SAV 方法的所有优点, 并克服了非线性自由能必须有下界、计算 $u^{n+1}$ 必须计算内积等缺点.
+
+\end{frame}
+
+%=======================================================
+\begin{frame}
+\frametitle{指数标量辅助变量方法}
+首先简要介绍 [1] 提出的指数标量辅助变量方法. 假设 存在一个能量泛函以及 $H^{-1}$ 中的相应梯度流:
+\begin{align}
+\varepsilon[\phi]=\int_{\Omega}\left[\frac{1}{2} L \phi \cdot \phi+\varepsilon_1[\phi]\right] d x.\label{eq:2.1}
+\end{align}
+\begin{align}
+&\frac{\partial \phi}{\partial t}=\mathcal{G} \mu, \label{eq:2.2}\\
+&\mu=\mathcal{L} \phi+\varepsilon_1^{\prime}(\phi) .\label{eq:2.3}
+\end{align}
+
+这里 $\mu=\frac{\delta \mathcal{E}(\phi)}{\delta \phi}$, 对应的边界条件为 $\left.\frac{\partial \phi}{\partial \mathbf{n}}\right|_{\partial \Omega}=\left.\frac{\partial \mu}{\partial \mathbf{n}}\right|_{\partial \Omega}=0$ 或者周期, $\mathcal{G}=-I$ 或者 $\mathcal{G}=\Delta, L$ 为 对称非负定线性算子 (一般与 $\phi$ 无关), $\varepsilon_1[\phi]$ 是关于 $\phi$ 的非线性算子.
+
+[1]Z. Liu, X. Li, The exponential scalar auxiliary variable (E-SAV) approach for phase field models and its explicit computing[J]. SIAM Journal Science Computing, 42(3)(2020) B630-B655.
+\end{frame}
+%=======================================================
+\begin{frame}
+\frametitle{指数标量辅助变量方法}
+通过引进一个指数标量辅助变量
+$$
+r=\exp (\int_{\Omega} \varepsilon_1(\phi) d x/C) .
+$$
+对 $r$ 进行求导得到
+$$
+r_t=\frac{r}{C} \int_{\Omega} \varepsilon_1^{\prime} \phi_t d x=\frac{1}{C}\frac{r^2}{\exp (\int_{\Omega} \varepsilon_1(\phi) d x/C)} \int_{\Omega} \varepsilon_1^{\prime} \phi_t d x .
+$$
+因此, 可以将原梯度流问题\eqref{eq:2.2}-\eqref{eq:2.3}转化为如下等价形式
+$$
+\left\{\begin{array}{l}
+\frac{\partial \phi}{\partial t}=\mathcal{G} \mu, \\
+\mu=L \phi+\frac{1}{C}\frac{r}{\exp (\int_{\Omega} \varepsilon_1(\phi) d x/C)} \varepsilon_1^{\prime}, \\
+\frac{d \ln (r)}{d t}=\frac{r}{\exp (\int_{\Omega} \varepsilon_1(\phi) d x/C)} \int_{\Omega} \varepsilon_1^{\prime} \phi_t d x .
+\end{array}\right.
+$$
+利用类似于 E-SAV 的算法构造思想, 容易建立无条件能量稳定的数值格式, 且只需求解常系数线性系统.
+
+\end{frame}
+%=======================================================
+\begin{frame}
+  \large
+  \begin{itemize}
+    \item {二. 一类广义Bretherton方程}
+  \end{itemize}
+\end{frame}
+%=======================================================
+\begin{frame}
+\frametitle{研究意义及研究背景}\small
+非线性波方程的广泛应用引起了人们对其解的浓厚兴趣. 据我们所知, 许多研究者应用多种分析方法对一些特殊情况的非线性波方程进行了理论研究. 具体可以参考以下论文
+
+[2]S. P. Levandosky, Stability and instability of fourth order solitary waves[J]. Journal of Difference Equations and Applications, 10 (1998) 151-188.
+
+[3]S.P. Levandosky, Decay estimates for fourth order wave equations[J]. Journal of Difference Equations and Applications, 143 (1998) 360–413.
+
+
+[4]B. Pausader, Scattering and the levandosky-strauss conjecture for fourth-order nonlinear wave equations[J]. Journal of Difference Equations and Applications, 241 (2007) 237–278.
+
+[5]M. Baccouch, The local discontinuous Galerkin method for the fourth-order euler-bernoulli partial differential equation in one space dimension. part I: superconvergence error analysis[J]. Journal of Scientific Computing, 59 (2014) 795-840.
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{研究背景}\small
+然而, 在任何初始条件和边界条件下, 都不可能确定非线性波方程精确解的一般形式. 为了弥补这一不足, 发展求解非线性波方程的高性能数值方法是可取的.
+Bachouch[6]将局部不连续 Galerkin 方法应用于一维线性四阶Euler-Bernoulli 方程, 并进行超收敛分析和后验误差估计.
+
+[6]M. Baccouch, The local discontinuous Galerkin method for the fourth-order euler-bernoulli partial differential equation in one space dimension. partI: superconvergence error analysis[J]. Journal of Scientific Computing, 59 (2014) 795–840.
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{研究背景}\small
+最近, Achouri[7]为四阶非线性波方程设计了隐式二阶保守有限差分格式. Zhang[8]给出了具有周期边界条件的非线性四阶波方程的两种守恒和线性隐式差分格式. 这些格式是基于两种不同的紧差分离散, 详细的理论分析表明所提出的差分方法是守恒的.
+
+
+[7]T. Achouri, Conservative finite difference scheme for the nonlinear fourth-order wave equation[J]. Applied Mathematics and Computation, 359 (2019) 121–131.
+
+[8]G. Zhang, Two conservative and linearly-implicit compact difference schemes for the nonlinear fourth-order wave equation[J]. Applied Mathematics and Computation, 401.
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{ 方程介绍}
+考虑如下具有周期边界条件的一类广义Bretherton方程[9]
+\begin{align}
+&u_{tt}+\gamma\Delta^2 u+u+f(u)=0, \quad x \in R, \quad t>0, \label{eq:3.1}\\
+& u(x, 0)=u_0(x), \quad u_t(x, 0)=\psi(x),\label{eq:3.2}
+\end{align}
+其中$\Delta^2 u=\Delta(\Delta u)$, $\Delta$ 为拉普拉斯算子, $f(u)=u^3$ 或 $f(u)=u^5$.
+
+问题\eqref{eq:3.1}-\eqref{eq:3.2}满足能量守恒定律[10]
+\begin{align}\label{eq:3.3}
+ E(t)=E(0), t>0,
+\end{align}
+
+[9]S.P. Levandosky, Decay estimates for fourth order wave equations[J]. Journal of Difference Equations and Applications, 143 (1998) 360-413.
+
+[10]G. Zhang, Two conservative and linearly-implicit compact difference schemes for the nonlinear fourth-order wave equation[J]. Applied Mathematics and Computation, 401 (2021) 126055.
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}
+基于指数标量辅助变量 (E-SAV) 方法, 将问题 \eqref{eq:3.1}-\eqref{eq:3.2} 写成如下等价形式
+\begin{align}
+&u_{t t}+\gamma\Delta^2 u+ u+\frac{r}{\exp (E_1(t)/C)} f(u)=0, x \in \Omega, 0<t \leq T, \label{eq:3.6}\\
+&\frac{d \ln (r)}{d t}=\frac{1}{C}(\frac{2 r f(u)}{\exp (E_1(t)/C)}, u_t), \label{eq:3.7}\\
+&u(x, 0)=\varphi(x), u_t(x, 0)=\psi(x), x \in \Omega, \label{eq:3.8}\\
+&u(x, t)=u(x+L, t), x \in R, 0<t \leq T.\label{eq:3.9}
+\end{align}
+其中,$\exp (E_1(t)/C), E_1(t)=\int_{\Omega} F(u) d x.$
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}\small
+紧凑型算子形式[11]
+\begin{align}\label{eq:3.14}
+\frac{\partial^4 v}{\partial x^4}(x_j, t_n)=\mathcal{A}^{-1} \delta_x^4 v_k^n+O(h^4),
+\end{align}
+其中 $\mathcal{A}=I+\frac{h^2}{6} \delta_x^2$, $I$ 是单位算子. 注意到周期条件\eqref{eq:3.9}, 算子 $\mathcal{A}$对应的矩阵 $A$ 可以定义为:
+\begin{align*}
+A=\frac{1}{6}\left(\begin{array}{cccccc}
+4 & 1 & 0 & \ldots & 0 & 1 \\
+1 & 4 & 1 & \ldots & 0 & 0 \\
+& & \ddots & \ddots & \ddots & \\
+0 & 0 & \ldots & 1 & 4 & 1 \\
+1 & 0 & \cdots & 0 & 1 & 4
+\end{array}\right)_{M \times M}.
+\end{align*}
+容易验证对应于运算符$\mathcal{A}$的矩阵$A$是对称正定的. 因此, $A$是可逆矩阵, 记$H=A^{-1}$.
+
+[11]X. Hu, L. Zhang, A compact finite difference scheme for the fourth-order fractional diffusion-wave system[J]. Computer Physics Communications, 182 (2011)
+1645–1650.
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}
+对于等价形式\eqref{eq:3.6}-\eqref{eq:3.9}, 在时间和空间上分别利用二阶中心差分和\eqref{eq:3.14}进行离散, 可得到如下全离散格式：
+\begin{align}
+&\delta_t^2 u^n+\gamma H \delta_x^4 \hat{u}^n+\hat{u}^n+b(u^n) r^n=0, \label{eq:3.19}\\
+&\delta_{\hat{t} }\ln (r^n)=\frac{1}{C}(2 b(u^n) r^n, \delta_{\hat{t}} u^n), \label{eq:3.20}\\
+&\delta_t u^0+\frac{\gamma \tau}{2} A^{-1} \delta_x^4 u^{\frac{1}{2}}+\frac{ \tau}{2}u^{\frac{1}{2}}+\frac{\tau}{2}(u^0)^2 u^{\frac{1}{2}}=\psi.\label{eq:3.23}%\\
+%&u(x, 0)=\varphi(x), u_t(x, 0)=\psi(x), \quad x \in \Omega, \label{eq:3.22}\\
+%&u(x, t)=u(x+L, t)=0, \quad x \in \partial \Omega, 0<t \leq T,\label{eq:3.23}
+\end{align}
+
+\end{frame}
+%==============================================================
+\begin{frame}
+所建立的差分格式 \eqref{eq:3.19}-\eqref{eq:3.23} 满足离散能量守恒律
+\begin{theorem}[2.1]
+差分格式 \eqref{eq:3.19}-\eqref{eq:3.23} 满足离散能量守恒律
+\begin{align*}
+E^{n+1}=E^{n}, \quad 1 \leq n \leq N,
+\end{align*}
+其中
+\begin{align}\label{eq:3.24}
+E^{n+1}=&\|\delta_t u^n\|^2+\frac{\gamma}{2}(\|B \delta_x^2 u^{n+1}\|^2+\|B \delta_x^2 u^n\|^2)\nonumber\\
+&+\frac{1}{2}(\|u^{n+1}\|^2+\|u^n\|^2)+\frac{C}{2}(\ln (r^{n+1})+\ln (r^{n})).
+\end{align}
+\end{theorem}
+\end{frame}
+%%============================================================================================
+\begin{frame}
+\frametitle{数值实验}
+通过应用前面提出的差分格式 \eqref{eq:3.19}-\eqref{eq:3.23} 求解两个具体的数值算例以验证格式的有效性和离散守恒律.
+\begin{example}[3.1]
+首先考虑真解已知的带源问题:
+\begin{align*}
+&u_{t t}+\Delta^2 u+u+f(u)=g(x, t), x \in \Omega=[0,4], 0<t \leq 1 ,
+%& u(x, 0)=\sin (\pi x) , u_t(x, 0)=-\sin (\pi x) , x \in[0,4],
+\end{align*}
+其中, $f(u)=u^3$ 相应的初边界条件和源项 $g(x,t)$ 由精确解 $u(x, t)=\sin (\pi x) \exp (-t)$ 确定, 即
+\begin{align*}
+g(x, t)=(2+ \pi^4) \sin (\pi x) \exp (-t)+\sin ^3(\pi x) \exp (-3 t).
+\end{align*}
+\end{example}
+\end{frame}
+%%==============================================================
+
+\begin{frame}
+\frametitle{数值实验}
+表 \ref{tab:3.1} 列出了空间和时间方向上的误差和收敛阶, 它们分别是通过将 $\tau$ 和 $h$ 取足够小得到的. 可以清楚地观察到, 其收敛阶在空间上接近4 阶, 在时间上接近2 阶, 这与前面的理论分析是一致的.
+
+\begin{table}[!htbp]
+\begin{center}
+\renewcommand{\tablename}{表1}
+\caption{例3.1 的最大误差和收敛阶}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllllll}
+\hline
+{}&\multicolumn{2}{c}{$h=1/100$}&{}&{}&\multicolumn{2}{c}{$\tau=1/60000$}\\
+\cline{2-3}\cline{6-7}
+{$\tau$}&$E(h,\tau)$&$\mbox{Ord}_2$&{}&{$h$}&$E(h,\tau)$&$\mbox{Ord}_1$\\
+\hline
+$1/2$   & 1.4999e-1   & ---         &{}   &$1/4$   & 1.0278e-3   & ---\\
+$1/4$   & 4.1997e-2   & $1.8352$    &{}   &$1/8$   & 5.7758e-5   & $4.1533$ \\
+$1/8$  &  1.2194e-2   & $1.7841$     &{}   &$1/16$  & 3.5974e-6   & $4.0050$ \\
+$1/16$  & 3.0344e-3   & $2.0066$    &{}   &$1/32$  & 2.8501e-7   & $3.6578$ \\
+\hline
+\end{tabular*}\label{tab:3.1}
+\end{center}
+\end{table}
+
+\end{frame}
+%%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+图\ref{fig:3.1}是例3.1在取$h = 1/100, \tau= 1/400 $时计算得到的精确解和数值解图像. 由图\ref{fig:3.1}可知它们的走势是几乎保持一致的, 这表明我们的方法是稳定和有效的.
+\begin{figure}[H]
+ \begin{center}
+ \renewcommand{\figurename}{图1}
+ \subfigure[数值解$u$]{ \centering
+ \includegraphics[width=0.45\textwidth]{fig3_u1}
+ }\subfigure[精确解$U$]{ \centering
+ \includegraphics[width=0.45\textwidth]{fig3_1U}
+ }\caption{当$ h = 1/100, \tau= 1/400$时例3.1对应的精确解与数值解图像.}\label{fig:3.1}
+ \end{center}
+ \end{figure}
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+为验证定理 2.1 中提到的离散能量守恒定律, 将通过以下算例进行验证.
+\begin{example}[3.2]
+考虑精确解未知的问题
+\begin{align*}
+&u_{t t}+\gamma \Delta^2 u+u+f(u)=0, x \in \Omega=[0,2], 0<t \leq 1 ,\\
+& u(x, 0)=\sin (\pi x) , u_t(x, 0)=-\sin (\pi x) , x \in[0,2].
+\end{align*}
+其中, $f(u)=u^3.$
+\end{example}
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+为验证差分格式 \eqref{eq:3.20}-\eqref{eq:3.23} 的守恒性, 表\ref{tab:3.3}列出了例3.2针对不同$\gamma$时在不同时刻的离散能量 $E^n$. 容易发现, 格式 \eqref{eq:3.20}-\eqref{eq:3.23} 能很好刻画问题的能量不变性.
+\begin{table}[!htbp]
+\begin{center}\small
+\renewcommand{\tablename}{表2}
+\caption{当$\gamma$ 取不同值时, 例3.2在$t_n$ 处的离散能量 $E^n$}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccccccc}
+\hline
+{$t$}&{}&{$\gamma=0.01$}&{}&{$\gamma=0.03$}&{}&{$\gamma=0.05$}\\
+\hline
+$0$     &{}   &3.348326226935798    &{}&5.296478196995093  &{}   &7.244628271309854  \\
+$20$    &{}   &3.348326226925523    &{}&5.296478197039519  &{}   &7.244628271295588   \\
+$40$    &{}   &3.348326226924103    &{}&5.296478197071580  &{}   &7.244628271476894   \\
+$60$    &{}   &3.348326226890651    &{}&5.296478196974726  &{}   &7.244628271477575    \\
+$80$    &{}   &3.348326226906601    &{}&5.296478196949906  &{}   &7.244628271457731   \\
+$100$    &{}   &3.348326226849966    &{}&5.296478196941994  &{}   &7.244628271369942    \\
+\hline
+\end{tabular*}\label{tab:3.3}
+\end{center}
+\end{table}
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+离散能量 $E^n$ 针对不同的$\gamma$值, 在一个更长时间区间($T = 100$)上的能量演化过程如图\ref{fig:3.2}所示. 这说明格式 \eqref{eq:3.20}-\eqref{eq:3.24}捕捉到了原始问题的保结构现象, 适合长时间模拟.
+
+
+\begin{figure}[H]
+  \centering
+  \renewcommand{\figurename}{图2}
+  \includegraphics[width=0.5\textwidth]{fig3_2}\\
+  \caption{针对不同 $\gamma$ 取值, 例3.2对应的离散能量 $E^n$ 随时间 $t$ 的演化.}\label{fig:3.2}
+\end{figure}
+
+\end{frame}
+%==============================================================
+\begin{frame}
+  \large
+  \begin{itemize}
+    \item {三. 分数阶薛定谔波方程}
+  \end{itemize}
+\end{frame}
+%==============================================================
+
+\begin{frame}
+\frametitle{研究意义及研究背景}
+\quad \quad 非线性薛定谔方程是非线性科学中普适性很强的一个基本方程, 在很多物理分支有着广泛的应用. 它也引起了学者们的广泛关注, 基于有限差分法、 有限元法、间断有限元法 、谱方法的各类守恒型数值方法被不断提出.
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{研究背景}
+就有限差分方法而言,
+Bao等[12] 建立了整数阶薛定谔波方程在有限差分方法下的一致误差估计, 这里的误差界限适用于一般非线性的薛定谔波方程一维、二维和三维的情形. Wang和Zhang
+[13]针对一类薛定谔波方程初边值问题, 给出了一些新的守恒有限差分格式, 这些差分格式是能量守恒的, 并证明了有限差分格式解的存在性、唯一性和收敛性.\\
+
+[12]W. Bao, Y. Cai, Uniform error estimates of finite difference methods for the nonlinear Schr{\"o}dinger equation with wave operator[J]. SIAM Journal on Numerical Analysis, 50(2)(2012) 492-521.
+
+[13]T. Wang, L. Zhang, Analysis of some new conservative schemes for nonlinear Schr{\"o}dinger equation with wave operator[J]. Applied Mathematics and Computation, 182 (2)(2006) 1780-1794.
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{研究背景}
+Zhang等[14]研究了一类非线性整数阶薛定谔波方程的初边值问题, 提出了一种显式而有效的有限差分格式. 这是一个具有能量守恒律的格式, 并证明了其收敛性和稳定性.
+Li等[15]针对非线性整数阶薛定谔波方程的周期初值问题, 构造了一个紧致差分格式. 这是一个具有离散守恒定律的三层格式, 且用能量法证明了该模型的无条件稳定性和收敛性.\\
+
+[14]L. Zhang, Q. Chang, A conservative numerical scheme for a class of nonlinear Schr{\"o}dinger equation with wave operator[J]. Applied Mathematics and Computation, 145 (2)(2003) 603-612.
+
+[15]X. Li, L. Zhang, S. Wang, A compact finite difference scheme for the nonlinear Schr{\"o}dinger equation with wave operator[J]. Applied Mathematics and Computation, 219 (6)(2012) 3187-3197.
+\end{frame}
+%==============================================================
+
+\begin{frame}
+\frametitle{研究背景}
+随着分数阶微积分的发展, 研究者开始重视分数阶模型的研究. 例如, Ran 和Zhang[16] 对分数阶非线性薛定谔波方程建立了一个三层线性化隐式保守差分格式.
+
+Cheng和Wu[17] 随后针对同一模型提出了几种守恒紧致差分格式. 对不带波算子的（耦合）分数阶非线性薛定谔方程, 研究者也提出了一些能量和（或）质量的守恒差分格式.
+
+然而, 上面提到的大多数数值方法要么是非线性的, 要么是多层线性化结构, 或者具有较低的精度. 因此, 建立高阶精度的线性保结构方法具有重要意义.\\
+
+[16] M. Ran, C. Zhang, A linearly implicit conservative scheme for the fractional nonlinear Schr{\"o}dinger equation with wave operator[J]. International Journal of Computer Mathematics, 93 (7)(2016) 1103-1118.
+
+[17]X. Cheng, H. Qin, J. Zhang, Convergence of an energy-conserving scheme for nonlinear space fractional Schr{\"o}dinger equations with wave operator[J]. Journal of Computational and Applied Mathematics, 400 (2022) 113762.
+
+\end{frame}
+
+%==============================================================
+\begin{frame}
+考虑了如下非线性分数阶薛定谔波方程初边值问题
+\begin{align}\label{eq:4.1}
+&u_{t t}+(-\Delta)^{\alpha/2}u+\mathrm{i}u_{t}+\beta f(|u|^{2}) u=0,~x \in \mathbb{R},t \in(0, T],\\
+&u(x,0)=\phi_0(x),u_t(x,0)=\phi_1(x),~x \in \mathbb{R},\label{eq:4.2}\\
+&u(x,t)=0,~x \in \mathbb{R} \backslash \Omega, t \in[0, T],\label{eq:4.3}
+\end{align}
+其中~$\mathrm{i}=\sqrt{-1}, 1<\alpha\leq 2, \beta$ 是给定的正常数, $\phi _{0}(x)$ 和 $\phi _{1}(x)$ 是已知的光滑函数, 非线性项 $f$ 是一个给定的实函数, 可为 $|u|^{2}$ 或 $|u|^{4}$, $-(-\Delta)^{\alpha/2}u$ 表示 $\alpha$ 阶Riesz分数阶导数, $u(x, t)$ 是待求的复值波函数. 对于模型 \eqref{eq:4.1}-\eqref{eq:4.3}而言, 其具有如下的能量守恒律
+\begin{align}\label{eq:4.4}
+  E(t)=E(0),
+\end{align}
+其中
+\begin{align}
+E(t)=\|u_{t}(\cdot, t)\|^{2}+\|(-\Delta)^{\alpha  / 4} u(\cdot, t)\|^{2}+\frac{\beta}{2}\int_{\mathbb{R}} F(|u|^{2}) d x,\label{eq:4.4}
+\end{align}
+且$F(s)=\int_{0}^{s} f(z) d z$.
+\end{frame}
+%==============================================================
+
+\begin{frame}
+\frametitle{主要结论}\small
+问题 \eqref{eq:4.1}-\eqref{eq:4.3} 可以改写为如下等价系统
+\begin{align}
+&u_{t}=v,\label{eq:4.5}\\
+&v_{t}=-(-\Delta)^{\alpha / 2} u-\mathrm{i} v-b^{(u, r)},\label{eq:4.6}\\
+&\frac{d}{d t}\ln r=\frac{1}{C }\mbox{Re}(b^{(u, r)}, u_{t}),\label{eq:4.7}
+\end{align}
+其中
+
+$r(t)=\exp (E_{1}(u)/C),~{E_{1}(u)}=\frac{\beta}{2}\int_{\Omega} F(|u|^{2}) d x,$~$b^{(u, r)}={\beta} \frac{r(t)}{\exp(E_{1}(u)/C)}f(|u|^{2})u$.
+
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}
+\begin{lemma}[2.1]\footnotesize
+设
+\begin{align*}
+u \in \mathscr{C}^{4+\alpha}(\mathbb{R})=\{v|v \in L^{1}(\mathbb{R}), \int_{-\infty}^{\infty}(1+|\varpi|)^{4+\alpha}| \tilde{v}(\varpi) \mid d \varpi<\infty\},
+\end{align*}
+ $\widehat{v}(\varpi)$ 是 $v(x)$ 的傅里叶变换, 即
+\begin{align*}
+\widehat{v}(\varpi)=\int_{-\infty}^{\infty} v(x) e^{-\mathbf{i} \varpi x} d x.
+\end{align*}
+则有
+\begin{align}\label{eq:2.1}
+(-\Delta)^{\alpha/2}u(x)=\frac{1}{h^{\alpha}}\sum_{k=-\infty}^{+\infty} \widehat{g}_{k}^{(\alpha)} u(x-k h)+O(h^{4})=\delta_{h}^{\alpha} u(x)+O(h^{4}),
+\end{align}
+其中
+\begin{align*}
+\widehat{g}_{k}^{(\alpha)}=\left\{\begin{array}{l}
+\frac{4}{3} g_{k}^{(\alpha)}-\frac{1}{3 \cdot 2^{\alpha}} g_{\frac{k}{2}}^{(\alpha)}, k \text {为偶数,} \\
+\frac{4}{3} g_{k}^{(\alpha)}, k \text { 为奇数,}
+\end{array}\right.
+\end{align*}
+%且%the coefficient $g_{k}^{(\alpha)}$ is determined by
+%\begin{align*}
+%g_{0}^{(\alpha)}=\frac{\Gamma(\alpha+1)}{\Gamma^{2}(\alpha / 2+1)},~g_{k}^{(\alpha)}=\left(1-\frac{\alpha+1}{\alpha / 2+k}\right) g_{k-1}^{(\alpha)},~k=1,2, \cdots. %g_{-k}^{(\alpha)}=g_{k}^{(\alpha)}, k=1,2, \cdots.
+%\end{align*}
+\end{lemma}
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}
+在空间和时间方向上分别应用引理 2.1 和 Crank-Nicolson 方法去近似系统 \eqref{eq:4.5}-\eqref{eq:4.7}, 可得
+\begin{align}
+&\delta_{t} u_{j}^{n+\frac{1}{2}}=v_{j}^{n+\frac{1}{2}},\label{eq:4.16}\\
+&\delta_{t}v_{j}^{n+\frac{1}{2}}=-\delta_{h}^{\alpha}u_{j}^{n+\frac{1}{2}}-\mathrm{i}v_{j}^{n+\frac{1}{2}}-b^{(\tilde{u}^{n+\frac{1}{2}}, \tilde{r}^{n+\frac{1}{2}})},\label{eq:4.17}\\
+&\delta_{t} \ln (r^{n+\frac{1}{2}})=\frac{1}{C }\mbox{Re}(b^{(\tilde{u}^{n+\frac{1}{2}}, \tilde{r}^{n+\frac{1}{2}})}, \delta_{t} u^{n+\frac{1}{2}}).\label{eq:4.18}
+\end{align}
+其中$\tilde{u}_{j}^{\frac{1}{2}}=u_{j}^{0}$ 和$\tilde{u}_{j}^{n+\frac{1}{2}}=(3 u_{j}^{n}-u_{j}^{n-1})/2,~(n \geq 1)$.
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\begin{theorem}[2.2]
+差分格式 \eqref{eq:4.16}-\eqref{eq:4.18} 满足离散能量守恒律
+\begin{align*}
+E^{n}=E^{0}, \quad 1 \leq n \leq N,
+\end{align*}
+其中
+\begin{align}\label{eq:4.22a}
+E^{n}=\| v^{n}\|^{2}+\|L^{(\alpha)} u^{n}\|^{2}+2C\ln r^{n}.
+\end{align}
+\end{theorem}
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+\begin{example}[4.1]
+首先考虑真解已知的带源问题:
+\begin{align*}
+u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i} u_{t}+f(|u|^{2}) u=f(x, t), x \in \Omega=[0, 1], 0<t \leq 1,
+\end{align*}
+其中, $f(|u|^{2})=|u|^{2}$相应的初边界条件和源项 $f(x,t)$ 由精确解 $u(x, t)=(t+1)^{3} x^{4}(1-x)^{4}$ 确定.
+\end{example}
+\end{frame}
+
+%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+在表 \ref{tab:4.1} 和表 \ref{tab:4.2} 中, 分别列出了空间和时间方向上的误差和收敛阶, 它们分别是通过将 $\tau$ 和 $h$ 取足够小得到的. 可以清楚地观察到, 其收敛阶在空间上接近4 阶, 在时间上接近2 阶, 这与前面的理论分析是一致的.
+
+\begin{table}[!htbp]
+\begin{center}
+\renewcommand{\tablename}{表3}
+\caption{当$\tau=1/1000$ 时时, 例4.1 在不同 $\alpha$ 时的空间误差和收敛阶.}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccccccc}
+\hline
+{}&\multicolumn{2}{c}{$\alpha=1.2$}&{}&\multicolumn{2}{c}{$\alpha=1.5$}&{}&\multicolumn{2}{c}{$\alpha=1.8$}\\
+ \cline{2-3}\cline{5-6}\cline{8-9}
+ {$h$}&$E(h,\tau)$&$\mbox{Ord}_1$&{}&$E(h,\tau)$&$\mbox{Ord}_1$&{}&$E(h,\tau)$&$\mbox{Ord}_1$\\
+\hline
+$1/5$     &5.3888e-4  &---         &{}       &9.2990e-4     &---         &{}       &1.4000e-3   &--- \\
+$1/10$    &3.4231e-5  &3.9766      &{}       &6.5346e-5     &3.8309      &{}       &1.1436e-4   &3.6509\\
+$1/20$    &2.2798e-6  &3.9083      &{}       &4.4771e-6     &3.8675      &{}       &7.9944e-6   &3.8385 \\
+$1/40$    &1.3069e-7  &4.1247      &{}       &2.7352e-7     &4.0328      &{}       &5.1187e-7   &3.9652 \\
+$1/80$    &6.8569e-9  &4.2524      &{}       &1.7268e-8     &3.9855      &{}       &3.3264e-8   &3.9437 \\
+\hline
+\end{tabular*}\label{tab:4.1}
+\end{center}
+\end{table}
+\end{frame}
+%%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+\begin{table}[!htbp]
+\begin{center}
+\renewcommand{\tablename}{表4}
+\caption{当$h=1/100$ 时时, 例4.1 在不同 $\alpha$ 时的时间误差和收敛阶}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccccccccc}
+\hline
+{}&\multicolumn{2}{c}{$\alpha=1.2$}&{}&\multicolumn{2}{c}{$\alpha=1.5$}&{}&\multicolumn{2}{c}{$\alpha=1.8$}\\
+\cline{2-3}\cline{5-6}\cline{8-9}
+{$\tau$}&$E(h,\tau)$&$\mbox{Ord}_2$&{}&$E(h,\tau)$&$\mbox{Ord}_2$&{}&$E(h,\tau)$&$\mbox{Ord}_2$\\
+\hline
+$1/5$     &2.1239e-4  &---         &{}       &2.2477e-4     &---         &{}       &2.4248e-4   &--- \\
+$1/10$    &5.3216e-5  &1.9966      &{}       &5.4200e-5     &2.0521      &{}       &6.3209e-5   &1.9397\\
+$1/20$    &1.3311e-5  &1.9993      &{}       &1.3425e-5     &2.0133      &{}       &1.6101e-5   &1.9730 \\
+$1/40$    &3.3312e-6  &1.9985      &{}       &3.3504e-6     &2.0026      &{}       &4.0548e-6   &1.9895 \\
+$1/80$    &8.3383e-7  &1.9982      &{}       &8.3709e-7     &2.0009      &{}       &1.0171e-6   &1.9952 \\
+\hline
+\end{tabular*}\label{tab:4.2}
+\end{center}
+\end{table}
+\end{frame}
+
+%%======================================================================
+\begin{frame}
+\frametitle{数值实验}
+图\ref{fig:4.1}是例4.1取$\alpha = 1.2, h = 1/300, \tau= 1/300 $时精确解和数值解的图像, 由图\ref{fig:4.1}可知它们的走势是几乎保持一致的, 这表明我们的方法是稳定和有效的.
+\begin{figure}[H]
+ \begin{center}
+ \renewcommand{\figurename}{图3}
+ \subfigure[数值解$u$]{ \centering
+ \includegraphics[width=0.45\textwidth]{ex1_u1}
+ }\subfigure[精确解$U$]{ \centering
+ \includegraphics[width=0.45\textwidth]{ex1_u}
+ }\caption{当$\alpha = 1.2, h = 1/300, \tau= 1/300$时例4.1的精确解与数值解.}\label{fig:4.1}
+ \end{center}
+ \end{figure}
+\end{frame}
+
+%%======================================================================
+\begin{frame}
+\frametitle{数值实验}
+为了比较, 分别利用E-SAV方法 \eqref{eq:4.16}-\eqref{eq:4.18}、文献
+[18]中的SAV方法和文献 [19] 中的三层线性化方法对例4.1进行了计算. 当 $\tau=1/1000$, 基于不同空间步长 $h$ 的结果如表 \ref{tab:4.3} 所示. 不难看出, 本章提出的方法具有较小误差和较高的收敛阶.
+
+[18]X. Cheng, H. Qin, J. Zhang, Convergence of an energy-conserving scheme for nonlinear space fractional Schr{\"o}dinger equations with wave operator[J]. Journal of Computational and Applied Mathematics, 400 (2022) 113762.
+
+[19]M. Ran, C. Zhang, A linearly implicit conservative scheme for the fractional nonlinear Schr{\"o}dinger equation with wave operator[J]. International Journal of Computer Mathematics, 93 (7)(2016) 1103-1118.
+
+
+\end{frame}
+%%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+\begin{table}\footnotesize
+\renewcommand{\tablename}{表5}
+\caption{例4.1 在不同 $\alpha$ 时的比较结果.}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llclcl}
+\hline
+{}&{}&\multicolumn{2}{c}{$\alpha=1.3$}&\multicolumn{2}{c}{$\alpha=1.6$}\\
+\cline{2-3}\cline{5-6}
+\hline{Scheme} & $h$ & $E(h,\tau)$ &$\mbox{Ord}_1$ & $E(h,\tau)$ &$\mbox{Ord}_1$ \\
+\hline
+\textbf{E-SAV} & $1/4$   & $1.11e-3$   &------     & $1.84e-3$   &------  \\
+      & $1/8$   & $1.13e-4$   &$3.3024$   & $1.82e-4$   &$3.3453$  \\
+      & $1/16$  & $7.09e-6$   &$3.9939$   & $1.26e-5$   &$3.8520$ \\
+      & $1/32$  & $4.50e-7$   &$3.9768$   & $8.15e-7$   &$3.9478$  \\
+      & $1/64$  & $2.65e-8$   &$4.0885$   & $5.04e-8$   &$4.0142$\\
+\hline
+SAV &1/4  &7.26e-2   & ------     & 8.85e-2   &------\\
+           &1/8    &1.66e-2   &2.1250    &2.01e-2   &2.1388\\
+           &1/16   &4.41e-3   &1.9169   &4.64e-3   &2.1115\\
+           &1/32   &1.49e-3   &1.5594   &1.08e-3   &2.0996\\
+           &1/64   &4.17e-4   &1.8441   &2.56e-4   &2.0812\\
+\hline
+\mbox{三层线性格式} &  1/4   & 3.51e-3   &------    & 4.32e-3   &------  \\
+         & 1/8   & 7.95e-4   &2.1424  & 8.97e-4   &2.2679  \\
+         & 1/16  & 1.98e-4   &2.0055  & 2.24e-4   &2.0016 \\
+         & 1/32  & 4.97e-5   &1.9942  & 5.61e-5   &1.9974  \\
+         & 1/64  & 1.23e-5   &2.0146  & 1.42e-5   &1.9821\\
+\hline
+\end{tabular*}\label{tab:4.3}
+\end{table}
+\end{frame}
+%%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+\begin{example}[4.2]
+考虑精确解未知的问题
+\begin{align*}
+u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i} u_{t}+f(|u|^{2}) u=0, \quad x \in[-5,5],~t \in[0, T].
+\end{align*}
+其中, $f(|u|^{2})=|u|^{2}$ 初始条件取$u(x, 0)=(1+\mathrm{i}) x \exp (-10(1-x)^{2})$ 和 $u_{t}(x, 0)=0$.
+\end{example}
+\end{frame}
+
+%%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+为验证差分格式 \eqref{eq:4.16}-\eqref{eq:4.18} 的守恒性, 表 \ref{tab:4.4} 列出了例4.2针对不同$\alpha$取值在不同时刻的离散能量 $E^n$. 容易发现，E-SAV 格式 \eqref{eq:4.16}-\eqref{eq:4.18} 能很好刻画问题的能量不变性.
+%%==============================================================
+\begin{table}[!htbp]\small
+\begin{center}
+\renewcommand{\tablename}{表6}
+\caption{针对不同 $\alpha$ 取值, 例4.2在不同时间 $t$ 处的离散能量 $E^n$.}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccccc}
+\hline
+{$t$}&{}&{$\alpha=1.2$}&{}&{$\alpha=1.5$}&{}&{$\alpha=1.8$}&{}&{$\alpha=2.0$}\\
+\hline
+$0$   &{}&3.920269172987583 &{}  &5.284230222225435     &{}  &7.111882416322993  &{} &9.724099656951990\\
+$100$  &{}&3.920269171049312 &{}  &5.284230221508699     &{}  &7.111882415218011   &{}&9.724099658928534 \\
+$200$  &{}&3.920269172113332 &{}  &5.284230221047960     &{}   &7.111882415494466  &{} &9.724099660389086 \\
+$300$  &{}&3.920269171487242 &{}  &5.284230220579505     &{}   &7.111882415016053  &{}& 9.724099658515943\\
+$400$  &{}&3.920269170939949 &{}  &5.284230220955798     &{}   &7.111882415052429  &{}& 9.724099656274350\\
+$500$  &{}&3.920269169820489 &{}  &5.284230222305063     &{}   &7.111882414999649  &{}& 9.724099654408882\\
+\hline
+\end{tabular*}\label{tab:4.4}
+\end{center}
+\end{table}
+\end{frame}
+%%==============================================================
+\begin{frame}
+\frametitle{数值实验}
+离散能量 $E^n$ 在长时间($T = 500$)模拟中针对不同 $\alpha$ 取值的演化过程如图\ref{fig:4.2}所示. 这说明E-SAV格式 \eqref{eq:4.16}-\eqref{eq:4.18} 捕捉到了原始问题的保结构现象, 适合长期模拟.
+
+\begin{figure}[H]
+  \centering
+  \renewcommand{\figurename}{图4}
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=0.6\textwidth]{fig4_2}\\
+  \caption{针对不同 $\alpha$ 取值, 例4.2对应的离散能量 $E^n$ 随时间 $t$ 的演化.}\label{fig:4.2}
+\end{figure}
+\end{frame}
+%%==============================================================
+\begin{frame}
+\frametitle{数值实验}\footnotesize
+例4.2的数值解的演化图如图\ref{fig:4.3}所示, 可明显看出阶$\alpha$将显著地影响孤子的形状. 从图中还可以观察到, 当$\alpha$变小时，孤子的形状变化更
+快, 当$\alpha$趋于2时, 离散解趋近于经典的非线性薛定谔波方程的解.
+\begin{figure}[H]
+ \begin{center}
+ \renewcommand{\figurename}{图5}
+ \subfigure[$\alpha=1.2$]{ \centering
+ \includegraphics[width=0.25\textwidth]{fig1_2}
+ }\subfigure[$\alpha=1.6$]{ \centering
+ \includegraphics[width=0.25\textwidth]{fig1_6}
+ }\\
+ \subfigure[$\alpha=1.9$]{ \centering
+ \includegraphics[width=0.25\textwidth]{fig1_9}
+ }\subfigure[$\alpha=2.0$]{ \centering
+  \includegraphics[width=0.25\textwidth]{fig2}
+ }\caption{例4.2的数值解在不同 $\alpha$ 下的波演化.} \label{fig:4.3}
+ \end{center}
+ \end{figure}
+\end{frame}
+%%==============================================================
+\begin{frame}
+  \large
+  \begin{itemize}
+    \item {四. 总结与展望}
+  \end{itemize}
+\end{frame}
+
+%%==============================================================
+\begin{frame}
+\frametitle{总结与展望}
+本文针对一类广义Bretherton方程和分数阶薛定谔波方程, 基于 E-SAV 方法对其初边值问题构造了差分格式, 分析了格式的稳定性, 并给出相应的数值算例.
+
+在第三章中, 针对一类广义Bretherton方程, 构造了基于 E-SAV 等效系统下有效而精确的线性差分格式. 该格式具有时间二阶精度和空间四阶精度. 最后, 通过数值实验验证了格式的准确性、有效性和守恒性.
+
+在第四章中, 基于E-SAV方法, 提出并分析了非线性分数阶薛定谔波方程的高阶能量守恒差分格式. 证明了差分格式的解在极大范数下是能量守恒的. 最后, 两个分数阶模型的算例表明, 该方法能保证系统的能量守恒, 具有空间4 阶精度、时间2阶精度的优点.
+
+\end{frame}
+%%==============================================================
+\begin{frame}
+\frametitle{总结与展望}
+在本文工作的基础上, 我们提出下面的展望：
+
+(1) 本文的工作已经使得方程在空间方向上的收敛阶有所提高. 但时间方向上仍有进步空间, 所以我们希望所构造得差分格式, 在保结构的同时, 时间方向上的收敛阶有进一步的提高.
+
+(2) 本文只对一维情形做了研究, 我们希望将研究问题进一步地拓展到高维问题上.
+
+(3) 本文所提出的差分格式保持的是修正后的能量, 我们希望进一步的构造保原始能量的差分格式.
+
+\end{frame}
+%%==============================================================
+\begin{frame}
+\frametitle{在校期间科研成果}
+\begin{enumerate}[{[}1{]}]
+\item \text X. Zhang, M. Ran, Y. Liu, et al, A high-order structure-preserving difference scheme for generalized fractional Schr{\"o}dinger equation with wave operator[J]. Mathematics and Computers in Simulation, 210 (2023) 532–546.
+\end{enumerate}
+\end{frame}
+
+%%==============================================================
+
+\begin{frame}
+\Huge{
+\center{感谢各位专家、教授\\
+~~~~~~~~~~~~~~~莅临指导！}}
+
+
+\end{frame}
+
+
+%===========================================
+\end{CJK*}
+\end{document}

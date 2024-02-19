@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[参考文献]{参考文献}
+\begin{frame}
+\frametitle{参考文献}
+\begin{thebibliography}{99}
+\tiny
+\bibitem{1} Zhuang, P., Liu, F.,  Anh, V., Turner, I.: New solution and analytical techniques of the implicit numerical method for the anomalous subdiffusion equation, SIAM J. Numer. Anal. 46(2), 1079–1095 (2008)
+    
+\bibitem{2} Cui, M.: Compact finite difference method for the fractional diffusion equation,J. Comput. Phys. 228(20), 7792–7804 (2009)
+
+\bibitem{3} Sun, Z., Wu, X.: A fully discrete scheme for a diffusion-wave system, Appl.Numer. Math. 56(2), 193–209 (2006)
+
+
+\bibitem{4} Gao,G.H.,  Sun, Z.Z., Zhang, H. W.: A new fractional numerical differentiation formula to approximate the Caputo fractional derivative and its
+applications, J. Comput. Phys. 259 (2014) 33–50.
+
+\bibitem{5} Alikhanov, A.A.: A new difference scheme for the time fractional diffusion equation. J. Comput. Phys. 280, 424-438 (2015)
+    
+\bibitem{6} Hu, X., Zhang, L.: On finite difference methods for fourth-order fractional diffusion-wave and subdiffusion systems. Appl. Math. Comput. 218 (9), 5019-5034 (2012)
+    
+\bibitem{7} Hu, X., Zhang, L.: A compact finite difference scheme for the fourth-order fractional diffusion-wave system. Comput. Phys. Commun. 182 (8), 1645-1650 (2011)
+    
+\bibitem{8} Zhang, P., Pu, H.: A second-order compact difference scheme for the fourth-order fractional sub-diffusion equation. Numer. Algor. 76 (2), 573-598 (2017)
+    
+\bibitem{9}  Ran, M., Zhang, C.: New compact difference scheme for solving the fourth-order time fractional sub-diffusion equation of the distributed order. Appl. Numer. Math. 129, 58-70 (2018)
+    
+\bibitem{10} Yao, Z., Wang, Z.: A copmact difference scheme for fourth-order fractional sub-diffusion equations with Neumann boundary conditions. J. Appl. Anal. Comput. 8 (4), 1159-1169 (2018)
+
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+\frametitle{参考文献}
+\begin{thebibliography}{99}
+\tiny
+\bibitem{11} Ji, C., Sun, Z.Z, Hao, Z.: Numerical algorithms with high spatial accuracy for the fourth-order fractional sub-diffusion equations with the first Dirichlet boundary conditions. J. Sci. Comput. 66 (3), 1148-1174 (2015)
+    
+\bibitem{12} Zhao, X., Xu, Q.: Efficient numerical schemes for fractional sub-diffusion equation with the spatially variable coefficient. Appl. Math. Model. 38 (15-16), 3848-3859 (2014)
+\bibitem{13} Vong, S., Lyu, P., Wang, Z.: A compact difference scheme for fractional sub-diffusion equations with the spatially variable coefficient under Neumann boundary conditions. J. Sci. Comput. 66 (2), 725-739 (2016)
+
+\bibitem{14} Yan, T., Sun, Z.Z, Zhang, J.: Fast evalution of the Caputo fractional derivative and its applications to
+fractional diffusion equations: A second-order scheme. Commun. Comput. Phys. 22, 1028-1048 (2017)
+
+\bibitem{15} Pu, Z., Ran, M., Luo, H.: High order fast difference schemes for solving the fourth-order fractional sub-diffusion equation with spatially variable coefficient. Submitted (2020)
+
+\bibitem{16} Gao, G., Sun,Z.: A compact finite difference scheme for the fractional subdiffusion equations, J. Comput. Phys. 230(3), 586–595 (2011)
+
+\bibitem{17} Samarskii, A.A., Andreev, V.B.: Finite Difference Methods for Elliptic Equation. Nauka, Moscow (1976)
+
+    
+\bibitem{18} Sun, Z.Z.: Numerical Methods of Partial Differential Equations, 2D edn. Science Press, Beijing (2012)
+    
+\bibitem{19} Gao, G.H., Sun, H.W., Sun, Z.Z.: Stability and convergence of finite difference schemes for a classof time-fractional sub-diffusion equations based on certain superconvergence. J. Comput. Phys. 280,510-528 (2015)
+    
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+\frametitle{参考文献}
+\begin{thebibliography}{99}
+\tiny
+\bibitem{20} Srivastava, V., Rai, K.N.: A multi-term fractional diffusion equation for oxygen delivery through a capillary to
+tissues. Math. Comput. Model.51, 616-624 (2010)
+
+\bibitem{21} Povstenko, Y.Z.: Fractional Cattaneo-type equations and generalized thermoelasticity. J. Therm. Stresses. 34, 97-114 (2011)
+
+\bibitem{22} Sun, H., Chen, W., Chen, Y.: Variable-order fractional differential operators in anomalous diffusion modeling. Physica. A. 388, 4586-4592 (2009)
+
+\bibitem{23} Luchko, Y.: Initial-boundary-value problems for the generalized multi-term time-fractional diffusion equation. J. Math. Anal. Appl 374, 538-548 (2011)
+
+
+\bibitem{24} Mainardi, F., Reberto, M., Gorenflo, R., Scalas, E.: Fractional caculus and continuous-time finance II: the waiting-time distribution. Physica. A. 287, 468-481 (2000)
+
+\bibitem{25} Benson, D., Schumer, R., Meerschaert, M., Wheatcraft, S.: Fractional dispersion, L\'{e}vy motion, and the MADE tracer tests. Transport. Porous. Med. 42, 211-240 (2001)
+    
+\bibitem{26} Podlubny, I.: Fractional Differential Equations. Academic Press, San Diego (1999)
+
+\bibitem{27} Halpern, D., Jensen, O.E., Grotberg, J.B.: A theoretical study of surfactant and liquid delivery into the lung. J. Appl. Physiol. 85 (1), 333-352 (1998)
+
+\bibitem{28} Myers, T.G., Charpin, J.P.F., Chapman, S.J.: The flow and solidification of
+a thin fluid film on an arbitrary three-dimensional surface. Phys. Fluids. 14 (8), 2788-2803 (2002)
+    
+\bibitem{29} Myers, T.G., Charpin, J.P.F.: A mathematical model for atmospheric ice accretion
+and water flow on a cold surface. Int. J. Heat. Mass. Transf. 47 (25), 5483-5500 (2004)
+\end{thebibliography}
+\end{frame}
+

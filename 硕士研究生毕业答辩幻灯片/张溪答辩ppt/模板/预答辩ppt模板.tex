@@ -1,0 +1,454 @@
+\documentclass[blue]{beamer}
+\usepackage{CJK}
+\usetheme{Madrid}%Warsaw
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{bm}
+\usepackage{xmpmulti}
+\usepackage{colortbl,dcolumn,amsmath,everb}
+\usepackage{xcolor}
+\usepackage{mathrsfs}  % 不同于\mathcal or \mathfrak 之类的英文花体字体
+\newcommand\dif{\mathrm{d}}
+%\usepackage{url}
+%\xspacskip=0  \spaceskip=<glue>
+
+
+%\include{background}
+\begin{document}
+\begin{CJK*}{GBK}{kai}
+%%------------------------------------------
+\title[\tiny{阻尼Navier-Stokes方程的渐近吸引子与边界层分离}]
+{~阻尼Navier-Stokes方程的渐近吸引子与边界层分离}
+\author[姜倩]{报告人: 姜倩
+%\newline
+%{\small Homepage: http://cn.linkedin.com/pub/顾先明（goo-hsien-ming）/62/aaa/345/}
+\newline
+\newline
+{导师: 罗宏~~教授}
+\newline
+\newline
+\small 研究方向: 偏微分方程}
+\institute[川师大]{四川师范大学, 数学科学学院}
+\date{scriptsize{2019年3月8日}}
+
+\date{\scriptsize{\today} }%{{\the\year}年{\the\month}月{\the\day}日}
+\pgfdeclareimage[height=1.8cm]{logo}{fig/logo}
+\logo{\pgfuseimage{logo}}
+
+\frame{\titlepage}
+%%------------------------------------------
+\begin{frame}\frametitle{主要内容}
+  \large
+  \begin{itemize}
+    \item {一. 方程介绍}
+    \item {二. 渐近吸引子}
+    \item {三. 边界层分离}
+  \end{itemize}
+\end{frame}
+%==============================================================
+\begin{frame}
+  \large
+  \begin{itemize}
+    \item {一. 方程介绍}
+  \end{itemize}
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{方程介绍}
+Navier-Stokes方程是流体力学中用来描述粘性不可压缩流体动量守恒的运动方程,
+\begin{equation}
+\frac{\partial u_{i}}{\partial t}+(u\cdot\nabla)u_{i}+\frac{1}{\rho_{0}}\frac{\partial p}{\partial x_{i}}=\nu\Delta u_{i}+f_{i}(x), 1\leq i\leq n, \tag {$1.1$}
+\end{equation}
+\begin{equation}
+divu=0, \tag {$1.2$}
+\end{equation}
+其中\ $x\in\Omega$, \ $\Omega\in \bf{R^{n}}(n=2, 3)$是有界区域, \ $u=(u_{1}, \cdot\cdot\cdot, u_{n})$是流体速度场, \ $p$是压力函数, \ $\nu$是动力粘性系数, \ $\rho_{0}$为流体元质量密度, \ $f$为外力密度函数. 方程(1.1)是动量守恒方程, 方程(1.2)是质量守恒方程.
+
+理论意义下, 在Navier-Stokes方程组的基础上加上一定的初边值条件, 就可以确定流体的流动.
+
+\end{frame}
+
+%=======================================================
+\begin{frame}
+\frametitle{方程介绍}
+Dirichlet边界条件(刚性边界条件)
+\[
+u|_{\partial\Omega}=0,
+\]
+即流体在边界上是静止的.
+
+自由滑动边界条件(自由边界条件)
+\[
+u_{n}|_{\partial\Omega}=0, \frac{\partial u_{\tau}}{\partial n}|_{\partial\Omega}=0,
+\]
+其中\ $u_n$是边界上速度场的法向分量, \ $u_\tau$为切向分量. 第一个等式代表穿过边界的流体为零, 第二个等式代表流体沿边界的表面剪切力为零.
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{方程介绍}
+Navier-Stokes方程可以与其它微分方程进行耦合, 所形成的非线性演化系统可以用来描述物理学中关于粘性流体流动的动力学模型, 因此该方程在流体力学中具有重要意义. 近几十年来, 人们不仅对Navier-Stokes方程的解的存在唯一性, 全局吸引子进行了研究[1], 还取得了许多其他研究成果. 比如, [2]研究了该方程弱解的衰减, [3]研究了该方程解的爆破.
+
+[1]R. Temam. Infinite-Dimensional Dynamical Systems in Mechanics and Physics[M]. New York: Springer-Verlag, 1997.
+
+[2]M. Wiegner. Decay results for weak solutions of the Navier-Stokes equations on R$^{n}$[J]. Journal of the London Mathematical Society, 1987, 35(2):303-313.
+
+[3]W. G. Melo, N. F. Rocha, E. Barbosa. Navier–Stokes equations: local existence, uniqueness and blow-up of solutions in Sobolev–Gevrey spaces[J]. Applicable Analysis, 2019:1-20.
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{方程介绍}
+本文主要考虑了如下的二维阻尼Navier-Stokes系统
+\begin{equation}
+\left\{
+\begin{array}{ll}
+u_t+(u\cdot\nabla)u+\nabla p+ru=\nu\Delta u+g(x), \nu>0,\\
+divu=0, \tag {$1.3$}
+\end{array}
+\right.
+\end{equation}
+其中\ $\Omega\in \mathbf{R^{n}}$是有界开集, \ $u$是流体速度场, \ $p$是压力函数, \ $\nu$是动力粘性系数, \ $f$为外力密度函数.
+
+该系统与Navier-Stokes系统相比多了一个附加耗散项\ $ru$. 在流体动力学中, 由于摩擦力消除了大量堆积的能量, 这使得Navier-Stokes系统在任何域上都是耗散的, 所以摩擦项\ $ru$对于动力学是非常必要的.
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{方程介绍}
+系统(1.3)解的存在唯一性问题、全局吸引子的存在性问题与Navier-Stokes系统是类似的. 人们对阻尼Navier-Stokes系统的研究取得了许多其它成果, 比如[4]研究了阻尼Navier-Stokes系统正则解的存在唯一性, [5]研究了阻尼Navier-Stokes系统的粘性消失极限. 本文主要研究了二维阻尼Navier-Stokes系统的渐近吸引子问题与边界层分离问题.
+
+[4]X. J. Cai, Q. S. Jiu. Weak and strong solutions for the incompressible Navier-Stokes equations with damping[J]. Journal of Mathematical Analysis and Applications. 2008, 343(2): 799-809.
+
+[5]P. Constantin, F. Ramos. Inviscid limit for damped and driven incompressible NavierCStokes equations in R2[J]. Communications in Mathematical Physics. 2007, 275(2): 529-551.
+\end{frame}
+%==============================================================
+\begin{frame}
+  \large
+  \begin{itemize}
+    \item {二. 渐近吸引子}
+  \end{itemize}
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{研究背景}
+在研究无穷维动力系统性质的过程中, 建立了全局吸引子来研究解的长时间行为[6]. 但是全局吸引子的结构非常复杂, 甚至可能是分数维的, 很难进行下一步研究. 因此Temam等人引入了近似惯性流形(AIM) 的概念[7], 但其精确度还有待提高.
+
+[6]C. Foias, G. R. Sell, R. Temam. Varietes intertielles des equations differentielles dissipatives[J]. Paris Academy of Sciences: Server I. 1985, 301: 139-142.
+
+[7]M. S. Jolly, I. G. Kevekidis, E. S. Titi. Approximate inertial manifold for the Kuramoto-Sivashinsky equation[J]. Analysis and Computations, Physica D, 1990, 44:38-60.
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{研究背景}
+实际上, 已知的结果只能表明在时间趋于无穷时, 原系统的解趋于近似惯性流形的某个领域, 而并不是近似惯性流形本身, 这就意味着原系统与约化系统之间并不是完全等价的. 为了克服精确度的问题, 王冠香等人引入了有限维渐近吸引子的概念[8].
+
+[8]G. X. Wang, Z. R. Liu. The asymptotic attractor for Kuramoto-Sivashingsky equation[J]. Journal of Applied Mathematics. 2000, 23(3): 329-336.
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}
+近年来, 一些系统的渐近吸引子已经得到了研究, 本文主要研究了如下阻尼Navier-Stokes系统的渐近吸引子.
+\begin{equation}
+\left\{
+\begin{array}{ll}
+u_t+(u\cdot\nabla)u+\nabla p+ru=\nu\Delta u+g(x), \nu>0,\\
+\nabla \cdot u=0,\\
+u(x, t)=u(x+2\pi, t),\\
+u(x, 0)=u_0(x),\tag {$2.1$}
+\end{array}
+\right.
+\end{equation}
+其中\ $u(x, t): Q\times {\bf R}^+\rightarrow {\bf R}^2$是流体的速度场, \ $Q=(0, 2\pi)\times(0, 2\pi)$, \ $\nu>0$ 是运动粘度, \ $r>0$是Rayleigh或Ekman摩擦系数.
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}
+定义如下两个空间：
+\[
+H=\{u\in (L_p^2(Q))^2:\int\limits_Q udx=0, \nabla\cdot u=0\},
+\]
+\[
+V=\{u\in (H_p^1(Q))^2:\int\limits_Q udx=0, \nabla\cdot u=0\},
+\]
+这里的下标$p$表示讨论的函数具有周期性, $|\cdot|$表示$L^2$空间的范数.
+
+由于双线性项的定义，系统(2.1)等价于
+\begin{equation}
+\left\{
+\begin{array}{ll}
+u_{t}+B(u, u)+\nabla p+ru=\nu\Delta u+g(x), \nu>0, \\
+\nabla \cdot u=0,\\
+u(x, t)=u(x+2\pi, t),\\
+u(x, 0)=u_0(x).
+\end{array}
+\right.\tag {$2.2$}
+\end{equation}
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}
+集合
+\[
+\scriptsize
+\left\{
+\begin{array}{ll}
+\left[
+\begin{array}{cc}
+sink x_1&sink x_2\\
+cosk x_1&cosk x_2\\
+\end{array}
+\right],
+\left[
+\begin{array}{cc}
+-sink x_1&cosk x_2\\
+cosk x_1&sink x_2\\
+\end{array}
+\right],
+\left[
+\begin{array}{cc}
+-cosk x_1&sink x_2\\
+sink x_1&cosk x_2\\
+\end{array}
+\right],
+\left[
+\begin{array}{cc}
+cosk x_1&cosk x_2\\
+sink x_1&sink x_2\\
+\end{array}
+\right]
+\end{array}
+\right\}
+\]
+是空间\ $H$的正交基, \ $k=1, 2, \cdot\cdot\cdot$. 对任意的正整数\ $N$, 令\ $H_{N}$是空间\ $H$ 的\ $4N$维子空间, 从\ $H$ 到\ $H_N$ 的正交投影记为\ $P_N$, 则\ $Q_{N}=I-P_{N}$. 对所有的\ $u\in H$, 令\ $p=P_{N}u$、\ $q=Q_{N}u$, 则有\ $u=p+q$.
+
+接下来，通过正交投影将系统(2.2)分解成两个部分
+\begin{equation}
+p_t-\nu\Delta p+rp+P_{N}B(u, u)=P_{N}g,\tag {$2.3$}
+\end{equation}
+\begin{equation}
+q_t-\nu\Delta q+rq+Q_{N}B(u, u)=Q_{N}g.\tag {$2.4$}
+\end{equation}
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}
+对于由初始值\ $u_0\in B$决定的解\ $u=p+q$, 通过迭代方法构造渐近解序列
+\begin{equation}
+\left\{
+\begin{array}{ll}
+q_t^0-\nu\Delta q^0+rq^0+Q_{N}B(p, p)=Q_{N}g, k=0,\\
+q^0(x, 0)=Q_{N}u_0,
+\end{array}
+\right.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \tag {$2.5$}
+\end{equation}
+\begin{equation}
+\left\{
+\begin{array}{ll}
+q_t^k-\nu\Delta q^k+rq^k+Q_{N}B(u^{k-1}, u^{k-1})=Q_{N}g, k=1, 2, \cdot\cdot\cdot,\\
+q^k(x, 0)=Q_{N}^ku_0,
+\end{array}
+\right.\tag {$2.6$}
+\end{equation}
+其中\ $u^k=p+q^k$.
+
+下面将分两步来证明渐近解序列\ $u^k(x, t)$对真解\ $u(x, t)$的逼近性. 首先证明, 对所有的\ $u_0\in B$, 上述所得到的渐近解序列不会远离吸收集\ $B$. 其次证明, 在空间\ $V$中, 当\ $t$ 充分大时, \ $q^k(x, t)$收敛于\ $q(x, t)$.
+
+\end{frame}
+%%============================================================================================
+\begin{frame}
+\begin{lemma}[2.1]
+对于任意的\ $u_0\in H$, 满足\ $|u_0|\leq s < \infty$, 则存在\ $t^*=t^*(s)>0$, $\rho_0$, $\rho_1$, $\rho_2 >0$, 使得
+\[
+|u(\cdot, t)|\leq \rho_0, |u(\cdot, t)|_{V}\leq \rho_{1}, |u(\cdot, t)|_{H_p^2}\leq \rho_{2}, \forall t\geq t^*,
+\]
+\ $|\cdot|$表示空间\ $H$的范数. 所以系统(2.2)在空间\ $H$的吸收集表示如下
+\[
+B=\{u\in V: |u(\cdot, t)|\leq \rho_0, |u(\cdot, t)|_{V}\leq \rho_{1}, |u(\cdot, t)|_{H_p^2}\leq \rho_{2}\}.
+\]
+\end{lemma}
+\end{frame}
+%%============================================================================================
+\begin{frame}
+\begin{theorem}[2.2]
+设\ $u(x, t)$是对应于初值\ $u_0\in B$的系统(2.2)的解, \ $g\in L^2(Q)$, $q^k(k=0, 1, 2, \cdot\cdot\cdot)$由(2.5)、(2.6) 给出, 则存在正整数\ $N_0$和一个正常数\ $t_0(B)>0$, 使得
+\[
+|u^k|\leq 2\rho_0, |\nabla u^k|\leq 2\rho_1, t\geq t_0(B), N\geq N_0, k=0, 1, 2, \cdot\cdot\cdot.
+\]
+\end{theorem}
+\end{frame}
+%%============================================================================================
+\begin{frame}
+
+证明思路：
+
+由于吸收集的正不变性, 对所有的\ $u_0\in B$, 都有\ $u\in B$, 则有\ $|p|\leq \rho_0$, $|p|_{V}\leq \rho_1$. 因为\ $u^k=p+q^k$, 故只需证明
+$$
+|q^k|\leq \rho_0, |\nabla q^k|\leq \rho_1, k=0, 1, 2, \cdot\cdot\cdot.
+$$
+
+采用数学归纳法证明上式成立.
+
+\end{frame}
+
+%%==============================================================
+\begin{frame}
+\begin{theorem}[2.3]
+设\ $u(x, t)$是对应于初值\ $u_0\in B$的系统(2.2)的解, \ $q^k(k=0, 1, 2, \cdot\cdot\cdot)$由(2.5)、(2.6)给出, 则存在正整数\ $N^*$和一个正常数\ $t^*(B)>0$, 使得
+$$
+|q^k-q|_{V}\rightarrow 0, \ \ \  k\rightarrow \infty,\ \ \  t\geq t^*(B),\ \ \  N\geq N^*.
+$$
+\end{theorem}
+\end{frame}
+%%==============================================================
+\begin{frame}
+\begin{theorem}[2.4]
+设\ $u(x, t)$是对应于初值\ $u_0\in B$的系统(2.2)的解, \ $u^{k}(k=0, 1, 2, \cdot\cdot\cdot$)是由(2.5)、(2.6)给出的渐近解序列, 则系统(2.2)存在渐近吸引子, 且其维数为满足下列不等式的\ $N$的最小值,
+$$
+\frac{2(4C_0\rho_2\rho_1+|g|)}{\nu(N+1)^2+r}\leq \rho_0; \frac{2(4C_0\rho_2\rho_1+|g|)^2}{\nu[\nu(N+1)^2+2r]}\leq \rho_1^{2}; \frac{2C_1^2\rho_2^2}{\nu[\nu(N+1)^2+2r]}<1.
+$$
+\end{theorem}
+\end{frame}
+%==============================================================
+\begin{frame}
+  \large
+  \begin{itemize}
+    \item {三. 边界层分离}
+  \end{itemize}
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{研究背景}
+近代流体力学的奠基人Prandtl于1904年首先提出边界层的概念, 并指出边界层以外的流体可视为理想流体, 可以用欧拉方程来描述; 边界层以内的流体是粘性流体, 可以用Navier-Stokes方程来描述[9]. 在边界层中, 剪切流可以脱离边界, 产生涡度和回流区, 从而导致壁面附近以及流场内部更为复杂的湍流行为, 因此研究边界层分离的条件是很重要的.
+
+[9]L. Prandtl. In Verhandlungen des dritten internationalen Mathematiker-Kongresses[J]. Heidelberg. 1904, 484-491.
+
+\end{frame}
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}
+本文通过马天等人提出的不可压缩流体的几何理论[10], 研究了如下二维阻尼Navier-Stokes系统的边界层分离.
+\begin{equation}
+\left\{
+\begin{array}{ll}
+u_t+(u\cdot\bigtriangledown)u+\bigtriangledown p+ru=\nu\Delta u+g(x), (x, t)\in \Omega\times(0, T)\\
+divu=0, (x, t)\in \Omega\times(0, T)\\
+u|_{\partial\Omega}=0, t\geq0\\
+u(x,0)=\psi(x), x\in \Omega, \tag {$3.1$}
+\end{array}
+\right.
+\end{equation}
+其中\ $\psi(x)|_{\partial\Omega}=0$, \ $\Omega$是\ $\bf R^{2}$中的有界开集, \ $\psi(x)=(\psi_1(x), \psi_2(x))\in C^{3}(\bar{\Omega}; \bf R^{2})$表示初始值, \ $g(x)=(g_1(x), g_2(x))\in C^{1}(\bar{\Omega}; \bf R^{2})$表示外力.
+
+[10]M. Ghil, T. Ma, S. Wang. Structural bifurcation of $2$-$D$ nondivergent flows with dirichlet boundary conditions: applications to boundary-layer separation[J]. Siam Journal on Applied Mathematics. 2005, 65(5): 1576-1596.
+
+\end{frame}
+%==============================================================
+
+%%---------------------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{主要定义}
+
+定义3.1  令\ $X=B_0^{r}(\Omega)$, \ $\Omega$是\ $\bf R^{2}$中的有界开集, 如果存在一个同胚映射\ $\Phi: \Omega \rightarrow \Omega$, 它将\ $u$的轨道带到\ $v$的轨道上并保持其方向, 则称这两个向量场\ $u, v$ 在\ $X$中拓扑等价.
+\par
+定义3.2  若对任意的\ $t<t_0$, \ $u(x,t)$与下图(a)的结构是拓扑等价的, 并且对任意的$t>t_0$, \ $u(x,t)$与下图(c)的结构是拓扑等价的, 则称二维向量场\ $u\in C^1([0,T];B_0^{2}(\Omega))$的边界层分离发生在\ $t_0$. 如果\ $\bar{x}$是在时刻\ $t=t_0$ 的孤立边界奇异点, 并拓扑等价于下图(b)的结构, 则称边界层分离发生在\ $\bar{x}\in\partial\Omega$.
+%\begin{figure}[h]\label{1}
+   % Requires \usepackage{graphicx}
+ %\begin{center}
+ %\includegraphics[width=12cm]{11} \\
+ %\end{center}
+  % \caption{}
+ %\end{figure}
+ \end{frame}
+%%---------------------------------------------------------------------------------------------------
+
+%==============================================================
+\begin{frame}
+\frametitle{主要结论}
+我们采用坐标系\ $(x_1, x_2)$进行研究, 并选取了边界的一部分\ $\Gamma \subset\partial\Omega$.
+
+因为\ $\psi(x)|_{\partial\Omega}=0$, \ $div\psi=0$, 所以考虑\ $\psi(x)=(\psi_1(x),\psi_2(x))\in C^3(\bar{\Omega};R^2)$ 的Taylor展开式, 则有
+\begin{equation}
+\ \psi_1(x_1, x_2)=x_2\psi_{11}(x_1)+x_2^2\psi_{12}(x_1)+x_2^3\psi_{13}(x_1)+o(x_2^3), \tag {$3.2$}
+\end{equation}
+\begin{equation}
+\psi_2(x_1, x_2)=-\frac{1}{2}x_2^2\psi_{11}'+o(x_2^2), \tag {$3.3$}
+\end{equation}
+并且有\ $g(x)=(g_1(x),g_2(x))\in C_1(\bar{\Omega};R^2)$关于\ $x_2$的Taylor展开式
+\begin{equation}
+g_1=f_0(x_1)+x_2f_1(x_1)+o(x_2), \tag {$3.4$}
+\end{equation}
+\begin{equation}
+g_2=h_0(x_1)+x_2h_1(x_1)+o(x_2). \tag {$3.5$}
+\end{equation}
+\end{frame}
+
+%%======================================================================
+\begin{frame}
+\begin{lemma}[3.1]
+令\ $u\in C^{1}([0,T];B_0^{2}(\Omega))$是一个二维向量场, 其中\ $x_0\in \partial\Omega $. 则\ $u$的边界层分离发生在\ $(x_0,t_0)$, 若存在\ $0<t_0<T $, 使得
+\begin{equation}
+\frac{\partial u_\tau}{\partial n}(x,t)\neq 0,t<t_0,x\in \partial\Omega, \tag {$3.6$} \ \ \
+\end{equation}
+\begin{equation}
+\frac{\partial u_\tau}{\partial n}(x_0,t_0)=0, \tag {$3.7$}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\end{equation}
+\begin{equation}
+\frac{\partial^2 u_\tau}{\partial t\partial n}(x_0,t_0)=0, \tag {$3.8$}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
+\end{equation}
+其中\ $x_0$是\ $u(\cdot,t_0)$在边界上的孤立边界奇异点.
+\end{lemma}
+\end{frame}
+%%======================================================================
+\begin{frame}
+\begin{theorem}[3.2]
+令\ $\psi\in C^3(\bar{\Omega};R^2)$, \ $g\in C^1(\bar{\Omega};R^2)$. 若有
+\begin{equation}
+0<min_\Gamma\frac{-\psi_{11}}{2\nu\psi_{11}''+6\nu\psi_{13}-r\psi_{11}-h_0'+f_1}\ll1, \tag {$4.8$}
+\end{equation}
+则存在\ $t_0>0$及\ $x_0\in\Gamma$, 使得系统(3.1)的边界层分离发生在\ $(t_0,x_0)$, 其中\ $\psi_{11}$, \ $\psi_{13}$, \ $h_0$和\ $f_1$由(3.2)-(3.5)给出.
+\end{theorem}
+\end{frame}
+%%==============================================================
+\begin{frame}
+证明思路:
+
+我们考虑了如下的\ $u_1$和\ $u_2$的分量方程:
+$$
+\frac{\partial u_1}{\partial t}=\nu\Delta u_1-u_1\cdot\frac{\partial u_1}{\partial x_1}-u_2\cdot\frac{\partial u_1}{\partial x_2}-\frac{\partial p}{\partial x_1}-ru_1+g_1,
+$$
+$$
+\frac{\partial u_2}{\partial t}=\nu\Delta u_2-u_1\cdot\frac{\partial u_2}{\partial x_1}-u_2\cdot\frac{\partial u_2}{\partial x_2}-\frac{\partial p}{\partial x_2}-ru_2+g_2.
+$$
+通过证明, 得到了发生边界层分离的时间\ $t_0$的取值. 如果有
+$$
+t_0=min_{x_1\in\Gamma}\frac{-\psi_{11}}{2\nu\psi_{11}''+6\nu\psi_{13}-r\psi_{11}-h_0'+f_1}\ll1,
+$$
+则在边界上存在一点\ $x_0$, 使得上述关于\ $x_1$的表达式取到最小值, 即\ $x_0$为发生边界层分离的地点.
+\end{frame}
+%%==============================================================
+\begin{frame}
+\frametitle{在校期间科研成果}
+\begin{enumerate}[{[}1{]}]
+\item \text JIANG Qian, RUAN Tingwei, LUO Hong. The asymptotic attractor of the damped Navier-Stokes system[J]. Journal of Mathematical Research With Applications, accepted.
+\item \text RUAN Tingwei, JIANG Qian, LUO Hong. Regularity of global attractor for the damped Navier-Stokes equation[J]. 应用数学, 录用.
+\item \text PAN Jiaojiao, JIANG Qian, RUAN Tingwei, LUO Hong. Regularity of global attractor for asymptotic circulation equations with humidity effect[J]. Acta Mathematicae Applicatae Sinica English Series, 2019, 35(4):820-829.
+\end{enumerate}
+\end{frame}
+
+%%==============================================================
+
+\begin{frame}
+\Huge{
+\center{感谢各位专家、教授\\
+~~~~~~~~~~~~~~~莅临指导！}}
+
+
+\end{frame}
+
+
+%===========================================
+\end{CJK*}
+\end{document}

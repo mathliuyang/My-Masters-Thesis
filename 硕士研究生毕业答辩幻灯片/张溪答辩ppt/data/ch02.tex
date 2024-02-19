@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[课题研究目标、研究内容、拟解决的关键问题]{课题研究目标、研究内容、拟解决的关键问题}
+\begin{frame}
+\hilite<1> \frametitle{课题研究目标}
+\pause
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<1>  \item 首先,建立对应方程的差分格式。 \pause
+\hilite<2>  \item 其次,严格证明差分格式的唯一可解性，收敛性以及无条件稳定性。 \pause
+\hilite<3>  \item 最后,应用数值算例证明我们所提出的差分格式是可行的，能与理论研究结果保持一致。 \pause
+\end{spacing}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\hilite<1> \frametitle{课题研究内容}
+\pause
+我们考虑如下的分数阶次扩散方程：
+\begin{align}
+&_0^CD_t^{\alpha}u(x,t)\!+\!\frac{{{{\partial}^2}}}{{{\partial}{x^2}}}\!\Big({\omega}(x)\frac{{{{\partial}^2}u(x,t)}}{{{\partial}{x^2}}}\Big)\!+\!{\kappa}u(x,t)\!=\!f(x,t), 0\!<\!x\!<\! L,0\!<\!t\!\le\! T,\label{eq:1}\\
+& u(x,0)=\varphi (x),~~0 < x < L, \label{eq:2}
+\end{align}
+其中 ${\kappa}$ 是一个非负常数, $\omega(x), \varphi (x)$ 以及 $f(x,t)$ 都是给定的足够光滑的函数,${\kappa}u(x,t)$代表阻尼项, $f(x,t)$代表外力。假设存在两个常量 $c _ 1 $ 和 $c _ 2 $ 满足 $0 < { c _ 1} \leq \omega(x) \leq c _ 2 $对 $0 \leq x \leq L $成立。$0<\alpha<1$,$~_0^CD_t^{\alpha}u(x,t)$ 表示Caputo分数阶导数,其定义为：
+\begin{align*}
+~_0^CD_t^{\alpha}u(x,t)=\frac{1}{{\Gamma (1-{\alpha})}}\int_0^t {\frac{\partial u(x,s)}{\partial s}\frac{{1}}{{{{(t-s )}^{\alpha}}}}ds}.
+\end{align*}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\hilite<1> \frametitle{课题研究内容}
+\pause
+我们拟在$\mathcal{L}2\!-\!{1_{\sigma}}$公式的基础上建立关于四阶空间变系数次扩散方程的差分格式，并且考虑第二Dirichlet边界条件\eqref{eq:3}-\eqref{eq:4} 和第一Dirichlet边界条件\eqref{eq:5}-\eqref{eq:6}。此外,为了提高计算效率,降低计算复杂度, 我们打算运用一个新的公式[14]构造一个快速差分格式。
+\begin{align}
+& u(0,t)={{\alpha}_1}(t),~u(L,t)={{\alpha}_2}(t),~~0 \le t \le T,\label{eq:3}\\
+& \frac{{{{\partial}^2}u(0,t)}}{{{\partial}{x^2}}}={{\beta}_1}(t),~\frac{{{{\partial}^2}u(L,t)}}{{{\partial}{x^2}}}={{\beta}_2}(t),~~0 \le t \le T.\label{eq:4}
+\end{align}
+
+\begin{align}
+& u(0,t)={{\alpha}_3}(t),~u(L,t)={{\alpha}_4}(t),~~0 \le t \le T,\label{eq:5}\\
+& \frac{{{{\partial}}u(0,t)}}{{{\partial}{x}}}={{\beta}_3}(t),~\frac{{{{\partial}}u(L,t)}}{{{\partial}{x}}}={{\beta}_4}(t),~~0 \le t \le T,\label{eq:6}
+\end{align}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\hilite<1> \frametitle{拟解决的关键问题}
+\pause
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<1>  \item 如何建立有关变系数函数方程的差分格式，以及用离散能量法对差分格式进行分析？ \pause
+\hilite<2>  \item 在第一Dirichlet边界条件下比第二Dirichlet边界条件更难构造空间变系数问题的合理逼近，使差分格式具有全局空间二阶收敛性。为此，我们需要构造一种处理第一类狄利克雷边界条件的新方法， 并且能使该方法与空间变系数问题相容。 \pause
+\end{spacing}
+\end{itemize}
+\end{frame}

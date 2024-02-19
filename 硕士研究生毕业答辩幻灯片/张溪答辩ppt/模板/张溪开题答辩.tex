@@ -1,0 +1,485 @@
+\documentclass[table,CJK,mathserif,8pt]{beamer}% notheorems,
+\usepackage[all]{xy}
+\usepackage{graphicx}
+\let\t\tau
+\def\Ass{{\rm Ass}}
+\def\fpid{{\rm FP\mbox{-}id}}
+\def\Ext{{\rm Ext}}
+\def\pd{{\rm pd}}
+\def\id{{\rm id}}
+\def\gpd{{\rm Gpd}}
+\def\gfd{{\rm Gfd}}
+\def\ra{\rightarrow}
+\def\mod{{\rm mod}R}
+\def\fpd{{\rm fP.dim}}
+\def\gfpd{{\rm fGP.dim}}
+\def\tensor{\mathop{\bigotimes}\limits}
+\def\Ass{{\rm Ass}}
+\def\Spec{{\rm Spec}}
+\def\Hom{{\rm Hom}}
+\def\ann{{\rm Ann}}
+\def\gd{{\rm ht}}
+\def\dep{{\rm depth}}
+\def\dim{{\rm dim}}
+\def\G{{\rm G\mbox{-}dim}}
+\def\ol{\overline}
+\def\a{\alpha}
+\def\sta{\stackrel}
+\def\loa{\longrightarrow}
+\def\dt{\Delta}
+\def\suse{\subseteq}
+\def\ln{\langle}
+\def\rn{\rangle}
+\def\cc{\circ}
+\def\Hom{{\rm Hom}}
+\def\hom{{\rm hom}}
+\def\ext{{\rm ext}}
+\def\Ext{{\rm Ext}}
+\def\Im{{\rm Im}}
+\def\im{{\rm im}}
+\def\ker{{\rm ker}}
+\def\Ker{{\rm Ker}}
+\def\cok{{\rm cok}}
+\def\Cok{{\rm Cok}}
+\def\deq{\mathop{=}\limits^{\t}}
+\def\lm{\lambda}
+\def\ul{\underline}
+\def\b{\beta}
+\def\r{\gamma}
+\def\Ra{\Rightarrow}
+\def\st{\theta}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+
+% $Header: /cvsroot/latex-beamer/latex-beamer/solutions/generic-talks/generic-ornate-15min-45min.en.tex,v 1.4 2004/10/07 20:53:08 tantau Exp $
+
+\include{background/background}
+
+
+
+\title[非线性分数阶薛定谔波方程的保结构差分方法 ~~~~~~~~~~~~~~~~~~~~~~~~~]
+{非线性分数阶薛定谔波方程的保结构差分方法 }
+%\title{Quotient Categories and The Functors {$\rm hom$}}
+
+
+\author[数学科学学院研究生学位论文预答辩] % (optional, use only with lots of authors)
+{报告人:\quad 张溪\\\  \\
+导师:\quad 冉茂华 副教授\\ \ \\
+四川师范大学数学科学学院}
+
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+\institute[硕士研究生:\quad 张溪] % (optional, but mostly needed)
+{}
+
+%\date {\scriptsize{2008年12月09日}}
+%% 日期自动生成
+\date[\initclock\mmddyyyy\tddate\ \ \hhmmss\tdtime]{\today}
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+%\pgfdeclareimage[height=0.5cm]{ustc_logo_new.pdf}{ustc_logo_new.pdf}
+%\logo{\pgfuseimage{ustc_logo_new.pdf}}
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+%\AtBeginSection[] {
+%  \begin{frame}<beamer>
+%    \frametitle{Outline}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+%
+%\AtBeginSubsection[] {
+%  \begin{frame}<beamer>
+%    \frametitle{Outline}
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->} % 逐行显示
+
+
+\begin{document}
+\begin{CJK}{GBK}{kai}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame} % 封面
+  \vspace{0.5cm}
+  \titlepage
+  \hypertarget{beginning}{}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{\textsc{报告内容}} \vspace{-0.3cm}
+  \tableofcontents[hidesubsections]
+  % You might wish to add the option[pausesections,subsection]
+\end{frame}
+
+
+%\include{data/ch05}
+%\include{data/ch04}
+%\include{data/ch06}
+%\include{data/pub}
+%\include{data/ack}
+
+%  换页动态效果:
+%\transblindshorizontal<1> %  水平百叶窗效果
+%\transblindsvertical<2> %  竖直百叶窗效果
+%\transboxin<3> %  从中心到四角
+%\transboxout<4> %  从四角到中心
+%\transdissolve<5> %  溶解效果
+%\transglitter<6> %  闪烁
+%\transsplitverticalin<7> %  竖直撕开(向内)
+%\transsplitverticalout<8> %  竖直撕开(向外)
+%\transsplithorizontalin %  水平撕开(向内)
+%\transsplithorizontalout %  水平撕开(向外)
+%\transwipe<9> %  涂抹
+%\transduration<10>{1} %  渐出
+
+%%%%%% Latex 设置字体 %%%%%%
+
+%显示直立文本：     \textup{文本}
+%意大利斜体：       \textit{美元符文本美元符}
+%slanted斜体：      \textsl{文本}
+%显示小体大写文本： \textsc{文本}
+%中等权重：         \textmd{文本}
+%加粗命令：         \textbf{文本}
+%默认值：           \textnormal{文本}
+
+%Latex 设置字体大小命令由小到大依次为： \tiny \scriptsize
+%\footnotesize \small \normalsize \large \Large \LARGE \huge \Huge
+
+% 超链及按钮
+%\hyperlink{sec:1}{\beamerreturnbutton{back}}
+% \beamerskipbutton, \beamerbutton, \beamergotobutton, 和 \beamerreturnbutton
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 环境 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{definitin} % 可选的还有：theorem, lemma, corollary, proposition, example, proof
+%  定义的例子。
+%\end{definition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[选题来源]{选题来源}\label{sec:1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\hilite<1> \frametitle{选题来源}
+\pause
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<2>\item 选题是自选题目\pause
+\hilite<3>\item 论文类型是基础研究型
+\end{spacing}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[课题的研究意义、国内外研究现状]{课题的研究意义、国内外研究现状}
+\begin{frame}
+\hilite<1> \frametitle{课题的研究意义}\pause
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<2>\item 薛定谔方程揭示了微观粒子的状态随时间变化的规律，不仅具有明确的量子力学意义，并且在很多的物理分支及其他科学领域得到了广泛应用。\pause
+\hilite<3>\item 目前分数阶微分方程的研究已成为一个新的活跃研究领域，引起了国内外学者的高度重视。但大多数分数阶微分方程解析解的求解是十分困难的，因此研究相应的数值算法显得极为重要。\pause
+\hilite<4>\item 随着科学技术和数学理论的不断发展，在各种科学领域中出现了各种各样的非线性问题，大量微分方程成为处理非线性问题的有力工具。而非线性薛定谔方程是非线性偏微分方程的一种，由于该方程的精确解难以得到，往往采用一些数值方法进行求解，但很多数值方法并不能够很好地满足守恒性。\pause
+\hilite<5>\item 因此,研究非线性分数阶薛定谔方程高效的数值保守格式具有重要的理论意义和应用价值。\pause
+\end{spacing}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{国内外研究现状}
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<1>  \item\color{black} 目前，学者们已经发展了众多守恒的数值方法，包括：有限差分法[6]、有限元法[7]、和谱方法[8,9]等守恒型数值方法。由于有限差分方法在实现的过程中比较方便，因此国内外的很多学者发展了多种形式的有限差分方法来求解非线性薛定谔方程。
+\end{spacing}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\hilite<1> \frametitle{国内外研究现状}\pause
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<2>\item 首先，对于经典薛定谔方程，在过去的几十年里，人们利用有限差分方法对其进行了大量的研究。\pause
+\hilite<3>\item Bao等[10]提出了一个能量守恒的非线性 Crank-Nicolson 有限差分格式和一个半隐式有限差分格式和研究均匀误差估计。\pause
+\hilite<4>\item Li等[11]构造一个紧凑的差分方案。\pause
+\hilite<5>\item Wang等[12]给出离散时间正交样条配置方法。\pause
+\hilite<6>\item Guo等[13]开发了一个能量守恒局部不连续伽辽金方法。\pause
+\end{spacing}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\hilite<1> \frametitle{国内外研究现状}\pause
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<2>\item 随着分数阶计算技术的发展，研究者越来越重视分数阶模型的研究。\pause
+\hilite<3>\item Ran和Zhang[14]为该模型开发了一种三级线性隐式保守差分方案。\pause
+\hilite<4>\item Cheng和Wu[15]为同一模型提出了几种保守紧差分方案。\pause
+\hilite<5>\item Wang等人提出了非线性分数阶薛定谔方程的保能差分格式，见[16-18]。\pause
+\end{spacing}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{国内外研究现状}
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<1>  \item 然而，上述的大多数节能方案要么是完全隐式的，要么是多层的，低精度的。\pause
+\hilite<2>  \item 少数建立了一种高阶精度的线性节能方案。\pause
+\hilite<3>  \item 鉴于此，我们希望的是基于近年来提出的标量辅助变量(SAV)方法[19-23]，针对非线性分数阶薛定谔方程提出一种高阶精度的节能线性数值方案。\pause
+\end{spacing}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[课题研究目标、研究内容、拟解决的关键问题]{课题研究目标、研究内容、拟解决的关键问题}
+\begin{frame}
+\hilite<1> \frametitle{课题研究目标}
+\pause
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<1>  \item 首先，对非线性分数阶薛定谔方程，利用标量辅助变量（SAV）方法和有限差分方法构造高精度的保结构线性数值格式，并对提出格式进行其收敛性证明和数值验证； \pause
+\hilite<2>  \item 其次，再利用SAV方法和有限差分方法构造出耦合方程的高精度线性数值格式，并对相应数值格式的收敛性进行分析和数值测试。\pause
+\end{spacing}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\hilite<1> \frametitle{课题研究内容}\pause
+我们考虑如下的分数阶薛定谔方程：
+\begin{align}
+u_{t t}+(-\Delta)^{\alpha/2}u+\mathrm{i}u_{t}+\beta f(|u|^{2}) u=0,~x \in \mathbb{R},t \in(0, T],\\
+u(x,0)=\phi_0(x),u_t(x,0)=\phi_1(x),~x \in \mathbb{R},\\
+u(x,t)=0, u_t(x,t)=0,~x \in \mathbb{R}, t \in[0, T],
+\end{align}
+其中 $i=\sqrt{-1}, 1<\alpha\leq 2$, 和 $\beta$ 是正常数， $\phi _{0}(x)$ 和 $\phi _{1}(x)$都是给定的足够光滑的函数。$u(x, t)$是待确定的复波函数，非线性项f是一个给定的实函数。$|u|^{2}$ 或 $|u|^{4}$, $-(-\Delta)^{\alpha/2}u$ 表示Riesz分数阶导数,其定义参见[1]。
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\hilite<1> \frametitle{课题研究内容}
+\pause
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<1>  \item 首先，我们拟对非线性分数阶薛定谔方程，基于SAV方法，四阶中心算子和Crank-Nicolson方法建立保结构线性数值格式,然后对该数值格式的收敛性进行严格的理论分析。\pause
+\hilite<2>  \item 其次，拟再利用SAV方法和有限差分方法构造出耦合方程的高精度线性数值格式，分析其收敛性。\pause
+\hilite<3>  \item 应用数值算例证明我们所提出的数值格式是可行的，能与理论研究结果保持一致。
+\end{spacing}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\hilite<1> \frametitle{拟解决的关键问题}
+\pause
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<1>  \item 首先，如何把SAV方法应用到分数阶非线性薛定谔方程，对非线性项进行显式计算，构造线性保结构格式。 \pause
+\hilite<2>  \item 其次，对所构造的数值格式收敛性的理论分析。\pause
+\hilite<3>  \item 最后，考虑到问题的复杂性，对相应算法的程序实现和数值模拟工作。\pause
+\end{spacing}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[拟采取的研究方法、实施方案及其可行性研究]{拟采取的研究方法、实施方案及其可行性研究}
+
+\begin{frame}
+\hilite<1> \frametitle{拟采取的研究方法、实施方案及其可行性研究} \pause
+
+\begin{itemize}
+\hilite<2> \item 研究方法: \pause
+
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<3> 针对研究目标，从拟解决的关键问题入手，通过查找相关文献和书籍，系统地掌握薛定谔方程的发展现状和理论基础，从最新的研究结果中整理出能进行借鉴的知识和技巧，再通过反复的计算和推导，获得理想的数值性质。最后通过算例的实现，数值的分析对比，验证所获得的理论结果。\pause
+\end{spacing}
+\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\hilite<1> \frametitle{拟采取的研究方法、实施方案及其可行性研究} \pause
+
+\begin{itemize}
+\hilite<2> \item 实施方案: \pause
+
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<3> \item  进行相关文献资料收集，查询，整理，完成相关文献综述。\pause
+
+\hilite<4> \item  通过资料查询了解分数阶薛定谔方程数值解原理等相关理论知识。\pause
+
+\hilite<5> \item  通过和老师交谈了解此课题的可行性。\pause
+
+\hilite<6> \item  对查询和收集的文献资料进行整理分析，完成研究。\pause
+
+\end{spacing}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\hilite<1> \frametitle{拟采取的研究方法、实施方案及其可行性研究} \pause
+
+\begin{itemize}
+\hilite<2> \item 可行性研究: \pause
+
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<3> \item  对于要构造的高阶差分格式，基于Xiao[24]中提出的四阶中心差分格式，Shen[19-23]提出的SAV方法的应用，使得论文的研究工作有了扎实的理论支持。而对于收敛性证明方法的搜集，同时所具备的一些数学基础和掌握的一些分析技巧为理论证明增加了可行性。
+\pause
+\hilite<4> \item 对于耦合的方程采取多SAV方法和四阶中心差分算子去构造数值格式，收敛性的证明可能会更难，但有非耦合方程的研究经验，为耦合方程的研究做了准备。\pause
+\end{spacing}
+\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[课题的创新性]{课题的创新性}
+\begin{frame}
+\hilite<1> \frametitle{课题的创新性} \pause
+
+\begin{itemize}
+\hilite<2> \item 课题的创新性: \pause
+
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<3> \item  构造了非线性分数阶薛定谔方程的线性高阶保结构线性数值格式，并用能量范数分析差分格式的收敛性。\pause
+\hilite<4> \item 将SAV方法用到对非线性项的处理上，使其能够显式计算，提高运算效率。
+\end{spacing}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[计划进度和预期成果]{计划进度和预期成果}
+\begin{frame}
+\hilite<1> \frametitle{计划进度和预期成果} \pause
+
+\begin{itemize}
+\hilite<2> \item 计划进度: \pause
+
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<3> \item  2022年4月——2021年5月    ~\ ~\ 准备开题报告。\pause
+\hilite<4> \item 2022年5月   ~\   ~\  ~\   ~\   ~\   ~\   ~\    ~\   ~\   ~\   ~\   ~\  ~\ ~\  论文开题。  \pause
+\hilite<5> \item 2022年5月——2021年11月   ~\  阅读文献，完成论文初稿。   \pause
+\hilite<6> \item 2023年11月——2023年5月   ~\  完成论文修改、定稿、准备答辩。   \pause
+\end{spacing}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\hilite<1> \frametitle{计划进度和预期成果} \pause
+
+\begin{itemize}
+\hilite<2> \item 预期成果: \pause
+
+\begin{itemize}
+\begin{spacing}{2}
+\hilite<3> \item  完成一篇规范、合格的研究生硕士毕业论文。\pause
+\end{spacing}
+\end{itemize}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[参考文献]{参考文献}
+\begin{frame}
+\frametitle{参考文献}
+\begin{thebibliography}{99}
+\tiny
+\bibitem{1}  Abdel Kader A H, Abdel Latif M S. New bright and dark soliton solutions for ageneralized nonlinear Schrodinger equation [J]. Optik, 2019, 176: 699-703.
+
+\bibitem{2}  S.S.Wang, T.C.Wang, L.M.Zhang, Numerical computations for N-coupled nonlinear Schrodinger equations by split step spectral methods [J]. Applied Mathematics and Computation, 2013, 222: 438-452.
+
+\bibitem{3} Berge.L, Colin.T, A singular perturbation problem for an envelope equation in plasma physics [J]. Comptes Rendus De L Acad′emie Des Sciences, 1995, 84(3-4): 437-459.
+
+
+\bibitem{4}  Fabrie.P, Colin.T, Semidiscretization in time for nonlinear Schrodinger waves equations [J]. Discrete and Continuous Dynamical Systems, 1998, 4(4): 671-690.
+
+\bibitem{5}  Akrivis G D, Dougalis V A , Karakashian O A, On fully-discrete Galerkin methods of second-order accuracy for the nonlinear Schr¨odinger equation [J]. Numerische Mathematik, 1991, 59(1): 31-53.J D Cole, Quart. Appl. Math. 9, 225 (1951)
+
+\bibitem{6} 沈晶, 沙威, 黄志祥, 陈明生, 吴先良, 含时薛定谔方程的高阶辛 FDTD 算法研究[J].物理学报, 2012, 61(19): 8-14.
+
+\bibitem{7}  OHANNES K, CHARALAMBOS M. A space-time finite element method for the nonlinear Schr?dinger equation: the discontinuous Galerkin method[J]. Mathematics of Computation,1999,36(6): 1779-1807.
+
+\bibitem{8}  R.P.Zhang, X.J.Yu, M.J.Li, X.G.Li., A conservative local discontinuous Galerkin method for the solution of nonlinear Schr?dinger equation in two dimensions[J]. Science China Mathematics, 2017, 60(12): 2515-2530.
+
+\bibitem{9} Y.Gong, Q.Wang, Y.Wang,etal, A conservative Fourier pseudo-spectral method for the nonlinear Schr?dinger equation[J]. Journal of Computational Physics, 2017, 328: 354-370.
+
+\bibitem{10}W. Bao, Y. Cai, Uniform error estimates of finite difference methods for the nonlinear Schrodingerequation with wave operator, SIAM J. Numer. Anal. 50(2)(2012) 492-521.
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+\frametitle{参考文献}
+\begin{thebibliography}{99}
+\tiny
+\bibitem{11} X. Li, L. Zhang, S. Wang, A compact finite difference scheme for the nonlinear Schrodinger equation with wave operator, Appl. Math. Comput.219(6)(2012) 3187-3197.
+\bibitem{12} S. Wang, L. Zhang, R. Fan, Discrete-time orthogonal spline collocation methods for the nonlinear Schrodinger equation with wave operator, J. Comput. Appl. Math. 235 (2011) 1993-2005.
+\bibitem{13}L. Guo, Y. Xu, Energy conserving local discontinuous Galerkin methods for the nonlinear Schrodinger equation with wave operator, J. Sci. Comput. 65(2)(2015) 622-647
+\bibitem{14} M. Ran, C. Zhang, A linearly implicit conservative scheme for the fractional nonlinear Schr¨odinger equation with wave operator, Int. J. Comput. Math. 93(7)(2016) 1103-1118.
+\bibitem{15} X. Cheng, F. Wu, Several conservative compact schemes for a class of nonlinear Schrodinger equations with wave operator, Bound. Value Probl. 2018(1)(2018) 1-17.
+\bibitem{16} D. Wang, A. Xiao, W. Yang, A linearly implicit conservative difference scheme for the space fractional coupled nonlinear Schr¨odinger equations, J. Comput. Phys. 272 (2014) 644-655.
+\bibitem{17}P. Wang, C. Huang, A conservative linearized difference scheme for the nonlinear fractional Schrodinger equation, Numer. Algorithms. 69 (2015) 625-641.
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+\frametitle{参考文献}
+\begin{thebibliography}{99}
+\tiny
+
+\bibitem{18}M. Ran, C. Zhang, A conservative difference scheme for solving the strongly coupled nonlinear fractional Schrodinger equations, Commun. Nonlinear Sci. Numer.Simul. 41 (2016) 64-83.
+\bibitem{19} Z. Liu, X. Li, The exponential scalar auxiliary variable (E-SAV) approach for phase field models and its explicit computing, SIAM J. Sci. Comput. 42(3)(2020) B630-B655
+\bibitem{20} X. Yang, L. Ju, Efficient linear schemes with unconditional energy stability for the phase field elastic bending energy model, Comput. Methods Appl. Mech. Engrg. 315 (2017) 691-712.
+\bibitem{21} J. Shen, J. Xu, J. Yang, The scalar auxiliary variable (SAV) approach for gradient flows, J. Comput.Phys. 353 (2018) 407-416.
+ \bibitem{22}J. Shen, J. Xu, Convergence and error analysis for the scalar auxiliary variable (SAV) schemes to gradient flows, SIAM J. Numer. Anal. 56(5) (2018) 2895-2912
+ \bibitem{23}J. Shen, J. Xu, J. Yang, A new class of efficient and roubust energy stable schemes for gradient flows,SIAM Rev. 61(3) (2019) 474-506
+ \bibitem{24} A. Xiao, J. Wang, Symplectic scheme for the Schr¨odinger equation with fractional Laplacian. Appl.Numer. Math. 146 (2019) 469-87
+\end{thebibliography}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[]{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{background canvas}[vertical
+shading][bottom=white,top=structure.fg!25]
+\begin{frame}
+ \begin{center}
+{\huge\textcolor[rgb]{0.50,0.00,1.00}{恳请各位老师批评指正！}}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{CJK}
+\end{document}

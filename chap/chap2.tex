@@ -2,14 +2,15 @@
 
 在引入本文主要内容之前,本章首先介绍了分数阶微积分、傅里叶谱方法以及分区平均向量场方法.
 \section{分数阶微积分理论}
-分数阶微积分理论是研究任意阶微分和积分的理论,它是整数阶微积分理论的拓展.该理论起源于17世纪末,经过三个世纪的不懈努力,包括Riemann-Liouville、Grüwald-Letnikov、Caputo和Riesz在内的多种分数阶微积分理论被形成,并在专著\cite{samkoFractionalIntegralsDerivatives1993}中得到详细介绍.
-由于分数阶微积分的物理及几何解释存在挑战,因此该领域在很长一段时间内停留在纯数学理论层面.但近几十年来,随着多个学科领域的研究发现,分数阶微分方程的保记忆性可优美地描述复杂问题,其描述精度超过整数阶微分方程.目前,分数阶微分方程已成功地应用于物理学、化学、生物学、水文学、混沌理论、复杂粘弹性材料、系统控制、信号处理、经济学等领域的问题,详见\cite{liIntroductionFractionalCalculus2015,HandbookDifferentialEquations2008,brychkovIndefiniteIntegrals2008,zhangMassBalanceBased2005,carrerasAnomalousDiffusionExit2001,hilferFRACTIONALCALCULUSREGULAR2000,liangRobustnessFractionalorderBoundary2007,maginSolvingFractionalOrder2009,zaslavskySelfsimilarTransportIncomplete1993,sunRandomorderFractionalDifferential2011}.
-本章主要介绍非线性分数阶薛定谔波动方程（NFSWEs）方程的研究意义、研究背景和发展现状, 以及本文的实际研究内容.
-
-分数阶微分方程的解析解通常包含一些特殊函数,如 Mittag-Leffler 函数、Fox 函数和 Wright 函数等,这些函数由无穷级数定义,因此数值计算相当困难.对于某些非线性微分方程,解析解更是难以获得.因此,构造数值方法以求解分数阶微分方程具有重要的理论意义和实用价值.然而,到目前为止,关于分数阶微分方程的数值计算仍存在大量挑战性难题,例如长时间历程的计算和大空间区域的计算等.同时,研究算法大部分集中于有限差分方法和有限元法.
-因此,如何快速、准确地数值求解分数阶微分方程并进一步完善数值方法仍是一个紧迫而重要的研究课题.
-
-其中,在对空间分数阶方程进行数值求解时, 如何有效逼近分数阶 拉普拉斯 算子是最为关键的一步. 
+% 分数阶微积分理论是研究任意阶微分和积分的理论,它是整数阶微积分理论的拓展.该理论起源于17世纪末,经过三个世纪的不懈努力,包括Riemann-Liouville、Grüwald-Letnikov、Caputo和Riesz在内的多种分数阶微积分理论被形成,并在专著\cite{samkoFractionalIntegralsDerivatives1993}中得到详细介绍.
+% 由于分数阶微积分的物理及几何解释存在挑战,因此该领域在很长一段时间内停留在纯数学理论层面.但近几十年来,随着多个学科领域的研究发现,分数阶微分方程的保记忆性可优美地描述复杂问题,其描述精度超过整数阶微分方程.目前,分数阶微分方程已成功地应用于物理学、化学、生物学、水文学、混沌理论、复杂粘弹性材料、系统控制、信号处理、经济学等领域的问题,详见\cite{liIntroductionFractionalCalculus2015,HandbookDifferentialEquations2008,brychkovIndefiniteIntegrals2008,zhangMassBalanceBased2005,carrerasAnomalousDiffusionExit2001,hilferFRACTIONALCALCULUSREGULAR2000,liangRobustnessFractionalorderBoundary2007,maginSolvingFractionalOrder2009,zaslavskySelfsimilarTransportIncomplete1993,sunRandomorderFractionalDifferential2011}.
+% 本章主要介绍非线性分数阶薛定谔波动方程（NFSWEs）方程的研究意义、研究背景和发展现状, 以及本文的实际研究内容.
+分数阶微积分理论是数学的重要分支, 他是传统的整数阶微积分理论的推广.最早提出这一思想的是德国数学家G.W.Leibniz.研究者们发现,分数阶微分算子与整数阶微分算子不同,具有非局部性,非常适合描述现实世界中具有记忆以及遗传性质的变化过程.它已成为描述各类复杂力学与物理行为的重要工具之一.
+分数阶微分方程被广泛地应用于反常扩散、黏弹性力学、流体力学、管道边界层效应、电磁波、量子经济等.
+然而,分数数阶微分方程的解析解通常包含一些特殊函数,如 Mittag-Leffler 函数、Fox 函数和 Wright 函数等,这些函数由无穷级数定义,其解析解很难显式给出.
+因此,对分数阶微分方程寻找有效的数值模拟方法就显得尤为重要.然而,到目前为止,关于分数阶微分方程的数值计算仍存在大量挑战性难题,例如长时间历程的计算和大空间区域的计算等.
+% 同时,研究算法大部分集中于有限差分方法和有限元法.因此,如何快速、准确地数值求解分数阶微分方程并进一步完善数值方法仍是一个紧迫而重要的研究课题.
+在对空间分数阶方程进行数值求解时, 如何有效逼近分数阶 拉普拉斯 算子是最为关键的一步. 
 在过去的几十年, 众多数学家针对一问题进行了深入的研究, 其中, 最为有效的途径是利用分数阶 拉普拉斯 算子与 Riesz 导数在齐次 Dirichlet 边界条件下的等价性关系 \cite{yangNumericalMethodsFractional2010,demengelFunctionalSpacesTheory2012}, 即
 \begin{equation}
 -(-\Delta)^{\alpha / 2} u(x)=\frac{\partial^\alpha}{\partial|x|^\alpha} u(x):=-\frac{1}{2 \cos \frac{\alpha \pi}{2}}\left({ }_{-\infty }D_x^\alpha u(x)+{ }_x D_{+\infty}^\alpha u(x)\right),
@@ -23,8 +24,8 @@ ${ }_x D_{+\infty}^\alpha u(x)$ 为右 Riemann-Liouville 分数阶导数
 { }_x D_{+\infty}^\alpha u(x)=\frac{1}{\Gamma(2-\alpha)} \frac{d^2}{d x^2} \int^{-\infty}_x \frac{u(\xi)}{(\xi-x)^{\alpha-1}} d \xi .
 \end{equation}
 注意到, Riesz 分数阶导数可看作左右 Riemann-Liouville 分数阶导数的线性组合.
-基于上述等价关系, 对于分数阶 拉普拉斯 或 Riemann-Liouville 分数阶导数的数值逼近已存在很多数值方法, 如有限元方法 \cite{dengFiniteElementMethod2009,ervinNumericalApproximationTime2007}, 间断 Galerkin 方法 \cite{xuDiscontinuousGalerkinMethod2014}, 谱方法 \cite{zayernouriFractionalSpectralCollocation2014,zengCrankNicolsonADI2014}, 有限差分方法 \cite{chenFourthOrderAccurate2014,meerschaertFiniteDifferenceApproximations2004} 等. 
-此外, 对于 Riesz 导数的 一个直接离散方法是分数阶中心差分方法, 该方法由 \cite{duAnalysisApproximationNonlocal2012} 首次提出, 随后, 基于带权平均思想, 更高阶 Riesz 导数逼近被提出 \cite{dingHighorderAlgorithmsRiesz2015,zhangFourthOrderCompactDifference2014}.
+基于上述等价关系, 对于分数阶 拉普拉斯 算子或 Riemann-Liouville 分数阶导数的数值逼近已存在很多数值方法, 如有限元方法 \cite{dengFiniteElementMethod2009,ervinNumericalApproximationTime2007}, 间断 Galerkin 方法 \cite{xuDiscontinuousGalerkinMethod2014}, 谱方法 \cite{zayernouriFractionalSpectralCollocation2014,zengCrankNicolsonADI2014}, 有限差分方法 \cite{chenFourthOrderAccurate2014,meerschaertFiniteDifferenceApproximations2004} 等. 
+此外, 分数阶中心差分方法是对 Riesz 导数的 一个直接离散方法, 该方法由 \cite{duAnalysisApproximationNonlocal2012} 首次提出, 随后, 基于带权平均思想, 更高阶 Riesz 导数逼近被提出 \cite{dingHighorderAlgorithmsRiesz2015,zhangFourthOrderCompactDifference2014}.
 同时, 分数阶 拉普拉斯 算子有下列奇异积分形式的等价性 \cite{duAnalysisApproximationNonlocal2012}
 \begin{equation}
 (-\Delta)^{\alpha / 2} u(x)=C_\alpha \int_{-\infty}^{+\infty} \frac{u(x)-u(y)}{|x-y|^{1+\alpha}} d y
@@ -51,9 +52,9 @@ u=\sum_{k \in \mathbb{Z}} \hat{u}_k e^{\mathrm{i} \mu k x}, \quad \hat{u}_k=\fra
     u(x) = \frac{1}{2 \pi} \int_{-\infty}^{\infty} \hat{u}(k) \mathrm{e}^{\mathrm{i} k x} \mathrm{~d} k \label{eq:3-2}
 \end{equation}
 
-上述定义式给出了一个傅里叶变换对（Fourier transform pair）,本专栏中将它们记为 $\hat{u}(k) = F[u(x)]$ 和 $u(x) = F^{-1}[\hat{u}(k)]$.实际上,傅里叶变换对的定义并不是唯一的,两个定义式中的系数可以随意修改,只要它们的积为 $1 / 2 \pi$ 即可.此外,定义式中的 $\mathrm{e}^{-\mathrm{i} k x}$ 和 $\mathrm{e}^{\mathrm{i} k x}$（称为积分变换的核）也可以互换.容易知道,$u(x)$ 先后经过傅里叶变换及其逆变换仍将得到它本身,即：$u(x) = F^{-1}\{F[u(x)]\}$.
+上述定义式给出了一个傅里叶变换对,此处将它们记为 $\hat{u}(k) = F[u(x)]$ 和 $u(x) = F^{-1}[\hat{u}(k)]$.实际上,傅里叶变换对的定义并不是唯一的,两个定义式中的系数可以随意修改,只要它们的积为 $1 / 2 \pi$ 即可.此外,定义式中的 $\mathrm{e}^{-\mathrm{i} k x}$ 和 $\mathrm{e}^{\mathrm{i} k x}$（称为积分变换的核）也可以互换.容易知道,$u(x)$ 先后经过傅里叶变换及其逆变换仍将得到它本身,即：$u(x) = F^{-1}\{F[u(x)]\}$.
 
-通常来讲,若不对“傅里叶变换”加任何限定,那么它指的就是连续傅里叶变换,也就是针对定义在无限区间内的连续函数 $u(x)$ 的傅里叶变换,这是在理想条件下的数学定义.在实际应用中,尤其是计算机的信号采样、信号处理当中,信号是离散的、有限的,离散傅里叶变换（discrete Fourier transform）就是针对这一情况提出的.在 \texttt{Matlab} 中,对于序列 $u_1, \ldots, u_j, \ldots, u_N$ 的离散傅里叶变换及逆变换定义为：
+通常来讲,若不对傅里叶变换加任何限定,那么它指的就是连续傅里叶变换,也就是针对定义在无限区间内的连续函数 $u(x)$ 的傅里叶变换,这是在理想条件下的数学定义.在实际应用中,尤其是计算机的信号采样、信号处理当中,信号是离散的、有限的,离散傅里叶变换就是针对这一情况提出的.在 \texttt{Matlab} 中,对于序列 $u_1, \ldots, u_j, \ldots, u_N$ 的离散傅里叶变换及逆变换定义为：
 \begin{equation}
     \hat{u}_k = \sum_{j=1}^N u_j \mathrm{e}^{\frac{-2 \pi(j-1)(k-1) \mathrm{i}}{N}}, \quad k=1, \ldots, N \label{eq:3-4}
 \end{equation}
@@ -78,7 +79,7 @@ u=\sum_{k \in \mathbb{Z}} \hat{u}_k e^{\mathrm{i} \mu k x}, \quad \hat{u}_k=\fra
 \begin{equation}
     F\left[u^{(n)}(x)\right] = (\mathrm{i} k)^n F[u(x)] \label{eq:3-9}
 \end{equation}
-其中 $u^{(n)}(x)$ 代表 $u(x)$ 的 $n$ 阶导数.上式的意义在于：函数的求导运算在傅里叶变换的作用下, 可转化为相对简单的代数运算, 即: $u^{(n)}(x) = F^{-1}\left\{(\mathrm{i} k)^n F[u(x)]\right\}$.正是基于此原理, 傅里叶谱方法 (Fourier spectral method) 利用傅里叶变换将偏微分方程中空域（space domain）或时域（time domain）上的求导运算简化为频域（spectral domain）上的代数运算, 求解后再通过傅里叶逆变换得到空域或时域上的结果.在代码层面上, \texttt{Matlab} 提供的快速傅里叶变换函数 \texttt{fft}、逆变换函数 \texttt{ifft} 以及强大的矩阵运算能力也为简洁、优雅地实现傅里叶谱方法奠定了基础.
+其中 $u^{(n)}(x)$ 代表 $u(x)$ 的 $n$ 阶导数.上式的意义在于：函数的求导运算在傅里叶变换的作用下, 可转化为相对简单的代数运算, 即: $u^{(n)}(x) = F^{-1}\left\{(\mathrm{i} k)^n F[u(x)]\right\}$.正是基于此原理, 傅里叶谱方法利用傅里叶变换将偏微分方程中空域或时域上的求导运算简化为频域上的代数运算, 求解后再通过傅里叶逆变换得到空域或时域上的结果.在代码层面上, \texttt{Matlab} 提供的快速傅里叶变换函数 \texttt{fft}、逆变换函数 \texttt{ifft} 以及强大的矩阵运算能力也为简洁、优雅地实现傅里叶谱方法奠定了基础.
 
 % \section{标量辅助变量方法}
 
@@ -90,8 +91,8 @@ u=\sum_{k \in \mathbb{Z}} \hat{u}_k e^{\mathrm{i} \mu k x}, \quad \hat{u}_k=\fra
 \begin{equation}
 \frac{d w}{d t}=f(w)=S_{k} \nabla H(w), \quad w(0)=w_{0},
 \label{eq_40}\end{equation}
-其中$w \in \mathbb{R}^{k}$,$S_{k}$是一个$k \times k$的反对称矩阵,$k$是偶数,哈密顿量$H(w)$被假定具有足够的可微性.
-二阶AVF方法对于系统(\ref{eq_40})定义为
+其中$w \in \mathbb{R}^{k}$,$S_{k}$是一个$k \times k$的反对称矩阵,$k$是偶数,哈密顿量$H(w)$充分光滑.
+系统(\ref{eq_40})的二阶AVF格式定义为
 \begin{equation}
 \begin{aligned}
 \frac{w^{m+1}-w^{m}}{\tau} &=\int_{0}^{1} f\left(\varepsilon w^{m+1}+(1-\varepsilon) w^{m}\right) d \varepsilon \\
@@ -109,9 +110,10 @@ H_{y}(y, z) \\
 H_{z}(y, z)
 \end{array}\right), y, z \in \mathbb{R}^{d},
 \label{eq_42}\end{equation}
-其中$S_{2 d}$是一个辛矩阵,而且哈密顿量$H(y, z)$在任何连续流上仍然保持不变.
+其中$S_{2 d}$是一个辛矩阵.
+% 哈密顿量 $H(y, z)$ 在任何连续流上仍然保持不变.
 
-AVF方法得到的数值格式只能保原始哈密顿量守恒.为了能保额外的不变量守恒,为哈密顿系统(\ref{eq_42})开发了PAVF方法,即
+AVF方法得到的数值格式只能保持原始哈密顿量守恒,而在某些系统下,PAVF方法能够保持额外的不变量守恒.系统(\ref{eq_40})的PAVF格式定义为
 \begin{equation}
 \frac{1}{\tau}\left(\begin{array}{c}
 y^{m+1}-y^{n} \\
@@ -121,9 +123,9 @@ z^{m+1}-z^{n}
 \int_{0}^{1} H_{z}\left(y^{m+1}, \varepsilon z^{m+1}+(1-\varepsilon) z^{m}\right) d \varepsilon
 \end{array}\right) .
 \label{eq_43}\end{equation}
-容易证明PAVF方法能够在保持系统(\ref{eq_40})的哈密顿量守恒的同时,额外保持某些系统的其他不变量守恒.
+% 容易证明PAVF方法能够在保持系统(\ref{eq_40})的哈密顿量守恒的同时,额外保持某些系统的其他不变量守恒.
 
-注意到PAVF方法(\ref{eq_43})仅具有一阶精度\cite{caiPartitionedAveragedVector2018}.为了提高精度并继续保持哈密顿量守恒,将PAVF方法与其伴随方法相结合,得到PAVF组合（PAVF-C）方法和PAVF 加（PAVF-P）方法.
+注意到PAVF方法(\ref{eq_43})仅具有一阶精度\cite{caiPartitionedAveragedVector2018}.为了提高精度将PAVF方法与其伴随方法相结合,得到PAVF组合（PAVF-C）方法和PAVF 加（PAVF-P）方法.
 设上述PAVF方法(\ref{eq_43})为$\Phi_{\tau}$,其伴随方法$\Phi_{\tau}^{*}$定义如下
 \begin{equation}
 \frac{1}{\tau}\left(\begin{array}{c}
@@ -134,15 +136,15 @@ z^{m+1}-z^{m}
 \int_{0}^{1} H_{z}\left(y^{m}, \varepsilon z^{m+1}+(1-\varepsilon) z^{m}\right) d \varepsilon
 \end{array}\right)
 \label{eq_44}\end{equation}
-然后,PAVF组合（PAVF-C）方法定义为
+PAVF组合法（PAVF-C）
 \begin{equation}
 \Upsilon_{\tau}:=\Phi_{\frac{\tau}{2}}^{*} \circ \Phi_{\frac{\tau}{2}},
 \label{eq_45}\end{equation}
-而PAVF 加（PAVF-P）方法定义为
+PAVF 加法（PAVF-P）
 \begin{equation}
 \hat{\Upsilon}_{\tau}:=\frac{1}{2}\left(\Phi_{\frac{\tau}{2}}^{*}+\Phi_{\frac{\tau}{2}}\right)
 \label{eq_46}\end{equation}
-可以验证,PAVF-C以及PAVF-P方法均能保持原始哈密顿量守恒,并且具有二阶精度\cite{caiPartitionedAveragedVector2018}.
+可以验证,PAVF-C以及PAVF-P方法均能在保持原始哈密顿量守恒的同时,额外保持某些系统的其他不变量守恒,并且具有二阶精度\cite{caiPartitionedAveragedVector2018}.
 
 % \textbf{备注2.2.} 由于PAVF方法的巨大优势,即使通过其组合,PAVF-C方法的成本仍然远远低于直接AVF方法.虽然PAVF-P方法的计算效率与AVF方法相当,但它可能具有AVF方法无法保持的额外守恒量.
 

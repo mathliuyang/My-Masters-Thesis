@@ -1,0 +1,111 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[问题背景]{问题背景}\label{sec:1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\hilite<1> \frametitle{三支决策}
+\pause
+\begin{itemize}
+\hilite<2>\item  三支决策已经得到了广泛的应用,而且决策粗糙集理论[1]是求解三支分类的经典理论之一。因此，三支决策相关的研究成果包括了不同数据模型的决策粗糙集推广，例如，基于代价敏感度量的概率粗糙集三支决策[2-3]、模糊集三支决策[4]、区间集三支决策[5]、邻域三支决策[6]等。 \pause
+\hilite<3>\item 1980年, 在文献[1]中, Smarandache教授引入Smarandache函数: 对任意的正整数$n,$ Smarandache函数$S(n)$定义为最小的正整数$m,$ 使得$m!$ 能被$n$整除, 即$$S(n)=\min\{m:m\in Z^{+},n\mid m!\}.$$ \pause
+\hilite<4>\item 1993年, 文献[2]给出伪Smarandache函数的定义: 对任意的正整数$n,$ 伪Smarandache函数$Z(n)$定义为最小的正整数$m,$ 使得$1+2+...+m$能被$n$ 整除, 即$$Z(n)=\min\{m:m\in Z^{+},n\mid\frac{m(m+1)}{2}\}.$$ \pause
+\hilite<5>\item 2000年, 文献[3]给出Smarandache LCM函数的定义: 对任意的正整数$n,$ Smarandache LCM函数$SL(n)$定义为最小的正整数$m,$ 使得$1,2,3,...,m$ 的最小公倍数能被$n$整除, 即$$SL(n)=\min\{m:m\in Z^{+},n\mid\rm{lcm}[1,2,3,...,m]\}.$$
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\hilite<1> \frametitle{伪Smarandache函数、Smarandache LCM函数的基本性质}\pause
+\begin{itemize}
+\hilite<2>\item 关于伪Smarandache函数, 对任意正整数$k,$ 有$Z(2^{k})=2^{k+1}-1,$ \\
+对任意奇素数$p$及正整数$k,$ 有$Z(p^{k})=p^{k}-1.$ \pause
+\hilite<3>\item 关于Smarandache LCM函数, 若正整数$n$的标准分解式为$n=p_{1}^{k_{1}}p_{2}^{k_{2}}...p_{s}^{k_{s}},$
+则$$SL(n)=\max\{p_{i}^{k_{i}}|i=1,2,...,s\},$$ \\
+ 特别地, 当$p$ 为素数及$k\geq1$时, $SL(p^{k})=p^{k}.$
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{欧拉函数}
+\begin{itemize}
+\hilite<1>  \item 除此之外, 欧拉函数也是重要的数论函数之一, 18世纪, 欧拉提出著名的欧拉函数.\pause
+\hilite<2>  \item 正整数$n$的欧拉函数$\varphi(n)$定义为序列$1,2,...,n-1$ 中与$n$互素的整数个数[4]. \pause
+\hilite<3>  \item 设正整数$n$的标准分解式为$n=p_{1}^{k_{1}}p_{2}^{k_{2}}...p_{s}^{k_{s}},$ 则欧拉函数$$\varphi(n)=n\prod_{i=1}^{s}{(1-\frac{1}{p_i})}.$$
+对任意素数$p$及$k\geq1,$ 有$\varphi(p^{k})=p^{k}-p^{k-1}.$ \pause
+\hilite<4>  \item 该函数是数论中一个非常重要且应用很广泛的函数, 20世纪70 年代, 欧拉函数成为RSA公钥密码体制得以建立的重要数学工具之一. 欧拉函数的出现也为人们探讨数论函数方程带来了很大的方便.
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{广义欧拉函数的定义}
+\begin{itemize}
+\hilite<1>  \item 2007年, 蔡天新等人将欧拉函数推广, 提出广义欧拉函数. 对任意的正整数$e,$ 正整数$n$ 的广义欧拉函数$\varphi_{e}(n)$定义为序列$1,2,...,\left[\frac{n}{e}\right]$中与$n$互素的数的个数, 其中$\left[\frac{n}{e}\right]$表示不超过$\frac{n}{e}$的最大正整数[5,6,7], 即: $$\varphi_{e}(n)=\sum^{[\frac{n}{e}]}_{i=1, \gcd(i,n)=1}1.$$
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{广义欧拉函数的计算公式}
+\begin{itemize}
+\hilite<1> \item 广义欧拉函数的部分计算公式: \pause
+\hilite<2> \begin{center}
+      \begin{tabular}{|c|c|c|}
+         \hline
+         条件& 结论\\
+         \hline
+         % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+         $e=1$&$\varphi_{1}(n)=\varphi(n)$\\
+         \hline
+         $e=2$ &$\varphi_{2}(1)=0,$ $\varphi_{2}(2)=1,$ $\varphi_{2}(n)=\frac{\varphi(n)}{2}(n>2)$\\
+         \hline
+         $e\mid\varphi(n)$&$\varphi_{e}(n)=\frac{\varphi(n)}{e}$[8]\\
+         \hline
+         $e=3,4,6$&蔡天新等人给出了$\varphi_{e}(n)(e=3,4,6)$的准确计算公式[9,10]\\
+         \hline
+         $e=p, p^{2}, pq, p^{t}$&廖群英等人给出了$\varphi_e(n)(e=p, p^{2}, pq, p^{t})$的计算公式[11,12]\\
+         \hline
+       \end{tabular}
+    \end{center}
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{相关数论函数方程问题的研究}
+\begin{itemize}
+\hilite<1> \item 数论函数的提出对现代数论的发展产生了较大的影响, 同时数论函数方程的整数解是数论的一个重要课题. \pause
+\hilite<2> \item 相关数论函数方程问题的研究现状: \pause
+\hilite<3> \begin{center}
+      \begin{tabular}{|c|c|c|c|}
+         \hline
+         时间&作者&研究内容&结果\\
+         \hline
+         % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+         2008年&贺艳峰等&$\sum_{d|n}SL(d)=n$&$n=1,28$\\
+         \hline
+         2010年&赵艳琳等&$SL(n)=\varphi(n)$&$n=1$和形如$n=3\cdot2^{\alpha}(\alpha\geq2)$\\
+         \hline
+         2012年&范盼红&$Z(n)=\varphi(n)$&解的所有形式\\
+         \hline
+         2013年&高丽等&$\varphi(n)=Z(n^{k})(k\geq2)$&$n=1$\\
+         \hline
+         2015年&张利霞等&$S(SL(n))=\varphi_{e}(n)(e=1,2)$&全部正整数解\\
+         \hline
+       \end{tabular}
+    \end{center} \pause
+\end{itemize}
+
+\begin{itemize}
+\hilite<4> \item 拟解决的问题: 关于伪Smarandache函数, Smarandache LCM函数和广义欧拉函数的复合函数之间的方程问题.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

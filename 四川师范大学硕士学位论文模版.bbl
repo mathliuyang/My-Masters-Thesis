@@ -1,4 +1,4 @@
-\begin{thebibliography}{78}
+\begin{thebibliography}{64}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -10,12 +10,6 @@
   \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
   \let\eprint\href
 \fi
-
-\bibitem[Guo\ 等(2015{\natexlab{b}})Guo, Pu, and Huang]{guoFractionalPartialDifferential2015}
-GUO B, PU X, HUANG F. 2015{\natexlab{b}}.
-\newblock {Fractional Partial Differential Equations and Their Numerical Solutions}\allowbreak[M/OL].
-\newblock {WORLD SCIENTIFIC}\allowbreak[2023-03-12].
-\newblock \url{https://www.worldscientific.com/worldscibooks/10.1142/9543}.
 
 \bibitem[Han(2008)]{HandbookDifferentialEquations2008}
 Anon. 2008.
@@ -85,12 +79,6 @@ CHEN C, YANG X. 2019.
 \newblock J. Comput. Phys., 388: 41-62\allowbreak[2023-03-01].
 \newblock \url{https://www.sciencedirect.com/science/article/pii/S0021999119302001}.
 
-\bibitem[Chen et~al.(2014)Chen and Deng]{chenFourthOrderAccurate2014}
-CHEN M, DENG W. 2014.
-\newblock Fourth order accurate scheme for the space fractional diffusion equations\allowbreak[J/OL].
-\newblock Siam J Numer Anal, 52\allowbreak (3): 1418-1438.
-\newblock \url{https://doi.org/10.1137/130933447}.
-
 \bibitem[Cheng et~al.(2018{\natexlab{a}})Cheng and Shen]{chengMultipleScalarAuxiliary2018}
 CHENG Q, SHEN J. 2018{\natexlab{a}}.
 \newblock Multiple {{Scalar Auxiliary Variable}} ({{MSAV}}) {{Approach}} and its {{Application}} to the {{Phase-Field Vesicle Membrane Model}}\allowbreak[J/OL].
@@ -121,47 +109,11 @@ COLIN T, FABRIE P. Tue Jun 30 20:00:00 EDT 1998.
 \newblock Discrete Cont Dyn-A, 4\allowbreak (4): 671-690\allowbreak[2022-11-09].
 \newblock \url{https://www.aimsciences.org/en/article/doi/10.3934/dcds.1998.4.671}.
 
-\bibitem[Demengel et~al.(2012)Demengel and Demengel]{demengelFunctionalSpacesTheory2012}
-DEMENGEL F, DEMENGEL G. 2012.
-\newblock Universitext: Functional {{Spaces}} for the {{Theory}} of {{Elliptic Partial Differential Equations}}\allowbreak[M/OL].
-\newblock {London}: {Springer}\allowbreak[2022-11-07].
-\newblock \url{http://link.springer.com/10.1007/978-1-4471-2807-6}.
-
-\bibitem[Deng(2009)]{dengFiniteElementMethod2009}
-DENG W. 2009.
-\newblock Finite element method for the space and time fractional {{Fokker}}{\textendash}{{Planck}} equation\allowbreak[J/OL].
-\newblock Siam J Numer Anal, 47\allowbreak (1): 204-226.
-\newblock \url{https://doi.org/10.1137/080714130}.
-
-\bibitem[Ding et~al.(2015)Ding, Li, and Chen]{dingHighorderAlgorithmsRiesz2015}
-DING H, LI C, CHEN Y. 2015.
-\newblock High-order algorithms for {{Riesz}} derivative and their applications ({{II}})\allowbreak[J/OL].
-\newblock J Comput Phys, 293: 218-237.
-\newblock \url{https://www.sciencedirect.com/science/article/pii/S0021999114004148}.
-
-\bibitem[Du et~al.(2012)Du, Gunzburger, Lehoucq, and Zhou]{duAnalysisApproximationNonlocal2012}
-DU Q, GUNZBURGER M, LEHOUCQ R~B, et~al. 2012.
-\newblock Analysis and approximation of nonlocal diffusion problems with volume constraints\allowbreak[J/OL].
-\newblock Siam Rev., 54\allowbreak (4): 667-696.
-\newblock \url{https://doi.org/10.1137/110833294}.
-
-\bibitem[Ervin et~al.(2007)Ervin, Heuer, and Roop]{ervinNumericalApproximationTime2007}
-ERVIN V~J, HEUER N, ROOP J~P. 2007.
-\newblock Numerical approximation of a time dependent, nonlinear, {{Space}}-{{Fractional}} diffusion equation\allowbreak[J/OL].
-\newblock Siam J Numer Anal, 45\allowbreak (2): 572-591.
-\newblock \url{https://doi.org/10.1137/050642757}.
-
 \bibitem[Fu et~al.(2020)Fu, Cai, and Wang]{fuStructurepreservingAlgorithmsTwodimensional2020}
 FU Y, CAI W, WANG Y. 2020.
 \newblock Structure-preserving algorithms for the two-dimensional fractional {{Klein-Gordon-Schr{\"o}dinger}} equation\allowbreak[J/OL].
 \newblock Appl Numer Math, 156: 77-93\allowbreak[2022-07-25].
 \newblock \url{https://www.sciencedirect.com/science/article/pii/S0168927420301264}.
-
-\bibitem[Gao et~al.(2014)Gao, Duan, Li, and Song]{gaoMeanExitTime2014}
-GAO T, DUAN J, LI X, et~al. 2014.
-\newblock Mean exit time and escape probability for dynamical systems driven by l{\'e}vy noises\allowbreak[J/OL].
-\newblock Siam J Sci Comput, 36\allowbreak (3): A887-A906.
-\newblock \url{https://doi.org/10.1137/120897262}.
 
 \bibitem[Gong et~al.(2017)Gong, Wang, Wang, and Cai]{gongConservativeFourierPseudospectral2017}
 GONG Y, WANG Q, WANG Y, et~al. 2017.
@@ -181,8 +133,8 @@ GUO B, HAN Y, XIN J. 2008.
 \newblock Appl. Math. Comput., 204\allowbreak (1): 468-477\allowbreak[2022-11-07].
 \newblock \url{https://www.sciencedirect.com/science/article/pii/S0096300308005341}.
 
-\bibitem[Guo et~al.(2015{\natexlab{a}})Guo and Xu]{guoEnergyConservingLocal2015}
-GUO L, XU Y. 2015{\natexlab{a}}.
+\bibitem[Guo et~al.(2015)Guo and Xu]{guoEnergyConservingLocal2015}
+GUO L, XU Y. 2015.
 \newblock Energy {{Conserving Local Discontinuous Galerkin Methods}} for the {{Nonlinear Schr{\"o}dinger Equation}} with {{Wave Operator}}\allowbreak[J/OL].
 \newblock J. Sci. Comput., 65\allowbreak (2): 622-647\allowbreak[2022-04-03].
 \newblock \url{http://link.springer.com/10.1007/s10915-014-9977-z}.
@@ -206,12 +158,6 @@ HU D, CAI W, GU X~M, et~al. 2022.
 \newblock Efficient energy preserving {{Galerkin}}{\textendash}{{Legendre}} spectral methods for fractional nonlinear {{Schr{\"o}dinger}} equation with wave operator\allowbreak[J/OL].
 \newblock Appl. Numer. Math., 172: 608-628\allowbreak[2022-08-20].
 \newblock \url{https://linkinghub.elsevier.com/retrieve/pii/S0168927421002981}.
-
-\bibitem[Huang et~al.(2014)Huang and Oberman]{huangNumericalMethodsFractional2014}
-HUANG Y, OBERMAN A. 2014.
-\newblock Numerical methods for the fractional laplacian: {{A}} finite difference-quadrature approach\allowbreak[J/OL].
-\newblock Siam J Numer Anal, 52\allowbreak (6): 3056-3084.
-\newblock \url{https://doi.org/10.1137/140954040}.
 
 \bibitem[Karakashian et~al.(1998)Karakashian and Makridakis]{karakashianSpacetimeFiniteElement1998}
 KARAKASHIAN O, MAKRIDAKIS C. 1998.
@@ -275,11 +221,11 @@ MAGIN R, FENG X, BALEANU D. 2009.
 \newblock Concept Magn Reson A, 34A\allowbreak (1): 16-23\allowbreak[2023-03-12].
 \newblock \url{https://onlinelibrary.wiley.com/doi/10.1002/cmr.a.20129}.
 
-\bibitem[Meerschaert et~al.(2004)Meerschaert and Tadjeran]{meerschaertFiniteDifferenceApproximations2004}
-MEERSCHAERT M~M, TADJERAN C. 2004.
-\newblock Finite difference approximations for fractional advection{\textendash}dispersion flow equations\allowbreak[J/OL].
-\newblock J Comput Appl Math, 172\allowbreak (1): 65-77.
-\newblock \url{https://www.sciencedirect.com/science/article/pii/S0377042704000986}.
+\bibitem[Pan et~al.(2022)Pan, Zeng, He, and Zhang]{panFourthorderDifferenceScheme2022}
+PAN K, ZENG J, HE D, et~al. 2022.
+\newblock A fourth-order difference scheme for the fractional nonlinear {{Schr{\"o}dinger}} equation with wave operator\allowbreak[J/OL].
+\newblock Appl. Anal., 101\allowbreak (8): 2886-2902\allowbreak[2022-09-12].
+\newblock \url{https://doi.org/10.1080/00036811.2020.1829600}.
 
 \bibitem[Quispel et~al.(2008)Quispel and McLaren]{quispelNewClassEnergypreserving2008}
 QUISPEL G~R~W, MCLAREN D~I. 2008.
@@ -400,18 +346,6 @@ XIN J. 2000.
 \newblock Phys. D: Nonlinear Phenom., 135\allowbreak (3-4): 345-368\allowbreak[2022-04-03].
 \newblock \url{https://linkinghub.elsevier.com/retrieve/pii/S0167278999001281}.
 
-\bibitem[Xu et~al.(2014)Xu and Hesthaven]{xuDiscontinuousGalerkinMethod2014}
-XU Q, HESTHAVEN J~S. 2014.
-\newblock Discontinuous galerkin method for fractional convection-diffusion equations\allowbreak[J/OL].
-\newblock Siam J. Numer. Anal., 52\allowbreak (1): 405-423.
-\newblock \url{https://doi.org/10.1137/130918174}.
-
-\bibitem[Yang et~al.(2010)Yang, Liu, and Turner]{yangNumericalMethodsFractional2010}
-YANG Q, LIU F, TURNER I. 2010.
-\newblock Numerical methods for fractional partial differential equations with {{Riesz}} space fractional derivatives\allowbreak[J/OL].
-\newblock Appl Math Model, 34\allowbreak (1): 200-218\allowbreak[2022-11-07].
-\newblock \url{https://www.sciencedirect.com/science/article/pii/S0307904X09001127}.
-
 \bibitem[Yang et~al.(2017{\natexlab{a}})Yang and Ju]{yangEfficientLinearSchemes2017}
 YANG X, JU L. 2017{\natexlab{a}}.
 \newblock Efficient linear schemes with unconditional energy stability for the phase field elastic bending energy model\allowbreak[J/OL].
@@ -436,18 +370,6 @@ ZASLAVSKY G~M, STEVENS D, WEITZNER H. 1993.
 \newblock Phys Rev E, 48\allowbreak (3): 1683-1694\allowbreak[2023-03-12].
 \newblock \url{https://link.aps.org/doi/10.1103/PhysRevE.48.1683}.
 
-\bibitem[Zayernouri et~al.(2014)Zayernouri and Karniadakis]{zayernouriFractionalSpectralCollocation2014}
-ZAYERNOURI M, KARNIADAKIS G~E. 2014.
-\newblock Fractional spectral collocation method\allowbreak[J/OL].
-\newblock Siam J Sci Comput, 36\allowbreak (1): A40-A62.
-\newblock \url{https://doi.org/10.1137/130933216}.
-
-\bibitem[Zeng et~al.(2014)Zeng, Liu, Li, Burrage, Turner, and Anh]{zengCrankNicolsonADI2014}
-ZENG F, LIU F, LI C, et~al. 2014.
-\newblock A {{Crank}}{\textendash}{{Nicolson ADI}} spectral method for a two-dimensional riesz space fractional nonlinear reaction-diffusion equation\allowbreak[J/OL].
-\newblock Siam J. Numer. Anal., 52\allowbreak (6): 2599-2622.
-\newblock \url{https://doi.org/10.1137/130934192}.
-
 \bibitem[Zhang et~al.(2003)Zhang and Chang]{zhangConservativeNumericalScheme2003}
 ZHANG L, CHANG Q. 2003.
 \newblock A conservative numerical scheme for a class of nonlinear {{Schr{\"o}dinger}} equation with wave operator\allowbreak[J/OL].
@@ -471,12 +393,6 @@ ZHANG X, CRAWFORD J~W, DEEKS L~K, et~al. 2005.
 \newblock A mass balance based numerical method for the fractional advection-dispersion equation: {{Theory}} and application: {{FRACTIONAL ADVECTION-DISPERSION EQUATION}}\allowbreak[J/OL].
 \newblock Water Resources Res., 41\allowbreak (7)\allowbreak[2023-03-12].
 \newblock \url{http://doi.wiley.com/10.1029/2004WR003818}.
-
-\bibitem[Zhang et~al.(2014)Zhang, Ding, and Luo]{zhangFourthOrderCompactDifference2014}
-ZHANG Y, DING H, LUO J. 2014.
-\newblock Fourth-{{Order Compact Difference Schemes}} for the {{Riemann-Liouville}} and {{Riesz Derivatives}}\allowbreak[J/OL].
-\newblock Abstr. Appl. Anal., 2014: 1-4\allowbreak[2023-03-12].
-\newblock \url{http://www.hindawi.com/journals/aaa/2014/540692/}.
 
 \bibitem[Zhao et~al.(2017)Zhao, Wang, and Yang]{zhaoNumericalApproximationsPhase2017}
 ZHAO J, WANG Q, YANG X. 2017.
