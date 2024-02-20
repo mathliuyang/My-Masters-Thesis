@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  19 FEB 2024 23:58
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  20 FEB 2024 10:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -819,7 +819,14 @@ LaTeX Font Info:    No file TUptm.fd. on input line 3.
 LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
 (Font)              using `TU/lmr/m/n' instead on input line 3.
 
-(./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap1.aux) (./chap/chap4.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux))
+(./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap1.aux) (./chap/chap2.aux) (./chap/chap3.aux
+
+LaTeX Warning: Label `eq_SAVRRK:313a' multiply defined.
+
+
+LaTeX Warning: Label `eq_SAVRRK:54' multiply defined.
+
+) (./chap/chap4.aux) (./chap/chap5.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux))
 \openout1 = `四川师范大学硕士学位论文模版.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1177,31 +1184,29 @@ Package fontspec Info: Font family 'KaitiSC(0)' created for font 'Kaiti SC'
 
 ] (./四川师范大学硕士学位论文模版.lof
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 6.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+(Font)              <6> on input line 7.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 6.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 7.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-))
+) [5])
 \tf@lof=\write4
 \openout4 = `四川师范大学硕士学位论文模版.lof'.
 
- [5] [6] (./四川师范大学硕士学位论文模版.toc)
+ [6] (./四川师范大学硕士学位论文模版.toc [7
+
+])
 \tf@toc=\write5
 \openout5 = `四川师范大学硕士学位论文模版.toc'.
 
- [7
-
-] [8
-
-]
+ [8]
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { chapter = { name={,},number={\arabic
@@ -1230,6 +1235,7 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (./chap/chap1.tex
 1
 [1
+
 
 
 ]
@@ -1269,108 +1275,313 @@ LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.53937> not available
 (Font)              size <10.95> substituted on input line 46.
 
-[2]
+[2] [3]) [4]
+\openout2 = `chap/chap2.aux'.
 
-LaTeX Warning: Reference `Section_SAVRRK: 2' on page 3 undefined on input line 92.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 3 undefined on input line 92.
-
-
-LaTeX Warning: Reference `Section_SAVRRK: 3' on page 3 undefined on input line 93.
-
-
-LaTeX Warning: Reference `Section_SAVRRK: 4' on page 3 undefined on input line 93.
-
-
-LaTeX Warning: Reference `Section_SAVRRK: 5' on page 3 undefined on input line 94.
-
-
-LaTeX Warning: Reference `Section_SAVRRK: 6' on page 3 undefined on input line 94.
-
-
-LaTeX Warning: Reference `Section_SAVRRK: 7' on page 3 undefined on input line 95.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 3 undefined on input line 97.
-
-[3]) [4]
-\openout2 = `chap/chap4.aux'.
-
- (./chap/chap4.tex
+ (./chap/chap2.tex
 2
-
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 5 undefined on input line 16.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 5 undefined on input line 16.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 5 undefined on input line 23.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 5 undefined on input line 23.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 5 undefined on input line 32.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 5 undefined on input line 32.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 5 undefined on input line 41.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 5 undefined on input line 41.
-
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 42.
 [5
 
 
 
 
 ]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 93.
+
+Package fontspec Warning: Font "STFangsong" does not contain requested Script
+(fontspec)                "CJK".
+
+LaTeX Font Info:    Trying to load font information for TU+pcr on input line 57.
+LaTeX Font Info:    No file TUpcr.fd. on input line 57.
+
+LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 57.
+
+[6] [7]) [8]
+\openout2 = `chap/chap3.aux'.
+
+ (./chap/chap3.tex
+3
+[9
 
 
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 6 undefined on input line 111.
 
 
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 6 undefined on input line 111.
+] [10] [11] [12]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 193.
+ [13] [14]
 
-[6]
+LaTeX Font Warning: Command \small invalid in math mode on input line 322.
 
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 7 undefined on input line 152.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 324.
 
-
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 7 undefined on input line 152.
-
-[7] [8]
-
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 9 undefined on input line 241.
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
+(Font)              size <5> substituted on input line 324.
 
 
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 9 undefined on input line 241.
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
+(Font)              size <5> substituted on input line 324.
 
 
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 9 undefined on input line 242.
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
+(Font)              size <5> substituted on input line 324.
 
 
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 9 undefined on input line 242.
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
+(Font)              size <5> substituted on input line 324.
 
 
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 9 undefined on input line 244.
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 324.
 
 
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 9 undefined on input line 244.
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 324.
 
-[9] [10] [11]
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <> on input line 324.
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <0.7> on input line 324.
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <0.5> on input line 324.
 
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 12 undefined on input line 357.
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <> not available
+(Font)              size <5> substituted on input line 324.
 
 
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 12 undefined on input line 357.
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 324.
 
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.7> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.5> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
+(Font)              size <5> substituted on input line 324.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
+(Font)              size <5> substituted on input line 324.
+
+[15]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 359.
+ [16]
+Overfull \hbox (0.95297pt too wide) detected at line 418
+[]
+ []
+
+
+Underfull \vbox (badness 2293) has occurred while \output is active []
+
+ [17]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 420.
+
+
+Overfull \hbox (1.83539pt too wide) detected at line 422
+\OML/cmm/m/it/10.95 ^^M \OT1/cmr/m/n/10.95 =  []\OML/cmm/m/it/10.95 :
+ []
+
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 445.
+[18] [19] [20]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 584.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.52812> not available
+(Font)              size <8> substituted on input line 606.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.52812> not available
+(Font)              size <8> substituted on input line 606.
+
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <7.52812> on input line 606.
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <7.52812> not available
+(Font)              size <8> substituted on input line 606.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <7.52812> not available
+(Font)              size <8> substituted on input line 606.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <7.52812> not available
+(Font)              size <8> substituted on input line 606.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <7.52812> not available
+(Font)              size <8> substituted on input line 606.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.52812> not available
+(Font)              size <8> substituted on input line 606.
+
+[21]
+File: ./figures/exp1_r.eps Graphic file (type eps)
+<./figures/exp1_r.eps>
+File: ./figures/exp1_s.eps Graphic file (type eps)
+<./figures/exp1_s.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 640--645
+ [][][] 
+ []
+
+File: ./figures/exp1_energy3.eps Graphic file (type eps)
+<./figures/exp1_energy3.eps>
+File: ./figures/exp1_energy6.eps Graphic file (type eps)
+<./figures/exp1_energy6.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 657--660
+ [][][] 
+ []
+
+File: ./figures/exp1_energy9.eps Graphic file (type eps)
+<./figures/exp1_energy9.eps>
+File: ./figures/exp1_energy2.eps Graphic file (type eps)
+<./figures/exp1_energy2.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 664--669
+ [][][][] 
+ []
+
+[22]
+Overfull \hbox (2.05618pt too wide) detected at line 678
+\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [] [] \OML/cmm/m/it/12 ; u[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [](\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; t\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 
+ \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 ; T\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ;
+ []
+
+
+Underfull \vbox (badness 7981) has occurred while \output is active []
+
+ [23]
+File: ./figures/exp2_r.eps Graphic file (type eps)
+<./figures/exp2_r.eps>
+File: ./figures/exp2_s.eps Graphic file (type eps)
+<./figures/exp2_s.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 720--725
+ [][][] 
+ []
+
+File: ./figures/exp2_energy3.eps Graphic file (type eps)
+<./figures/exp2_energy3.eps>
+File: ./figures/exp2_energy6.eps Graphic file (type eps)
+<./figures/exp2_energy6.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 737--740
+ [][][] 
+ []
+
+File: ./figures/exp2_energy9.eps Graphic file (type eps)
+<./figures/exp2_energy9.eps>
+File: ./figures/exp2_energy2.eps Graphic file (type eps)
+<./figures/exp2_energy2.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 744--749
+ [][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Underfull \vbox (badness 2538) has occurred while \output is active []
+
+ [25]
+File: ./figures/exp3_energy3.eps Graphic file (type eps)
+<./figures/exp3_energy3.eps>
+File: ./figures/exp3_energy6.eps Graphic file (type eps)
+<./figures/exp3_energy6.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 804--807
+ [][][] 
+ []
+
+File: ./figures/exp3_energy9.eps Graphic file (type eps)
+<./figures/exp3_energy9.eps>
+File: ./figures/exp3_energy2.eps Graphic file (type eps)
+<./figures/exp3_energy2.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 811--816
+ [][][][] 
+ []
+
+[26]
+File: ./figures/exp4_energy3.eps Graphic file (type eps)
+<./figures/exp4_energy3.eps>
+File: ./figures/exp4_energy6.eps Graphic file (type eps)
+<./figures/exp4_energy6.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 881--884
+ [][][] 
+ []
+
+File: ./figures/exp4_energy9.eps Graphic file (type eps)
+<./figures/exp4_energy9.eps>
+File: ./figures/exp4_energy2.eps Graphic file (type eps)
+<./figures/exp4_energy2.eps>
+
+Overfull \hbox (15.70667pt too wide) in paragraph at lines 888--893
+ [][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]) [28]
+\openout2 = `chap/chap4.aux'.
+
+ (./chap/chap4.tex
+4
+[29
+
+
+
+
+] [30] [31] [32]
+Underfull \vbox (badness 1521) has occurred while \output is active []
+
+ [33] [34] [35]
 
 LaTeX Warning: The counter will not be printed.
              The label is: $\bullet $ on input line 358.
@@ -1378,30 +1589,7 @@ LaTeX Warning: The counter will not be printed.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 388.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 13 undefined on input line 393.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 13 undefined on input line 393.
-
-[13]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 439.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 14 undefined on input line 440.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 14 undefined on input line 440.
-
-
-LaTeX Warning: Reference `eq_PAVF:_8' on page 14 undefined on input line 449.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:9' on page 14 undefined on input line 449.
-
+ [36] [37]
 File: ./figure/exp1_s1.5.eps Graphic file (type eps)
 <./figure/exp1_s1.5.eps>
 File: ./figure/exp1_t1.5.eps Graphic file (type eps)
@@ -1410,7 +1598,7 @@ File: ./figure/exp1_s2.eps Graphic file (type eps)
 <./figure/exp1_s2.eps>
 File: ./figure/exp1_t2.eps Graphic file (type eps)
 <./figure/exp1_t2.eps>
-[14]
+ [38]
 File: ./figure/exp1_H1.3.eps Graphic file (type eps)
 <./figure/exp1_H1.3.eps>
 File: ./figure/exp1_H1.6.eps Graphic file (type eps)
@@ -1422,7 +1610,7 @@ File: ./figure/exp1_H2.eps Graphic file (type eps)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
+ [39]
 File: ./figure/exp1_M1.3.eps Graphic file (type eps)
 <./figure/exp1_M1.3.eps>
 File: ./figure/exp1_M1.6.eps Graphic file (type eps)
@@ -1434,23 +1622,23 @@ File: ./figure/exp1_M2.eps Graphic file (type eps)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
-Overfull \hbox (20.36841pt too wide) in paragraph at lines 547--562
+ [40]
+Overfull \hbox (20.36841pt too wide) in paragraph at lines 548--563
  [][][] 
  []
 
 
-Overfull \hbox (15.07144pt too wide) in paragraph at lines 569--584
+Overfull \hbox (15.07144pt too wide) in paragraph at lines 570--585
  [][][] 
  []
 
-[17]
-Overfull \hbox (15.07144pt too wide) in paragraph at lines 591--606
+[41]
+Overfull \hbox (15.07144pt too wide) in paragraph at lines 592--607
  [][][] 
  []
 
 
-Overfull \hbox (15.07144pt too wide) in paragraph at lines 613--628
+Overfull \hbox (15.07144pt too wide) in paragraph at lines 614--629
  [][][] 
  []
 
@@ -1460,20 +1648,13 @@ File: ./figure/exp1_RM1.6.eps Graphic file (type eps)
 <./figure/exp1_RM1.6.eps>
 File: ./figure/exp1_RM1.9.eps Graphic file (type eps)
 <./figure/exp1_RM1.9.eps>
-[18]
+[42]
 File: ./figure/exp1_RH1.3.eps Graphic file (type eps)
 <./figure/exp1_RH1.3.eps>
 File: ./figure/exp1_RH1.6.eps Graphic file (type eps)
 <./figure/exp1_RH1.6.eps>
 File: ./figure/exp1_RH1.9.eps Graphic file (type eps)
 <./figure/exp1_RH1.9.eps>
-
-
-LaTeX Warning: Reference `eq_SAVRRK:1' on page 19 undefined on input line 668.
-
-
-LaTeX Warning: Reference `eq_SAVRRK:3' on page 19 undefined on input line 668.
-
 File: ./figure/exp2_s1.5.eps Graphic file (type eps)
 <./figure/exp2_s1.5.eps>
 File: ./figure/exp2_t1.5.eps Graphic file (type eps)
@@ -1481,7 +1662,7 @@ File: ./figure/exp2_t1.5.eps Graphic file (type eps)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+ [43]
 File: ./figure/exp2_s2.eps Graphic file (type eps)
 <./figure/exp2_s2.eps>
 File: ./figure/exp2_t2.eps Graphic file (type eps)
@@ -1495,9 +1676,9 @@ File: ./figure/exp2_M1.9.eps Graphic file (type eps)
 File: ./figure/exp2_M2.eps Graphic file (type eps)
 <./figure/exp2_M2.eps>
 
-Underfull \vbox (badness 1242) has occurred while \output is active []
+Underfull \vbox (badness 5245) has occurred while \output is active []
 
- [20]
+ [44]
 File: ./figure/exp2_H1.3.eps Graphic file (type eps)
 <./figure/exp2_H1.3.eps>
 File: ./figure/exp2_H1.6.eps Graphic file (type eps)
@@ -1515,7 +1696,7 @@ File: ./figure/exp2_RM1.9.eps Graphic file (type eps)
 
 Underfull \vbox (badness 8000) has occurred while \output is active []
 
- [21]
+ [45]
 File: ./figure/exp2_RH1.3.eps Graphic file (type eps)
 <./figure/exp2_RH1.3.eps>
 File: ./figure/exp2_RH1.6.eps Graphic file (type eps)
@@ -1525,7 +1706,7 @@ File: ./figure/exp2_RH1.9.eps Graphic file (type eps)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
+ [46]
 File: ./figure/exp2_contour3_p0.eps Graphic file (type eps)
 <./figure/exp2_contour3_p0.eps>
 File: ./figure/exp2_contour3_p1.eps Graphic file (type eps)
@@ -1538,7 +1719,7 @@ File: ./figure/exp2_contour3_p50.eps Graphic file (type eps)
 <./figure/exp2_contour3_p50.eps>
 File: ./figure/exp2_contour3_p100.eps Graphic file (type eps)
 <./figure/exp2_contour3_p100.eps>
- [23]
+ [47]
 File: ./figure/exp2_contour6_p0.eps Graphic file (type eps)
 <./figure/exp2_contour6_p0.eps>
 File: ./figure/exp2_contour6_p1.eps Graphic file (type eps)
@@ -1566,7 +1747,7 @@ File: ./figure/exp2_contour99_p100.eps Graphic file (type eps)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
+ [48]
 File: ./figure/exp2_contour2_p0.eps Graphic file (type eps)
 <./figure/exp2_contour2_p0.eps>
 File: ./figure/exp2_contour2_p1.eps Graphic file (type eps)
@@ -1582,7 +1763,17 @@ File: ./figure/exp2_contour2_p100.eps Graphic file (type eps)
 )
 Underfull \vbox (badness 1325) has occurred while \output is active []
 
- [25] [26]
+ [49] [50]
+\openout2 = `chap/chap5.aux'.
+
+ (./chap/chap5.tex
+5
+) [51
+
+
+
+
+]
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { chapter = { number={},format={\center } } }
@@ -1590,51 +1781,21 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 \openout2 = `chap/ref.aux'.
 
-(./chap/ref.tex (./四川师范大学硕士学位论文模版.bbl
-Underfull \hbox (badness 1590) in paragraph at lines 65--69
-[]\TU/ptm/b/n/10.53937 CAI W, LI H, WANG Y. 2018.  Partitioned averaged vector field methods[J/OL].
- []
-
-
-Underfull \hbox (badness 1565) in paragraph at lines 65--69
-\TU/ptm/b/n/10.53937 J Comput Phys, 370: 25-42[2022-07-20].  []$[][][][][] [] [] [] [][][][][][][][][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][] [] [][][] []
- []
-
-[27
+(./chap/ref.tex (./四川师范大学硕士学位论文模版.bbl [52
 
 
 
 
-]
-Underfull \hbox (badness 1163) in paragraph at lines 143--149
-[]\TU/ptm/b/n/10.53937 HAIRER E, WANNER G. 2015.  Runge–Kutta Methods, Explicit, Implicit[M/OL]//
- []
-
-
-Underfull \hbox (badness 2229) in paragraph at lines 151--155
-[]\TU/ptm/b/n/10.53937 HILFER R. 2000.  FRACTIONAL CALCULUS AND REGULAR VARIATION IN
- []
-
-
-Underfull \hbox (badness 1968) in paragraph at lines 163--167
-[]\TU/ptm/b/n/10.53937 KARAKASHIAN O, MAKRIDAKIS C. 1998.  A space-time finite element method
- []
-
-
-Underfull \hbox (badness 2762) in paragraph at lines 163--167
-\TU/ptm/b/n/10.53937 for the nonlinear Schrödinger equation: The discontinuous Galerkin method[J/OL].
- []
-
-
+] [53]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28]
+ [54]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
+ [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30])) [31] [32
+ [56])) [57] [58
 
 
 
@@ -1646,7 +1807,7 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 \openout2 = `chap/thanks.aux'.
 
-(./chap/thanks.tex) [33
+(./chap/thanks.tex) [59
 
 
 ]
@@ -1657,38 +1818,38 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 \openout2 = `chap/ach.aux'.
 
-(./chap/ach.tex [34
+(./chap/ach.tex [60
 
 
 
 
 
-]) [35]
+]) [61]
 \tf@thm=\write6
 \openout6 = `四川师范大学硕士学位论文模版.thm'.
 
- (./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap1.aux) (./chap/chap4.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux))
+ (./四川师范大学硕士学位论文模版.aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap1.aux) (./chap/chap2.aux) (./chap/chap3.aux) (./chap/chap4.aux) (./chap/chap5.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux))
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.41063pt have occurred.
+(Font)              up to 4.5pt have occurred.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版.out' has not changed.
-(rerunfilecheck)             Checksum: 6803B7155B199ABCC6901F8ED0F3D595;2041.
+(rerunfilecheck)             Checksum: 85D2827A8BAE2CB4AA8F0078B6CE8545;3930.
  )
 (\end occurred when \ifx on line 25 was incomplete) 
 Here is how much of TeX's memory you used:
- 23358 strings out of 476683
- 504287 string characters out of 5804047
- 1877018 words of memory out of 5000000
- 42986 multiletter control sequences out of 15000+600000
- 532188 words of font info for 169 fonts, out of 8000000 for 9000
+ 23746 strings out of 476683
+ 513535 string characters out of 5804047
+ 1878018 words of memory out of 5000000
+ 43324 multiletter control sequences out of 15000+600000
+ 533909 words of font info for 183 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,15n,97p,1222b,640s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,17n,97p,1222b,676s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 四川师范大学硕士学位论文模版.pdf (47 pages).
+Output written on 四川师范大学硕士学位论文模版.pdf (73 pages).
