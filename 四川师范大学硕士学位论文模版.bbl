@@ -1,4 +1,4 @@
-\begin{thebibliography}{79}
+\begin{thebibliography}{77}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -44,13 +44,6 @@ Carreras B~A, Lynch V~E, Zaslavsky G~M.
 Hilfer R.
 \newblock \href{http://www.worldscientific.com/doi/abs/10.1142/9789812817747_0009}{{{FRACTIONAL CALCULUS AND REGULAR VARIATION IN THERMODYNAMICS}}}\allowbreak[M].
 \newblock {WORLD SCIENTIFIC}, 2000: 429-463.
-
-\bibitem[Liang et~al.(2007)Liang, Zhang, Chen, and Podlubny]{liangRobustnessFractionalorderBoundary2007}
-Liang J, Zhang W, Chen Y, et~al.
-\newblock \href{http://link.springer.com/10.1007/978-1-4020-6042-7_37}{Robustness of {{Fractional-order Boundary Control}} of {{Time Fractional Wave Equations}} with {{Delayed Boundary Measurement Using}} the {{Simple Predictor}}}\allowbreak[M]//\allowbreak
-Sabatier J, Agrawal O~P, Machado J~A~T.
-\newblock Advances in {{Fractional Calculus}}.
-\newblock {Dordrecht}: {Springer Netherlands}, 2007: 543-552.
 
 \bibitem[Magin et~al.(2009)Magin, Feng, and Baleanu]{maginSolvingFractionalOrder2009}
 Magin R, Feng X, Baleanu D.
@@ -272,11 +265,6 @@ Gong Y, Zhao J, Wang Q.
 \newblock \href{http://arxiv.org/abs/1907.04254}{Arbitrarily {{High-order Unconditionally Energy Stable Schemes}} for {{Gradient Flow Models Using}} the {{Scalar Auxiliary Variable Approach}}: arXiv:1907.04254}\allowbreak[M].
 \newblock {arXiv}, 2019.
 
-\bibitem[Budd et~al.(1999)Budd, Iserles, McLachlan, Quispel, and Robidoux]{buddGeometricIntegrationUsing1999}
-Budd C, Iserles A, McLachlan R~I, et~al.
-\newblock \href{https://royalsocietypublishing.org/doi/10.1098/rsta.1999.0363}{Geometric integration using discrete gradients}\allowbreak[J].
-\newblock Philosophical Transactions of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences, 1999, 357\allowbreak (1754): 1021-1045.
-
 \bibitem[Quispel et~al.(2008)Quispel and McLaren]{quispelNewClassEnergypreserving2008}
 Quispel G~R~W, McLaren D~I.
 \newblock \href{https://iopscience.iop.org/article/10.1088/1751-8113/41/4/045206}{A new class of energy-preserving numerical integration methods}\allowbreak[J].
@@ -384,10 +372,9 @@ Guo B, Han Y, Xin J.
 
 \bibitem[Hairer et~al.(2015)Hairer and Wanner]{hairerRungeKuttaMethods2015}
 Hairer E, Wanner G.
-\newblock \href{https://link.springer.com/10.1007/978-3-540-70529-1_144}{Runge{\textendash}{{Kutta Methods}}, {{Explicit}}, {{Implicit}}}\allowbreak[M]//\allowbreak
-Engquist B.
-\newblock Encyclopedia of {{Applied}} and {{Computational Mathematics}}.
-\newblock {Berlin, Heidelberg}: {Springer Berlin Heidelberg}, 2015: 1282-1285.
+\newblock \href{https://doi.org/10.1007/978-3-540-70529-1_144}{Runge{\textendash}{{Kutta Methods}}, {{Explicit}}, {{Implicit}}}\allowbreak[M]//\allowbreak
+Encyclopedia of {{Applied}} and {{Computational Mathematics}}.
+\newblock {Berlin, Heidelberg}: {Springer}, 2015: 1282-1285.
 
 \bibitem[Li et~al.(2022)Li, Li, and Zhang]{liImplicitexplicitRelaxationRungeKutta2022}
 Li D, Li X, Zhang Z.
