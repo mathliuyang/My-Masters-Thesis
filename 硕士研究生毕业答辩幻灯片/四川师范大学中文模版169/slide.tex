@@ -1195,14 +1195,14 @@ u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} /
 	\end{frame}
 
 \begin{frame}{NFSWEs的哈密顿格式构建}
-	哈密顿结构对于构建PAVF格式至关重要.然而,目前没有研究人员考虑过带有周期边界条件的NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的哈密顿结构.
+	哈密顿结构对于构建PAVF格式至关重要.然而,目前没有研究人员考虑过带有周期边界条件的NFSWEs  的哈密顿结构.
 	基于此, 本小节推导了 NFSWEs 的哈密顿结构.
 	
 	设
 	\begin{align}
 	u = p+\mathrm{i}q, \quad u_t = \varphi+ \mathrm{i}\psi,
 	\end{align}
-	其中$p, q,\varphi,\psi$均为实值函数.那么,NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 可以重写为
+	其中$p, q,\varphi,\psi$均为实值函数.那么,NFSWEs  可以重写为
 	\begin{align}\label{eq_PAVF:28}
 	\varphi_{t}+\mathrm{i}\psi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}p+\mathrm{i}\left( -\Delta \right) ^{\frac{\alpha }{2}}q+\mathrm{i}\kappa \varphi-\kappa \psi+\beta \left( p^{2}+q^{2}\right) \left( p+\mathrm{i} q\right) =0.
 	\end{align}
@@ -1214,7 +1214,7 @@ u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} /
 		&\varphi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}p-\kappa \psi+\beta \left( p^{2}+q^{2}\right)p=0,\nonumber\\
 		&\psi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}q+\kappa \varphi+\beta \left( p^{2}+q^{2}\right)q=0.\label{eq_PAVF:29}
 		\end{align}
-		即,NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 可以重写为一个等效的耦合系统
+		即,NFSWEs  可以重写为一个等效的耦合系统
 		\begin{align}
 		&\varphi_{t}=-\left( -\Delta \right) ^{\frac{\alpha }{2}}p+\kappa \psi-\beta \left( p^{2}+q^{2}\right)p\label{eq_PAVF:30},\\
 		&\psi_{t}=-\left( -\Delta \right) ^{\frac{\alpha }{2}}q-\kappa \varphi-\beta \left( p^{2}+q^{2}\right)q\label{eq_PAVF:31},\\
@@ -1224,7 +1224,7 @@ u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} /
 		其中$p, q,\varphi,\psi$满足周期边界条件.
 	\end{frame}
 \begin{frame}%{NFSWEs的哈密顿格式构建}
-	% 为了得到NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的哈密顿形式,引入以下两个重要引理.
+	% 为了得到NFSWEs  的哈密顿形式,引入以下两个重要引理.
 	\begin{lemma}\label{lem_PAVF:1}
 		\cite{fuStructurepreservingAlgorithmsTwodimensional2020} 
 		 给定 $1<\alpha \leq 2$,那么对于任何实值周期函数 $p, q \in L^{2}(\Omega)$,有
@@ -1453,7 +1453,7 @@ Y=\left(\varPhi^{T}, \Psi^{T}, P^{T}, Q^{T}\right),
 		\end{remark}
 		
 		\begin{remark}\label{rk_PAVF:2}
-		值得强调的是,用于求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的其他现有方法仅保持修正后的能量和(或)修正后的质量.
+		值得强调的是,用于求解NFSWEs  的其他现有方法仅保持修正后的能量和(或)修正后的质量.
 		例如SAV方法 \cite{chengConvergenceEnergyconservingScheme2022}仅保持修正后的能量,
 		三层线性隐式差分格式\cite{ranLinearlyImplicitConservative2016}保持修正后的能量和质量.
 		然而,所提出的FPAVF-P格式\eqref{eq_PAVF:98}-\eqref{eq_PAVF:101}在离散意义上同时保持原始质量和能量, 这是本文的主要贡献之一.
@@ -1463,7 +1463,7 @@ Y=\left(\varPhi^{T}, \Psi^{T}, P^{T}, Q^{T}\right),
 
 \begin{frame}{数值算例}
 	\begin{example}\label{exp_PAVF:2}
-		考虑一维非线性分数阶波动方程 \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3},具体形式为
+		考虑一维非线性分数阶波动方程 ,具体形式为
 		\begin{equation}\label{eq_PAVF:108}
 		u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0, \quad (x,t)\in  \Omega\times[0, T],
 		\end{equation}
@@ -1703,7 +1703,7 @@ Y=\left(\varPhi^{T}, \Psi^{T}, P^{T}, Q^{T}\right),
 
 \begin{frame}{数值算例}
 	\begin{example}\label{exp_PAVF:4}
-		考虑带有初始值的二维非线性分数薛定谔波动方程 \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3}：
+		考虑带有初始值的二维非线性分数薛定谔波动方程 ：
 		\begin{equation}\label{eq_PAVF_110}
 		u(x,y, 0)=\mbox{sech}\left(x^2+y^2\right), u_t(x,y, 0)=\sin (x+y) \mbox{sech}\left(-2(x^2+y^2)\right), (x,y,t)\in  \Omega\times[0, T],
 		\end{equation}
