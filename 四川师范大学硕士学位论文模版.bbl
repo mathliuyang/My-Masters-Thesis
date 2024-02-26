@@ -1,4 +1,4 @@
-\begin{thebibliography}{77}
+\begin{thebibliography}{79}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -13,37 +13,30 @@
 
 \bibitem[Samko et~al.(1993)Samko, Kilbas, and Marichev]{samkoFractionalIntegralsDerivatives1993}
 Samko S~G, Kilbas A~A, Marichev O~I.
-\newblock Fractional integrals and derivatives: Vol.~1\allowbreak[M].
+\newblock Fractional integrals and derivatives\allowbreak[M].
 \newblock {Gordon and breach science publishers, Yverdon Yverdon-les-Bains, Switzerland}, 1993.
 
 \bibitem[liI(2015)]{liIntroductionFractionalCalculus2015}
 \href{https://www.taylorfrancis.com/books/9781482253818/chapters/10.1201/b18503-6}{Introduction to {{Fractional Calculus}}}\allowbreak[M].
-\newblock 0th ed.
 \newblock {Chapman and Hall/CRC}, 2015: 19-46.
 
 \bibitem[Han(2008)]{HandbookDifferentialEquations2008}
-\href{https://linkinghub.elsevier.com/retrieve/pii/S1874573308X80167}{Handbook of {{Differential Equations}}: {{Stationary Partial Differential Equations}}: Vol.~6\ handbook of {{Differential Equations}} - {{Stationary Partial Differential Equations}}}\allowbreak[M].
+\href{https://linkinghub.elsevier.com/retrieve/pii/S1874573308X80167}{Handbook of {{Differential Equations}} - {{Stationary Partial Differential Equations}}}\allowbreak[M].
 \newblock {Elsevier}, 2008.
 
 \bibitem[bry(2008)]{brychkovIndefiniteIntegrals2008}
 \href{https://www.taylorfrancis.com/books/9781584889571/chapters/10.1201/9781584889571-7}{Indefinite {{Integrals}}}\allowbreak[M].
-\newblock 0th ed.
 \newblock {Chapman and Hall/CRC}, 2008: 121-130.
 
 \bibitem[Zhang et~al.(2005)Zhang, Crawford, Deeks, Stutter, Bengough, and Young]{zhangMassBalanceBased2005}
 Zhang X, Crawford J~W, Deeks L~K, et~al.
-\newblock \href{http://doi.wiley.com/10.1029/2004WR003818}{A mass balance based numerical method for the fractional advection-dispersion equation: {{Theory}} and application: {{FRACTIONAL ADVECTION-DISPERSION EQUATION}}}\allowbreak[J].
+\newblock \href{http://doi.wiley.com/10.1029/2004WR003818}{A mass balance based numerical method for the fractional advection-dispersion equation: {{Theory}} and application}\allowbreak[J].
 \newblock Water Resour Res, 2005, 41\allowbreak (7).
 
 \bibitem[Carreras et~al.(2001)Carreras, Lynch, and Zaslavsky]{carrerasAnomalousDiffusionExit2001}
 Carreras B~A, Lynch V~E, Zaslavsky G~M.
 \newblock \href{http://aip.scitation.org/doi/10.1063/1.1416180}{Anomalous diffusion and exit time distribution of particle tracers in plasma turbulence model}\allowbreak[J].
 \newblock Phys Plasmas, 2001, 8\allowbreak (12): 5096-5103.
-
-\bibitem[Hilfer(2000)]{hilferFRACTIONALCALCULUSREGULAR2000}
-Hilfer R.
-\newblock \href{http://www.worldscientific.com/doi/abs/10.1142/9789812817747_0009}{{{FRACTIONAL CALCULUS AND REGULAR VARIATION IN THERMODYNAMICS}}}\allowbreak[M].
-\newblock {WORLD SCIENTIFIC}, 2000: 429-463.
 
 \bibitem[Magin et~al.(2009)Magin, Feng, and Baleanu]{maginSolvingFractionalOrder2009}
 Magin R, Feng X, Baleanu D.
@@ -70,10 +63,10 @@ Machihara S, Nakanishi K, Ozawa T.
 \newblock \href{http://link.springer.com/10.1007/s002080200008}{Nonrelativistic limit in the energy space for nonlinear {{Klein-Gordon}} equations}\allowbreak[J].
 \newblock Math Ann, 2002, 322\allowbreak (3): 603-621.
 
-\bibitem[Colin et~al.(Tue Jun 30 20:00:00 EDT 1998)Colin and Fabrie]{colinSemidiscretizationTimeNonlinear1998}
+\bibitem[Colin et~al.(1998)Colin and Fabrie]{colinSemidiscretizationTimeNonlinear1998}
 Colin T, Fabrie P.
 \newblock \href{https://www.aimsciences.org/en/article/doi/10.3934/dcds.1998.4.671}{Semidiscretization in time for nonlinear {{Schr{\"o}dinger-waves}} equations}\allowbreak[J].
-\newblock Discrete Cont Dyn-A, Tue Jun 30 20:00:00 EDT 1998, 4\allowbreak (4): 671-690.
+\newblock Discrete Cont Dyn-A, 1998, 4\allowbreak (4): 671-690.
 
 \bibitem[Bao et~al.(2010)Bao, Dong, and Xin]{baoComparisonsSineGordonPerturbed2010}
 Bao W, Dong X, Xin J.
@@ -93,7 +86,7 @@ Zhang L, Chang Q.
 \bibitem[Bao et~al.(2012)Bao and Cai]{baoUniformErrorEstimates2012}
 Bao W, Cai Y.
 \newblock \href{https://epubs.siam.org/doi/10.1137/110830800}{Uniform {{Error Estimates}} of {{Finite Difference Methods}} for the {{Nonlinear Schr{\"o}dinger Equation}} with {{Wave Operator}}}\allowbreak[J].
-\newblock Siam J Numer Anal, 2012.
+\newblock SIAM J Numer Anal, 2012.
 
 \bibitem[Cheng et~al.(2018)Cheng and Wu]{chengSeveralConservativeCompact2018}
 Cheng X, Wu F.
@@ -108,7 +101,7 @@ Brugnano L, Zhang C, Li D.
 \bibitem[Li et~al.(1995)Li and {Vu-Quoc}]{liFiniteDifferenceCalculus1995}
 Li S, {Vu-Quoc} L.
 \newblock \href{https://epubs.siam.org/doi/10.1137/0732083}{Finite {{Difference Calculus Invariant Structure}} of a {{Class}} of {{Algorithms}} for the {{Nonlinear Klein}}{\textendash}{{Gordon Equation}}}\allowbreak[J].
-\newblock Siam J Numer Anal, 1995, 32\allowbreak (6): 1839-1875.
+\newblock SIAM J Numer Anal, 1995, 32\allowbreak (6): 1839-1875.
 
 \bibitem[Li et~al.(2018)Li and Zhao]{liFastEnergyConserving2018}
 Li M, Zhao Y~L.
@@ -123,7 +116,7 @@ Karakashian O, Makridakis C.
 \bibitem[Zhang et~al.(2017)Zhang, Yu, Li, and Li]{zhangConservativeLocalDiscontinuous2017}
 Zhang R, Yu X, Li M, et~al.
 \newblock \href{https://doi.org/10.1007/s11425-016-9118-x}{A conservative local discontinuous {{Galerkin}} method for the solution of nonlinear {{Schr{\"o}dinger}} equation in two dimensions}\allowbreak[J].
-\newblock Science China Mathematics, 2017, 60\allowbreak (12): 2515-2530.
+\newblock Sci China Math, 2017, 60\allowbreak (12): 2515-2530.
 
 \bibitem[Gong et~al.(2017)Gong, Wang, Wang, and Cai]{gongConservativeFourierPseudospectral2017}
 Gong Y, Wang Q, Wang Y, et~al.
@@ -260,10 +253,15 @@ Cheng Q, Shen J, Yang X.
 \newblock \href{https://doi.org/10.1007/s10915-018-0832-5}{Highly {{Efficient}} and {{Accurate Numerical Schemes}} for the {{Epitaxial Thin Film Growth Models}} by {{Using}} the {{SAV Approach}}}\allowbreak[J].
 \newblock J Sci Comput, 2019, 78\allowbreak (3): 1467-1487.
 
-\bibitem[Gong et~al.(2019)Gong, Zhao, and Wang]{gongArbitrarilyHighorderUnconditionally2019}
+\bibitem[Gong et~al.(2020)Gong, Zhao, and Wang]{gongArbitrarilyHighorderUnconditionally2020}
 Gong Y, Zhao J, Wang Q.
-\newblock \href{http://arxiv.org/abs/1907.04254}{Arbitrarily {{High-order Unconditionally Energy Stable Schemes}} for {{Gradient Flow Models Using}} the {{Scalar Auxiliary Variable Approach}}: arXiv:1907.04254}\allowbreak[M].
-\newblock {arXiv}, 2019.
+\newblock \href{https://www.sciencedirect.com/science/article/pii/S0010465519303716}{Arbitrarily high-order unconditionally energy stable {{SAV}} schemes for gradient flow models}\allowbreak[J].
+\newblock Comput. Phys. Commun., 2020, 249: 107033.
+
+\bibitem[Budd et~al.(1999)Budd, Iserles, McLachlan, Quispel, and Robidoux]{buddGeometricIntegrationUsing1999}
+Budd C, Iserles A, McLachlan R~I, et~al.
+\newblock \href{https://royalsocietypublishing.org/doi/10.1098/rsta.1999.0363}{Geometric integration using discrete gradients}\allowbreak[J].
+\newblock Philosophical Transactions of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences, 1999, 357\allowbreak (1754): 1021-1045.
 
 \bibitem[Quispel et~al.(2008)Quispel and McLaren]{quispelNewClassEnergypreserving2008}
 Quispel G~R~W, McLaren D~I.
@@ -284,6 +282,12 @@ Wang P, Huang C.
 Fu Y, Cai W, Wang Y.
 \newblock \href{https://www.sciencedirect.com/science/article/pii/S0168927420301264}{Structure-preserving algorithms for the two-dimensional fractional {{Klein-Gordon-Schr{\"o}dinger}} equation}\allowbreak[J].
 \newblock Appl Numer Math, 2020, 156: 77-93.
+
+\bibitem[{孙志忠}\ 等(2021){孙志忠} and {高广花}]{SunZhiZhongFenShuJieWeiFenFangChengDeYouXianChaiFenFangFa2021}
+{孙志忠}, {高广花}.
+\newblock 分数阶微分方程的有限差分方法\allowbreak[M].
+\newblock 2 版.
+\newblock {北京}: {科学出版社}, 2021.
 
 \bibitem[Yang et~al.(2010)Yang, Liu, and Turner]{yangNumericalMethodsFractional2010}
 Yang Q, Liu F, Turner I.
@@ -359,6 +363,11 @@ Huang Y, Oberman A.
 Guo B, Pu X, Huang F.
 \newblock \href{https://www.worldscientific.com/worldscibooks/10.1142/9543}{{Fractional Partial Differential Equations and Their Numerical Solutions}}\allowbreak[M].
 \newblock {WORLD SCIENTIFIC}, 2015.
+
+\bibitem[{张晓}(2015)]{ZhangXiaoMatlabWeiFenFangChengGaoXiaoJieFaPuFangFaYuanLiYuShiXian2015}
+{张晓}.
+\newblock Matlab 微分方程高效解法：谱方法原理与实现\allowbreak[M].
+\newblock {北京}: {机械工业出版社}, 2015.
 
 \bibitem[Caffarelli et~al.(2007)Caffarelli and Silvestre]{caffarelliExtensionProblemRelated2007}
 Caffarelli L, Silvestre L.

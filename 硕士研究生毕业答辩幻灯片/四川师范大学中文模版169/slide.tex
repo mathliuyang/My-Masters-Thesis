@@ -24,7 +24,7 @@
 \author[刘洋]{\footnotesize 汇报人:刘洋 \quad 导师:冉茂华 副教授}
 \institute[四川师范大学偏微分方程与物理团队]{\footnotesize 四川师范大学偏微分方程与物理团队}
 \date{\footnotesize \vskip -10pt \today}
-% \date{2023年5月25日}
+\date{2024年5月20日}
 \usefonttheme[onlymath]{serif}%修改公式字体
 \begin{document}
 
@@ -373,14 +373,14 @@
 		\begin{equation*}
 			(-\Delta)^{\alpha / 2} u(x)=\frac{1}{h^\alpha} \sum_{k=-\infty}^{+\infty} \widehat{g}_k^{(\alpha)} u(x-k h)+O\left(h^4\right)
 			\end{equation*}
-			where
+			这里
 			\begin{equation*}
 			\widehat{g}_k^{(\alpha)}=\left\{\begin{array}{l}
 			\frac{4}{3} g_k^{(\alpha)}-\frac{1}{3 \cdot 2^\alpha} g_{\frac{k}{2}}^{(\alpha)}, k \text { is even } \\
 			\frac{4}{3} g_k^{(\alpha)}, k \text { is odd }
 			\end{array}\right.
 			\end{equation*}
-			in which
+			其中
 			\begin{equation*}
 			g_k^{(\alpha)}=\left(1-\frac{\alpha+1}{\alpha / 2+k}\right) g_{k-1}^{(\alpha)} \text { and } g_0^{(\alpha)}=\frac{\Gamma(\alpha+1)}{\Gamma^2(\alpha / 2+1)}, k=1,2, \ldots
 			\end{equation*}
@@ -488,7 +488,7 @@
 	\begin{block}{任意高阶显式保结构数值格式}
 		\textbf{\textcolor[rgb]{0.227,0.373,0.306}{研究内容:}}
 		
-		{\footnotesize 本课题拟通过将IEQ方法或SAV方法与显式RRK方法结合,为二维空间分数阶非线性薛定谔波动方程构造一类任意高阶显式守恒格式.}
+		{\footnotesize 本课题将SAV方法与显式RRK方法结合,为二维NFSWEs构造一类任意高阶显式守恒格式.}
 		
 		\textbf{\textcolor[rgb]{0.227,0.373,0.306}{可行性分析:}}
 		\begin{itemize}
@@ -499,7 +499,7 @@
 	\end{frame}
 	
 \begin{frame}\frametitle{NFSWEs的SAV重构}
-	为保证能量的正性,通过在 $\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4}$ 中添加一个正常数 $C_0$ 来修改 \eqref{eq:10} 中的能量,即
+	通过在\eqref{eq:10} 中的$\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4}$ 中添加一个正常数 $C_0$ 来保证能量的正性,即
 	\begin{align}\label{eq_SAVRRK:9_1}
 		E(t)\overset{\text{def}}{=}\left\|u_{t}(\cdot, t)\right\|^{2}+\left\|(-\Delta)^{\frac{\alpha}{4}} u(\cdot, t)\right\|^{2}+\frac{\beta}{2}\|u(\cdot, t)\|_{L^{4}}^{4} + C_0.
 	\end{align}
@@ -529,15 +529,15 @@ b(u)\overset{\text{def}}{=}\beta g(|u|^2) u / \sqrt{H(t)+C_0},
 
 
 \begin{frame}\frametitle{傅里叶拟谱离散格式}
-	对于正整数$M$和偶数正整数$N_{x}$、$N_{y}$,定义$\tau={T}/{M}$,$h_{x}={L}/{N_{x}}$,$h_{y}={L}/{N_{y}}$.令$\Omega_{h}=\left\{(x_{i}, y_{j}) \mid 0 \leq i \leq N_x-1;0 \leq j \leq N_y-1\right\}$,$\Omega_{\tau}=\left\{t_{m} \mid 0 \leq m \leq M\right\}$,$\Omega_{h}^{\tau}=\Omega_{h} \times \Omega_{\tau}$,其中$t_{m}=m \tau$,$x_{i}=i h_{x}$,$y_{j}=j h_{y}$.
-	在任意时刻$t_m$,向量形式为
+	对于正整数$M$和正偶数$N_{x}$、$N_{y}$,定义$\tau={T}/{M}$,$h_{x}={L}/{N_{x}}$,$h_{y}={L}/{N_{y}}$.令$\Omega_{h}=\left\{(x_{i}, y_{j}) \mid 0 \leq i \leq N_x-1;0 \leq j \leq N_y-1\right\}$,$\Omega_{\tau}=\left\{t_{m} \mid 0 \leq m \leq M\right\}$,$\Omega_{h}^{\tau}=\Omega_{h} \times \Omega_{\tau}$,其中$t_{m}=m \tau$,$x_{i}=i h_{x}$,$y_{j}=j h_{y}$.
+	在任意时刻$t_m$,定义向量形式
 	\begin{align}\label{eq_SAVRRK:47}
 	&U^m=\left(u_{0,0}^m, \cdots, u_{N_{x}-1,0}^m, u_{0,1}^m, \cdots, u_{N_{x}-1,1}^m, \cdots, u_{0, N_{y}-1}^m, \cdots, u_{N_{x}-1, N_{y}-1}^m\right)^{T},\\
 	&V^m=\left(v_{0,0}^m, \cdots, v_{N_{x}-1,0}^m, v_{0,1}^m, \cdots, v_{N_{x}-1,1}^m, \cdots, v_{0, N_{y}-1}^m, \cdots, v_{N_{x}-1, N_{y}-1}^m\right)^{T},\\
 	&W^m=w^m.
 	\end{align}
 	
-	对于定义在$\Omega_{h}$上的任意网格函数$u$和$v$,定义离散内积和相关的离散范数如下
+	对于定义在$\Omega_{h}$上的任意网格函数$u$和$v$,离散内积和相关的离散范数如下
 	\begin{align}\label{eq_SAVRRK:48}
 	(u, v)=h_{x} h_{y} \sum_{i=0}^{N_{x}-1} \sum_{j=0}^{N_{y}-1} u_{i, j} \bar{v}_{i, j},\quad\|u\|=(u, u)^{\frac{1}{2}},\quad\|u\|_{\infty}=\sup _{\left(x_{i}, y_{j}\right) \in \Omega_{h}}\left|u_{i, j}\right|.
 	\end{align}
@@ -546,7 +546,7 @@ b(u)\overset{\text{def}}{=}\beta g(|u|^2) u / \sqrt{H(t)+C_0},
 
 
 \begin{frame}\frametitle{傅里叶拟谱离散格式}
-	设$\left(x_{i}, y_{j}\right)$为傅里叶插值点.定义$u_{N}(x, y)$为$u(x, y)$的插值多项式函数,其中
+	设$\left(x_{i}, y_{j}\right)$为傅里叶插值点,$u_{N}(x, y)$为$u(x, y)$的插值多项式函数,其中
 \begin{align}\label{eq_SAVRRK:50}
 u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} / 2} \tilde{u}_{k_{1}, k_{2}} e^{\mathrm{i}\mu\left( k_{1} (x+L)+k_{2}(y+L)\right)},
 \end{align}
@@ -554,7 +554,9 @@ u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} /
 \begin{align}\label{eq_SAVRRK:51}
 \tilde{u}_{k_{1}, k_{2}}=\frac{1}{N_{x} c_{k_{1}}} \frac{1}{N_{y} c_{k_{2}}} \sum_{l_1=0}^{N_{x}-1} \sum_{l_2=0}^{N_{y}-1} u(x_{l_1}, y_{l_2}) e^{-\mathrm{i}\mu\left( k_{1}(x_{l_1}+L)+k_{2}(y_{l_2}+L)\right)},
 \end{align}
-其中$c_{k_{1}}=1$对于$\left|k_{1}\right|<N_{x}/2$,$c_{k_{2}}=1$对于$\left|k_{2}\right|<N_{y}/2$,$c_{k_{1}}=2$对于$k_{1}=\pm N_{x}/2$,$c_{k_{2}}=2$对于$k_{2}=\pm N_{y}/2$.
+% 其中$c_{k_{1}}=1$对于$\left|k_{1}\right|<N_{x}/2$,$c_{k_{2}}=1$对于$\left|k_{2}\right|<N_{y}/2$,$c_{k_{1}}=2$对于$k_{1}=\pm N_{x}/2$,$c_{k_{2}}=2$对于$k_{2}=\pm N_{y}/2$.
+其中
+\begin{align}c_{k_1} = \begin{cases} 1, & \text{if } |k_1| < \frac{N_x}{2} \\ 2, & \text{if } |k_1| = \frac{N_x}{2} \end{cases} \quad , \quad c_{k_2} = \begin{cases} 1, & \text{if } |k_2| < \frac{N_y}{2} \\ 2, & \text{if } |k_2| = \frac{N_y}{2} \end{cases}.\end{align}
 
 \end{frame}
 
@@ -612,7 +614,7 @@ u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} /
 
 \begin{frame}\frametitle{显式SAV-RRK格式}
 
-基于SAV方法的半离散系统\eqref{eq_SAVRRK:3-9}-\eqref{eq_SAVRRK:3-11}可以重写为：
+半离散系统\eqref{eq_SAVRRK:3-9}-\eqref{eq_SAVRRK:3-11}可以表示为：
 \begin{equation}
 \left\{\begin{array}{l}
 \bm{y}_t=\bm{f}(\bm{y}),\quad t \in(0, T],\\
@@ -1184,7 +1186,7 @@ u_{N}(x, y)=\sum_{k_{1}=-N_{x} / 2}^{N_{x} / 2} \sum_{k_{2}=-N_{y} / 2}^{N_{y} /
 	\begin{block}{同时保持原始能量和原始质量守恒的数值格式}
 		\textbf{\textcolor[rgb]{0.227,0.373,0.306}{研究内容:}}
 		
-		{\footnotesize 本课题拟首先通过分数阶Laplacian泛函的变分导数将NFSWEs重新表述为哈密顿系统.然后结合PAVF系列方法为二维NFSWEs构造能够同时保原始能量和原始质量的守恒格式.}
+		{\footnotesize 本课题首先通过分数阶Laplacian泛函的变分导数将NFSWEs重新表述为哈密顿系统.然后结合PAVF系列方法为二维NFSWEs构造能够同时保原始能量和原始质量的守恒格式.}
 		
 		\textbf{\textcolor[rgb]{0.227,0.373,0.306}{可行性分析:}}
 		\begin{itemize}
@@ -2049,20 +2051,20 @@ Y=\left(\varPhi^{T}, \Psi^{T}, P^{T}, Q^{T}\right),
 \end{frame}
 
 \begin{frame}{小结}
-	在本章中,首先重构分数非线性薛定谔波动方程为一个等效的哈密顿系统.
+	在本章中,首先重构 NFSWEs 为一个等效的哈密顿系统.
 通过将分区平均向量场加方法与傅里叶拟谱方法结合,基于得到的哈密顿系统构建了一个保结构格式.
-理论分析和数值结果表明,所提出的方法能够有效地保持原始能量和原始质量守恒.
+理论分析和数值结果表明,所提出的方法能够有效地\textcolor[rgb]{0.227,0.373,0.306}{保持原始能量和原始质量守恒.}
 \end{frame}
 
 \section{总结展望}
 \begin{frame}{总结展望}
 	\begin{block}{主要工作}
 			\begin{itemize}
-				\item \textcolor[rgb]{0.227,0.373,0.306}{SAV-RRK：} 通过SAV方法将NFSWEs的非二次能量转化为新变量的二次形式，结合显式RK方法和松弛技术，提出了一种任意高阶的显式保结构数值格式。
-				\item \textcolor[rgb]{0.227,0.373,0.306}{FPAVF-P：} 成功推导了具有周期边界条件的二维NFSWEs的\textcolor[rgb]{0.227,0.373,0.306}{哈密顿形式}，引入了分区平均向量场（PAVF）方法，并采用PAVF-P方法构建了能够同时守恒原始能量和质量的数值格式。
-				\item \textcolor[rgb]{0.227,0.373,0.306}{谱方法：} 本文使用了傅里叶拟谱方法，作为空间离散方法，充分利用了其非局部性质和傅里叶基函数的特性，通过快速傅里叶变换（FFT）提高了计算效率。
+				\item \textcolor[rgb]{0.227,0.373,0.306}{SAV-RRK：} 通过SAV方法将NFSWEs的非二次能量转化为新变量的二次形式,结合显式RK方法和松弛技术,提出了一种任意高阶的显式保结构数值格式.
+				\item \textcolor[rgb]{0.227,0.373,0.306}{FPAVF-P：} 成功推导了具有周期边界条件的二维NFSWEs的\textcolor[rgb]{0.227,0.373,0.306}{哈密顿形式},引入了分区平均向量场（PAVF）方法,并采用PAVF-P方法构建了能够同时守恒原始能量和质量的数值格式.
+				\item \textcolor[rgb]{0.227,0.373,0.306}{谱方法：} 本文使用了傅里叶拟谱方法,作为空间离散方法,充分利用了其非局部性质和傅里叶基函数的特性,通过快速傅里叶变换（FFT）提高了计算效率.
 			\end{itemize}
-			% 综合而言，本文在NFSWEs数值求解方面取得了新的研究成果，提出的方法在长时间仿真具有良好的适用性，为未来相关研究提供了有益的参考。
+			% 综合而言,本文在NFSWEs数值求解方面取得了新的研究成果,提出的方法在长时间仿真具有良好的适用性,为未来相关研究提供了有益的参考.
 		\end{block}
 		
 \end{frame}

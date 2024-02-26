@@ -28,45 +28,45 @@ Database file #1: /Users/turingscat/Zotero/better-bibtex/mylibrary.bib
 Warning--empty author and editor in liIntroductionFractionalCalculus2015
 Warning--empty author and editor in HandbookDifferentialEquations2008
 Warning--empty author and editor in brychkovIndefiniteIntegrals2008
-You've used 77 entries,
+You've used 79 entries,
             5374 wiz_defined-function locations,
-            1734 strings with 32038 characters,
-and the built_in function-call counts, 405015 in all, are:
-= -- 11460
-> -- 44327
-< -- 54447
-+ -- 16093
-- -- 3871
-* -- 3752
-:= -- 56567
-add.period$ -- 230
-call.type$ -- 77
-change.case$ -- 223
-chr.to.int$ -- 13130
-cite$ -- 83
-duplicate$ -- 1834
-empty$ -- 4933
-format.name$ -- 2088
-if$ -- 105579
+            1749 strings with 32468 characters,
+and the built_in function-call counts, 415434 in all, are:
+= -- 11664
+> -- 45476
+< -- 55972
++ -- 16556
+- -- 3975
+* -- 3826
+:= -- 58149
+add.period$ -- 235
+call.type$ -- 79
+change.case$ -- 226
+chr.to.int$ -- 13533
+cite$ -- 85
+duplicate$ -- 1842
+empty$ -- 5025
+format.name$ -- 2145
+if$ -- 108232
 int.to.chr$ -- 1
-int.to.str$ -- 78
+int.to.str$ -- 80
 missing$ -- 0
-newline$ -- 399
-num.names$ -- 222
-pop$ -- 19123
+newline$ -- 408
+num.names$ -- 228
+pop$ -- 19484
 preamble$ -- 1
-purify$ -- 77
+purify$ -- 79
 quote$ -- 0
-skip$ -- 41845
+skip$ -- 42931
 stack$ -- 0
-substring$ -- 19210
-swap$ -- 156
-text.length$ -- 1571
+substring$ -- 19716
+swap$ -- 155
+text.length$ -- 1607
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 819
+type$ -- 837
 warning$ -- 3
-while$ -- 1696
+while$ -- 1738
 width$ -- 0
-write$ -- 1120
+write$ -- 1146
 (There were 3 warnings)
