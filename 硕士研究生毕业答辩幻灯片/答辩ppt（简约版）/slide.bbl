@@ -1,0 +1,68 @@
+\begin{thebibliography}{10}
+
+\bibitem{caiPartitionedAveragedVector2018}
+{\sc Cai, W., Li, H., and Wang, Y.}
+\newblock Partitioned averaged vector field methods.
+\newblock {\em J Comput Phys 370\/} (Oct. 2018), 25--42.
+
+\bibitem{chengConvergenceEnergyconservingScheme2022}
+{\sc Cheng, X., Qin, H., and Zhang, J.}
+\newblock Convergence of an energy-conserving scheme for nonlinear space fractional {{Schr{\"o}dinger}} equations with wave operator.
+\newblock {\em J Comput Appl Math 400\/} (Jan. 2022), 113762.
+
+\bibitem{fuStructurepreservingAlgorithmsTwodimensional2020}
+{\sc Fu, Y., Cai, W., and Wang, Y.}
+\newblock Structure-preserving algorithms for the two-dimensional fractional {{Klein-Gordon-Schr{\"o}dinger}} equation.
+\newblock {\em Appl Numer Math 156\/} (Oct. 2020), 77--93.
+
+\bibitem{hairerRungeKuttaMethods2015}
+{\sc Hairer, E., and Wanner, G.}
+\newblock Runge{\textendash}{{Kutta Methods}}, {{Explicit}}, {{Implicit}}.
+\newblock In {\em Encyclopedia of {{Applied}} and {{Computational Mathematics}}}. {Springer}, {Berlin, Heidelberg}, 2015, pp.~1282--1285.
+
+\bibitem{huEfficientEnergyPreserving2022}
+{\sc Hu, D., Cai, W., Gu, X.-M., and Wang, Y.}
+\newblock Efficient energy preserving {{Galerkin}}{\textendash}{{Legendre}} spectral methods for fractional nonlinear {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Appl Numer Math 172\/} (Feb. 2022), 608--628.
+
+\bibitem{ketchesonRelaxationRungeKutta2019}
+{\sc Ketcheson, D.~I.}
+\newblock Relaxation {{Runge--Kutta Methods}}: {{Conservation}} and {{Stability}} for {{Inner-Product Norms}}.
+\newblock {\em Siam J Numer Anal 57}, 6 (Jan. 2019), 2850--2870.
+
+\bibitem{liFastEnergyConserving2018}
+{\sc Li, M., and Zhao, Y.-L.}
+\newblock A fast energy conserving finite element method for the nonlinear fractional {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Appl Math Comput 338\/} (Dec. 2018), 758--773.
+
+\bibitem{panFourthorderDifferenceScheme2022}
+{\sc Pan, K., Zeng, J., He, D., and Zhang, S.}
+\newblock A fourth-order difference scheme for the fractional nonlinear {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Appl Anal 101}, 8 (May 2022), 2886--2902.
+
+\bibitem{ranLinearlyImplicitConservative2016}
+{\sc Ran, M., and Zhang, C.}
+\newblock A linearly implicit conservative scheme for the fractional nonlinear {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Int J Comput Math 93}, 7 (July 2016), 1103--1118.
+
+\bibitem{shuEfficientImplementationEssentially1988}
+{\sc Shu, C.-W., and Osher, S.}
+\newblock Efficient implementation of essentially non-oscillatory shock-capturing schemes.
+\newblock {\em J Comput Phys 77}, 2 (Aug. 1988), 439--471.
+
+\bibitem{wangUnconditionalEnergyDissipation2021}
+{\sc Wang, N., Li, M., and Huang, C.}
+\newblock Unconditional {{Energy Dissipation}} and {{Error Estimates}} of the {{SAV Fourier Spectral Method}} for {{Nonlinear Fractional Generalized Wave Equation}}.
+\newblock {\em J Sci Comput 88}, 1 (July 2021), 19.
+
+\bibitem{wangStructurepreservingNumericalMethods2018}
+{\sc Wang, P., and Huang, C.}
+\newblock Structure-preserving numerical methods for the fractional {{Schr{\"o}dinger}} equation.
+\newblock {\em Appl Numer Math 129\/} (July 2018), 137--158.
+
+\bibitem{zhangHighorderStructurepreservingDifference2023}
+{\sc Zhang, X., Ran, M., Liu, Y., and Zhang, L.}
+\newblock A high-order structure-preserving difference scheme for generalized fractional {{Schr{\"o}dinger}} equation with wave operator.
+\newblock {\em Math Comput Simulat 210\/} (Aug. 2023), 532--546.
+
+\end{thebibliography}

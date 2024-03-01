@@ -323,7 +323,7 @@ E_{\gamma}^{m+1}  = & \|V_{\gamma}^{m}\|^2+\|D^\frac{\alpha}{2} U_{\gamma}^{m}\|
 \begin{equation}\label{eq_SAVRRK:r1}\small
 \gamma_m \!=\! \frac{\big(\!V_{\gamma}^{m},\sum\limits_{i=1}^{s}b_if_{mi}^2\!\big)\!+\!\big(\!\sum\limits_{i=1}^{s}b_if_{mi}^2,V_{\gamma}^{m}\!\big)\!-\!\big(\!U_{\gamma}^{m},D^{\alpha}\big(\sum\limits_{i=1}^{s}b_if_{mi}^1\big)\!\big)\!-\!\big(\!\sum\limits_{i=1}^{s}b_if_{mi}^1, D^{\alpha} U_{\gamma}^{m}\!\big)\!+\!2W_{\gamma}^{m}\sum\limits_{i=1}^{s}b_if_{mi}^3}{-\tau\big[\big\|\sum\limits_{i=1}^{s}b_if_{mi}^2\big\|^2+\big\|D^\frac{\alpha}{2}\big(\sum\limits_{i=1}^{s}b_if_{mi}^1\big)\big\|^2+\big(\sum\limits_{i=1}^{s}b_if_{mi}^3\big)^2\big]} .
 \end{equation}
-这意味着当$\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$时,$\gamma_m$的值也可以通过式\eqref{eq_SAVRRK:r1}显示计算确定.
+这意味着当$\sum\limits_{i=1}^s b_i \bm{f}_{m i}\neq 0$时,$\gamma_m$的值也可以通过式\eqref{eq_SAVRRK:r1}显式计算确定.
 
 实际上,定义在\eqref{eq_SAVRRK:4-6}中的$\gamma_m$的值在$\tau\rightarrow 0$时接近于$1$,这将在\ref{Section_SAVRRK: 5-1}节中进一步讨论.
 因此,显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}是良定的.此外,可以证明该方法具有以下定理中描述的能量守恒律.
@@ -534,7 +534,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 
 不失一般性的,在计算中使用了以下的显式RK方法\cite{shuEfficientImplementationEssentially1988}:
 \begin{enumerate}
-\item $\operatorname{RK}(2,2)$:两级二阶Heun方法%\cite{shuEfficientImplementationEssentially1988}.
+\item $\operatorname{RK}(2,2)$:二级二阶Heun方法%\cite{shuEfficientImplementationEssentially1988}.
 \begin{equation}
 \begin{array}{c|cc}
 0 & 0 & 0 \\
