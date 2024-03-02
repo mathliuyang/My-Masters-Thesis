@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  29 FEB 2024 13:54
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  2 MAR 2024 15:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -208,6 +208,23 @@ File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
 ) (./setup/SiCNUformat.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks16
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 ) (./setup/ccmap.sty
 
 LaTeX Warning: You have requested package `./setup/ccmap',
@@ -570,9 +587,7 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 107.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
-))
+)
 \Gin@req@height=\dimen278
 \Gin@req@width=\dimen279
 )
@@ -622,13 +637,7 @@ LaTeX Warning: Command \@xhline  has changed.
                Check if current package is valid.
 
 \ar@cellbox=\box68
-) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
- (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: xetex.def on input line 149.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 \everycr=\toks47
 \minrowclearance=\skip103
 \rownum=\count339
@@ -826,82 +835,82 @@ LaTeX Warning: Label `eq_SAVRRK:54' multiply defined.
 ) (./chap/chap4.aux) (./chap/chap5.aux) (./chap/ref.aux) (./chap/thanks.aux) (./chap/ach.aux))
 \openout1 = `四川师范大学硕士学位论文模版.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 4.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 4.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 4.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 4.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 4.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 4.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 4.
-LaTeX Font Info:    Redeclaring math accent \check on input line 4.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 4.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 4.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 4.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 4.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 4.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 5.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 5.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 5.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 5.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 5.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 5.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 5.
+LaTeX Font Info:    Redeclaring math accent \check on input line 5.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 5.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 5.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 5.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 5.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 5.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 4.
+(Font)              `operators' in the math version `normal' on input line 5.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/ptm/m/n on input line 4.
+(Font)                  OT1/cmr/m/n --> TU/ptm/m/n on input line 5.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 4.
+(Font)              `operators' in the math version `bold' on input line 5.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ptm/m/n on input line 4.
+(Font)                  OT1/cmr/bx/n --> TU/ptm/m/n on input line 5.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 4.
+(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/ptm/m/it on input line 4.
+(Font)                  OT1/cmr/m/it --> TU/ptm/m/it on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/ptm/b/n on input line 4.
+(Font)                  OT1/cmr/bx/n --> TU/ptm/b/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 4.
+(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 4.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 5.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/ptm/m/n --> TU/ptm/b/n on input line 4.
+(Font)                  TU/ptm/m/n --> TU/ptm/b/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/ptm/b/it on input line 4.
+(Font)                  OT1/cmr/bx/it --> TU/ptm/b/it on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/phv/b/n on input line 4.
+(Font)                  OT1/cmss/bx/n --> TU/phv/b/n on input line 5.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/b/n on input line 4.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/b/n on input line 5.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: Fixing longtable code of `floatrow' package.
 Package caption Info: End \AtBeginDocument code.
@@ -911,7 +920,7 @@ Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 \flrow@LT@prelastfoot=\box81
 \c@FBLTpage=\count364
 )
-Package hyperref Info: Link coloring OFF on input line 4.
+Package hyperref Info: Link coloring OFF on input line 5.
  (./四川师范大学硕士学位论文模版.out) (./四川师范大学硕士学位论文模版.out)
 \@outlinefile=\write3
 \openout3 = `四川师范大学硕士学位论文模版.out'.
@@ -1009,21 +1018,21 @@ Package fontspec Info: Font family 'SongtiSCLight(1)' created for font 'Songti
 (fontspec)             Light/BI/OT:language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
 File: setup/flage.eps Graphic file (type eps)
 <setup/flage.eps>
 
 Package fontspec Info: Could not resolve font "PingFang SC/I" (it probably
 (fontspec)             doesn't exist).
 
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 7.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 8.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
@@ -1044,13 +1053,13 @@ Package fontspec Info: Font family 'PingFangSC(0)' created for font 'PingFang
 (fontspec)             SC/BI/OT:script=hani;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 7 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 8 replaced by U+FFFD.
 File: setup/logo.eps Graphic file (type eps)
 <setup/logo.eps>
 
@@ -1083,7 +1092,7 @@ Package fontspec Info: Font family 'STFangsong(0)' created for font
 
 
 LaTeX Font Warning: Font shape `TU/STFangsong(0)/b/n' undefined
-(Font)              using `TU/STFangsong(0)/m/n' instead on input line 7.
+(Font)              using `TU/STFangsong(0)/m/n' instead on input line 8.
 
 [1
 
@@ -1293,7 +1302,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Package fontspec Warning: Font "STFangsong" does not contain requested Script
 (fontspec)                "CJK".
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 84.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 88.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [7]) [8]
@@ -1311,171 +1320,170 @@ LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
 
 
 ] [10] [11] [12]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 194.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 180.
  [13] [14]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 323.
+LaTeX Font Warning: Command \small invalid in math mode on input line 310.
 
-LaTeX Font Info:    Calculating math sizes for size <> on input line 325.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 312.
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <> on input line 325.
+(Font)              <> on input line 312.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <0.7> on input line 325.
+(Font)              <0.7> on input line 312.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <0.5> on input line 325.
+(Font)              <0.5> on input line 312.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 325.
+(Font)              size <5> substituted on input line 312.
 
 [15]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 360.
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 347.
  [16]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 421.
+LaTeX Font Warning: Command \small invalid in math mode on input line 406.
 
 
-Overfull \hbox (1.83539pt too wide) detected at line 423
+Overfull \hbox (1.83539pt too wide) detected at line 408
 \OML/cmm/m/it/10.95 ^^M \OT1/cmr/m/n/10.95 =  []\OML/cmm/m/it/10.95 :
  []
 
 [17]
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 446.
- [18]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 466.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 431.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 451.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [19] [20]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 585.
-
+) [18] [19]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 569.
+ [20]
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.52812> not available
-(Font)              size <8> substituted on input line 603.
+(Font)              size <8> substituted on input line 587.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 603.
+(Font)              size <8> substituted on input line 587.
 
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7.52812> on input line 603.
+(Font)              <7.52812> on input line 587.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 603.
+(Font)              size <8> substituted on input line 587.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <7.52812> not available
-(Font)              size <8> substituted on input line 603.
+(Font)              size <8> substituted on input line 587.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 603.
+(Font)              size <8> substituted on input line 587.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 603.
+(Font)              size <8> substituted on input line 587.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 603.
+(Font)              size <8> substituted on input line 587.
 
-
-Underfull \vbox (badness 2828) has occurred while \output is active []
-
- [21]
 File: ./figures/exp1_r.eps Graphic file (type eps)
 <./figures/exp1_r.eps>
 File: ./figures/exp1_s.eps Graphic file (type eps)
 <./figures/exp1_s.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 636--641
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 620--625
  [][][] 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
 File: ./figures/exp1_energy3.eps Graphic file (type eps)
 <./figures/exp1_energy3.eps>
 File: ./figures/exp1_energy6.eps Graphic file (type eps)
 <./figures/exp1_energy6.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 652--655
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 636--639
  [][][] 
  []
 
@@ -1484,12 +1492,15 @@ File: ./figures/exp1_energy9.eps Graphic file (type eps)
 File: ./figures/exp1_energy2.eps Graphic file (type eps)
 <./figures/exp1_energy2.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 659--664
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 643--648
  [][][][] 
  []
 
-[22]
-Overfull \hbox (2.05618pt too wide) detected at line 673
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Overfull \hbox (2.05618pt too wide) detected at line 657
 \OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [] [] \OML/cmm/m/it/12 ; u[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [](\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; t\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 
  \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 ; T\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ;
  []
@@ -1503,7 +1514,7 @@ File: ./figures/exp2_r.eps Graphic file (type eps)
 File: ./figures/exp2_s.eps Graphic file (type eps)
 <./figures/exp2_s.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 715--720
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 699--704
  [][][] 
  []
 
@@ -1512,7 +1523,7 @@ File: ./figures/exp2_energy3.eps Graphic file (type eps)
 File: ./figures/exp2_energy6.eps Graphic file (type eps)
 <./figures/exp2_energy6.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 732--735
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 715--718
  [][][] 
  []
 
@@ -1521,7 +1532,7 @@ File: ./figures/exp2_energy9.eps Graphic file (type eps)
 File: ./figures/exp2_energy2.eps Graphic file (type eps)
 <./figures/exp2_energy2.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 739--744
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 722--727
  [][][][] 
  []
 
@@ -1534,7 +1545,7 @@ File: ./figures/exp3_energy3.eps Graphic file (type eps)
 File: ./figures/exp3_energy6.eps Graphic file (type eps)
 <./figures/exp3_energy6.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 799--802
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 782--785
  [][][] 
  []
 
@@ -1543,7 +1554,7 @@ File: ./figures/exp3_energy9.eps Graphic file (type eps)
 File: ./figures/exp3_energy2.eps Graphic file (type eps)
 <./figures/exp3_energy2.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 806--811
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 789--794
  [][][][] 
  []
 
@@ -1553,7 +1564,7 @@ File: ./figures/exp4_energy3.eps Graphic file (type eps)
 File: ./figures/exp4_energy6.eps Graphic file (type eps)
 <./figures/exp4_energy6.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 873--876
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 856--859
  [][][] 
  []
 
@@ -1562,7 +1573,7 @@ File: ./figures/exp4_energy9.eps Graphic file (type eps)
 File: ./figures/exp4_energy2.eps Graphic file (type eps)
 <./figures/exp4_energy2.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 880--885
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 863--868
  [][][][] 
  []
 
@@ -1579,16 +1590,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-] [30] [31] [32]
-Underfull \vbox (badness 3364) has occurred while \output is active []
-
- [33] [34] [35]
+] [30] [31] [32] [33] [34] [35]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: $\bullet $ on input line 358.
+             The label is: $\bullet $ on input line 347.
 
 
-Underfull \vbox (badness 4132) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36] [37]
 File: ./figure/exp1_s1.5.eps Graphic file (type eps)
@@ -1618,7 +1626,7 @@ File: ./figure/exp1_M1.9.eps Graphic file (type eps)
 File: ./figure/exp1_M2.eps Graphic file (type eps)
 <./figure/exp1_M2.eps>
 
-Overfull \hbox (8.17216pt too wide) in paragraph at lines 549--564
+Overfull \hbox (8.17216pt too wide) in paragraph at lines 519--543
  [][][] 
  []
 
@@ -1626,17 +1634,17 @@ Overfull \hbox (8.17216pt too wide) in paragraph at lines 549--564
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40]
-Overfull \hbox (2.94746pt too wide) in paragraph at lines 571--586
+Overfull \hbox (2.94746pt too wide) in paragraph at lines 550--574
  [][][] 
  []
 
 
-Overfull \hbox (2.94746pt too wide) in paragraph at lines 593--608
+Overfull \hbox (2.94746pt too wide) in paragraph at lines 581--605
  [][][] 
  []
 
 
-Overfull \hbox (2.94746pt too wide) in paragraph at lines 615--630
+Overfull \hbox (2.94746pt too wide) in paragraph at lines 612--636
  [][][] 
  []
 
@@ -1830,14 +1838,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版.out' has not changed.
-(rerunfilecheck)             Checksum: 150E6843A15575DC5DD835E943E8105E;3810.
+(rerunfilecheck)             Checksum: AFAC63FBEDEE6A614EAD761EC0258587;3826.
  )
-(\end occurred when \ifx on line 25 was incomplete) 
+(\end occurred when \ifx on line 26 was incomplete) 
 Here is how much of TeX's memory you used:
- 23886 strings out of 476683
- 516322 string characters out of 5804047
+ 24236 strings out of 476683
+ 519411 string characters out of 5804047
  1874018 words of memory out of 5000000
- 43460 multiletter control sequences out of 15000+600000
+ 43807 multiletter control sequences out of 15000+600000
  574391 words of font info for 202 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,17n,97p,1222b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s

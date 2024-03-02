@@ -30,7 +30,7 @@
 \title[非线性分数阶薛定谔波动方程的两类保结构数值方法
 ]{非线性分数阶薛定谔波动方程的两类保结构数值方法}
 \author[刘洋]{\footnotesize 汇报人:刘洋 \quad 导师:冉茂华\quad 副教授}
-\institute[计算数学]{\footnotesize 计算数学}
+\institute[偏微分方程数值解]{\footnotesize 计算数学}
 \date{\footnotesize \vskip -10pt \today}
 \date{2024年3月20日}
 \usefonttheme[onlymath]{serif}%修改公式字体
@@ -490,8 +490,8 @@
 				\end{table}%
 				\end{frame}
 	
-\section{研究内容}
-\subsection{SAV-RRK算法}
+% \section{研究内容}
+\section{SAV-RRK算法}
 \begin{frame}{研究内容及其可行性研究}
 	\begin{block}{任意高阶显式保结构数值格式}
 		\textbf{\textcolor[rgb]{0.227,0.373,0.306}{研究内容:}}
@@ -756,33 +756,36 @@ E(t)=E(0), \quad 0 \leq t \leq T ,
 	\item 增量方向技术(IDT)的角度:\quad$\bm{y}_\gamma^{m+1}$被视为对$\bm{y}\left(\hat{t}_m+\tau\right)$的近似,当$m \geq 0$,$\hat{t}_m=t_m$.
 	\item 松弛技术(RT)的角度:\quad$\bm{y}_\gamma^{m+1}$被视为对$\bm{y}\left(\hat{t}_m+\gamma_m \tau\right)$的近似,当$m>0$时,$\hat{t}_m$可能不等于$t_m$.
 	\end{itemize}
-	
-\end{frame}
-
-\begin{frame}\frametitle{显式SAV-RRK方法的截断误差}
 	\noindent 值得注意的是, 对数值解$\bm{y}_\gamma^{m+1}$的不同解释可能导致不同的收敛结果.
 	\begin{theorem}\label{thm_SAVRRK:5_4}
-	设显式SAV-RK方法\eqref{eq_SAVRRK:4-31}的阶数为$p~(p \geq 2)$, 则有
-	\begin{itemize}
-	\item 对于IDT,显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的阶数为$p-1$.
-	\item 对于RT,显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的阶数为$p$.
-	\end{itemize}
-	\end{theorem}
+		设显式SAV-RK方法\eqref{eq_SAVRRK:4-31}的阶数为$p~(p \geq 2)$, 则有
+		\begin{itemize}
+		\item 对于IDT,显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的阶数为$p-1$.
+		\item 对于RT,显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的阶数为$p$.
+		\end{itemize}
+		\end{theorem}
+	\end{frame}
+
+\begin{frame}\frametitle{显式SAV-RRK方法的截断误差}
+	
 	\begin{remark}\label{rk_SAVRRK:5_5}
 		在计算中,IDT方法的阶数可能高于预期,甚至可以达到RT方法的阶数,这可以在例\ref{exp_SAVRRK:1}中观察到.
 		\end{remark}
+		\begin{remark}\label{rk_SAVRRK:5_6}
+			本章提出的方法很容易拓展到其他类似的分数阶方程,例如非线性分数阶波动方程和分数阶Klein-Gordon-Schr{\"o}dinger方程等,详见算例\ref{exp_SAVRRK:3}-算例\ref{exp_SAVRRK:4}.
+			\end{remark}
 \end{frame}
 
 \begin{frame}\frametitle{数值算例}
 	不失一般性的,在计算中使用了以下的显式RK方法\cite{shuEfficientImplementationEssentially1988}：
 	\begin{enumerate}
-	\item $\operatorname{RK}(2,2)$：两级二阶Heun方法%\cite{shuEfficientImplementationEssentially1988}.
+	\item $\operatorname{RK}(2,2)$：二级二阶Heun方法%\cite{shuEfficientImplementationEssentially1988}.
 	\begin{equation}
 	\begin{array}{c|cc}
 	0 & 0 & 0 \\
 	\frac{2}{3} & \frac{2}{3} & 0 \\
 	\hline & \frac{1}{4} & \frac{3}{4}
-	\end{array}
+	\end{array}.
 	\end{equation}
 		
 	\item $\mathrm{RK}(3,3)$：三级三阶Heun方法%\cite{shuEfficientImplementationEssentially1988}.
@@ -793,7 +796,7 @@ E(t)=E(0), \quad 0 \leq t \leq T ,
 	\frac{1}{3} & \frac{1}{3} & 0 & 0 \\
 	\frac{2}{3} & 0 & \frac{2}{3} & 0 \\
 	\hline & \frac{1}{4} & 0 & \frac{3}{4}
-	\end{array}
+	\end{array}.
 	\end{equation}
 	\end{enumerate}
 \end{frame}
@@ -809,7 +812,7 @@ E(t)=E(0), \quad 0 \leq t \leq T ,
 	\frac{1}{2} & \frac{\sqrt{2}-1}{2} & 1-\frac{\sqrt{2}}{2} & 0 & 0 \\
 	1 & 0 & -\frac{\sqrt{2}}{2} & 1+\frac{\sqrt{2}}{2} & 0 \\
 	\hline & \frac{1}{6} & \frac{2-\sqrt{2}}{6} & \frac{2+\sqrt{2}}{6} & \frac{1}{6}
-	\end{array}
+	\end{array}.
 	\end{equation}
 	\end{enumerate}
 \end{frame}
@@ -820,7 +823,6 @@ E(t)=E(0), \quad 0 \leq t \leq T ,
 	\begin{equation}
 		\text{Error}(\tau) = \|U_{N}^{M} - U_{N}^{2 M}\|_{\infty},~\text{order} = \log_{2}\left[\frac{\text{Error}(\tau)}{\text{Error}(\tau / 2)}\right].\label{eq_SAVRRK:104}
 	\end{equation}
-
 	为了展示守恒性能,定义相对能量误差：
 	\begin{equation}\label{eq_SAVRRK:105}
 		R E_{\gamma}^{m} = \left|\frac{E_{\gamma}^{m} - E_{\gamma}^{0}}{E_{\gamma}^{0}}\right|,
@@ -1014,10 +1016,8 @@ E(t)=E(0), \quad 0 \leq t \leq T ,
 		& u(x, y, 0)=\frac{1}{2} \arctan \left(\exp \left(-\sqrt{x^2+y^2}\right)\right), u_t(x, y, 0)=0,
 		\end{cases}
 		\end{equation}
-		其中 $\Omega=(-10,10) \times(-10,10)$.
+		其中 $\Omega=(-10,10) \times(-10,10)$,取势能 $F(u)=u^2\left(\frac{1}{4} u^2-\frac{1}{2}\right)$.
 		\end{myexample}
-		
-		取势能 $F(u)=u^2\left(\frac{1}{4} u^2-\frac{1}{2}\right)$.
 \end{frame}
 
 \begin{frame}%\frametitle{数值算例}
@@ -1173,7 +1173,7 @@ E(t)=E(0), \quad 0 \leq t \leq T ,
 % 	如分数Klein-Gordon-Schr{\"o}dinger方程等.	
 % \end{frame}
 
-\subsection{FPAVF-P算法}
+\section{FPAVF-P算法}
 \begin{frame}{研究内容及其可行性研究}
 	\begin{block}{同时保持原始能量和原始质量守恒的数值格式}
 		\textbf{\textcolor[rgb]{0.227,0.373,0.306}{研究内容:}}
@@ -1182,7 +1182,7 @@ E(t)=E(0), \quad 0 \leq t \leq T ,
 		
 		\textbf{\textcolor[rgb]{0.227,0.373,0.306}{可行性分析:}}
 		\begin{itemize}
-			\item {\footnotesize PAVF方法具有同时守恒多个原始不变量的性质,并已被用于构造哈密顿常微分系统的守恒格式\cite{caiPartitionedAveragedVector2018}.​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​}
+			\item {\footnotesize PAVF方法可能同时守恒多个原始不变量,已被用于构造哈密顿常微分系统的守恒格式\cite{caiPartitionedAveragedVector2018}.​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​}
 			\item {\footnotesize Wang 和 Huang \cite{wangStructurepreservingNumericalMethods2018} 提出了分数阶Laplacian泛函的变分导数并将一维分数阶非线性Schrödinger方程重新表述为哈密顿系统.
 			Fu 和 Cai \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数阶 Klein-Gordon-Schrödinger 方程的哈密顿公式,并随后构建了守恒格式.}
 			\end{itemize}
@@ -1699,11 +1699,14 @@ Y=\left(\varPhi^{T}, \Psi^{T}, P^{T}, Q^{T}\right),
 
 \begin{frame}{数值算例}
 	\begin{myexample}\label{exp_PAVF:4}
-		考虑带有初始值的二维非线性分数薛定谔波动方程 ：
+		考虑具有以下初始值的二维非线性分数薛定谔波动方程 ：
 		\begin{equation}\label{eq_PAVF_110}
-		u(x,y, 0)=\mbox{sech}\left(x^2+y^2\right), u_t(x,y, 0)=\sin (x+y) \mbox{sech}\left(-2(x^2+y^2)\right), (x,y,t)\in  \Omega\times[0, T],
+		\begin{aligned}
+			u(x,y, 0)&=\mbox{sech}\left(x^2+y^2\right), \\
+			u_t(x,y, 0)&=\sin (x+y) \mbox{sech}\left(-2(x^2+y^2)\right),
+		\end{aligned}
 		\end{equation}
-		其中 $\Omega=[-5,5] \times[-5,5]$.
+		这里$(x,y,t)\in  \Omega\times[0, T]$, 其中 $\Omega=[-5,5] \times[-5,5]$.
 		\end{myexample}
 \end{frame}
 

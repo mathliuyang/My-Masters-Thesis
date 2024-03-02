@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  29 FEB 2024 15:08
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  2 MAR 2024 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1223,7 +1223,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 ] (./slide.toc) [17
 
-] (./slide.toc) [18
+] [18
 
 ] [19
 
@@ -1232,8 +1232,6 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ] [21
 
 ] [22
-
-] [23
 
 ]
 Overfull \hbox (14.36084pt too wide) detected at line 576
@@ -1245,7 +1243,7 @@ Overfull \hbox (10.33218pt too wide) detected at line 576
 []
  []
 
-[24
+[23
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
@@ -1263,7 +1261,9 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
 Overfull \vbox (2.32474pt too high) detected at line 596
  []
 
-[25
+[24
+
+] [25
 
 ] [26
 
@@ -1272,8 +1272,6 @@ Overfull \vbox (2.32474pt too high) detected at line 596
 ] [28
 
 ] [29
-
-] [30
 
 ]
 Overfull \hbox (3.15955pt too wide) detected at line 705
@@ -1289,7 +1287,9 @@ Overfull \hbox (18.88261pt too wide) detected at line 705
  []
 
 LaTeX Font Info:    Calculating math sizes for size <> on input line 705.
-[31
+[30
+
+] [31
 
 ] [32
 
@@ -1301,25 +1301,23 @@ LaTeX Font Info:    Calculating math sizes for size <> on input line 705.
 
 ] [36
 
-] [37
-
 ]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: 3 on input line 815.
+             The label is: 3 on input line 818.
 
-[38
+[37
+
+] [38
 
 ] [39
 
-] [40
-
 ]
-Overfull \hbox (16.43776pt too wide) in paragraph at lines 869--869
+Overfull \hbox (16.43776pt too wide) in paragraph at lines 871--871
  [][][][] 
  []
 
-[41
+[40
 
 ]
 File: ./figures/exp1_r.eps Graphic file (type eps)
@@ -1327,11 +1325,11 @@ File: ./figures/exp1_r.eps Graphic file (type eps)
 File: ./figures/exp1_s.eps Graphic file (type eps)
 <./figures/exp1_s.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 887--887
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 889--889
  [][] 
  []
 
-[42
+[41
 
 ]
 File: ./figures/exp1_energy3.eps Graphic file (type eps)
@@ -1339,11 +1337,11 @@ File: ./figures/exp1_energy3.eps Graphic file (type eps)
 File: ./figures/exp1_energy6.eps Graphic file (type eps)
 <./figures/exp1_energy6.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 901--901
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 903--903
  [][] 
  []
 
-[43
+[42
 
 ]
 File: ./figures/exp1_energy9.eps Graphic file (type eps)
@@ -1351,26 +1349,26 @@ File: ./figures/exp1_energy9.eps Graphic file (type eps)
 File: ./figures/exp1_energy2.eps Graphic file (type eps)
 <./figures/exp1_energy2.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 918--918
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 920--920
  [][] 
+ []
+
+[43
+
+]
+Overfull \hbox (28.40883pt too wide) detected at line 929
+\T1/lmr/m/it/10.95 u\OT1/cmr/m/n/10.95 (\T1/lmr/m/it/10.95 x\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 y\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) = [] [] \OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 u[]\OT1/cmr/m/n/10.95 (\T1/lmr/m/it/10.95 x\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 y\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) = [](\T1/lmr/m/it/10.95 x \OT1/cmr/m/n/10.95 + \T1/lmr/m/it/10.95 y\OT1/cmr/m/n/10.95 ) [] [] \OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (\T1/lmr/m/it/10.95 x\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 y\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 t\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 \OT1/cmr/m/n/10.95 
+ \OMS/cmsy/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 T\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 ;
  []
 
 [44
 
 ]
-Overfull \hbox (28.40883pt too wide) detected at line 927
-\T1/lmr/m/it/10.95 u\OT1/cmr/m/n/10.95 (\T1/lmr/m/it/10.95 x\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 y\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) = [] [] \OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 u[]\OT1/cmr/m/n/10.95 (\T1/lmr/m/it/10.95 x\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 y\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) = [](\T1/lmr/m/it/10.95 x \OT1/cmr/m/n/10.95 + \T1/lmr/m/it/10.95 y\OT1/cmr/m/n/10.95 ) [] [] \OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (\T1/lmr/m/it/10.95 x\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 y\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 t\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 \OT1/cmr/m/n/10.95 
- \OMS/cmsy/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 T\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 ;
- []
-
-[45
-
-]
-Overfull \hbox (16.43776pt too wide) in paragraph at lines 958--958
+Overfull \hbox (16.43776pt too wide) in paragraph at lines 960--960
  [][][][] 
  []
 
-[46
+[45
 
 ]
 File: ./figures/exp2_r.eps Graphic file (type eps)
@@ -1378,11 +1376,11 @@ File: ./figures/exp2_r.eps Graphic file (type eps)
 File: ./figures/exp2_s.eps Graphic file (type eps)
 <./figures/exp2_s.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 975--975
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 977--977
  [][] 
  []
 
-[47
+[46
 
 ]
 File: ./figures/exp2_energy3.eps Graphic file (type eps)
@@ -1390,11 +1388,11 @@ File: ./figures/exp2_energy3.eps Graphic file (type eps)
 File: ./figures/exp2_energy6.eps Graphic file (type eps)
 <./figures/exp2_energy6.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 990--990
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 992--992
  [][] 
  []
 
-[48
+[47
 
 ]
 File: ./figures/exp2_energy9.eps Graphic file (type eps)
@@ -1402,20 +1400,20 @@ File: ./figures/exp2_energy9.eps Graphic file (type eps)
 File: ./figures/exp2_energy2.eps Graphic file (type eps)
 <./figures/exp2_energy2.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 1007--1007
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 1009--1009
  [][] 
  []
 
-[49
+[48
 
-] [50
+] [49
 
 ]
 Overfull \hbox (16.43776pt too wide) in paragraph at lines 1052--1052
  [][][][] 
  []
 
-[51
+[50
 
 ]
 File: ./figures/exp3_energy3.eps Graphic file (type eps)
@@ -1427,7 +1425,7 @@ Overfull \hbox (14.59998pt too wide) in paragraph at lines 1067--1067
  [][] 
  []
 
-[52
+[51
 
 ]
 File: ./figures/exp3_energy9.eps Graphic file (type eps)
@@ -1439,16 +1437,16 @@ Overfull \hbox (14.59998pt too wide) in paragraph at lines 1084--1084
  [][] 
  []
 
-[53
+[52
 
-] [54
+] [53
 
 ]
 Overfull \hbox (16.43776pt too wide) in paragraph at lines 1135--1135
  [][][][] 
  []
 
-[55
+[54
 
 ]
 File: ./figures/exp4_energy3.eps Graphic file (type eps)
@@ -1460,7 +1458,7 @@ Overfull \hbox (14.59998pt too wide) in paragraph at lines 1150--1150
  [][] 
  []
 
-[56
+[55
 
 ]
 File: ./figures/exp4_energy9.eps Graphic file (type eps)
@@ -1472,9 +1470,9 @@ Overfull \hbox (14.59998pt too wide) in paragraph at lines 1167--1167
  [][] 
  []
 
-[57
+[56
 
-] (./slide.toc) [58
+] (./slide.toc) [57
 
 ]
 Missing character: There is no ​ ("200B) in font ec-lmss9!
@@ -1799,17 +1797,19 @@ Missing character: There is no ​ ("200B) in font ec-lmss9!
 Missing character: There is no ​ ("200B) in font ec-lmss9!
 Missing character: There is no ​ ("200B) in font ec-lmss9!
 Missing character: There is no ​ ("200B) in font ec-lmss9!
-[59
+[58
+
+] [59
 
 ] [60
-
-] [61
 
 ]
 Overfull \vbox (15.83153pt too high) detected at line 1242
  []
 
-[62
+[61
+
+] [62
 
 ] [63
 
@@ -1827,17 +1827,15 @@ Overfull \vbox (15.83153pt too high) detected at line 1242
 
 ] [70
 
-] [71
-
 ]
 Overfull \vbox (4.73766pt too high) detected at line 1406
  []
 
-[72
+[71
+
+] [72
 
 ] [73
-
-] [74
 
 ]
 
@@ -1846,11 +1844,11 @@ LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 144
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 1444.
 
-[75
+[74
+
+] [75
 
 ] [76
-
-] [77
 
 ]
 File: ./figure/exp1_s1.5.eps Graphic file (type eps)
@@ -1862,7 +1860,7 @@ Overfull \hbox (14.59998pt too wide) in paragraph at lines 1486--1486
  [][] 
  []
 
-[78
+[77
 
 ]
 File: ./figure/exp1_s2.eps Graphic file (type eps)
@@ -1874,7 +1872,7 @@ Overfull \hbox (14.59998pt too wide) in paragraph at lines 1503--1503
  [][] 
  []
 
-[79
+[78
 
 ]
 File: ./figure/exp1_H1.3.eps Graphic file (type eps)
@@ -1886,7 +1884,7 @@ Overfull \hbox (14.59998pt too wide) in paragraph at lines 1518--1518
  [][] 
  []
 
-[80
+[79
 
 ]
 File: ./figure/exp1_H1.9.eps Graphic file (type eps)
@@ -1898,7 +1896,7 @@ Overfull \hbox (14.59998pt too wide) in paragraph at lines 1535--1535
  [][] 
  []
 
-[81
+[80
 
 ]
 File: ./figure/exp1_M1.3.eps Graphic file (type eps)
@@ -1910,7 +1908,7 @@ Overfull \hbox (14.59998pt too wide) in paragraph at lines 1550--1550
  [][] 
  []
 
-[82
+[81
 
 ]
 File: ./figure/exp1_M1.9.eps Graphic file (type eps)
@@ -1922,11 +1920,11 @@ Overfull \hbox (14.59998pt too wide) in paragraph at lines 1567--1567
  [][] 
  []
 
-[83
+[82
+
+] [83
 
 ] [84
-
-] [85
 
 ]
 File: ./figure/exp1_RM1.3.eps Graphic file (type eps)
@@ -1935,7 +1933,7 @@ File: ./figure/exp1_RM1.6.eps Graphic file (type eps)
 <./figure/exp1_RM1.6.eps>
 File: ./figure/exp1_RM1.9.eps Graphic file (type eps)
 <./figure/exp1_RM1.9.eps>
- [86
+ [85
 
 ]
 File: ./figure/exp1_RH1.3.eps Graphic file (type eps)
@@ -1944,15 +1942,9 @@ File: ./figure/exp1_RH1.6.eps Graphic file (type eps)
 <./figure/exp1_RH1.6.eps>
 File: ./figure/exp1_RH1.9.eps Graphic file (type eps)
 <./figure/exp1_RH1.9.eps>
- [87
+ [86
 
-]
-Overfull \hbox (22.16277pt too wide) detected at line 1708
-[][][]\T1/lmr/m/it/10.95 u\OT1/cmr/m/n/10.95 (\T1/lmr/m/it/10.95 x\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 y\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) = [] [] \OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 u[]\OT1/cmr/m/n/10.95 (\T1/lmr/m/it/10.95 x\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 y\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0) = [](\T1/lmr/m/it/10.95 x \OT1/cmr/m/n/10.95 + \T1/lmr/m/it/10.95 y\OT1/cmr/m/n/10.95 )[] [] \OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (\T1/lmr/m/it/10.95 x\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 y\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 t\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 \OT1/cmr/m/n/10.95 
- \OMS/cmsy/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \T1/lmr/m/it/10.95 T\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 ;
- []
-
-[88
+] [87
 
 ]
 File: ./figure/exp2_s1.5.eps Graphic file (type eps)
@@ -1960,11 +1952,11 @@ File: ./figure/exp2_s1.5.eps Graphic file (type eps)
 File: ./figure/exp2_t1.5.eps Graphic file (type eps)
 <./figure/exp2_t1.5.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 1727--1727
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 1730--1730
  [][] 
  []
 
-[89
+[88
 
 ]
 File: ./figure/exp2_s2.eps Graphic file (type eps)
@@ -1972,11 +1964,11 @@ File: ./figure/exp2_s2.eps Graphic file (type eps)
 File: ./figure/exp2_t2.eps Graphic file (type eps)
 <./figure/exp2_t2.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 1744--1744
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 1747--1747
  [][] 
  []
 
-[90
+[89
 
 ]
 File: ./figure/exp2_M1.3.eps Graphic file (type eps)
@@ -1984,11 +1976,11 @@ File: ./figure/exp2_M1.3.eps Graphic file (type eps)
 File: ./figure/exp2_M1.6.eps Graphic file (type eps)
 <./figure/exp2_M1.6.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 1760--1760
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 1763--1763
  [][] 
  []
 
-[91
+[90
 
 ]
 File: ./figure/exp2_M1.9.eps Graphic file (type eps)
@@ -1996,11 +1988,11 @@ File: ./figure/exp2_M1.9.eps Graphic file (type eps)
 File: ./figure/exp2_M2.eps Graphic file (type eps)
 <./figure/exp2_M2.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 1778--1778
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 1781--1781
  [][] 
  []
 
-[92
+[91
 
 ]
 File: ./figure/exp2_H1.3.eps Graphic file (type eps)
@@ -2008,11 +2000,11 @@ File: ./figure/exp2_H1.3.eps Graphic file (type eps)
 File: ./figure/exp2_H1.6.eps Graphic file (type eps)
 <./figure/exp2_H1.6.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 1796--1796
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 1799--1799
  [][] 
  []
 
-[93
+[92
 
 ]
 File: ./figure/exp2_H1.9.eps Graphic file (type eps)
@@ -2020,11 +2012,11 @@ File: ./figure/exp2_H1.9.eps Graphic file (type eps)
 File: ./figure/exp2_H2.eps Graphic file (type eps)
 <./figure/exp2_H2.eps>
 
-Overfull \hbox (14.59998pt too wide) in paragraph at lines 1813--1813
+Overfull \hbox (14.59998pt too wide) in paragraph at lines 1816--1816
  [][] 
  []
 
-[94
+[93
 
 ]
 File: ./figure/exp2_RM1.3.eps Graphic file (type eps)
@@ -2033,7 +2025,7 @@ File: ./figure/exp2_RM1.6.eps Graphic file (type eps)
 <./figure/exp2_RM1.6.eps>
 File: ./figure/exp2_RM1.9.eps Graphic file (type eps)
 <./figure/exp2_RM1.9.eps>
- [95
+ [94
 
 ]
 File: ./figure/exp2_RH1.3.eps Graphic file (type eps)
@@ -2042,11 +2034,11 @@ File: ./figure/exp2_RH1.6.eps Graphic file (type eps)
 <./figure/exp2_RH1.6.eps>
 File: ./figure/exp2_RH1.9.eps Graphic file (type eps)
 <./figure/exp2_RH1.9.eps>
- [96
+ [95
+
+] [96
 
 ] [97
-
-] [98
 
 ]
 File: ./figure/exp2_contour3_p0.eps Graphic file (type eps)
@@ -2055,7 +2047,7 @@ File: ./figure/exp2_contour99_p0.eps Graphic file (type eps)
 <./figure/exp2_contour99_p0.eps>
 File: ./figure/exp2_contour2_p0.eps Graphic file (type eps)
 <./figure/exp2_contour2_p0.eps>
- [99
+ [98
 
 ]
 File: ./figure/exp2_contour3_p1.eps Graphic file (type eps)
@@ -2064,7 +2056,7 @@ File: ./figure/exp2_contour99_p1.eps Graphic file (type eps)
 <./figure/exp2_contour99_p1.eps>
 File: ./figure/exp2_contour2_p1.eps Graphic file (type eps)
 <./figure/exp2_contour2_p1.eps>
- [100
+ [99
 
 ]
 File: ./figure/exp2_contour3_p5.eps Graphic file (type eps)
@@ -2073,7 +2065,7 @@ File: ./figure/exp2_contour99_p5.eps Graphic file (type eps)
 <./figure/exp2_contour99_p5.eps>
 File: ./figure/exp2_contour2_p5.eps Graphic file (type eps)
 <./figure/exp2_contour2_p5.eps>
- [101
+ [100
 
 ]
 File: ./figure/exp2_contour3_p10.eps Graphic file (type eps)
@@ -2082,7 +2074,7 @@ File: ./figure/exp2_contour99_p10.eps Graphic file (type eps)
 <./figure/exp2_contour99_p10.eps>
 File: ./figure/exp2_contour2_p10.eps Graphic file (type eps)
 <./figure/exp2_contour2_p10.eps>
- [102
+ [101
 
 ]
 File: ./figure/exp2_contour3_p50.eps Graphic file (type eps)
@@ -2091,7 +2083,7 @@ File: ./figure/exp2_contour99_p50.eps Graphic file (type eps)
 <./figure/exp2_contour99_p50.eps>
 File: ./figure/exp2_contour2_p50.eps Graphic file (type eps)
 <./figure/exp2_contour2_p50.eps>
- [103
+ [102
 
 ]
 File: ./figure/exp2_contour3_p100.eps Graphic file (type eps)
@@ -2100,40 +2092,40 @@ File: ./figure/exp2_contour99_p100.eps Graphic file (type eps)
 <./figure/exp2_contour99_p100.eps>
 File: ./figure/exp2_contour2_p100.eps Graphic file (type eps)
 <./figure/exp2_contour2_p100.eps>
- [104
+ [103
 
-] (./slide.toc) [105
+] (./slide.toc) [104
+
+] [105
 
 ] [106
 
-] [107
-
-] (./slide.toc) [108
+] (./slide.toc) [107
 
 ] (./slide.bbl
 
 LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <8> not available
 (Font)              Font shape `T1/lmr/m/sc' tried instead on input line 4.
 
-) [109
+) [108
+
+] [109
+
 
 ] [110
 
 
 ] [111
 
-
-] [112
-
 ]
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 35.82726pt on input line 2518.
+(Font)              scaled to size 35.82726pt on input line 2521.
 
 
 LaTeX Font Warning: Font shape `T1/calligra/b/n' undefined
-(Font)              using `T1/calligra/m/n' instead on input line 2518.
+(Font)              using `T1/calligra/m/n' instead on input line 2521.
 
-[113
+[112
 
 ]
 \tf@nav=\write6
@@ -2153,15 +2145,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: EC6F403B5E336878287B6E412F675BB0;700.
+(rerunfilecheck)             Checksum: 03F35B59F0370216650606C65D513829;595.
  ) 
 Here is how much of TeX's memory you used:
- 32667 strings out of 476683
- 730538 string characters out of 5804047
+ 32642 strings out of 476683
+ 729794 string characters out of 5804047
  1874018 words of memory out of 5000000
- 52081 multiletter control sequences out of 15000+600000
+ 52058 multiletter control sequences out of 15000+600000
  703175 words of font info for 221 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,14n,122p,559b,964s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on slide.pdf (113 pages).
+Output written on slide.pdf (112 pages).

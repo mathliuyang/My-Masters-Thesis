@@ -1,7 +1,6 @@
 \beamer@sectionintoc {1}{研究背景}{3}{0}{1}
 \beamer@sectionintoc {2}{研究现状}{6}{0}{2}
-\beamer@sectionintoc {3}{研究内容}{17}{0}{3}
-\beamer@subsectionintoc {3}{1}{SAV-RRK算法}{18}{0}{3}
-\beamer@subsectionintoc {3}{2}{FPAVF-P算法}{58}{0}{3}
-\beamer@sectionintoc {4}{总结展望}{105}{0}{4}
-\beamer@sectionintoc {5}{参考文献}{108}{0}{5}
+\beamer@sectionintoc {3}{SAV-RRK算法}{17}{0}{3}
+\beamer@sectionintoc {4}{FPAVF-P算法}{57}{0}{4}
+\beamer@sectionintoc {5}{总结展望}{104}{0}{5}
+\beamer@sectionintoc {6}{参考文献}{107}{0}{6}
