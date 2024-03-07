@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  2 MAR 2024 16:38
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  6 MAR 2024 02:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -972,12 +972,12 @@ Package hyperref Info: Link coloring OFF on input line 5.
 \c@endpropctr=\count371
 \c@currcorctr=\count372
 \c@endcorctr=\count373
-\c@currremarkctr=\count374
-\c@endremarkctr=\count375
-\c@remark=\count376
-\c@currdefnctr=\count377
-\c@enddefnctr=\count378
-\c@defn=\count379
+\c@currdefnctr=\count374
+\c@enddefnctr=\count375
+\c@defn=\count376
+\c@currremarkctr=\count377
+\c@endremarkctr=\count378
+\c@remark=\count379
 \c@currconjctr=\count380
 \c@endconjctr=\count381
 \c@conj=\count382
@@ -1250,44 +1250,41 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 ]
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 46.
+(Font)              size <10.95> substituted on input line 47.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 46.
+(Font)              size <10.95> substituted on input line 47.
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 46.
+(Font)              size <10.95> substituted on input line 47.
 
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 46.
+(Font)              <7> on input line 47.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 46.
+(Font)              <5> on input line 47.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 46.
+(Font)              size <10.95> substituted on input line 47.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 46.
+(Font)              size <10.95> substituted on input line 47.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 46.
+(Font)              size <10.95> substituted on input line 47.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 46.
+(Font)              size <10.95> substituted on input line 47.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 46.
+(Font)              size <10.95> substituted on input line 47.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2] [3]) [4]
+[2] [3]) [4]
 \openout2 = `chap/chap2.aux'.
 
  (./chap/chap2.tex
@@ -1312,7 +1309,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 3
 
 LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 10.
+(Font)              using `TU/ptm/m/n' instead on input line 9.
 
 [9
 
@@ -1320,121 +1317,121 @@ LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
 
 
 ] [10] [11] [12]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 180.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 178.
  [13] [14]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 310.
+LaTeX Font Warning: Command \small invalid in math mode on input line 309.
 
-LaTeX Font Info:    Calculating math sizes for size <> on input line 312.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 311.
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <> on input line 312.
+(Font)              <> on input line 311.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <0.7> on input line 312.
+(Font)              <0.7> on input line 311.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <0.5> on input line 312.
+(Font)              <0.5> on input line 311.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 312.
+(Font)              size <5> substituted on input line 311.
 
 [15]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 347.
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 346.
  [16]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 406.
+LaTeX Font Warning: Command \small invalid in math mode on input line 405.
 
 
-Overfull \hbox (1.83539pt too wide) detected at line 408
+Overfull \hbox (1.83539pt too wide) detected at line 407
 \OML/cmm/m/it/10.95 ^^M \OT1/cmr/m/n/10.95 =  []\OML/cmm/m/it/10.95 :
  []
 
 [17]
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 431.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 451.
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 430.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 450.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [18] [19]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 569.
- [20]
+) [18] [19] [20]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 568.
+
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.52812> not available
 (Font)              size <8> substituted on input line 587.
@@ -1474,10 +1471,7 @@ Overfull \hbox (12.04498pt too wide) in paragraph at lines 620--625
  [][][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
+[21]
 File: ./figures/exp1_energy3.eps Graphic file (type eps)
 <./figures/exp1_energy3.eps>
 File: ./figures/exp1_energy6.eps Graphic file (type eps)
@@ -1593,7 +1587,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ] [30] [31] [32] [33] [34] [35]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: $\bullet $ on input line 347.
+             The label is: $\bullet $ on input line 348.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1626,7 +1620,7 @@ File: ./figure/exp1_M1.9.eps Graphic file (type eps)
 File: ./figure/exp1_M2.eps Graphic file (type eps)
 <./figure/exp1_M2.eps>
 
-Overfull \hbox (8.17216pt too wide) in paragraph at lines 519--543
+Overfull \hbox (8.17216pt too wide) in paragraph at lines 522--546
  [][][] 
  []
 
@@ -1634,17 +1628,17 @@ Overfull \hbox (8.17216pt too wide) in paragraph at lines 519--543
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40]
-Overfull \hbox (2.94746pt too wide) in paragraph at lines 550--574
+Overfull \hbox (2.94746pt too wide) in paragraph at lines 553--577
  [][][] 
  []
 
 
-Overfull \hbox (2.94746pt too wide) in paragraph at lines 581--605
+Overfull \hbox (2.94746pt too wide) in paragraph at lines 584--608
  [][][] 
  []
 
 
-Overfull \hbox (2.94746pt too wide) in paragraph at lines 612--636
+Overfull \hbox (2.94746pt too wide) in paragraph at lines 615--639
  [][][] 
  []
 
@@ -1838,16 +1832,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版.out' has not changed.
-(rerunfilecheck)             Checksum: AFAC63FBEDEE6A614EAD761EC0258587;3826.
+(rerunfilecheck)             Checksum: 7A4743651FA8F3E0126AE264746F862D;3858.
  )
 (\end occurred when \ifx on line 26 was incomplete) 
 Here is how much of TeX's memory you used:
- 24236 strings out of 476683
- 519411 string characters out of 5804047
- 1874018 words of memory out of 5000000
- 43807 multiletter control sequences out of 15000+600000
- 574391 words of font info for 202 fonts, out of 8000000 for 9000
+ 24272 strings out of 476683
+ 521413 string characters out of 5804047
+ 1878018 words of memory out of 5000000
+ 43842 multiletter control sequences out of 15000+600000
+ 576095 words of font info for 204 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,17n,97p,1222b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,17n,97p,1222b,654s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on 四川师范大学硕士学位论文模版.pdf (71 pages).

@@ -2,26 +2,33 @@
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
 
 \begin{ChineseAbstract}[副教授]%可选参数加入导师职称
-\item {\heiti 摘要:\ \ }
-非线性分数阶薛定谔波动方程在非线性光学、传播动力学、水波动力学等物理问题中广泛应用,并具备重要的守恒特性.本文旨在研究二维非线性分数阶薛定谔波动方程的数值方法及其守恒性质.
+\item {\heiti 摘要\ \ }
+非线性分数阶薛定谔波动方程在非线性光学、传播动力学、水波动力学等物理问题中广泛应用 , 并具备重要的守恒特性 . 本文旨在研究非线性分数阶薛定谔波动方程的数值方法及其守恒性质 . 
 
-首先,针对具有周期性边界条件的二维非线性分数阶薛定谔波动方程,考虑到显式松弛龙格库塔方法仅对二次形式的能量有效,本文通过引入标量辅助变量方法将其转化为一个等价系统,其四次形式的能量被重新表述为三个二次项和的形式.
-随后在时空方向上分别采用显式松弛龙格库塔方法和傅里叶拟谱方法对等价系统进行离散. 构造出一个在时间方向可达任意高阶的显式能量守恒数值格式.
-这种格式易于推广到分数Klein-Gordon-Schr{\"o}dinger方程等类似方程.
-通过数值实验验证了该格式在长时间仿真中的数值稳定性.
+首先 , 针对具有周期性边界条件的二维非线性分数阶薛定谔波动方程 , 考虑到显式松弛龙格库塔方法仅对二次形式的能量有效 , 本文通过引入标量辅助变量方法将其转化为一个等价系统 , 其四次形式的能量被重新表述为三个二次项和的形式 . 
+随后在时空方向上分别采用显式松弛龙格库塔方法和傅里叶拟谱方法对等价系统进行离散 . 构造出一个在时间方向可达任意高阶的显式能量守恒数值格式 . 
+这种格式易于推广到分数Klein-Gordon-Schr{\"o}dinger方程等类似方程 . 
+通过数值实验验证了该格式在长时间仿真中的数值稳定性 . 
 
-为了能同时守恒多个原始不变量, 本文还基于分数阶拉普拉斯泛函变分原理推导了非线性分数阶薛定谔波动方程的哈密顿结构.
-通过将分区平均向量场方法和傅里叶拟谱方法应用于哈密顿系统,为其构造了一个能同时守恒原始能量和质量的数值格式.
-并与其它方法进行了数值比较,结果表明本文提出的方法能更好的守恒多个原始不变量.
+为了能同时守恒多个原始不变量 , 本文还基于分数阶拉普拉斯泛函变分原理推导了二维非线性分数阶薛定谔波动方程的哈密顿结构 . 
+通过将分区平均向量场方法和傅里叶拟谱方法应用于哈密顿系统 , 为其构造了一个能同时守恒原始能量和质量的数值格式 , 
+并与其他方法进行了数值比较 , 结果表明本文提出的方法能更好地守恒多个原始不变量 . 
 
 \item {\heiti 关键词:\ \ } 非线性分数阶薛定谔波动方程\qquad 哈密顿系统\qquad 标量辅助变量方法\qquad 松弛龙格库塔方法 \qquad 分区平均向量场方法 \qquad 傅里叶拟谱方法
 \end{ChineseAbstract}
 \begin{EnglishAbstract}
-\item {\bf Abstract:\ \ } 
-The nonlinear fractional Schr{\"o}dinger wave equations finds extensive applications in various physical phenomena such as nonlinear optics, propagation dynamics, and water wave dynamics, exhibiting significant conservation properties. This paper aims to investigate numerical methods and conservation properties of the two-dimensional nonlinear fractional Schr{\"o}dinger wave equations.
+\item {\bf Abstract\ \ } 
+The nonlinear fractional Schr{\"o}dinger wave equations finds widespread applications in physics problems such as nonlinear optics , propagation dynamics , and hydrodynamics , exhibiting significant conservation properties . 
+This study aims to investigate numerical methods and conservation properties of the nonlinear fractional Schr{\"o}dinger wave equations . 
 
-Initially, addressing the two-dimensional nonlinear fractional Schr{\"o}dinger wave equations with periodic boundary conditions, considering the limitation of explicit Runge-Kutta methods to effectively conserve energy only for quadratic forms, this study employs a scalar auxiliary variable approach to transform it into an equivalent system, where the energy in quartic form is reformulated into the sum of three quadratic terms. Subsequently, explicit energy-conserving numerical schemes are constructed using explicit Runge-Kutta methods and Fourier spectral methods in the temporal and spatial directions, respectively, achieving arbitrary high-order accuracy in time. Such schemes are easily extendable to similar equations like the fractional Klein-Gordon-Schr{\"o}dinger equation, and their numerical stability in long-time simulations is verified through numerical experiments.
+Initially , considering the two-dimensional nonlinear fractional Schr{\"o}dinger wave equations with periodic boundary conditions , considering the limitation of explicit Runge-Kutta methods to effectively conserve energy only for quadratic forms , this paper transforms it into an equivalent system using the scalar auxiliary variable method , where the quartic form of energy is reformulated as a sum of three quadratic terms . 
+Subsequently , explicit energy-conserving numerical schemes are constructed using explicit Runge-Kutta methods and Fourier pseudo-spectral method in the temporal and spatial directions , respectively , achieving arbitrary high order accuracy in time . 
+Such schemes are easily extendable to similar equations like the fractional Klein-Gordon-Schr{\"o}dinger equations , and their numerical stability in long time simulations is verified through numerical experiments . 
 
-Furthermore, to conserve multiple original invariants simultaneously, this paper derives the Hamiltonian structure of the nonlinear fractional Schr{\"o}dinger wave equations based on the fractional Laplacian functional variational principle. By applying the partitioned averaging vector field method and Fourier spectral methods to the Hamiltonian system, a numerical scheme is constructed to conserve both original energy and mass simultaneously. Comparative numerical experiments with other methods demonstrate that the proposed approach better conserves multiple original invariants.
-\item {\bf Keywords:} NFSWEs\qquad Hamiltonian System\qquad Scalar Auxiliary Variable\qquad Relaxation Runge-Kutta\qquad Partitioned Vector Field \qquad Fourier Spectral Method
+Furthermore , to conserve multiple primitive invariants simultaneously , this paper derives the Hamiltonian structure of the two-dimensional nonlinear fractional Schr{\"o}dinger wave equations based on the fractional Laplacian functional variational principle . 
+By applying the method of partitioned averaged vector field methods and Fourier pseudo-spectral method to the Hamiltonian system , a numerical scheme is constructed to conserve both original energy and mass simultaneously . 
+Comparative numerical experiments with other methods demonstrate that the proposed approach better conserves multiple original invariants . 
+
+
+\item {\bf Keywords:} Nonlinear fractional Schr{\"o}dinger wave equations\qquad Hamiltonian system\qquad Scalar auxiliary variable method\qquad Relaxation Runge-Kutta methods\qquad Partitioned averaged vector field methods \qquad Fourier pseudo-spectral method
 \end{EnglishAbstract}
