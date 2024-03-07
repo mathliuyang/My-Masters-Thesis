@@ -411,4 +411,6 @@ beforeskip={0em},afterskip={0em}]{subsection}
 
 %排序环境宏包
 \usepackage{enumerate}
-\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}%加粗所需宏包
+\let\originaleqref\eqref
+\renewcommand{\eqref}[1]{\ \originaleqref{#1}\ }%重定义使用\eqref命令引用公式并在其两端添加空格

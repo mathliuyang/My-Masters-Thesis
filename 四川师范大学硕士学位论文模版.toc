@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {4.2}傅里叶拟谱半离散格式}{32}{section.4.2}%
 \contentsline {section}{\numberline {4.3}PAVF-P 方法}{33}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}PAVF-P 格式}{33}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}离散守恒律}{34}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}离散守恒律}{35}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}其他AVF系列方法}{36}{section.4.4}%
 \contentsline {section}{\numberline {4.5}数值算例}{37}{section.4.5}%
 \contentsline {section}{\numberline {4.6}小结}{49}{section.4.6}%
