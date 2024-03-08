@@ -413,7 +413,7 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 \end{aligned}\right.\label{eq_PAVF:104}
 \end{equation}
 \begin{example}\label{exp_PAVF:2}
-	考虑一维非线性分数阶薛定谔波动方程 \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3}
+	考虑一维非线性分数阶薛定谔波动方程
 	\begin{equation}\label{eq_PAVF:108}
 	u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0 , \quad (x , t)\in  \Omega\times[0 , T] , 
 	\end{equation}
@@ -483,7 +483,7 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 
 图 \ref{fig_PAVF:3} 显示了几种格式在不同 $\alpha$ 值下 , 通过 $N=512$ 和 $\tau=0.01$ 计算的离散能量演化情况(T=500).
 可以观察到 , 特别是在 $\alpha=2$ 时 , FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式计算得到的离散能量均一致收敛到原始能量 , 
-而 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022} 和三层线性隐式差分格式 \cite{ranLinearlyImplicitConservative2016} 的性能较差.
+而 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022} 和三层线性隐式差分格式(Line-Impl) \cite{ranLinearlyImplicitConservative2016} 的性能较差.
 这一现象与后两者仅保持修正后的能量而不是原始能量的理论分析是一致的.
 
 	类似地 , 图 \ref{fig_PAVF:4} 显示了在不同 $\alpha$ 值下 , 通过 $N=512$ 和 $\tau=0.01$ 计算的离散质量演化情况(T=500).需要强调的是 SAV 方法不具有质量守恒.
@@ -525,7 +525,7 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 
 	  \begin{tabular}{lllllll}
 	  \toprule
-       $t$   &FAVF   &FPAVF   &FPAVF-C   &SAV    &Linear-Implicit   &FPAVF-P\\
+       $t$   &FAVF   &FPAVF   &FPAVF-C   &SAV    &Line-Impl   &FPAVF-P\\
 	%   \midrule
 	%   0     &4.561976489785   &4.561976489785   &4.561976489785   &4.457414815200   &4.453861069486   &4.561976489785 \\
 	%   10    &4.561976489785   &4.561976489785   &4.561976489785   &4.457414815200   &4.453861069486   &4.561976489785 \\
@@ -566,7 +566,7 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 	\caption{当 $\alpha=1.3$ 时 , 算例 \ref{exp_PAVF:2}  在时刻 $t=t_{m}$ 的离散质量 $G^{m}$.}
 	  \begin{tabular}{llllll}
 	  \toprule
-$t$   &FAVF   &FPAVF   &FPAVF-C   &Linear-Implicit   &FPAVF-P\\
+$t$   &FAVF   &FPAVF   &FPAVF-C   &Line-Impl   &FPAVF-P\\
 	%   \midrule
 	%   0     &0.812482096011643   &0.812486108372853   &0.812481093228288   &0.812269212105079   &0.812482096009232 \\
 	%   10    &0.812481652913507   &0.815448411130831   &0.812482228623069   &0.812269212105449   &0.812482096009234 \\
@@ -597,7 +597,7 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &Linear-Implicit   &FPAVF-P\\
 	\caption{当 $\alpha=1.6$ 时 , 算例 \ref{exp_PAVF:2}  在时刻 $t=t_{m}$ 的离散质量 $G^{m}$.}
 	\begin{tabular}{llllll}
 	  \toprule
-$t$   &FAVF   &FPAVF   &FPAVF-C   &Linear-Implicit   &FPAVF-P\\
+$t$   &FAVF   &FPAVF   &FPAVF-C   &Line-Impl   &FPAVF-P\\
 	%   \midrule
 	%   0     &0.812482096014526   &0.812487932904355   &0.812480637459791   &0.812191342790779   &0.812482096009232 \\
 	%   10    &0.812479542844467   &0.815290680597744   &0.812482338980161   &0.812191342790869   &0.812482096009234 \\
@@ -628,7 +628,7 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &Linear-Implicit   &FPAVF-P\\
 	\caption{当 $\alpha=2.0$ 时 , 算例 \ref{exp_PAVF:2}  在时刻 $t=t_{m}$ 的离散质量 $G^{m}$.}
 	\begin{tabular}{llllll}
 	  \toprule
-$t$   &FAVF   &FPAVF   &FPAVF-C   &Linear-Implicit   &FPAVF-P\\
+$t$   &FAVF   &FPAVF   &FPAVF-C   &Line-Impl   &FPAVF-P\\
 	%   \midrule
 	%   0     &0.812482096027426   &0.812492566135382   &0.812479480708946   &0.812007279829162   &0.812482096009232 \\
 	%   10    &0.812501574603936   &0.815690689466538   &0.812482208549750   &0.812007279829185   &0.812482096009233 \\

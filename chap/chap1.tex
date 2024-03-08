@@ -30,7 +30,7 @@ Ran 和 Zhang \cite{ranConservativeDifferenceScheme2016} 提出了隐式及线�
 Wang 和 Huang \cite{wangEnergyConservativeDifference2015,wangConservativeLinearizedDifference2015} 推导出分数阶薛定谔方程的能量和质量守恒的 Crank-Nicolson 差分格式和线性差分格式.
 Wang 等人 \cite{wangSplitstepSpectralGalerkin2019} 提出了一种用于二维非线性空间分数阶薛定谔方程的分步谱 伽辽金 方法 , 该方法仅保持离散质量.
 % 由于NFSWEs的非局部性和非线性 , 使其与经典的非线性薛定谔方程相比 , 理论和数值方法的研究相对较少 , 可参考的文献也比较有限.
-针对 NFSWEs, Ran 和 Zhang \cite{ranLinearlyImplicitConservative2016} 首先构造了一种三层线性隐式差分格式 , 它能很好地保持修正后的质量和能量 . 
+针对 NFSWEs, Ran 和 Zhang \cite{ranLinearlyImplicitConservative2016} 首先构造了一种三层线性隐式差分格式(Line-Impl) , 它能很好地保持修正后的质量和能量 . 
 Pan 等人\cite{panFourthorderDifferenceScheme2022}构建了一个空间四阶精度的三层线性隐式差分格式 , 并通过能量方法严格证明了该方法在$L_{\infty}$范数下的唯一可解性、无条件稳定性和收敛性.
 Li 和 Zhao \cite{liFastEnergyConserving2018} 结合 Crank-Nicolson 方法与 伽辽金 有限元方法以节省计算成本 , 设计了具有循环预调节器的快速 Krylov 子空间求解器 . 
 Cheng 和 Qin \cite{chengConvergenceEnergyconservingScheme2022} 提出了一种基于标量辅助变量(SAV)方法的线性隐式守恒格式 , 该数值格式仅保持修正后的能量.

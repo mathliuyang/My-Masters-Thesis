@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  2 MAR 2024 15:33
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  8 MAR 2024 11:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2119,12 +2119,14 @@ LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <8> not available
 
 ]
 LaTeX Font Info:    Font shape `T1/calligra/m/n' will be
-(Font)              scaled to size 35.82726pt on input line 2521.
+(Font)              scaled to size 35.82726pt on input line 2528.
 
 
 LaTeX Font Warning: Font shape `T1/calligra/b/n' undefined
-(Font)              using `T1/calligra/m/n' instead on input line 2521.
+(Font)              using `T1/calligra/m/n' instead on input line 2528.
 
+File: pic/SICNU_Logo2.png Graphic file (type bmp)
+<pic/SICNU_Logo2.png>
 [112
 
 ]
@@ -2148,11 +2150,11 @@ Package rerunfilecheck Info: File `slide.out' has not changed.
 (rerunfilecheck)             Checksum: 03F35B59F0370216650606C65D513829;595.
  ) 
 Here is how much of TeX's memory you used:
- 32642 strings out of 476683
- 729794 string characters out of 5804047
+ 32648 strings out of 476683
+ 729905 string characters out of 5804047
  1874018 words of memory out of 5000000
- 52058 multiletter control sequences out of 15000+600000
- 703175 words of font info for 221 fonts, out of 8000000 for 9000
+ 52063 multiletter control sequences out of 15000+600000
+ 705951 words of font info for 223 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,14n,122p,559b,964s stack positions out of 10000i,1000n,20000p,200000b,200000s
 

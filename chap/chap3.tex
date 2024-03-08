@@ -47,7 +47,7 @@ R^d~(d\!=\!1 , 2)$ , $\boldsymbol{L}$ 是周期 . 分数阶拉普拉斯算子可
 \kappa \frac{\mathrm{d}}{\mathrm{d} t}\|u(\cdot , t)\|_{L^{2}}^{2}+2 \frac{\mathrm{d}}{\mathrm{d} t} \operatorname{Im}\left(u_{t} , u\right)=0 , 
 \label{eq_13}\end{equation}
 此处使用了 $\operatorname{Im}\left((-\Delta)^{\alpha / 2} u , u\right)=0$ , 
-详见 \citep{guoExistenceGlobalSmooth2008} 引理 3.1 的证明 . 
+详见文献 \citep{guoExistenceGlobalSmooth2008}中 引理 3.1 的证明 . 
 
 类似地 , 将方程 \eqref{eq_SAVRRK:1} 与 $u_{t}$ 做内积 , 并取实部 , 得到
 \begin{equation}
@@ -61,7 +61,7 @@ R^d~(d\!=\!1 , 2)$ , $\boldsymbol{L}$ 是周期 . 分数阶拉普拉斯算子可
 \begin{equation}
 \operatorname{Re}\left((-\Delta)^{\alpha / 2} u , u_{t}\right)=\frac{1}{2} \frac{\mathrm{d}}{\mathrm{d} t}\left\|(-\Delta)^{\alpha / 4} u(\cdot , t)\right\|_{L^{2}}^{2} , 
 \label{eq_16}\end{equation}
-参见 \citep{guoExistenceGlobalSmooth2008} 引理 3.2 的证明 . 
+参见文献 \citep{guoExistenceGlobalSmooth2008}中 引理 3.2 的证明 . 
 将方程 \eqref{eq_15} 和 \eqref{eq_16} 代入方程 \eqref{eq_14} 得到
 \begin{equation}
 \frac{\mathrm{d}}{\mathrm{d} t}\left\|u_{t}(\cdot , t)\right\|_{L^{2}}^{2}+\frac{\mathrm{d}}{\mathrm{d} t}\left\|(-\Delta)^{\alpha / 4} u(\cdot , t)\right\|_{L^{2}}^{2}+\frac{1}{2} \beta \frac{\mathrm{d}}{\mathrm{d} t}\|u(\cdot , t)\|_{L^{4}}^{4}=0  . 
@@ -657,7 +657,7 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 值得一提的是 , 当取不同的 $\alpha$ 的值时 , 可以得到类似的结果.% , 尽管这些现象在这里没有显示出来.
 
 		使用SAV-RRK(4 , 4)方法 , 在长时间模拟($T=1000$)中 , 针对不同$\alpha$取值的相对能量误差如图 \ref{fig_SAVRRK:4} 所示.
-		这表明所提出的格式捕捉到了原始问题的保结构现象 , 并且其守恒性能明显优SAV方法\cite{chengConvergenceEnergyconservingScheme2022}和三层线性隐式差分法\cite{wangConservativeLinearizedDifference2015}.
+		这表明所提出的格式捕捉到了原始问题的保结构现象 , 并且其守恒性能明显优SAV方法\cite{chengConvergenceEnergyconservingScheme2022}和三层线性隐式差分法(Line-Impl)\cite{wangConservativeLinearizedDifference2015}.
 		
 	\begin{example}\label{exp_SAVRRK:2}
 		考虑具有以下初值条件的二维 NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3}

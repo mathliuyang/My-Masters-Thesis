@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  8 MAR 2024 00:54
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  8 MAR 2024 10:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1284,10 +1284,7 @@ LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.53937> not available
 (Font)              size <10.95> substituted on input line 47.
 
-
-Underfull \vbox (badness 4328) has occurred while \output is active []
-
- [2] [3]) [4]
+[2] [3]) [4]
 \openout2 = `chap/chap2.aux'.
 
  (./chap/chap2.tex
