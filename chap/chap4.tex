@@ -258,7 +258,7 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q .
 FPAVF格式\eqref{eq_PAVF:74} - \eqref{eq_PAVF:77}的伴随格式为
 \begin{align}
 \delta_{t} \varPhi^{m}=&~\kappa \Psi^{m+\frac{1}{2}}{+D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (P^{m+1})^3+ (P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right . \nonumber\\
-	&\left . + (P^{m})^{3}+2 P^{m+1}\cdot (Q^{m+1})^{2}+2 P^{m}\cdot (Q^{m+1})^{2}\right) , \label{eq_PAVF:86}\\
+	&\left. + (P^{m})^{3}+2 P^{m+1}\cdot (Q^{m+1})^{2}+2 P^{m}\cdot (Q^{m+1})^{2}\right) , \label{eq_PAVF:86}\\
 \delta_{t} \Psi^{m}=&-\kappa \varPhi^{m+\frac{1}{2}}{+D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (Q^{m+1})^3+ (Q^{m})^{2}\cdot Q^{m+1}+ (Q^{m+1})^{2}\cdot Q^{m}\right . \nonumber\\
 	&\left . + (Q^{m})^{3}+2 Q^{m+1}\cdot (P^{m})^{2}+2 Q^{m}\cdot (P^{m})^{2}\right) , \label{eq_PAVF:87}\\
 \delta_{t} P^{m}=&~\varPhi^{m+\frac{1}{2}} , \label{eq_PAVF:88}\\
@@ -363,18 +363,18 @@ H^{m+1}=H^{m} .
 \end{align}
 \item 傅里叶拟谱PAVF-C(FPAVF-C)格式
 \begin{align}
-&\frac{1}{\tau}\left(\varPhi^{*}-\varPhi^{m}\right)=\frac{1}{2}\kappa(\Psi^{*}+\Psi^{m}){+\frac{1}{2}D^{\alpha} (P^{*}+P^{m})}-\frac{\beta}{4}\left( (P^{*})^3+ (P^{m})^{2}\cdot P^{*}\right . \nonumber\\
-		&~~~~~~~~~~~~~~~~~~~~\left . + (P^{*})^{2}\cdot P^{m}+ (P^{m})^{3}+2 P^{*}\cdot (Q^{m})^{2}+2 P^{m}\cdot (Q^{m})^{2}\right) , \label{eq_PAVF:90}\\
-&\frac{1}{\tau}\left(\Psi^{*}-\Psi^{m}\right)=-\frac{1}{2}\kappa (\varPhi^{*}+\varPhi^{m}){+\frac{1}{2}D^{\alpha} (Q^{*}+Q^{m})}-\frac{\beta}{4}\left( (Q^{*})^3+ (Q^{m})^{2}\cdot Q^{*}\right . \nonumber\\
-		&~~~~~~~~~~~~~~~~~~~~~\left . + (Q^{*})^{2}\cdot Q^{m}+ (Q^{m})^{3}+2 Q^{*}\cdot (P^{*})^{2}+2 Q^{m}\cdot (P^{*})^{2}\right) , \label{eq_PAVF:91}\\
-&\frac{1}{\tau}\left(P^{*}-P^{m}\right)=\frac{1}{2}(\varPhi^{*}+\varPhi^{m}) , \label{eq_PAVF:92}\\
-&\frac{1}{\tau}\left(Q^{*}-Q^{m}\right)=\frac{1}{2}(\Psi^{*}+\Psi^{m}) , \label{eq_PAVF:93}\\
-&\frac{1}{\tau}\left(\varPhi^{m+1}-\varPhi^{*}\right)=\frac{1}{2}\kappa (\Psi^{m+1}+\Psi^{*}){+\frac{1}{2}D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((P^{m+1})^3+(P^{*})^{2}\cdot P^{m+1}\right . \nonumber\\
-		&~~~~~~~~~~~~~~~~~~~~~~~\left . +(P^{m+1})^{2}\cdot P^{*}+ (P^{*})^{3}+2 P^{m+1}\cdot (Q^{m+1})^{2}+2 P^{*}\cdot (Q^{m+1})^{2}\right) , \label{eq_PAVF:94}\\
-&\frac{1}{\tau}\left(\Psi^{m+1}-\Psi^{*}\right)=-\frac{1}{2}\kappa (\varPhi^{m+1}+\varPhi^{*}){+\frac{1}{2}D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((Q^{m+1})^3+(Q^{*})^{2}\cdot Q^{m+1}\right . \nonumber\\
-		&~~~~~~~~~~~~~~~~~~~~~~~~\left . +(Q^{m+1})^{2}\cdot Q^{*}+ (Q^{*})^{3}+2 Q^{m+1}\cdot (P^{*})^{2}+2 Q^{*}\cdot (P^{*})^{2}\right) , \label{eq_PAVF:95}\\
-&\frac{1}{\tau}\left(P^{m+1}-P^{*}\right)=\frac{1}{2}(\varPhi^{m+1}+\varPhi^{*}) , \label{eq_PAVF:96}\\
-&\frac{1}{\tau}\left(Q^{m+1}-Q^{*}\right)=\frac{1}{2}(\Psi^{m+1}+\Psi^{*}) , \label{eq_PAVF:97}
+\frac{1}{\tau}\left(\varPhi^{*}-\varPhi^{m}\right)=&\frac{1}{2}\kappa(\Psi^{*}+\Psi^{m}){+\frac{1}{2}D^{\alpha} (P^{*}+P^{m})}-\frac{\beta}{4}\left( (P^{*})^3+ (P^{m})^{2}\cdot P^{*}\right . \nonumber\\
+		&\left . + (P^{*})^{2}\cdot P^{m}+ (P^{m})^{3}+2 P^{*}\cdot (Q^{m})^{2}+2 P^{m}\cdot (Q^{m})^{2}\right) , \label{eq_PAVF:90}\\
+\frac{1}{\tau}\left(\Psi^{*}-\Psi^{m}\right)=&-\frac{1}{2}\kappa (\varPhi^{*}+\varPhi^{m}){+\frac{1}{2}D^{\alpha} (Q^{*}+Q^{m})}-\frac{\beta}{4}\left( (Q^{*})^3+ (Q^{m})^{2}\cdot Q^{*}\right . \nonumber\\
+		&\left . + (Q^{*})^{2}\cdot Q^{m}+ (Q^{m})^{3}+2 Q^{*}\cdot (P^{*})^{2}+2 Q^{m}\cdot (P^{*})^{2}\right) , \label{eq_PAVF:91}\\
+\frac{1}{\tau}\left(P^{*}-P^{m}\right)=&\frac{1}{2}(\varPhi^{*}+\varPhi^{m}) , \label{eq_PAVF:92}\\
+\frac{1}{\tau}\left(Q^{*}-Q^{m}\right)=&\frac{1}{2}(\Psi^{*}+\Psi^{m}) , \label{eq_PAVF:93}\\
+\frac{1}{\tau}\left(\varPhi^{m+1}-\varPhi^{*}\right)=&\frac{1}{2}\kappa (\Psi^{m+1}+\Psi^{*}){+\frac{1}{2}D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((P^{m+1})^3+(P^{*})^{2}\cdot P^{m+1}\right . \nonumber\\
+		&\left . +(P^{m+1})^{2}\cdot P^{*}+ (P^{*})^{3}+2 P^{m+1}\cdot (Q^{m+1})^{2}+2 P^{*}\cdot (Q^{m+1})^{2}\right) , \label{eq_PAVF:94}\\
+\frac{1}{\tau}\left(\Psi^{m+1}-\Psi^{*}\right)=&-\frac{1}{2}\kappa (\varPhi^{m+1}+\varPhi^{*}){+\frac{1}{2}D^{\alpha} Q^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((Q^{m+1})^3+(Q^{*})^{2}\cdot Q^{m+1}\right . \nonumber\\
+		&\left . +(Q^{m+1})^{2}\cdot Q^{*}+ (Q^{*})^{3}+2 Q^{m+1}\cdot (P^{*})^{2}+2 Q^{*}\cdot (P^{*})^{2}\right) , \label{eq_PAVF:95}\\
+\frac{1}{\tau}\left(P^{m+1}-P^{*}\right)=&\frac{1}{2}(\varPhi^{m+1}+\varPhi^{*}) , \label{eq_PAVF:96}\\
+\frac{1}{\tau}\left(Q^{m+1}-Q^{*}\right)=&\frac{1}{2}(\Psi^{m+1}+\Psi^{*}) , \label{eq_PAVF:97}
 \end{align}
 \end{enumerate}
 其中$\Phi^* , \Psi^* , P^* , Q^*$可理解为从前一层迭代得到的中间变量 , 作为计算后续层变量的输入 . 
