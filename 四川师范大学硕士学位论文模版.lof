@@ -1,19 +1,19 @@
 \addvspace {10.0pt}
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {table}{\numberline {1.1}{\ignorespaces NFSWEs 保结构方法对比\relax }}{2}{table.caption.5}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces NFSWEs 已有保结构方法对比\relax }}{2}{table.caption.5}%
 \addvspace {10.0pt}
 \addvspace {10.0pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 算例 \ref {exp_SAVRRK:1} 的一些松弛格式所对应的$\max _m\left |\gamma _m-1\right |$ 和 $\max _m\left |S_m(1)\right |$.\relax }}{21}{figure.caption.6}%
-\contentsline {table}{\numberline {3.1}{\ignorespaces 当 $N=32$ , $T = 1$ 时 , 算例 \ref {exp_SAVRRK:1} 在时间方向的误差和收敛阶.\relax }}{22}{table.caption.7}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 当 $N=32$ , $\tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:1} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{22}{figure.caption.8}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces 当 $N=4 , T = 1$ 时 , 算例 \ref {exp_SAVRRK:2} 在时间方向的误差和收敛阶.\relax }}{23}{table.caption.9}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces 当 $N=32$ , $T = 1$ 时 , 算例 \ref {exp_SAVRRK:1} 在时间方向的误差和收敛阶.\relax }}{22}{table.caption.6}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 算例 \ref {exp_SAVRRK:1} 的一些松弛格式所对应的$\max _m\left |\gamma _m-1\right |$ 和 $\max _m\left |S_m(1)\right |$.\relax }}{22}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 当 $N=32$ , $\tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:1} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{23}{figure.caption.8}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces 当 $N=4 , T = 1$ 时 , 算例 \ref {exp_SAVRRK:2} 在时间方向的误差和收敛阶.\relax }}{24}{table.caption.9}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces 算例 \ref {exp_SAVRRK:2} 的一些松弛格式所对应的$\max _m\left |\gamma _m-1\right |$ 和 $\max _m\left |S_m(1)\right |$.\relax }}{24}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:2} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{24}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:3} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{25}{figure.caption.12}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces 当 $N=4 , T = 1$ 时 , 算例 \ref {exp_SAVRRK:3} 在时间方向的误差和收敛阶.\relax }}{26}{table.caption.13}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:2} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{25}{figure.caption.11}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces 当 $N=4 , T = 1$ 时 , 算例 \ref {exp_SAVRRK:3} 在时间方向的误差和收敛阶.\relax }}{26}{table.caption.12}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:3} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{26}{figure.caption.13}%
 \contentsline {table}{\numberline {3.4}{\ignorespaces 当 $N=4 , T = 1$ 时 , 算例 \ref {exp_SAVRRK:4} 在时间方向的误差和收敛阶.\relax }}{27}{table.caption.14}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:4} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{27}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:4} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{28}{figure.caption.15}%
 \addvspace {10.0pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces 当$\alpha =1.5$时 , 算例 \ref {exp_PAVF:2} 中四种格式的收敛阶.\relax }}{38}{figure.caption.16}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces 当$\alpha =2.0$时 , 算例 \ref {exp_PAVF:2} 中四种格式的收敛阶.\relax }}{39}{figure.caption.17}%

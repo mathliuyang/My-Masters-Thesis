@@ -16,7 +16,7 @@
 鉴于NFSWEs的双重重要性 , 本文旨在构造两类求解二维NFSWEs的高效保结构数值方法.
 
 \section{研究背景与发展现状}
-非线性薛定谔方程是非线性科学中极具普适性的基本方程 , 在众多物理学领域都有着广泛的应用.其重要性引起了学术界的普遍关注 . 基于有限差分法\cite{liFastEnergyConserving2018}、 有限元法\cite{karakashianSpacetimeFiniteElement1998}、 间断有限元法\cite{zhangConservativeLocalDiscontinuous2017} 、 谱方法\cite{gongConservativeFourierPseudospectral2017}的各类保结构数值方法被不断提出 . 
+非线性薛定谔方程是非线性科学中极具普适性的基本方程 , 在众多物理学领域都有着广泛的应用.其重要性引起了学术界的普遍关注 . 基于有限差分法、 有限元法\cite{karakashianSpacetimeFiniteElement1998}、 间断有限元法\cite{zhangConservativeLocalDiscontinuous2017} 、 谱方法\cite{gongConservativeFourierPseudospectral2017}的各类保结构数值方法被不断提出 . 
 就有限差分方法而言 , Bao等人\cite{baoUniformErrorEstimates2012} 建立了整数阶薛定谔波动方程在有限差分方法下误差限适用于一维、 二维和三维情形的一致误差估计 . 
 Wang和Zhang\cite{wangAnalysisNewConservative2006} 针对一类薛定谔波动方程初边值问题 , 给出了一些新的守恒格式 . 利用Leray-Schauder不动点定理证明了有限差分格式解的存在性 , 
 并在能量范数下证明了$\mathcal{O}(h^2+\tau^2)$阶差分解的唯一性、稳定性和收敛性 . Zhang等人\cite{zhangConservativeNumericalScheme2003}提出了一种四层显式的保结构有限差分格式 , 并证明了其收敛性和稳定性 . 
@@ -31,8 +31,8 @@ Wang 和 Huang \cite{wangEnergyConservativeDifference2015,wangConservativeLinear
 Wang 等人 \cite{wangSplitstepSpectralGalerkin2019} 提出了一种用于二维非线性空间分数阶薛定谔方程的分步谱 伽辽金 方法 , 该方法仅保持离散质量.
 % 由于NFSWEs的非局部性和非线性 , 使其与经典的非线性薛定谔方程相比 , 理论和数值方法的研究相对较少 , 可参考的文献也比较有限.
 针对 NFSWEs, Ran 和 Zhang \cite{ranLinearlyImplicitConservative2016} 首先构造了一种三层线性隐式差分格式(Line-Impl) , 它能很好地保持修正后的质量和能量 . 
-Pan 等人\cite{panFourthorderDifferenceScheme2022}构建了一个空间四阶精度的三层线性隐式差分格式 , 并通过能量方法严格证明了该方法在$L_{\infty}$范数下的唯一可解性、无条件稳定性和收敛性.
 Li 和 Zhao \cite{liFastEnergyConserving2018} 结合 Crank-Nicolson 方法与 伽辽金 有限元方法以节省计算成本 , 设计了具有循环预调节器的快速 Krylov 子空间求解器 . 
+Pan 等人\cite{panFourthorderDifferenceScheme2022}构建了一个空间四阶精度的三层线性隐式差分格式 , 并通过能量方法严格证明了该方法在$L_{\infty}$范数下的唯一可解性、无条件稳定性和收敛性.
 Cheng 和 Qin \cite{chengConvergenceEnergyconservingScheme2022} 提出了一种基于标量辅助变量(SAV)方法的线性隐式守恒格式 , 该数值格式仅保持修正后的能量.
 Hu等人 \cite{huEfficientEnergyPreserving2022} 分别在时间上应用 Crank-Nicolson、SAV 和 ESAV 方法 , 提出了三种能量守恒的谱 伽辽金 方法.
 Zhang和Ran \cite{zhangHighorderStructurepreservingDifference2023} 提出并分析了基于三角SAV(T-SAV)方法的更高阶能量守恒差分格式.
@@ -43,7 +43,7 @@ Zhang和Ran \cite{zhangHighorderStructurepreservingDifference2023} 提出并分�
 \begin{table}[htbp]
     \centering
     \small
-    \caption{NFSWEs 保结构方法对比}
+    \caption{NFSWEs 已有保结构方法对比}
         \begin{tabular}{lccccc}
         \toprule
         \textcolor[rgb]{0 , 0 , 0}{\textbf{文献}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{维度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{空间精度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{时间精度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{能量守恒}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{质量守恒}} \\

@@ -522,7 +522,10 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 
 本节中将通过数值算例展示显式SAV-RRK方法\eqref{eq_SAVRRK:4-3}的精度和守恒性质.
 
-不失一般性 , 在计算中选用以下的显式RK方法\cite{shuEfficientImplementationEssentially1988}.
+值得注意的是, 尽管可以通过结合不同的显式龙格库塔方法来构造更高阶的显式SAV-RRK方法 .
+但事实上, 这一点却很难做到, 这是因为更高阶公式提高的精度, 已被所需要的计算量产生的误差抵消. 
+也就是说, 更高阶的计算公式与四阶公式相比, 没有实质上的改进.
+不失一般性 , 本章在计算中选用以下的显式RK方法\cite{shuEfficientImplementationEssentially1988}.
 \begin{itemize}
 \item $\operatorname{RK}(2 , 2)$:二级二阶Heun方法%\cite{shuEfficientImplementationEssentially1988}.
 \begin{equation}
@@ -587,21 +590,6 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 	这种不同的现象可能归因于偶数阶SAV-RRK方法的 $\max\limits _m\left|\gamma_m-1\right|$ 
 	相较于理论分析提高了一个阶.
 
-\begin{figure}[H]
-	\begin{center}
-	\subfigure[$\max_m\left|\gamma_m-1\right|$]{ \centering
-	\includegraphics[width=0.5\textwidth]{./figures/exp1_r.eps}
-	%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-	}\subfigure[$\max_m\left|S_m(1)\right|$]{ \centering
-	\includegraphics[width=0.5\textwidth]{./figures/exp1_s.eps}
-	%\centerline{($a$) Temporal accuracy with $N=128.$}
-	}
-	% \caption{$\max_m\left|\gamma_m-1\right|$ and $\max_m\left|S_m(1)\right|$ for some relaxation methods in Example \ref{exp_SAVRRK:1} .}
-	\caption{算例 \ref{exp_SAVRRK:1} 的一些松弛格式所对应的$\max_m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$.}
-	\label{fig_SAVRRK:1}
-	\end{center}
-	\end{figure}
-
 	\begin{table}[H]\scriptsize
 		\centering
 		\caption{当 $N=32$ , $T = 1$ 时 , 算例 \ref{exp_SAVRRK:1}  在时间方向的误差和收敛阶.}
@@ -629,7 +617,29 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		\end{tabular}%
 		\label{tab_SAVRRK:6-1}%
 		\end{table}%
-\vspace{-8mm}
+% \vspace{-8mm}
+\begin{figure}[H]
+	\begin{center}
+	\subfigure[$\max_m\left|\gamma_m-1\right|$]{ \centering
+	\includegraphics[width=0.5\textwidth]{./figures/exp1_r.eps}
+	%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+	}\subfigure[$\max_m\left|S_m(1)\right|$]{ \centering
+	\includegraphics[width=0.5\textwidth]{./figures/exp1_s.eps}
+	%\centerline{($a$) Temporal accuracy with $N=128.$}
+	}
+	% \caption{$\max_m\left|\gamma_m-1\right|$ and $\max_m\left|S_m(1)\right|$ for some relaxation methods in Example \ref{exp_SAVRRK:1} .}
+	\caption{算例 \ref{exp_SAVRRK:1} 的一些松弛格式所对应的$\max_m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$.}
+	\label{fig_SAVRRK:1}
+	\end{center}
+	\end{figure}
+
+	此外 , 为估计松弛因子 $\gamma_m$ , 在图 \ref{fig_SAVRRK:1} 中还展示了在不同时间步长 $\tau$下的 $\max\limits _m\left|S_m(1)\right|$的计算结果.
+	从中可以看出上述两个量的阶数与理论分析相符.这证实了引理 \ref{lem_SAVRRK:5_1} 和定理 \ref{thm_SAVRRK:5_1} 中的理论结果.
+	值得一提的是 , 当取不同的 $\alpha$ 的值时 , 可以得到类似的结果.% , 尽管这些现象在这里没有显示出来.
+	
+			使用SAV-RRK(4 , 4)方法 , 在长时间模拟($T=1000$)中 , 针对不同$\alpha$取值的相对能量误差如图 \ref{fig_SAVRRK:4} 所示.
+			这表明所提出的格式捕捉到了原始问题的保结构现象 , 并且其守恒性能明显优SAV方法\cite{chengConvergenceEnergyconservingScheme2022}和三层线性隐式差分法(Line-Impl)\cite{wangConservativeLinearizedDifference2015}.
+			
 	\begin{figure}[H]
 		\begin{center}
 		\subfigure[$\alpha=1.3$]{ \centering
@@ -652,13 +662,6 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		\end{center}
 		\end{figure}
 
-		此外 , 为估计松弛因子 $\gamma_m$ , 在图 \ref{fig_SAVRRK:1} 中还展示了在不同时间步长 $\tau$下的 $\max\limits _m\left|S_m(1)\right|$的计算结果.
-从中可以看出上述两个量的阶数与理论分析相符.这证实了引理 \ref{lem_SAVRRK:5_1} 和定理 \ref{thm_SAVRRK:5_1} 中的理论结果.
-值得一提的是 , 当取不同的 $\alpha$ 的值时 , 可以得到类似的结果.% , 尽管这些现象在这里没有显示出来.
-
-		使用SAV-RRK(4 , 4)方法 , 在长时间模拟($T=1000$)中 , 针对不同$\alpha$取值的相对能量误差如图 \ref{fig_SAVRRK:4} 所示.
-		这表明所提出的格式捕捉到了原始问题的保结构现象 , 并且其守恒性能明显优SAV方法\cite{chengConvergenceEnergyconservingScheme2022}和三层线性隐式差分法(Line-Impl)\cite{wangConservativeLinearizedDifference2015}.
-		
 	\begin{example}\label{exp_SAVRRK:2}
 		考虑具有以下初值条件的二维 NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3}
 		\begin{equation*}
@@ -671,16 +674,14 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		设$\alpha=1.5$ 和 $T=1$ , 表 \ref{tab_SAVRRK:6-2} 和图 \ref{fig_SAVRRK:2-1} 分别展示了时间方向上的收敛阶以及对松弛因子 $\gamma$ 相关的理论验证.
 		可以观察到 , 与 一维 算例 \ref{exp_SAVRRK:1} 不同 , 在二维情况下 , SAV-RRK(IDT) 方法未出现任何升阶现象.
 
-		为了展示所提出的方法在能量守恒方面的有效性 , 在图 \ref{fig_SAVRRK:2-4} 中绘制了取不同的$\alpha$时 , 使用 SAV-RRK(4 , 4) 方法进行长时间模拟($T=100$)的相对能量误差.
-结果显示 , 所提出的方法可以在离散层面上精确地保持能量 , 且其能量守恒性能显著优于 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022}.
-
+	
 \begin{table}[H]\scriptsize
 \centering
 \caption{当 $N=4 , T = 1$ 时 , 算例 \ref{exp_SAVRRK:2}  在时间方向的误差和收敛阶.}
 % \caption{Numerical errors and convergence order in time for Example \ref{exp_SAVRRK:2}  when $N=4 , T = 1$.}
 \begin{tabular}{lllllrlrlrlrlrl}
 \toprule
-\multicolumn{2}{l}{\multirow{2}[3]{*}{\textbf{RK(级 ,阶)}}} & \multicolumn{2}{l}{\multirow{2}[3]{*}{$\bm{\tau}$}} & \multicolumn{3}{c}{\textbf{SAV-RK}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK(IDT)}} \\
+\multicolumn{2}{l}{\multirow{2}[3]{*}{\textbf{RK(级 ,阶)}}} & \multicolumn{2}{l}{\multirow{2}[3]{*}{$\bm{\tau}$}} & \multicolumn{3}{c}{\textbf{SAV-RK(RT)}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK(IDT)}} \\
 \cmidrule{5-7}\cmidrule{9-11}\cmidrule{13-15}    \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \textbf{Error($\tau$)} &       & \textbf{order} &       & \textbf{Error($\tau$)} &       & \textbf{order} &       & \textbf{Error($\tau$)} &       & \textbf{order} \\
 \hline
 \multicolumn{2}{l}{\multirow{5}[0]{*}{\textbf{RK(2 , 2)}}} & \multicolumn{2}{l}{0.1} & 3.0217E-03 &       & -     &       & 3.0102E-03 &       & -     &       & 1.5692E-02 &       & - \\
@@ -717,7 +718,10 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \label{fig_SAVRRK:2-1}
 \end{center}
 \end{figure}
-\vspace{-8mm}
+% \vspace{-8mm}
+为了展示所提出的方法在能量守恒方面的有效性 , 在图 \ref{fig_SAVRRK:2-4} 中绘制了取不同的$\alpha$时 , 使用 SAV-RRK(4 , 4) 方法进行长时间模拟($T=100$)的相对能量误差.
+结果显示 , 所提出的方法可以在离散层面上精确地保持能量 , 且其能量守恒性能显著优于 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022}.
+
 \begin{figure}[H]
 	\begin{center}
 	\subfigure[$\alpha=1.3$]{ \centering
@@ -756,29 +760,6 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		结果表明 , 本章所提出的方法对非线性分数阶波动方程也是有效的.
 
 
-\begin{figure}[H]
-\begin{center}
-\subfigure[$\alpha=1.3$]{ \centering
-\includegraphics[width=0.5\textwidth]{./figures/exp3_energy3.eps}
-%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-}\subfigure[$\alpha=1.6$]{ \centering
-\includegraphics[width=0.5\textwidth]{./figures/exp3_energy6.eps}
-%\centerline{($a$) Temporal accuracy with $N=128.$}
-}\\
-\subfigure[$\alpha=1.9$]{ \centering
-\includegraphics[width=0.5\textwidth]{./figures/exp3_energy9.eps}
-%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-}\subfigure[$\alpha=2$]{ \centering
-\includegraphics[width=0.5\textwidth]{./figures/exp3_energy2.eps}
-%\centerline{($a$) Temporal accuracy with $N=128.$}
-}
-% \caption{ Relative errors of energy with $N=4 , \tau=0.01$ for different $\alpha$ in Example \ref{exp_SAVRRK:3} .}
-\caption{当 $N=4 , \tau=0.01$ 时 , 算例 \ref{exp_SAVRRK:3}  取不同 $\alpha$ 对应的相对能量误差.}
-\label{fig_SAVRRK:3-4}
-\end{center}
-\end{figure}
-
-		
 \begin{table}[H]\scriptsize
 	\centering
 	% \caption{Numerical errors and convergence order in time for Example \ref{exp_SAVRRK:3}  when $N=4 , T = 1$.}
@@ -808,6 +789,29 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 	\label{tab_SAVRRK:6-3}%
 	\end{table}%
 	
+	\vspace{-8mm}
+\begin{figure}[H]
+\begin{center}
+\subfigure[$\alpha=1.3$]{ \centering
+\includegraphics[width=0.5\textwidth]{./figures/exp3_energy3.eps}
+%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+}\subfigure[$\alpha=1.6$]{ \centering
+\includegraphics[width=0.5\textwidth]{./figures/exp3_energy6.eps}
+%\centerline{($a$) Temporal accuracy with $N=128.$}
+}\\
+\subfigure[$\alpha=1.9$]{ \centering
+\includegraphics[width=0.5\textwidth]{./figures/exp3_energy9.eps}
+%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+}\subfigure[$\alpha=2$]{ \centering
+\includegraphics[width=0.5\textwidth]{./figures/exp3_energy2.eps}
+%\centerline{($a$) Temporal accuracy with $N=128.$}
+}
+% \caption{ Relative errors of energy with $N=4 , \tau=0.01$ for different $\alpha$ in Example \ref{exp_SAVRRK:3} .}
+\caption{当 $N=4 , \tau=0.01$ 时 , 算例 \ref{exp_SAVRRK:3}  取不同 $\alpha$ 对应的相对能量误差.}
+\label{fig_SAVRRK:3-4}
+\end{center}
+\end{figure}
+
 \begin{example}\label{exp_SAVRRK:4}
 考虑二维分数阶Klein-Gordon-Schr{\"o}dinger方程\cite{fuStructurepreservingAlgorithmsTwodimensional2020}
 \begin{equation}
