@@ -7,13 +7,13 @@
 \contentsline {table}{\numberline {3.1}{\ignorespaces 当 $N=32$ , $T = 1$ 时 , 算例 \ref {exp_SAVRRK:1} 在时间方向的误差和收敛阶.\relax }}{22}{table.caption.6}%
 \contentsline {figure}{\numberline {3.1}{\ignorespaces 算例 \ref {exp_SAVRRK:1} 的一些松弛格式所对应的$\max _m\left |\gamma _m-1\right |$ 和 $\max _m\left |S_m(1)\right |$.\relax }}{22}{figure.caption.7}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces 当 $N=32$ , $\tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:1} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{23}{figure.caption.8}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces 当 $N=4 , T = 1$ 时 , 算例 \ref {exp_SAVRRK:2} 在时间方向的误差和收敛阶.\relax }}{24}{table.caption.9}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces 算例 \ref {exp_SAVRRK:2} 的一些松弛格式所对应的$\max _m\left |\gamma _m-1\right |$ 和 $\max _m\left |S_m(1)\right |$.\relax }}{24}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:2} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{25}{figure.caption.11}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces 当 $N=4 , T = 1$ 时 , 算例 \ref {exp_SAVRRK:3} 在时间方向的误差和收敛阶.\relax }}{26}{table.caption.12}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 算例 \ref {exp_SAVRRK:2} 的一些松弛格式所对应的$\max _m\left |\gamma _m-1\right |$ 和 $\max _m\left |S_m(1)\right |$.\relax }}{23}{figure.caption.9}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces 当 $N=4 , T = 1$ 时 , 算例 \ref {exp_SAVRRK:2} 在时间方向的误差和收敛阶.\relax }}{24}{table.caption.10}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:2} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{24}{figure.caption.11}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces 当 $N=4 , T = 1$ 时 , 算例 \ref {exp_SAVRRK:3} 在时间方向的误差和收敛阶.\relax }}{25}{table.caption.12}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:3} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{26}{figure.caption.13}%
 \contentsline {table}{\numberline {3.4}{\ignorespaces 当 $N=4 , T = 1$ 时 , 算例 \ref {exp_SAVRRK:4} 在时间方向的误差和收敛阶.\relax }}{27}{table.caption.14}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:4} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{28}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces 当 $N=4 , \tau =0.01$ 时 , 算例 \ref {exp_SAVRRK:4} 取不同 $\alpha $ 对应的相对能量误差.\relax }}{27}{figure.caption.15}%
 \addvspace {10.0pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces 当$\alpha =1.5$时 , 算例 \ref {exp_PAVF:2} 中四种格式的收敛阶.\relax }}{38}{figure.caption.16}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces 当$\alpha =2.0$时 , 算例 \ref {exp_PAVF:2} 中四种格式的收敛阶.\relax }}{39}{figure.caption.17}%
@@ -26,15 +26,15 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces 当 $N = 512 , \tau =0.01$ 时 , 算例 \ref {exp_PAVF:2} 取不同 $\alpha $ 时的相对质量误差.\relax }}{42}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces 当 $N = 512 , \tau =0.01$ , 算例 \ref {exp_PAVF:2} 取不同 $\alpha $ 时的相对能量误差.\relax }}{42}{figure.caption.25}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces 当$\alpha =1.5$时 , 算例 \ref {exp_PAVF:4} 中四种格式的收敛阶.\relax }}{43}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces 当$\alpha =2.0$时 , 算例 \ref {exp_PAVF:4} 中四种格式的收敛阶.\relax }}{43}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces 当$\alpha =2.0$时 , 算例 \ref {exp_PAVF:4} 中四种格式的收敛阶.\relax }}{44}{figure.caption.27}%
 \contentsline {figure}{\numberline {4.9}{\ignorespaces 当 $N = 64 , \tau =0.01$ , 算例 \ref {exp_PAVF:4} 取不同 $\alpha $ 时的离散质量.\relax }}{44}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces 当 $N = 64 , \tau =0.01$ , 算例 \ref {exp_PAVF:4} 取不同 $\alpha $ 时的离散能量.\relax }}{44}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces 当 $N = 64 , \tau =0.01$ , 算例 \ref {exp_PAVF:4} 取不同 $\alpha $ 时的相对质量误差.\relax }}{45}{figure.caption.30}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces 当 $N = 64 , \tau =0.01$ , 算例 \ref {exp_PAVF:4} 取不同 $\alpha $ 时的相对能量误差.\relax }}{45}{figure.caption.31}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces 当 $\alpha =2.0$ 时 , 算例 \ref {exp_PAVF:4} 在时刻 $t=t_{m}$ 的离散能量 $H^{m}$.\relax }}{46}{table.caption.32}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces 当 $\alpha =1.3$ 时 , 算例 \ref {exp_PAVF:4} 在时刻 $t=t_{m}$ 的离散质量 $G^{m}$.\relax }}{46}{table.caption.33}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces 当 $\alpha =1.6$ 时 , 算例 \ref {exp_PAVF:4} 在时刻 $t=t_{m}$ 的离散质量 $G^{m}$.\relax }}{46}{table.caption.34}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces 当 $\alpha =2.0$ 时 , 算例 \ref {exp_PAVF:4} 在时刻 $t=t_{m}$ 的离散质量 $G^{m}$.\relax }}{47}{table.caption.35}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces 当 $N = 64 , \tau =0.01$ , 算例 \ref {exp_PAVF:4} 取不同 $\alpha $ 时的离散能量.\relax }}{45}{figure.caption.29}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces 当 $\alpha =2.0$ 时 , 算例 \ref {exp_PAVF:4} 在时刻 $t=t_{m}$ 的离散能量 $H^{m}$.\relax }}{45}{table.caption.30}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces 当 $\alpha =1.3$ 时 , 算例 \ref {exp_PAVF:4} 在时刻 $t=t_{m}$ 的离散质量 $G^{m}$.\relax }}{46}{table.caption.31}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces 当 $\alpha =1.6$ 时 , 算例 \ref {exp_PAVF:4} 在时刻 $t=t_{m}$ 的离散质量 $G^{m}$.\relax }}{46}{table.caption.32}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces 当 $\alpha =2.0$ 时 , 算例 \ref {exp_PAVF:4} 在时刻 $t=t_{m}$ 的离散质量 $G^{m}$.\relax }}{46}{table.caption.33}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces 当 $N = 64 , \tau =0.01$ , 算例 \ref {exp_PAVF:4} 取不同 $\alpha $ 时的相对质量误差.\relax }}{47}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces 当 $N = 64 , \tau =0.01$ , 算例 \ref {exp_PAVF:4} 取不同 $\alpha $ 时的相对能量误差.\relax }}{47}{figure.caption.35}%
 \contentsline {figure}{\numberline {4.13}{\ignorespaces 当$\alpha =1.3$ 时 , 算例 \ref {exp_PAVF:4} 的波传播图.\relax }}{47}{figure.caption.36}%
 \contentsline {figure}{\numberline {4.14}{\ignorespaces 当$\alpha =1.6$ 时 , 算例 \ref {exp_PAVF:4} 的波传播图.\relax }}{48}{figure.caption.37}%
 \contentsline {figure}{\numberline {4.15}{\ignorespaces 当$\alpha =1.99$ 时 , 算例 \ref {exp_PAVF:4} 的波传播图.\relax }}{48}{figure.caption.38}%

@@ -48,23 +48,23 @@ Zhang和Ran \cite{zhangHighorderStructurepreservingDifference2023} 提出并分�
         \toprule
         \textcolor[rgb]{0 , 0 , 0}{\textbf{文献}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{维度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{空间精度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{时间精度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{能量守恒}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{质量守恒}} \\
         \midrule
-        \textcolor[rgb]{0 , 0 , 0}{\textbf{\cite{ranLinearlyImplicitConservative2016}{2016 , Ran}}} & 1 维   & 2 阶   & 2 阶   & 修正能量  & 修正质量 \\
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2016 , Ran}\cite{ranLinearlyImplicitConservative2016}}} & 1 维   & 2 阶   & 2 阶   & 修正能量  & 修正质量 \\
         \midrule
-        \textcolor[rgb]{0 , 0 , 0}{\textbf{\cite{liFastEnergyConserving2018}{2018 , Li}}} & 1 维   & 2 阶   & 2 阶   & 修正能量  & 修正质量 \\
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2018 , Li}\cite{liFastEnergyConserving2018}}} & 1 维   & 2 阶   & 2 阶   & 修正能量  & 修正质量 \\
         \midrule
-        \textcolor[rgb]{0 , 0 , 0}{\textbf{\cite{panFourthorderDifferenceScheme2022}{2022 , Pan}}} & 1 维   & 4 阶   & 2 阶   & 无     & 无 \\
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2022 , Pan}\cite{panFourthorderDifferenceScheme2022}}} & 1 维   & 4 阶   & 2 阶   & 无     & 无 \\
         \midrule
-        \textcolor[rgb]{0 , 0 , 0}{\textbf{\cite{chengConvergenceEnergyconservingScheme2022}{2022 , Cheng}}} & 2 维   & 2 阶   & 2 阶   & 修正能量  & 无 \\
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2022 , Cheng}\cite{chengConvergenceEnergyconservingScheme2022}}} & 2 维   & 2 阶   & 2 阶   & 修正能量  & 无 \\
         \midrule
-        \textcolor[rgb]{0 , 0 , 0}{\textbf{\cite{huEfficientEnergyPreserving2022}{2022 , Hu}}} & 1 维   & 谱精度   & 2 阶   & 修正能量  & 无 \\
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2022 , Hu}\cite{huEfficientEnergyPreserving2022}}} & 1 维   & 谱精度   & 2 阶   & 修正能量  & 无 \\
         \midrule
-        \textcolor[rgb]{0 , 0 , 0}{\textbf{\cite{zhangHighorderStructurepreservingDifference2023}{2023 , Zhang}}} & 1 维   & 4 阶   & 2 阶   & 修正能量  & 无 \\
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2023 , Zhang}\cite{zhangHighorderStructurepreservingDifference2023}}} & 1 维   & 4 阶   & 2 阶   & 修正能量  & 无 \\
         \bottomrule
         \end{tabular}%
     \label{tab:NFSWEs}%
     \end{table}%
 \section{研究内容}
-基于以上的研究空白 , 
+鉴于前期研究的不足 , 
 % 本篇论文主要从以下两个方面展示了数值求解NFSWEs的研究成果.
 一方面 , 注意到在诸多高精度数值方法中 , 显式龙格库塔(RK)方法因其高阶精度和易于实现的特性而备受青睐.
 然而 , 标准RK方法不一定能够满足系统所期望保留的某些物理特性.为了解决这一问题 , Ketcheson \cite{ketchesonRelaxationRungeKutta2019} 提出了松弛龙格库塔(RRK)方法 , 该方法能够保证系统在任何内积范数下的守恒或稳定性.

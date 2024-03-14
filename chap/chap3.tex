@@ -1,4 +1,4 @@
-\chapter[NFSWEs 的任意高阶显式能量守恒方法]{NFSWEs 的任意高阶显式能量守恒方法}
+\chapter[NFSWEs 的高阶显式能量守恒方法]{NFSWEs 的高阶显式能量守恒方法}
 
 本章主要考虑具有周期性边界的非线性分数阶薛定谔波动方程的初边值问题
 
@@ -135,7 +135,7 @@ $\Omega_{h}=\left\{(x_{i} , y_{j}) \mid 0 \leq i \leq N_x-1;0 \leq j \leq N_y-1\
 
 对于定义在$\Omega_{h}$上的任意网格函数$u$和$v$ , 定义离散内积和范数如下
 \begin{align}\label{eq_SAVRRK:48}
-(u , v)=h_{x} h_{y} \sum_{i=0}^{N_{x}-1} \sum_{j=0}^{N_{y}-1} u_{i , j} \bar{v}_{i , j} , \quad\|u\|=(u , u)^{\frac{1}{2}} . %\quad\|u\|_{\infty}=\sup _{\left(x_{i} , y_{j}\right) \in \Omega_{h}}\left|u_{i , j}\right| . 
+(u , v)=h_{x} h_{y} \sum_{i=0}^{N_{x}-1} \sum_{j=0}^{N_{y}-1} u_{i , j} \bar{v}_{i , j} , \quad\|u\|=(u , u)^{\frac{1}{2}} , \quad\|u\|_{\infty}=\sup _{\left(x_{i} , y_{j}\right) \in \Omega_{h}}\left|u_{i , j}\right| . 
 \end{align}
 
 设$\left(x_{i} , y_{j}\right)$为傅里叶配置点 , $u_{N}(x , y)$为$u(x , y)$的插值多项式函数 , 其中
@@ -637,8 +637,8 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 	从中可以看出上述两个量的阶数与理论分析相符.这证实了引理 \ref{lem_SAVRRK:5_1} 和定理 \ref{thm_SAVRRK:5_1} 中的理论结果.
 	值得一提的是 , 当取不同的 $\alpha$ 的值时 , 可以得到类似的结果.% , 尽管这些现象在这里没有显示出来.
 	
-			使用SAV-RRK(4 , 4)方法 , 在长时间模拟($T=1000$)中 , 针对不同$\alpha$取值的相对能量误差如图 \ref{fig_SAVRRK:4} 所示.
-			这表明所提出的格式捕捉到了原始问题的保结构现象 , 并且其守恒性能明显优SAV方法\cite{chengConvergenceEnergyconservingScheme2022}和三层线性隐式差分法(Line-Impl)\cite{wangConservativeLinearizedDifference2015}.
+	使用SAV-RRK(4 , 4)方法 , 在长时间模拟($T=1000$)中 , 针对不同$\alpha$取值的相对能量误差如图 \ref{fig_SAVRRK:4} 所示.
+	这表明所提出的格式捕捉到了原始问题的保结构现象 , 并且其守恒性能明显优SAV方法\cite{chengConvergenceEnergyconservingScheme2022}和三层线性隐式差分法(Line-Impl)\cite{wangConservativeLinearizedDifference2015}.
 			
 	\begin{figure}[H]
 		\begin{center}
@@ -662,65 +662,54 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 		\end{center}
 		\end{figure}
 
-	\begin{example}\label{exp_SAVRRK:2}
-		考虑具有以下初值条件的二维 NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3}
-		\begin{equation*}
-		u(x , y , 0)=\operatorname{sech}\left(x^2+y^2\right) , u_t(x , y , 0)=\sin (x+y) \operatorname{sech}\left(-2\left(x^2+y^2\right)\right) , (x , y , t) \in \Omega \times[0 , T] , 
-		\end{equation*}
-		其中 $\Omega=[-5 , 5] \times[-5 , 5]$.
-		\end{example}
-			
-		% 为了再次确认理论结果在二维情况下的适用性 , 使用算例 \ref{exp_SAVRRK:1}  中相同的参数($\alpha=1.5$ 和 $T=1$).
-		设$\alpha=1.5$ 和 $T=1$ , 表 \ref{tab_SAVRRK:6-2} 和图 \ref{fig_SAVRRK:2-1} 分别展示了时间方向上的收敛阶以及对松弛因子 $\gamma$ 相关的理论验证.
-		可以观察到 , 与 一维 算例 \ref{exp_SAVRRK:1} 不同 , 在二维情况下 , SAV-RRK(IDT) 方法未出现任何升阶现象.
+		\vspace{-8mm}
 
-	
+		\begin{figure}[H]
+			\begin{center}
+			\subfigure[$\max_m\left|\gamma_m-1\right|$]{ \centering
+			\includegraphics[width=0.5\textwidth]{./figures/exp2_r.eps}
+			%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+			}\subfigure[$\max_m\left|S_m(1)\right|$]{ \centering
+			\includegraphics[width=0.5\textwidth]{./figures/exp2_s.eps}
+			%\centerline{($a$) Temporal accuracy with $N=128.$}
+			}
+			% \caption{$\max _m\left|\gamma_m-1\right|$ and $\max_m\left|S_m(1)\right|$ for some relaxation (RT) methods in Example \ref{exp_SAVRRK:2} .}
+			\caption{算例 \ref{exp_SAVRRK:2} 的一些松弛格式所对应的$\max_m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$.}
+			\label{fig_SAVRRK:2-1}
+			\end{center}
+			\end{figure}
+
+			
 \begin{table}[H]\scriptsize
-\centering
-\caption{当 $N=4 , T = 1$ 时 , 算例 \ref{exp_SAVRRK:2}  在时间方向的误差和收敛阶.}
-% \caption{Numerical errors and convergence order in time for Example \ref{exp_SAVRRK:2}  when $N=4 , T = 1$.}
-\begin{tabular}{lllllrlrlrlrlrl}
-\toprule
-\multicolumn{2}{l}{\multirow{2}[3]{*}{\textbf{RK(级 ,阶)}}} & \multicolumn{2}{l}{\multirow{2}[3]{*}{$\bm{\tau}$}} & \multicolumn{3}{c}{\textbf{SAV-RK(RT)}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK(IDT)}} \\
-\cmidrule{5-7}\cmidrule{9-11}\cmidrule{13-15}    \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \textbf{Error($\tau$)} &       & \textbf{order} &       & \textbf{Error($\tau$)} &       & \textbf{order} &       & \textbf{Error($\tau$)} &       & \textbf{order} \\
-\hline
-\multicolumn{2}{l}{\multirow{5}[0]{*}{\textbf{RK(2 , 2)}}} & \multicolumn{2}{l}{0.1} & 3.0217E-03 &       & -     &       & 3.0102E-03 &       & -     &       & 1.5692E-02 &       & - \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 7.4615E-04 &       & 2.0178  &       & 7.4702E-04 &       & 2.0106  &       & 9.6213E-03 &       & 0.7057  \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 1.8513E-04 &       & 2.0109  &       & 1.8587E-04 &       & 2.0069  &       & 5.2472E-03 &       & 0.8747  \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 4.6090E-05 &       & 2.0060  &       & 4.6341E-05 &       & 2.0039  &       & 2.7312E-03 &       & 0.9420  \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 1.1497E-05 &       & 2.0032  &       & 1.1569E-05 &       & 2.0021  &       & 1.3923E-03 &       & 0.9721  \\
-\multicolumn{2}{l}{\multirow{5}[0]{*}{\textbf{RK(3 , 3)}}} & \multicolumn{2}{l}{0.1} & 1.2581E-04 &       & -     &       & 3.9379E-05 &       & -     &       & 3.2535E-03 &       & - \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 1.6180E-05 &       & 2.9589  &       & 5.5726E-06 &       & 2.8210  &       & 7.9304E-04 &       & 2.0365  \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 2.0532E-06 &       & 2.9783  &       & 7.4443E-07 &       & 2.9041  &       & 1.9546E-04 &       & 2.0205  \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 2.5863E-07 &       & 2.9889  &       & 9.6210E-08 &       & 2.9519  &       & 4.8500E-05 &       & 2.0108  \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 3.2454E-08 &       & 2.9944  &       & 1.2228E-08 &       & 2.9760  &       & 1.2078E-05 &       & 2.0056  \\
-\multicolumn{2}{l}{\multirow{5}[1]{*}{\textbf{RK(4 , 4)}}} & \multicolumn{2}{l}{0.1} & 7.9185E-06 &       & -     &       & 8.0508E-06 &       & -     &       & 3.4013E-05 &       & - \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 4.9103E-07 &       & 4.0113  &       & 4.9644E-07 &       & 4.0194  &       & 3.3898E-06 &       & 3.3268  \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 3.0531E-08 &       & 4.0075  &       & 3.0805E-08 &       & 4.0104  &       & 3.6901E-07 &       & 3.1995  \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 1.9026E-09 &       & 4.0042  &       & 1.9182E-09 &       & 4.0054  &       & 4.2681E-08 &       & 3.1120  \\
-\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 1.1873E-10 &       & 4.0022  &       & 1.1966E-10 &       & 4.0027  &       & 5.1191E-09 &       & 3.0596  \\
-\bottomrule
-\end{tabular}%
-\label{tab_SAVRRK:6-2}%
-\end{table}%
-	
-\begin{figure}[H]
-\begin{center}
-\subfigure[$\max_m\left|\gamma_m-1\right|$]{ \centering
-\includegraphics[width=0.5\textwidth]{./figures/exp2_r.eps}
-%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-}\subfigure[$\max_m\left|S_m(1)\right|$]{ \centering
-\includegraphics[width=0.5\textwidth]{./figures/exp2_s.eps}
-%\centerline{($a$) Temporal accuracy with $N=128.$}
-}
-% \caption{$\max _m\left|\gamma_m-1\right|$ and $\max_m\left|S_m(1)\right|$ for some relaxation (RT) methods in Example \ref{exp_SAVRRK:2} .}
-\caption{算例 \ref{exp_SAVRRK:2} 的一些松弛格式所对应的$\max_m\left|\gamma_m-1\right|$ 和 $\max_m\left|S_m(1)\right|$.}
-\label{fig_SAVRRK:2-1}
-\end{center}
-\end{figure}
-% \vspace{-8mm}
-为了展示所提出的方法在能量守恒方面的有效性 , 在图 \ref{fig_SAVRRK:2-4} 中绘制了取不同的$\alpha$时 , 使用 SAV-RRK(4 , 4) 方法进行长时间模拟($T=100$)的相对能量误差.
-结果显示 , 所提出的方法可以在离散层面上精确地保持能量 , 且其能量守恒性能显著优于 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022}.
+	\centering
+	\caption{当 $N=4 , T = 1$ 时 , 算例 \ref{exp_SAVRRK:2}  在时间方向的误差和收敛阶.}
+	% \caption{Numerical errors and convergence order in time for Example \ref{exp_SAVRRK:2}  when $N=4 , T = 1$.}
+	\begin{tabular}{lllllrlrlrlrlrl}
+	\toprule
+	\multicolumn{2}{l}{\multirow{2}[3]{*}{\textbf{RK(级 ,阶)}}} & \multicolumn{2}{l}{\multirow{2}[3]{*}{$\bm{\tau}$}} & \multicolumn{3}{c}{\textbf{SAV-RK}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK(RT)}} &       & \multicolumn{3}{c}{\textbf{SAV-RRK(IDT)}} \\
+	\cmidrule{5-7}\cmidrule{9-11}\cmidrule{13-15}    \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \textbf{Error($\tau$)} &       & \textbf{order} &       & \textbf{Error($\tau$)} &       & \textbf{order} &       & \textbf{Error($\tau$)} &       & \textbf{order} \\
+	\hline
+	\multicolumn{2}{l}{\multirow{5}[0]{*}{\textbf{RK(2 , 2)}}} & \multicolumn{2}{l}{0.1} & 3.0217E-03 &       & -     &       & 3.0102E-03 &       & -     &       & 1.5692E-02 &       & - \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 7.4615E-04 &       & 2.0178  &       & 7.4702E-04 &       & 2.0106  &       & 9.6213E-03 &       & 0.7057  \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 1.8513E-04 &       & 2.0109  &       & 1.8587E-04 &       & 2.0069  &       & 5.2472E-03 &       & 0.8747  \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 4.6090E-05 &       & 2.0060  &       & 4.6341E-05 &       & 2.0039  &       & 2.7312E-03 &       & 0.9420  \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 1.1497E-05 &       & 2.0032  &       & 1.1569E-05 &       & 2.0021  &       & 1.3923E-03 &       & 0.9721  \\
+	\multicolumn{2}{l}{\multirow{5}[0]{*}{\textbf{RK(3 , 3)}}} & \multicolumn{2}{l}{0.1} & 1.2581E-04 &       & -     &       & 3.9379E-05 &       & -     &       & 3.2535E-03 &       & - \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 1.6180E-05 &       & 2.9589  &       & 5.5726E-06 &       & 2.8210  &       & 7.9304E-04 &       & 2.0365  \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 2.0532E-06 &       & 2.9783  &       & 7.4443E-07 &       & 2.9041  &       & 1.9546E-04 &       & 2.0205  \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 2.5863E-07 &       & 2.9889  &       & 9.6210E-08 &       & 2.9519  &       & 4.8500E-05 &       & 2.0108  \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 3.2454E-08 &       & 2.9944  &       & 1.2228E-08 &       & 2.9760  &       & 1.2078E-05 &       & 2.0056  \\
+	\multicolumn{2}{l}{\multirow{5}[1]{*}{\textbf{RK(4 , 4)}}} & \multicolumn{2}{l}{0.1} & 7.9185E-06 &       & -     &       & 8.0508E-06 &       & -     &       & 3.4013E-05 &       & - \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.05} & 4.9103E-07 &       & 4.0113  &       & 4.9644E-07 &       & 4.0194  &       & 3.3898E-06 &       & 3.3268  \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.025} & 3.0531E-08 &       & 4.0075  &       & 3.0805E-08 &       & 4.0104  &       & 3.6901E-07 &       & 3.1995  \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.0125} & 1.9026E-09 &       & 4.0042  &       & 1.9182E-09 &       & 4.0054  &       & 4.2681E-08 &       & 3.1120  \\
+	\multicolumn{2}{l}{} & \multicolumn{2}{l}{0.00625} & 1.1873E-10 &       & 4.0022  &       & 1.1966E-10 &       & 4.0027  &       & 5.1191E-09 &       & 3.0596  \\
+	\bottomrule
+	\end{tabular}%
+	\label{tab_SAVRRK:6-2}%
+	\end{table}%
+
+\vspace{-8mm}
 
 \begin{figure}[H]
 	\begin{center}
@@ -743,6 +732,25 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 	\label{fig_SAVRRK:2-4}
 	\end{center}
 	\end{figure}
+
+	\begin{example}\label{exp_SAVRRK:2}
+		考虑具有以下初值条件的二维 NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3}
+		\begin{equation*}
+		u(x , y , 0)=\operatorname{sech}\left(x^2+y^2\right) , u_t(x , y , 0)=\sin (x+y) \operatorname{sech}\left(-2\left(x^2+y^2\right)\right) , (x , y , t) \in \Omega \times[0 , T] , 
+		\end{equation*}
+		其中 $\Omega=[-5 , 5] \times[-5 , 5]$.
+		\end{example}
+			
+		% 为了再次确认理论结果在二维情况下的适用性 , 使用算例 \ref{exp_SAVRRK:1}  中相同的参数($\alpha=1.5$ 和 $T=1$).
+		设$\alpha=1.5$ 和 $T=1$ , 表 \ref{tab_SAVRRK:6-2} 和图 \ref{fig_SAVRRK:2-1} 分别展示了时间方向上的收敛阶以及对松弛因子 $\gamma$ 相关的理论验证.
+		可以观察到 , 与 一维 算例 \ref{exp_SAVRRK:1} 不同 , 在二维情况下 , SAV-RRK(IDT) 方法未出现任何升阶现象.
+
+		为了展示所提出的方法在能量守恒方面的有效性 , 在图 \ref{fig_SAVRRK:2-4} 中绘制了取不同的$\alpha$时 , 使用 SAV-RRK(4 , 4) 方法进行长时间模拟($T=100$)的相对能量误差.
+		结果显示 , 所提出的方法可以在离散层面上精确地保持能量 , 且其能量守恒性能显著优于 SAV 方法 \cite{chengConvergenceEnergyconservingScheme2022}.
+		
+	
+
+
 	
 	\begin{example}\label{exp_SAVRRK:3}
 		考虑二维非线性分数阶波动方程\cite{wangUnconditionalEnergyDissipation2021} 
@@ -832,9 +840,6 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 
 与前面的算例类似 , 表 \ref{tab_SAVRRK:6-4} 列出了前述方法在 $\alpha=\beta=1.5$ 时的数值误差和时间方向的上收敛阶.
 
-图 \ref{fig_SAVRRK:3-5} 中绘制了取不同的$\alpha$和 $\beta$ 时 , 使用 SAV-RRK(4 , 4) 方法进行长时间模拟($T=100$)的相对能量误差.
-结果显示 , 所提出的方法可以在离散层面上精确地保持二维分数阶Klein-Gordon-Schr{\"o}dinger方程的能量, 这再次说明本章提出的SAV-RRK方法的有效性和普适性.
-
 \begin{table}[H]\scriptsize
 \centering
 % \caption{Numerical errors and convergence order in time for Example \ref{exp_SAVRRK:4}  when $N=4 , T = 1$.}
@@ -885,6 +890,9 @@ T_{m+1}\!= & \bm{y}\left(\hat{t}_m\!+\!\tau\!+\!\left(\gamma_m\!-\!1\right) \tau
 \label{fig_SAVRRK:3-5}
 \end{center}
 \end{figure}
+
+图 \ref{fig_SAVRRK:3-5} 中绘制了取不同的$\alpha$和 $\beta$ 时 , 使用 SAV-RRK(4 , 4) 方法进行长时间模拟($T=100$)的相对能量误差.
+结果显示 , 所提出的方法可以在离散层面上精确地保持二维分数阶Klein-Gordon-Schr{\"o}dinger方程的能量, 这再次说明本章提出的SAV-RRK方法的有效性和普适性.
 
 \section{小结}\label{Section_SAVRRK: 7}
 本章考虑了具有周期性边界条件的二维非线性分数阶薛定谔波动方程 , 首先通过标量辅助变量方法将其转化为一个等价系统 , 其四次形式的能量被重新表述为三个二次项的和 . 

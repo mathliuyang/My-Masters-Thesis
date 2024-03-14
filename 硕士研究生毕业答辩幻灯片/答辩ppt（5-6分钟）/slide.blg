@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: slide.aux
+The style file: acm.bst
+Database file #1: /Users/turingscat/Zotero/better-bibtex/mylibrary.bib
+You've used 12 entries,
+            2253 wiz_defined-function locations,
+            623 strings with 7008 characters,
+and the built_in function-call counts, 4312 in all, are:
+= -- 437
+> -- 184
+< -- 0
++ -- 80
+- -- 64
+* -- 388
+:= -- 696
+add.period$ -- 37
+call.type$ -- 12
+change.case$ -- 68
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 125
+empty$ -- 341
+format.name$ -- 64
+if$ -- 879
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 12
+newline$ -- 63
+num.names$ -- 24
+pop$ -- 48
+preamble$ -- 1
+purify$ -- 56
+quote$ -- 0
+skip$ -- 76
+stack$ -- 0
+substring$ -- 365
+swap$ -- 34
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 48
+warning$ -- 0
+while$ -- 47
+width$ -- 14
+write$ -- 125
