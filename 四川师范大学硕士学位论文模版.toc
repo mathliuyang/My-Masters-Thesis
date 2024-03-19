@@ -8,30 +8,30 @@
 \contentsline {section}{\numberline {1.4}论文安排}{3}{section.1.4}%
 \contentsline {chapter}{\numberline {2\hspace {.3em}}预备知识}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}分数阶微积分理论}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}傅里叶谱方法}{6}{section.2.2}%
-\contentsline {section}{\numberline {2.3}分区平均向量场方法}{7}{section.2.3}%
-\contentsline {chapter}{\numberline {3\hspace {.3em}}NFSWEs 的高阶显式能量守恒方法}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}NFSWEs的SAV等价系统}{10}{section.3.1}%
-\contentsline {section}{\numberline {3.2}傅里叶拟谱半离散格式}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}显式 SAV-RRK 方法}{14}{section.3.3}%
-\contentsline {section}{\numberline {3.4}显式SAV-RRK方法的精度}{16}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}松弛因子的估计}{16}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}显式SAV-RRK方法的截断误差}{18}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}数值算例}{20}{section.3.5}%
-\contentsline {section}{\numberline {3.6}小结}{28}{section.3.6}%
-\contentsline {chapter}{\numberline {4\hspace {.3em}}保NFSWEs原始能量和质量的守恒方法}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}NFSWEs的哈密顿结构}{29}{section.4.1}%
-\contentsline {section}{\numberline {4.2}傅里叶拟谱半离散格式}{32}{section.4.2}%
-\contentsline {section}{\numberline {4.3}PAVF-P 方法}{33}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}PAVF-P 格式}{33}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}离散守恒律}{35}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}其他AVF系列方法}{36}{section.4.4}%
-\contentsline {section}{\numberline {4.5}数值算例}{37}{section.4.5}%
-\contentsline {section}{\numberline {4.6}小结}{49}{section.4.6}%
-\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{51}{chapter.5}%
-\contentsline {section}{\numberline {5.1}本文总结}{51}{section.5.1}%
-\contentsline {section}{\numberline {5.2}研究展望}{51}{section.5.2}%
-\contentsline {chapter}{参考文献}{53}{chapter*.41}%
-\contentsline {chapter}{致谢}{57}{chapter*.42}%
-\contentsline {chapter}{在校期间的科研成果}{59}{chapter*.44}%
+\contentsline {section}{\numberline {2.2}傅里叶拟谱方法}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}分区平均向量场方法}{8}{section.2.3}%
+\contentsline {chapter}{\numberline {3\hspace {.3em}}NFSWEs 的高阶显式能量守恒方法}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}NFSWEs的SAV等价系统}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}傅里叶拟谱半离散格式}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}显式 SAV-RRK 方法}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.4}显式SAV-RRK方法的精度}{18}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}松弛因子的估计}{18}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}显式SAV-RRK方法的截断误差}{20}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}数值算例}{22}{section.3.5}%
+\contentsline {section}{\numberline {3.6}小结}{30}{section.3.6}%
+\contentsline {chapter}{\numberline {4\hspace {.3em}}保NFSWEs原始能量和质量的守恒方法}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}NFSWEs的哈密顿结构}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}傅里叶拟谱半离散格式}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}PAVF-P 方法}{35}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}PAVF-P 格式}{35}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}离散守恒律}{37}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}其他AVF系列方法}{38}{section.4.4}%
+\contentsline {section}{\numberline {4.5}数值算例}{39}{section.4.5}%
+\contentsline {section}{\numberline {4.6}小结}{51}{section.4.6}%
+\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{53}{chapter.5}%
+\contentsline {section}{\numberline {5.1}本文总结}{53}{section.5.1}%
+\contentsline {section}{\numberline {5.2}研究展望}{53}{section.5.2}%
+\contentsline {chapter}{参考文献}{55}{chapter*.41}%
+\contentsline {chapter}{致谢}{59}{chapter*.42}%
+\contentsline {chapter}{在校期间的科研成果}{61}{chapter*.44}%
 \contentsfinish 

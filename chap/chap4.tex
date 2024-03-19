@@ -1,17 +1,17 @@
 \chapter[保NFSWEs原始能量和质量的守恒方法]{保NFSWEs原始能量和质量的守恒方法}
-据了解 , 目前针对 NFSWEs 的数值方法只能保证修正后的能量和(或)质量守恒 . 
-注意到最近提出的分区平均向量场系列方法不仅可以保持原始能量 , 还有可能保持更多的守恒性质 , 并且已被用于构造哈密顿常微分方程的守恒数值格式\cite{caiPartitionedAveragedVector2018} . 
-本章通过改进的平均向量场方法为NFSWEs构建了能同时保持原始能量和质量的数值方法 . 
+据了解 , 目前针对 NFSWEs 的数值方法只能保修正后的能量和(或)质量 . 
+注意到最近提出的分区平均向量场系列方法不仅可以保持原始能量 , 还有可能保持更多的守恒物理量 , 并且已被用于构造哈密顿常微分方程的守恒数值格式\cite{caiPartitionedAveragedVector2018} . 
+因此, 本章旨在借助改进的平均向量场方法为NFSWEs构建能同时保持原始能量和质量的数值方法 . 
 \section{NFSWEs的哈密顿结构}\label{Section_PAVF: 2_1}
 
-哈密顿结构是构建PAVF系列格式的前提 . 然而 , 目前没有研究人员考虑过具有周期性边界条件的NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3} 的哈密顿结构 . 
-基于此 , 本节推导了 NFSWEs 的哈密顿结构 . 
+哈密顿结构是构建PAVF系列格式的前提 . %然而 , 目前没有研究人员考虑过具有周期性边界条件的NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的哈密顿结构 . 
+基于此 , 本节首先推导了 NFSWEs 的哈密顿结构 . 
 
 设
 \begin{align}
 u = p+\mathrm{i}q , \quad u_t = \varphi+ \mathrm{i}\psi , 
 \end{align}
-其中$p , q , \varphi , \psi$均为实函数 . 那么 , NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3} 可以重写为
+其中$p , q , \varphi , \psi$均为实函数 . 那么 , NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 可以重写为
 \begin{align}\label{eq_PAVF:28}
 \varphi_{t}+\mathrm{i}\psi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}p+\mathrm{i}\left( -\Delta \right) ^{\frac{\alpha }{2}}q+\mathrm{i}\kappa \varphi-\kappa \psi+\beta \left( p^{2}+q^{2}\right) \left( p+\mathrm{i} q\right) =0 . 
 \end{align}
@@ -20,7 +20,7 @@ u = p+\mathrm{i}q , \quad u_t = \varphi+ \mathrm{i}\psi ,
 &\varphi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}p-\kappa \psi+\beta \left( p^{2}+q^{2}\right)p=0 , \nonumber\\
 &\psi_{t}+\left( -\Delta \right) ^{\frac{\alpha }{2}}q+\kappa \varphi+\beta \left( p^{2}+q^{2}\right)q=0 . \label{eq_PAVF:29}
 \end{align}
-即 , NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3} 可以重写为一个等价的耦合系统
+即 , NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 可以重写为一个等价的耦合系统
 \begin{align}
 &\varphi_{t}=-\left( -\Delta \right) ^{\frac{\alpha }{2}}p+\kappa \psi-\beta \left( p^{2}+q^{2}\right)p\label{eq_PAVF:30} , \\
 &\psi_{t}=-\left( -\Delta \right) ^{\frac{\alpha }{2}}q-\kappa \varphi-\beta \left( p^{2}+q^{2}\right)q\label{eq_PAVF:31} , \\
@@ -29,7 +29,7 @@ u = p+\mathrm{i}q , \quad u_t = \varphi+ \mathrm{i}\psi ,
 \end{align}
 其中$p , q , \varphi , \psi$满足周期性边界条件 . 
 
-为了得到NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3} 的哈密顿形式 , 引入以下两个重要引理 . 
+为了得到NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的哈密顿形式 , 引入以下两个重要引理 . 
 \begin{lemma}\label{lem_PAVF:1}
 	\cite{fuStructurepreservingAlgorithmsTwodimensional2020} 
 	 给定 $1<\alpha \leq 2$ , 那么对于任何实周期函数 $p , q \in L^{2}(\Omega)$ , 有
@@ -89,7 +89,7 @@ u = p+\mathrm{i}q , \quad u_t = \varphi+ \mathrm{i}\psi ,
 &\mathcal{G}=\kappa\int_{\Omega}(p^2+q^2) d \boldsymbol{x}+2\operatorname{Im}(\int_{\Omega}(\varphi+\mathrm{i}\psi)(p-\mathrm{i}q)d \boldsymbol{x}) , \label{eq_PAVF:34} \\
 &\mathcal{H}=\frac{1}{2}\int_{\Omega}\left((\varphi^2+\psi^2)+\left((-\Delta)^{\frac{\alpha}{4}} p\right)^{2}+\left((-\Delta)^{\frac{\alpha}{4}} q\right)^{2}+\frac{\beta}{2}(p^2+q^2)^{2}\right) d \boldsymbol{x} . \label{eq_PAVF:35}
 \end{align}
-那么等价系统 \eqref{eq_PAVF:30} - \eqref{eq_PAVF:33} 具有以下两个守恒定律
+那么等价系统 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33} 具有以下两个守恒定律
 \begin{align}
 \frac{d}{d t} \mathcal{G}=0 , \quad \frac{d}{d t} \mathcal{H}=0 . 
 \end{align}
@@ -97,12 +97,12 @@ u = p+\mathrm{i}q , \quad u_t = \varphi+ \mathrm{i}\psi ,
 
 \begin{proof}
 将式 \eqref{eq_PAVF:30} 和 式\eqref{eq_PAVF:31} 分别与 $\varphi$ 和 $\psi$ 做内积 , 可以立即得到第一个守恒定律 . 
-注意到引理 \ref{lem_PAVF:1} , 并将方程 \eqref{eq_PAVF:30} - \eqref{eq_PAVF:33} 与 $\varphi_{t} , \psi_{t} , p_{t} , -q_{t}$ 分别做内积 , 可以推导出第二个守恒定律 . 
+注意到引理 \ref{lem_PAVF:1} , 并将方程 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33} 与 $\varphi_{t} , \psi_{t} , p_{t} , -q_{t}$ 分别做内积 , 可以推导出第二个守恒定律 . 
 
 \end{proof}
 
 \begin{theorem}\label{thm_PAVF:2}
-	NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3} 可以被重构为以下哈密顿系统
+	NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 可以被重构为以下哈密顿系统
 \begin{equation}\label{eq_PAVF:37}
 	\left(\begin{array}{l}
 		\varphi_{t} \\
@@ -142,7 +142,7 @@ J=\left(\begin{array}{cccc}
 \frac{\delta \mathcal{H}}{\delta \varphi} &=\varphi , \label{eq_PAVF:38c}\\
 \frac{\delta \mathcal{H}}{\delta \psi} &=\psi . \label{eq_PAVF:38}
 \end{align}
-结合 NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3} 的等价形式 \eqref{eq_PAVF:30} - \eqref{eq_PAVF:33} , 可得到
+结合 NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的等价形式 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33} , 可得到
 \begin{equation}\label{eq_PAVF:39}
 \left(\begin{array}{l}
 		\varphi_{t} \\
@@ -168,7 +168,7 @@ J=\left(\begin{array}{cccc}
 
 \section{傅里叶拟谱半离散格式}\label{Section_PAVF: 2_2}
 
-鉴于周期性边界条件 , 选择傅里叶拟谱法离散等价系统 \eqref{eq_PAVF:30} - \eqref{eq_PAVF:33} , 
+鉴于周期性边界条件 , 选择傅里叶拟谱法离散等价系统 \eqref{eq_PAVF:30}-\eqref{eq_PAVF:33} , 
 得到如下的空间半离散系统
 \begin{align}
 &\varPhi_{t}=D^{\alpha}P+\kappa \Psi-\beta \left( P^{2}+Q^{2}\right)\cdot P , \label{eq_PAVF:56}\\
@@ -206,7 +206,7 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q .
 % 接下来有以下定理 . 
 
 \begin{theorem}	\label{thm_PAVF:3}
-	半离散系统 \eqref{eq_PAVF:56} - \eqref{eq_PAVF:59} 具有质量和能量守恒定律
+	半离散系统 \eqref{eq_PAVF:56}-\eqref{eq_PAVF:59} 具有质量和能量守恒定律
 \begin{align}
 \frac{d G(Y)}{d t}=0 , ~\frac{d H(Y)}{d t}=0 . 
 \end{align}
@@ -228,11 +228,11 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q .
 		\end{proof}
 
 \section{PAVF-P 方法}\label{Section_PAVF: 3}
-对于NFSWEs\eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3} , 如表 \ref{tab:NFSWEs}所示存在许多保结构的方法 , 但其中大多数只保持修正后的能量和(或)质量 . 
-本节基于等价哈密顿系统\eqref{eq_PAVF:60} , 通过PAVF-P方法\cite{caiPartitionedAveragedVector2018}为NFSWEs构建了能够同时保持原始能量和质量的数值格式 . 
+对于NFSWEs\eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} , 如表 \ref{tab:NFSWEs}所示存在许多保结构的方法 , 但其中大多数只保持修正后的能量和(或)质量 . 
+本节旨在基于等价哈密顿系统\eqref{eq_PAVF:60} , 借助PAVF-P方法\cite{caiPartitionedAveragedVector2018}为NFSWEs构建能够同时保持原始能量和质量的数值格式 . 
 
 \subsection{PAVF-P 格式}
-对哈密顿系统\eqref{eq_PAVF:60}应用PAVF方法 , 得到NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3} 的全离散格式如下
+应用PAVF方法到哈密顿系统\eqref{eq_PAVF:60} , 可得NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的全离散格式
 \begin{align}
 \delta_{t} \varPhi^{m}=&\int_{0}^{1}\kappa H_{\Psi}\left(\varPhi^{m+1} , \varepsilon \Psi^{m+1}+(1-\varepsilon) \Psi^{m} , P^{m} , Q^{m}\right)d \varepsilon\nonumber\\
 &-\int_{0}^{1}H_{P}\left(\varPhi^{m+1} , \Psi^{m+1} , \varepsilon P^{m+1}+(1-\varepsilon) P^{m} , Q^{m}\right)d \varepsilon , \label{eq_PAVF:70}\\
@@ -241,7 +241,7 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q .
 \delta_{t} P^{m}=&\int_{0}^{1}H_{\varPhi}\left(\varepsilon \varPhi^{m+1}+(1-\varepsilon) \varPhi^{m} , \Psi^{m} , P^{m} , Q^{m}\right) d \varepsilon , \label{eq_PAVF:72}\\
 \delta_{t} Q^{m}=&\int_{0}^{1}H_{\Psi}\left(\varPhi^{m+1} , \varepsilon \Psi^{m+1}+(1-\varepsilon) \Psi^{m} , P^{m} , Q^{m}\right) d \varepsilon . \label{eq_PAVF:73}
 \end{align}
-上述数值格式可以进一步整合为如下傅里叶拟谱 PAVF(FPAVF)格式
+该数值格式可以进一步整合为如下傅里叶拟谱 PAVF(FPAVF)格式
 \begin{align}
 \delta_{t} \varPhi^{m}=&~\kappa \Psi^{m+\frac{1}{2}}{+D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (P^{m+1})^3+ (P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right . \nonumber\\
 	&+\left . (P^{m})^{3}+2 P^{m+1}\cdot (Q^{m})^{2}+2 P^{m}\cdot (Q^{m})^{2}\right) , \label{eq_PAVF:74}\\
@@ -252,10 +252,10 @@ G(Y)=\kappa\|P\|^{2}+\kappa\|Q\|^{2} +2\Psi^{T}P-2\varPhi^{T}Q .
 \end{align}
 其中$\delta_{t} \varPhi^{m} = \frac{P^{m+1}-P^{m}}{\tau}, \varPhi^{m+\frac{1}{2}} = \frac{P^{m+1}+P^{m}}{2}$. $\Psi^{m}, P^{m}$ 以及$Q^{m}$具有类似定义.
 
-通过将\eqref{eq_PAVF:74} - \eqref{eq_PAVF:75}分别与$\delta_t P^{m}$和$\delta_t Q^{m}$做内积 , 即可证明 FPAVF 格式的能量守恒性质 . 
+通过将\eqref{eq_PAVF:74}-\eqref{eq_PAVF:75}分别与$\delta_t P^{m}$和$\delta_t Q^{m}$做内积 , 即可证明 FPAVF 格式的能量守恒性质 . 
 不幸的是 , 此格式并不能保证质量守恒 , 这将在数值算例中被反映出来 . 
 
-FPAVF格式\eqref{eq_PAVF:74} - \eqref{eq_PAVF:77}的伴随格式为
+FPAVF格式\eqref{eq_PAVF:74}-\eqref{eq_PAVF:77}的伴随格式为
 \begin{align}
 \delta_{t} \varPhi^{m}=&~\kappa \Psi^{m+\frac{1}{2}}{+D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left( (P^{m+1})^3+ (P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right . \nonumber\\
 	&\left. + (P^{m})^{3}+2 P^{m+1}\cdot (Q^{m+1})^{2}+2 P^{m}\cdot (Q^{m+1})^{2}\right) , \label{eq_PAVF:86}\\
@@ -265,7 +265,7 @@ FPAVF格式\eqref{eq_PAVF:74} - \eqref{eq_PAVF:77}的伴随格式为
 \delta_{t} Q^{m}=&~\Psi^{m+\frac{1}{2}} . \label{eq_PAVF:89}
 \end{align}
 
-将FPAVF格式\eqref{eq_PAVF:74} - \eqref{eq_PAVF:77}与其伴随FPAVF格式\eqref{eq_PAVF:86} - \eqref{eq_PAVF:89}相结合 , 得到傅里叶拟谱 PAVF-P(FPAVF-P)格式如下
+将FPAVF格式\eqref{eq_PAVF:74}-\eqref{eq_PAVF:77}与其伴随FPAVF格式\eqref{eq_PAVF:86}-\eqref{eq_PAVF:89}相结合 , 得到傅里叶拟谱 PAVF-P(FPAVF-P)格式如下
 \begin{align}
 \delta_{t} \varPhi^{m}=&~\kappa \Psi^{m+\frac{1}{2}}{+D^{\alpha} P^{m+\frac{1}{2}}}-\frac{\beta}{4}\left((P^{m+1})^3+(P^{m})^{2}\cdot P^{m+1}+(P^{m+1})^{2}\cdot P^{m}\right . \nonumber\\
 	&\left . +(P^{m})^{3}+P^{m+1}\cdot (Q^{m})^{2}+P^{m}\cdot (Q^{m})^{2}+P^{m+1}\cdot (Q^{m+1})^{2}+P^{m}\cdot (Q^{m+1})^{2}\right) , \label{eq_PAVF:98}\\
@@ -277,7 +277,7 @@ FPAVF格式\eqref{eq_PAVF:74} - \eqref{eq_PAVF:77}的伴随格式为
 
 \subsection{离散守恒律}
 \begin{theorem}\label{thm_PAVF:4}
-FPAVF-P格式\eqref{eq_PAVF:98} - \eqref{eq_PAVF:101}在离散层面上具有以下质量和能量守恒律
+FPAVF-P格式\eqref{eq_PAVF:98}-\eqref{eq_PAVF:101}在离散层面上具有以下质量和能量守恒律
 \begin{align}\label{eq_PAVF:11141}
 G^{m+1}=G^{m} , \quad H^{m+1}=H^{m} , \quad 0 \leq m \leq M-1 , 
 \end{align}
@@ -340,7 +340,7 @@ $$\delta_t P^m=\varPhi^{m+\frac{1}{2}} , ~\delta_t Q^m=\Psi^{m+\frac{1}{2}} , $$
 G^{m+1}=G^{m}  . 
 \end{align}
 
-类似地 , 通过将\eqref{eq_PAVF:98} - \eqref{eq_PAVF:99}分别与$\delta_t P^{m}$和$\delta_t Q^{m}$做离散内积并求和 , 可以得到离散能量守恒律
+类似地 , 通过将\eqref{eq_PAVF:98}-\eqref{eq_PAVF:99}分别与$\delta_t P^{m}$和$\delta_t Q^{m}$做离散内积并求和 , 可以得到离散能量守恒律
 \begin{align}\label{eq_PAVF:11156}
 H^{m+1}=H^{m} . 
 \end{align}
@@ -348,7 +348,7 @@ H^{m+1}=H^{m} .
 \end{proof}
 
 \section{其他AVF系列方法}\label{Section_PAVF: 3-1}
-为了比较 , 本节也给出了用于求解NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3} 的以下两个二阶AVF系列格式 . 
+为了比较 , 本节也给出了用于求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的以下两个二阶AVF系列格式 . 
 \begin{enumerate}[$\bullet$]
 \item 傅里叶拟谱AVF(FAVF)格式
 \begin{align}
@@ -380,15 +380,15 @@ H^{m+1}=H^{m} .
 其中$\Phi^* , \Psi^* , P^* , Q^*$可理解为从前一层迭代得到的中间变量 , 作为计算后续层变量的输入 . 
 
 \begin{remark}\label{rk_PAVF:1}
-类似于FPAVF-P格式\eqref{eq_PAVF:98} - \eqref{eq_PAVF:101} , 容易证明上述FPAVF格式\eqref{eq_PAVF:74} - \eqref{eq_PAVF:77}、FAVF格式\eqref{eq_PAVF:66} - \eqref{eq_PAVF:69}和FPAVF-C格式\eqref{eq_PAVF:90} - \eqref{eq_PAVF:97}均在离散层面上保证原始能量守恒 , 但不保证原始质量守恒 . 离散能量的形式与\eqref{eq_PAVF:800}中定义的相同 . 
+类似于FPAVF-P格式\eqref{eq_PAVF:98}-\eqref{eq_PAVF:101} , 容易证明上述FPAVF格式\eqref{eq_PAVF:74}-\eqref{eq_PAVF:77}、FAVF格式\eqref{eq_PAVF:66}-\eqref{eq_PAVF:69}和FPAVF-C格式\eqref{eq_PAVF:90}-\eqref{eq_PAVF:97}均在离散层面上保证原始能量守恒 , 但不保证原始质量守恒 . 离散能量的形式与\eqref{eq_PAVF:800}中定义的相同 . 
 \end{remark}
 
 \begin{remark}\label{rk_PAVF:2}
-值得强调的是 , 用于求解NFSWEs \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3} 的其他现有方法仅保持修正后的能量和(或)质量 . 
+值得强调的是 , 用于求解NFSWEs \eqref{eq_SAVRRK:1}-\eqref{eq_SAVRRK:3} 的其他现有方法仅保持修正后的能量和(或)质量 . 
 例如SAV方法 \cite{chengConvergenceEnergyconservingScheme2022}仅保持修正后的能量 , 
 三层线性隐式差分格式\cite{ranLinearlyImplicitConservative2016}保持修正后的能量和质量 . 
-然而 , 所提出的FPAVF-P格式\eqref{eq_PAVF:98} - \eqref{eq_PAVF:101}在离散层面上同时保持原始质量和能量 , 这是本章的主要贡献之一 . 
-此外 , FPAVF-P格式\eqref{eq_PAVF:98} - \eqref{eq_PAVF:101}在时间方向具有二阶精度 , 在空间方向具有谱精度 . 
+然而 , 所提出的FPAVF-P格式\eqref{eq_PAVF:98}-\eqref{eq_PAVF:101}在离散层面上同时保持原始质量和能量 , 这是本章的主要贡献之一 . 
+此外 , FPAVF-P格式\eqref{eq_PAVF:98}-\eqref{eq_PAVF:101}在时间方向具有二阶精度 , 在空间方向具有谱精度 . 
 \end{remark}
 
 \section{数值算例}\label{Section_PAVF: 4}
@@ -414,9 +414,9 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 \end{equation}
 
 \begin{example}\label{exp_PAVF:2}
-	考虑一维非线性分数阶薛定谔波动方程
+	考虑一维 NFSWEs
 	\begin{equation}\label{eq_PAVF:108}
-	u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0 , \quad (x , t)\in  \Omega\times[0 , T] , 
+	u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}u_t+|u|^2 u=0 , \quad (x , t)\in  \Omega\times(0 , T] , 
 	\end{equation}
 	初值条件为 $u(x , 0)=(1+\mathrm{i}) x e^{-10(1-x)^2}$ 以及 $u_t(x , 0)=0$.
 \end{example}
@@ -431,10 +431,10 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 \begin{figure}[H]
 	\begin{center}
 	\subfigure[$\tau=1/1000$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp1_s1.5.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp1_s1.5.eps}
 	%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
 	}\subfigure[$N=128$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp1_t1.5.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp1_t1.5.eps}
 	%\centerline{($a$) Temporal accuracy with $N=128.$}
 	}
 	% \caption{Convergence orders of four schemes for Example \ref{exp_PAVF:2}  with $\alpha=1.5$.}
@@ -446,10 +446,10 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 	\begin{figure}[H]
 		\begin{center}
 		\subfigure[$\tau=1/1000$]{ \centering
-		\includegraphics[width=0.45\textwidth]{./figure/exp1_s2.eps}
+		\includegraphics[width=0.47\textwidth]{./figure/exp1_s2.eps}
 		%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
 		}\subfigure[$N=128$]{ \centering
-		\includegraphics[width=0.45\textwidth]{./figure/exp1_t2.eps}
+		\includegraphics[width=0.47\textwidth]{./figure/exp1_t2.eps}
 		%\centerline{($a$) Temporal accuracy with $N=128.$}
 		}
 		\caption{当$\alpha=2.0$时 , 算例 \ref{exp_PAVF:2}  中四种格式的收敛阶.}
@@ -458,21 +458,22 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 		\end{center}
 		\end{figure}
 
+		\vspace{-2.5mm}
 
 		\begin{figure}[H]
 			\begin{center}
 			\subfigure[$\alpha=1.3$]{ \centering
-			\includegraphics[width=0.45\textwidth]{./figure/exp1_H1.3.eps}
+			\includegraphics[width=0.47\textwidth]{./figure/exp1_H1.3.eps}
 			%\centerline{($a$) $\alpha=1.3$}
 			}\subfigure[$\alpha=1.6$]{ \centering
-			\includegraphics[width=0.45\textwidth]{./figure/exp1_H1.6.eps}
+			\includegraphics[width=0.47\textwidth]{./figure/exp1_H1.6.eps}
 			%\centerline{($b$) $\alpha=1.6$}
 			}\\
 			\subfigure[$\alpha=1.9$]{ \centering
-			\includegraphics[width=0.45\textwidth]{./figure/exp1_H1.9.eps}
+			\includegraphics[width=0.47\textwidth]{./figure/exp1_H1.9.eps}
 			%\centerline{($d$) $\alpha=2.0$}
 			}\subfigure[$\alpha=2.0$]{ \centering
-			\includegraphics[width=0.45\textwidth]{./figure/exp1_H2.eps}
+			\includegraphics[width=0.47\textwidth]{./figure/exp1_H2.eps}
 			%\centerline{($d$) $\alpha=2.0$}
 			}
 			% \caption{Discrete energy for different $\alpha$ in Example \ref{exp_PAVF:2}  with $N = 512$ and $\tau=0.01$.}
@@ -481,7 +482,7 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 			\end{center}
 			\end{figure}
 
-首先计算上述四种格式(FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式)在 $T=1$, $\alpha=1.5$ 以及 $\alpha=2.0$  时的收敛阶 , 见图 \ref{fig_PAVF:1} - \ref{fig_PAVF:2}.
+首先计算上述四种格式(FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式)在 $T=1$, $\alpha=1.5$ 以及 $\alpha=2.0$  时的收敛阶 , 见图 \ref{fig_PAVF:1}-\ref{fig_PAVF:2}.
 很容易发现这四种格式在空间方向均具有谱精度 , 而 FPAVF 格式在时间方向表现出一阶精度 , 其他格式则表现出二阶精度.
 
 图 \ref{fig_PAVF:3} 显示了几种格式在不同 $\alpha$ 值下 , 通过 $N=512$ 和 $\tau=0.01$ 计算的离散能量演化情况(T=500).
@@ -497,17 +498,17 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 \begin{figure}[H]
 	\begin{center}
 	 \subfigure[$\alpha=1.3$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp1_M1.3.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp1_M1.3.eps}
 	%\centerline{($a$) $\alpha=1.3$}
 	}\subfigure[$\alpha=1.6$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp1_M1.6.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp1_M1.6.eps}
 	%\centerline{($b$) $\alpha=1.6$}
 	}\\
 	 \subfigure[$\alpha=1.9$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp1_M1.9.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp1_M1.9.eps}
 	%\centerline{($c$) $\alpha=1.9$}
 	}\subfigure[$\alpha=2.0$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp1_M2.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp1_M2.eps}
 	%\centerline{($d$) $\alpha=2.0$}
 	}
 	% \caption{Discrete mass for different $\alpha$ in Example \ref{exp_PAVF:2}  with $N = 512$ and $\tau=0.01$.}
@@ -516,9 +517,9 @@ E(N)&=\left\|U_{N}^{M}-U_{2 N}^{M}\right\|_{\infty}=\left\|U\left(\frac{T}{M} , 
 	\end{center}
 	\end{figure}
 \newpage
-	更准确地说 , 表 \ref{tab_PAVF:1} - \ref{tab_PAVF:4} 显示了在 $t=t_{m}$ 时取不同 $\alpha$ 下的离散能量 $H^{m}$ 和离散质量 $G^{m}$ 的值 , 
+	更准确地说 , 表 \ref{tab_PAVF:1}-\ref{tab_PAVF:4} 显示了在 $t=t_{m}$ 时取不同 $\alpha$ 下的离散能量 $H^{m}$ 和离散质量 $G^{m}$ 的值 , 
 	这些值是通过取 $N=512$ 和 $\tau=0.01$ 获得的.从表 \ref{tab_PAVF:1} 可以看出 , 提出的四种格式均保持了原始能量 , 
-	而 SAV 格式和三层线性隐式差分格式仅保持了修正后的能量.类似地 , 从表 \ref{tab_PAVF:2} - \ref{tab_PAVF:4} 观察到 FPAVF-P 格式收敛到原始质量 , 其他方法性能较差 , 而三层线性隐式差分格式仅保持了修正后的质量.
+	而 SAV 格式和三层线性隐式差分格式仅保持了修正后的能量.类似地 , 从表 \ref{tab_PAVF:2}-\ref{tab_PAVF:4} 观察到 FPAVF-P 格式收敛到原始质量 , 其他方法性能较差 , 而三层线性隐式差分格式仅保持了修正后的质量.
 
 \begin{table}[H]\footnotesize
 	\centering
@@ -653,7 +654,7 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &Line-Impl   &FPAVF-P\\
 	  \end{tabular}\label{tab_PAVF:4}%
   \end{table}%
 
-  对于 $\alpha\neq 2$的原始能量计算比较困难 , 于是从相对误差的角度验证了离散守恒定律 , 见图 \ref{fig_PAVF:5} - \ref{fig_PAVF:6}.
+  对于 $\alpha\neq 2$的原始能量计算比较困难 , 于是从相对误差的角度验证了离散守恒定律 , 见图 \ref{fig_PAVF:5}-\ref{fig_PAVF:6}.
   同样 , 图中显示 FPAVF-P 格式在保持原始质量守恒方面具有最佳性能.随着 $\alpha$ 的增加 , 它在保持原始能量方面的性能将更好.这些观察与之前的理论结果一致.
 
   \begin{figure}[H]
@@ -690,73 +691,89 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &Line-Impl   &FPAVF-P\\
 	\caption{当 $N = 512 , \tau=0.01$ , 算例 \ref{exp_PAVF:2} 取不同 $\alpha$ 时的相对能量误差.}\label{fig_PAVF:6}
 	\end{center}
 	\end{figure}
+	\newpage
 	\begin{example}\label{exp_PAVF:4}
-		考虑带有初值的二维非线性分数薛定谔波动方程 \eqref{eq_SAVRRK:1} - \eqref{eq_SAVRRK:3}
-		\begin{equation}\label{eq_PAVF_110}
-		u(x , y , 0)=\mbox{sech}\left(x^2+y^2\right) , u_t(x , y , 0)=\sin (x+y) \mbox{sech}\left(-2(x^2+y^2)\right) , (x , y , t)\in  \Omega\times[0 , T] , 
-		\end{equation}
-		其中 $\Omega=[-5 , 5] \times[-5 , 5]$.
-		\end{example}
-
-	类似于一维情况 , 首先计算 FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式在 $\alpha=1.5$ 和 $\alpha=2.0$ 时的收敛阶.
-	如图 \ref{fig_PAVF:7} - \ref{fig_PAVF:8} 所示 , 可以清晰地观察到这四种格式在空间方向都具有谱精度 , 而 FPAVF 格式在时间方向表现出一阶精度 , 其他格式在时间方向表现出二阶精度.
-
-		注意到原始质量 $G(t)$ 与 $\alpha$ 无关 , 通过高斯数值积分 , 得到原始质量 $G(0)=3.14159265323701$.
+		% 考虑二维NFSWEs, 初值条件为
+		% \begin{equation}\label{eq_PAVF_110}
+		% 	\begin{cases}
+		% 		&u(x , y , 0)=\mbox{sech}\left(x^2+y^2\right) , \\
+		% 		&u_t(x , y , 0)=\sin (x+y) \mbox{sech}\left(-2(x^2+y^2)\right), 
+		% 	\end{cases}
+		% \end{equation}
+		% 其中 $(x , y , t)\in [-5 , 5] \times[-5 , 5]\times[0 , T]$.
+		
+		考虑如下二维 NFSWEs
+\begin{equation}
+	u_{t t}+(-\Delta)^{\alpha / 2} u+\mathrm{i}  u_{t}+|u|^{2} u=0 , \quad (x , y , t) \in \Omega \times[0 , T],
+\end{equation}
+初值条件为
+\begin{equation}
+	\begin{aligned}
+		u(x , y , 0)&=\operatorname{sech}\left(x^2+y^2\right) , \\
+		u_t(x , y , 0)&=\sin (x+y) \operatorname{sech}\left(-2\left(x^2+y^2\right)\right)  , 
+	\end{aligned}
+\end{equation}
+其中 $\Omega=[-5 , 5] \times[-5 , 5]$.
+	
+	\end{example}
+		
+		\begin{figure}[H]
+			\begin{center}
+			\subfigure[$\tau=1/1000$]{ \centering
+			\includegraphics[width=0.47\textwidth]{./figure/exp2_s1.5.eps}
+			%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+			}\subfigure[$N=16$]{ \centering
+			\includegraphics[width=0.47\textwidth]{./figure/exp2_t1.5.eps}
+			%\centerline{($a$) Temporal accuracy with $N=128.$}
+			}
+			% \caption{Convergence orders of four schemes for Example \ref{exp_PAVF:4}  with $\alpha=1.5$.} 
+			\caption{当$\alpha=1.5$时 , 算例 \ref{exp_PAVF:4}  中四种格式的收敛阶.}
+			\label{fig_PAVF:7}
+			\end{center}
+			\end{figure}
+		
+			
+			\begin{figure}[H]
+				\begin{center}
+				\subfigure[$\tau=1/1000$]{ \centering
+				\includegraphics[width=0.47\textwidth]{./figure/exp2_s2.eps}
+				%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
+				}\subfigure[$N=16$]{ \centering
+				\includegraphics[width=0.47\textwidth]{./figure/exp2_t2.eps}
+				%\centerline{($a$) Temporal accuracy with $N=128.$}
+				}
+				% \caption{Convergence orders of four schemes for Example \ref{exp_PAVF:4}  with $\alpha=2.0$.}
+				\caption{当$\alpha=2.0$时 , 算例 \ref{exp_PAVF:4}  中四种格式的收敛阶.}
+				 \label{fig_PAVF:8}
+				\end{center}
+				\end{figure}
+	与一维情况类似 , 首先计算 FPAVF-P、FPAVF、FAVF 和 FPAVF-C 格式在 $\alpha=1.5$ 和 $\alpha=2.0$ 时的收敛阶.
+	如图 \ref{fig_PAVF:7}-\ref{fig_PAVF:8} 所示 , 这四种格式在空间方向上均具有谱精度 , 而 FPAVF 格式在时间方向上只有一阶精度 , 其他格式在时间方向则表现出二阶精度.
+		
+	注意到原始质量 $G(t)$ 与 $\alpha$ 无关 , 通过高斯数值积分 , 得到原始质量 $G(0)=3.14159265323701$.
 	类似地 , 可以得到 $\alpha=2$ 时的原始能量 $E(0)=3.22697078976648$.
 
 	与一维问题不同 , 二维情况下没有三层线性隐式格式 , 因此只比较了 SAV 方法与本章提出的 FPAVF-P、FAVF 和 FPAVF-C 格式的性能.
-	图 \ref{fig_PAVF:9} - \ref{fig_PAVF:10} 中展示了在不同 $\alpha$ 下通过 $N=64$ 和 $\tau=0.01$ 计算的离散质量和离散能量(T=100).
+	图 \ref{fig_PAVF:9}-\ref{fig_PAVF:10} 中展示了在不同 $\alpha$ 下通过 $N=64$ 和 $\tau=0.01$ 计算的离散质量和离散能量(T=100).
+	更加详细的比较结果见表 \ref{tab_PAVF:4-1}-\ref{tab_PAVF:4-4} , 观察这些数据 , 可得到与一维问题同样符合理论分析的结果.
 
-	图 \ref{fig_PAVF:11} - \ref{fig_PAVF:12} 中分别记录了相对质量误差和相对能量误差随时间的变化.
+	图 \ref{fig_PAVF:11} 中记录了相对质量误差随时间的变化.
 	可以观察到 , FPAVF-P 格式在原始质量上收敛得很好 , 其他三种方法性能较差 , 尤其是 FAVF 格式和 FPAVF 格式(FPAVF格式的结果未显示 , 因为它更为糟糕).
-	此外 , 本章提出的三种格式都能很好地保持原始能量 , 而 SAV 方法只能保持修正的能量.
-	这些现象再次验证了理论结果的正确性.
-	
-\begin{figure}[H]
-	\begin{center}
-	\subfigure[$\tau=1/1000$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp2_s1.5.eps}
-	%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-	}\subfigure[$N=16$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp2_t1.5.eps}
-	%\centerline{($a$) Temporal accuracy with $N=128.$}
-	}
-	% \caption{Convergence orders of four schemes for Example \ref{exp_PAVF:4}  with $\alpha=1.5$.} 
-	\caption{当$\alpha=1.5$时 , 算例 \ref{exp_PAVF:4}  中四种格式的收敛阶.}
-	\label{fig_PAVF:7}
-	\end{center}
-	\end{figure}
-
-	
-	\begin{figure}[H]
-		\begin{center}
-		\subfigure[$\tau=1/1000$]{ \centering
-		\includegraphics[width=0.45\textwidth]{./figure/exp2_s2.eps}
-		%\centerline{($b$) Spatial accuracy with $\tau = 10^{-3}.$}
-		}\subfigure[$N=16$]{ \centering
-		\includegraphics[width=0.45\textwidth]{./figure/exp2_t2.eps}
-		%\centerline{($a$) Temporal accuracy with $N=128.$}
-		}
-		% \caption{Convergence orders of four schemes for Example \ref{exp_PAVF:4}  with $\alpha=2.0$.}
-		\caption{当$\alpha=2.0$时 , 算例 \ref{exp_PAVF:4}  中四种格式的收敛阶.}
-		 \label{fig_PAVF:8}
-		\end{center}
-		\end{figure}
-	
+	% \vspace{-5mm}
 \begin{figure}[H]
 	\begin{center}
 	 \subfigure[$\alpha=1.3$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp2_M1.3.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp2_M1.3.eps}
 	%\centerline{($a$) $\alpha=1.3$}
 	}\subfigure[$\alpha=1.6$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp2_M1.6.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp2_M1.6.eps}
 	%\centerline{($b$) $\alpha=1.6$}
 	}\\
 	 \subfigure[$\alpha=1.9$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp2_M1.9.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp2_M1.9.eps}
 	%\centerline{($c$) $\alpha=1.9$}
 	}\subfigure[$\alpha=2.0$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp2_M2.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp2_M2.eps}
 	%\centerline{($d$) $\alpha=2.0$}
 	}
 	% \caption{Discrete mass for different $\alpha$ in Example \ref{exp_PAVF:4}  with $N = 64$ and $\tau=0.01$.} 
@@ -768,17 +785,17 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &Line-Impl   &FPAVF-P\\
 \begin{figure}[H]
 	\begin{center}
 	\subfigure[$\alpha=1.3$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp2_H1.3.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp2_H1.3.eps}
 	%\centerline{($a$) $\alpha=1.3$}
 	}\subfigure[$\alpha=1.6$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp2_H1.6.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp2_H1.6.eps}
 	%\centerline{($b$) $\alpha=1.6$}
 	}\\
 	\subfigure[$\alpha=1.9$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp2_H1.9.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp2_H1.9.eps}
 	%\centerline{($d$) $\alpha=2.0$}
 	}\subfigure[$\alpha=2.0$]{ \centering
-	\includegraphics[width=0.45\textwidth]{./figure/exp2_H2.eps}
+	\includegraphics[width=0.47\textwidth]{./figure/exp2_H2.eps}
 	%\centerline{($d$) $\alpha=2.0$}
 	}
 	% \caption{Discrete energy for different $\alpha$ in Example \ref{exp_PAVF:4}  with $N = 64$ and $\tau=0.01$.} 
@@ -786,8 +803,12 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &Line-Impl   &FPAVF-P\\
 	\label{fig_PAVF:10}
 	\end{center}
 	\end{figure}
-	更加详细的比较结果见表 \ref{tab_PAVF:4-1} - \ref{tab_PAVF:4-4} , 观察这些数据 , 可得到与一维问题同样符合理论分析的结果.
-
+	\vspace{-1.5mm}
+	% 图 \ref{fig_PAVF:11}-\ref{fig_PAVF:12} 中分别记录了相对质量误差和相对能量误差随时间的变化.
+	% 可以观察到 , FPAVF-P 格式在原始质量上收敛得很好 , 其他三种方法性能较差 , 尤其是 FAVF 格式和 FPAVF 格式(FPAVF格式的结果未显示 , 因为它更为糟糕).
+	此外, 从图 \ref{fig_PAVF:12} 中相对能量误差随时间的变化可以看出, 本章提出的三种格式都能很好地保持原始能量 , 而 SAV 方法只能保持修正的能量.
+	这些现象再次验证了理论结果的正确性.
+	\vspace{-2.5mm}
 \begin{table}[H]\footnotesize
 	\centering
 	% \caption{Discrete energy $H^{m}$ at time $t=t_{m}$ for Example \ref{exp_PAVF:4}  when $\alpha=2$.}
@@ -916,7 +937,7 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &FPAVF-P\\
   \end{table}%
   
 
-  最后 , 分别在图 \ref{fig_PAVF:13} - \ref{fig_PAVF:16} 中展示了 $\alpha=1.3 , 1.6 , 1.99 , 2$ 时二维非线性分数阶薛定谔波动方程的演化过程(取$N=128 , \tau=0.01$).
+  最后 , 分别在图 \ref{fig_PAVF:13}-\ref{fig_PAVF:16} 中展示了 $\alpha=1.3 , 1.6 , 1.99 , 2$ 时二维非线性分数阶薛定谔波动方程的演化过程(取$N=128 , \tau=0.01$).
   可以观察到 , 阶数 $\alpha$ 将显著影响波的形状 , 当 $\alpha$ 变大时 , 波的形状变化更快.特别地 , 当 $\alpha \rightarrow 2$ 时 , 
   数值解收敛到整数阶非线性薛定谔波动方程 \cite{zhangConservativeNumericalScheme2003,liCompactFiniteDifference2012,wangAnalysisNewConservative2006}.
 
@@ -933,13 +954,13 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &FPAVF-P\\
 	%\centerline{($c$) $\alpha=1.9$}
 	}
 	% \caption{The relative errors of discrete mass for different $\alpha$ in Example \ref{exp_PAVF:4}  with $N = 64$ and $\tau=0.01$.} 
-	\vspace{-6mm}
+	\vspace{-1.5mm}
 	\caption{当  $N = 64 , \tau=0.01$ , 算例 \ref{exp_PAVF:4} 取不同 $\alpha$ 时的相对质量误差.}
 	\label{fig_PAVF:11}
 	\end{center}
 	\end{figure}
 	
-	
+	\vspace{-0.5mm}
 	\begin{figure}[H]
 	\begin{center}
 	 \subfigure[$\alpha=1.3$]{ \centering
@@ -952,12 +973,13 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &FPAVF-P\\
 	\includegraphics[width=0.3\textwidth]{./figure/exp2_RH1.9.eps}
 	%\centerline{($c$) $\alpha=1.9$}
 	}
+	\vspace{-1.5mm}
 	% \caption{The relative errors of discrete energy for different $\alpha$ in Example \ref{exp_PAVF:4}  with $N = 64$ and $\tau=0.01$.} 
 	\caption{当  $N = 64 , \tau=0.01$ , 算例 \ref{exp_PAVF:4} 取不同 $\alpha$ 时的相对能量误差.}
 	\label{fig_PAVF:12}
 	\end{center}
 	\end{figure}
-	
+	\vspace{-0.5mm}
   \begin{figure}[H]
 	\begin{center}
 	 \subfigure[$t=0s$]{ \centering
@@ -974,6 +996,7 @@ $t$   &FAVF   &FPAVF   &FPAVF-C   &FPAVF-P\\
 	} \subfigure[$t=100s$]{ \centering
 	\includegraphics[width=0.3\textwidth]{./figure/exp2_contour3_p100.eps}
 	}
+	\vspace{-1.5mm}
 	\caption{当$\alpha=1.3$ 时 , 算例 \ref{exp_PAVF:4} 的波传播图.}
 	% \caption{The pictures of wave propagation for Example \ref{exp_PAVF:4}  with $\alpha=1.3.$}
 	\label{fig_PAVF:13}

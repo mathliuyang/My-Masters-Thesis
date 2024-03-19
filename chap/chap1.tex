@@ -66,8 +66,8 @@ Zhang和Ran \cite{zhangHighorderStructurepreservingDifference2023} 提出并分�
 \section{研究内容}
 鉴于前期研究的不足 , 
 % 本篇论文主要从以下两个方面展示了数值求解NFSWEs的研究成果.
-一方面 , 注意到在诸多高精度数值方法中 , 显式龙格库塔(RK)方法因其高阶精度和易于实现的特性而备受青睐.
-然而 , 标准RK方法不一定能够满足系统所期望保留的某些物理特性.为了解决这一问题 , Ketcheson \cite{ketchesonRelaxationRungeKutta2019} 提出了松弛龙格库塔(RRK)方法 , 该方法能够保证系统在任何内积范数下的守恒或稳定性.
+一方面 , 注意到在诸多高精度数值方法中 , 显式 Runge-Kutta (RK)方法因其高阶精度和易于实现的特性而备受青睐.
+然而 , 标准RK方法不一定能够满足系统所期望保留的某些物理特性.为了解决这一问题 , Ketcheson \cite{ketchesonRelaxationRungeKutta2019} 提出了松弛 Runge-Kutta (RRK)方法 , 该方法能够保证系统在任何内积范数下的守恒或稳定性.
 随后 , RRK技术被扩展到一般的凸量上\cite{ranochaRelaxationRungeKutta2020}.
 通过在RK更新的每一步中引入一个松弛参数 , 可以强制实现对于任何凸泛函的守恒、耗散或其他属性.不过 , 这些优势的代价是必须求解一个非线性代数系统来确定松弛参数.然而 , 对于非二次不变量的情况 , 作者并未考虑构建显式的RRK格式.
 幸运的是 , 不变能量二次化(IEQ)方法 \cite{yangLinearUnconditionallyEnergy2017,yangEfficientLinearSchemes2017} 和SAV方法 \cite{chengConvergenceEnergyconservingScheme2022} 可以通过变量替换将非二次能量转化为新变量的二次形式 , 而由此产生的等价系统仍然保留了关于新变量的类似能量守恒性质.

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  15 MAR 2024 01:38
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  19 MAR 2024 19:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1290,194 +1290,193 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.53937> not available
 
 
 
-] [6]
+] [6] [7]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 160.
+
 
 Package fontspec Warning: Font "STFangsong" does not contain requested Script
 (fontspec)                "CJK".
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 88.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 180.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [7]) [8]
+) [8]) [9]
 \openout2 = `chap/chap3.aux'.
 
- (./chap/chap3.tex
+ (./chap/chap3.tex [10
+
+
+
+
+]
 3
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 26.
+[11] [12] [13] [14] [15] [16]
 
-LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 9.
+LaTeX Font Warning: Command \small invalid in math mode on input line 314.
 
-[9
-
-
-
-
-] [10] [11] [12]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 178.
- [13] [14]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 309.
-
-LaTeX Font Info:    Calculating math sizes for size <> on input line 311.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 316.
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <> on input line 311.
+(Font)              <> on input line 316.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <0.7> on input line 311.
+(Font)              <0.7> on input line 316.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <0.5> on input line 311.
+(Font)              <0.5> on input line 316.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 311.
+(Font)              size <5> substituted on input line 316.
 
-[15]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 348.
- [16]
+[17]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 353.
+ [18]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 410.
+LaTeX Font Warning: Command \small invalid in math mode on input line 415.
 
 
-Overfull \hbox (1.83539pt too wide) detected at line 412
+Overfull \hbox (1.83539pt too wide) detected at line 417
 \OML/cmm/m/it/10.95 ^^M \OT1/cmr/m/n/10.95 =  []\OML/cmm/m/it/10.95 :
  []
 
-[17]
-Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 435.
- [18]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 455.
+[19]
+Package hyperref Info: bookmark level for unknown remark defaults to 0 on input line 440.
+ [20]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 460.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [19] [20]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 577.
+) [21] [22]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 582.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.52812> not available
-(Font)              size <8> substituted on input line 596.
+(Font)              size <8> substituted on input line 603.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 596.
+(Font)              size <8> substituted on input line 603.
 
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7.52812> on input line 596.
+(Font)              <7.52812> on input line 603.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 596.
+(Font)              size <8> substituted on input line 603.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <7.52812> not available
-(Font)              size <8> substituted on input line 596.
+(Font)              size <8> substituted on input line 603.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 596.
+(Font)              size <8> substituted on input line 603.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 596.
+(Font)              size <8> substituted on input line 603.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 596.
+(Font)              size <8> substituted on input line 603.
 
 File: ./figures/exp1_r.eps Graphic file (type eps)
 <./figures/exp1_r.eps>
 File: ./figures/exp1_s.eps Graphic file (type eps)
 <./figures/exp1_s.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 626--631
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 633--638
  [][][] 
  []
 
 
-Underfull \vbox (badness 2662) has occurred while \output is active []
+Underfull \vbox (badness 4429) has occurred while \output is active []
 
- [21]
+ [23]
 File: ./figures/exp1_energy3.eps Graphic file (type eps)
 <./figures/exp1_energy3.eps>
 File: ./figures/exp1_energy6.eps Graphic file (type eps)
 <./figures/exp1_energy6.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 648--651
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 655--658
  [][][] 
  []
 
@@ -1486,30 +1485,30 @@ File: ./figures/exp1_energy9.eps Graphic file (type eps)
 File: ./figures/exp1_energy2.eps Graphic file (type eps)
 <./figures/exp1_energy2.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 655--660
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 662--667
  [][][][] 
  []
 
 
 Underfull \vbox (badness 3029) has occurred while \output is active []
 
- [22]
+ [24]
 File: ./figures/exp2_r.eps Graphic file (type eps)
 <./figures/exp2_r.eps>
 File: ./figures/exp2_s.eps Graphic file (type eps)
 <./figures/exp2_s.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 672--677
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 679--684
  [][][] 
  []
 
-[23]
+[25]
 File: ./figures/exp2_energy3.eps Graphic file (type eps)
 <./figures/exp2_energy3.eps>
 File: ./figures/exp2_energy6.eps Graphic file (type eps)
 <./figures/exp2_energy6.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 719--722
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 726--729
  [][][] 
  []
 
@@ -1518,22 +1517,17 @@ File: ./figures/exp2_energy9.eps Graphic file (type eps)
 File: ./figures/exp2_energy2.eps Graphic file (type eps)
 <./figures/exp2_energy2.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 726--731
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 733--738
  [][][][] 
  []
 
-[24]
-Overfull \hbox (2.05618pt too wide) detected at line 740
-\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [] [] \OML/cmm/m/it/12 ; u[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; \OT1/cmr/m/n/12 0) = [](\OML/cmm/m/it/12 x \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y; t\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 
- \OMS/cmsy/m/n/12 ^^B \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 ; T\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ;
- []
-
+[26]
 File: ./figures/exp3_energy3.eps Graphic file (type eps)
 <./figures/exp3_energy3.eps>
 File: ./figures/exp3_energy6.eps Graphic file (type eps)
 <./figures/exp3_energy6.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 806--809
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 820--823
  [][][] 
  []
 
@@ -1542,17 +1536,17 @@ File: ./figures/exp3_energy9.eps Graphic file (type eps)
 File: ./figures/exp3_energy2.eps Graphic file (type eps)
 <./figures/exp3_energy2.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 813--818
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 827--832
  [][][][] 
  []
 
-[25]
+[27]
 File: ./figures/exp4_energy3.eps Graphic file (type eps)
 <./figures/exp4_energy3.eps>
 File: ./figures/exp4_energy6.eps Graphic file (type eps)
 <./figures/exp4_energy6.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 877--880
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 891--894
  [][][] 
  []
 
@@ -1561,26 +1555,26 @@ File: ./figures/exp4_energy9.eps Graphic file (type eps)
 File: ./figures/exp4_energy2.eps Graphic file (type eps)
 <./figures/exp4_energy2.eps>
 
-Overfull \hbox (12.04498pt too wide) in paragraph at lines 884--889
+Overfull \hbox (12.04498pt too wide) in paragraph at lines 898--903
  [][][][] 
  []
 
-[26] [27]) [28]
+[28] [29]) [30]
 \openout2 = `chap/chap4.aux'.
 
  (./chap/chap4.tex
 4
-[29
+[31
 
 
 
 
-] [30] [31] [32] [33] [34] [35]
+] [32] [33] [34] [35] [36] [37]
 
 LaTeX Warning: The counter will not be printed.
              The label is: $\bullet $ on input line 352.
 
-[36] [37]
+[38] [39]
 File: ./figure/exp1_s1.5.eps Graphic file (type eps)
 <./figure/exp1_s1.5.eps>
 File: ./figure/exp1_t1.5.eps Graphic file (type eps)
@@ -1589,7 +1583,7 @@ File: ./figure/exp1_s2.eps Graphic file (type eps)
 <./figure/exp1_s2.eps>
 File: ./figure/exp1_t2.eps Graphic file (type eps)
 <./figure/exp1_t2.eps>
- [38]
+ [40]
 File: ./figure/exp1_H1.3.eps Graphic file (type eps)
 <./figure/exp1_H1.3.eps>
 File: ./figure/exp1_H1.6.eps Graphic file (type eps)
@@ -1598,7 +1592,7 @@ File: ./figure/exp1_H1.9.eps Graphic file (type eps)
 <./figure/exp1_H1.9.eps>
 File: ./figure/exp1_H2.eps Graphic file (type eps)
 <./figure/exp1_H2.eps>
- [39]
+ [41]
 File: ./figure/exp1_M1.3.eps Graphic file (type eps)
 <./figure/exp1_M1.3.eps>
 File: ./figure/exp1_M1.6.eps Graphic file (type eps)
@@ -1607,27 +1601,27 @@ File: ./figure/exp1_M1.9.eps Graphic file (type eps)
 <./figure/exp1_M1.9.eps>
 File: ./figure/exp1_M2.eps Graphic file (type eps)
 <./figure/exp1_M2.eps>
- [40]
-Overfull \hbox (8.17216pt too wide) in paragraph at lines 528--562
+ [42]
+Overfull \hbox (8.17216pt too wide) in paragraph at lines 529--563
  [][][] 
  []
 
 
-Overfull \hbox (2.94746pt too wide) in paragraph at lines 569--593
+Overfull \hbox (2.94746pt too wide) in paragraph at lines 570--594
  [][][] 
  []
 
 
-Overfull \hbox (2.94746pt too wide) in paragraph at lines 600--624
+Overfull \hbox (2.94746pt too wide) in paragraph at lines 601--625
  [][][] 
  []
 
 
-Overfull \hbox (2.94746pt too wide) in paragraph at lines 630--654
+Overfull \hbox (2.94746pt too wide) in paragraph at lines 631--655
  [][][] 
  []
 
-[41]
+[43]
 File: ./figure/exp1_RM1.3.eps Graphic file (type eps)
 <./figure/exp1_RM1.3.eps>
 File: ./figure/exp1_RM1.6.eps Graphic file (type eps)
@@ -1640,7 +1634,7 @@ File: ./figure/exp1_RH1.6.eps Graphic file (type eps)
 <./figure/exp1_RH1.6.eps>
 File: ./figure/exp1_RH1.9.eps Graphic file (type eps)
 <./figure/exp1_RH1.9.eps>
- [42]
+ [44]
 File: ./figure/exp2_s1.5.eps Graphic file (type eps)
 <./figure/exp2_s1.5.eps>
 File: ./figure/exp2_t1.5.eps Graphic file (type eps)
@@ -1649,10 +1643,7 @@ File: ./figure/exp2_s2.eps Graphic file (type eps)
 <./figure/exp2_s2.eps>
 File: ./figure/exp2_t2.eps Graphic file (type eps)
 <./figure/exp2_t2.eps>
-
-Underfull \vbox (badness 4805) has occurred while \output is active []
-
- [43]
+ [45]
 File: ./figure/exp2_M1.3.eps Graphic file (type eps)
 <./figure/exp2_M1.3.eps>
 File: ./figure/exp2_M1.6.eps Graphic file (type eps)
@@ -1669,17 +1660,14 @@ File: ./figure/exp2_H1.9.eps Graphic file (type eps)
 <./figure/exp2_H1.9.eps>
 File: ./figure/exp2_H2.eps Graphic file (type eps)
 <./figure/exp2_H2.eps>
- [44]
-Underfull \vbox (badness 2181) has occurred while \output is active []
-
- [45]
+ [46] [47]
 File: ./figure/exp2_RM1.3.eps Graphic file (type eps)
 <./figure/exp2_RM1.3.eps>
 File: ./figure/exp2_RM1.6.eps Graphic file (type eps)
 <./figure/exp2_RM1.6.eps>
 File: ./figure/exp2_RM1.9.eps Graphic file (type eps)
 <./figure/exp2_RM1.9.eps>
- [46]
+ [48]
 File: ./figure/exp2_RH1.3.eps Graphic file (type eps)
 <./figure/exp2_RH1.3.eps>
 File: ./figure/exp2_RH1.6.eps Graphic file (type eps)
@@ -1710,7 +1698,7 @@ File: ./figure/exp2_contour6_p50.eps Graphic file (type eps)
 <./figure/exp2_contour6_p50.eps>
 File: ./figure/exp2_contour6_p100.eps Graphic file (type eps)
 <./figure/exp2_contour6_p100.eps>
- [47]
+ [49]
 File: ./figure/exp2_contour99_p0.eps Graphic file (type eps)
 <./figure/exp2_contour99_p0.eps>
 File: ./figure/exp2_contour99_p1.eps Graphic file (type eps)
@@ -1738,17 +1726,17 @@ File: ./figure/exp2_contour2_p100.eps Graphic file (type eps)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]) [49]
+ [50]) [51]
 \openout2 = `chap/chap5.aux'.
 
- (./chap/chap5.tex [50
+ (./chap/chap5.tex [52
 
 
 
 
 ]
 5
-) [51]
+) [53]
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { chapter = { number={},format={\center } } }
@@ -1756,18 +1744,18 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 \openout2 = `chap/ref.aux'.
 
-(./chap/ref.tex [52
+(./chap/ref.tex [54
 
 
 
 
-] [53]
+] [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54]
+ [56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]) [56]
+ [57]) [58]
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { chapter = {
@@ -1775,7 +1763,7 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 \openout2 = `chap/thanks.aux'.
 
-(./chap/thanks.tex) [57
+(./chap/thanks.tex) [59
 
 
 
@@ -1789,13 +1777,13 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 
 \openout2 = `chap/ach.aux'.
 
-(./chap/ach.tex [58
+(./chap/ach.tex [60
 
 
 
 
 
-]) [59]
+]) [61]
 \tf@thm=\write6
 \openout6 = `四川师范大学硕士学位论文模版.thm'.
 
@@ -1811,16 +1799,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版.out' has not changed.
-(rerunfilecheck)             Checksum: 4AE58CCD1A00EE9D5B2E9C0042C26D98;3850.
+(rerunfilecheck)             Checksum: 8FFB0D6B21B9813C83727B2D902C0399;3858.
  )
 (\end occurred when \ifx on line 26 was incomplete) 
 Here is how much of TeX's memory you used:
- 24273 strings out of 476683
- 521435 string characters out of 5804047
- 1878018 words of memory out of 5000000
- 43844 multiletter control sequences out of 15000+600000
+ 24289 strings out of 476683
+ 523079 string characters out of 5804047
+ 1879018 words of memory out of 5000000
+ 43860 multiletter control sequences out of 15000+600000
  577783 words of font info for 204 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,17n,97p,1231b,654s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 四川师范大学硕士学位论文模版.pdf (71 pages).
+Output written on 四川师范大学硕士学位论文模版.pdf (73 pages).
