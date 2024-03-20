@@ -1,0 +1,37 @@
+\contentsline {chapter}{摘要}{I}{chapter*.1}%
+\contentsline {chapter}{ABSTRACT}{III}{chapter*.2}%
+\contentsline {chapter}{插图和附表清单}{V}{chapter*.3}%
+\contentsline {chapter}{\numberline {1\hspace {.3em}}绪论}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}研究意义}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}研究背景与发展现状}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}研究内容}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}论文安排}{3}{section.1.4}%
+\contentsline {chapter}{\numberline {2\hspace {.3em}}预备知识}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}分数阶微积分理论}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}傅里叶拟谱方法}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}分区平均向量场方法}{8}{section.2.3}%
+\contentsline {chapter}{\numberline {3\hspace {.3em}}NFSWEs 的高阶显式能量守恒方法}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}NFSWEs的SAV等价系统}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}傅里叶拟谱半离散格式}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}显式 SAV-RRK 方法}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.4}显式SAV-RRK方法的精度}{18}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}松弛因子的估计}{18}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}显式SAV-RRK方法的截断误差}{20}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}数值算例}{22}{section.3.5}%
+\contentsline {section}{\numberline {3.6}小结}{30}{section.3.6}%
+\contentsline {chapter}{\numberline {4\hspace {.3em}}保NFSWEs原始能量和质量的守恒方法}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}NFSWEs的哈密顿结构}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}傅里叶拟谱半离散格式}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}PAVF-P 方法}{35}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}PAVF-P 格式}{35}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}离散守恒律}{37}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}其他AVF系列方法}{38}{section.4.4}%
+\contentsline {section}{\numberline {4.5}数值算例}{39}{section.4.5}%
+\contentsline {section}{\numberline {4.6}小结}{51}{section.4.6}%
+\contentsline {chapter}{\numberline {5\hspace {.3em}}总结与展望}{53}{chapter.5}%
+\contentsline {section}{\numberline {5.1}本文总结}{53}{section.5.1}%
+\contentsline {section}{\numberline {5.2}研究展望}{53}{section.5.2}%
+\contentsline {chapter}{参考文献}{55}{chapter*.41}%
+\contentsline {chapter}{致谢}{59}{chapter*.42}%
+\contentsline {chapter}{在校期间的科研成果}{61}{chapter*.44}%
+\contentsfinish 

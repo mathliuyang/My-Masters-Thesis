@@ -1,0 +1,32 @@
+\documentclass[cs4size]{ctexbook}
+\input{setup/SiCNUformat}%加载模板格式设置
+
+\begin{document}
+\include{chap/thm}%配置定理环境
+\graphicspath{{figures/}}%指定图片文件存放父目录
+\SiCNUMakeTitle%生成封面页
+\OriginalCreationStatement%生成独创性声明
+\SiCNUfrontmatter%设置前文格式
+\include{chap/abs}%生成摘要
+\listoffigures%生成插图和附表清单
+\setcounter{secnumdepth}{3}%修改此处改变显示目录级别
+\setcounter{tocdepth}{3}%修改此处改变显示目录级别
+\tableofcontents\thispagestyle{empty}%生成目录
+%++++++++++++++++++++++正文部分++x+++++++++++++++++++++++++++%
+\SiCNUmainmatter%设置正文格式
+\include{chap/chap1}
+\include{chap/chap2}
+\include{chap/chap3}
+\include{chap/chap4}
+\include{chap/chap5}
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+\SiCNUref%设置参考文献格式
+\include{chap/ref}%参考文献
+% \SiCNUappendix%设置附录部分格式
+% \include{chap/app}
+\SiCNUbackmatter%设置后文部分格式
+\include{chap/thanks_ex}
+\SiCNUref%设置研究生成果页格式（继承于参考文献格式）
+\include{chap/ach_ex}%生成研究生成果页
+
+\end{document}

@@ -91,7 +91,7 @@ u(x)=\sum_{n=-\infty}^{\infty} \hat{u}_k \mathrm{e}^{-\mathrm{i} k x}, x \in(0,2
 \widehat{u}_k=\frac{1}{2} \int_0^{2 \pi} u(x) \mathrm{e}^{-\mathrm{i} k x} \mathrm{~d} x.
 \end{equation}
 
-当函数充分光滑时,展开系数以 $k^{-\alpha}$ 的速度趋于零,$\alpha$ 是光滑性指标.函数无穷光滑时,$\alpha$ 可取任意正实数,称为“谱精度”.
+当函数充分光滑时,展开系数以 $k^{-\alpha}$ 的速度趋于零, $\alpha$ 是光滑性指标.函数无穷光滑时, $\alpha$ 可取任意正实数,称为“谱精度”.
 函数 $u(x)$ 的正交函数系展开构成了物理空间和变换空间之间的有限线性变换.如果系统在某 Hilbert 空间上完备,则变换可逆.因此,函数可由其物理空间的值或变换空间的系数表征.
 实际计算中,基于傅里叶级数的方法通常无法直接实现,因为傅里叶系数未知.为克服此困难,采用离散傅里叶级数和离散傅里叶变换,利用物理空间的信息近似计算变换空间的量.
 
@@ -122,7 +122,7 @@ g_j(x)=\frac{1}{2 N} \sum_{k=-N}^{N-1} \mathrm{e}^{\mathrm{i} k\left(x-x_j\right
 \end{equation}
 显然 $I_N u(x)$ 有两种表示方式
 \begin{equation}
-I_N u(x)=\frac{1}{2 N} \sum_{j=0}^{2 N-1} u\left(x_j\right) \sin N\left(x-x_j\right) \cot \frac{x-x_j}{2}.
+I_N u(x)=\frac{1}{2 N} \sum_{j=0}^{2 N-1} u\left(x_j\right) \sin N\left(x-x_j\right) \cot \frac{x-x_j}{2},
 \end{equation}
 和
 \begin{equation}
@@ -161,18 +161,19 @@ I_N u(x)=\sum_{s=0}^{2 N-1} u\left(x_s\right) g_s(x).
 \end{equation}
 其中 $\boldsymbol{u}=\left(u\left(x_0\right), \cdots, u\left(x_{2 N-1}\right)\right)^{\mathrm{T}}, \mathrm{D}_l=\left(\mathrm{D}_1\right)^{(l)}$, 而
 \begin{equation}
-\left(\mathrm{D}_1\right)_{j, s}=\left\{\begin{array}{cc}
+\left(\mathrm{D}_1\right)_{j, s}=\begin{cases}
 \frac{(-1)^{j+s}}{2} \operatorname{cot} \frac{x_j-x_s}{2}, & s \neq j \\
 0, & s=j
-\end{array}\right.
+\end{cases}.
 \end{equation}
 
 \begin{equation}
-    \left(\mathrm{D}_2\right)_{j, s}= \begin{cases}\frac{(-1)^{j+s+1}}{2} \frac{1}{\sin ^2 \frac{x_j-x_s}{2}}, & s \neq j \\ \frac{2 N^2+1}{6}, & s=j\end{cases}
+    \left(\mathrm{D}_2\right)_{j, s}= \begin{cases}\frac{(-1)^{j+s+1}}{2} \frac{1}{\sin ^2 \frac{x_j-x_s}{2}}, & s \neq j \\ 
+        \frac{2 N^2+1}{6}, & s=j\end{cases}.
     \end{equation}
     另一方面
     \begin{equation}
-    \frac{\mathrm{d}^l}{\mathrm{~d} x^l} I_N u\left(x_j\right)=\sum_{k=-N}^{N-1}(\mathrm{i} k)^l \hat{u}_k \mathrm{e}^{\mathrm{i} k x_j}
+    \frac{\mathrm{d}^l}{\mathrm{~d} x^l} I_N u\left(x_j\right)=\sum_{k=-N}^{N-1}(\mathrm{i} k)^l \hat{u}_k \mathrm{e}^{\mathrm{i} k x_j}.
     \end{equation}
 
 上式的意义在于 , 函数的求导运算在傅里叶变换的作用下 , 可转化为相对简单的代数运算.
