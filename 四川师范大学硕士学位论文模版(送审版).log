@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  20 MAR 2024 11:58
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  20 MAR 2024 22:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -205,7 +205,7 @@ Package fontspec Info: Font family 'SongtiSCLight(0)' created for font 'Songti
 
 ))) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
-) (./setup/SiCNUformat.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty
+) (./setup/SiCNUformat_ex.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks16
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -825,7 +825,7 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 112.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-))) (./四川师范大学硕士学位论文模版(送审版).aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap1.aux) (./chap/chap2.aux) (./chap/chap3.aux
+))) (./四川师范大学硕士学位论文模版(送审版).aux (./chap/thm.aux) (./chap/abs_ex.aux) (./chap/chap1.aux) (./chap/chap2.aux) (./chap/chap3.aux
 
 LaTeX Warning: Label `eq_SAVRRK:313a' multiply defined.
 
@@ -1107,9 +1107,9 @@ Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              {-2}\songti },titleformat={\zihao {-2}\songti },
 (ctexbook)              beforeskip={2em},afterskip={1em} } } is set.
 
-\openout2 = `chap/abs.aux'.
+\openout2 = `chap/abs_ex.aux'.
 
-(./chap/abs.tex
+(./chap/abs_ex.tex
 
 Package fontspec Warning: Font "Heiti SC Light" does not contain requested
 (fontspec)                Script "CJK".
@@ -1216,22 +1216,23 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { chapter = { name={,},number={\arabic
 (ctexbook)              {chapter}}, format={\flushleft },nameformat={\zihao
-(ctexbook)              {3}\bf },aftername={~~},titleformat={\zihao {3}\bf },
-(ctexbook)              beforeskip={1em},afterskip={0.5em} } } is set.
+(ctexbook)              {3}\heiti },aftername={~~},titleformat={\zihao
+(ctexbook)              {3}\heiti }, beforeskip={1em},afterskip={0.5em} } } is
+(ctexbook)              set.
 
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { section = { name={,},number={\arabic
 (ctexbook)              {chapter}.\arabic {section}}, format={\flushleft
-(ctexbook)              },nameformat={\zihao {4}\bf
-(ctexbook)              },aftername={~~},titleformat={\zihao {4}\bf },
+(ctexbook)              },nameformat={\zihao {4}\heiti
+(ctexbook)              },aftername={~~},titleformat={\zihao {4}\heiti },
 (ctexbook)              beforeskip={0.5em},afterskip={0.5em} } } is set.
 
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { subsection = { name={,},number={\arabic
 (ctexbook)              {chapter}.\arabic {section}.\arabic {subsection}},
-(ctexbook)              format={\flushleft },nameformat={\zihao {-4}\bf
+(ctexbook)              format={\flushleft },nameformat={\zihao {-4}\heiti
 (ctexbook)              },aftername={~~},titleformat={\zihao {-4}\heiti },
 (ctexbook)              beforeskip={0em},afterskip={0em} } } is set.
 
@@ -1792,7 +1793,7 @@ Underfull \hbox (badness 1902) in paragraph at lines 3--4
 \tf@thm=\write6
 \openout6 = `四川师范大学硕士学位论文模版(送审版).thm'.
 
- (./四川师范大学硕士学位论文模版(送审版).aux (./chap/thm.aux) (./chap/abs.aux) (./chap/chap1.aux) (./chap/chap2.aux) (./chap/chap3.aux) (./chap/chap4.aux) (./chap/chap5.aux) (./chap/ref.aux) (./chap/thanks_ex.aux) (./chap/ach_ex.aux))
+ (./四川师范大学硕士学位论文模版(送审版).aux (./chap/thm.aux) (./chap/abs_ex.aux) (./chap/chap1.aux) (./chap/chap2.aux) (./chap/chap3.aux) (./chap/chap4.aux) (./chap/chap5.aux) (./chap/ref.aux) (./chap/thanks_ex.aux) (./chap/ach_ex.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
@@ -1808,12 +1809,12 @@ Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版(�
  )
 (\end occurred when \ifx on line 26 was incomplete) 
 Here is how much of TeX's memory you used:
- 24285 strings out of 476683
- 523244 string characters out of 5804047
+ 24273 strings out of 476683
+ 522495 string characters out of 5804047
  1879018 words of memory out of 5000000
- 43856 multiletter control sequences out of 15000+600000
- 577775 words of font info for 203 fonts, out of 8000000 for 9000
+ 43843 multiletter control sequences out of 15000+600000
+ 576087 words of font info for 203 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,17n,97p,1236b,654s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,17n,97p,1239b,654s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on 四川师范大学硕士学位论文模版(送审版).pdf (73 pages).

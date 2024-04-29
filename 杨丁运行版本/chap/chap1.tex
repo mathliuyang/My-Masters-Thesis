@@ -1,0 +1,101 @@
+\chapter[绪论]{绪论}
+% 本章主要介绍非线性分数阶薛定谔波动方程(NFSWEs)方程的研究意义、研究背景和发展现状 , 以及本文的实际研究内容.
+
+\section{研究意义}
+分数阶微积分理论是研究任意阶微分和积分的数学分支
+分数阶微积分理论是研究任意阶微分和积分的数学分支 , 也是整数阶微积分理论的拓展.这一理论起源于17世纪末 , 经过三个世纪的不懈努力 , 包括Riemann-Liouville、Grüwald-Letnikov、Caputo和Riesz在内的多种分数阶微积分理论逐渐形成\cite{samkoFractionalIntegralsDerivatives1993}.
+尽管分数阶微积分的物理和几何解释存在挑战 , 但近几十年来 , 多个学科领域的研究表明 , 与整数阶微分方程相比 , 分数阶微分方程的保记忆性能更有效地描述某些复杂问题.
+目前 , 分数阶微分方程已广泛应用于物理学、化学、生物学、水文学、混沌理论、复杂粘弹性材料、系统控制、信号处理、经济学等领域的诸多问题\cite{liIntroductionFractionalCalculus2015,HandbookDifferentialEquations2008,brychkovIndefiniteIntegrals2008,zhangMassBalanceBased2005,carrerasAnomalousDiffusionExit2001,maginSolvingFractionalOrder2009,zaslavskySelfsimilarTransportIncomplete1993,sunRandomorderFractionalDifferential2011}.%\cite{liIntroductionFractionalCalculus2015 , HandbookDifferentialEquations2008 , brychkovIndefiniteIntegrals2008 , zhangMassBalanceBased2005 , carrerasAnomalousDiffusionExit2001 , hilferFRACTIONALCALCULUSREGULAR2000 , maginSolvingFractionalOrder2009 , zaslavskySelfsimilarTransportIncomplete1993 , sunRandomorderFractionalDifferential2011}.
+
+非线性分数阶薛定谔波动方程(NFSWEs)是对经典整数阶薛定谔波动方程的推广.
+后者在Klein-Gordon方程的非相对论极限 \cite{tsutsumiNonrelativisticApproximationNonlinear1984,machiharaNonrelativisticLimitEnergy2002}、等离子体中的Langmuir波包络近似 \cite{colinSemidiscretizationTimeNonlinear1998}
+以及光子弹的Sine-Gordon方程的调制平面脉冲近似 \cite{baoComparisonsSineGordonPerturbed2010,xinModelingLightBullets2000}等物理场景中具有广泛应用 , 并且已得到深入研究\cite{zhangConservativeNumericalScheme2003,baoUniformErrorEstimates2012,chengSeveralConservativeCompact2018,brugnanoClassEnergyconservingHamiltonian2018}.
+鉴于NFSWEs中的分数阶拉普拉斯算子的非局部性 , 使其能更好地描述许多经典薛定谔波动方程无法描述的新现象.
+然而 , 这也给NFSWEs的数值求解带来了挑战.此外 , 与其他许多基于物理场景的微分模型一样 , NFSWEs也具有一些守恒性质 . 
+因此 , 构造有类似离散结构的保结构数值方法尤为重要 , 甚至在某些领域 , 保留原始微分方程的某些不变性质的能力已成为评估数值模拟成功与否的标准 \cite{liFiniteDifferenceCalculus1995,fengHamilton1991}.
+鉴于NFSWEs的双重重要性 , 本文旨在构造两类求解二维NFSWEs的高效保结构数值方法.
+
+\section{研究背景与发展现状}
+非线性薛定谔方程是非线性科学中极具普适性的基本方程 , 在众多物理学领域都有着广泛的应用.其重要性引起了学术界的普遍关注 . 基于有限差分法、 有限元法\cite{karakashianSpacetimeFiniteElement1998}、 间断有限元法\cite{zhangConservativeLocalDiscontinuous2017} 、 谱方法\cite{gongConservativeFourierPseudospectral2017}的各类保结构数值方法被不断提出 . 
+就有限差分方法而言 , Bao等人\cite{baoUniformErrorEstimates2012} 建立了整数阶薛定谔波动方程在有限差分方法下误差限适用于一维、 二维和三维情形的一致误差估计 . 
+Wang和Zhang\cite{wangAnalysisNewConservative2006} 针对一类薛定谔波动方程初边值问题 , 给出了一些新的守恒格式 . 利用Leray-Schauder不动点定理证明了有限差分格式解的存在性 , 
+并在能量范数下证明了$\mathcal{O}(h^2+\tau^2)$阶差分解的唯一性、稳定性和收敛性 . Zhang等人\cite{zhangConservativeNumericalScheme2003}提出了一种四层显式的保结构有限差分格式 , 并证明了其收敛性和稳定性 . 
+Li等人\cite{liCompactFiniteDifference2012}针对具有周期性边界条件的非线性整数阶薛定谔波动方程 , 构造了一个保结构的三层紧格式 , 并基于能量法证明了该格式在最大模范数下$\mathcal{O}(h^4+\tau^2)$ 阶的无条件稳定性和收敛性 . 
+Wang 等人\cite{wangDiscretetimeOrthogonalSpline2011} 采用正交样条配置法结合有限差分法给出了离散时间正交样条的配置格式 , 并从理论上分析了这些格式的守恒性、收敛性和稳定性 . 
+Guo等人\cite{guoEnergyConservingLocal2015}在时空方向上分别应用局部不连续伽辽金方法、Crank-Nicholson格式进行离散 , 建立了能量守恒的全离散格式 . 
+随着分数阶微积分的发展 , 研究者开始重视分数阶模型的研究 .
+例如 , Wang 和 Xiao \cite{wangCrankNicolsonDifference2013} 首先为非线性耦合分数阶薛定谔方程构造了一种质量守恒的 Crank-Nicolson 格式 , 
+然后 , 他们进一步提出了一种线性隐式格式 , 该格式保持修正后质量和能量\cite{wangLinearlyImplicitConservative2014} . 
+Ran 和 Zhang \cite{ranConservativeDifferenceScheme2016} 提出了隐式及线性差分格式 , 分别保持非线性强耦合分数阶薛定谔方程原始和修正的质量和能量 . 
+Wang 和 Huang \cite{wangEnergyConservativeDifference2015,wangConservativeLinearizedDifference2015} 推导出分数阶薛定谔方程的能量和质量守恒的 Crank-Nicolson 差分格式和线性差分格式.
+Wang 等人 \cite{wangSplitstepSpectralGalerkin2019} 提出了一种用于二维非线性空间分数阶薛定谔方程的分步谱 伽辽金 方法 , 该方法仅保持离散质量.
+% 由于NFSWEs的非局部性和非线性 , 使其与经典的非线性薛定谔方程相比 , 理论和数值方法的研究相对较少 , 可参考的文献也比较有限.
+针对 NFSWEs, Ran 和 Zhang \cite{ranLinearlyImplicitConservative2016} 首先构造了一种三层线性隐式差分格式(Line-Impl) , 它能很好地保持修正后的质量和能量 . 
+Li 和 Zhao \cite{liFastEnergyConserving2018} 结合 Crank-Nicolson 方法与 伽辽金 有限元方法以节省计算成本 , 设计了具有循环预调节器的快速 Krylov 子空间求解器 . 
+Pan 等人\cite{panFourthorderDifferenceScheme2022}构建了一个空间四阶精度的三层线性隐式差分格式 , 并通过能量方法严格证明了该方法在$L_{\infty}$范数下的唯一可解性、无条件稳定性和收敛性.
+Cheng 和 Qin \cite{chengConvergenceEnergyconservingScheme2022} 提出了一种基于标量辅助变量(SAV)方法的线性隐式守恒格式 , 该数值格式仅保持修正后的能量.
+Hu等人 \cite{huEfficientEnergyPreserving2022} 分别在时间上应用 Crank-Nicolson、SAV 和 ESAV 方法 , 提出了三种能量守恒的谱 伽辽金 方法.
+Zhang和Ran \cite{zhangHighorderStructurepreservingDifference2023} 提出并分析了基于三角SAV(T-SAV)方法的更高阶能量守恒差分格式.
+
+如表 \ref{tab:NFSWEs} 所示 , 尽管对于NFSWEs的数值算法已有不少研究工作 , 但大多数方法仅关注一维情况 , 且在时间方向的精度未超过二阶 , 甚至是完全隐式的.
+此外 , 目前提出的方法仅能保持修正后的能量和(或)质量.
+这意味着仍然存在许多值得优化的地方 , 尤其是在高维情况下 , 需要高效、准确、显式以及能够同时保持原始能量和质量的数值方法.
+\begin{table}[htbp]
+    \centering
+    \small
+    \caption{NFSWEs 已有保结构方法对比}
+        \begin{tabular}{lccccc}
+        \toprule
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{文献}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{维度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{空间精度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{时间精度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{能量守恒}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{质量守恒}} \\
+        \midrule
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2016 , Ran}\cite{ranLinearlyImplicitConservative2016}}} & 1 维   & 2 阶   & 2 阶   & 修正能量  & 修正质量 \\
+        \midrule
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2018 , Li}\cite{liFastEnergyConserving2018}}} & 1 维   & 2 阶   & 2 阶   & 修正能量  & 修正质量 \\
+        \midrule
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2022 , Pan}\cite{panFourthorderDifferenceScheme2022}}} & 1 维   & 4 阶   & 2 阶   & 无     & 无 \\
+        \midrule
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2022 , Cheng}\cite{chengConvergenceEnergyconservingScheme2022}}} & 2 维   & 2 阶   & 2 阶   & 修正能量  & 无 \\
+        \midrule
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2022 , Hu}\cite{huEfficientEnergyPreserving2022}}} & 1 维   & 谱精度   & 2 阶   & 修正能量  & 无 \\
+        \midrule
+        \textcolor[rgb]{0 , 0 , 0}{\textbf{{2023 , Zhang}\cite{zhangHighorderStructurepreservingDifference2023}}} & 1 维   & 4 阶   & 2 阶   & 修正能量  & 无 \\
+        \bottomrule
+        \end{tabular}%
+    \label{tab:NFSWEs}%
+    \end{table}%
+\section{研究内容}
+鉴于前期研究的不足 , 
+% 本篇论文主要从以下两个方面展示了数值求解NFSWEs的研究成果.
+一方面 , 注意到在诸多高精度数值方法中 , 显式 Runge-Kutta (RK)方法因其高阶精度和易于实现的特性而备受青睐.
+然而 , 标准RK方法不一定能够满足系统所期望保留的某些物理特性.为了解决这一问题 , Ketcheson \cite{ketchesonRelaxationRungeKutta2019} 提出了松弛 Runge-Kutta (RRK)方法 , 该方法能够保证系统在任何内积范数下的守恒或稳定性.
+随后 , RRK技术被扩展到一般的凸量上\cite{ranochaRelaxationRungeKutta2020}.
+通过在RK更新的每一步中引入一个松弛参数 , 可以强制实现对于任何凸泛函的守恒、耗散或其他属性.不过 , 这些优势的代价是必须求解一个非线性代数系统来确定松弛参数.然而 , 对于非二次不变量的情况 , 作者并未考虑构建显式的RRK格式.
+幸运的是 , 不变能量二次化(IEQ)方法 \cite{yangLinearUnconditionallyEnergy2017,yangEfficientLinearSchemes2017} 和SAV方法 \cite{chengConvergenceEnergyconservingScheme2022} 可以通过变量替换将非二次能量转化为新变量的二次形式 , 而由此产生的等价系统仍然保留了关于新变量的类似能量守恒性质.
+IEQ方法和SAV方法已被广泛应用于梯度流模型\cite{zhaoNumericalApproximationsPhase2017,shenScalarAuxiliaryVariable2018,liuExponentialScalarAuxiliary2020,chengMultipleScalarAuxiliary2018}.
+例如 , 具有熔体对流的树状凝固相场模型\cite{chenEfficientNumericalScheme2019} , 具有一般非线性势的梯度流方程\cite{yangConvergenceAnalysisInvariant2020} , 外延薄膜生长模型\cite{chengHighlyEfficientAccurate2019}
+以及基于SAV 的任意高阶无条件能量稳定格式\cite{gongArbitrarilyHighorderUnconditionally2020}.
+受到这些发展的启发 , 本文结合SAV方法和显式RRK方法 , 为一维和二维NFSWEs构造了一种任意高阶的显式能量守恒方法.
+
+另一方面 , 目前提出的算法仅能保证修正后的能量和(或)质量守恒.值得注意的是 , 平均向量场(AVF)方法\cite{buddGeometricIntegrationUsing1999,quispelNewClassEnergypreserving2008}能够保持哈密顿系统的原始能量 . 
+最近提出的分区平均向量场(PAVF)方法\cite{caiPartitionedAveragedVector2018}不仅可以保持原始能量 , 还有可能保持更多的守恒性质 , 并已被用于构造哈密顿常微分方程的保结构数值格式.
+然而 , NFSWEs的哈密顿形式的推导是构造PAVF格式的前提.据了解 , 目前对于分数阶微分方程哈密顿结构的研究还很有限.
+最近 , Wang和Huang \cite{wangStructurepreservingNumericalMethods2018} 提出了涉及分数阶拉普拉斯泛函的变分导数 , 将一维非线性分数阶薛定谔方程重构为一个哈密顿系统.
+Fu和Cai \cite{fuStructurepreservingAlgorithmsTwodimensional2020} 推导了二维分数阶Klein-Gordon-Schr{\"o}dinger方程的哈密顿形式 , 并给出了守恒格式.
+基于这些思路 , 本文推导了具有周期性边界条件的二维NFSWEs的哈密顿形式 , 并通过改进的分区平均向量场(PAVF-P)方法成功构建了能够同时保持原始能量和质量的数值格式.
+
+\section{论文安排}
+本文结构安排如下:
+
+第2章简要介绍了分数阶微积分、傅里叶拟谱方法以及分区平均向量场方法.
+
+第3章主要分为6节.在第 \ref{Section_SAVRRK: 2} 节中 , 通过引入一个标量辅助变量 , 将NFSWEs  重构为一个等价系统.
+第 \ref{Section_SAVRRK: 3} 节和第 \ref{Section_SAVRRK: 4} 节分别在空间和时间方向上对等价系统应用傅里叶拟谱方法以及显式RRK方法 , 为二维NFSWEs构造了一个高阶显式的能量守恒格式.
+在第 \ref{Section_SAVRRK: 5} 节中 , 进一步估计引入的松弛系数 , 以确定松弛方法的精度.第 \ref{Section_SAVRRK: 6} 节通过数值算例验证了所提出格式的精度、守恒特性及其普适性.并在第 \ref{Section_SAVRRK: 7} 节中对本章内容进行了简要总结.
+
+第4章主要分6节 . 首先在第 \ref{Section_PAVF: 2_1} 节中推导了 NFSWEs 的哈密顿结构 , 接着在 \ref{Section_PAVF: 2_2} 节中通过使用傅里叶拟谱方法对空间方向进行半离散.
+在第 \ref{Section_PAVF: 3} 节中 , 通过使用PAVF-P方法对前述空间半离散系统进行离散化 , 得到能够同时保持原始能量和质量的数值格式 , 并证明了相应的离散守恒定律.
+为了比较 , 在第 \ref{Section_PAVF: 3-1} 节中给出了用于求解NFSWEs  的其他二阶AVF系列格式.
+并在第 \ref{Section_PAVF: 4} 节中 , 通过丰富的数值算例进一步验证了理论结果.
+最后在第 \ref{Section_PAVF: 5} 节做了简要总结.
+
+第5章为总结与展望.

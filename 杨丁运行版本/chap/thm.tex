@@ -1,0 +1,31 @@
+%++++++++++++++++++++++定理环境+++++++++++++++++++++++++++++%
+%下面的命令\citep将参考文献以上标形式出现
+\let\oldcitep\cite
+\newcommand{\citen}[2][]{\textsuperscript{\oldcitep{#2}#1}}
+\renewcommand{\cite}{\citen}
+%下面的命令\citep将参考文献以上标形式出现
+% \let\oldcitep\citep
+% \newcommand{\citenp}[2][]{{\oldcitep{#2}#1}}
+% \renewcommand{\citep}{\citenp}
+
+%使用ntheorem宏包时,下列命令定义定理环境,如有不同要求请自行修改
+\baselineskip=20pt % 指定行距为20pt
+\theoremstyle{plain}
+\theoremseparator{.}
+\theorembodyfont{\normalfont}
+\newtheorem{theorem}{\hskip8mm 定理}[chapter]
+\newtheorem{lemma}[theorem]{\hskip8mm 引理}
+\newtheorem{prop}[theorem]{\hskip8mm 命题}
+\newtheorem{cor}[theorem]{\hskip8mm 推论}
+\newtheorem{defn}{\hskip8mm 定义}[chapter]
+\newtheorem{remark}{\hskip8mm 注}[chapter]
+\newtheorem{conj}{\hskip8mm 猜想}
+\newtheorem{example}{\hskip8mm 算例}[chapter]
+\theoremstyle{nonumberplain}
+% 证明末尾自动添加加空心框.
+\newenvironment{proof}{ \textbf{证明. }}{\hfill $\square$\par}
+% 证明末尾自动添加加实心框.
+% \newenvironment{pf}{\hskip8mm \textbf{证明.}}{\hfill $\blacksquare$\par}
+\theoremseparator{:}
+\theoremheaderfont{\heiti}
+\theorembodyfont{\normalfont}

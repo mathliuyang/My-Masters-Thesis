@@ -1,0 +1,113 @@
+%+++++++++++++++++++++++题名页环境++++++++++++++++++++++++++++
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%题名页支持宏包
+\usepackage{ulem}
+\usepackage{ifthen}
+%题名页页定义命令
+%论文作者中文名
+\newcommand{\thesicnuauthorc}{刘洋}
+\newcommand{\SiCNUAuthorC}[1]{\renewcommand{\thesicnuauthorc}{#1}}
+%论文作者英文名
+\newcommand{\thesicnuauthore}{Liu Yang}
+\newcommand{\SiCNUAuthorE}[1]{\renewcommand{\thesicnuauthore}{#1}}
+%指导教师中文名
+\newcommand{\thesicnusupervisorc}{冉茂华}
+\newcommand{\SiCNUSupervisorC}[1]{
+\newlength{\supervisorclength}
+\settowidth{\supervisorclength}{#1}
+\ifthenelse{\lengthtest{\supervisorclength = 0em}}
+    {\renewcommand{\thesicnusupervisorc}{\hspace{3em}}}
+    {\renewcommand{\thesicnusupervisorc}{#1}}
+}
+%指导教师英文名
+\newcommand{\thesicnusupervisore}{Associate Prof. Ran Maohua}
+\newcommand{\SiCNUSupervisorE}[1]{\renewcommand{\thesicnusupervisore}{#1}}
+%专业名称中文
+\newcommand{\thesicnumajorc}{数学}
+\newcommand{\SiCNUMajorC}[1]{\renewcommand{\thesicnumajorc}{#1}}
+%专业名称英文
+\newcommand{\thesicnumajore}{Mathematics}
+\newcommand{\SiCNUMajorE}[1]{\renewcommand{\thesicnumajore}{#1}}
+%学号
+\newcommand{\thesicnunumber}{20210801068}
+\newcommand{\SiCNUNumber}[1]{
+\newlength{\numberlength}
+\settowidth{\numberlength}{#1}
+\newlength{\numberlengthundefinde}
+%单位代码
+\settowidth{\numberlengthundefinde}{10636}
+\ifthenelse{\lengthtest{\numberlength = 0em} \or \lengthtest{\numberlength < \numberlengthundefinde}}
+{\renewcommand{\thesicnunumber}{\qquad\qquad}}
+{\renewcommand{\thesicnunumber}{#1}}
+}
+%分类号
+\newcommand{\thesicnuclass}{\zihao{5} O241.82}
+\newcommand{\SiCNUClass}[1]{\renewcommand{\thesicnuclass}{#1}}
+%密级
+\newcommand{\thesicnusecret}{\zihao{5} 公开}
+\newcommand{\SiCNUSecret}[1]{\renewcommand{\thesicnusecret}{#1}}
+%研究方向
+\newcommand{\thesicnuresearch}{偏微分方程数值解}
+\newcommand{\SiCNUResearch}[1]{\renewcommand{\thesicnuresearch}{#1}}
+% 所在学院
+\newcommand{\thesicnucollege}{数学科学学院}
+\newcommand{\SiCNUCollege}[1]{\renewcommand{\thesicnucollege}{#1}}
+%论文中文题目
+\newcommand{\thesicnutitlec}{非线性分数阶薛定谔波动方程的两类保结构数值方法}
+%论文中文分行题目
+\newcommand{\thesicnutitleca}{\bf 非线性分数阶薛定谔波动方程的}
+\newcommand{\thesicnutitlecb}{\bf 两类保结构数值方法}
+\newcommand{\SiCNUTitleC}[2][]{
+\newlength{\titleca}
+\settowidth{\titleca}{#2}
+\newlength{\titlecb}
+\settowidth{\titlecb}{#1}
+\ifthenelse{\lengthtest{\titleca > 18em}}
+    {\renewcommand{\thesicnutitleca}{标题过长, 请用可选参数}}%每行字数不超过~18
+    {\renewcommand{\thesicnutitleca}{#2}}
+\ifthenelse{\lengthtest{\titlecb > 18em}}
+    {\renewcommand{\thesicnutitlecb}{标题过长, 请缩短标题}}
+    {\renewcommand{\thesicnutitlecb}{#1}}
+\ifthenelse{\lengthtest{\titleca > 18em} \and \lengthtest{\titlecb > 18em}}
+    {\renewcommand{\thesicnutitleca}{标题过长, 请缩短标题}\renewcommand{\thesicnutitlecb}{标题过长, 请缩短标题}}
+    {}
+\renewcommand{\thesicnutitlec}{#2 #1}
+\ifthenelse{\equal{#2}{}}
+    {\renewcommand{\thesicnutitlec}{\hspace{17em}}}
+    {}
+}
+%论文英文题目
+\newcommand{\thesicnutitlee}{Two Classes of Structure-Preserving Numerical Methods for the Nonlinear Fractional Schr{\"o}dinger Wave Equations}
+%论文英文分行题目
+\newcommand{\thesicnutitleea}{\bf Two Classes of Structure-Preserving Numerical}
+\newcommand{\thesicnutitleeb}{\bf Methods for the Nonlinear Fractional }
+\newcommand{\thesicnutitleec}{\bf Schr{\"o}dinger Wave Equations}
+\newcommand{\SiCNUTitleE}[3][]{
+	\newlength{\titleea}
+	\settowidth{\titleea}{#2}
+	\newlength{\titleeb}
+	\settowidth{\titleeb}{#1}
+	\newlength{\titleec}
+	\settowidth{\titleec}{#3}
+	\ifthenelse{\lengthtest{\titleea > 18em}}
+	{\renewcommand{\thesicnutitleea}{标题过长, 请用可选参数}}%每行字数不超过~18
+	{\renewcommand{\thesicnutitleea}{#1}}
+	\ifthenelse{\lengthtest{\titleeb > 18em}}
+	{\renewcommand{\thesicnutitleeb}{标题过长, 请缩短标题}}
+	{\renewcommand{\thesicnutitleeb}{#2}}
+	\ifthenelse{\lengthtest{\titleec > 18em}}
+	{\renewcommand{\thesicnutitleec}{标题过长, 请缩短标题}}
+	{\renewcommand{\thesicnutitleec}{#3}}
+	\ifthenelse{\lengthtest{\titleea > 18em} \and \lengthtest{\titleeb > 18em}\and \lengthtest{\titleec > 18em}}
+	{\renewcommand{\thesicnutitleea}{标题过长, 请缩短标题}\renewcommand{\thesicnutitleeb}{标题过长, 请缩短标题}\renewcommand{\thesicnutitleec}{标题过长, 请缩短标题}}
+	{}
+	\renewcommand{\thesicnutitlee}{#3#2 #1}
+}
+%论文提交日期
+\newcommand{\thesicnudateofsubmit}{2024年\quad 月\quad  日\ \ \ \ \ \ \ \ }
+\newcommand{\SiCNUDateOfSubmit}[1]{\renewcommand{\thesicnudateofsubmit}{#1}}
+%论文答辩日期
+\newcommand{\thesicnudateofdefence}{2024年\quad 月\quad  日\ \ \ \ \ \ \ \ }
+\newcommand{\SiCNUDateOfDefence}[1]{\renewcommand{\thesicnudateofdefence}{#1}}
+%\newcommand{}{}
+%\newcommand{}[1]{\renewcommand{}{#1}}

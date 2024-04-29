@@ -1,0 +1,34 @@
+
+\chapter[总结与展望]{总结与展望}
+\section{本文总结}
+本文主要研究具有周期性边界的非线性分数阶薛定谔波动方程的初边值问题 . 尽管已有一些关于NFSWEs数值算法的研究 , 但主要集中在一维情况 , 并且在时间方向的精度未能超过二阶 , 甚至是完全隐式的 . 
+
+本文旨在探讨二维NFSWEs的数值求解方法及其守恒性质 , 并提出了两类保结构数值方法 . 一方面 , 通过SAV方法将NFSWEs的非二次能量转化为新变量的二次形式 , 然后结合显式 Runge-Kutta 方法和松弛技术 , 提出了一种任意高阶的显式能量守恒数值格式 . 并且将这一方法推广到分数阶Klein-Gordon-Schr{\"o}dinger方程等类似方程的数值求解中 . 另一方面 , 成功推导了具有周期性边界条件的二维NFSWEs的哈密顿形式 , 并采用PAVF-P方法构建了能够同时守恒原始能量和质量的数值格式 . 
+
+\begin{table}[H]
+    \centering
+    % \caption{本课题的目标是为二维NFSWEs构建高效的显式保结构格式以及能够同时保持原始能量和质量的格式}
+      \begin{tabular}{cccccc}
+      \toprule
+      \textcolor[rgb]{0 , 0 , 0}{} & \textcolor[rgb]{0 , 0 , 0}{\textbf{维度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{空间精度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{时间精度}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{能量守恒}} & \textcolor[rgb]{0 , 0 , 0}{\textbf{质量守恒}} \\
+      \midrule
+      \textcolor[rgb]{0 , 0 , 0}{\textbf{SAV-RRK}} & {2 维}   &{谱精度}   & {任意高阶}  & 修正能量  & 无 \\
+      \midrule
+      \textcolor[rgb]{0 , 0 , 0}{\textbf{FPAVF-P}} & {2 维}   & {谱精度}   & 2 阶   & {原始能量}  & {原始质量} \\
+      \bottomrule
+      \end{tabular}%
+    \label{tab:3}%
+  \end{table}%
+
+此外 , 本文采用了傅里叶拟谱方法作为空间离散方法 , 充分利用了其非局部性质和傅里叶基函数的特性 , 并通过快速傅里叶变换提高了计算效率 . 
+
+综合而言 , 本文在二维NFSWEs数值求解方面取得了新的研究成果 , 提出的方法在长时间仿真中具有良好的适用性 , 为未来相关研究提供了有益的参考 . 
+
+\section{研究展望}
+在本文的基础上及研究过程中 , 发现存在以下改进空间:
+
+\begin{enumerate}[(1)]
+    \item 考虑不同边界条件: 本文仅考虑了具有周期性边界条件的问题 , 未来的研究可以将方法推广至适用于不同类型的边界条件 .
+    \item 稳定性和收敛性分析: 本文主要关注守恒性的研究 , 未来考虑对所提出的方法进行更深入的稳定性及收敛性分析 . 
+    \item 提高FPAVF-P方法的收敛阶: 本文仅构建了FPAVF-P的二阶数值格式 , 未来的研究可以考虑构建更高阶的FPAVF-P格式 . 
+\end{enumerate}

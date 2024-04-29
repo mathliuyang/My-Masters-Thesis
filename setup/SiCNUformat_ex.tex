@@ -227,7 +227,7 @@
 \renewcommand\thefootnote{\ding{\numexpr171+\value{footnote}}}
 
 
-\input{setup/info}
+\input{setup/info_ex}
 
 \newcommand{\SiCNUMakeTitle}{
 \begin{titlepage}
@@ -311,15 +311,15 @@ beforeskip={2em},afterskip={1em}]{chapter}
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter \ ##1}{}}
 
 \CTEXsetup[name={,},number={\arabic{chapter}},
-format={\flushleft},nameformat={\zihao{3}\bf},%numberformat={},
-aftername={~~},titleformat={\zihao{3}\bf},
+format={\flushleft},nameformat={\zihao{3}\heiti},%numberformat={},
+aftername={~~},titleformat={\zihao{3}\heiti},
 beforeskip={1em},afterskip={0.5em}]{chapter}
 \CTEXsetup[name={,},number={\arabic{chapter}.\arabic{section}},
-format={\flushleft},nameformat={\zihao{4}\bf},%numberformat={},
-aftername={~~},titleformat={\zihao{4}\bf},
+format={\flushleft},nameformat={\zihao{4}\heiti},%numberformat={},
+aftername={~~},titleformat={\zihao{4}\heiti},
 beforeskip={0.5em},afterskip={0.5em}]{section}
 \CTEXsetup[name={,},number={\arabic{chapter}.\arabic{section}.\arabic{subsection}},
-format={\flushleft},nameformat={\zihao{-4}\bf},%numberformat={},
+format={\flushleft},nameformat={\zihao{-4}\heiti},%numberformat={},
 aftername={~~},titleformat={\zihao{-4}\heiti},
 beforeskip={0em},afterskip={0em}]{subsection}
 }

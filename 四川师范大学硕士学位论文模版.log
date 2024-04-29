@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  20 MAR 2024 12:00
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.21)  20 MAR 2024 22:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -801,7 +801,7 @@ File: upzd.fd 2001/06/04 font definitions for U/pzd.
 LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
-)) (./setup/info_ex.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
+)) (./setup/info.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box74
 \UL@hyphenbox=\box75
 \UL@skip=\skip119
@@ -1216,22 +1216,23 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { chapter = { name={,},number={\arabic
 (ctexbook)              {chapter}}, format={\flushleft },nameformat={\zihao
-(ctexbook)              {3}\bf },aftername={~~},titleformat={\zihao {3}\bf },
-(ctexbook)              beforeskip={1em},afterskip={0.5em} } } is set.
+(ctexbook)              {3}\heiti },aftername={~~},titleformat={\zihao
+(ctexbook)              {3}\heiti }, beforeskip={1em},afterskip={0.5em} } } is
+(ctexbook)              set.
 
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { section = { name={,},number={\arabic
 (ctexbook)              {chapter}.\arabic {section}}, format={\flushleft
-(ctexbook)              },nameformat={\zihao {4}\bf
-(ctexbook)              },aftername={~~},titleformat={\zihao {4}\bf },
+(ctexbook)              },nameformat={\zihao {4}\heiti
+(ctexbook)              },aftername={~~},titleformat={\zihao {4}\heiti },
 (ctexbook)              beforeskip={0.5em},afterskip={0.5em} } } is set.
 
 
 Class ctexbook Warning: Command `\CTEXsetup' is deprecated.
 (ctexbook)              \ctexset { subsection = { name={,},number={\arabic
 (ctexbook)              {chapter}.\arabic {section}.\arabic {subsection}},
-(ctexbook)              format={\flushleft },nameformat={\zihao {-4}\bf
+(ctexbook)              format={\flushleft },nameformat={\zihao {-4}\heiti
 (ctexbook)              },aftername={~~},titleformat={\zihao {-4}\heiti },
 (ctexbook)              beforeskip={0em},afterskip={0em} } } is set.
 
@@ -1803,11 +1804,11 @@ Package rerunfilecheck Info: File `四川师范大学硕士学位论文模版.ou
  )
 (\end occurred when \ifx on line 26 was incomplete) 
 Here is how much of TeX's memory you used:
- 24286 strings out of 476683
- 523012 string characters out of 5804047
+ 24277 strings out of 476683
+ 522228 string characters out of 5804047
  1879018 words of memory out of 5000000
- 43858 multiletter control sequences out of 15000+600000
- 577775 words of font info for 203 fonts, out of 8000000 for 9000
+ 43847 multiletter control sequences out of 15000+600000
+ 576095 words of font info for 204 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,17n,97p,1231b,654s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
